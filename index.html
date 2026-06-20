@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Card Kingdom 回收价查看器</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Card Kingdom 回收价查看器</h1>
+      <p id="metaLine">正在载入数据...</p>
+    </div>
+    <div class="summary" aria-label="summary">
+      <div><span id="cardCount">-</span><small>单卡</small></div>
+      <div><span id="sealedCount">-</span><small>密封</small></div>
+      <div><span id="rate">-</span><small>USD/CNY</small></div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="filters" aria-label="filters">
+      <div class="field">
+        <label for="searchInput">搜索</label>
+        <input id="searchInput" type="search" placeholder="中文、英文、系列、SKU">
+      </div>
+
+      <div class="field">
+        <label for="typeSelect">类型</label>
+        <select id="typeSelect">
+          <option value="cards">单卡</option>
+          <option value="sealed">密封产品</option>
+        </select>
+      </div>
+
+      <div class="field" id="recentSetsField">
+        <label>最近系列单卡</label>
+        <div id="recentSets" class="set-chips" aria-label="recent sets"></div>
+      </div>
+
+      <div class="field" id="setField">
+        <label for="setSelect">系列（按发行时间）</label>
+        <select id="setSelect">
+          <option value="">全部系列</option>
+        </select>
+      </div>
+
+      <div class="field" id="editionField">
+        <label for="editionSelect">CK版本</label>
+        <select id="editionSelect">
+          <option value="">全部CK版本</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="minPrice">最低回收价（美元）</label>
+        <input id="minPrice" type="number" min="0" step="1" value="0">
+      </div>
+
+      <div class="checks">
+        <label><input id="foilOnly" type="checkbox"> 只看闪卡</label>
+        <label><input id="withImageOnly" type="checkbox"> 只看有图片</label>
+        <label><input id="missingCnOnly" type="checkbox"> 只看未匹配中文</label>
+      </div>
+
+      <div class="field">
+        <label for="sortSelect">排序</label>
+        <select id="sortSelect">
+          <option value="cashDesc">回收价从高到低</option>
+          <option value="cashAsc">回收价从低到高</option>
+          <option value="qtyDesc">收购数量从高到低</option>
+          <option value="nameAsc">英文名 A-Z</option>
+          <option value="editionAsc">版本 A-Z</option>
+        </select>
+      </div>
+
+      <button id="resetButton" type="button">重置筛选</button>
+    </aside>
+
+    <section class="results">
+      <div class="resultbar">
+        <div>
+          <strong id="resultCount">0</strong>
+          <span>条结果</span>
+        </div>
+        <div class="pager">
+          <button id="prevButton" type="button" aria-label="上一页">‹</button>
+          <span id="pageLine">1 / 1</span>
+          <button id="nextButton" type="button" aria-label="下一页">›</button>
+        </div>
+      </div>
+
+      <div id="cardsGrid" class="cards-grid"></div>
+      <div id="emptyState" class="empty" hidden>没有符合条件的条目</div>
+    </section>
+  </main>
+
+  <template id="cardTemplate">
+    <article class="card">
+      <div class="thumb">
+        <img loading="lazy" alt="">
+      </div>
+      <div class="card-main">
+        <div class="name-row">
+          <h2></h2>
+          <span class="badge"></span>
+        </div>
+        <p class="cn"></p>
+        <div class="details"></div>
+        <div class="prices"></div>
+        <div class="links"></div>
+      </div>
+    </article>
+  </template>
+
+  <script src="./app.js?v=20260620-separate-set-filter"></script>
+</body>
+</html>
