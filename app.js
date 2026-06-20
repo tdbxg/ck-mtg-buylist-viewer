@@ -353,8 +353,7 @@ function bindEvents() {
 }
 
 async function init() {
-  const response = await fetch(`./data.json?v=${Date.now()}`, { cache: "no-store" });
-  state.data = await response.json();
+  state.data = await loadData();
   const meta = state.data.meta;
   els.metaLine.textContent = `数据时间：${meta.cardKingdomCreatedAt} ｜ 中文未匹配 ${meta.missingCn.toLocaleString("zh-CN")} 张 ｜ 图片缺失 ${meta.missingImage.toLocaleString("zh-CN")} 张`;
   els.cardCount.textContent = meta.cards.toLocaleString("zh-CN");
@@ -372,3 +371,22 @@ init().catch((err) => {
   console.error(err);
   els.metaLine.textContent = "数据加载失败，请确认 data.json 与 index.html 在同一目录，并通过本地服务器打开。";
 });
+
+async function loadData() {
+  const stamp = Date.now();
+  if ("DecompressionStream" in window) {
+    try {
+      els.metaLine.textContent = "正在加载压缩数据...";
+      const response = await fetch(`./data.json.gz?v=${stamp}`, { cache: "no-store" });
+      if (!response.ok || !response.body) throw new Error(`gzip fetch failed: ${response.status}`);
+      const stream = response.body.pipeThrough(new DecompressionStream("gzip"));
+      return await new Response(stream).json();
+    } catch (error) {
+      console.warn("Falling back to uncompressed data.json", error);
+    }
+  }
+  els.metaLine.textContent = "正在加载完整数据...";
+  const response = await fetch(`./data.json?v=${stamp}`, { cache: "no-store" });
+  if (!response.ok) throw new Error(`data fetch failed: ${response.status}`);
+  return await response.json();
+}
