@@ -237,11 +237,13 @@ function renderCard(row) {
     cn.textContent = row.cn || "未匹配中文名";
     if (!row.cn) cn.style.color = "var(--danger)";
     const skinName = row.flavorName || row.variation || "";
+    const skinCnLine = row.flavorCn ? `<div>皮肤中文：<strong>${row.flavorCn}</strong></div>` : "";
     const ckNameLine = row.ckName && row.ckName !== row.name ? `<div>CK名称：${row.ckName}</div>` : "";
     details.innerHTML = `
       <div>CK版本：<strong>${row.edition || "-"}</strong></div>
       <div>Scryfall版本：<strong>${row.scryfallSetName || "-"}</strong>${row.scryfallSet ? ` (${String(row.scryfallSet).toUpperCase()}` : ""}${row.collectorNumber ? ` #${row.collectorNumber}` : ""}${row.scryfallSet ? ")" : ""}</div>
       ${skinName ? `<div>变体/皮肤：<strong>${skinName}</strong></div>` : ""}
+      ${skinCnLine}
       ${ckNameLine}
       <div>SKU：${row.sku || "-"}</div>
       <div>稀有度：${row.rarity || "-"} ｜ 发售：${row.releasedAt || "-"} ｜ 工艺：${Array.isArray(row.finishes) && row.finishes.length ? row.finishes.join(", ") : "-"}</div>
