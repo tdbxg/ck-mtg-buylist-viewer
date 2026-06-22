@@ -239,6 +239,12 @@ function renderCard(row) {
     const skinName = row.flavorName || row.variation || "";
     const skinCnLine = row.flavorCn ? `<div>皮肤中文：<strong>${row.flavorCn}</strong></div>` : "";
     const ckNameLine = row.ckName && row.ckName !== row.name ? `<div>CK名称：${row.ckName}</div>` : "";
+    const cnSource = row.cnSource || row.match || "";
+    const cnSourceLine = cnSource === "placeholder"
+      ? `<div>中文来源：<strong>暂缺官方中文</strong></div>`
+      : cnSource.startsWith("generated_")
+        ? `<div>中文来源：<strong>补充翻译</strong></div>`
+        : "";
     const imageSourceLine = row.imageSource === "name_fallback" ? `<div>图片：同名参考图</div>` : "";
     details.innerHTML = `
       <div>CK版本：<strong>${row.edition || "-"}</strong></div>
@@ -246,6 +252,7 @@ function renderCard(row) {
       ${skinName ? `<div>变体/皮肤：<strong>${skinName}</strong></div>` : ""}
       ${skinCnLine}
       ${ckNameLine}
+      ${cnSourceLine}
       ${imageSourceLine}
       <div>SKU：${row.sku || "-"}</div>
       <div>稀有度：${row.rarity || "-"} ｜ 发售：${row.releasedAt || "-"} ｜ 工艺：${Array.isArray(row.finishes) && row.finishes.length ? row.finishes.join(", ") : "-"}</div>
@@ -367,7 +374,9 @@ function bindEvents() {
 async function init() {
   state.data = await loadData();
   const meta = state.data.meta;
-  els.metaLine.textContent = `数据时间：${meta.cardKingdomCreatedAt} ｜ 中文未匹配 ${meta.missingCn.toLocaleString("zh-CN")} 张 ｜ 图片缺失 ${meta.missingImage.toLocaleString("zh-CN")} 张`;
+  const generatedCn = Number(meta.generatedCnFilled || 0);
+  const generatedLine = generatedCn ? ` ｜ 补充中文 ${generatedCn.toLocaleString("zh-CN")} 张` : "";
+  els.metaLine.textContent = `数据时间：${meta.cardKingdomCreatedAt} ｜ 中文未匹配 ${meta.missingCn.toLocaleString("zh-CN")} 张${generatedLine} ｜ 图片缺失 ${meta.missingImage.toLocaleString("zh-CN")} 张`;
   els.cardCount.textContent = meta.cards.toLocaleString("zh-CN");
   els.sealedCount.textContent = meta.sealed.toLocaleString("zh-CN");
   els.rate.textContent = Number(meta.usdCny).toFixed(4);
