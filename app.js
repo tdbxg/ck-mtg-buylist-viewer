@@ -230,6 +230,10 @@ function renderCard(row) {
   if (state.source === "cards") {
     badge.textContent = row.foil ? "Foil" : "Normal";
     badge.classList.toggle("foil", row.foil);
+    if (row.activeBuying === false) {
+      badge.textContent = "暂不收购";
+      badge.classList.add("inactive");
+    }
     cn.textContent = row.cn || "未匹配中文名";
     if (!row.cn) cn.style.color = "var(--danger)";
     const skinName = row.flavorName || row.variation || "";
@@ -241,7 +245,7 @@ function renderCard(row) {
       ${ckNameLine}
       <div>SKU：${row.sku || "-"}</div>
       <div>稀有度：${row.rarity || "-"} ｜ 发售：${row.releasedAt || "-"} ｜ 工艺：${Array.isArray(row.finishes) && row.finishes.length ? row.finishes.join(", ") : "-"}</div>
-      <div>收购数量：${row.qtyBuying.toLocaleString("zh-CN")} ｜ 零售库存：${row.qtyRetail.toLocaleString("zh-CN")}</div>
+      <div>状态：${row.activeBuying === false ? "暂不收购" : "当前收购"} ｜ 收购数量：${row.qtyBuying.toLocaleString("zh-CN")} ｜ 零售库存：${row.qtyRetail.toLocaleString("zh-CN")}</div>
       <div>品相零售价：NM ${row.conditions?.nm_price || "-"} / EX ${row.conditions?.ex_price || "-"} / VG ${row.conditions?.vg_price || "-"} / G ${row.conditions?.g_price || "-"}</div>
     `;
     links.innerHTML = `

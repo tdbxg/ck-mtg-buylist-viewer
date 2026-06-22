@@ -261,6 +261,10 @@ h2 {
   background: var(--gold);
 }
 
+.badge.inactive {
+  background: var(--danger);
+}
+
 .cn {
   min-height: 19px;
   margin: 4px 0 8px;
