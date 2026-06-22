@@ -232,10 +232,14 @@ function renderCard(row) {
     badge.classList.toggle("foil", row.foil);
     cn.textContent = row.cn || "未匹配中文名";
     if (!row.cn) cn.style.color = "var(--danger)";
+    const skinName = row.flavorName || row.variation || "";
+    const ckNameLine = row.ckName && row.ckName !== row.name ? `<div>CK名称：${row.ckName}</div>` : "";
     details.innerHTML = `
       <div>CK版本：<strong>${row.edition || "-"}</strong></div>
       <div>Scryfall版本：<strong>${row.scryfallSetName || "-"}</strong>${row.scryfallSet ? ` (${String(row.scryfallSet).toUpperCase()}` : ""}${row.collectorNumber ? ` #${row.collectorNumber}` : ""}${row.scryfallSet ? ")" : ""}</div>
-      <div>变体：${row.variation || "-"} ｜ SKU：${row.sku || "-"}</div>
+      ${skinName ? `<div>变体/皮肤：<strong>${skinName}</strong></div>` : ""}
+      ${ckNameLine}
+      <div>SKU：${row.sku || "-"}</div>
       <div>稀有度：${row.rarity || "-"} ｜ 发售：${row.releasedAt || "-"} ｜ 工艺：${Array.isArray(row.finishes) && row.finishes.length ? row.finishes.join(", ") : "-"}</div>
       <div>收购数量：${row.qtyBuying.toLocaleString("zh-CN")} ｜ 零售库存：${row.qtyRetail.toLocaleString("zh-CN")}</div>
       <div>品相零售价：NM ${row.conditions?.nm_price || "-"} / EX ${row.conditions?.ex_price || "-"} / VG ${row.conditions?.vg_price || "-"} / G ${row.conditions?.g_price || "-"}</div>
