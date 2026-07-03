@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Card Kingdom 回收价查看器</title>
+  <title>MTG 回收价与欧洲市场参考价</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <header class="topbar">
     <div>
-      <h1>Card Kingdom 回收价查看器</h1>
+      <h1>MTG 回收价与欧洲市场参考价</h1>
       <p id="metaLine">正在载入数据...</p>
     </div>
     <div class="summary" aria-label="summary">
@@ -24,6 +24,17 @@
       <div class="field">
         <label for="searchInput">搜索</label>
         <input id="searchInput" type="search" placeholder="中文、英文、系列、SKU">
+      </div>
+
+      <div class="field">
+        <label for="imageInput">图片识别搜索</label>
+        <div id="imageDropZone" class="drop-zone">
+          <input id="imageInput" type="file" accept="image/*">
+          <span>点击选择，或把牌图拖到这里</span>
+        </div>
+        <input id="imageGuessInput" type="search" placeholder="OCR失败时，可在这里输入/粘贴牌名">
+        <button id="imageGuessButton" type="button">按这个牌名搜索</button>
+        <div id="imageOcrStatus" class="hint">会在浏览器内 OCR 识别英文牌名并搜索；正面清晰图效果最好。也可以把图片拖到页面任意位置。</div>
       </div>
 
       <div class="field">
@@ -70,6 +81,8 @@
           <option value="cashDesc">回收价从高到低</option>
           <option value="cashAsc">回收价从低到高</option>
           <option value="qtyDesc">收购数量从高到低</option>
+          <option value="euDesc">欧洲参考价从高到低</option>
+          <option value="spreadDesc">CK/欧洲价差从高到低</option>
           <option value="nameAsc">英文名 A-Z</option>
           <option value="editionAsc">版本 A-Z</option>
         </select>
@@ -114,6 +127,6 @@
     </article>
   </template>
 
-  <script src="./app.js?v=20260623-cn-generated"></script>
+  <script src="./app.js?v=20260702-image-drop-fallback"></script>
 </body>
 </html>

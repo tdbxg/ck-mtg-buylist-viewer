@@ -14,6 +14,7 @@ const state = {
   sort: "cashDesc",
   page: 1,
   results: [],
+  cardmarketLoaded: false,
 };
 
 const els = {
@@ -22,6 +23,11 @@ const els = {
   sealedCount: document.querySelector("#sealedCount"),
   rate: document.querySelector("#rate"),
   searchInput: document.querySelector("#searchInput"),
+  imageInput: document.querySelector("#imageInput"),
+  imageDropZone: document.querySelector("#imageDropZone"),
+  imageGuessInput: document.querySelector("#imageGuessInput"),
+  imageGuessButton: document.querySelector("#imageGuessButton"),
+  imageOcrStatus: document.querySelector("#imageOcrStatus"),
   typeSelect: document.querySelector("#typeSelect"),
   editionField: document.querySelector("#editionField"),
   editionSelect: document.querySelector("#editionSelect"),
@@ -57,6 +63,37 @@ function moneyUsd(value) {
 
 function moneyCny(value) {
   return `¥${Number(value || 0).toLocaleString("zh-CN", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+}
+
+function moneyEur(value) {
+  if (value === null || value === undefined || value === "") return "-";
+  return `€${Number(value || 0).toLocaleString("de-DE", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+}
+
+function rowCardmarketKey(row) {
+  return [
+    normalize(row.name),
+    normalize(row.scryfallSet),
+    normalize(row.collectorNumber),
+  ].join("|");
+}
+
+function bestCardmarketPrice(row) {
+  const market = row.cardmarket || {};
+  if (row.foil && market.eurFoil !== null && market.eurFoil !== undefined) return market.eurFoil;
+  if (market.eur !== null && market.eur !== undefined) return market.eur;
+  if (market.eurFoil !== null && market.eurFoil !== undefined) return market.eurFoil;
+  if (market.eurEtched !== null && market.eurEtched !== undefined) return market.eurEtched;
+  return null;
+}
+
+function eurToCny(value) {
+  const rate = Number(state.data?.meta?.eurCny || 0);
+  return rate && value !== null && value !== undefined ? round2(Number(value) * rate) : null;
+}
+
+function round2(value) {
+  return Math.round(Number(value || 0) * 100) / 100;
 }
 
 function debounce(fn, delay = 140) {
@@ -182,6 +219,12 @@ function applySort(rows) {
     cashDesc: (a, b) => b.cashUsd - a.cashUsd,
     cashAsc: (a, b) => a.cashUsd - b.cashUsd,
     qtyDesc: (a, b) => b.qtyBuying - a.qtyBuying,
+    euDesc: (a, b) => (bestCardmarketPrice(b) || 0) - (bestCardmarketPrice(a) || 0),
+    spreadDesc: (a, b) => {
+      const ae = eurToCny(bestCardmarketPrice(a));
+      const be = eurToCny(bestCardmarketPrice(b));
+      return ((b.cashCny || 0) - (be || 0)) - ((a.cashCny || 0) - (ae || 0));
+    },
     nameAsc: (a, b) => a.name.localeCompare(b.name),
     editionAsc: (a, b) => (a.edition || "").localeCompare(b.edition || ""),
   };
@@ -217,6 +260,11 @@ function renderCard(row) {
   const details = node.querySelector(".details");
   const prices = node.querySelector(".prices");
   const links = node.querySelector(".links");
+  const euPrice = state.source === "cards" ? bestCardmarketPrice(row) : null;
+  const euCny = state.source === "cards" ? eurToCny(euPrice) : null;
+  const spreadCny = euCny === null ? null : round2((row.cashCny || 0) - euCny);
+  const spreadClass = spreadCny === null ? "" : spreadCny >= 0 ? "good" : "bad";
+  const spreadText = spreadCny === null ? "-" : `${spreadCny >= 0 ? "+" : ""}${moneyCny(spreadCny)}`;
 
   h2.textContent = row.name;
   if (row.image) {
@@ -246,6 +294,9 @@ function renderCard(row) {
         ? `<div>中文来源：<strong>补充翻译</strong></div>`
         : "";
     const imageSourceLine = row.imageSource === "name_fallback" ? `<div>图片：同名参考图</div>` : "";
+    const cardmarketLink = row.cardmarket?.cardmarketUrl
+      ? `<a href="${row.cardmarket.cardmarketUrl}" target="_blank" rel="noreferrer">Cardmarket/价格走势</a>`
+      : "";
     details.innerHTML = `
       <div>CK版本：<strong>${row.edition || "-"}</strong></div>
       <div>Scryfall版本：<strong>${row.scryfallSetName || "-"}</strong>${row.scryfallSet ? ` (${String(row.scryfallSet).toUpperCase()}` : ""}${row.collectorNumber ? ` #${row.collectorNumber}` : ""}${row.scryfallSet ? ")" : ""}</div>
@@ -258,10 +309,12 @@ function renderCard(row) {
       <div>稀有度：${row.rarity || "-"} ｜ 发售：${row.releasedAt || "-"} ｜ 工艺：${Array.isArray(row.finishes) && row.finishes.length ? row.finishes.join(", ") : "-"}</div>
       <div>状态：${row.activeBuying === false ? "暂不收购" : "当前收购"} ｜ 收购数量：${row.qtyBuying.toLocaleString("zh-CN")} ｜ 零售库存：${row.qtyRetail.toLocaleString("zh-CN")}</div>
       <div>品相零售价：NM ${row.conditions?.nm_price || "-"} / EX ${row.conditions?.ex_price || "-"} / VG ${row.conditions?.vg_price || "-"} / G ${row.conditions?.g_price || "-"}</div>
+      <div>欧洲参考：<strong>${moneyEur(euPrice)}</strong>${euCny === null ? "" : ` / ${moneyCny(euCny)}`} ｜ CK现金-欧洲：<strong class="${spreadClass}">${spreadText}</strong></div>
     `;
     links.innerHTML = `
       <a href="${row.ckUrl}" target="_blank" rel="noreferrer">Card Kingdom</a>
       ${row.scryfallUrl ? `<a href="${row.scryfallUrl}" target="_blank" rel="noreferrer">Scryfall精确版本</a>` : ""}
+      ${cardmarketLink}
     `;
   } else {
     badge.textContent = row.shipsInternationally ? "Intl" : "US";
@@ -277,6 +330,8 @@ function renderCard(row) {
   prices.innerHTML = `
     <div class="price"><span>现金回收</span><strong>${moneyUsd(row.cashUsd)}</strong><span>${moneyCny(row.cashCny)}</span></div>
     <div class="price"><span>店铺积分估算</span><strong>${moneyUsd(row.creditUsd)}</strong><span>${moneyCny(row.creditCny)}</span></div>
+    <div class="price market"><span>欧洲参考</span><strong>${moneyEur(bestCardmarketPrice(row))}</strong><span>${eurToCny(bestCardmarketPrice(row)) === null ? "未加载" : moneyCny(eurToCny(bestCardmarketPrice(row)))}</span></div>
+    <div class="price market"><span>CK现金-欧洲</span><strong class="${spreadClass}">${spreadText}</strong><span>${row.cardmarket ? "参考价" : "无数据"}</span></div>
   `;
   return node;
 }
@@ -369,14 +424,50 @@ function bindEvents() {
     readControls();
     render();
   });
+  els.imageInput.addEventListener("change", () => handleImageFile(els.imageInput.files && els.imageInput.files[0]));
+  els.imageGuessButton.addEventListener("click", () => applyImageGuess(els.imageGuessInput.value));
+  els.imageGuessInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") applyImageGuess(els.imageGuessInput.value);
+  });
+  for (const eventName of ["dragenter", "dragover"]) {
+    els.imageDropZone.addEventListener(eventName, (event) => {
+      event.preventDefault();
+      els.imageDropZone.classList.add("dragover");
+    });
+    document.addEventListener(eventName, (event) => {
+      event.preventDefault();
+      els.imageDropZone.classList.add("dragover");
+    });
+  }
+  for (const eventName of ["dragleave", "drop"]) {
+    els.imageDropZone.addEventListener(eventName, (event) => {
+      event.preventDefault();
+      els.imageDropZone.classList.remove("dragover");
+    });
+    document.addEventListener(eventName, (event) => {
+      event.preventDefault();
+      if (eventName === "drop") return;
+      els.imageDropZone.classList.remove("dragover");
+    });
+  }
+  els.imageDropZone.addEventListener("drop", (event) => {
+    const file = event.dataTransfer?.files?.[0];
+    handleImageFile(file);
+  });
+  document.addEventListener("drop", (event) => {
+    const file = event.dataTransfer?.files?.[0];
+    if (file) handleImageFile(file);
+  });
 }
 
 async function init() {
   state.data = await loadData();
+  await loadCardmarketData(state.data);
   const meta = state.data.meta;
   const generatedCn = Number(meta.generatedCnFilled || 0);
   const generatedLine = generatedCn ? ` ｜ 补充中文 ${generatedCn.toLocaleString("zh-CN")} 张` : "";
-  els.metaLine.textContent = `数据时间：${meta.cardKingdomCreatedAt} ｜ 中文未匹配 ${meta.missingCn.toLocaleString("zh-CN")} 张${generatedLine} ｜ 图片缺失 ${meta.missingImage.toLocaleString("zh-CN")} 张`;
+  const euLine = state.cardmarketLoaded ? ` ｜ 欧洲参考 ${Number(meta.cardmarketMatchedRows || 0).toLocaleString("zh-CN")} 条` : " ｜ 欧洲参考未加载";
+  els.metaLine.textContent = `数据时间：${meta.cardKingdomCreatedAt} ｜ 中文未匹配 ${meta.missingCn.toLocaleString("zh-CN")} 张${generatedLine} ｜ 图片缺失 ${meta.missingImage.toLocaleString("zh-CN")} 张${euLine}`;
   els.cardCount.textContent = meta.cards.toLocaleString("zh-CN");
   els.sealedCount.textContent = meta.sealed.toLocaleString("zh-CN");
   els.rate.textContent = Number(meta.usdCny).toFixed(4);
@@ -410,4 +501,103 @@ async function loadData() {
   const response = await fetch(`./data.json?v=${stamp}`, { cache: "no-store" });
   if (!response.ok) throw new Error(`data fetch failed: ${response.status}`);
   return await response.json();
+}
+
+async function loadCardmarketData(data) {
+  try {
+    const payload = await loadJsonMaybeGzip("cardmarket_prices.json");
+    const prices = payload.prices || {};
+    let matched = 0;
+    for (const row of data.cards || []) {
+      const record = prices[`id:${row.scryfallId}`] || prices[`key:${rowCardmarketKey(row)}`];
+      if (!record) continue;
+      row.cardmarket = record;
+      matched += 1;
+    }
+    data.meta.cardmarketMatchedRows = matched;
+    data.meta.cardmarketGeneratedAt = payload.meta?.generatedAt || "";
+    if (payload.meta?.eurCny) data.meta.eurCny = payload.meta.eurCny;
+    state.cardmarketLoaded = true;
+  } catch (error) {
+    console.warn("Cardmarket reference data not loaded", error);
+    state.cardmarketLoaded = false;
+  }
+}
+
+async function loadJsonMaybeGzip(baseName) {
+  const stamp = Date.now();
+  if ("DecompressionStream" in window) {
+    const response = await fetch(`./${baseName}.gz?v=${stamp}`, { cache: "no-store" });
+    if (response.ok && response.body) {
+      const stream = response.body.pipeThrough(new DecompressionStream("gzip"));
+      return await new Response(stream).json();
+    }
+  }
+  const response = await fetch(`./${baseName}?v=${stamp}`, { cache: "no-store" });
+  if (!response.ok) throw new Error(`${baseName} fetch failed: ${response.status}`);
+  return await response.json();
+}
+
+function loadScript(src) {
+  return new Promise((resolve, reject) => {
+    if ([...document.scripts].some((script) => script.src === src)) {
+      resolve();
+      return;
+    }
+    const script = document.createElement("script");
+    script.src = src;
+    script.async = true;
+    script.onload = resolve;
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
+}
+
+function pickCardNameFromOcr(text) {
+  const lines = String(text || "")
+    .split(/\n+/)
+    .map((line) => line.trim())
+    .filter((line) => /^[A-Za-z0-9,'’\-: ]{3,}$/.test(line))
+    .filter((line) => !/^(legendary|creature|artifact|instant|sorcery|enchantment|land|planeswalker)\b/i.test(line));
+  return lines[0] || "";
+}
+
+function applyImageGuess(guess) {
+  const value = String(guess || "").trim();
+  if (!value) {
+    els.imageOcrStatus.textContent = "请输入牌名再搜索。";
+    return;
+  }
+  els.searchInput.value = value;
+  els.typeSelect.value = "cards";
+  els.imageOcrStatus.textContent = `按牌名搜索：${value}`;
+  state.page = 1;
+  readControls();
+  render();
+}
+
+async function handleImageFile(file) {
+  if (!file) return;
+  if (!file.type.startsWith("image/")) {
+    els.imageOcrStatus.textContent = "请拖入图片文件。";
+    return;
+  }
+  els.imageOcrStatus.textContent = `已收到图片：${file.name || "未命名"}，正在加载 OCR...`;
+  try {
+    await loadScript("https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js");
+    if (!window.Tesseract) throw new Error("Tesseract 未加载");
+    els.imageOcrStatus.textContent = "OCR 已加载，正在识别英文牌名...";
+    const result = await window.Tesseract.recognize(file, "eng");
+    const guess = pickCardNameFromOcr(result.data?.text || "");
+    if (!guess) {
+      els.imageGuessInput.value = "";
+      els.imageOcrStatus.textContent = "没有识别到可靠英文牌名。可以换清晰正面图，或在上方手动输入牌名。";
+      return;
+    }
+    els.imageGuessInput.value = guess;
+    applyImageGuess(guess);
+  } catch (error) {
+    console.error(error);
+    els.imageOcrStatus.textContent = `OCR 加载或识别失败：${error.message || error}。当前 file:// 或网络环境可能拦截 OCR 脚本；请用 http://127.0.0.1:8787 打开，或在上方手动输入牌名。`;
+  }
 }

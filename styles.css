@@ -170,6 +170,47 @@ button {
   min-height: 16px;
 }
 
+.drop-zone {
+  display: grid;
+  gap: 6px;
+  place-items: center;
+  min-height: 88px;
+  padding: 12px;
+  border: 1px dashed #9aa9ba;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: var(--muted);
+  text-align: center;
+}
+
+.drop-zone.dragover {
+  border-color: var(--blue);
+  background: #eaf3fb;
+  color: #174b78;
+}
+
+.drop-zone input {
+  width: 100%;
+  max-width: 220px;
+}
+
+#imageGuessInput {
+  margin-top: 8px;
+}
+
+#imageGuessButton {
+  margin-top: 8px;
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.hint {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
 .resultbar {
   height: 42px;
   display: flex;
@@ -280,7 +321,7 @@ h2 {
 }
 
 .prices {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-top: 9px;
 }
 
@@ -295,6 +336,19 @@ h2 {
   display: block;
   color: var(--ink);
   font-size: 15px;
+}
+
+.price.market {
+  border-color: #ccd6e0;
+  background: #f8fafc;
+}
+
+.good {
+  color: var(--green);
+}
+
+.bad {
+  color: var(--danger);
 }
 
 .links {
@@ -342,6 +396,10 @@ h2 {
 
   .cards-grid {
     grid-template-columns: 1fr;
+  }
+
+  .prices {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
