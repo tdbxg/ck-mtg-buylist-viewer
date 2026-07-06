@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MTG 回收价与欧洲市场参考价</title>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=20260706-compact-layout">
 </head>
 <body>
   <header class="topbar">
@@ -21,12 +21,12 @@
 
   <main class="layout">
     <aside class="filters" aria-label="filters">
-      <div class="field">
+      <div class="field search-field">
         <label for="searchInput">搜索</label>
         <input id="searchInput" type="search" placeholder="中文、英文、系列、SKU">
       </div>
 
-      <div class="field">
+      <div class="field image-field">
         <label for="imageInput">图片识别搜索</label>
         <div id="imageDropZone" class="drop-zone">
           <input id="imageInput" type="file" accept="image/*">
@@ -45,7 +45,7 @@
         </select>
       </div>
 
-      <div class="field" id="recentSetsField">
+      <div class="field recent-field" id="recentSetsField">
         <label>最近系列单卡</label>
         <div id="recentSets" class="set-chips" aria-label="recent sets"></div>
       </div>
@@ -127,6 +127,6 @@
     </article>
   </template>
 
-  <script src="./app.js?v=20260702-image-drop-fallback"></script>
+  <script src="./app.js?v=20260706-compact-layout"></script>
 </body>
 </html>
