@@ -486,16 +486,11 @@ init().catch((err) => {
 
 async function loadData() {
   const stamp = Date.now();
-  if ("DecompressionStream" in window) {
-    try {
-      els.metaLine.textContent = "正在加载压缩数据...";
-      const response = await fetch(`./data.json.gz?v=${stamp}`, { cache: "no-store" });
-      if (!response.ok || !response.body) throw new Error(`gzip fetch failed: ${response.status}`);
-      const stream = response.body.pipeThrough(new DecompressionStream("gzip"));
-      return await new Response(stream).json();
-    } catch (error) {
-      console.warn("Falling back to uncompressed data.json", error);
-    }
+  try {
+    els.metaLine.textContent = "正在加载压缩数据...";
+    return await loadGzipJson(`./data.json.gz?v=${stamp}`, "data.json.gz");
+  } catch (error) {
+    console.warn("Falling back to uncompressed data.json", error);
   }
   els.metaLine.textContent = "正在加载完整数据...";
   const response = await fetch(`./data.json?v=${stamp}`, { cache: "no-store" });
@@ -526,16 +521,41 @@ async function loadCardmarketData(data) {
 
 async function loadJsonMaybeGzip(baseName) {
   const stamp = Date.now();
-  if ("DecompressionStream" in window) {
-    const response = await fetch(`./${baseName}.gz?v=${stamp}`, { cache: "no-store" });
-    if (response.ok && response.body) {
-      const stream = response.body.pipeThrough(new DecompressionStream("gzip"));
-      return await new Response(stream).json();
-    }
+  try {
+    return await loadGzipJson(`./${baseName}.gz?v=${stamp}`, `${baseName}.gz`);
+  } catch (error) {
+    console.warn(`${baseName}.gz not loaded, trying plain json`, error);
   }
   const response = await fetch(`./${baseName}?v=${stamp}`, { cache: "no-store" });
   if (!response.ok) throw new Error(`${baseName} fetch failed: ${response.status}`);
   return await response.json();
+}
+
+async function loadGzipJson(url, label) {
+  const response = await fetch(url, { cache: "no-store" });
+  if (!response.ok) throw new Error(`${label} fetch failed: ${response.status}`);
+  if ("DecompressionStream" in window && response.body) {
+    try {
+      const stream = response.clone().body.pipeThrough(new DecompressionStream("gzip"));
+      return await new Response(stream).json();
+    } catch (error) {
+      console.warn(`${label} native gzip decode failed, trying pako`, error);
+    }
+  }
+  const bytes = new Uint8Array(await response.arrayBuffer());
+  if (bytes[0] !== 0x1f || bytes[1] !== 0x8b) {
+    return JSON.parse(new TextDecoder("utf-8").decode(bytes));
+  }
+  await ensurePako();
+  return JSON.parse(window.pako.inflate(bytes, { to: "string" }));
+}
+
+async function ensurePako() {
+  if (window.pako && typeof window.pako.inflate === "function") return;
+  await loadScript("./pako_inflate.min.js?v=20260706-pako");
+  if (!window.pako || typeof window.pako.inflate !== "function") {
+    throw new Error("本地 gzip 解压库未加载");
+  }
 }
 
 function loadScript(src) {
