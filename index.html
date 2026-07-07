@@ -26,6 +26,12 @@
         <input id="searchInput" type="search" placeholder="中文、英文、系列、SKU">
       </div>
 
+      <div class="field fast-field">
+        <label>加载模式</label>
+        <button id="fullDataButton" type="button">加载全量低价牌</button>
+        <div id="fastModeNotice" class="hint">快速版：先加载高价牌和最近系列，打开更快。</div>
+      </div>
+
       <div class="field image-field">
         <label for="imageInput">图片识别搜索</label>
         <div id="imageDropZone" class="drop-zone">
@@ -127,6 +133,6 @@
     </article>
   </template>
 
-  <script src="./app.js?v=20260706-pako-fallback"></script>
+  <script src="./app.js?v=20260707-fast-data"></script>
 </body>
 </html>

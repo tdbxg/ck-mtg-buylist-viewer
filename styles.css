@@ -165,7 +165,17 @@ button {
 }
 
 .search-field {
-  grid-column: span 2;
+  grid-column: span 1;
+}
+
+.fast-field button {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.fast-field button:disabled {
+  cursor: wait;
+  opacity: 0.72;
 }
 
 .image-field {

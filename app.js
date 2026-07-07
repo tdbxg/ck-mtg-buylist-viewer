@@ -15,6 +15,7 @@ const state = {
   page: 1,
   results: [],
   cardmarketLoaded: false,
+  fullDataLoaded: false,
 };
 
 const els = {
@@ -41,6 +42,8 @@ const els = {
   missingCnOnly: document.querySelector("#missingCnOnly"),
   sortSelect: document.querySelector("#sortSelect"),
   resetButton: document.querySelector("#resetButton"),
+  fullDataButton: document.querySelector("#fullDataButton"),
+  fastModeNotice: document.querySelector("#fastModeNotice"),
   resultCount: document.querySelector("#resultCount"),
   pageLine: document.querySelector("#pageLine"),
   prevButton: document.querySelector("#prevButton"),
@@ -101,6 +104,48 @@ function debounce(fn, delay = 140) {
   return (...args) => {
     clearTimeout(timer);
     timer = setTimeout(() => fn(...args), delay);
+  };
+}
+
+function buildSearch(row) {
+  return normalize([
+    row.name,
+    row.ckName,
+    row.flavorName,
+    row.cn,
+    row.edition,
+    row.variation,
+    row.scryfallSetName,
+    row.collectorNumber,
+    row.sku,
+  ].filter(Boolean).join(" "));
+}
+
+function expandPackedData(payload) {
+  if (!Array.isArray(payload.fields)) return payload;
+  const cardFields = payload.fields;
+  const sealedFields = payload.sealedFields || [];
+  const expand = (row, fields) => {
+    const item = {};
+    fields.forEach((field, index) => {
+      item[field] = row[index];
+    });
+    item.cashUsd = Number(item.cashUsd || 0);
+    item.cashCny = Number(item.cashCny || 0);
+    item.creditUsd = Number(item.creditUsd || 0);
+    item.creditCny = Number(item.creditCny || 0);
+    item.qtyBuying = Number(item.qtyBuying || 0);
+    item.qtyRetail = Number(item.qtyRetail || 0);
+    item.conditions = {};
+    item.finishes = [];
+    item.search = buildSearch(item);
+    return item;
+  };
+  return {
+    meta: payload.meta || {},
+    editions: payload.editions || [],
+    cards: (payload.cards || []).map((row) => expand(row, cardFields)),
+    sealed: (payload.sealed || []).map((row) => expand(row, sealedFields)),
   };
 }
 
@@ -386,6 +431,16 @@ function bindEvents() {
     el.addEventListener("input", rerender);
     el.addEventListener("change", rerender);
   }
+  els.sortSelect.addEventListener("change", () => {
+    if ((els.sortSelect.value === "euDesc" || els.sortSelect.value === "spreadDesc") && !state.cardmarketLoaded) {
+      els.metaLine.textContent = "正在按需加载欧洲参考价...";
+      loadCardmarketData(state.data).then(() => {
+        updateMetaLine();
+        render();
+      });
+    }
+  });
+  els.fullDataButton.addEventListener("click", loadFullData);
   els.recentSets.addEventListener("click", (event) => {
     const button = event.target.closest(".set-chip");
     if (!button) return;
@@ -462,14 +517,11 @@ function bindEvents() {
 
 async function init() {
   state.data = await loadData();
-  await loadCardmarketData(state.data);
+  state.fullDataLoaded = state.data.meta?.mode !== "fast";
   const meta = state.data.meta;
-  const generatedCn = Number(meta.generatedCnFilled || 0);
-  const generatedLine = generatedCn ? ` ｜ 补充中文 ${generatedCn.toLocaleString("zh-CN")} 张` : "";
-  const euLine = state.cardmarketLoaded ? ` ｜ 欧洲参考 ${Number(meta.cardmarketMatchedRows || 0).toLocaleString("zh-CN")} 条` : " ｜ 欧洲参考未加载";
-  els.metaLine.textContent = `数据时间：${meta.cardKingdomCreatedAt} ｜ 中文未匹配 ${meta.missingCn.toLocaleString("zh-CN")} 张${generatedLine} ｜ 图片缺失 ${meta.missingImage.toLocaleString("zh-CN")} 张${euLine}`;
-  els.cardCount.textContent = meta.cards.toLocaleString("zh-CN");
-  els.sealedCount.textContent = meta.sealed.toLocaleString("zh-CN");
+  updateMetaLine();
+  els.cardCount.textContent = (meta.fullCards || meta.cards).toLocaleString("zh-CN");
+  els.sealedCount.textContent = (meta.sealed || 0).toLocaleString("zh-CN");
   els.rate.textContent = Number(meta.usdCny).toFixed(4);
   populateSets();
   populateEditions();
@@ -479,16 +531,49 @@ async function init() {
   render();
 }
 
+function updateMetaLine() {
+  const meta = state.data.meta;
+  const generatedCn = Number(meta.generatedCnFilled || 0);
+  const generatedLine = generatedCn ? ` ｜ 补充中文 ${generatedCn.toLocaleString("zh-CN")} 张` : "";
+  const euLine = state.cardmarketLoaded ? ` ｜ 欧洲参考 ${Number(meta.cardmarketMatchedRows || 0).toLocaleString("zh-CN")} 条` : " ｜ 欧洲参考按需加载";
+  const modeLine = meta.mode === "fast"
+    ? ` ｜ 快速版 ${Number(meta.cards || 0).toLocaleString("zh-CN")} / 全量 ${Number(meta.fullCards || meta.cards || 0).toLocaleString("zh-CN")} 张`
+    : " ｜ 全量版";
+  els.metaLine.textContent = `数据时间：${meta.cardKingdomCreatedAt}${modeLine} ｜ 中文未匹配 ${Number(meta.missingCn || 0).toLocaleString("zh-CN")} 张${generatedLine} ｜ 图片缺失 ${Number(meta.missingImage || 0).toLocaleString("zh-CN")} 张${euLine}`;
+  els.fastModeNotice.textContent = meta.mode === "fast"
+    ? "快速版只预载高价牌和最近系列；搜不到低价旧牌时点“加载全量低价牌”。"
+    : "当前已加载全量数据。";
+  els.fullDataButton.disabled = meta.mode !== "fast";
+  els.fullDataButton.textContent = meta.mode === "fast" ? "加载全量低价牌" : "已是全量";
+}
+
+async function loadFullData() {
+  if (state.fullDataLoaded) return;
+  els.fullDataButton.disabled = true;
+  els.fullDataButton.textContent = "正在加载全量...";
+  els.metaLine.textContent = "正在加载全量数据，低性能浏览器可能需要等待...";
+  state.data = await loadData(true);
+  state.fullDataLoaded = true;
+  if (state.cardmarketLoaded) state.cardmarketLoaded = false;
+  populateSets();
+  populateEditions();
+  populateRecentSets();
+  readControls();
+  updateMetaLine();
+  render();
+}
+
 init().catch((err) => {
   console.error(err);
   els.metaLine.textContent = "数据加载失败，请确认 data.json 与 index.html 在同一目录，并通过本地服务器打开。";
 });
 
-async function loadData() {
+async function loadData(full = false) {
   const stamp = Date.now();
+  const fastName = full ? "data.json.gz" : "data_fast.json.gz";
   try {
-    els.metaLine.textContent = "正在加载压缩数据...";
-    return await loadGzipJson(`./data.json.gz?v=${stamp}`, "data.json.gz");
+    els.metaLine.textContent = full ? "正在加载全量压缩数据..." : "正在加载快速数据...";
+    return expandPackedData(await loadGzipJson(`./${fastName}?v=${stamp}`, fastName));
   } catch (error) {
     console.warn("Falling back to uncompressed data.json", error);
   }
