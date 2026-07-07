@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MTG 回收价与欧洲市场参考价</title>
-  <link rel="stylesheet" href="./styles.css?v=20260707-retail-price">
+  <link rel="stylesheet" href="./styles.css?v=20260708-cart">
 </head>
 <body>
   <header class="topbar">
@@ -48,6 +48,20 @@
         <select id="typeSelect">
           <option value="cards">单卡</option>
           <option value="sealed">密封产品</option>
+        </select>
+      </div>
+
+      <div class="field" id="categoryField">
+        <label for="categorySelect">分拣分类</label>
+        <select id="categorySelect">
+          <option value="">全部分类</option>
+          <option value="standard">常规系列</option>
+          <option value="promo">Promo / 奖闪</option>
+          <option value="secret">Secret Lair</option>
+          <option value="list">Mystery Booster / The List</option>
+          <option value="ub">Universes Beyond / 联动</option>
+          <option value="commander">Commander</option>
+          <option value="token">Token / Helper / Oversized</option>
         </select>
       </div>
 
@@ -97,6 +111,35 @@
       <button id="resetButton" type="button">重置筛选</button>
     </aside>
 
+    <section class="cart-panel" aria-label="buylist cart">
+      <div class="cart-head">
+        <div>
+          <h2>回收车</h2>
+          <p id="cartSummary">0 种 / 0 张 / 现金 $0.00</p>
+        </div>
+        <div class="cart-actions">
+          <button id="exportCartButton" type="button">导出牌表 CSV</button>
+          <button id="clearCartButton" type="button">清空</button>
+        </div>
+      </div>
+      <div id="cartTableWrap" class="cart-table-wrap">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>牌名</th>
+              <th>版本</th>
+              <th>编号</th>
+              <th>数量</th>
+              <th>现金</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="cartRows"></tbody>
+        </table>
+      </div>
+      <div id="cartEmpty" class="cart-empty">还没有加入回收车</div>
+    </section>
+
     <section class="results">
       <div class="resultbar">
         <div>
@@ -133,6 +176,6 @@
     </article>
   </template>
 
-  <script src="./app.js?v=20260707-retail-price"></script>
+  <script src="./app.js?v=20260708-cart"></script>
 </body>
 </html>

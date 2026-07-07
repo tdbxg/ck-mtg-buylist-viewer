@@ -276,6 +276,94 @@ button {
   margin-bottom: 10px;
 }
 
+.cart-panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.cart-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.cart-head h2 {
+  margin: 0 0 4px;
+  font-size: 17px;
+}
+
+.cart-head p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.cart-actions {
+  display: flex;
+  gap: 8px;
+  min-width: 260px;
+}
+
+.cart-actions button:last-child,
+.remove-cart {
+  background: #fff;
+  color: var(--danger);
+  border-color: #f0b7b2;
+}
+
+.cart-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  max-height: 260px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.cart-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 7px 8px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.cart-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #f8fafc;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.cart-table input {
+  width: 68px;
+  min-height: 30px;
+  padding: 4px 6px;
+}
+
+.cart-empty {
+  padding: 18px;
+  border: 1px dashed var(--line);
+  border-radius: 6px;
+  color: var(--muted);
+  text-align: center;
+}
+
 .pager {
   display: flex;
   align-items: center;
@@ -425,6 +513,21 @@ h2 {
   margin-top: 10px;
 }
 
+.cart-controls {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.cart-controls button {
+  flex: 1;
+}
+
+.cart-controls .in-cart {
+  background: var(--green);
+  border-color: var(--green);
+}
+
 .links a {
   color: var(--blue);
   text-decoration: none;
@@ -479,6 +582,15 @@ h2 {
 
   .cards-grid {
     grid-template-columns: 1fr;
+  }
+
+  .cart-head {
+    display: block;
+  }
+
+  .cart-actions {
+    min-width: 0;
+    margin-top: 10px;
   }
 
   .prices {

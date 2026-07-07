@@ -1,9 +1,11 @@
 const PAGE_SIZE = 60;
+const CART_KEY = "ck-mtg-buylist-cart-v1";
 
 const state = {
   data: null,
   source: "cards",
   query: "",
+  category: "",
   edition: "",
   setCode: "",
   recentSet: "",
@@ -16,6 +18,7 @@ const state = {
   results: [],
   cardmarketLoaded: false,
   fullDataLoaded: false,
+  cart: new Map(),
 };
 
 const els = {
@@ -30,6 +33,8 @@ const els = {
   imageGuessButton: document.querySelector("#imageGuessButton"),
   imageOcrStatus: document.querySelector("#imageOcrStatus"),
   typeSelect: document.querySelector("#typeSelect"),
+  categoryField: document.querySelector("#categoryField"),
+  categorySelect: document.querySelector("#categorySelect"),
   editionField: document.querySelector("#editionField"),
   editionSelect: document.querySelector("#editionSelect"),
   setField: document.querySelector("#setField"),
@@ -50,6 +55,12 @@ const els = {
   nextButton: document.querySelector("#nextButton"),
   cardsGrid: document.querySelector("#cardsGrid"),
   emptyState: document.querySelector("#emptyState"),
+  cartSummary: document.querySelector("#cartSummary"),
+  cartRows: document.querySelector("#cartRows"),
+  cartEmpty: document.querySelector("#cartEmpty"),
+  cartTableWrap: document.querySelector("#cartTableWrap"),
+  exportCartButton: document.querySelector("#exportCartButton"),
+  clearCartButton: document.querySelector("#clearCartButton"),
   template: document.querySelector("#cardTemplate"),
 };
 
@@ -119,6 +130,58 @@ function buildSearch(row) {
     row.collectorNumber,
     row.sku,
   ].filter(Boolean).join(" "));
+}
+
+function rowKey(row) {
+  return row.sku || `${row.name}|${row.edition}|${row.collectorNumber}|${row.foil ? "foil" : "normal"}`;
+}
+
+function classifyRow(row) {
+  const text = `${row.edition || ""} ${row.scryfallSetName || ""} ${row.scryfallSet || ""} ${row.variation || ""} ${row.flavorName || ""}`.toLowerCase();
+  if (/token|helper|oversized/.test(text)) return "token";
+  if (/secret lair|sld/.test(text)) return "secret";
+  if (/mystery booster|the list|plist/.test(text)) return "list";
+  if (/universes beyond|warhammer|doctor who|fallout|lord of the rings|marvel|spider-man|final fantasy|avatar/.test(text)) return "ub";
+  if (/promo|promotional|promo pack|prerelease|media and collaboration|spotlight|wizards play network/.test(text)) return "promo";
+  if (/commander|edh/.test(text)) return "commander";
+  return "standard";
+}
+
+function escapeCsv(value) {
+  const text = String(value ?? "");
+  return /[",\n\r]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
+}
+
+function wantsFullData() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("full") === "1" || params.get("mode") === "full";
+}
+
+function cartSnapshot(row) {
+  return {
+    key: rowKey(row),
+    sku: row.sku || "",
+    name: row.name || "",
+    cn: row.cn || "",
+    edition: row.edition || "",
+    scryfallSetName: row.scryfallSetName || "",
+    scryfallSet: row.scryfallSet || "",
+    collectorNumber: row.collectorNumber || "",
+    variation: row.flavorName || row.variation || "",
+    foil: !!row.foil,
+    cashUsd: Number(row.cashUsd || 0),
+    cashCny: Number(row.cashCny || 0),
+    creditUsd: Number(row.creditUsd || 0),
+    creditCny: Number(row.creditCny || 0),
+    retailUsd: Number(row.retailUsd || row.conditions?.nm_price || 0),
+    retailCny: Number(row.retailCny || 0),
+    qtyBuying: Number(row.qtyBuying || 0),
+    releasedAt: row.releasedAt || "",
+    rarity: row.rarity || "",
+    ckUrl: row.ckUrl || "",
+    scryfallUrl: row.scryfallUrl || "",
+    qty: 1,
+  };
 }
 
 function expandPackedData(payload) {
@@ -284,6 +347,7 @@ function filterRows() {
   const minPrice = Number(state.minPrice || 0);
   let next = rows.filter((row) => {
     if (query && !row.search.includes(query)) return false;
+    if (state.source === "cards" && state.category && classifyRow(row) !== state.category) return false;
     if (state.source === "cards" && state.recentSet && row.scryfallSet !== state.recentSet) return false;
     if (state.source === "cards" && state.setCode && row.scryfallSet !== state.setCode) return false;
     if (state.edition && row.edition !== state.edition) return false;
@@ -307,6 +371,7 @@ function renderCard(row) {
   const details = node.querySelector(".details");
   const prices = node.querySelector(".prices");
   const links = node.querySelector(".links");
+  node.dataset.key = rowKey(row);
   const euPrice = state.source === "cards" ? bestCardmarketPrice(row) : null;
   const euCny = state.source === "cards" ? eurToCny(euPrice) : null;
   const ckRetailUsd = Number(row.retailUsd || row.conditions?.nm_price || 0);
@@ -366,6 +431,13 @@ function renderCard(row) {
       ${row.scryfallUrl ? `<a href="${row.scryfallUrl}" target="_blank" rel="noreferrer">Scryfall精确版本</a>` : ""}
       ${cardmarketLink}
     `;
+    const controls = document.createElement("div");
+    controls.className = "cart-controls";
+    const cartItem = state.cart.get(rowKey(row));
+    controls.innerHTML = `
+      <button class="add-cart ${cartItem ? "in-cart" : ""}" type="button" data-key="${rowKey(row)}">${cartItem ? `已加入 ×${cartItem.qty}` : "加入回收车"}</button>
+    `;
+    links.after(controls);
   } else {
     badge.textContent = row.shipsInternationally ? "Intl" : "US";
     cn.textContent = "密封产品";
@@ -410,6 +482,7 @@ function render() {
 function readControls() {
   state.source = els.typeSelect.value;
   state.query = els.searchInput.value;
+  state.category = state.source === "cards" ? els.categorySelect.value : "";
   if (state.source !== "cards") state.recentSet = "";
   const selectedSet = state.source === "cards" ? els.setSelect.value : "";
   if (selectedSet !== state.recentSet) state.recentSet = "";
@@ -421,6 +494,7 @@ function readControls() {
   state.missingCnOnly = els.missingCnOnly.checked;
   state.sort = els.sortSelect.value;
   els.recentSetsField.style.display = state.source === "cards" ? "" : "none";
+  els.categoryField.style.display = state.source === "cards" ? "" : "none";
   els.setField.style.display = state.source === "cards" ? "" : "none";
   els.editionField.style.display = state.source === "cards" ? "" : "none";
   els.foilOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
@@ -433,7 +507,7 @@ function bindEvents() {
     readControls();
     render();
   });
-  for (const el of [els.searchInput, els.typeSelect, els.setSelect, els.editionSelect, els.minPrice, els.foilOnly, els.withImageOnly, els.missingCnOnly, els.sortSelect]) {
+  for (const el of [els.searchInput, els.typeSelect, els.categorySelect, els.setSelect, els.editionSelect, els.minPrice, els.foilOnly, els.withImageOnly, els.missingCnOnly, els.sortSelect]) {
     el.addEventListener("input", rerender);
     el.addEventListener("change", rerender);
   }
@@ -469,9 +543,29 @@ function bindEvents() {
     state.page += 1;
     render();
   });
+  els.cardsGrid.addEventListener("click", (event) => {
+    const button = event.target.closest(".add-cart");
+    if (!button) return;
+    const row = state.results.find((item) => rowKey(item) === button.dataset.key);
+    if (!row) return;
+    addToCart(row);
+  });
+  els.cartRows.addEventListener("input", (event) => {
+    const input = event.target.closest(".cart-qty");
+    if (!input) return;
+    updateCartQty(input.dataset.key, Number(input.value || 0));
+  });
+  els.cartRows.addEventListener("click", (event) => {
+    const button = event.target.closest(".remove-cart");
+    if (!button) return;
+    removeFromCart(button.dataset.key);
+  });
+  els.exportCartButton.addEventListener("click", exportCartCsv);
+  els.clearCartButton.addEventListener("click", clearCart);
   els.resetButton.addEventListener("click", () => {
     els.searchInput.value = "";
     els.typeSelect.value = "cards";
+    els.categorySelect.value = "";
     els.setSelect.value = "";
     els.editionSelect.value = "";
     state.setCode = "";
@@ -522,7 +616,8 @@ function bindEvents() {
 }
 
 async function init() {
-  state.data = await loadData();
+  loadCart();
+  state.data = await loadData(wantsFullData());
   state.fullDataLoaded = state.data.meta?.mode !== "fast";
   const meta = state.data.meta;
   updateMetaLine();
@@ -535,6 +630,7 @@ async function init() {
   readControls();
   bindEvents();
   render();
+  renderCart();
 }
 
 function updateMetaLine() {
@@ -551,6 +647,152 @@ function updateMetaLine() {
     : "当前已加载全量数据。";
   els.fullDataButton.disabled = meta.mode !== "fast";
   els.fullDataButton.textContent = meta.mode === "fast" ? "加载全量低价牌" : "已是全量";
+}
+
+function loadCart() {
+  try {
+    const rows = JSON.parse(localStorage.getItem(CART_KEY) || "[]");
+    state.cart = new Map(rows.map((row) => [row.key, row]));
+  } catch (error) {
+    console.warn("Cart not loaded", error);
+    state.cart = new Map();
+  }
+}
+
+function saveCart() {
+  localStorage.setItem(CART_KEY, JSON.stringify([...state.cart.values()]));
+}
+
+function addToCart(row) {
+  const key = rowKey(row);
+  const current = state.cart.get(key);
+  if (current) {
+    current.qty += 1;
+  } else {
+    state.cart.set(key, cartSnapshot(row));
+  }
+  saveCart();
+  renderCart();
+  render();
+}
+
+function updateCartQty(key, qty) {
+  const item = state.cart.get(key);
+  if (!item) return;
+  const nextQty = Math.max(0, Math.floor(Number(qty || 0)));
+  if (nextQty <= 0) {
+    state.cart.delete(key);
+  } else {
+    item.qty = nextQty;
+  }
+  saveCart();
+  renderCart();
+  render();
+}
+
+function removeFromCart(key) {
+  state.cart.delete(key);
+  saveCart();
+  renderCart();
+  render();
+}
+
+function clearCart() {
+  if (!state.cart.size) return;
+  state.cart.clear();
+  saveCart();
+  renderCart();
+  render();
+}
+
+function renderCart() {
+  const rows = [...state.cart.values()].sort((a, b) => b.cashUsd - a.cashUsd);
+  const totalQty = rows.reduce((sum, row) => sum + Number(row.qty || 0), 0);
+  const totalCash = rows.reduce((sum, row) => sum + Number(row.qty || 0) * Number(row.cashUsd || 0), 0);
+  const totalRetail = rows.reduce((sum, row) => sum + Number(row.qty || 0) * Number(row.retailUsd || 0), 0);
+  els.cartSummary.textContent = `${rows.length.toLocaleString("zh-CN")} 种 / ${totalQty.toLocaleString("zh-CN")} 张 / 现金 ${moneyUsd(totalCash)} / CK售价 ${moneyUsd(totalRetail)}`;
+  els.cartEmpty.hidden = rows.length !== 0;
+  els.cartTableWrap.hidden = rows.length === 0;
+  els.exportCartButton.disabled = rows.length === 0;
+  els.clearCartButton.disabled = rows.length === 0;
+
+  const frag = document.createDocumentFragment();
+  for (const row of rows) {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td><strong>${row.name}</strong><br><span>${row.cn || ""}${row.foil ? " / Foil" : ""}</span></td>
+      <td>${row.edition || "-"}<br><span>${row.scryfallSetName || ""}</span></td>
+      <td>${row.collectorNumber || "-"}<br><span>${row.sku || ""}</span></td>
+      <td><input class="cart-qty" data-key="${row.key}" type="number" min="0" step="1" value="${row.qty}"></td>
+      <td>${moneyUsd(row.cashUsd)}<br><span>${moneyCny(row.cashCny)}</span></td>
+      <td><button class="remove-cart" data-key="${row.key}" type="button">移除</button></td>
+    `;
+    frag.appendChild(tr);
+  }
+  els.cartRows.replaceChildren(frag);
+}
+
+function exportCartCsv() {
+  const rows = [...state.cart.values()].sort((a, b) => b.cashUsd - a.cashUsd);
+  if (!rows.length) return;
+  const headers = [
+    "英文名",
+    "中文名",
+    "CK版本",
+    "Scryfall系列",
+    "系列代码",
+    "编号",
+    "变体/皮肤",
+    "闪卡",
+    "数量",
+    "现金回收USD",
+    "现金回收CNY",
+    "现金小计USD",
+    "店铺积分USD",
+    "CK正常售价USD",
+    "收购数量",
+    "发售日",
+    "稀有度",
+    "Card Kingdom链接",
+    "Scryfall链接",
+    "SKU",
+  ];
+  const lines = [headers.map(escapeCsv).join(",")];
+  for (const row of rows) {
+    const qty = Number(row.qty || 0);
+    lines.push([
+      row.name,
+      row.cn,
+      row.edition,
+      row.scryfallSetName,
+      String(row.scryfallSet || "").toUpperCase(),
+      row.collectorNumber,
+      row.variation,
+      row.foil ? "是" : "否",
+      qty,
+      row.cashUsd,
+      row.cashCny,
+      round2(qty * Number(row.cashUsd || 0)),
+      row.creditUsd,
+      row.retailUsd,
+      row.qtyBuying,
+      row.releasedAt,
+      row.rarity,
+      row.ckUrl,
+      row.scryfallUrl,
+      row.sku,
+    ].map(escapeCsv).join(","));
+  }
+  const blob = new Blob(["\ufeff" + lines.join("\n")], { type: "text/csv;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  const stamp = new Date().toISOString().slice(0, 10).replace(/-/g, "");
+  link.href = url;
+  link.download = `ck_buylist_cart_${stamp}.csv`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
 }
 
 async function loadFullData() {
