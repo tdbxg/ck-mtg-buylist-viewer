@@ -134,6 +134,8 @@ function expandPackedData(payload) {
     item.cashCny = Number(item.cashCny || 0);
     item.creditUsd = Number(item.creditUsd || 0);
     item.creditCny = Number(item.creditCny || 0);
+    item.retailUsd = Number(item.retailUsd || 0);
+    item.retailCny = Number(item.retailCny || 0);
     item.qtyBuying = Number(item.qtyBuying || 0);
     item.qtyRetail = Number(item.qtyRetail || 0);
     item.conditions = {};
@@ -307,6 +309,8 @@ function renderCard(row) {
   const links = node.querySelector(".links");
   const euPrice = state.source === "cards" ? bestCardmarketPrice(row) : null;
   const euCny = state.source === "cards" ? eurToCny(euPrice) : null;
+  const ckRetailUsd = Number(row.retailUsd || row.conditions?.nm_price || 0);
+  const ckRetailCny = Number(row.retailCny || 0);
   const spreadCny = euCny === null ? null : round2((row.cashCny || 0) - euCny);
   const spreadClass = spreadCny === null ? "" : spreadCny >= 0 ? "good" : "bad";
   const spreadText = spreadCny === null ? "-" : `${spreadCny >= 0 ? "+" : ""}${moneyCny(spreadCny)}`;
@@ -354,7 +358,8 @@ function renderCard(row) {
       <div>稀有度：${row.rarity || "-"} ｜ 发售：${row.releasedAt || "-"} ｜ 工艺：${Array.isArray(row.finishes) && row.finishes.length ? row.finishes.join(", ") : "-"}</div>
       <div>状态：${row.activeBuying === false ? "暂不收购" : "当前收购"} ｜ 收购数量：${row.qtyBuying.toLocaleString("zh-CN")} ｜ 零售库存：${row.qtyRetail.toLocaleString("zh-CN")}</div>
       <div>品相零售价：NM ${row.conditions?.nm_price || "-"} / EX ${row.conditions?.ex_price || "-"} / VG ${row.conditions?.vg_price || "-"} / G ${row.conditions?.g_price || "-"}</div>
-      <div>欧洲参考：<strong>${moneyEur(euPrice)}</strong>${euCny === null ? "" : ` / ${moneyCny(euCny)}`} ｜ CK现金-欧洲：<strong class="${spreadClass}">${spreadText}</strong></div>
+      <div>CK正常售价：<strong>${ckRetailUsd ? moneyUsd(ckRetailUsd) : "-"}</strong>${ckRetailCny ? ` / ${moneyCny(ckRetailCny)}` : ""} ｜ 欧洲参考：<strong>${moneyEur(euPrice)}</strong>${euCny === null ? "" : ` / ${moneyCny(euCny)}`}</div>
+      <div>CK现金-欧洲：<strong class="${spreadClass}">${spreadText}</strong></div>
     `;
     links.innerHTML = `
       <a href="${row.ckUrl}" target="_blank" rel="noreferrer">Card Kingdom</a>
@@ -375,6 +380,7 @@ function renderCard(row) {
   prices.innerHTML = `
     <div class="price"><span>现金回收</span><strong>${moneyUsd(row.cashUsd)}</strong><span>${moneyCny(row.cashCny)}</span></div>
     <div class="price"><span>店铺积分估算</span><strong>${moneyUsd(row.creditUsd)}</strong><span>${moneyCny(row.creditCny)}</span></div>
+    <div class="price retail"><span>CK正常售价</span><strong>${ckRetailUsd ? moneyUsd(ckRetailUsd) : "-"}</strong><span>${ckRetailCny ? moneyCny(ckRetailCny) : "见CK链接"}</span></div>
     <div class="price market"><span>欧洲参考</span><strong>${moneyEur(bestCardmarketPrice(row))}</strong><span>${eurToCny(bestCardmarketPrice(row)) === null ? "未加载" : moneyCny(eurToCny(bestCardmarketPrice(row)))}</span></div>
     <div class="price market"><span>CK现金-欧洲</span><strong class="${spreadClass}">${spreadText}</strong><span>${row.cardmarket ? "参考价" : "无数据"}</span></div>
   `;

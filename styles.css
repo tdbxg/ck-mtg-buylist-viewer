@@ -405,6 +405,11 @@ h2 {
   background: #f8fafc;
 }
 
+.price.retail {
+  border-color: #d7c8a6;
+  background: #fffaf0;
+}
+
 .good {
   color: var(--green);
 }
