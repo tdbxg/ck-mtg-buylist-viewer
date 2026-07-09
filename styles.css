@@ -403,6 +403,43 @@ button {
   border-color: var(--line);
 }
 
+.multi-photo {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.multi-controls {
+  display: grid;
+  grid-template-columns: 130px minmax(190px, 1fr) 140px 116px;
+  gap: 8px;
+  align-items: center;
+}
+
+.multi-controls label {
+  margin: 0;
+}
+
+.multi-controls input,
+.multi-controls select,
+.multi-controls button {
+  min-height: 34px;
+}
+
+.multi-controls button {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.multi-controls button:disabled {
+  opacity: 0.72;
+  cursor: wait;
+}
+
 .bulk-panel textarea {
   width: 100%;
   min-height: 136px;
@@ -706,6 +743,10 @@ h2 {
 
   .bulk-actions button {
     flex: 1 1 86px;
+  }
+
+  .multi-controls {
+    grid-template-columns: 1fr;
   }
 
   .bulk-row {

@@ -70,6 +70,10 @@ const els = {
   bulkMatchButton: document.querySelector("#bulkMatchButton"),
   bulkAddButton: document.querySelector("#bulkAddButton"),
   bulkClearButton: document.querySelector("#bulkClearButton"),
+  multiImageInput: document.querySelector("#multiImageInput"),
+  multiGridSelect: document.querySelector("#multiGridSelect"),
+  multiOcrButton: document.querySelector("#multiOcrButton"),
+  multiOcrStatus: document.querySelector("#multiOcrStatus"),
   template: document.querySelector("#cardTemplate"),
 };
 
@@ -781,6 +785,7 @@ function bindEvents() {
     render();
     els.searchInput.focus();
   });
+  els.multiOcrButton.addEventListener("click", handleMultiPhotoOcr);
   els.resetButton.addEventListener("click", () => {
     els.searchInput.value = "";
     els.typeSelect.value = "cards";
@@ -1147,6 +1152,135 @@ function pickCardNameFromOcr(text) {
     .filter((line) => /^[A-Za-z0-9,'’\-: ]{3,}$/.test(line))
     .filter((line) => !/^(legendary|creature|artifact|instant|sorcery|enchantment|land|planeswalker)\b/i.test(line));
   return lines[0] || "";
+}
+
+function cleanOcrLine(line) {
+  return String(line || "")
+    .replace(/[|_[\]{}<>]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function pickBulkCardNameFromOcr(text) {
+  const lines = String(text || "")
+    .split(/\n+/)
+    .map(cleanOcrLine)
+    .filter((line) => /^[A-Za-z0-9,'’().\-: ]{3,}$/.test(line))
+    .filter((line) => !/^(legendary|basic|snow|artifact|creature|instant|sorcery|enchantment|land|planeswalker|battle)\b/i.test(line))
+    .filter((line) => !/^(ward|flying|haste|trample|lifelink|deathtouch|vigilance|reach|first strike|double strike)\b/i.test(line))
+    .filter((line) => !/^(when|whenever|as this|this creature|target|choose|create|draw|add|until end|at the beginning)\b/i.test(line))
+    .filter((line) => !/^\d+\/\d+$/.test(line))
+    .filter((line) => !/^(illus|©|tm|wizards|marvel|artist)\b/i.test(line));
+  if (!lines.length) return "";
+
+  const decorative = /variant|showcase|borderless|extended art|dossier|surge foil|poster|serialized|concept art|profile|scene/i;
+  const firstClean = lines.find((line, index) => !(index === 0 && decorative.test(line)));
+  return firstClean || lines[0];
+}
+
+function pickSetAndCollectorFromOcr(text) {
+  const compact = String(text || "")
+    .toUpperCase()
+    .replace(/[\u2013\u2014]/g, "-")
+    .replace(/[|_[\]{}<>]/g, " ")
+    .replace(/\s+/g, " ");
+  const sku = compact.match(/\b([A-Z0-9]{2,6})[- ](0?\d{1,4}[A-Z]?)\b/);
+  if (sku) return { set: sku[1], collector: sku[2].replace(/^0+(?=\d)/, "") };
+  const footer = compact.match(/\b([A-Z])?\s*(0?\d{1,4}[A-Z]?)\s+([A-Z0-9]{2,6})\s+(?:EN|JP|ZHS|FR|DE|ES|IT|PT|KO|RU)\b/);
+  if (footer) return { set: footer[3], collector: footer[2].replace(/^0+(?=\d)/, "") };
+  const collectorOnly = compact.match(/\b(?:NO\.?\s*)?(0?\d{1,4}[A-Z]?)\/?\d{0,4}\b/);
+  return collectorOnly ? { set: "", collector: collectorOnly[1].replace(/^0+(?=\d)/, "") } : { set: "", collector: "" };
+}
+
+function loadImageElement(file) {
+  return new Promise((resolve, reject) => {
+    const url = URL.createObjectURL(file);
+    const image = new Image();
+    image.onload = () => {
+      URL.revokeObjectURL(url);
+      resolve(image);
+    };
+    image.onerror = () => {
+      URL.revokeObjectURL(url);
+      reject(new Error("图片读取失败"));
+    };
+    image.src = url;
+  });
+}
+
+function cropGridCell(image, col, row, cols, rows) {
+  const marginX = image.naturalWidth * 0.012;
+  const marginY = image.naturalHeight * 0.012;
+  const cellW = image.naturalWidth / cols;
+  const cellH = image.naturalHeight / rows;
+  const sx = col * cellW + marginX;
+  const sy = row * cellH + marginY;
+  const sw = Math.max(1, cellW - marginX * 2);
+  const sh = Math.max(1, cellH - marginY * 2);
+  const scale = Math.min(2, Math.max(1, 760 / Math.max(sw, sh)));
+  const canvas = document.createElement("canvas");
+  canvas.width = Math.round(sw * scale);
+  canvas.height = Math.round(sh * scale);
+  const ctx = canvas.getContext("2d", { willReadFrequently: true });
+  ctx.drawImage(image, sx, sy, sw, sh, 0, 0, canvas.width, canvas.height);
+  return canvas;
+}
+
+function lineFromMultiCardOcr(text, index) {
+  const name = pickBulkCardNameFromOcr(text);
+  const ids = pickSetAndCollectorFromOcr(text);
+  if (!name && !ids.collector) return "";
+  const hints = [ids.set, ids.collector].filter(Boolean).join(" | ");
+  if (name && hints) return `${name} | ${hints}`;
+  if (name) return name;
+  return hints ? `卡位${index + 1} | ${hints}` : "";
+}
+
+async function handleMultiPhotoOcr() {
+  const file = els.multiImageInput.files && els.multiImageInput.files[0];
+  if (!file) {
+    els.multiOcrStatus.textContent = "请先选择一张摆好 9-12 张牌的照片。";
+    return;
+  }
+  if (!file.type.startsWith("image/")) {
+    els.multiOcrStatus.textContent = "请选择图片文件。";
+    return;
+  }
+  const [colsText, rowsText] = els.multiGridSelect.value.split("x");
+  const cols = Number(colsText);
+  const rows = Number(rowsText);
+  const total = cols * rows;
+  els.multiOcrButton.disabled = true;
+  els.multiOcrStatus.textContent = `正在加载 OCR，并按 ${cols}×${rows} 切图...`;
+  try {
+    await loadScript("https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js");
+    if (!window.Tesseract) throw new Error("Tesseract 未加载");
+    const image = await loadImageElement(file);
+    const lines = [];
+    for (let row = 0; row < rows; row += 1) {
+      for (let col = 0; col < cols; col += 1) {
+        const index = row * cols + col;
+        els.multiOcrStatus.textContent = `正在识别第 ${index + 1} / ${total} 张...`;
+        const canvas = cropGridCell(image, col, row, cols, rows);
+        const result = await window.Tesseract.recognize(canvas, "eng");
+        const line = lineFromMultiCardOcr(result.data?.text || "", index);
+        if (line) lines.push(line);
+      }
+    }
+    if (!lines.length) {
+      els.multiOcrStatus.textContent = "没有识别到可用牌名或编号。请换更清晰、无反光、底部露出的照片。";
+      return;
+    }
+    const existing = els.bulkInput.value.trim();
+    els.bulkInput.value = `${existing ? `${existing}\n` : ""}${lines.join("\n")}`;
+    els.multiOcrStatus.textContent = `已识别 ${lines.length} 行，已填入批量录入；请检查黄色“多版本”后再加入回收车。`;
+    renderBulkMatches();
+  } catch (error) {
+    console.error(error);
+    els.multiOcrStatus.textContent = `多卡 OCR 失败：${error.message || error}。可以先用手机相册裁成单张或直接粘贴牌名/SKU。`;
+  } finally {
+    els.multiOcrButton.disabled = false;
+  }
 }
 
 function applyImageGuess(guess) {
