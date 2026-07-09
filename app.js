@@ -13,7 +13,7 @@ const state = {
   minPrice: 0,
   foilOnly: false,
   nonfoilOnly: false,
-  inactiveOnly: false,
+  activeOnly: false,
   withImageOnly: false,
   missingCnOnly: false,
   sort: "cashDesc",
@@ -49,7 +49,7 @@ const els = {
   minPrice: document.querySelector("#minPrice"),
   foilOnly: document.querySelector("#foilOnly"),
   nonfoilOnly: document.querySelector("#nonfoilOnly"),
-  inactiveOnly: document.querySelector("#inactiveOnly"),
+  activeOnly: document.querySelector("#activeOnly"),
   withImageOnly: document.querySelector("#withImageOnly"),
   missingCnOnly: document.querySelector("#missingCnOnly"),
   sortSelect: document.querySelector("#sortSelect"),
@@ -557,7 +557,7 @@ function filterRows() {
     if (row.cashUsd < minPrice) return false;
     if (state.source === "cards" && state.foilOnly && !row.foil) return false;
     if (state.source === "cards" && state.nonfoilOnly && row.foil) return false;
-    if (state.source === "cards" && state.inactiveOnly && row.activeBuying !== false) return false;
+    if (state.source === "cards" && state.activeOnly && row.activeBuying === false) return false;
     if (state.withImageOnly && !row.image) return false;
     if (state.source === "cards" && state.missingCnOnly && row.cn) return false;
     return true;
@@ -701,7 +701,7 @@ function readControls() {
   if (els.foilOnly.checked && els.nonfoilOnly.checked) els.nonfoilOnly.checked = false;
   state.foilOnly = state.source === "cards" && els.foilOnly.checked;
   state.nonfoilOnly = state.source === "cards" && els.nonfoilOnly.checked;
-  state.inactiveOnly = state.source === "cards" && els.inactiveOnly.checked;
+  state.activeOnly = state.source === "cards" && els.activeOnly.checked;
   state.withImageOnly = els.withImageOnly.checked;
   state.missingCnOnly = state.source === "cards" && els.missingCnOnly.checked;
   state.sort = els.sortSelect.value;
@@ -712,7 +712,7 @@ function readControls() {
   els.editionField.style.display = state.source === "cards" ? "" : "none";
   els.foilOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
   els.nonfoilOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
-  els.inactiveOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
+  els.activeOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
   els.missingCnOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
 }
 
@@ -722,7 +722,7 @@ function bindEvents() {
     readControls();
     render();
   });
-  for (const el of [els.searchInput, els.typeSelect, els.categorySelect, els.raritySelect, els.setSelect, els.editionSelect, els.minPrice, els.foilOnly, els.nonfoilOnly, els.inactiveOnly, els.withImageOnly, els.missingCnOnly, els.sortSelect]) {
+  for (const el of [els.searchInput, els.typeSelect, els.categorySelect, els.raritySelect, els.setSelect, els.editionSelect, els.minPrice, els.foilOnly, els.nonfoilOnly, els.activeOnly, els.withImageOnly, els.missingCnOnly, els.sortSelect]) {
     el.addEventListener("input", rerender);
     el.addEventListener("change", rerender);
   }
@@ -815,7 +815,7 @@ function bindEvents() {
     els.minPrice.value = "0";
     els.foilOnly.checked = false;
     els.nonfoilOnly.checked = false;
-    els.inactiveOnly.checked = false;
+    els.activeOnly.checked = false;
     els.withImageOnly.checked = false;
     els.missingCnOnly.checked = false;
     els.sortSelect.value = "cashDesc";

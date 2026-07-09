@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MTG 回收价与欧洲市场参考价</title>
-  <link rel="stylesheet" href="./styles.css?v=20260710-filters">
+  <link rel="stylesheet" href="./styles.css?v=20260710-active-filter">
 </head>
 <body>
   <header class="topbar">
@@ -104,7 +104,7 @@
       <div class="checks">
         <label><input id="foilOnly" type="checkbox"> 只看闪卡</label>
         <label><input id="nonfoilOnly" type="checkbox"> 只看平卡</label>
-        <label><input id="inactiveOnly" type="checkbox"> 只看不收购</label>
+        <label><input id="activeOnly" type="checkbox"> 只看当前收购</label>
         <label><input id="withImageOnly" type="checkbox"> 只看有图片</label>
         <label><input id="missingCnOnly" type="checkbox"> 只看未匹配中文</label>
       </div>
@@ -218,6 +218,6 @@
     </article>
   </template>
 
-  <script src="./app.js?v=20260710-filters"></script>
+  <script src="./app.js?v=20260710-active-filter"></script>
 </body>
 </html>
