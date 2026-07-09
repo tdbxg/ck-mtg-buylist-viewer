@@ -212,7 +212,7 @@ def previous_indexes(payload: dict) -> tuple[dict, dict, dict]:
             "finishes": row.get("finishes") or [],
             "promoTypes": row.get("promoTypes") or [],
             "scryfallUri": row.get("scryfallUrl") or "",
-            "image": row.get("image") or "",
+            "image": row.get("image") if "cards.scryfall.io" in str(row.get("image") or "") else "",
         }
         if sid:
             by_sid[sid] = exact
@@ -336,13 +336,7 @@ def build_payload(
         cn, cn_source = lookup_cn(sid, real_name, mtgch_by_sid, mtgch_by_name, prev_cn_by_name)
         skin_name = exact.get("flavorName") or row.get("variation") or ""
         flavor_cn = prev_skin_cn_by_name.get(normalize_name(skin_name), "")
-        mtgch_name_record = mtgch_by_name.get(normalize_name(real_name), {})
-        image = (
-            exact.get("image")
-            or (mtgch_by_sid.get(sid) or {}).get("image")
-            or mtgch_name_record.get("image")
-            or ""
-        )
+        image = exact.get("image") or ""
         if not cn:
             missing_cn += 1
         if not image:
