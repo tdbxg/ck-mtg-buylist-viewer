@@ -64,6 +64,12 @@ const els = {
   cartTableWrap: document.querySelector("#cartTableWrap"),
   exportCartButton: document.querySelector("#exportCartButton"),
   clearCartButton: document.querySelector("#clearCartButton"),
+  bulkInput: document.querySelector("#bulkInput"),
+  bulkSummary: document.querySelector("#bulkSummary"),
+  bulkResult: document.querySelector("#bulkResult"),
+  bulkMatchButton: document.querySelector("#bulkMatchButton"),
+  bulkAddButton: document.querySelector("#bulkAddButton"),
+  bulkClearButton: document.querySelector("#bulkClearButton"),
   template: document.querySelector("#cardTemplate"),
 };
 
@@ -174,6 +180,14 @@ function escapeCsv(value) {
   return /[",\n\r]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
 }
 
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
 function wantsFullData() {
   const params = new URLSearchParams(window.location.search);
   return params.get("full") === "1" || params.get("mode") === "full";
@@ -204,6 +218,164 @@ function cartSnapshot(row) {
     scryfallUrl: row.scryfallUrl || "",
     qty: 1,
   };
+}
+
+function parseBulkLine(raw) {
+  let text = String(raw || "").trim();
+  if (!text) return null;
+  text = text.replace(/^[-*]\s+/, "");
+  let qty = 1;
+  let match = text.match(/^(\d+)\s*[x×]?\s+(.+)$/i);
+  if (match) {
+    qty = Number(match[1]);
+    text = match[2].trim();
+  } else {
+    match = text.match(/^(.+?)\s+[x×]\s*(\d+)$/i);
+    if (match) {
+      text = match[1].trim();
+      qty = Number(match[2]);
+    }
+  }
+  qty = Math.max(1, Math.floor(Number(qty || 1)));
+  const parts = text.split(/[|\t;,]+/).map((part) => part.trim()).filter(Boolean);
+  return {
+    raw,
+    qty,
+    query: parts[0] || text,
+    hints: parts.slice(1),
+    normalized: normalize(parts[0] || text),
+  };
+}
+
+function scoreBulkCandidate(row, item) {
+  const query = item.query.trim();
+  const q = item.normalized;
+  const sku = normalize(row.sku);
+  const name = normalize(row.name);
+  const ckName = normalize(row.ckName);
+  const cn = normalize(row.cn);
+  const collector = normalize(row.collectorNumber);
+  const edition = normalize(row.edition);
+  const setName = normalize(row.scryfallSetName);
+  const setCode = normalize(row.scryfallSet);
+  const hintText = normalize(item.hints.join(" "));
+  let score = 0;
+
+  if (!q) return 0;
+  if (sku && q === sku) score += 140;
+  if (name && q === name) score += 100;
+  if (ckName && q === ckName) score += 96;
+  if (cn && q === cn) score += 94;
+  if (collector && q === collector) score += 35;
+  if (q.length >= 5 && row.search.includes(q)) score += 45;
+
+  if (hintText) {
+    if (collector && hintText.includes(collector)) score += 25;
+    if (setCode && hintText.includes(setCode)) score += 25;
+    if (setName && (hintText.includes(setName) || setName.includes(hintText))) score += 20;
+    if (edition && (hintText.includes(edition) || edition.includes(hintText))) score += 20;
+  }
+
+  if (/foil|闪|闪卡/i.test(query + " " + item.hints.join(" ")) && row.foil) score += 12;
+  if (row.activeBuying === false) score -= 20;
+  return score;
+}
+
+function findBulkMatch(item) {
+  if (!item) return null;
+  const rows = state.data?.cards || [];
+  const scored = [];
+  const q = item.normalized;
+  for (const row of rows) {
+    const score = scoreBulkCandidate(row, item);
+    if (score >= 45) scored.push({ row, score });
+  }
+  scored.sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    if ((b.row.qtyBuying || 0) !== (a.row.qtyBuying || 0)) return (b.row.qtyBuying || 0) - (a.row.qtyBuying || 0);
+    return (b.row.cashUsd || 0) - (a.row.cashUsd || 0);
+  });
+  if (!scored.length) return null;
+
+  const exactSku = scored.some((item) => normalize(item.row.sku) === q);
+  const hasVersionHint = item.hints.length > 0;
+  if (!exactSku && !hasVersionHint) {
+    const exactNameMatches = scored.filter(({ row }) => {
+      return normalize(row.name) === q || normalize(row.ckName) === q || normalize(row.cn) === q;
+    });
+    const uniquePrints = new Set(exactNameMatches.map(({ row }) => `${row.scryfallSet}|${row.collectorNumber}|${row.foil ? "foil" : "normal"}`));
+    if (uniquePrints.size > 1) {
+      return { ...scored[0], ambiguous: true, count: uniquePrints.size };
+    }
+  }
+  return scored[0];
+}
+
+function currentBulkMatches() {
+  return [...els.bulkResult.querySelectorAll(".bulk-row.ok")].map((row) => ({
+    key: row.dataset.key,
+    qty: Number(row.dataset.qty || 1),
+  }));
+}
+
+function renderBulkMatches() {
+  const lines = els.bulkInput.value.split(/\r?\n/);
+  const parsed = lines.map(parseBulkLine).filter(Boolean);
+  const frag = document.createDocumentFragment();
+  let matched = 0;
+
+  for (const item of parsed) {
+    const best = findBulkMatch(item);
+    const div = document.createElement("div");
+    div.className = `bulk-row ${best ? best.ambiguous ? "warn" : "ok" : "miss"}`;
+    if (best && !best.ambiguous) {
+      matched += 1;
+      const row = best.row;
+      div.dataset.key = rowKey(row);
+      div.dataset.qty = String(item.qty);
+      div.innerHTML = `
+        <div><strong>${item.qty} × ${escapeHtml(row.name)}</strong><span>${escapeHtml(row.cn || "")}</span></div>
+        <div>${escapeHtml(row.edition || "-")} / ${escapeHtml(row.scryfallSetName || "-")} / #${escapeHtml(row.collectorNumber || "-")} / ${escapeHtml(row.sku || "-")}</div>
+        <div>${moneyUsd(row.cashUsd)} ｜ score ${best.score}</div>
+      `;
+    } else if (best && best.ambiguous) {
+      const row = best.row;
+      div.innerHTML = `
+        <div><strong>${item.qty} × ${escapeHtml(item.query)}</strong><span>多版本，需确认</span></div>
+        <div>候选：${escapeHtml(row.edition || "-")} / ${escapeHtml(row.scryfallSetName || "-")} / #${escapeHtml(row.collectorNumber || "-")} / ${escapeHtml(row.sku || "-")}</div>
+        <button class="bulk-search" type="button" data-query="${escapeHtml(item.query)}">搜索确认</button>
+      `;
+    } else {
+      div.innerHTML = `
+        <div><strong>${item.qty} × ${escapeHtml(item.query)}</strong><span>未匹配</span></div>
+        <div>${item.hints.length ? escapeHtml(item.hints.join(" / ")) : "可以补 SKU、系列或编号再匹配"}</div>
+        <button class="bulk-search" type="button" data-query="${escapeHtml(item.query)}">搜索</button>
+      `;
+    }
+    frag.appendChild(div);
+  }
+
+  els.bulkResult.replaceChildren(frag);
+  els.bulkResult.hidden = parsed.length === 0;
+  els.bulkAddButton.disabled = matched === 0;
+  const fullHint = state.data?.meta?.mode === "fast" && matched < parsed.length ? " 搜不到低价旧牌时先点“加载全量低价牌”。" : "";
+  els.bulkSummary.textContent = parsed.length
+    ? `已解析 ${parsed.length.toLocaleString("zh-CN")} 行，匹配 ${matched.toLocaleString("zh-CN")} 行。${fullHint}`
+    : "支持每行一张：数量 + 牌名，或直接粘贴 CK SKU。";
+}
+
+function addBulkMatchesToCart() {
+  const matches = currentBulkMatches();
+  if (!matches.length) return;
+  const byKey = new Map((state.data?.cards || []).map((row) => [rowKey(row), row]));
+  for (const item of matches) {
+    const row = byKey.get(item.key);
+    if (row) addToCart(row, item.qty, false);
+  }
+  saveCart();
+  renderCart();
+  render();
+  els.bulkSummary.textContent = `已加入回收车 ${matches.length.toLocaleString("zh-CN")} 种。`;
 }
 
 function expandPackedData(payload) {
@@ -590,6 +762,25 @@ function bindEvents() {
   });
   els.exportCartButton.addEventListener("click", exportCartCsv);
   els.clearCartButton.addEventListener("click", clearCart);
+  els.bulkMatchButton.addEventListener("click", renderBulkMatches);
+  els.bulkAddButton.addEventListener("click", addBulkMatchesToCart);
+  els.bulkClearButton.addEventListener("click", () => {
+    els.bulkInput.value = "";
+    els.bulkResult.hidden = true;
+    els.bulkResult.replaceChildren();
+    els.bulkAddButton.disabled = true;
+    els.bulkSummary.textContent = "支持每行一张：数量 + 牌名，或直接粘贴 CK SKU。";
+  });
+  els.bulkInput.addEventListener("input", debounce(renderBulkMatches, 240));
+  els.bulkResult.addEventListener("click", (event) => {
+    const button = event.target.closest(".bulk-search");
+    if (!button) return;
+    els.searchInput.value = button.dataset.query || "";
+    state.page = 1;
+    readControls();
+    render();
+    els.searchInput.focus();
+  });
   els.resetButton.addEventListener("click", () => {
     els.searchInput.value = "";
     els.typeSelect.value = "cards";
@@ -692,17 +883,22 @@ function saveCart() {
   localStorage.setItem(CART_KEY, JSON.stringify([...state.cart.values()]));
 }
 
-function addToCart(row) {
+function addToCart(row, amount = 1, refresh = true) {
   const key = rowKey(row);
   const current = state.cart.get(key);
+  const qty = Math.max(1, Math.floor(Number(amount || 1)));
   if (current) {
-    current.qty += 1;
+    current.qty += qty;
   } else {
-    state.cart.set(key, cartSnapshot(row));
+    const item = cartSnapshot(row);
+    item.qty = qty;
+    state.cart.set(key, item);
   }
-  saveCart();
-  renderCart();
-  render();
+  if (refresh) {
+    saveCart();
+    renderCart();
+    render();
+  }
 }
 
 function updateCartQty(key, qty) {
