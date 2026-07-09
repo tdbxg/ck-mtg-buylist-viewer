@@ -6,6 +6,7 @@ const state = {
   source: "cards",
   query: "",
   category: "",
+  rarity: "",
   edition: "",
   setCode: "",
   recentSet: "",
@@ -35,6 +36,8 @@ const els = {
   typeSelect: document.querySelector("#typeSelect"),
   categoryField: document.querySelector("#categoryField"),
   categorySelect: document.querySelector("#categorySelect"),
+  rarityField: document.querySelector("#rarityField"),
+  raritySelect: document.querySelector("#raritySelect"),
   editionField: document.querySelector("#editionField"),
   editionSelect: document.querySelector("#editionSelect"),
   setField: document.querySelector("#setField"),
@@ -110,6 +113,17 @@ function round2(value) {
   return Math.round(Number(value || 0) * 100) / 100;
 }
 
+function pct(value) {
+  if (value === null || value === undefined || value === "") return "-";
+  return `${(Number(value || 0) * 100).toFixed(1)}%`;
+}
+
+function valueRatio(value, base) {
+  const numerator = Number(value || 0);
+  const denominator = Number(base || 0);
+  return denominator ? numerator / denominator : null;
+}
+
 function debounce(fn, delay = 140) {
   let timer = 0;
   return (...args) => {
@@ -145,6 +159,14 @@ function classifyRow(row) {
   if (/promo|promotional|promo pack|prerelease|media and collaboration|spotlight|wizards play network/.test(text)) return "promo";
   if (/commander|edh/.test(text)) return "commander";
   return "standard";
+}
+
+function rarityMatches(row, rarity) {
+  if (!rarity) return true;
+  const value = String(row.rarity || "").toLowerCase();
+  if (rarity === "bulk") return value === "common" || value === "uncommon";
+  if (rarity === "mythic") return value === "mythic" || value === "mythic rare";
+  return value === rarity;
 }
 
 function escapeCsv(value) {
@@ -348,6 +370,7 @@ function filterRows() {
   let next = rows.filter((row) => {
     if (query && !row.search.includes(query)) return false;
     if (state.source === "cards" && state.category && classifyRow(row) !== state.category) return false;
+    if (state.source === "cards" && !rarityMatches(row, state.rarity)) return false;
     if (state.source === "cards" && state.recentSet && row.scryfallSet !== state.recentSet) return false;
     if (state.source === "cards" && state.setCode && row.scryfallSet !== state.setCode) return false;
     if (state.edition && row.edition !== state.edition) return false;
@@ -376,6 +399,8 @@ function renderCard(row) {
   const euCny = state.source === "cards" ? eurToCny(euPrice) : null;
   const ckRetailUsd = Number(row.retailUsd || row.conditions?.nm_price || 0);
   const ckRetailCny = Number(row.retailCny || 0);
+  const cashRetailRatio = valueRatio(row.cashUsd, ckRetailUsd);
+  const creditRetailRatio = valueRatio(row.creditUsd, ckRetailUsd);
   const spreadCny = euCny === null ? null : round2((row.cashCny || 0) - euCny);
   const spreadClass = spreadCny === null ? "" : spreadCny >= 0 ? "good" : "bad";
   const spreadText = spreadCny === null ? "-" : `${spreadCny >= 0 ? "+" : ""}${moneyCny(spreadCny)}`;
@@ -424,7 +449,7 @@ function renderCard(row) {
       <div>状态：${row.activeBuying === false ? "暂不收购" : "当前收购"} ｜ 收购数量：${row.qtyBuying.toLocaleString("zh-CN")} ｜ 零售库存：${row.qtyRetail.toLocaleString("zh-CN")}</div>
       <div>品相零售价：NM ${row.conditions?.nm_price || "-"} / EX ${row.conditions?.ex_price || "-"} / VG ${row.conditions?.vg_price || "-"} / G ${row.conditions?.g_price || "-"}</div>
       <div>CK正常售价：<strong>${ckRetailUsd ? moneyUsd(ckRetailUsd) : "-"}</strong>${ckRetailCny ? ` / ${moneyCny(ckRetailCny)}` : ""} ｜ 欧洲参考：<strong>${moneyEur(euPrice)}</strong>${euCny === null ? "" : ` / ${moneyCny(euCny)}`}</div>
-      <div>CK现金-欧洲：<strong class="${spreadClass}">${spreadText}</strong></div>
+      <div>现金/售价：<strong>${pct(cashRetailRatio)}</strong> ｜ 积分/售价：<strong>${pct(creditRetailRatio)}</strong> ｜ CK现金-欧洲：<strong class="${spreadClass}">${spreadText}</strong></div>
     `;
     links.innerHTML = `
       <a href="${row.ckUrl}" target="_blank" rel="noreferrer">Card Kingdom</a>
@@ -453,6 +478,7 @@ function renderCard(row) {
     <div class="price"><span>现金回收</span><strong>${moneyUsd(row.cashUsd)}</strong><span>${moneyCny(row.cashCny)}</span></div>
     <div class="price"><span>店铺积分估算</span><strong>${moneyUsd(row.creditUsd)}</strong><span>${moneyCny(row.creditCny)}</span></div>
     <div class="price retail"><span>CK正常售价</span><strong>${ckRetailUsd ? moneyUsd(ckRetailUsd) : "-"}</strong><span>${ckRetailCny ? moneyCny(ckRetailCny) : "见CK链接"}</span></div>
+    <div class="price ratio"><span>回收/售价</span><strong>现金 ${pct(cashRetailRatio)}</strong><span>积分 ${pct(creditRetailRatio)}</span></div>
     <div class="price market"><span>欧洲参考</span><strong>${moneyEur(bestCardmarketPrice(row))}</strong><span>${eurToCny(bestCardmarketPrice(row)) === null ? "未加载" : moneyCny(eurToCny(bestCardmarketPrice(row)))}</span></div>
     <div class="price market"><span>CK现金-欧洲</span><strong class="${spreadClass}">${spreadText}</strong><span>${row.cardmarket ? "参考价" : "无数据"}</span></div>
   `;
@@ -483,6 +509,7 @@ function readControls() {
   state.source = els.typeSelect.value;
   state.query = els.searchInput.value;
   state.category = state.source === "cards" ? els.categorySelect.value : "";
+  state.rarity = state.source === "cards" ? els.raritySelect.value : "";
   if (state.source !== "cards") state.recentSet = "";
   const selectedSet = state.source === "cards" ? els.setSelect.value : "";
   if (selectedSet !== state.recentSet) state.recentSet = "";
@@ -495,6 +522,7 @@ function readControls() {
   state.sort = els.sortSelect.value;
   els.recentSetsField.style.display = state.source === "cards" ? "" : "none";
   els.categoryField.style.display = state.source === "cards" ? "" : "none";
+  els.rarityField.style.display = state.source === "cards" ? "" : "none";
   els.setField.style.display = state.source === "cards" ? "" : "none";
   els.editionField.style.display = state.source === "cards" ? "" : "none";
   els.foilOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
@@ -507,7 +535,7 @@ function bindEvents() {
     readControls();
     render();
   });
-  for (const el of [els.searchInput, els.typeSelect, els.categorySelect, els.setSelect, els.editionSelect, els.minPrice, els.foilOnly, els.withImageOnly, els.missingCnOnly, els.sortSelect]) {
+  for (const el of [els.searchInput, els.typeSelect, els.categorySelect, els.raritySelect, els.setSelect, els.editionSelect, els.minPrice, els.foilOnly, els.withImageOnly, els.missingCnOnly, els.sortSelect]) {
     el.addEventListener("input", rerender);
     el.addEventListener("change", rerender);
   }
@@ -566,6 +594,7 @@ function bindEvents() {
     els.searchInput.value = "";
     els.typeSelect.value = "cards";
     els.categorySelect.value = "";
+    els.raritySelect.value = "";
     els.setSelect.value = "";
     els.editionSelect.value = "";
     state.setCode = "";
@@ -709,8 +738,9 @@ function renderCart() {
   const rows = [...state.cart.values()].sort((a, b) => b.cashUsd - a.cashUsd);
   const totalQty = rows.reduce((sum, row) => sum + Number(row.qty || 0), 0);
   const totalCash = rows.reduce((sum, row) => sum + Number(row.qty || 0) * Number(row.cashUsd || 0), 0);
+  const totalCredit = rows.reduce((sum, row) => sum + Number(row.qty || 0) * Number(row.creditUsd || 0), 0);
   const totalRetail = rows.reduce((sum, row) => sum + Number(row.qty || 0) * Number(row.retailUsd || 0), 0);
-  els.cartSummary.textContent = `${rows.length.toLocaleString("zh-CN")} 种 / ${totalQty.toLocaleString("zh-CN")} 张 / 现金 ${moneyUsd(totalCash)} / CK售价 ${moneyUsd(totalRetail)}`;
+  els.cartSummary.textContent = `${rows.length.toLocaleString("zh-CN")} 种 / ${totalQty.toLocaleString("zh-CN")} 张 / 现金 ${moneyUsd(totalCash)} (${pct(valueRatio(totalCash, totalRetail))}) / 积分 ${moneyUsd(totalCredit)} (${pct(valueRatio(totalCredit, totalRetail))}) / CK售价 ${moneyUsd(totalRetail)}`;
   els.cartEmpty.hidden = rows.length !== 0;
   els.cartTableWrap.hidden = rows.length === 0;
   els.exportCartButton.disabled = rows.length === 0;
@@ -724,7 +754,7 @@ function renderCart() {
       <td>${row.edition || "-"}<br><span>${row.scryfallSetName || ""}</span></td>
       <td>${row.collectorNumber || "-"}<br><span>${row.sku || ""}</span></td>
       <td><input class="cart-qty" data-key="${row.key}" type="number" min="0" step="1" value="${row.qty}"></td>
-      <td>${moneyUsd(row.cashUsd)}<br><span>${moneyCny(row.cashCny)}</span></td>
+      <td>${moneyUsd(row.cashUsd)}<br><span>积分 ${moneyUsd(row.creditUsd)}</span></td>
       <td><button class="remove-cart" data-key="${row.key}" type="button">移除</button></td>
     `;
     frag.appendChild(tr);
@@ -749,7 +779,11 @@ function exportCartCsv() {
     "现金回收CNY",
     "现金小计USD",
     "店铺积分USD",
+    "店铺积分小计USD",
     "CK正常售价USD",
+    "CK正常售价小计USD",
+    "现金/售价比例",
+    "积分/售价比例",
     "收购数量",
     "发售日",
     "稀有度",
@@ -774,7 +808,11 @@ function exportCartCsv() {
       row.cashCny,
       round2(qty * Number(row.cashUsd || 0)),
       row.creditUsd,
+      round2(qty * Number(row.creditUsd || 0)),
       row.retailUsd,
+      round2(qty * Number(row.retailUsd || 0)),
+      valueRatio(row.cashUsd, row.retailUsd),
+      valueRatio(row.creditUsd, row.retailUsd),
       row.qtyBuying,
       row.releasedAt,
       row.rarity,

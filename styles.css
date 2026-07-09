@@ -498,6 +498,11 @@ h2 {
   background: #fffaf0;
 }
 
+.price.ratio {
+  border-color: #c7d2fe;
+  background: #eef2ff;
+}
+
 .good {
   color: var(--green);
 }

@@ -65,6 +65,18 @@
         </select>
       </div>
 
+      <div class="field" id="rarityField">
+        <label for="raritySelect">稀有度</label>
+        <select id="raritySelect">
+          <option value="">全部稀有度</option>
+          <option value="bulk">银铁 common/uncommon</option>
+          <option value="common">铁 common</option>
+          <option value="uncommon">银 uncommon</option>
+          <option value="rare">rare</option>
+          <option value="mythic">mythic</option>
+        </select>
+      </div>
+
       <div class="field recent-field" id="recentSetsField">
         <label>最近系列单卡</label>
         <div id="recentSets" class="set-chips" aria-label="recent sets"></div>
@@ -115,7 +127,7 @@
       <div class="cart-head">
         <div>
           <h2>回收车</h2>
-          <p id="cartSummary">0 种 / 0 张 / 现金 $0.00</p>
+          <p id="cartSummary">0 种 / 0 张 / 现金 $0.00 / 积分 $0.00</p>
         </div>
         <div class="cart-actions">
           <button id="exportCartButton" type="button">导出牌表 CSV</button>
@@ -176,6 +188,6 @@
     </article>
   </template>
 
-  <script src="./app.js?v=20260708-cart"></script>
+  <script src="./app.js?v=20260709-ratio-cart"></script>
 </body>
 </html>
