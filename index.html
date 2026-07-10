@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MTG 回收价与欧洲市场参考价</title>
-  <link rel="stylesheet" href="./styles.css?v=20260710-active-filter">
+  <link rel="stylesheet" href="./styles.css?v=20260708-cart">
 </head>
 <body>
   <header class="topbar">
@@ -103,8 +103,6 @@
 
       <div class="checks">
         <label><input id="foilOnly" type="checkbox"> 只看闪卡</label>
-        <label><input id="nonfoilOnly" type="checkbox"> 只看平卡</label>
-        <label><input id="activeOnly" type="checkbox"> 只看当前收购</label>
         <label><input id="withImageOnly" type="checkbox"> 只看有图片</label>
         <label><input id="missingCnOnly" type="checkbox"> 只看未匹配中文</label>
       </div>
@@ -154,34 +152,6 @@
       <div id="cartEmpty" class="cart-empty">还没有加入回收车</div>
     </section>
 
-    <section class="bulk-panel" aria-label="bulk buylist import">
-      <div class="bulk-head">
-        <div>
-          <h2>批量录入</h2>
-          <p id="bulkSummary">支持每行一张：数量 + 牌名，或直接粘贴 CK SKU。</p>
-        </div>
-        <div class="bulk-actions">
-          <button id="bulkMatchButton" type="button">匹配</button>
-          <button id="bulkAddButton" type="button" disabled>加入回收车</button>
-          <button id="bulkClearButton" type="button">清空</button>
-        </div>
-      </div>
-      <div class="multi-photo">
-        <div class="multi-controls">
-          <label for="multiImageInput">多卡照片录入</label>
-          <input id="multiImageInput" type="file" accept="image/*">
-          <select id="multiGridSelect">
-            <option value="3x3">9张 / 3×3</option>
-            <option value="3x4">12张 / 3×4</option>
-          </select>
-          <button id="multiOcrButton" type="button">识别照片</button>
-        </div>
-        <div id="multiOcrStatus" class="hint">把 9-12 张牌摆成规则网格，底部系列代码和编号尽量清楚；识别后会进入下面批量匹配。</div>
-      </div>
-      <textarea id="bulkInput" rows="6" spellcheck="false" placeholder="4 Lightning Bolt&#10;2 SLD-1467&#10;Black Lotus&#10;Roaming Throne | The Lost Caverns of Ixalan | 258"></textarea>
-      <div id="bulkResult" class="bulk-result" hidden></div>
-    </section>
-
     <section class="results">
       <div class="resultbar">
         <div>
@@ -218,6 +188,6 @@
     </article>
   </template>
 
-  <script src="./app.js?v=20260710-active-filter"></script>
+  <script src="./app.js?v=20260709-ratio-cart"></script>
 </body>
 </html>

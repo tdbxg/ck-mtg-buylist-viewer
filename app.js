@@ -12,8 +12,6 @@ const state = {
   recentSet: "",
   minPrice: 0,
   foilOnly: false,
-  nonfoilOnly: false,
-  activeOnly: false,
   withImageOnly: false,
   missingCnOnly: false,
   sort: "cashDesc",
@@ -48,8 +46,6 @@ const els = {
   recentSets: document.querySelector("#recentSets"),
   minPrice: document.querySelector("#minPrice"),
   foilOnly: document.querySelector("#foilOnly"),
-  nonfoilOnly: document.querySelector("#nonfoilOnly"),
-  activeOnly: document.querySelector("#activeOnly"),
   withImageOnly: document.querySelector("#withImageOnly"),
   missingCnOnly: document.querySelector("#missingCnOnly"),
   sortSelect: document.querySelector("#sortSelect"),
@@ -68,16 +64,6 @@ const els = {
   cartTableWrap: document.querySelector("#cartTableWrap"),
   exportCartButton: document.querySelector("#exportCartButton"),
   clearCartButton: document.querySelector("#clearCartButton"),
-  bulkInput: document.querySelector("#bulkInput"),
-  bulkSummary: document.querySelector("#bulkSummary"),
-  bulkResult: document.querySelector("#bulkResult"),
-  bulkMatchButton: document.querySelector("#bulkMatchButton"),
-  bulkAddButton: document.querySelector("#bulkAddButton"),
-  bulkClearButton: document.querySelector("#bulkClearButton"),
-  multiImageInput: document.querySelector("#multiImageInput"),
-  multiGridSelect: document.querySelector("#multiGridSelect"),
-  multiOcrButton: document.querySelector("#multiOcrButton"),
-  multiOcrStatus: document.querySelector("#multiOcrStatus"),
   template: document.querySelector("#cardTemplate"),
 };
 
@@ -188,14 +174,6 @@ function escapeCsv(value) {
   return /[",\n\r]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
 }
 
-function escapeHtml(value) {
-  return String(value ?? "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
-
 function wantsFullData() {
   const params = new URLSearchParams(window.location.search);
   return params.get("full") === "1" || params.get("mode") === "full";
@@ -226,164 +204,6 @@ function cartSnapshot(row) {
     scryfallUrl: row.scryfallUrl || "",
     qty: 1,
   };
-}
-
-function parseBulkLine(raw) {
-  let text = String(raw || "").trim();
-  if (!text) return null;
-  text = text.replace(/^[-*]\s+/, "");
-  let qty = 1;
-  let match = text.match(/^(\d+)\s*[x×]?\s+(.+)$/i);
-  if (match) {
-    qty = Number(match[1]);
-    text = match[2].trim();
-  } else {
-    match = text.match(/^(.+?)\s+[x×]\s*(\d+)$/i);
-    if (match) {
-      text = match[1].trim();
-      qty = Number(match[2]);
-    }
-  }
-  qty = Math.max(1, Math.floor(Number(qty || 1)));
-  const parts = text.split(/[|\t;,]+/).map((part) => part.trim()).filter(Boolean);
-  return {
-    raw,
-    qty,
-    query: parts[0] || text,
-    hints: parts.slice(1),
-    normalized: normalize(parts[0] || text),
-  };
-}
-
-function scoreBulkCandidate(row, item) {
-  const query = item.query.trim();
-  const q = item.normalized;
-  const sku = normalize(row.sku);
-  const name = normalize(row.name);
-  const ckName = normalize(row.ckName);
-  const cn = normalize(row.cn);
-  const collector = normalize(row.collectorNumber);
-  const edition = normalize(row.edition);
-  const setName = normalize(row.scryfallSetName);
-  const setCode = normalize(row.scryfallSet);
-  const hintText = normalize(item.hints.join(" "));
-  let score = 0;
-
-  if (!q) return 0;
-  if (sku && q === sku) score += 140;
-  if (name && q === name) score += 100;
-  if (ckName && q === ckName) score += 96;
-  if (cn && q === cn) score += 94;
-  if (collector && q === collector) score += 35;
-  if (q.length >= 5 && row.search.includes(q)) score += 45;
-
-  if (hintText) {
-    if (collector && hintText.includes(collector)) score += 25;
-    if (setCode && hintText.includes(setCode)) score += 25;
-    if (setName && (hintText.includes(setName) || setName.includes(hintText))) score += 20;
-    if (edition && (hintText.includes(edition) || edition.includes(hintText))) score += 20;
-  }
-
-  if (/foil|闪|闪卡/i.test(query + " " + item.hints.join(" ")) && row.foil) score += 12;
-  if (row.activeBuying === false) score -= 20;
-  return score;
-}
-
-function findBulkMatch(item) {
-  if (!item) return null;
-  const rows = state.data?.cards || [];
-  const scored = [];
-  const q = item.normalized;
-  for (const row of rows) {
-    const score = scoreBulkCandidate(row, item);
-    if (score >= 45) scored.push({ row, score });
-  }
-  scored.sort((a, b) => {
-    if (b.score !== a.score) return b.score - a.score;
-    if ((b.row.qtyBuying || 0) !== (a.row.qtyBuying || 0)) return (b.row.qtyBuying || 0) - (a.row.qtyBuying || 0);
-    return (b.row.cashUsd || 0) - (a.row.cashUsd || 0);
-  });
-  if (!scored.length) return null;
-
-  const exactSku = scored.some((item) => normalize(item.row.sku) === q);
-  const hasVersionHint = item.hints.length > 0;
-  if (!exactSku && !hasVersionHint) {
-    const exactNameMatches = scored.filter(({ row }) => {
-      return normalize(row.name) === q || normalize(row.ckName) === q || normalize(row.cn) === q;
-    });
-    const uniquePrints = new Set(exactNameMatches.map(({ row }) => `${row.scryfallSet}|${row.collectorNumber}|${row.foil ? "foil" : "normal"}`));
-    if (uniquePrints.size > 1) {
-      return { ...scored[0], ambiguous: true, count: uniquePrints.size };
-    }
-  }
-  return scored[0];
-}
-
-function currentBulkMatches() {
-  return [...els.bulkResult.querySelectorAll(".bulk-row.ok")].map((row) => ({
-    key: row.dataset.key,
-    qty: Number(row.dataset.qty || 1),
-  }));
-}
-
-function renderBulkMatches() {
-  const lines = els.bulkInput.value.split(/\r?\n/);
-  const parsed = lines.map(parseBulkLine).filter(Boolean);
-  const frag = document.createDocumentFragment();
-  let matched = 0;
-
-  for (const item of parsed) {
-    const best = findBulkMatch(item);
-    const div = document.createElement("div");
-    div.className = `bulk-row ${best ? best.ambiguous ? "warn" : "ok" : "miss"}`;
-    if (best && !best.ambiguous) {
-      matched += 1;
-      const row = best.row;
-      div.dataset.key = rowKey(row);
-      div.dataset.qty = String(item.qty);
-      div.innerHTML = `
-        <div><strong>${item.qty} × ${escapeHtml(row.name)}</strong><span>${escapeHtml(row.cn || "")}</span></div>
-        <div>${escapeHtml(row.edition || "-")} / ${escapeHtml(row.scryfallSetName || "-")} / #${escapeHtml(row.collectorNumber || "-")} / ${escapeHtml(row.sku || "-")}</div>
-        <div>${moneyUsd(row.cashUsd)} ｜ score ${best.score}</div>
-      `;
-    } else if (best && best.ambiguous) {
-      const row = best.row;
-      div.innerHTML = `
-        <div><strong>${item.qty} × ${escapeHtml(item.query)}</strong><span>多版本，需确认</span></div>
-        <div>候选：${escapeHtml(row.edition || "-")} / ${escapeHtml(row.scryfallSetName || "-")} / #${escapeHtml(row.collectorNumber || "-")} / ${escapeHtml(row.sku || "-")}</div>
-        <button class="bulk-search" type="button" data-query="${escapeHtml(item.query)}">搜索确认</button>
-      `;
-    } else {
-      div.innerHTML = `
-        <div><strong>${item.qty} × ${escapeHtml(item.query)}</strong><span>未匹配</span></div>
-        <div>${item.hints.length ? escapeHtml(item.hints.join(" / ")) : "可以补 SKU、系列或编号再匹配"}</div>
-        <button class="bulk-search" type="button" data-query="${escapeHtml(item.query)}">搜索</button>
-      `;
-    }
-    frag.appendChild(div);
-  }
-
-  els.bulkResult.replaceChildren(frag);
-  els.bulkResult.hidden = parsed.length === 0;
-  els.bulkAddButton.disabled = matched === 0;
-  const fullHint = state.data?.meta?.mode === "fast" && matched < parsed.length ? " 搜不到低价旧牌时先点“加载全量低价牌”。" : "";
-  els.bulkSummary.textContent = parsed.length
-    ? `已解析 ${parsed.length.toLocaleString("zh-CN")} 行，匹配 ${matched.toLocaleString("zh-CN")} 行。${fullHint}`
-    : "支持每行一张：数量 + 牌名，或直接粘贴 CK SKU。";
-}
-
-function addBulkMatchesToCart() {
-  const matches = currentBulkMatches();
-  if (!matches.length) return;
-  const byKey = new Map((state.data?.cards || []).map((row) => [rowKey(row), row]));
-  for (const item of matches) {
-    const row = byKey.get(item.key);
-    if (row) addToCart(row, item.qty, false);
-  }
-  saveCart();
-  renderCart();
-  render();
-  els.bulkSummary.textContent = `已加入回收车 ${matches.length.toLocaleString("zh-CN")} 种。`;
 }
 
 function expandPackedData(payload) {
@@ -556,8 +376,6 @@ function filterRows() {
     if (state.edition && row.edition !== state.edition) return false;
     if (row.cashUsd < minPrice) return false;
     if (state.source === "cards" && state.foilOnly && !row.foil) return false;
-    if (state.source === "cards" && state.nonfoilOnly && row.foil) return false;
-    if (state.source === "cards" && state.activeOnly && row.activeBuying === false) return false;
     if (state.withImageOnly && !row.image) return false;
     if (state.source === "cards" && state.missingCnOnly && row.cn) return false;
     return true;
@@ -698,12 +516,9 @@ function readControls() {
   state.setCode = selectedSet;
   state.edition = state.source === "cards" ? els.editionSelect.value : "";
   state.minPrice = Number(els.minPrice.value || 0);
-  if (els.foilOnly.checked && els.nonfoilOnly.checked) els.nonfoilOnly.checked = false;
-  state.foilOnly = state.source === "cards" && els.foilOnly.checked;
-  state.nonfoilOnly = state.source === "cards" && els.nonfoilOnly.checked;
-  state.activeOnly = state.source === "cards" && els.activeOnly.checked;
+  state.foilOnly = els.foilOnly.checked;
   state.withImageOnly = els.withImageOnly.checked;
-  state.missingCnOnly = state.source === "cards" && els.missingCnOnly.checked;
+  state.missingCnOnly = els.missingCnOnly.checked;
   state.sort = els.sortSelect.value;
   els.recentSetsField.style.display = state.source === "cards" ? "" : "none";
   els.categoryField.style.display = state.source === "cards" ? "" : "none";
@@ -711,8 +526,6 @@ function readControls() {
   els.setField.style.display = state.source === "cards" ? "" : "none";
   els.editionField.style.display = state.source === "cards" ? "" : "none";
   els.foilOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
-  els.nonfoilOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
-  els.activeOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
   els.missingCnOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
 }
 
@@ -722,16 +535,10 @@ function bindEvents() {
     readControls();
     render();
   });
-  for (const el of [els.searchInput, els.typeSelect, els.categorySelect, els.raritySelect, els.setSelect, els.editionSelect, els.minPrice, els.foilOnly, els.nonfoilOnly, els.activeOnly, els.withImageOnly, els.missingCnOnly, els.sortSelect]) {
+  for (const el of [els.searchInput, els.typeSelect, els.categorySelect, els.raritySelect, els.setSelect, els.editionSelect, els.minPrice, els.foilOnly, els.withImageOnly, els.missingCnOnly, els.sortSelect]) {
     el.addEventListener("input", rerender);
     el.addEventListener("change", rerender);
   }
-  els.foilOnly.addEventListener("change", () => {
-    if (els.foilOnly.checked) els.nonfoilOnly.checked = false;
-  });
-  els.nonfoilOnly.addEventListener("change", () => {
-    if (els.nonfoilOnly.checked) els.foilOnly.checked = false;
-  });
   els.sortSelect.addEventListener("change", () => {
     if ((els.sortSelect.value === "euDesc" || els.sortSelect.value === "spreadDesc") && !state.cardmarketLoaded) {
       els.metaLine.textContent = "正在按需加载欧洲参考价...";
@@ -783,26 +590,6 @@ function bindEvents() {
   });
   els.exportCartButton.addEventListener("click", exportCartCsv);
   els.clearCartButton.addEventListener("click", clearCart);
-  els.bulkMatchButton.addEventListener("click", renderBulkMatches);
-  els.bulkAddButton.addEventListener("click", addBulkMatchesToCart);
-  els.bulkClearButton.addEventListener("click", () => {
-    els.bulkInput.value = "";
-    els.bulkResult.hidden = true;
-    els.bulkResult.replaceChildren();
-    els.bulkAddButton.disabled = true;
-    els.bulkSummary.textContent = "支持每行一张：数量 + 牌名，或直接粘贴 CK SKU。";
-  });
-  els.bulkInput.addEventListener("input", debounce(renderBulkMatches, 240));
-  els.bulkResult.addEventListener("click", (event) => {
-    const button = event.target.closest(".bulk-search");
-    if (!button) return;
-    els.searchInput.value = button.dataset.query || "";
-    state.page = 1;
-    readControls();
-    render();
-    els.searchInput.focus();
-  });
-  els.multiOcrButton.addEventListener("click", handleMultiPhotoOcr);
   els.resetButton.addEventListener("click", () => {
     els.searchInput.value = "";
     els.typeSelect.value = "cards";
@@ -814,8 +601,6 @@ function bindEvents() {
     state.recentSet = "";
     els.minPrice.value = "0";
     els.foilOnly.checked = false;
-    els.nonfoilOnly.checked = false;
-    els.activeOnly.checked = false;
     els.withImageOnly.checked = false;
     els.missingCnOnly.checked = false;
     els.sortSelect.value = "cashDesc";
@@ -907,22 +692,17 @@ function saveCart() {
   localStorage.setItem(CART_KEY, JSON.stringify([...state.cart.values()]));
 }
 
-function addToCart(row, amount = 1, refresh = true) {
+function addToCart(row) {
   const key = rowKey(row);
   const current = state.cart.get(key);
-  const qty = Math.max(1, Math.floor(Number(amount || 1)));
   if (current) {
-    current.qty += qty;
+    current.qty += 1;
   } else {
-    const item = cartSnapshot(row);
-    item.qty = qty;
-    state.cart.set(key, item);
+    state.cart.set(key, cartSnapshot(row));
   }
-  if (refresh) {
-    saveCart();
-    renderCart();
-    render();
-  }
+  saveCart();
+  renderCart();
+  render();
 }
 
 function updateCartQty(key, qty) {
@@ -1171,135 +951,6 @@ function pickCardNameFromOcr(text) {
     .filter((line) => /^[A-Za-z0-9,'’\-: ]{3,}$/.test(line))
     .filter((line) => !/^(legendary|creature|artifact|instant|sorcery|enchantment|land|planeswalker)\b/i.test(line));
   return lines[0] || "";
-}
-
-function cleanOcrLine(line) {
-  return String(line || "")
-    .replace(/[|_[\]{}<>]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function pickBulkCardNameFromOcr(text) {
-  const lines = String(text || "")
-    .split(/\n+/)
-    .map(cleanOcrLine)
-    .filter((line) => /^[A-Za-z0-9,'’().\-: ]{3,}$/.test(line))
-    .filter((line) => !/^(legendary|basic|snow|artifact|creature|instant|sorcery|enchantment|land|planeswalker|battle)\b/i.test(line))
-    .filter((line) => !/^(ward|flying|haste|trample|lifelink|deathtouch|vigilance|reach|first strike|double strike)\b/i.test(line))
-    .filter((line) => !/^(when|whenever|as this|this creature|target|choose|create|draw|add|until end|at the beginning)\b/i.test(line))
-    .filter((line) => !/^\d+\/\d+$/.test(line))
-    .filter((line) => !/^(illus|©|tm|wizards|marvel|artist)\b/i.test(line));
-  if (!lines.length) return "";
-
-  const decorative = /variant|showcase|borderless|extended art|dossier|surge foil|poster|serialized|concept art|profile|scene/i;
-  const firstClean = lines.find((line, index) => !(index === 0 && decorative.test(line)));
-  return firstClean || lines[0];
-}
-
-function pickSetAndCollectorFromOcr(text) {
-  const compact = String(text || "")
-    .toUpperCase()
-    .replace(/[\u2013\u2014]/g, "-")
-    .replace(/[|_[\]{}<>]/g, " ")
-    .replace(/\s+/g, " ");
-  const sku = compact.match(/\b([A-Z0-9]{2,6})[- ](0?\d{1,4}[A-Z]?)\b/);
-  if (sku) return { set: sku[1], collector: sku[2].replace(/^0+(?=\d)/, "") };
-  const footer = compact.match(/\b([A-Z])?\s*(0?\d{1,4}[A-Z]?)\s+([A-Z0-9]{2,6})\s+(?:EN|JP|ZHS|FR|DE|ES|IT|PT|KO|RU)\b/);
-  if (footer) return { set: footer[3], collector: footer[2].replace(/^0+(?=\d)/, "") };
-  const collectorOnly = compact.match(/\b(?:NO\.?\s*)?(0?\d{1,4}[A-Z]?)\/?\d{0,4}\b/);
-  return collectorOnly ? { set: "", collector: collectorOnly[1].replace(/^0+(?=\d)/, "") } : { set: "", collector: "" };
-}
-
-function loadImageElement(file) {
-  return new Promise((resolve, reject) => {
-    const url = URL.createObjectURL(file);
-    const image = new Image();
-    image.onload = () => {
-      URL.revokeObjectURL(url);
-      resolve(image);
-    };
-    image.onerror = () => {
-      URL.revokeObjectURL(url);
-      reject(new Error("图片读取失败"));
-    };
-    image.src = url;
-  });
-}
-
-function cropGridCell(image, col, row, cols, rows) {
-  const marginX = image.naturalWidth * 0.012;
-  const marginY = image.naturalHeight * 0.012;
-  const cellW = image.naturalWidth / cols;
-  const cellH = image.naturalHeight / rows;
-  const sx = col * cellW + marginX;
-  const sy = row * cellH + marginY;
-  const sw = Math.max(1, cellW - marginX * 2);
-  const sh = Math.max(1, cellH - marginY * 2);
-  const scale = Math.min(2, Math.max(1, 760 / Math.max(sw, sh)));
-  const canvas = document.createElement("canvas");
-  canvas.width = Math.round(sw * scale);
-  canvas.height = Math.round(sh * scale);
-  const ctx = canvas.getContext("2d", { willReadFrequently: true });
-  ctx.drawImage(image, sx, sy, sw, sh, 0, 0, canvas.width, canvas.height);
-  return canvas;
-}
-
-function lineFromMultiCardOcr(text, index) {
-  const name = pickBulkCardNameFromOcr(text);
-  const ids = pickSetAndCollectorFromOcr(text);
-  if (!name && !ids.collector) return "";
-  const hints = [ids.set, ids.collector].filter(Boolean).join(" | ");
-  if (name && hints) return `${name} | ${hints}`;
-  if (name) return name;
-  return hints ? `卡位${index + 1} | ${hints}` : "";
-}
-
-async function handleMultiPhotoOcr() {
-  const file = els.multiImageInput.files && els.multiImageInput.files[0];
-  if (!file) {
-    els.multiOcrStatus.textContent = "请先选择一张摆好 9-12 张牌的照片。";
-    return;
-  }
-  if (!file.type.startsWith("image/")) {
-    els.multiOcrStatus.textContent = "请选择图片文件。";
-    return;
-  }
-  const [colsText, rowsText] = els.multiGridSelect.value.split("x");
-  const cols = Number(colsText);
-  const rows = Number(rowsText);
-  const total = cols * rows;
-  els.multiOcrButton.disabled = true;
-  els.multiOcrStatus.textContent = `正在加载 OCR，并按 ${cols}×${rows} 切图...`;
-  try {
-    await loadScript("https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js");
-    if (!window.Tesseract) throw new Error("Tesseract 未加载");
-    const image = await loadImageElement(file);
-    const lines = [];
-    for (let row = 0; row < rows; row += 1) {
-      for (let col = 0; col < cols; col += 1) {
-        const index = row * cols + col;
-        els.multiOcrStatus.textContent = `正在识别第 ${index + 1} / ${total} 张...`;
-        const canvas = cropGridCell(image, col, row, cols, rows);
-        const result = await window.Tesseract.recognize(canvas, "eng");
-        const line = lineFromMultiCardOcr(result.data?.text || "", index);
-        if (line) lines.push(line);
-      }
-    }
-    if (!lines.length) {
-      els.multiOcrStatus.textContent = "没有识别到可用牌名或编号。请换更清晰、无反光、底部露出的照片。";
-      return;
-    }
-    const existing = els.bulkInput.value.trim();
-    els.bulkInput.value = `${existing ? `${existing}\n` : ""}${lines.join("\n")}`;
-    els.multiOcrStatus.textContent = `已识别 ${lines.length} 行，已填入批量录入；请检查黄色“多版本”后再加入回收车。`;
-    renderBulkMatches();
-  } catch (error) {
-    console.error(error);
-    els.multiOcrStatus.textContent = `多卡 OCR 失败：${error.message || error}。可以先用手机相册裁成单张或直接粘贴牌名/SKU。`;
-  } finally {
-    els.multiOcrButton.disabled = false;
-  }
 }
 
 function applyImageGuess(guess) {
