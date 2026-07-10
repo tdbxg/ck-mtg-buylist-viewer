@@ -19,7 +19,67 @@
     </div>
   </header>
 
-  <main class="layout">
+  <nav class="app-tabs" aria-label="页面切换">
+    <button id="queryTab" class="active" type="button">单卡查询 / 回收车</button>
+    <button id="moversTab" type="button">价格变动榜</button>
+  </nav>
+
+  <section id="moversView" class="movers-view" hidden>
+    <div class="movers-head">
+      <div>
+        <h2>MTG 回收价变动榜</h2>
+        <p id="moversMeta">正在载入价格变动数据...</p>
+      </div>
+      <div class="movers-stats">
+        <div><span id="moversCurrent">-</span><small>当前 CK 数据</small></div>
+        <div><span id="moversDaily">-</span><small>日变动</small></div>
+        <div><span id="moversWeekly">-</span><small>周变动</small></div>
+      </div>
+    </div>
+    <div class="movers-controls">
+      <div class="segment">
+        <button class="active" data-movers-period="daily" type="button">Daily</button>
+        <button data-movers-period="weekly" type="button">Weekly</button>
+      </div>
+      <div class="segment">
+        <button class="active" data-movers-basis="percent" type="button">按百分比</button>
+        <button data-movers-basis="dollar" type="button">按美元</button>
+      </div>
+      <input id="moversSearch" type="search" placeholder="搜索牌名、中文、系列、编号、SKU">
+    </div>
+    <div class="movers-boards">
+      <section class="movers-board">
+        <div class="movers-board-head">
+          <h3 id="moversWinnersTitle">Top Winners by %</h3>
+          <span id="moversWinnersCount"></span>
+        </div>
+        <div class="movers-table-wrap">
+          <table>
+            <thead>
+              <tr><th>#</th><th>Card</th><th>Version</th><th>Was</th><th>Now</th><th>Move</th><th>Buy/Retail</th><th></th></tr>
+            </thead>
+            <tbody id="moversWinners"></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="movers-board">
+        <div class="movers-board-head">
+          <h3 id="moversLosersTitle">Top Losers by %</h3>
+          <span id="moversLosersCount"></span>
+        </div>
+        <div class="movers-table-wrap">
+          <table>
+            <thead>
+              <tr><th>#</th><th>Card</th><th>Version</th><th>Was</th><th>Now</th><th>Move</th><th>Buy/Retail</th><th></th></tr>
+            </thead>
+            <tbody id="moversLosers"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <main id="queryView" class="layout">
     <aside class="filters" aria-label="filters">
       <div class="field search-field">
         <label for="searchInput">搜索</label>
@@ -188,6 +248,6 @@
     </article>
   </template>
 
-  <script src="./app.js?v=20260709-ratio-cart"></script>
+  <script src="./app.js?v=20260711-public-movers"></script>
 </body>
 </html>
