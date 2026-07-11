@@ -19,11 +19,6 @@ const state = {
   results: [],
   cardmarketLoaded: false,
   fullDataLoaded: false,
-  view: "query",
-  movers: null,
-  moversPeriod: "daily",
-  moversBasis: "percent",
-  moversQuery: "",
   cart: new Map(),
 };
 
@@ -32,21 +27,6 @@ const els = {
   cardCount: document.querySelector("#cardCount"),
   sealedCount: document.querySelector("#sealedCount"),
   rate: document.querySelector("#rate"),
-  queryTab: document.querySelector("#queryTab"),
-  moversTab: document.querySelector("#moversTab"),
-  queryView: document.querySelector("#queryView"),
-  moversView: document.querySelector("#moversView"),
-  moversMeta: document.querySelector("#moversMeta"),
-  moversCurrent: document.querySelector("#moversCurrent"),
-  moversDaily: document.querySelector("#moversDaily"),
-  moversWeekly: document.querySelector("#moversWeekly"),
-  moversSearch: document.querySelector("#moversSearch"),
-  moversWinnersTitle: document.querySelector("#moversWinnersTitle"),
-  moversLosersTitle: document.querySelector("#moversLosersTitle"),
-  moversWinnersCount: document.querySelector("#moversWinnersCount"),
-  moversLosersCount: document.querySelector("#moversLosersCount"),
-  moversWinners: document.querySelector("#moversWinners"),
-  moversLosers: document.querySelector("#moversLosers"),
   searchInput: document.querySelector("#searchInput"),
   imageInput: document.querySelector("#imageInput"),
   imageDropZone: document.querySelector("#imageDropZone"),
@@ -525,108 +505,6 @@ function render() {
   updateRecentSetButtons();
 }
 
-function moversPct(value) {
-  if (value === null || value === undefined || value === "") return "-";
-  const number = Number(value || 0);
-  return `${number > 0 ? "+" : ""}${number.toFixed(1)}%`;
-}
-
-function moversRows() {
-  if (!state.movers) return { winners: [], losers: [] };
-  const periodData = state.movers[state.moversPeriod] || {};
-  const source = state.moversBasis === "dollar"
-    ? { winners: periodData.dollarsUp || [], losers: periodData.dollarsDown || [] }
-    : { winners: periodData.winners || [], losers: periodData.losers || [] };
-  const query = normalize(state.moversQuery);
-  const matches = (row) => !query || normalize([
-    row.name,
-    row.cn,
-    row.edition,
-    row.setCode,
-    row.collectorNumber,
-    row.sku,
-  ].join(" ")).includes(query);
-  return {
-    winners: source.winners.filter(matches).slice(0, 50),
-    losers: source.losers.filter(matches).slice(0, 50),
-  };
-}
-
-function renderMoverRow(row, index) {
-  const up = Number(row.changeUsd || 0) > 0;
-  const image = row.image || "";
-  const link = row.ckUrl ? `<a href="${row.ckUrl}" target="_blank" rel="noreferrer">↗</a>` : "";
-  return `
-    <tr>
-      <td class="mover-rank">${index + 1}</td>
-      <td class="mover-card-cell">
-        <img src="${image}" alt="">
-        <div>
-          <strong>${row.name || "-"}</strong>
-          <span>${row.cn || "未匹配中文"} · ${row.foil ? "Foil" : "Normal"}</span>
-        </div>
-      </td>
-      <td>
-        <strong>${row.edition || "-"}</strong>
-        <span>${row.setCode || "-"} #${row.collectorNumber || "-"}</span>
-      </td>
-      <td class="mover-num">${moneyUsd(row.previousCashUsd)}</td>
-      <td class="mover-num">${moneyUsd(row.cashUsd)}</td>
-      <td class="mover-num mover-change ${up ? "up" : "down"}">
-        <span>${up ? "↑" : "↓"}${moneyUsd(Math.abs(Number(row.changeUsd || 0)))}</span>
-        <small>${moversPct(row.changePct)}</small>
-      </td>
-      <td class="mover-num">${row.buyRatio === null || row.buyRatio === undefined ? "-" : `${Number(row.buyRatio).toFixed(1)}%`}</td>
-      <td class="mover-link">${link}</td>
-    </tr>
-  `;
-}
-
-function renderMovers() {
-  if (!state.movers) return;
-  const rows = moversRows();
-  const basisText = state.moversBasis === "percent" ? "%" : "$";
-  els.moversWinnersTitle.textContent = `Top Winners by ${basisText}`;
-  els.moversLosersTitle.textContent = `Top Losers by ${basisText}`;
-  els.moversWinnersCount.textContent = `${rows.winners.length} cards`;
-  els.moversLosersCount.textContent = `${rows.losers.length} cards`;
-  els.moversWinners.innerHTML = rows.winners.map(renderMoverRow).join("");
-  els.moversLosers.innerHTML = rows.losers.map(renderMoverRow).join("");
-}
-
-async function loadMovers() {
-  if (state.movers) {
-    renderMovers();
-    return;
-  }
-  els.moversMeta.textContent = "正在载入价格变动数据...";
-  const response = await fetch(`./movers.json?v=${Date.now()}`, { cache: "no-store" });
-  if (!response.ok) throw new Error(`movers fetch failed: ${response.status}`);
-  state.movers = await response.json();
-  const meta = state.movers.meta || {};
-  els.moversCurrent.textContent = meta.currentDataAt || "-";
-  els.moversDaily.textContent = Number(state.movers.daily?.changedRows || 0).toLocaleString("zh-CN");
-  els.moversWeekly.textContent = Number(state.movers.weekly?.changedRows || 0).toLocaleString("zh-CN");
-  els.moversMeta.textContent = `当前：${meta.currentDataAt || "-"} ｜ Daily 对比：${meta.dailyPreviousDataAt || "-"} ｜ Weekly 对比：${meta.weeklyPreviousDataAt || "-"}`;
-  renderMovers();
-}
-
-function switchView(view, updateHash = true) {
-  state.view = view === "movers" ? "movers" : "query";
-  const movers = state.view === "movers";
-  els.queryView.hidden = movers;
-  els.moversView.hidden = !movers;
-  els.queryTab.classList.toggle("active", !movers);
-  els.moversTab.classList.toggle("active", movers);
-  if (updateHash) history.replaceState(null, "", movers ? "#movers" : "#query");
-  if (movers) {
-    loadMovers().catch((error) => {
-      console.error(error);
-      els.moversMeta.textContent = "价格变动数据加载失败，请稍后刷新。";
-    });
-  }
-}
-
 function readControls() {
   state.source = els.typeSelect.value;
   state.query = els.searchInput.value;
@@ -656,26 +534,6 @@ function bindEvents() {
     state.page = 1;
     readControls();
     render();
-  });
-  els.queryTab.addEventListener("click", () => switchView("query"));
-  els.moversTab.addEventListener("click", () => switchView("movers"));
-  els.moversSearch.addEventListener("input", debounce(() => {
-    state.moversQuery = els.moversSearch.value;
-    renderMovers();
-  }));
-  document.querySelectorAll("[data-movers-period]").forEach((button) => {
-    button.addEventListener("click", () => {
-      state.moversPeriod = button.dataset.moversPeriod;
-      document.querySelectorAll("[data-movers-period]").forEach((item) => item.classList.toggle("active", item === button));
-      renderMovers();
-    });
-  });
-  document.querySelectorAll("[data-movers-basis]").forEach((button) => {
-    button.addEventListener("click", () => {
-      state.moversBasis = button.dataset.moversBasis;
-      document.querySelectorAll("[data-movers-basis]").forEach((item) => item.classList.toggle("active", item === button));
-      renderMovers();
-    });
   });
   for (const el of [els.searchInput, els.typeSelect, els.categorySelect, els.raritySelect, els.setSelect, els.editionSelect, els.minPrice, els.foilOnly, els.withImageOnly, els.missingCnOnly, els.sortSelect]) {
     el.addEventListener("input", rerender);
@@ -802,12 +660,6 @@ async function init() {
   bindEvents();
   render();
   renderCart();
-  const params = new URLSearchParams(window.location.search);
-  if (window.location.hash === "#movers" || params.get("view") === "movers") {
-    switchView("movers", false);
-  } else {
-    switchView("query", false);
-  }
 }
 
 function updateMetaLine() {
