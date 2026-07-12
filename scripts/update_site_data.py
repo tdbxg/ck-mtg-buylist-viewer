@@ -14,6 +14,7 @@ import gzip
 import json
 import re
 import shutil
+import subprocess
 import time
 import urllib.request
 from urllib.error import HTTPError
@@ -166,6 +167,19 @@ def load_previous_payload() -> dict:
         return {"cards": [], "sealed": [], "meta": {}}
     with gzip.open(gz_path, "rt", encoding="utf-8") as f:
         return json.load(f)
+
+
+def load_git_payload(rev: str) -> dict | None:
+    try:
+        raw = subprocess.check_output(["git", "show", f"{rev}:data.json.gz"], cwd=ROOT)
+    except Exception as exc:
+        print(f"WARN: previous git payload unavailable at {rev}: {exc}")
+        return None
+    try:
+        return json.loads(gzip.decompress(raw).decode("utf-8"))
+    except Exception as exc:
+        print(f"WARN: previous git payload unreadable at {rev}: {exc}")
+        return None
 
 
 def scryfall_image(card: dict) -> str:
@@ -606,6 +620,103 @@ def write_exports(payload: dict) -> None:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
 
 
+def mover_row_key(row: dict) -> str:
+    return row.get("sku") or "|".join(
+        [
+            row.get("name") or "",
+            row.get("edition") or "",
+            row.get("collectorNumber") or "",
+            "foil" if row.get("foil") else "normal",
+        ]
+    )
+
+
+def compact_mover(row: dict, previous: dict, days: int) -> dict:
+    now = float(row.get("cashUsd") or 0)
+    before = float(previous.get("cashUsd") or 0)
+    change = round(now - before, 2)
+    pct = round(change / before * 100, 2) if before else None
+    retail = float(row.get("retailUsd") or 0)
+    return {
+        "key": mover_row_key(row),
+        "name": row.get("name") or "",
+        "cn": row.get("cn") or "",
+        "edition": row.get("edition") or "",
+        "setName": row.get("scryfallSetName") or "",
+        "setCode": str(row.get("scryfallSet") or "").upper(),
+        "collectorNumber": row.get("collectorNumber") or "",
+        "sku": row.get("sku") or "",
+        "foil": bool(row.get("foil")),
+        "rarity": row.get("rarity") or "",
+        "releasedAt": row.get("releasedAt") or "",
+        "image": row.get("image") or "",
+        "cashUsd": now,
+        "previousCashUsd": before,
+        "changeUsd": change,
+        "changePct": pct,
+        "creditUsd": round(now * 1.3, 2),
+        "retailUsd": retail,
+        "buyRatio": round(now / retail * 100, 2) if retail else None,
+        "qtyBuying": int(row.get("qtyBuying") or 0),
+        "qtyRetail": int(row.get("qtyRetail") or 0),
+        "ckUrl": row.get("ckUrl") or "",
+        "scryfallUrl": row.get("scryfallUrl") or "",
+        "windowDays": days,
+    }
+
+
+def mover_groups(current: dict, previous: dict, days: int) -> dict:
+    previous_by_key = {mover_row_key(row): row for row in previous.get("cards", [])}
+    rows = []
+    for row in current.get("cards", []):
+        if row.get("activeBuying") is False:
+            continue
+        old = previous_by_key.get(mover_row_key(row))
+        if not old:
+            continue
+        now = float(row.get("cashUsd") or 0)
+        before = float(old.get("cashUsd") or 0)
+        if before < 0.25 or now <= 0:
+            continue
+        change = round(now - before, 2)
+        pct_abs = abs(change / before * 100) if before else 0
+        if abs(change) < 0.05 and pct_abs < 3:
+            continue
+        rows.append(compact_mover(row, old, days))
+
+    return {
+        "winners": sorted(rows, key=lambda row: (row["changePct"] or 0, row["changeUsd"]), reverse=True)[:100],
+        "losers": sorted(rows, key=lambda row: (row["changePct"] or 0, row["changeUsd"]))[:100],
+        "dollarsUp": sorted(
+            [row for row in rows if row["changeUsd"] > 0],
+            key=lambda row: row["changeUsd"],
+            reverse=True,
+        )[:100],
+        "dollarsDown": sorted(
+            [row for row in rows if row["changeUsd"] < 0],
+            key=lambda row: row["changeUsd"],
+        )[:100],
+        "changedRows": len(rows),
+    }
+
+
+def write_movers(payload: dict, daily_previous: dict, weekly_previous: dict) -> None:
+    movers_payload = {
+        "meta": {
+            "generatedAt": datetime.now().astimezone().isoformat(timespec="seconds"),
+            "currentDataAt": payload.get("meta", {}).get("cardKingdomCreatedAt", ""),
+            "dailyPreviousDataAt": daily_previous.get("meta", {}).get("cardKingdomCreatedAt", ""),
+            "weeklyPreviousDataAt": weekly_previous.get("meta", {}).get("cardKingdomCreatedAt", ""),
+            "source": "Card Kingdom buylist",
+            "currency": "USD",
+        },
+        "daily": mover_groups(payload, daily_previous, 1),
+        "weekly": mover_groups(payload, weekly_previous, 7),
+    }
+    with open(ROOT / "movers.json", "w", encoding="utf-8") as f:
+        json.dump(movers_payload, f, ensure_ascii=False, separators=(",", ":"))
+
+
 def main() -> int:
     previous = load_previous_payload()
     exact_prints, prev_cn_by_name, prev_skin_cn_by_name = previous_indexes(previous)
@@ -636,6 +747,8 @@ def main() -> int:
     write_payload_files(payload)
     write_fast_payload(payload)
     write_exports(payload)
+    weekly_previous = load_git_payload("HEAD~7") or previous
+    write_movers(payload, previous, weekly_previous)
 
     # The uncompressed file is useful locally but too large for GitHub Pages repo.
     (ROOT / "data.json").unlink(missing_ok=True)

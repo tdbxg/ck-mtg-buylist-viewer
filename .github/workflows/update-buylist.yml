@@ -36,6 +36,7 @@ jobs:
           required = [
               Path("data.json.gz"),
               Path("data_fast.json.gz"),
+              Path("movers.json"),
               Path("last_update.json"),
               Path("exports/ck_buylist_top5000.csv"),
               Path("exports/ck_buylist_fast_high_recent.csv"),
@@ -59,6 +60,13 @@ jobs:
           if fast.get("meta", {}).get("fullCards", 0) < 100000:
               raise SystemExit("fast payload missing fullCards")
 
+          with open("movers.json", "r", encoding="utf-8") as f:
+              movers = json.load(f)
+          if not movers.get("daily") or not movers.get("weekly"):
+              raise SystemExit("movers payload missing daily or weekly sections")
+          if "changedRows" not in movers["daily"] or "changedRows" not in movers["weekly"]:
+              raise SystemExit("movers payload missing changedRows")
+
           print(json.dumps(meta, ensure_ascii=False, indent=2))
           PY
 
@@ -66,7 +74,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data.json.gz data_fast.json.gz last_update.json exports/ck_buylist_top5000.csv exports/ck_buylist_fast_high_recent.csv exports/ck_buylist_full.csv.gz exports/manifest.json
+          git add data.json.gz data_fast.json.gz movers.json last_update.json exports/ck_buylist_top5000.csv exports/ck_buylist_fast_high_recent.csv exports/ck_buylist_full.csv.gz exports/manifest.json
           if git diff --cached --quiet; then
             echo "No data changes."
           else
