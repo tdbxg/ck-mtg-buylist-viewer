@@ -96,6 +96,10 @@ h1 {
   border-color: var(--blue);
 }
 
+.movers-mode #queryTab {
+  display: none;
+}
+
 .movers-view {
   padding: 14px;
 }

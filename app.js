@@ -619,6 +619,11 @@ function renderMovers() {
   els.moversLosers.innerHTML = rows.losers.map(renderMoverRow).join("");
 }
 
+function wantsMoversView() {
+  const params = new URLSearchParams(window.location.search);
+  return window.location.hash === "#movers" || params.get("view") === "movers";
+}
+
 async function loadMovers() {
   if (state.movers) {
     renderMovers();
@@ -641,6 +646,7 @@ function switchView(view, updateHash = true) {
   const movers = state.view === "movers";
   els.queryView.hidden = movers;
   els.moversView.hidden = !movers;
+  document.body.classList.toggle("movers-mode", movers);
   els.queryTab.classList.toggle("active", !movers);
   els.moversTab.classList.toggle("active", movers);
   if (updateHash) history.replaceState(null, "", movers ? "#movers" : "#query");
@@ -820,6 +826,9 @@ function bindEvents() {
 
 async function init() {
   loadCart();
+  if (wantsMoversView()) {
+    switchView("movers", false);
+  }
   state.data = await loadData(wantsFullData());
   state.fullDataLoaded = state.data.meta?.mode !== "fast";
   const meta = state.data.meta;
@@ -834,8 +843,7 @@ async function init() {
   bindEvents();
   render();
   renderCart();
-  const params = new URLSearchParams(window.location.search);
-  if (window.location.hash === "#movers" || params.get("view") === "movers") {
+  if (wantsMoversView()) {
     switchView("movers", false);
   } else {
     switchView("query", false);
