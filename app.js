@@ -23,6 +23,7 @@ const state = {
   movers: null,
   moversPeriod: "daily",
   moversBasis: "percent",
+  moversFormat: "all",
   moversQuery: "",
   cart: new Map(),
 };
@@ -531,44 +532,69 @@ function moversPct(value) {
   return `${number > 0 ? "+" : ""}${number.toFixed(1)}%`;
 }
 
+function moverFormat(row) {
+  const text = `${row.edition || ""} ${row.setName || ""} ${row.setCode || ""}`.toLowerCase();
+  if (/token|helper|oversized|secret lair|sld|promo|promotional|promo pack|prerelease|commander|edh|mystery booster|the list|plist|universes beyond|warhammer|doctor who|fallout|lord of the rings|marvel|spider-man|final fantasy|avatar/.test(text)) {
+    return "special";
+  }
+  const released = row.releasedAt || "";
+  if (released >= "2023-09-08") return "standard";
+  if (released >= "2012-10-05") return "pioneer";
+  if (released >= "2003-07-26") return "modern";
+  return "legacy";
+}
+
+const MOVER_FORMAT_LABELS = {
+  all: "全部",
+  standard: "标准",
+  pioneer: "先驱",
+  modern: "摩登",
+  legacy: "薪传",
+  special: "特选",
+};
+
 function moversRows() {
   if (!state.movers) return { winners: [], losers: [] };
   const periodData = state.movers[state.moversPeriod] || {};
+  const scopedData = state.moversFormat === "all"
+    ? periodData
+    : (periodData.formats?.[state.moversFormat] || periodData);
   const source = state.moversBasis === "dollar"
-    ? { winners: periodData.dollarsUp || [], losers: periodData.dollarsDown || [] }
-    : { winners: periodData.winners || [], losers: periodData.losers || [] };
+    ? { winners: scopedData.dollarsUp || [], losers: scopedData.dollarsDown || [] }
+    : { winners: scopedData.winners || [], losers: scopedData.losers || [] };
   const query = normalize(state.moversQuery);
   const matches = (row) => !query || normalize([
     row.name,
     row.cn,
     row.edition,
+    row.setName,
     row.setCode,
     row.collectorNumber,
     row.sku,
   ].join(" ")).includes(query);
+  const usesServerFormat = state.moversFormat === "all" || !!periodData.formats?.[state.moversFormat];
+  const inFormat = (row) => usesServerFormat || moverFormat(row) === state.moversFormat;
   return {
-    winners: source.winners.filter(matches).slice(0, 50),
-    losers: source.losers.filter(matches).slice(0, 50),
+    winners: source.winners.filter((row) => matches(row) && inFormat(row)).slice(0, 50),
+    losers: source.losers.filter((row) => matches(row) && inFormat(row)).slice(0, 50),
   };
 }
 
 function renderMoverRow(row, index) {
   const up = Number(row.changeUsd || 0) > 0;
-  const image = row.image || "";
-  const link = row.ckUrl ? `<a href="${row.ckUrl}" target="_blank" rel="noreferrer">↗</a>` : "";
+  const setText = [row.setCode, row.collectorNumber ? `#${row.collectorNumber}` : ""].filter(Boolean).join(" ");
   return `
     <tr>
       <td class="mover-rank">${index + 1}</td>
       <td class="mover-card-cell">
-        <img src="${image}" alt="">
         <div>
           <strong>${row.name || "-"}</strong>
-          <span>${row.cn || "未匹配中文"} · ${row.foil ? "Foil" : "Normal"}</span>
+          <span>${row.cn || "未匹配中文"}</span>
         </div>
       </td>
       <td>
-        <strong>${row.edition || "-"}</strong>
-        <span>${row.setCode || "-"} #${row.collectorNumber || "-"}</span>
+        <strong>${row.setName || row.edition || "-"}</strong>
+        <span>${setText || "-"}</span>
       </td>
       <td class="mover-num">${moneyUsd(row.previousCashUsd)}</td>
       <td class="mover-num">${moneyUsd(row.cashUsd)}</td>
@@ -576,8 +602,6 @@ function renderMoverRow(row, index) {
         <span>${up ? "↑" : "↓"}${moneyUsd(Math.abs(Number(row.changeUsd || 0)))}</span>
         <small>${moversPct(row.changePct)}</small>
       </td>
-      <td class="mover-num">${row.buyRatio === null || row.buyRatio === undefined ? "-" : `${Number(row.buyRatio).toFixed(1)}%`}</td>
-      <td class="mover-link">${link}</td>
     </tr>
   `;
 }
@@ -586,8 +610,9 @@ function renderMovers() {
   if (!state.movers) return;
   const rows = moversRows();
   const basisText = state.moversBasis === "percent" ? "%" : "$";
-  els.moversWinnersTitle.textContent = `Top Winners by ${basisText}`;
-  els.moversLosersTitle.textContent = `Top Losers by ${basisText}`;
+  const formatText = MOVER_FORMAT_LABELS[state.moversFormat] || "全部";
+  els.moversWinnersTitle.textContent = `${formatText}上涨榜 by ${basisText}`;
+  els.moversLosersTitle.textContent = `${formatText}下跌榜 by ${basisText}`;
   els.moversWinnersCount.textContent = `${rows.winners.length} cards`;
   els.moversLosersCount.textContent = `${rows.losers.length} cards`;
   els.moversWinners.innerHTML = rows.winners.map(renderMoverRow).join("");
@@ -674,6 +699,13 @@ function bindEvents() {
     button.addEventListener("click", () => {
       state.moversBasis = button.dataset.moversBasis;
       document.querySelectorAll("[data-movers-basis]").forEach((item) => item.classList.toggle("active", item === button));
+      renderMovers();
+    });
+  });
+  document.querySelectorAll("[data-movers-format]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.moversFormat = button.dataset.moversFormat;
+      document.querySelectorAll("[data-movers-format]").forEach((item) => item.classList.toggle("active", item === button));
       renderMovers();
     });
   });

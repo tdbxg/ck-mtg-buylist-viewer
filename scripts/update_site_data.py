@@ -631,6 +631,31 @@ def mover_row_key(row: dict) -> str:
     )
 
 
+def mover_format(row: dict) -> str:
+    text = " ".join(
+        [
+            str(row.get("edition") or ""),
+            str(row.get("scryfallSetName") or ""),
+            str(row.get("scryfallSet") or ""),
+        ]
+    ).lower()
+    if re.search(
+        r"token|helper|oversized|secret lair|sld|promo|promotional|promo pack|prerelease|"
+        r"commander|edh|mystery booster|the list|plist|universes beyond|warhammer|"
+        r"doctor who|fallout|lord of the rings|marvel|spider-man|final fantasy|avatar",
+        text,
+    ):
+        return "special"
+    released = str(row.get("releasedAt") or "")
+    if released >= "2023-09-08":
+        return "standard"
+    if released >= "2012-10-05":
+        return "pioneer"
+    if released >= "2003-07-26":
+        return "modern"
+    return "legacy"
+
+
 def compact_mover(row: dict, previous: dict, days: int) -> dict:
     now = float(row.get("cashUsd") or 0)
     before = float(previous.get("cashUsd") or 0)
@@ -665,6 +690,23 @@ def compact_mover(row: dict, previous: dict, days: int) -> dict:
     }
 
 
+def rank_mover_rows(rows: list[dict]) -> dict:
+    return {
+        "winners": sorted(rows, key=lambda row: (row["changePct"] or 0, row["changeUsd"]), reverse=True)[:100],
+        "losers": sorted(rows, key=lambda row: (row["changePct"] or 0, row["changeUsd"]))[:100],
+        "dollarsUp": sorted(
+            [row for row in rows if row["changeUsd"] > 0],
+            key=lambda row: row["changeUsd"],
+            reverse=True,
+        )[:100],
+        "dollarsDown": sorted(
+            [row for row in rows if row["changeUsd"] < 0],
+            key=lambda row: row["changeUsd"],
+        )[:100],
+        "changedRows": len(rows),
+    }
+
+
 def mover_groups(current: dict, previous: dict, days: int) -> dict:
     previous_by_key = {mover_row_key(row): row for row in previous.get("cards", [])}
     rows = []
@@ -684,20 +726,12 @@ def mover_groups(current: dict, previous: dict, days: int) -> dict:
             continue
         rows.append(compact_mover(row, old, days))
 
-    return {
-        "winners": sorted(rows, key=lambda row: (row["changePct"] or 0, row["changeUsd"]), reverse=True)[:100],
-        "losers": sorted(rows, key=lambda row: (row["changePct"] or 0, row["changeUsd"]))[:100],
-        "dollarsUp": sorted(
-            [row for row in rows if row["changeUsd"] > 0],
-            key=lambda row: row["changeUsd"],
-            reverse=True,
-        )[:100],
-        "dollarsDown": sorted(
-            [row for row in rows if row["changeUsd"] < 0],
-            key=lambda row: row["changeUsd"],
-        )[:100],
-        "changedRows": len(rows),
+    ranked = rank_mover_rows(rows)
+    ranked["formats"] = {
+        key: rank_mover_rows([row for row in rows if mover_format(row) == key])
+        for key in ["standard", "pioneer", "modern", "legacy", "special"]
     }
+    return ranked
 
 
 def write_movers(payload: dict, daily_previous: dict, weekly_previous: dict) -> None:
