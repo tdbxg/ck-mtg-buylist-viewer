@@ -23,6 +23,7 @@ const state = {
   fullDataLoaded: false,
   view: "query",
   movers: null,
+  moversSource: "ck",
   moversPeriod: "daily",
   moversBasis: "percent",
   moversFormat: "all",
@@ -570,8 +571,15 @@ const MOVER_FORMAT_LABELS = {
   special: "特选",
 };
 
+const MOVER_SOURCE_LABELS = {
+  ck: "CK回收价",
+  tcgplayer: "TCGplayer参考价",
+  cardmarket: "Cardmarket参考价",
+};
+
 function moversRows() {
   if (!state.movers) return { winners: [], losers: [] };
+  if (state.moversSource !== "ck") return { winners: [], losers: [], unavailable: true };
   const periodData = state.movers[state.moversPeriod] || {};
   const scopedData = state.moversFormat === "all"
     ? periodData
@@ -600,13 +608,16 @@ function moversRows() {
 function renderMoverRow(row, index) {
   const up = Number(row.changeUsd || 0) > 0;
   const setText = [row.setCode, row.collectorNumber ? `#${row.collectorNumber}` : ""].filter(Boolean).join(" ");
+  const image = row.image || "";
+  const imageHtml = image ? `<img src="${image}" alt="">` : `<div class="mover-img-empty"></div>`;
   return `
     <tr>
       <td class="mover-rank">${index + 1}</td>
       <td class="mover-card-cell">
+        ${imageHtml}
         <div>
           <strong>${row.name || "-"}</strong>
-          <span>${row.cn || "未匹配中文"}</span>
+          <span>${row.cn ? `中文参考：${row.cn}` : "中文暂缺，以英文名为准"}</span>
         </div>
       </td>
       <td>
@@ -628,12 +639,27 @@ function renderMovers() {
   const rows = moversRows();
   const basisText = state.moversBasis === "percent" ? "%" : "$";
   const formatText = MOVER_FORMAT_LABELS[state.moversFormat] || "全部";
-  els.moversWinnersTitle.textContent = `${formatText}上涨榜 by ${basisText}`;
-  els.moversLosersTitle.textContent = `${formatText}下跌榜 by ${basisText}`;
+  const sourceText = MOVER_SOURCE_LABELS[state.moversSource] || "价格";
+  els.moversWinnersTitle.textContent = `${sourceText} · ${formatText}上涨榜 by ${basisText}`;
+  els.moversLosersTitle.textContent = `${sourceText} · ${formatText}下跌榜 by ${basisText}`;
   els.moversWinnersCount.textContent = `${rows.winners.length} cards`;
   els.moversLosersCount.textContent = `${rows.losers.length} cards`;
-  els.moversWinners.innerHTML = rows.winners.map(renderMoverRow).join("");
-  els.moversLosers.innerHTML = rows.losers.map(renderMoverRow).join("");
+  if (rows.unavailable) {
+    const sourceName = MOVER_SOURCE_LABELS[state.moversSource] || "该价格源";
+    const message = `${sourceName}变动榜需要连续保存历史市场价。当前站点已有 CK 回收价历史；${sourceName}将接入 Scryfall公开参考价/官方数据源后生成。`;
+    const empty = `<tr><td class="movers-empty-row" colspan="6">${message}</td></tr>`;
+    els.moversWinners.innerHTML = empty;
+    els.moversLosers.innerHTML = empty;
+    els.moversWinnersCount.textContent = "待接入";
+    els.moversLosersCount.textContent = "待接入";
+    return;
+  }
+  els.moversWinners.innerHTML = rows.winners.length
+    ? rows.winners.map(renderMoverRow).join("")
+    : `<tr><td class="movers-empty-row" colspan="6">暂无符合条件的上涨记录</td></tr>`;
+  els.moversLosers.innerHTML = rows.losers.length
+    ? rows.losers.map(renderMoverRow).join("")
+    : `<tr><td class="movers-empty-row" colspan="6">暂无符合条件的下跌记录</td></tr>`;
 }
 
 function wantsMoversView() {
@@ -654,7 +680,7 @@ async function loadMovers() {
   els.moversCurrent.textContent = meta.currentDataAt || "-";
   els.moversDaily.textContent = Number(state.movers.daily?.changedRows || 0).toLocaleString("zh-CN");
   els.moversWeekly.textContent = Number(state.movers.weekly?.changedRows || 0).toLocaleString("zh-CN");
-  els.moversMeta.textContent = `当前：${meta.currentDataAt || "-"} ｜ Daily 对比：${meta.dailyPreviousDataAt || "-"} ｜ Weekly 对比：${meta.weeklyPreviousDataAt || "-"}`;
+  els.moversMeta.textContent = `当前：${meta.currentDataAt || "-"} ｜ Daily 对比：${meta.dailyPreviousDataAt || "-"} ｜ Weekly 对比：${meta.weeklyPreviousDataAt || "-"} ｜ 中文名仅供参考，以英文名/系列编号为准`;
   renderMovers();
 }
 
@@ -711,6 +737,13 @@ function bindEvents() {
     state.moversQuery = els.moversSearch.value;
     renderMovers();
   }));
+  document.querySelectorAll("[data-movers-source]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.moversSource = button.dataset.moversSource;
+      document.querySelectorAll("[data-movers-source]").forEach((item) => item.classList.toggle("active", item === button));
+      renderMovers();
+    });
+  });
   document.querySelectorAll("[data-movers-period]").forEach((button) => {
     button.addEventListener("click", () => {
       state.moversPeriod = button.dataset.moversPeriod;

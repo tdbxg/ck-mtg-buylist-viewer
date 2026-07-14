@@ -155,7 +155,7 @@ h1 {
 
 .movers-controls {
   display: grid;
-  grid-template-columns: auto auto minmax(360px, 1fr) minmax(220px, .8fr);
+  grid-template-columns: auto auto auto minmax(360px, 1fr) minmax(220px, .8fr);
   gap: 10px;
   align-items: center;
   padding: 10px;
@@ -194,6 +194,10 @@ h1 {
 
 .movers-format-segment button {
   min-width: 58px;
+}
+
+.movers-source-segment button {
+  min-width: 94px;
 }
 
 .movers-boards {
@@ -262,7 +266,20 @@ h1 {
 }
 
 .mover-card-cell {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 9px;
+  align-items: center;
   min-width: 220px;
+}
+
+.mover-card-cell img,
+.mover-img-empty {
+  width: 46px;
+  height: 64px;
+  border-radius: 4px;
+  object-fit: cover;
+  background: #e8edf3;
 }
 
 .movers-table-wrap td strong,
@@ -297,6 +314,13 @@ h1 {
 .mover-change.down span,
 .mover-change.down small {
   color: var(--danger);
+}
+
+.movers-empty-row {
+  padding: 28px 16px !important;
+  color: var(--muted);
+  text-align: center !important;
+  line-height: 1.5;
 }
 
 .mover-link a {

@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MTG 回收价与欧洲市场参考价</title>
-  <link rel="stylesheet" href="./styles.css?v=20260715-sets-history">
+  <title>MTG 单卡价格雷达</title>
+  <link rel="stylesheet" href="./styles.css?v=20260715-market-tabs">
 </head>
 <body>
   <header class="topbar">
     <div>
-      <h1>MTG 回收价与欧洲市场参考价</h1>
+      <h1>MTG 单卡价格雷达</h1>
       <p id="metaLine">正在载入数据...</p>
     </div>
     <div class="summary" aria-label="summary">
@@ -27,7 +27,7 @@
   <section id="moversView" class="movers-view" hidden>
     <div class="movers-head">
       <div>
-        <h2>MTG 回收价变动榜</h2>
+        <h2>MTG 价格变动榜</h2>
         <p id="moversMeta">正在载入价格变动数据...</p>
       </div>
       <div class="movers-stats">
@@ -37,6 +37,11 @@
       </div>
     </div>
     <div class="movers-controls">
+      <div class="segment movers-source-segment">
+        <button class="active" data-movers-source="ck" type="button">CK回收</button>
+        <button data-movers-source="tcgplayer" type="button">TCGplayer</button>
+        <button data-movers-source="cardmarket" type="button">Cardmarket</button>
+      </div>
       <div class="segment">
         <button class="active" data-movers-period="daily" type="button">Daily</button>
         <button data-movers-period="weekly" type="button">Weekly</button>
@@ -64,7 +69,7 @@
         <div class="movers-table-wrap">
           <table>
             <thead>
-              <tr><th>#</th><th>牌名</th><th>系列</th><th>原回收价</th><th>现回收价</th><th>变动</th></tr>
+              <tr><th>#</th><th>牌名</th><th>系列</th><th>原价</th><th>现价</th><th>变动</th></tr>
             </thead>
             <tbody id="moversWinners"></tbody>
           </table>
@@ -78,7 +83,7 @@
         <div class="movers-table-wrap">
           <table>
             <thead>
-              <tr><th>#</th><th>牌名</th><th>系列</th><th>原回收价</th><th>现回收价</th><th>变动</th></tr>
+              <tr><th>#</th><th>牌名</th><th>系列</th><th>原价</th><th>现价</th><th>变动</th></tr>
             </thead>
             <tbody id="moversLosers"></tbody>
           </table>
@@ -270,6 +275,6 @@
     </article>
   </template>
 
-  <script src="./app.js?v=20260715-sets-history"></script>
+  <script src="./app.js?v=20260715-market-tabs"></script>
 </body>
 </html>
