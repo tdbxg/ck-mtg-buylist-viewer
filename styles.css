@@ -514,7 +514,8 @@ button {
   margin-bottom: 10px;
 }
 
-.cart-panel {
+.cart-panel,
+.history-panel {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -600,6 +601,41 @@ button {
   border-radius: 6px;
   color: var(--muted);
   text-align: center;
+}
+
+.history-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 8px;
+}
+
+.history-item {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  padding: 9px 10px;
+  text-align: left;
+  background: #fbfcfe;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.history-item strong,
+.history-item span,
+.history-item small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.history-item span,
+.history-item small {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 12px;
 }
 
 .pager {

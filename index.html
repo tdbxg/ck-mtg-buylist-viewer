@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MTG 回收价与欧洲市场参考价</title>
-  <link rel="stylesheet" href="./styles.css?v=20260714-movers-only">
+  <link rel="stylesheet" href="./styles.css?v=20260715-sets-history">
 </head>
 <body>
   <header class="topbar">
@@ -220,6 +220,20 @@
       <div id="cartEmpty" class="cart-empty">还没有加入回收车</div>
     </section>
 
+    <section class="history-panel" aria-label="browse history">
+      <div class="cart-head">
+        <div>
+          <h2>历史浏览</h2>
+          <p id="historySummary">最近看过的单卡会显示在这里</p>
+        </div>
+        <div class="cart-actions">
+          <button id="clearHistoryButton" type="button">清空历史</button>
+        </div>
+      </div>
+      <div id="historyRows" class="history-list"></div>
+      <div id="historyEmpty" class="cart-empty">还没有浏览记录</div>
+    </section>
+
     <section class="results">
       <div class="resultbar">
         <div>
@@ -256,6 +270,6 @@
     </article>
   </template>
 
-  <script src="./app.js?v=20260714-movers-only"></script>
+  <script src="./app.js?v=20260715-sets-history"></script>
 </body>
 </html>

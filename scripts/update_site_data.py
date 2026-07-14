@@ -498,7 +498,40 @@ def recent_codes(cards: list[dict]) -> set[str]:
     return {code for code, _ in recent_sets}
 
 
+def build_sets(cards: list[dict]) -> list[dict]:
+    by_set: dict[str, dict] = {}
+    for row in cards:
+        code = row.get("scryfallSet") or ""
+        name = row.get("scryfallSetName") or ""
+        if not code or not name:
+            continue
+        current = by_set.setdefault(
+            code,
+            {
+                "code": code,
+                "name": name,
+                "releasedAt": row.get("releasedAt") or "",
+                "count": 0,
+                "maxCashUsd": 0,
+            },
+        )
+        current["count"] += 1
+        current["maxCashUsd"] = max(current["maxCashUsd"], float(row.get("cashUsd") or 0))
+        if (row.get("releasedAt") or "") > current["releasedAt"]:
+            current["releasedAt"] = row.get("releasedAt") or ""
+    return sorted(
+        by_set.values(),
+        key=lambda item: (
+            item.get("releasedAt") or "",
+            item.get("maxCashUsd") or 0,
+            item.get("count") or 0,
+        ),
+        reverse=True,
+    )
+
+
 def write_payload_files(payload: dict) -> None:
+    payload["sets"] = build_sets(payload.get("cards", []))
     raw = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
     with gzip.open(ROOT / "data.json.gz.tmp", "wb", compresslevel=9) as f:
         f.write(raw)
@@ -529,6 +562,7 @@ def write_fast_payload(payload: dict) -> None:
         "fields": CARD_FIELDS,
         "sealedFields": SEALED_FIELDS,
         "editions": payload.get("editions", [])[:800],
+        "sets": payload.get("sets") or build_sets(payload.get("cards", [])),
         "cards": [pack_row(row, CARD_FIELDS) for row in cards],
         "sealed": [pack_row(row, SEALED_FIELDS) for row in payload.get("sealed", [])],
     }

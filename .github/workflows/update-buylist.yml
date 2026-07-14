@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "20 1 * * *"
+    - cron: "20 13 * * *"
 
 permissions:
   contents: write
@@ -54,11 +55,15 @@ jobs:
               raise SystemExit(f"unexpected card count: {meta.get('cards')}")
           if not meta.get("cardKingdomCreatedAt"):
               raise SystemExit("missing Card Kingdom timestamp")
+          if len(payload.get("sets", [])) < 300:
+              raise SystemExit(f"unexpected set count: {len(payload.get('sets', []))}")
 
           with gzip.open("data_fast.json.gz", "rt", encoding="utf-8") as f:
               fast = json.load(f)
           if fast.get("meta", {}).get("fullCards", 0) < 100000:
               raise SystemExit("fast payload missing fullCards")
+          if len(fast.get("sets", [])) < 300:
+              raise SystemExit("fast payload missing full set index")
 
           with open("movers.json", "r", encoding="utf-8") as f:
               movers = json.load(f)

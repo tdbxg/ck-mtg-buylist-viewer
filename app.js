@@ -1,5 +1,7 @@
 const PAGE_SIZE = 60;
 const CART_KEY = "ck-mtg-buylist-cart-v1";
+const HISTORY_KEY = "ck-mtg-buylist-history-v1";
+const HISTORY_LIMIT = 30;
 
 const state = {
   data: null,
@@ -26,6 +28,7 @@ const state = {
   moversFormat: "all",
   moversQuery: "",
   cart: new Map(),
+  history: [],
 };
 
 const els = {
@@ -85,6 +88,10 @@ const els = {
   cartTableWrap: document.querySelector("#cartTableWrap"),
   exportCartButton: document.querySelector("#exportCartButton"),
   clearCartButton: document.querySelector("#clearCartButton"),
+  historySummary: document.querySelector("#historySummary"),
+  historyRows: document.querySelector("#historyRows"),
+  historyEmpty: document.querySelector("#historyEmpty"),
+  clearHistoryButton: document.querySelector("#clearHistoryButton"),
   template: document.querySelector("#cardTemplate"),
 };
 
@@ -227,6 +234,25 @@ function cartSnapshot(row) {
   };
 }
 
+function historySnapshot(row) {
+  return {
+    key: rowKey(row),
+    sku: row.sku || "",
+    name: row.name || "",
+    cn: row.cn || "",
+    edition: row.edition || "",
+    scryfallSetName: row.scryfallSetName || "",
+    scryfallSet: row.scryfallSet || "",
+    collectorNumber: row.collectorNumber || "",
+    foil: !!row.foil,
+    cashUsd: Number(row.cashUsd || 0),
+    creditUsd: Number(row.creditUsd || 0),
+    retailUsd: Number(row.retailUsd || 0),
+    ckUrl: row.ckUrl || "",
+    viewedAt: new Date().toISOString(),
+  };
+}
+
 function expandPackedData(payload) {
   if (!Array.isArray(payload.fields)) return payload;
   const cardFields = payload.fields;
@@ -252,6 +278,7 @@ function expandPackedData(payload) {
   return {
     meta: payload.meta || {},
     editions: payload.editions || [],
+    sets: payload.sets || [],
     cards: (payload.cards || []).map((row) => expand(row, cardFields)),
     sealed: (payload.sealed || []).map((row) => expand(row, sealedFields)),
   };
@@ -274,6 +301,13 @@ function populateEditions() {
 }
 
 function getSets() {
+  if (Array.isArray(state.data.sets) && state.data.sets.length) {
+    return [...state.data.sets].sort((a, b) => {
+      const byDate = String(b.releasedAt || "").localeCompare(String(a.releasedAt || ""));
+      if (byDate) return byDate;
+      return Number(b.maxCashUsd || 0) - Number(a.maxCashUsd || 0);
+    });
+  }
   const bySet = new Map();
   for (const row of state.data.cards) {
     const code = row.scryfallSet || "";
@@ -307,36 +341,19 @@ function populateSets() {
   for (const item of getSets()) {
     const option = document.createElement("option");
     option.value = item.code;
-    option.textContent = `${item.name} (${String(item.code).toUpperCase()} · ${item.count})${item.releasedAt ? ` · ${item.releasedAt}` : ""}`;
+    option.textContent = `${String(item.code).toUpperCase()} · ${item.name} (${item.count})${item.releasedAt ? ` · ${item.releasedAt}` : ""}`;
     frag.appendChild(option);
   }
   els.setSelect.replaceChildren(frag);
 }
 
-function getRecentSets(limit = 10) {
-  const bySet = new Map();
-  for (const row of state.data.cards) {
-    const code = row.scryfallSet || "";
-    const name = row.scryfallSetName || "";
-    if (!code || !name || /token/i.test(name)) continue;
-    const current = bySet.get(code) || {
-      code,
-      name,
-      releasedAt: row.releasedAt || "",
-      count: 0,
-      maxCash: 0,
-    };
-    current.count += 1;
-    current.maxCash = Math.max(current.maxCash, row.cashUsd || 0);
-    if ((row.releasedAt || "") > current.releasedAt) current.releasedAt = row.releasedAt || "";
-    bySet.set(code, current);
-  }
-  return [...bySet.values()]
+function getRecentSets(limit = 18) {
+  return getSets()
     .filter((item) => item.count >= 5)
     .sort((a, b) => {
-      const byDate = b.releasedAt.localeCompare(a.releasedAt);
+      const byDate = String(b.releasedAt || "").localeCompare(String(a.releasedAt || ""));
       if (byDate) return byDate;
-      return b.count - a.count;
+      return Number(b.count || 0) - Number(a.count || 0);
     })
     .slice(0, limit);
 }
@@ -355,7 +372,7 @@ function populateRecentSets() {
     button.type = "button";
     button.className = "set-chip";
     button.dataset.set = item.code;
-    button.innerHTML = `<span>${item.name}</span><small>${item.releasedAt} · ${item.count}</small>`;
+    button.innerHTML = `<span>${String(item.code).toUpperCase()} · ${item.name}</span><small>${item.releasedAt || "-"} · ${item.count}</small>`;
     frag.appendChild(button);
   }
   els.recentSets.replaceChildren(frag);
@@ -459,7 +476,7 @@ function renderCard(row) {
       : "";
     details.innerHTML = `
       <div>CK版本：<strong>${row.edition || "-"}</strong></div>
-      <div>Scryfall版本：<strong>${row.scryfallSetName || "-"}</strong>${row.scryfallSet ? ` (${String(row.scryfallSet).toUpperCase()}` : ""}${row.collectorNumber ? ` #${row.collectorNumber}` : ""}${row.scryfallSet ? ")" : ""}</div>
+      <div>Scryfall版本：<strong>${row.scryfallSet ? String(row.scryfallSet).toUpperCase() : "-"}</strong>${row.collectorNumber ? ` #${row.collectorNumber}` : ""}${row.scryfallSetName ? ` · ${row.scryfallSetName}` : ""}</div>
       ${skinName ? `<div>变体/皮肤：<strong>${skinName}</strong></div>` : ""}
       ${skinCnLine}
       ${ckNameLine}
@@ -593,8 +610,8 @@ function renderMoverRow(row, index) {
         </div>
       </td>
       <td>
-        <strong>${row.setName || row.edition || "-"}</strong>
-        <span>${setText || "-"}</span>
+        <strong>${setText || "-"}</strong>
+        <span>${row.setName || row.edition || "-"}</span>
       </td>
       <td class="mover-num">${moneyUsd(row.previousCashUsd)}</td>
       <td class="mover-num">${moneyUsd(row.cashUsd)}</td>
@@ -758,6 +775,13 @@ function bindEvents() {
     if (!row) return;
     addToCart(row);
   });
+  els.cardsGrid.addEventListener("click", (event) => {
+    const card = event.target.closest(".card");
+    if (!card) return;
+    const row = state.results.find((item) => rowKey(item) === card.dataset.key);
+    if (!row) return;
+    addHistory(row);
+  });
   els.cartRows.addEventListener("input", (event) => {
     const input = event.target.closest(".cart-qty");
     if (!input) return;
@@ -770,6 +794,18 @@ function bindEvents() {
   });
   els.exportCartButton.addEventListener("click", exportCartCsv);
   els.clearCartButton.addEventListener("click", clearCart);
+  els.clearHistoryButton.addEventListener("click", clearHistory);
+  els.historyRows.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-history-key]");
+    if (!button) return;
+    const row = state.history.find((item) => item.key === button.dataset.historyKey);
+    if (!row) return;
+    els.typeSelect.value = "cards";
+    els.searchInput.value = row.name;
+    state.page = 1;
+    readControls();
+    render();
+  });
   els.resetButton.addEventListener("click", () => {
     els.searchInput.value = "";
     els.typeSelect.value = "cards";
@@ -826,6 +862,7 @@ function bindEvents() {
 
 async function init() {
   loadCart();
+  loadHistory();
   if (wantsMoversView()) {
     switchView("movers", false);
   }
@@ -843,6 +880,7 @@ async function init() {
   bindEvents();
   render();
   renderCart();
+  renderHistory();
   if (wantsMoversView()) {
     switchView("movers", false);
   } else {
@@ -876,8 +914,36 @@ function loadCart() {
   }
 }
 
+function loadHistory() {
+  try {
+    const rows = JSON.parse(localStorage.getItem(HISTORY_KEY) || "[]");
+    state.history = Array.isArray(rows) ? rows.slice(0, HISTORY_LIMIT) : [];
+  } catch (error) {
+    console.warn("History not loaded", error);
+    state.history = [];
+  }
+}
+
 function saveCart() {
   localStorage.setItem(CART_KEY, JSON.stringify([...state.cart.values()]));
+}
+
+function saveHistory() {
+  localStorage.setItem(HISTORY_KEY, JSON.stringify(state.history.slice(0, HISTORY_LIMIT)));
+}
+
+function addHistory(row) {
+  if (!row || state.source !== "cards") return;
+  const next = historySnapshot(row);
+  state.history = [next, ...state.history.filter((item) => item.key !== next.key)].slice(0, HISTORY_LIMIT);
+  saveHistory();
+  renderHistory();
+}
+
+function clearHistory() {
+  state.history = [];
+  saveHistory();
+  renderHistory();
 }
 
 function addToCart(row) {
@@ -888,6 +954,7 @@ function addToCart(row) {
   } else {
     state.cart.set(key, cartSnapshot(row));
   }
+  addHistory(row);
   saveCart();
   renderCart();
   render();
@@ -939,7 +1006,7 @@ function renderCart() {
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td><strong>${row.name}</strong><br><span>${row.cn || ""}${row.foil ? " / Foil" : ""}</span></td>
-      <td>${row.edition || "-"}<br><span>${row.scryfallSetName || ""}</span></td>
+      <td>${row.edition || "-"}<br><span>${String(row.scryfallSet || "").toUpperCase()}${row.collectorNumber ? ` #${row.collectorNumber}` : ""}${row.scryfallSetName ? ` · ${row.scryfallSetName}` : ""}</span></td>
       <td>${row.collectorNumber || "-"}<br><span>${row.sku || ""}</span></td>
       <td><input class="cart-qty" data-key="${row.key}" type="number" min="0" step="1" value="${row.qty}"></td>
       <td>${moneyUsd(row.cashUsd)}<br><span>积分 ${moneyUsd(row.creditUsd)}</span></td>
@@ -948,6 +1015,32 @@ function renderCart() {
     frag.appendChild(tr);
   }
   els.cartRows.replaceChildren(frag);
+}
+
+function renderHistory() {
+  const rows = state.history || [];
+  els.historySummary.textContent = rows.length
+    ? `最近 ${rows.length.toLocaleString("zh-CN")} 条`
+    : "最近看过的单卡会显示在这里";
+  els.historyEmpty.hidden = rows.length !== 0;
+  els.historyRows.hidden = rows.length === 0;
+  els.clearHistoryButton.disabled = rows.length === 0;
+
+  const frag = document.createDocumentFragment();
+  for (const row of rows) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "history-item";
+    button.dataset.historyKey = row.key;
+    const setLine = `${String(row.scryfallSet || "").toUpperCase()}${row.collectorNumber ? ` #${row.collectorNumber}` : ""}${row.scryfallSetName ? ` · ${row.scryfallSetName}` : ""}`;
+    button.innerHTML = `
+      <strong>${row.name || "-"}</strong>
+      <span>${row.cn || ""}${row.foil ? " / Foil" : ""}</span>
+      <small>${setLine || row.edition || "-"} · ${moneyUsd(row.cashUsd)}</small>
+    `;
+    frag.appendChild(button);
+  }
+  els.historyRows.replaceChildren(frag);
 }
 
 function exportCartCsv() {
