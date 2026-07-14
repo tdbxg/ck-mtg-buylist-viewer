@@ -12,6 +12,7 @@ from __future__ import annotations
 import csv
 import gzip
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -71,6 +72,7 @@ CARD_FIELDS = [
     "marketEur",
     "tcgplayerUrl",
     "cardmarketUrl",
+    "formatBucket",
     "cnSource",
 ]
 
@@ -223,6 +225,7 @@ def compact_scryfall_card(card: dict) -> dict:
         "releasedAt": card.get("released_at") or "",
         "finishes": card.get("finishes") or [],
         "promoTypes": card.get("promo_types") or [],
+        "legalities": card.get("legalities") or {},
         "scryfallUri": card.get("scryfall_uri") or "",
         "image": scryfall_image(card),
         "usd": price_float(prices.get("usd")),
@@ -253,6 +256,14 @@ def previous_indexes(payload: dict) -> tuple[dict, dict, dict]:
             "releasedAt": row.get("releasedAt") or "",
             "finishes": row.get("finishes") or [],
             "promoTypes": row.get("promoTypes") or [],
+            "legalities": row.get("legalities") or {},
+            "formatBucket": row.get("formatBucket") or "",
+            "usd": row.get("marketUsd"),
+            "usdFoil": row.get("marketUsd"),
+            "eur": row.get("marketEur"),
+            "eurFoil": row.get("marketEur"),
+            "tcgplayerUrl": row.get("tcgplayerUrl") or "",
+            "cardmarketUrl": row.get("cardmarketUrl") or "",
             "scryfallUri": row.get("scryfallUrl") or "",
             "image": row.get("image") if "cards.scryfall.io" in str(row.get("image") or "") else "",
         }
@@ -310,7 +321,11 @@ def fetch_missing_scryfall(needed: list[str], existing: dict) -> dict:
     missing = [
         sid
         for sid in needed
-        if sid not in existing or not existing[sid].get("image") or not existing[sid].get("set")
+        if (
+            sid not in existing
+            or not existing[sid].get("image")
+            or not existing[sid].get("set")
+        )
     ]
     if not missing:
         return existing
@@ -400,6 +415,7 @@ def build_payload(
         foil = boolish(row.get("is_foil"))
         market_usd = market_price(exact, foil, "usd")
         market_eur = market_price(exact, foil, "eur")
+        legalities = exact.get("legalities") or {}
         edition_slot = editions.setdefault(
             edition,
             {"name": edition, "count": 0, "latestReleasedAt": "", "maxCashUsd": 0},
@@ -433,6 +449,8 @@ def build_payload(
                 "releasedAt": exact.get("releasedAt") or "",
                 "finishes": exact.get("finishes") or [],
                 "promoTypes": exact.get("promoTypes") or [],
+                "legalities": legalities,
+                "formatBucket": format_bucket({"legalities": legalities}),
                 "image": image,
                 "cashUsd": cash_usd,
                 "cashCny": round(cash_usd * usd_cny, 2),
@@ -710,6 +728,11 @@ def scryfall_bulk_cards() -> list[dict]:
 
 
 def enrich_market_reference(payload: dict) -> dict:
+    if os.environ.get("CK_SKIP_MARKET_BULK") == "1":
+        payload.setdefault("meta", {})["scryfallMarketSource"] = "Scryfall public USD/EUR price fields"
+        payload.setdefault("meta", {})["scryfallMarketSkipped"] = "local_skip"
+        return payload
+
     cards = payload.get("cards", [])
     wanted_ids = {row.get("scryfallId") for row in cards if row.get("scryfallId")}
     wanted_keys = {
@@ -738,6 +761,7 @@ def enrich_market_reference(payload: dict) -> dict:
             "eurEtched": price_float(prices.get("eur_etched")),
             "tcgplayerUrl": purchases.get("tcgplayer") or "",
             "cardmarketUrl": purchases.get("cardmarket") or "",
+            "legalities": card.get("legalities") or {},
         }
         if sid:
             refs[f"id:{sid}"] = rec
@@ -756,6 +780,8 @@ def enrich_market_reference(payload: dict) -> dict:
         row["marketEur"] = market_price(rec, foil, "eur")
         row["tcgplayerUrl"] = rec.get("tcgplayerUrl") or ""
         row["cardmarketUrl"] = rec.get("cardmarketUrl") or ""
+        row["legalities"] = rec.get("legalities") or row.get("legalities") or {}
+        row["formatBucket"] = format_bucket(row)
         if row["marketUsd"] is not None:
             matched_usd += 1
         if row["marketEur"] is not None:
@@ -777,29 +803,17 @@ def mover_row_key(row: dict) -> str:
     )
 
 
-def mover_format(row: dict) -> str:
-    text = " ".join(
-        [
-            str(row.get("edition") or ""),
-            str(row.get("scryfallSetName") or ""),
-            str(row.get("scryfallSet") or ""),
-        ]
-    ).lower()
-    if re.search(
-        r"token|helper|oversized|secret lair|sld|promo|promotional|promo pack|prerelease|"
-        r"commander|edh|mystery booster|the list|plist|universes beyond|warhammer|"
-        r"doctor who|fallout|lord of the rings|marvel|spider-man|final fantasy|avatar",
-        text,
-    ):
-        return "special"
-    released = str(row.get("releasedAt") or "")
-    if released >= "2023-09-08":
+def format_bucket(row: dict) -> str:
+    legalities = row.get("legalities") or {}
+    if legalities.get("standard") == "legal":
         return "standard"
-    if released >= "2012-10-05":
+    if legalities.get("pioneer") == "legal":
         return "pioneer"
-    if released >= "2003-07-26":
+    if legalities.get("modern") == "legal":
         return "modern"
-    return "legacy"
+    if legalities.get("legacy") == "legal":
+        return "legacy"
+    return "special"
 
 
 def compact_mover(
@@ -827,6 +841,7 @@ def compact_mover(
         "foil": bool(row.get("foil")),
         "rarity": row.get("rarity") or "",
         "releasedAt": row.get("releasedAt") or "",
+        "formatBucket": row.get("formatBucket") or format_bucket(row),
         "image": row.get("image") or "",
         "cashUsd": now,
         "previousCashUsd": before,
@@ -893,7 +908,7 @@ def mover_groups(
 
     ranked = rank_mover_rows(rows)
     ranked["formats"] = {
-        key: rank_mover_rows([row for row in rows if mover_format(row) == key])
+        key: rank_mover_rows([row for row in rows if (row.get("formatBucket") or format_bucket(row)) == key])
         for key in ["standard", "pioneer", "modern", "legacy", "special"]
     }
     return ranked

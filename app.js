@@ -557,18 +557,6 @@ function moversPct(value) {
   return `${number > 0 ? "+" : ""}${number.toFixed(1)}%`;
 }
 
-function moverFormat(row) {
-  const text = `${row.edition || ""} ${row.setName || ""} ${row.setCode || ""}`.toLowerCase();
-  if (/token|helper|oversized|secret lair|sld|promo|promotional|promo pack|prerelease|commander|edh|mystery booster|the list|plist|universes beyond|warhammer|doctor who|fallout|lord of the rings|marvel|spider-man|final fantasy|avatar/.test(text)) {
-    return "special";
-  }
-  const released = row.releasedAt || "";
-  if (released >= "2023-09-08") return "standard";
-  if (released >= "2012-10-05") return "pioneer";
-  if (released >= "2003-07-26") return "modern";
-  return "legacy";
-}
-
 const MOVER_FORMAT_LABELS = {
   all: "全部",
   standard: "标准",
@@ -608,7 +596,7 @@ function moversRows() {
     row.sku,
   ].join(" ")).includes(query);
   const usesServerFormat = state.moversFormat === "all" || !!periodData.formats?.[state.moversFormat];
-  const inFormat = (row) => usesServerFormat || moverFormat(row) === state.moversFormat;
+  const inFormat = (row) => usesServerFormat || row.formatBucket === state.moversFormat;
   return {
     winners: source.winners.filter((row) => matches(row) && inFormat(row)).slice(0, 50),
     losers: source.losers.filter((row) => matches(row) && inFormat(row)).slice(0, 50),
