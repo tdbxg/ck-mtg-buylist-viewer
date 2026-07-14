@@ -28,6 +28,7 @@ SINGLES_URL = "https://api.cardkingdom.com/api/v2/pricelist"
 SEALED_URL = "https://api.cardkingdom.com/api/sealed_pricelist"
 FX_URL = "https://open.er-api.com/v6/latest/USD"
 SCRYFALL_COLLECTION_URL = "https://api.scryfall.com/cards/collection"
+SCRYFALL_BULK_URL = "https://api.scryfall.com/bulk-data/default-cards"
 MTGCH_NAMES_URL = "https://mtgch.com/static/card_names.json"
 USER_AGENT = "ck-mtg-buylist-viewer-github-actions/1.0"
 JSON_HEADERS = {"User-Agent": USER_AGENT, "Accept": "application/json"}
@@ -66,6 +67,10 @@ CARD_FIELDS = [
     "retailCny",
     "qtyBuying",
     "qtyRetail",
+    "marketUsd",
+    "marketEur",
+    "tcgplayerUrl",
+    "cardmarketUrl",
     "cnSource",
 ]
 
@@ -146,6 +151,15 @@ def money(value: Any) -> float:
         return 0.0
 
 
+def price_float(value: Any) -> float | None:
+    try:
+        if value is None or value == "":
+            return None
+        return round(float(value), 2)
+    except Exception:
+        return None
+
+
 def qty(value: Any) -> int:
     try:
         return int(value or 0)
@@ -159,6 +173,10 @@ def boolish(value: Any) -> bool:
 
 def full_url(base: str, path: str) -> str:
     return (base.rstrip("/") + "/" + str(path).lstrip("/")).replace(" ", "%20")
+
+
+def market_key(name: str, set_code: str, collector_number: str) -> str:
+    return "|".join([normalize_name(name), normalize_name(set_code), normalize_name(collector_number)])
 
 
 def load_previous_payload() -> dict:
@@ -190,6 +208,8 @@ def scryfall_image(card: dict) -> str:
 
 
 def compact_scryfall_card(card: dict) -> dict:
+    prices = card.get("prices") or {}
+    purchases = card.get("purchase_uris") or {}
     return {
         "id": card.get("id") or "",
         "name": card.get("name") or "",
@@ -205,6 +225,14 @@ def compact_scryfall_card(card: dict) -> dict:
         "promoTypes": card.get("promo_types") or [],
         "scryfallUri": card.get("scryfall_uri") or "",
         "image": scryfall_image(card),
+        "usd": price_float(prices.get("usd")),
+        "usdFoil": price_float(prices.get("usd_foil")),
+        "usdEtched": price_float(prices.get("usd_etched")),
+        "eur": price_float(prices.get("eur")),
+        "eurFoil": price_float(prices.get("eur_foil")),
+        "eurEtched": price_float(prices.get("eur_etched")),
+        "tcgplayerUrl": purchases.get("tcgplayer") or "",
+        "cardmarketUrl": purchases.get("cardmarket") or "",
     }
 
 
@@ -266,6 +294,16 @@ def mtgch_indexes() -> tuple[dict, dict]:
         if sid:
             by_sid.setdefault(sid, rec)
     return by_sid, by_name
+
+
+def market_price(exact: dict, foil: bool, currency: str) -> float | None:
+    if currency == "usd":
+        if foil:
+            return exact.get("usdFoil") if exact.get("usdFoil") is not None else exact.get("usd")
+        return exact.get("usd") if exact.get("usd") is not None else exact.get("usdFoil")
+    if foil:
+        return exact.get("eurFoil") if exact.get("eurFoil") is not None else exact.get("eur")
+    return exact.get("eur") if exact.get("eur") is not None else exact.get("eurFoil")
 
 
 def fetch_missing_scryfall(needed: list[str], existing: dict) -> dict:
@@ -359,6 +397,9 @@ def build_payload(
         edition = row.get("edition") or ""
         cash_usd = money(row.get("price_buy"))
         retail_usd = money(row.get("price_retail"))
+        foil = boolish(row.get("is_foil"))
+        market_usd = market_price(exact, foil, "usd")
+        market_eur = market_price(exact, foil, "eur")
         edition_slot = editions.setdefault(
             edition,
             {"name": edition, "count": 0, "latestReleasedAt": "", "maxCashUsd": 0},
@@ -382,7 +423,7 @@ def build_payload(
                 "edition": edition,
                 "variation": row.get("variation") or "",
                 "activeBuying": qty(row.get("qty_buying")) > 0,
-                "foil": boolish(row.get("is_foil")),
+                "foil": foil,
                 "ckUrl": full_url(base, row.get("url", "")),
                 "scryfallUrl": exact.get("scryfallUri") or "",
                 "scryfallSet": exact.get("set") or "",
@@ -401,6 +442,10 @@ def build_payload(
                 "retailUsd": retail_usd,
                 "retailCny": round(retail_usd * usd_cny, 2),
                 "qtyRetail": qty(row.get("qty_retail")),
+                "marketUsd": market_usd,
+                "marketEur": market_eur,
+                "tcgplayerUrl": exact.get("tcgplayerUrl") or "",
+                "cardmarketUrl": exact.get("cardmarketUrl") or "",
                 "conditions": row.get("condition_values") or {},
                 "search": normalize_name(
                     " ".join(
@@ -654,6 +699,73 @@ def write_exports(payload: dict) -> None:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
 
 
+def scryfall_bulk_cards() -> list[dict]:
+    meta = fetch_json(SCRYFALL_BULK_URL, timeout=120)
+    download_uri = meta.get("download_uri")
+    if not download_uri:
+        raise RuntimeError("Scryfall default-cards bulk download URI missing")
+    req = urllib.request.Request(download_uri, headers=JSON_HEADERS)
+    with urllib.request.urlopen(req, timeout=900) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def enrich_market_reference(payload: dict) -> dict:
+    cards = payload.get("cards", [])
+    wanted_ids = {row.get("scryfallId") for row in cards if row.get("scryfallId")}
+    wanted_keys = {
+        market_key(row.get("name") or "", row.get("scryfallSet") or "", row.get("collectorNumber") or "")
+        for row in cards
+        if row.get("scryfallSet") and row.get("collectorNumber")
+    }
+    if not wanted_ids and not wanted_keys:
+        return payload
+
+    print("Fetching Scryfall bulk market reference prices...")
+    refs: dict[str, dict] = {}
+    for card in scryfall_bulk_cards():
+        sid = card.get("id") or ""
+        key = market_key(card.get("name") or "", card.get("set") or "", card.get("collector_number") or "")
+        if sid not in wanted_ids and key not in wanted_keys:
+            continue
+        prices = card.get("prices") or {}
+        purchases = card.get("purchase_uris") or {}
+        rec = {
+            "usd": price_float(prices.get("usd")),
+            "usdFoil": price_float(prices.get("usd_foil")),
+            "usdEtched": price_float(prices.get("usd_etched")),
+            "eur": price_float(prices.get("eur")),
+            "eurFoil": price_float(prices.get("eur_foil")),
+            "eurEtched": price_float(prices.get("eur_etched")),
+            "tcgplayerUrl": purchases.get("tcgplayer") or "",
+            "cardmarketUrl": purchases.get("cardmarket") or "",
+        }
+        if sid:
+            refs[f"id:{sid}"] = rec
+        refs[f"key:{key}"] = rec
+
+    matched_usd = 0
+    matched_eur = 0
+    for row in cards:
+        rec = refs.get(f"id:{row.get('scryfallId') or ''}") or refs.get(
+            f"key:{market_key(row.get('name') or '', row.get('scryfallSet') or '', row.get('collectorNumber') or '')}"
+        )
+        if not rec:
+            continue
+        foil = bool(row.get("foil"))
+        row["marketUsd"] = market_price(rec, foil, "usd")
+        row["marketEur"] = market_price(rec, foil, "eur")
+        row["tcgplayerUrl"] = rec.get("tcgplayerUrl") or ""
+        row["cardmarketUrl"] = rec.get("cardmarketUrl") or ""
+        if row["marketUsd"] is not None:
+            matched_usd += 1
+        if row["marketEur"] is not None:
+            matched_eur += 1
+    payload.setdefault("meta", {})["scryfallMarketMatchedUsd"] = matched_usd
+    payload.setdefault("meta", {})["scryfallMarketMatchedEur"] = matched_eur
+    payload.setdefault("meta", {})["scryfallMarketSource"] = "Scryfall public USD/EUR price fields"
+    return payload
+
+
 def mover_row_key(row: dict) -> str:
     return row.get("sku") or "|".join(
         [
@@ -690,9 +802,16 @@ def mover_format(row: dict) -> str:
     return "legacy"
 
 
-def compact_mover(row: dict, previous: dict, days: int) -> dict:
-    now = float(row.get("cashUsd") or 0)
-    before = float(previous.get("cashUsd") or 0)
+def compact_mover(
+    row: dict,
+    previous: dict,
+    days: int,
+    value_field: str = "cashUsd",
+    currency: str = "USD",
+    source: str = "ck_buylist",
+) -> dict:
+    now = float(row.get(value_field) or 0)
+    before = float(previous.get(value_field) or 0)
     change = round(now - before, 2)
     pct = round(change / before * 100, 2) if before else None
     retail = float(row.get("retailUsd") or 0)
@@ -713,6 +832,8 @@ def compact_mover(row: dict, previous: dict, days: int) -> dict:
         "previousCashUsd": before,
         "changeUsd": change,
         "changePct": pct,
+        "currency": currency,
+        "source": source,
         "creditUsd": round(now * 1.3, 2),
         "retailUsd": retail,
         "buyRatio": round(now / retail * 100, 2) if retail else None,
@@ -720,6 +841,8 @@ def compact_mover(row: dict, previous: dict, days: int) -> dict:
         "qtyRetail": int(row.get("qtyRetail") or 0),
         "ckUrl": row.get("ckUrl") or "",
         "scryfallUrl": row.get("scryfallUrl") or "",
+        "tcgplayerUrl": row.get("tcgplayerUrl") or "",
+        "cardmarketUrl": row.get("cardmarketUrl") or "",
         "windowDays": days,
     }
 
@@ -741,24 +864,32 @@ def rank_mover_rows(rows: list[dict]) -> dict:
     }
 
 
-def mover_groups(current: dict, previous: dict, days: int) -> dict:
+def mover_groups(
+    current: dict,
+    previous: dict,
+    days: int,
+    value_field: str = "cashUsd",
+    currency: str = "USD",
+    source: str = "ck_buylist",
+    require_active: bool = True,
+) -> dict:
     previous_by_key = {mover_row_key(row): row for row in previous.get("cards", [])}
     rows = []
     for row in current.get("cards", []):
-        if row.get("activeBuying") is False:
+        if require_active and row.get("activeBuying") is False:
             continue
         old = previous_by_key.get(mover_row_key(row))
         if not old:
             continue
-        now = float(row.get("cashUsd") or 0)
-        before = float(old.get("cashUsd") or 0)
+        now = float(row.get(value_field) or 0)
+        before = float(old.get(value_field) or 0)
         if before < 0.25 or now <= 0:
             continue
         change = round(now - before, 2)
         pct_abs = abs(change / before * 100) if before else 0
         if abs(change) < 0.05 and pct_abs < 3:
             continue
-        rows.append(compact_mover(row, old, days))
+        rows.append(compact_mover(row, old, days, value_field=value_field, currency=currency, source=source))
 
     ranked = rank_mover_rows(rows)
     ranked["formats"] = {
@@ -777,9 +908,58 @@ def write_movers(payload: dict, daily_previous: dict, weekly_previous: dict) -> 
             "weeklyPreviousDataAt": weekly_previous.get("meta", {}).get("cardKingdomCreatedAt", ""),
             "source": "Card Kingdom buylist",
             "currency": "USD",
+            "marketSource": payload.get("meta", {}).get("scryfallMarketSource", ""),
         },
         "daily": mover_groups(payload, daily_previous, 1),
         "weekly": mover_groups(payload, weekly_previous, 7),
+        "marketSources": {
+            "tcgplayer": {
+                "label": "TCGplayer参考价",
+                "currency": "USD",
+                "source": "Scryfall public usd/usd_foil fields",
+                "daily": mover_groups(
+                    payload,
+                    daily_previous,
+                    1,
+                    value_field="marketUsd",
+                    currency="USD",
+                    source="scryfall_usd_reference",
+                    require_active=False,
+                ),
+                "weekly": mover_groups(
+                    payload,
+                    weekly_previous,
+                    7,
+                    value_field="marketUsd",
+                    currency="USD",
+                    source="scryfall_usd_reference",
+                    require_active=False,
+                ),
+            },
+            "cardmarket": {
+                "label": "Cardmarket参考价",
+                "currency": "EUR",
+                "source": "Scryfall public eur/eur_foil fields",
+                "daily": mover_groups(
+                    payload,
+                    daily_previous,
+                    1,
+                    value_field="marketEur",
+                    currency="EUR",
+                    source="scryfall_eur_reference",
+                    require_active=False,
+                ),
+                "weekly": mover_groups(
+                    payload,
+                    weekly_previous,
+                    7,
+                    value_field="marketEur",
+                    currency="EUR",
+                    source="scryfall_eur_reference",
+                    require_active=False,
+                ),
+            },
+        },
     }
     with open(ROOT / "movers.json", "w", encoding="utf-8") as f:
         json.dump(movers_payload, f, ensure_ascii=False, separators=(",", ":"))
@@ -812,6 +992,7 @@ def main() -> int:
         prev_cn_by_name,
         prev_skin_cn_by_name,
     )
+    payload = enrich_market_reference(payload)
     write_payload_files(payload)
     write_fast_payload(payload)
     write_exports(payload)

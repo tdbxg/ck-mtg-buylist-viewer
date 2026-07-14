@@ -57,6 +57,10 @@ jobs:
               raise SystemExit("missing Card Kingdom timestamp")
           if len(payload.get("sets", [])) < 300:
               raise SystemExit(f"unexpected set count: {len(payload.get('sets', []))}")
+          if meta.get("scryfallMarketMatchedUsd", 0) < 50000:
+              raise SystemExit("missing Scryfall USD market references")
+          if meta.get("scryfallMarketMatchedEur", 0) < 50000:
+              raise SystemExit("missing Scryfall EUR market references")
 
           with gzip.open("data_fast.json.gz", "rt", encoding="utf-8") as f:
               fast = json.load(f)
@@ -71,6 +75,9 @@ jobs:
               raise SystemExit("movers payload missing daily or weekly sections")
           if "changedRows" not in movers["daily"] or "changedRows" not in movers["weekly"]:
               raise SystemExit("movers payload missing changedRows")
+          sources = movers.get("marketSources", {})
+          if "tcgplayer" not in sources or "cardmarket" not in sources:
+              raise SystemExit("movers payload missing market source sections")
 
           print(json.dumps(meta, ensure_ascii=False, indent=2))
           PY

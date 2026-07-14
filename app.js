@@ -116,6 +116,11 @@ function moneyEur(value) {
   return `€${Number(value || 0).toLocaleString("de-DE", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 }
 
+function moneyByCurrency(value, currency = "USD") {
+  if (currency === "EUR") return moneyEur(value);
+  return moneyUsd(value);
+}
+
 function rowCardmarketKey(row) {
   return [
     normalize(row.name),
@@ -271,6 +276,8 @@ function expandPackedData(payload) {
     item.retailCny = Number(item.retailCny || 0);
     item.qtyBuying = Number(item.qtyBuying || 0);
     item.qtyRetail = Number(item.qtyRetail || 0);
+    item.marketUsd = item.marketUsd === null || item.marketUsd === undefined ? null : Number(item.marketUsd || 0);
+    item.marketEur = item.marketEur === null || item.marketEur === undefined ? null : Number(item.marketEur || 0);
     item.conditions = {};
     item.finishes = [];
     item.search = buildSearch(item);
@@ -579,8 +586,11 @@ const MOVER_SOURCE_LABELS = {
 
 function moversRows() {
   if (!state.movers) return { winners: [], losers: [] };
-  if (state.moversSource !== "ck") return { winners: [], losers: [], unavailable: true };
-  const periodData = state.movers[state.moversPeriod] || {};
+  const marketSource = state.moversSource === "ck" ? null : state.movers.marketSources?.[state.moversSource];
+  const periodData = marketSource
+    ? (marketSource[state.moversPeriod] || {})
+    : (state.movers[state.moversPeriod] || {});
+  const unavailable = state.moversSource !== "ck" && !marketSource;
   const scopedData = state.moversFormat === "all"
     ? periodData
     : (periodData.formats?.[state.moversFormat] || periodData);
@@ -602,6 +612,8 @@ function moversRows() {
   return {
     winners: source.winners.filter((row) => matches(row) && inFormat(row)).slice(0, 50),
     losers: source.losers.filter((row) => matches(row) && inFormat(row)).slice(0, 50),
+    unavailable,
+    sourceMeta: marketSource || null,
   };
 }
 
@@ -624,10 +636,10 @@ function renderMoverRow(row, index) {
         <strong>${setText || "-"}</strong>
         <span>${row.setName || row.edition || "-"}</span>
       </td>
-      <td class="mover-num">${moneyUsd(row.previousCashUsd)}</td>
-      <td class="mover-num">${moneyUsd(row.cashUsd)}</td>
+      <td class="mover-num">${moneyByCurrency(row.previousCashUsd, row.currency)}</td>
+      <td class="mover-num">${moneyByCurrency(row.cashUsd, row.currency)}</td>
       <td class="mover-num mover-change ${up ? "up" : "down"}">
-        <span>${up ? "↑" : "↓"}${moneyUsd(Math.abs(Number(row.changeUsd || 0)))}</span>
+        <span>${up ? "↑" : "↓"}${moneyByCurrency(Math.abs(Number(row.changeUsd || 0)), row.currency)}</span>
         <small>${moversPct(row.changePct)}</small>
       </td>
     </tr>
@@ -646,7 +658,7 @@ function renderMovers() {
   els.moversLosersCount.textContent = `${rows.losers.length} cards`;
   if (rows.unavailable) {
     const sourceName = MOVER_SOURCE_LABELS[state.moversSource] || "该价格源";
-    const message = `${sourceName}变动榜需要连续保存历史市场价。当前站点已有 CK 回收价历史；${sourceName}将接入 Scryfall公开参考价/官方数据源后生成。`;
+    const message = `${sourceName}变动榜需要连续保存历史市场价。当前版本会用 Scryfall 公开价格字段建立快照，下一次半天更新后开始出现涨跌。`;
     const empty = `<tr><td class="movers-empty-row" colspan="6">${message}</td></tr>`;
     els.moversWinners.innerHTML = empty;
     els.moversLosers.innerHTML = empty;
@@ -656,10 +668,10 @@ function renderMovers() {
   }
   els.moversWinners.innerHTML = rows.winners.length
     ? rows.winners.map(renderMoverRow).join("")
-    : `<tr><td class="movers-empty-row" colspan="6">暂无符合条件的上涨记录</td></tr>`;
+    : `<tr><td class="movers-empty-row" colspan="6">${sourceText}暂无符合条件的上涨记录；如果刚接入参考价，请等下一次半天自动更新形成对比。</td></tr>`;
   els.moversLosers.innerHTML = rows.losers.length
     ? rows.losers.map(renderMoverRow).join("")
-    : `<tr><td class="movers-empty-row" colspan="6">暂无符合条件的下跌记录</td></tr>`;
+    : `<tr><td class="movers-empty-row" colspan="6">${sourceText}暂无符合条件的下跌记录；如果刚接入参考价，请等下一次半天自动更新形成对比。</td></tr>`;
 }
 
 function wantsMoversView() {
