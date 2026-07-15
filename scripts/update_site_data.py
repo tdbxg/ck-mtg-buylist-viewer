@@ -271,7 +271,7 @@ def previous_indexes(payload: dict) -> tuple[dict, dict, dict]:
             by_sid[sid] = exact
         if row.get("cn"):
             cn_by_name.setdefault(normalize_name(row.get("name") or row.get("ckName") or ""), row["cn"])
-        if row.get("flavorCn"):
+        if row.get("flavorName") and row.get("flavorCn"):
             skin_cn_by_name.setdefault(normalize_name(row.get("flavorName") or ""), row["flavorCn"])
     return by_sid, cn_by_name, skin_cn_by_name
 
@@ -402,7 +402,7 @@ def build_payload(
         real_name = exact.get("name") or row.get("name") or ""
         cn, cn_source = lookup_cn(sid, real_name, mtgch_by_sid, mtgch_by_name, prev_cn_by_name)
         skin_name = exact.get("flavorName") or row.get("variation") or ""
-        flavor_cn = prev_skin_cn_by_name.get(normalize_name(skin_name), "")
+        flavor_cn = prev_skin_cn_by_name.get(normalize_name(skin_name), "") if exact.get("flavorName") else ""
         image = exact.get("image") or ""
         if not cn:
             missing_cn += 1

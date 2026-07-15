@@ -470,7 +470,8 @@ function renderCard(row) {
     cn.textContent = row.cn || "未匹配中文名";
     if (!row.cn) cn.style.color = "var(--danger)";
     const skinName = row.flavorName || row.variation || "";
-    const skinCnLine = row.flavorCn ? `<div>皮肤中文：<strong>${row.flavorCn}</strong></div>` : "";
+    const hasRealSkinName = Boolean(row.flavorName);
+    const skinCnLine = hasRealSkinName && row.flavorCn ? `<div>皮肤中文：<strong>${row.flavorCn}</strong></div>` : "";
     const ckNameLine = row.ckName && row.ckName !== row.name ? `<div>CK名称：${row.ckName}</div>` : "";
     const cnSource = row.cnSource || row.match || "";
     const cnSourceLine = cnSource === "placeholder"
