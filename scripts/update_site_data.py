@@ -10,7 +10,9 @@ GitHub Pages serves.
 from __future__ import annotations
 
 import csv
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import gzip
+import html
 import json
 import os
 import re
@@ -181,6 +183,16 @@ def market_key(name: str, set_code: str, collector_number: str) -> str:
     return "|".join([normalize_name(name), normalize_name(set_code), normalize_name(collector_number)])
 
 
+def sealed_key(row: dict) -> str:
+    return "|".join(
+        [
+            str(row.get("id") or ""),
+            normalize_name(row.get("name") or ""),
+            normalize_name(row.get("edition") or ""),
+        ]
+    )
+
+
 def load_previous_payload() -> dict:
     gz_path = ROOT / "data.json.gz"
     if not gz_path.exists():
@@ -274,6 +286,20 @@ def previous_indexes(payload: dict) -> tuple[dict, dict, dict]:
         if row.get("flavorName") and row.get("flavorCn"):
             skin_cn_by_name.setdefault(normalize_name(row.get("flavorName") or ""), row["flavorCn"])
     return by_sid, cn_by_name, skin_cn_by_name
+
+
+def previous_sealed_images(payload: dict) -> dict:
+    images: dict[str, str] = {}
+    for row in payload.get("sealed", []):
+        image = row.get("image") or ""
+        if not image:
+            continue
+        if row.get("id"):
+            images[f"id:{row.get('id')}"] = image
+        if row.get("ckUrl"):
+            images[f"url:{row.get('ckUrl')}"] = image
+        images[f"key:{sealed_key(row)}"] = image
+    return images
 
 
 def mtgch_indexes() -> tuple[dict, dict]:
@@ -372,6 +398,103 @@ def lookup_cn(
     if key in prev_cn_by_name:
         return prev_cn_by_name[key], "previous_name"
     return "", "not_found"
+
+
+def extract_ck_product_image(page_html: str) -> str:
+    patterns = [
+        r'<meta\s+property=["\']og:image["\']\s+content=["\']([^"\']+)["\']',
+        r'<meta\s+name=["\']twitter:image["\']\s+content=["\']([^"\']+)["\']',
+        r'data-maxsrc=["\']([^"\']+)["\']',
+        r"background-image:url\(['\"]?([^'\"\)]+)['\"]?\)",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, page_html, flags=re.IGNORECASE)
+        if match:
+            image = html.unescape(match.group(1)).strip()
+            if image.startswith("//"):
+                return "https:" + image
+            if image.startswith("/"):
+                return "https://www.cardkingdom.com" + image
+            if image.startswith("http"):
+                return image
+    return ""
+
+
+def fetch_ck_product_image(url: str) -> str:
+    if not url:
+        return ""
+    try:
+        page = subprocess.check_output(
+            ["curl", "-fsSL", "--max-time", "20", "-A", USER_AGENT, url],
+            cwd=ROOT,
+            stderr=subprocess.DEVNULL,
+            timeout=25,
+        )
+        image = extract_ck_product_image(page.decode("utf-8", errors="ignore"))
+        if image:
+            return image
+    except Exception:
+        pass
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "text/html"})
+    with urllib.request.urlopen(req, timeout=15) as resp:
+        return extract_ck_product_image(resp.read().decode("utf-8", errors="ignore"))
+
+
+def enrich_sealed_images(payload: dict, previous: dict) -> dict:
+    if os.environ.get("CK_SKIP_SEALED_IMAGES") == "1":
+        payload.setdefault("meta", {})["sealedImageSkipped"] = "local_skip"
+        return payload
+
+    cached = previous_sealed_images(previous)
+    sealed_rows = payload.get("sealed", [])
+    cached_filled = 0
+    fetched_filled = 0
+    missing = []
+    for row in sealed_rows:
+        if row.get("image"):
+            continue
+        image = (
+            cached.get(f"id:{row.get('id')}")
+            or cached.get(f"url:{row.get('ckUrl')}")
+            or cached.get(f"key:{sealed_key(row)}")
+            or ""
+        )
+        if image:
+            row["image"] = image
+            cached_filled += 1
+        else:
+            missing.append(row)
+
+    if missing:
+        print(f"Fetching {len(missing)} Card Kingdom sealed product images...")
+    workers = max(1, int(os.environ.get("CK_SEALED_IMAGE_WORKERS") or 8))
+
+    def fetch_one(row: dict) -> tuple[dict, str, str]:
+        try:
+            image = fetch_ck_product_image(row.get("ckUrl") or "")
+        except Exception as exc:
+            return row, "", str(exc)
+        return row, image, ""
+
+    completed = 0
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        futures = [executor.submit(fetch_one, row) for row in missing]
+        for future in as_completed(futures):
+            row, image, error = future.result()
+            completed += 1
+            if image:
+                row["image"] = image
+                fetched_filled += 1
+            elif error:
+                print(f"WARN: sealed image unavailable for {row.get('name')}: {error}")
+            if completed % 50 == 0 or completed == len(missing):
+                print(f"  sealed images {completed}/{len(missing)}")
+
+    still_missing = sum(1 for row in sealed_rows if not row.get("image"))
+    payload.setdefault("meta", {})["sealedImagesCached"] = cached_filled
+    payload.setdefault("meta", {})["sealedImagesFetched"] = fetched_filled
+    payload.setdefault("meta", {})["sealedImagesMissing"] = still_missing
+    return payload
 
 
 def build_payload(
@@ -1008,6 +1131,7 @@ def main() -> int:
         prev_skin_cn_by_name,
     )
     payload = enrich_market_reference(payload)
+    payload = enrich_sealed_images(payload, previous)
     write_payload_files(payload)
     write_fast_payload(payload)
     write_exports(payload)

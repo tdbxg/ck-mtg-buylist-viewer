@@ -11,5 +11,8 @@
   "updateMode": "github-actions-static",
   "scryfallMarketMatchedUsd": 144243,
   "scryfallMarketMatchedEur": 143455,
-  "scryfallMarketSource": "Scryfall public USD/EUR price fields"
+  "scryfallMarketSource": "Scryfall public USD/EUR price fields",
+  "sealedImagesCached": 0,
+  "sealedImagesFetched": 9,
+  "sealedImagesMissing": 0
 }
