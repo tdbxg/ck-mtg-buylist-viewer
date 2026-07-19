@@ -106,14 +106,31 @@
       </div>
 
       <div class="field image-field">
-        <label for="imageInput">图片识别搜索</label>
+        <label for="imageInput">图片识别入车</label>
         <div id="imageDropZone" class="drop-zone">
           <input id="imageInput" type="file" accept="image/*">
-          <span>点击选择，或把牌图拖到这里</span>
+          <span>点击选择，或把多张牌照片拖到这里</span>
         </div>
+        <select id="imageLayout" aria-label="照片排布">
+          <option value="auto">自动识别排布</option>
+          <option value="3x5">3 行 × 5 张</option>
+          <option value="3x4">3 行 × 4 张</option>
+          <option value="3x3">3 行 × 3 张</option>
+          <option value="2x5">2 行 × 5 张</option>
+        </select>
         <input id="imageGuessInput" type="search" placeholder="OCR失败时，可在这里输入/粘贴牌名">
         <button id="imageGuessButton" type="button">按这个牌名搜索</button>
-        <div id="imageOcrStatus" class="hint">会在浏览器内 OCR 识别英文牌名并搜索；正面清晰图效果最好。也可以把图片拖到页面任意位置。</div>
+        <div id="imageOcrStatus" class="hint">支持一张照片多张牌。会先切图，再淡化红色手写价，识别牌名和底部系列/编号；每张候选可确认后直接加入回收车。</div>
+        <section id="imageBatchResults" class="image-batch-results" hidden aria-live="polite">
+          <div class="image-batch-head">
+            <div>
+              <strong id="imageBatchTitle">识别候选</strong>
+              <span id="imageBatchSummary"></span>
+            </div>
+            <button id="imageAddAllButton" type="button">将已确认候选加入回收车</button>
+          </div>
+          <div id="imageBatchGrid" class="image-batch-grid"></div>
+        </section>
       </div>
 
       <div class="field">

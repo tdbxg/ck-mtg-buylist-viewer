@@ -30,6 +30,8 @@ const state = {
   moversQuery: "",
   cart: new Map(),
   history: [],
+  ocrIndex: null,
+  imageMatches: [],
 };
 
 const els = {
@@ -55,9 +57,15 @@ const els = {
   searchInput: document.querySelector("#searchInput"),
   imageInput: document.querySelector("#imageInput"),
   imageDropZone: document.querySelector("#imageDropZone"),
+  imageLayout: document.querySelector("#imageLayout"),
   imageGuessInput: document.querySelector("#imageGuessInput"),
   imageGuessButton: document.querySelector("#imageGuessButton"),
   imageOcrStatus: document.querySelector("#imageOcrStatus"),
+  imageBatchResults: document.querySelector("#imageBatchResults"),
+  imageBatchTitle: document.querySelector("#imageBatchTitle"),
+  imageBatchSummary: document.querySelector("#imageBatchSummary"),
+  imageBatchGrid: document.querySelector("#imageBatchGrid"),
+  imageAddAllButton: document.querySelector("#imageAddAllButton"),
   typeSelect: document.querySelector("#typeSelect"),
   categoryField: document.querySelector("#categoryField"),
   categorySelect: document.querySelector("#categorySelect"),
@@ -892,6 +900,39 @@ function bindEvents() {
     const file = event.dataTransfer?.files?.[0];
     if (file) handleImageFile(file);
   });
+  els.imageBatchGrid.addEventListener("change", (event) => {
+    const select = event.target.closest("[data-image-match]");
+    if (!select) return;
+    const match = state.imageMatches[Number(select.dataset.imageMatch)];
+    if (!match) return;
+    match.selected = select.value === "" ? -1 : Number(select.value);
+    renderImageMatches();
+  });
+  els.imageBatchGrid.addEventListener("click", (event) => {
+    const add = event.target.closest("[data-image-add]");
+    if (add) {
+      addImageMatchToCart(Number(add.dataset.imageAdd));
+      return;
+    }
+    const search = event.target.closest("[data-image-search]");
+    if (search) {
+      const match = state.imageMatches[Number(search.dataset.imageSearch)];
+      if (match) applyImageGuess(match.ocrText || "");
+      return;
+    }
+    const lookup = event.target.closest("[data-image-lookup]");
+    if (!lookup) return;
+    const index = Number(lookup.dataset.imageLookup);
+    const match = state.imageMatches[index];
+    const input = els.imageBatchGrid.querySelector(`[data-image-query="${index}"]`);
+    if (!match || !input) return;
+    const query = input.value.trim();
+    match.ocrText = query || match.ocrText;
+    match.candidates = findImageCandidates(query);
+    match.selected = match.candidates.length === 1 ? 0 : -1;
+    renderImageMatches();
+  });
+  els.imageAddAllButton.addEventListener("click", addAllImageMatchesToCart);
 }
 
 async function init() {
@@ -1155,6 +1196,7 @@ async function loadFullData() {
   els.metaLine.textContent = "正在加载全量数据，低性能浏览器可能需要等待...";
   state.data = await loadData(true);
   state.fullDataLoaded = true;
+  state.ocrIndex = null;
   if (state.cardmarketLoaded) state.cardmarketLoaded = false;
   populateSets();
   populateEditions();
@@ -1268,6 +1310,257 @@ function pickCardNameFromOcr(text) {
   return lines[0] || "";
 }
 
+function ocrTokens(text) {
+  return String(text || "")
+    .toLowerCase()
+    .replace(/[’']/g, "")
+    .split(/[^a-z0-9]+/)
+    .filter((token) => token.length >= 3)
+    .filter((token) => !["the", "and", "with", "this", "that", "from", "card", "artifact", "creature", "instant", "sorcery", "enchantment", "legendary", "land"].includes(token));
+}
+
+function cleanOcrText(text) {
+  return String(text || "")
+    .replace(/\b\d{1,4}(?:[.,]\d{1,2})?\b/g, " ")
+    .replace(/[^A-Za-z0-9,'’#\-\n ]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function escapeHtml(value) {
+  return String(value || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function makeOcrIndex() {
+  if (state.ocrIndex?.data === state.data) return state.ocrIndex;
+  const tokenMap = new Map();
+  const printMap = new Map();
+  for (const row of state.data.cards || []) {
+    for (const token of new Set(ocrTokens(row.name))) {
+      const list = tokenMap.get(token) || [];
+      list.push(row);
+      tokenMap.set(token, list);
+    }
+    const set = normalize(row.scryfallSet).toUpperCase();
+    const number = normalize(row.collectorNumber).toUpperCase();
+    if (set && number) printMap.set(`${set}|${number}`, row);
+  }
+  state.ocrIndex = { data: state.data, tokenMap, printMap };
+  return state.ocrIndex;
+}
+
+function diceSimilarity(left, right) {
+  if (!left || !right) return 0;
+  if (left.includes(right) || right.includes(left)) return Math.min(left.length, right.length) / Math.max(left.length, right.length);
+  const grams = (value) => {
+    const next = new Map();
+    for (let index = 0; index < value.length - 1; index += 1) {
+      const gram = value.slice(index, index + 2);
+      next.set(gram, (next.get(gram) || 0) + 1);
+    }
+    return next;
+  };
+  const a = grams(left);
+  const b = grams(right);
+  let shared = 0;
+  for (const [gram, count] of a) shared += Math.min(count, b.get(gram) || 0);
+  return (2 * shared) / Math.max(1, left.length + right.length - 2);
+}
+
+function extractPrintHints(text) {
+  const raw = String(text || "").toUpperCase();
+  const hints = [];
+  const matches = raw.matchAll(/\b([A-Z]{2,6})\s*#?\s*(\d{1,4}[A-Z]?)\b/g);
+  for (const match of matches) hints.push({ set: match[1], number: match[2].replace(/^0+(?=\d)/, "") });
+  return hints;
+}
+
+function findImageCandidates(rawText) {
+  const index = makeOcrIndex();
+  const clean = cleanOcrText(rawText);
+  const tokenSet = new Set(ocrTokens(clean));
+  const pool = new Set();
+  for (const token of tokenSet) {
+    for (const row of index.tokenMap.get(token) || []) pool.add(row);
+  }
+  for (const hint of extractPrintHints(rawText)) {
+    const exact = index.printMap.get(`${hint.set}|${hint.number}`);
+    if (exact) pool.add(exact);
+  }
+  const compact = normalize(clean);
+  const ranked = [...pool].map((row) => {
+    const rowTokens = [...new Set(ocrTokens(row.name))];
+    const hits = rowTokens.filter((token) => tokenSet.has(token)).length;
+    const tokenScore = rowTokens.length ? hits / rowTokens.length : 0;
+    const nameScore = diceSimilarity(normalize(row.name), compact);
+    const hintScore = extractPrintHints(rawText).some((hint) => normalize(row.scryfallSet).toUpperCase() === hint.set && normalize(row.collectorNumber).toUpperCase() === hint.number) ? 1 : 0;
+    return { row, score: hintScore ? 1.2 : (tokenScore * 0.72 + nameScore * 0.5), tokenHits: hits, nameTokenCount: rowTokens.length, exactPrint: hintScore > 0 };
+  }).filter((item) => item.score >= 0.45).sort((a, b) => b.score - a.score);
+  const uniqueNames = new Set();
+  return ranked.filter((item) => {
+    const key = `${item.row.name}|${item.row.scryfallSet}|${item.row.collectorNumber}|${item.row.foil}`;
+    if (uniqueNames.has(key)) return false;
+    uniqueNames.add(key);
+    return true;
+  }).slice(0, 4);
+}
+
+function parseImageLayout(value, width, height) {
+  const match = String(value || "").match(/^(\d)x(\d)$/);
+  if (match) return { rows: Number(match[1]), cols: Number(match[2]) };
+  const ratio = width / Math.max(1, height);
+  if (ratio >= 1.18) return { rows: 3, cols: 5 };
+  if (ratio >= 0.9) return { rows: 3, cols: 4 };
+  return { rows: 3, cols: 3 };
+}
+
+function loadImage(file) {
+  return new Promise((resolve, reject) => {
+    const url = URL.createObjectURL(file);
+    const image = new Image();
+    image.onload = () => {
+      URL.revokeObjectURL(url);
+      resolve(image);
+    };
+    image.onerror = () => {
+      URL.revokeObjectURL(url);
+      reject(new Error("图片无法读取"));
+    };
+    image.src = url;
+  });
+}
+
+function redReducedCanvas(image, sourceX, sourceY, sourceWidth, sourceHeight) {
+  const scale = Math.min(2.2, 760 / Math.max(1, sourceWidth));
+  const canvas = document.createElement("canvas");
+  canvas.width = Math.max(80, Math.round(sourceWidth * scale));
+  canvas.height = Math.max(100, Math.round(sourceHeight * scale));
+  const context = canvas.getContext("2d", { willReadFrequently: true });
+  context.drawImage(image, sourceX, sourceY, sourceWidth, sourceHeight, 0, 0, canvas.width, canvas.height);
+  const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+  const pixels = imageData.data;
+  for (let index = 0; index < pixels.length; index += 4) {
+    const red = pixels[index];
+    const green = pixels[index + 1];
+    const blue = pixels[index + 2];
+    if (red > 110 && red > green * 1.28 && red > blue * 1.28) {
+      pixels[index] = 244;
+      pixels[index + 1] = 244;
+      pixels[index + 2] = 244;
+      continue;
+    }
+    const grey = Math.max(0, Math.min(255, (red * 0.28 + green * 0.58 + blue * 0.14 - 112) * 2.1 + 128));
+    pixels[index] = grey;
+    pixels[index + 1] = grey;
+    pixels[index + 2] = grey;
+  }
+  context.putImageData(imageData, 0, 0);
+  return canvas;
+}
+
+function ocrStrips(cardCanvas) {
+  const titleSourceHeight = Math.max(30, Math.round(cardCanvas.height * 0.18));
+  const footerSourceHeight = Math.max(24, Math.round(cardCanvas.height * 0.12));
+  const scale = 2;
+  const titleHeight = titleSourceHeight * scale;
+  const footerHeight = footerSourceHeight * scale;
+  const canvas = document.createElement("canvas");
+  canvas.width = cardCanvas.width * scale;
+  canvas.height = titleHeight + footerHeight + 18;
+  const context = canvas.getContext("2d");
+  context.fillStyle = "#fff";
+  context.fillRect(0, 0, canvas.width, canvas.height);
+  context.drawImage(cardCanvas, 0, 0, cardCanvas.width, titleSourceHeight, 0, 0, canvas.width, titleHeight);
+  context.drawImage(cardCanvas, 0, cardCanvas.height - footerSourceHeight, cardCanvas.width, footerSourceHeight, 0, titleHeight + 18, canvas.width, footerHeight);
+  return canvas;
+}
+
+function makeImageCrops(image) {
+  const { rows, cols } = parseImageLayout(els.imageLayout.value, image.naturalWidth, image.naturalHeight);
+  const x0 = image.naturalWidth * 0.07;
+  const y0 = image.naturalHeight * 0.07;
+  const totalWidth = image.naturalWidth * 0.86;
+  const totalHeight = image.naturalHeight * 0.88;
+  const cellWidth = totalWidth / cols;
+  const cellHeight = totalHeight / rows;
+  const crops = [];
+  for (let row = 0; row < rows; row += 1) {
+    for (let col = 0; col < cols; col += 1) {
+      const insetX = cellWidth * 0.055;
+      const insetY = cellHeight * 0.02;
+      const sourceX = x0 + col * cellWidth + insetX;
+      const sourceY = y0 + row * cellHeight + insetY;
+      const sourceWidth = cellWidth - insetX * 2;
+      const sourceHeight = cellHeight - insetY * 2;
+      const cardCanvas = redReducedCanvas(image, sourceX, sourceY, sourceWidth, sourceHeight);
+      crops.push({ index: crops.length, canvas: cardCanvas, preview: cardCanvas.toDataURL("image/jpeg", 0.82) });
+    }
+  }
+  return { rows, cols, crops };
+}
+
+async function ensureFullDataForImage() {
+  if (state.fullDataLoaded) return;
+  els.imageOcrStatus.textContent = "正在加载全量牌库，用于精确匹配版本...";
+  await loadFullData();
+}
+
+function imageCandidateLabel(item) {
+  const row = item.row;
+  const finish = row.foil ? "闪" : "平";
+  return `${row.name} · ${String(row.scryfallSet || "-").toUpperCase()} #${row.collectorNumber || "-"} · ${finish} · ${moneyUsd(row.cashUsd)}`;
+}
+
+function renderImageMatches() {
+  const resolved = state.imageMatches.filter((match) => match.candidates.length && match.selected >= 0).length;
+  els.imageBatchResults.hidden = state.imageMatches.length === 0;
+  els.imageBatchTitle.textContent = `识别候选：${resolved}/${state.imageMatches.length} 张`;
+  els.imageBatchSummary.textContent = "只加入你确认过的精确版本";
+  els.imageAddAllButton.disabled = resolved === 0;
+  const fragment = document.createDocumentFragment();
+  state.imageMatches.forEach((match, index) => {
+    const node = document.createElement("article");
+    node.className = "image-match";
+    const selected = match.selected >= 0 ? match.candidates[match.selected] : null;
+    const options = [`<option value="">请选择精确版本</option>`, ...match.candidates.map((item, candidateIndex) => `<option value="${candidateIndex}" ${candidateIndex === match.selected ? "selected" : ""}>${escapeHtml(imageCandidateLabel(item))}</option>`)].join("");
+    node.innerHTML = `
+      <img src="${match.preview}" alt="照片切图 ${index + 1}">
+      <div class="image-match-body">
+        <strong>第 ${index + 1} 张</strong>
+        <small>${match.ocrText ? `OCR：${match.ocrText.slice(0, 70)}` : "未读到可用文字"}</small>
+        <div class="image-match-lookup"><input data-image-query="${index}" type="search" value="${escapeHtml(match.ocrText || "")}" placeholder="可改成准确英文牌名"><button type="button" class="image-search" data-image-lookup="${index}">匹配</button></div>
+        ${match.candidates.length ? `<select data-image-match="${index}">${options}</select><div class="image-match-meta">${selected ? `${selected.row.cn || "未匹配中文"} ｜ ${selected.row.edition || "-"}` : "请选择候选版本，再加入回收车"}</div><button type="button" data-image-add="${index}" ${selected ? "" : "disabled"}>加入回收车</button>` : `<button type="button" class="image-search" data-image-search="${index}">用 OCR 文本搜索</button>`}
+      </div>
+    `;
+    fragment.appendChild(node);
+  });
+  els.imageBatchGrid.replaceChildren(fragment);
+}
+
+function addImageMatchToCart(index) {
+  const match = state.imageMatches[index];
+  const selected = match?.candidates?.[match.selected];
+  if (!selected) return;
+  addToCart(selected.row);
+  els.imageOcrStatus.textContent = `已将第 ${index + 1} 张：${selected.row.name} 加入回收车。`;
+}
+
+function addAllImageMatchesToCart() {
+  let added = 0;
+  for (const match of state.imageMatches) {
+    const selected = match.candidates?.[match.selected];
+    if (!selected) continue;
+    addToCart(selected.row);
+    added += 1;
+  }
+  els.imageOcrStatus.textContent = `已将 ${added} 张已确认候选加入回收车。请在回收车中核对数量和版本。`;
+}
+
 function applyImageGuess(guess) {
   const value = String(guess || "").trim();
   if (!value) {
@@ -1288,20 +1581,33 @@ async function handleImageFile(file) {
     els.imageOcrStatus.textContent = "请拖入图片文件。";
     return;
   }
-  els.imageOcrStatus.textContent = `已收到图片：${file.name || "未命名"}，正在加载 OCR...`;
+  els.imageOcrStatus.textContent = `已收到图片：${file.name || "未命名"}，正在准备多卡识别...`;
+  els.imageBatchResults.hidden = true;
+  state.imageMatches = [];
   try {
+    await ensureFullDataForImage();
     await loadScript("https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js");
     if (!window.Tesseract) throw new Error("Tesseract 未加载");
-    els.imageOcrStatus.textContent = "OCR 已加载，正在识别英文牌名...";
-    const result = await window.Tesseract.recognize(file, "eng");
-    const guess = pickCardNameFromOcr(result.data?.text || "");
-    if (!guess) {
-      els.imageGuessInput.value = "";
-      els.imageOcrStatus.textContent = "没有识别到可靠英文牌名。可以换清晰正面图，或在上方手动输入牌名。";
-      return;
+    const image = await loadImage(file);
+    const layout = makeImageCrops(image);
+    els.imageOcrStatus.textContent = `已按 ${layout.rows} 行 × ${layout.cols} 张切图，正在识别第 1/${layout.crops.length} 张...`;
+    const worker = await window.Tesseract.createWorker("eng", 1);
+    try {
+      for (const crop of layout.crops) {
+        els.imageOcrStatus.textContent = `正在识别第 ${crop.index + 1}/${layout.crops.length} 张：牌名与底部编号...`;
+        const result = await worker.recognize(ocrStrips(crop.canvas));
+        const rawText = String(result.data?.text || "");
+        const candidates = findImageCandidates(rawText);
+        const best = candidates[0];
+        const selected = best?.exactPrint || (best?.score || 0) >= 0.82 && best.tokenHits >= 2 && best.nameTokenCount >= 2 ? 0 : -1;
+        state.imageMatches.push({ preview: crop.preview, ocrText: cleanOcrText(rawText), candidates, selected });
+        renderImageMatches();
+      }
+    } finally {
+      await worker.terminate();
     }
-    els.imageGuessInput.value = guess;
-    applyImageGuess(guess);
+    const matched = state.imageMatches.filter((match) => match.candidates.length).length;
+    els.imageOcrStatus.textContent = `识别完成：${matched}/${layout.crops.length} 张得到候选。逐张确认版本后可加入回收车；未命中的卡可用下方 OCR 文本搜索。`;
   } catch (error) {
     console.error(error);
     els.imageOcrStatus.textContent = `OCR 加载或识别失败：${error.message || error}。当前 file:// 或网络环境可能拦截 OCR 脚本；请用 http://127.0.0.1:8787 打开，或在上方手动输入牌名。`;
