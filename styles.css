@@ -546,11 +546,25 @@ button {
   font-size: 12px;
 }
 
+.image-batch-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
 .image-batch-head button {
   width: auto;
   min-height: 32px;
   background: var(--green);
   border-color: var(--green);
+}
+
+#imageExportCodexButton,
+#imageImportCodexButton {
+  background: #fff;
+  border-color: var(--blue);
+  color: var(--blue);
 }
 
 .image-batch-grid {
@@ -1017,6 +1031,16 @@ h2 {
 
   .image-field {
     grid-template-columns: 1fr;
+  }
+
+  .image-batch-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .image-batch-actions {
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .set-chip {

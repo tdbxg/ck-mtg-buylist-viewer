@@ -65,6 +65,9 @@ const els = {
   imageBatchTitle: document.querySelector("#imageBatchTitle"),
   imageBatchSummary: document.querySelector("#imageBatchSummary"),
   imageBatchGrid: document.querySelector("#imageBatchGrid"),
+  imageExportCodexButton: document.querySelector("#imageExportCodexButton"),
+  imageImportCodexButton: document.querySelector("#imageImportCodexButton"),
+  imageCodexResultInput: document.querySelector("#imageCodexResultInput"),
   imageAddAllButton: document.querySelector("#imageAddAllButton"),
   typeSelect: document.querySelector("#typeSelect"),
   categoryField: document.querySelector("#categoryField"),
@@ -932,6 +935,9 @@ function bindEvents() {
     match.selected = match.candidates.length === 1 ? 0 : -1;
     renderImageMatches();
   });
+  els.imageExportCodexButton.addEventListener("click", exportCodexImageRequest);
+  els.imageImportCodexButton.addEventListener("click", () => els.imageCodexResultInput.click());
+  els.imageCodexResultInput.addEventListener("change", () => importCodexImageMatches(els.imageCodexResultInput.files?.[0]));
   els.imageAddAllButton.addEventListener("click", addAllImageMatchesToCart);
 }
 
@@ -1559,6 +1565,112 @@ function addAllImageMatchesToCart() {
     added += 1;
   }
   els.imageOcrStatus.textContent = `已将 ${added} 张已确认候选加入回收车。请在回收车中核对数量和版本。`;
+}
+
+function downloadJson(payload, filename) {
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
+
+function codexCandidateSnapshot(item) {
+  const row = item.row;
+  return {
+    sku: row.sku || "",
+    scryfallId: row.scryfallId || "",
+    name: row.name || "",
+    cn: row.cn || "",
+    set: String(row.scryfallSet || "").toUpperCase(),
+    setName: row.scryfallSetName || "",
+    collectorNumber: row.collectorNumber || "",
+    foil: !!row.foil,
+    variation: row.flavorName || row.variation || "",
+    cashUsd: Number(row.cashUsd || 0),
+  };
+}
+
+function exportCodexImageRequest() {
+  if (!state.imageMatches.length) {
+    els.imageOcrStatus.textContent = "请先上传照片，生成格位和 OCR 候选。";
+    return;
+  }
+  const stamp = new Date().toISOString().replace(/[:.]/g, "-");
+  const payload = {
+    schema: "ck-mtg-codex-image-match-request-v1",
+    generatedAt: new Date().toISOString(),
+    instructions: "请根据随附原始照片，逐格匹配 Card Kingdom 的精确版本。只在系列、编号和闪/平可确认时返回；不要按同名猜版本。返回 resultTemplate 所示 JSON，无法确认的格位不要填写。",
+    matches: state.imageMatches.map((match, index) => ({
+      index,
+      ocrText: match.ocrText || "",
+      candidateSkus: match.candidates.map(codexCandidateSnapshot),
+    })),
+    resultTemplate: {
+      schema: "ck-mtg-codex-image-match-result-v1",
+      matches: [{ index: 0, sku: "精确的 CK SKU", confidence: 0.99, note: "从原图确认的系列、编号与闪/平" }],
+    },
+  };
+  downloadJson(payload, `ck_codex_image_request_${stamp}.json`);
+  els.imageOcrStatus.textContent = "已导出请求。把原始照片和这个 JSON 一起交给 Codex；再把返回结果 JSON 导入本页。";
+}
+
+function findCodexResultRow(result) {
+  const cards = state.data?.cards || [];
+  const sku = String(result?.sku || "").trim();
+  if (sku) return cards.find((row) => String(row.sku || "").trim() === sku) || null;
+  const scryfallId = String(result?.scryfallId || "").trim();
+  if (scryfallId) return cards.find((row) => String(row.scryfallId || "").trim() === scryfallId) || null;
+  const set = normalize(result?.set || result?.scryfallSet).toUpperCase();
+  const collectorNumber = normalize(result?.collectorNumber).toUpperCase();
+  if (!set || !collectorNumber) return null;
+  const foil = typeof result.foil === "boolean" ? result.foil : null;
+  return cards.find((row) => normalize(row.scryfallSet).toUpperCase() === set
+    && normalize(row.collectorNumber).toUpperCase() === collectorNumber
+    && (foil === null || !!row.foil === foil)) || null;
+}
+
+async function importCodexImageMatches(file) {
+  if (!file) return;
+  if (!state.imageMatches.length) {
+    els.imageOcrStatus.textContent = "请先重新上传同一张原始照片，再导入 Codex 结果。";
+    els.imageCodexResultInput.value = "";
+    return;
+  }
+  try {
+    await ensureFullDataForImage();
+    const payload = JSON.parse(await file.text());
+    const matches = Array.isArray(payload?.matches) ? payload.matches : null;
+    if (!matches || (payload.schema && payload.schema !== "ck-mtg-codex-image-match-result-v1")) {
+      throw new Error("不是可识别的 Codex 结果 JSON");
+    }
+    let matched = 0;
+    let skipped = 0;
+    for (const result of matches) {
+      const index = Number(result?.index);
+      const current = state.imageMatches[index];
+      const row = Number.isInteger(index) ? findCodexResultRow(result) : null;
+      if (!current || !row) {
+        skipped += 1;
+        continue;
+      }
+      const exact = { row, score: 1.2, tokenHits: 0, nameTokenCount: 0, exactPrint: true };
+      current.candidates = [exact, ...current.candidates.filter((candidate) => rowKey(candidate.row) !== rowKey(row))];
+      current.selected = 0;
+      matched += 1;
+    }
+    renderImageMatches();
+    els.imageOcrStatus.textContent = `Codex 结果已导入：${matched} 张已锁定精确版本${skipped ? `，${skipped} 条未匹配到当前 CK 数据` : ""}。确认后可直接加入回收车。`;
+  } catch (error) {
+    console.error(error);
+    els.imageOcrStatus.textContent = `导入失败：${error.message || error}`;
+  } finally {
+    els.imageCodexResultInput.value = "";
+  }
 }
 
 function applyImageGuess(guess) {

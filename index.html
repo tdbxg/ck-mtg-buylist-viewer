@@ -127,7 +127,12 @@
               <strong id="imageBatchTitle">识别候选</strong>
               <span id="imageBatchSummary"></span>
             </div>
-            <button id="imageAddAllButton" type="button">将已确认候选加入回收车</button>
+            <div class="image-batch-actions">
+              <button id="imageExportCodexButton" type="button" title="导出给 Codex 的识别请求">导出 Codex 请求</button>
+              <input id="imageCodexResultInput" type="file" accept="application/json,.json" hidden>
+              <button id="imageImportCodexButton" type="button" title="导入 Codex 返回的精确版本结果">导入 Codex 结果</button>
+              <button id="imageAddAllButton" type="button">将已确认候选加入回收车</button>
+            </div>
           </div>
           <div id="imageBatchGrid" class="image-batch-grid"></div>
         </section>
