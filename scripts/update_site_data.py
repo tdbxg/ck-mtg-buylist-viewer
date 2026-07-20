@@ -969,6 +969,9 @@ def compact_mover(
         "cashUsd": now,
         "previousCashUsd": before,
         "changeUsd": change,
+        "currentPrice": now,
+        "previousPrice": before,
+        "changePrice": change,
         "changePct": pct,
         "currency": currency,
         "source": source,
@@ -1010,12 +1013,28 @@ def mover_groups(
     currency: str = "USD",
     source: str = "ck_buylist",
     require_active: bool = True,
+    require_retail_stock: bool = False,
+    exclude_non_cards: bool = False,
 ) -> dict:
     previous_by_key = {mover_row_key(row): row for row in previous.get("cards", [])}
     rows = []
     for row in current.get("cards", []):
         if require_active and row.get("activeBuying") is False:
             continue
+        if require_retail_stock and int(row.get("qtyRetail") or 0) <= 0:
+            continue
+        if exclude_non_cards:
+            text = " ".join(
+                [
+                    str(row.get("edition") or ""),
+                    str(row.get("scryfallSetName") or ""),
+                    str(row.get("scryfallSet") or ""),
+                    str(row.get("variation") or ""),
+                    str(row.get("ckUrl") or ""),
+                ]
+            ).lower()
+            if any(term in text for term in ["token", "helper", "oversized", "substitute card"]):
+                continue
         old = previous_by_key.get(mover_row_key(row))
         if not old:
             continue
@@ -1051,6 +1070,33 @@ def write_movers(payload: dict, daily_previous: dict, weekly_previous: dict) -> 
         "daily": mover_groups(payload, daily_previous, 1),
         "weekly": mover_groups(payload, weekly_previous, 7),
         "marketSources": {
+            "ckretail": {
+                "label": "CK正常售价",
+                "currency": "USD",
+                "source": "Card Kingdom price_retail / NM retail price",
+                "daily": mover_groups(
+                    payload,
+                    daily_previous,
+                    1,
+                    value_field="retailUsd",
+                    currency="USD",
+                    source="ck_retail_nm",
+                    require_active=False,
+                    require_retail_stock=True,
+                    exclude_non_cards=True,
+                ),
+                "weekly": mover_groups(
+                    payload,
+                    weekly_previous,
+                    7,
+                    value_field="retailUsd",
+                    currency="USD",
+                    source="ck_retail_nm",
+                    require_active=False,
+                    require_retail_stock=True,
+                    exclude_non_cards=True,
+                ),
+            },
             "tcgplayer": {
                 "label": "TCGplayer参考价",
                 "currency": "USD",

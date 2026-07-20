@@ -580,6 +580,7 @@ const MOVER_FORMAT_LABELS = {
 
 const MOVER_SOURCE_LABELS = {
   ck: "CK回收价",
+  ckretail: "CK正常售价",
   tcgplayer: "TCGplayer参考价",
   cardmarket: "Cardmarket参考价",
 };
@@ -618,7 +619,10 @@ function moversRows() {
 }
 
 function renderMoverRow(row, index) {
-  const up = Number(row.changeUsd || 0) > 0;
+  const previous = row.previousPrice ?? row.previousCashUsd;
+  const current = row.currentPrice ?? row.cashUsd;
+  const change = row.changePrice ?? row.changeUsd;
+  const up = Number(change || 0) > 0;
   const setText = [row.setCode, row.collectorNumber ? `#${row.collectorNumber}` : ""].filter(Boolean).join(" ");
   const image = row.image || "";
   const imageHtml = image ? `<img src="${image}" alt="">` : `<div class="mover-img-empty"></div>`;
@@ -636,10 +640,10 @@ function renderMoverRow(row, index) {
         <strong>${setText || "-"}</strong>
         <span>${row.setName || row.edition || "-"}</span>
       </td>
-      <td class="mover-num">${moneyByCurrency(row.previousCashUsd, row.currency)}</td>
-      <td class="mover-num">${moneyByCurrency(row.cashUsd, row.currency)}</td>
+      <td class="mover-num">${moneyByCurrency(previous, row.currency)}</td>
+      <td class="mover-num">${moneyByCurrency(current, row.currency)}</td>
       <td class="mover-num mover-change ${up ? "up" : "down"}">
-        <span>${up ? "↑" : "↓"}${moneyByCurrency(Math.abs(Number(row.changeUsd || 0)), row.currency)}</span>
+        <span>${up ? "↑" : "↓"}${moneyByCurrency(Math.abs(Number(change || 0)), row.currency)}</span>
         <small>${moversPct(row.changePct)}</small>
       </td>
     </tr>
