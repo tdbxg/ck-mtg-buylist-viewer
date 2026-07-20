@@ -495,14 +495,14 @@ function renderCard(row) {
         ? `<div>中文来源：<strong>补充翻译</strong></div>`
         : "";
     const imageSourceLine = row.imageSource === "name_fallback" ? `<div>图片：同名参考图</div>` : "";
-    const conditionRows = [["NM", "nm"], ["EX", "ex"], ["VG", "vg"], ["G", "g"]]
-      .map(([label, key]) => {
+    const conditionRows = [["NM", "nm", "NM"], ["EX", "ex", "约 LP"], ["VG", "vg", "约 SP/MP"], ["G", "g", "约 HP"]]
+      .map(([label, key, reference]) => {
         const price = Number(row.conditions?.[`${key}_price`] || 0);
         const quantity = row.conditions?.[`${key}_qty`];
         const cny = price * Number(state.data?.meta?.usdCny || 0);
         const priceText = price ? `${moneyUsd(price)} / ${moneyCny(cny)}` : "-";
         const qtyText = quantity === undefined || quantity === null ? "-" : `${Number(quantity).toLocaleString("zh-CN")} 张`;
-        return `<tr><th>${label}</th><td>${priceText}</td><td>${qtyText}</td></tr>`;
+        return `<tr><th>${label}<small>${reference}</small></th><td>${priceText}</td><td>${qtyText}</td></tr>`;
       }).join("");
     const cardmarketLink = row.cardmarket?.cardmarketUrl
       ? `<a href="${row.cardmarket.cardmarketUrl}" target="_blank" rel="noreferrer">Cardmarket/价格走势</a>`
@@ -519,7 +519,7 @@ function renderCard(row) {
       <div>稀有度：${row.rarity || "-"} ｜ 发售：${row.releasedAt || "-"} ｜ 工艺：${Array.isArray(row.finishes) && row.finishes.length ? row.finishes.join(", ") : "-"}</div>
       <div>状态：${row.activeBuying === false ? "暂不收购" : "当前收购"} ｜ 收购数量：${row.qtyBuying.toLocaleString("zh-CN")} ｜ 零售库存：${row.qtyRetail.toLocaleString("zh-CN")}</div>
       ${row.reserved ? `<div>保留牌表：<strong class="reserved-mark">RL</strong> ｜ 品相以 CK 实物判定为准</div>` : ""}
-      <div class="condition-block"><strong>CK 品相零售价 / 库存</strong><table class="condition-table"><tbody>${conditionRows}</tbody></table></div>
+      <div class="condition-block"><strong>CK 品相零售价 / 库存</strong><table class="condition-table"><tbody>${conditionRows}</tbody></table><div class="condition-help">仅作国内常用分级参考：CK 的 EX/VG/G 以实际磨损判定；Damage 通常属于 BG（Below Good），没有独立报价。<a href="https://www.cardkingdom.com/purchasing/how_to_sell" target="_blank" rel="noreferrer">CK 官方品相示例图</a></div></div>
       <div>CK正常售价：<strong>${ckRetailUsd ? moneyUsd(ckRetailUsd) : "-"}</strong>${ckRetailCny ? ` / ${moneyCny(ckRetailCny)}` : ""} ｜ 欧洲参考：<strong>${moneyEur(euPrice)}</strong>${euCny === null ? "" : ` / ${moneyCny(euCny)}`}</div>
       <div>现金/售价：<strong>${pct(cashRetailRatio)}</strong> ｜ 积分/售价：<strong>${pct(creditRetailRatio)}</strong> ｜ CK现金-欧洲：<strong class="${spreadClass}">${spreadText}</strong></div>
     `;
