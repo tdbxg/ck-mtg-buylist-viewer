@@ -892,6 +892,39 @@ h2 {
   color: var(--muted);
 }
 
+.reserved-mark {
+  color: #9a3412;
+}
+
+.condition-block {
+  margin-top: 3px;
+}
+
+.condition-table {
+  width: 100%;
+  margin-top: 4px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.condition-table th,
+.condition-table td {
+  padding: 3px 5px;
+  border: 1px solid var(--line);
+  text-align: left;
+}
+
+.condition-table th {
+  width: 42px;
+  color: var(--ink);
+  background: #f8fafc;
+}
+
+.condition-table td:last-child {
+  width: 64px;
+  white-space: nowrap;
+}
+
 .prices {
   grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
   margin-top: 9px;

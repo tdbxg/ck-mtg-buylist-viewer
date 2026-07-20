@@ -76,6 +76,8 @@ CARD_FIELDS = [
     "cardmarketUrl",
     "formatBucket",
     "cnSource",
+    "reserved",
+    "conditions",
 ]
 
 SEALED_FIELDS = [
@@ -237,6 +239,7 @@ def compact_scryfall_card(card: dict) -> dict:
         "releasedAt": card.get("released_at") or "",
         "finishes": card.get("finishes") or [],
         "promoTypes": card.get("promo_types") or [],
+        "reserved": bool(card.get("reserved")),
         "legalities": card.get("legalities") or {},
         "scryfallUri": card.get("scryfall_uri") or "",
         "image": scryfall_image(card),
@@ -268,6 +271,7 @@ def previous_indexes(payload: dict) -> tuple[dict, dict, dict]:
             "releasedAt": row.get("releasedAt") or "",
             "finishes": row.get("finishes") or [],
             "promoTypes": row.get("promoTypes") or [],
+            "reserved": bool(row.get("reserved")),
             "legalities": row.get("legalities") or {},
             "formatBucket": row.get("formatBucket") or "",
             "usd": row.get("marketUsd"),
@@ -572,6 +576,7 @@ def build_payload(
                 "releasedAt": exact.get("releasedAt") or "",
                 "finishes": exact.get("finishes") or [],
                 "promoTypes": exact.get("promoTypes") or [],
+                "reserved": bool(exact.get("reserved")),
                 "legalities": legalities,
                 "formatBucket": format_bucket({"legalities": legalities}),
                 "image": image,

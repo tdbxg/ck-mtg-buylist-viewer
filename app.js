@@ -14,6 +14,7 @@ const state = {
   recentSet: "",
   minPrice: 0,
   foilOnly: false,
+  reservedOnly: false,
   withImageOnly: false,
   missingCnOnly: false,
   sort: "cashDesc",
@@ -82,6 +83,7 @@ const els = {
   recentSets: document.querySelector("#recentSets"),
   minPrice: document.querySelector("#minPrice"),
   foilOnly: document.querySelector("#foilOnly"),
+  reservedOnly: document.querySelector("#reservedOnly"),
   withImageOnly: document.querySelector("#withImageOnly"),
   missingCnOnly: document.querySelector("#missingCnOnly"),
   sortSelect: document.querySelector("#sortSelect"),
@@ -289,7 +291,8 @@ function expandPackedData(payload) {
     item.qtyRetail = Number(item.qtyRetail || 0);
     item.marketUsd = item.marketUsd === null || item.marketUsd === undefined ? null : Number(item.marketUsd || 0);
     item.marketEur = item.marketEur === null || item.marketEur === undefined ? null : Number(item.marketEur || 0);
-    item.conditions = {};
+    item.reserved = Boolean(item.reserved);
+    item.conditions = item.conditions || {};
     item.finishes = [];
     item.search = buildSearch(item);
     return item;
@@ -433,6 +436,7 @@ function filterRows() {
     if (state.edition && row.edition !== state.edition) return false;
     if (row.cashUsd < minPrice) return false;
     if (state.source === "cards" && state.foilOnly && !row.foil) return false;
+    if (state.source === "cards" && state.reservedOnly && !row.reserved) return false;
     if (state.withImageOnly && !row.image) return false;
     if (state.source === "cards" && state.missingCnOnly && row.cn) return false;
     return true;
@@ -491,6 +495,15 @@ function renderCard(row) {
         ? `<div>中文来源：<strong>补充翻译</strong></div>`
         : "";
     const imageSourceLine = row.imageSource === "name_fallback" ? `<div>图片：同名参考图</div>` : "";
+    const conditionRows = [["NM", "nm"], ["EX", "ex"], ["VG", "vg"], ["G", "g"]]
+      .map(([label, key]) => {
+        const price = Number(row.conditions?.[`${key}_price`] || 0);
+        const quantity = row.conditions?.[`${key}_qty`];
+        const cny = price * Number(state.data?.meta?.usdCny || 0);
+        const priceText = price ? `${moneyUsd(price)} / ${moneyCny(cny)}` : "-";
+        const qtyText = quantity === undefined || quantity === null ? "-" : `${Number(quantity).toLocaleString("zh-CN")} 张`;
+        return `<tr><th>${label}</th><td>${priceText}</td><td>${qtyText}</td></tr>`;
+      }).join("");
     const cardmarketLink = row.cardmarket?.cardmarketUrl
       ? `<a href="${row.cardmarket.cardmarketUrl}" target="_blank" rel="noreferrer">Cardmarket/价格走势</a>`
       : "";
@@ -505,7 +518,8 @@ function renderCard(row) {
       <div>SKU：${row.sku || "-"}</div>
       <div>稀有度：${row.rarity || "-"} ｜ 发售：${row.releasedAt || "-"} ｜ 工艺：${Array.isArray(row.finishes) && row.finishes.length ? row.finishes.join(", ") : "-"}</div>
       <div>状态：${row.activeBuying === false ? "暂不收购" : "当前收购"} ｜ 收购数量：${row.qtyBuying.toLocaleString("zh-CN")} ｜ 零售库存：${row.qtyRetail.toLocaleString("zh-CN")}</div>
-      <div>品相零售价：NM ${row.conditions?.nm_price || "-"} / EX ${row.conditions?.ex_price || "-"} / VG ${row.conditions?.vg_price || "-"} / G ${row.conditions?.g_price || "-"}</div>
+      ${row.reserved ? `<div>保留牌表：<strong class="reserved-mark">RL</strong> ｜ 品相以 CK 实物判定为准</div>` : ""}
+      <div class="condition-block"><strong>CK 品相零售价 / 库存</strong><table class="condition-table"><tbody>${conditionRows}</tbody></table></div>
       <div>CK正常售价：<strong>${ckRetailUsd ? moneyUsd(ckRetailUsd) : "-"}</strong>${ckRetailCny ? ` / ${moneyCny(ckRetailCny)}` : ""} ｜ 欧洲参考：<strong>${moneyEur(euPrice)}</strong>${euCny === null ? "" : ` / ${moneyCny(euCny)}`}</div>
       <div>现金/售价：<strong>${pct(cashRetailRatio)}</strong> ｜ 积分/售价：<strong>${pct(creditRetailRatio)}</strong> ｜ CK现金-欧洲：<strong class="${spreadClass}">${spreadText}</strong></div>
     `;
@@ -729,6 +743,7 @@ function readControls() {
   state.edition = state.source === "cards" ? els.editionSelect.value : "";
   state.minPrice = Number(els.minPrice.value || 0);
   state.foilOnly = els.foilOnly.checked;
+  state.reservedOnly = els.reservedOnly.checked;
   state.withImageOnly = els.withImageOnly.checked;
   state.missingCnOnly = els.missingCnOnly.checked;
   state.sort = els.sortSelect.value;
@@ -738,6 +753,7 @@ function readControls() {
   els.setField.style.display = state.source === "cards" ? "" : "none";
   els.editionField.style.display = state.source === "cards" ? "" : "none";
   els.foilOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
+  els.reservedOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
   els.missingCnOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
 }
 
@@ -781,7 +797,7 @@ function bindEvents() {
       renderMovers();
     });
   });
-  for (const el of [els.searchInput, els.typeSelect, els.categorySelect, els.raritySelect, els.setSelect, els.editionSelect, els.minPrice, els.foilOnly, els.withImageOnly, els.missingCnOnly, els.sortSelect]) {
+  for (const el of [els.searchInput, els.typeSelect, els.categorySelect, els.raritySelect, els.setSelect, els.editionSelect, els.minPrice, els.foilOnly, els.reservedOnly, els.withImageOnly, els.missingCnOnly, els.sortSelect]) {
     el.addEventListener("input", rerender);
     el.addEventListener("change", rerender);
   }
@@ -866,6 +882,7 @@ function bindEvents() {
     state.recentSet = "";
     els.minPrice.value = "0";
     els.foilOnly.checked = false;
+    els.reservedOnly.checked = false;
     els.withImageOnly.checked = false;
     els.missingCnOnly.checked = false;
     els.sortSelect.value = "cashDesc";
@@ -952,6 +969,7 @@ async function init() {
     switchView("movers", false);
   }
   state.data = await loadData(wantsFullData());
+  await applyReservedList(state.data);
   state.fullDataLoaded = state.data.meta?.mode !== "fast";
   const meta = state.data.meta;
   updateMetaLine();
@@ -1205,6 +1223,7 @@ async function loadFullData() {
   els.fullDataButton.textContent = "正在加载全量...";
   els.metaLine.textContent = "正在加载全量数据，低性能浏览器可能需要等待...";
   state.data = await loadData(true);
+  await applyReservedList(state.data);
   state.fullDataLoaded = true;
   state.ocrIndex = null;
   if (state.cardmarketLoaded) state.cardmarketLoaded = false;
@@ -1234,6 +1253,19 @@ async function loadData(full = false) {
   const response = await fetch(`./data.json?v=${stamp}`, { cache: "no-store" });
   if (!response.ok) throw new Error(`data fetch failed: ${response.status}`);
   return await response.json();
+}
+
+async function applyReservedList(data) {
+  try {
+    const response = await fetch(`./reserved_prints.json?v=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) throw new Error(`reserved list fetch failed: ${response.status}`);
+    const printIds = (await response.json()).printIds || {};
+    for (const row of data.cards || []) {
+      row.reserved = Boolean(row.reserved || printIds[row.scryfallId]);
+    }
+  } catch (error) {
+    console.warn("Reserved List data not loaded", error);
+  }
 }
 
 async function loadCardmarketData(data) {
