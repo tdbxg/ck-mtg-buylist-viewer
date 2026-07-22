@@ -1444,6 +1444,7 @@ function makeOcrIndex() {
   if (state.ocrIndex?.data === state.data) return state.ocrIndex;
   const tokenMap = new Map();
   const printMap = new Map();
+  const names = new Map();
   for (const row of state.data.cards || []) {
     for (const token of new Set(ocrTokens(row.name))) {
       const list = tokenMap.get(token) || [];
@@ -1453,8 +1454,10 @@ function makeOcrIndex() {
     const set = normalize(row.scryfallSet).toUpperCase();
     const number = normalize(row.collectorNumber).toUpperCase();
     if (set && number) printMap.set(`${set}|${number}`, row);
+    const nameKey = normalize(row.name);
+    if (nameKey && !names.has(nameKey)) names.set(nameKey, row);
   }
-  state.ocrIndex = { data: state.data, tokenMap, printMap };
+  state.ocrIndex = { data: state.data, tokenMap, printMap, names };
   return state.ocrIndex;
 }
 
@@ -1484,9 +1487,9 @@ function extractPrintHints(text) {
   return hints;
 }
 
-function findImageCandidates(rawText) {
+function findImageCandidates(rawText, titleText = "") {
   const index = makeOcrIndex();
-  const clean = cleanOcrText(rawText);
+  const clean = cleanOcrText(titleText || rawText);
   const tokenSet = new Set(ocrTokens(clean));
   const pool = new Set();
   for (const token of tokenSet) {
@@ -1503,7 +1506,7 @@ function findImageCandidates(rawText) {
     const tokenScore = rowTokens.length ? hits / rowTokens.length : 0;
     const nameScore = diceSimilarity(normalize(row.name), compact);
     const hintScore = extractPrintHints(rawText).some((hint) => normalize(row.scryfallSet).toUpperCase() === hint.set && normalize(row.collectorNumber).toUpperCase() === hint.number) ? 1 : 0;
-    return { row, score: hintScore ? 1.2 : (tokenScore * 0.72 + nameScore * 0.5), tokenHits: hits, nameTokenCount: rowTokens.length, exactPrint: hintScore > 0 };
+    return { row, score: hintScore ? 1.2 : (tokenScore * 0.84 + nameScore * 0.42), tokenHits: hits, nameTokenCount: rowTokens.length, exactPrint: hintScore > 0 };
   }).filter((item) => item.score >= 0.45).sort((a, b) => b.score - a.score);
   const uniqueNames = new Set();
   return ranked.filter((item) => {
@@ -1552,13 +1555,15 @@ function redReducedCanvas(image, sourceX, sourceY, sourceWidth, sourceHeight) {
     const red = pixels[index];
     const green = pixels[index + 1];
     const blue = pixels[index + 2];
-    if (red > 110 && red > green * 1.28 && red > blue * 1.28) {
-      pixels[index] = 244;
-      pixels[index + 1] = 244;
-      pixels[index + 2] = 244;
+    if (red > 105 && red > green * 1.24 && red > blue * 1.22) {
+      // Handwritten red price marks are much stronger than the printed card art.
+      // Preserve surrounding colour so the title bar remains readable to OCR.
+      pixels[index] = 255;
+      pixels[index + 1] = 255;
+      pixels[index + 2] = 255;
       continue;
     }
-    const grey = Math.max(0, Math.min(255, (red * 0.28 + green * 0.58 + blue * 0.14 - 112) * 2.1 + 128));
+    const grey = Math.max(0, Math.min(255, (red * 0.299 + green * 0.587 + blue * 0.114 - 92) * 1.72 + 118));
     pixels[index] = grey;
     pixels[index + 1] = grey;
     pixels[index + 2] = grey;
@@ -1567,35 +1572,37 @@ function redReducedCanvas(image, sourceX, sourceY, sourceWidth, sourceHeight) {
   return canvas;
 }
 
-function ocrStrips(cardCanvas) {
-  const titleSourceHeight = Math.max(30, Math.round(cardCanvas.height * 0.18));
-  const footerSourceHeight = Math.max(24, Math.round(cardCanvas.height * 0.12));
-  const scale = 2;
-  const titleHeight = titleSourceHeight * scale;
-  const footerHeight = footerSourceHeight * scale;
+function ocrStrip(cardCanvas, kind) {
+  const isTitle = kind === "title";
+  const sourceY = isTitle ? Math.round(cardCanvas.height * 0.035) : Math.round(cardCanvas.height * 0.84);
+  const sourceHeight = isTitle ? Math.round(cardCanvas.height * 0.24) : Math.round(cardCanvas.height * 0.14);
+  const sourceX = Math.round(cardCanvas.width * 0.025);
+  const sourceWidth = Math.round(cardCanvas.width * 0.95);
+  const scale = 3;
   const canvas = document.createElement("canvas");
-  canvas.width = cardCanvas.width * scale;
-  canvas.height = titleHeight + footerHeight + 18;
+  canvas.width = sourceWidth * scale;
+  canvas.height = sourceHeight * scale;
   const context = canvas.getContext("2d");
   context.fillStyle = "#fff";
   context.fillRect(0, 0, canvas.width, canvas.height);
-  context.drawImage(cardCanvas, 0, 0, cardCanvas.width, titleSourceHeight, 0, 0, canvas.width, titleHeight);
-  context.drawImage(cardCanvas, 0, cardCanvas.height - footerSourceHeight, cardCanvas.width, footerSourceHeight, 0, titleHeight + 18, canvas.width, footerHeight);
+  context.drawImage(cardCanvas, sourceX, sourceY, sourceWidth, sourceHeight, 0, 0, canvas.width, canvas.height);
   return canvas;
 }
 
 function makeImageCrops(image) {
   const { rows, cols } = parseImageLayout(els.imageLayout.value, image.naturalWidth, image.naturalHeight);
-  const x0 = image.naturalWidth * 0.07;
+  // Desk photos leave wider horizontal gaps than vertical gaps.  Keep each
+  // crop within its grid cell so a neighbouring title cannot pollute OCR.
+  const x0 = image.naturalWidth * 0.075;
   const y0 = image.naturalHeight * 0.07;
-  const totalWidth = image.naturalWidth * 0.86;
+  const totalWidth = image.naturalWidth * 0.85;
   const totalHeight = image.naturalHeight * 0.88;
   const cellWidth = totalWidth / cols;
   const cellHeight = totalHeight / rows;
   const crops = [];
   for (let row = 0; row < rows; row += 1) {
     for (let col = 0; col < cols; col += 1) {
-      const insetX = cellWidth * 0.055;
+      const insetX = cellWidth * 0.095;
       const insetY = cellHeight * 0.02;
       const sourceX = x0 + col * cellWidth + insetX;
       const sourceY = y0 + row * cellHeight + insetY;
@@ -1803,14 +1810,26 @@ async function handleImageFile(file) {
     els.imageOcrStatus.textContent = `已按 ${layout.rows} 行 × ${layout.cols} 张切图，正在识别第 1/${layout.crops.length} 张...`;
     const worker = await window.Tesseract.createWorker("eng", 1);
     try {
+      await worker.setParameters({ tessedit_pageseg_mode: "6" });
       for (const crop of layout.crops) {
-        els.imageOcrStatus.textContent = `正在识别第 ${crop.index + 1}/${layout.crops.length} 张：牌名与底部编号...`;
-        const result = await worker.recognize(ocrStrips(crop.canvas));
-        const rawText = String(result.data?.text || "");
-        const candidates = findImageCandidates(rawText);
+        els.imageOcrStatus.textContent = `正在识别第 ${crop.index + 1}/${layout.crops.length} 张：牌名...`;
+        const titleResult = await worker.recognize(ocrStrip(crop.canvas, "title"));
+        const titleText = String(titleResult.data?.text || "");
+        let rawText = titleText;
+        let candidates = findImageCandidates(rawText, titleText);
+        // Bottom set/collector text is useful only after a name candidate exists.
+        // It is deliberately not allowed to create a name match by itself.
+        if (candidates.length) {
+          els.imageOcrStatus.textContent = `正在识别第 ${crop.index + 1}/${layout.crops.length} 张：核对底部编号...`;
+          const footerResult = await worker.recognize(ocrStrip(crop.canvas, "footer"));
+          rawText = `${titleText}\n${String(footerResult.data?.text || "")}`;
+          candidates = findImageCandidates(rawText, titleText);
+        }
         const best = candidates[0];
-        const selected = best?.exactPrint || (best?.score || 0) >= 0.82 && best.tokenHits >= 2 && best.nameTokenCount >= 2 ? 0 : -1;
-        state.imageMatches.push({ preview: crop.preview, ocrText: cleanOcrText(rawText), candidates, selected });
+        // A name match is not an exact printing.  Only a readable set + number
+        // can select an item automatically; every other version stays explicit.
+        const selected = best?.exactPrint ? 0 : -1;
+        state.imageMatches.push({ preview: crop.preview, ocrText: cleanOcrText(rawText), titleText: cleanOcrText(titleText), candidates, selected });
         renderImageMatches();
       }
     } finally {
