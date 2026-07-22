@@ -1625,16 +1625,20 @@ function makeImageCrops(image) {
   const { rows, cols } = parseImageLayout(els.imageLayout.value, image.naturalWidth, image.naturalHeight);
   // Desk photos leave wider horizontal gaps than vertical gaps.  Keep each
   // crop within its grid cell so a neighbouring title cannot pollute OCR.
-  const x0 = image.naturalWidth * 0.075;
+  // A phone above a 3 x 5 binder page produces horizontal perspective: the
+  // right-most column is visually closer to the centre than a full-frame grid
+  // assumes.  These bounds align the card centres before the per-cell inset.
+  const deskPhoto = rows === 3 && cols === 5 && image.naturalWidth / Math.max(1, image.naturalHeight) >= 1.18;
+  const x0 = image.naturalWidth * (deskPhoto ? 0.092 : 0.075);
   const y0 = image.naturalHeight * 0.07;
-  const totalWidth = image.naturalWidth * 0.85;
+  const totalWidth = image.naturalWidth * (deskPhoto ? 0.776 : 0.85);
   const totalHeight = image.naturalHeight * 0.88;
   const cellWidth = totalWidth / cols;
   const cellHeight = totalHeight / rows;
   const crops = [];
   for (let row = 0; row < rows; row += 1) {
     for (let col = 0; col < cols; col += 1) {
-      const insetX = cellWidth * 0.095;
+      const insetX = cellWidth * (deskPhoto ? 0.03 : 0.095);
       const insetY = cellHeight * 0.02;
       const sourceX = x0 + col * cellWidth + insetX;
       const sourceY = y0 + row * cellHeight + insetY;
