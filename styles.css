@@ -344,15 +344,118 @@ h1 {
 
 .filters {
   display: grid;
-  grid-template-columns: minmax(260px, 1.4fr) minmax(150px, 0.7fr) minmax(220px, 1fr) minmax(220px, 1fr) minmax(130px, 0.55fr) minmax(180px, 0.8fr) 116px;
   gap: 10px;
-  align-items: end;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 12px;
   min-width: 0;
-  overflow: hidden;
+}
+
+.filter-primary {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.8fr) minmax(130px, .7fr) minmax(130px, .65fr) minmax(185px, .9fr) auto;
+  gap: 10px;
+  align-items: end;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 7px;
+}
+
+.filter-actions button {
+  width: auto;
+  white-space: nowrap;
+}
+
+.filter-actions #fullDataButton {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.secondary-button {
+  background: #fff;
+  border-color: #cbd3df;
+  color: var(--muted);
+}
+
+.filter-notice {
+  padding: 0 2px;
+}
+
+.quick-checks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  padding: 8px 10px;
+}
+
+.filter-drawer {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #fbfcfe;
+}
+
+.filter-drawer summary,
+.panel-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.filter-drawer summary::-webkit-details-marker,
+.panel-summary::-webkit-details-marker {
+  display: none;
+}
+
+.filter-drawer summary {
+  padding: 10px 12px;
+  font-weight: 700;
+}
+
+.filter-drawer summary small {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.filter-drawer summary::after,
+.summary-toggle::after {
+  content: "+";
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  color: var(--blue);
+  background: #eaf3fb;
+  border-radius: 50%;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.filter-drawer[open] summary::after,
+.collapsible-panel[open] .summary-toggle::after {
+  content: "-";
+}
+
+.drawer-body {
+  padding: 0 12px 12px;
+}
+
+.advanced-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+  gap: 10px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.advanced-filter-grid .recent-field {
+  grid-column: 1 / -1;
 }
 
 .field {
@@ -441,24 +544,18 @@ button {
 }
 
 .image-field {
-  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: 220px minmax(210px, .9fr) 170px minmax(220px, 1fr) 160px;
+  grid-template-columns: minmax(240px, 1.2fr) minmax(150px, .55fr) minmax(220px, 1fr) minmax(140px, .5fr);
   gap: 8px;
   align-items: center;
-  padding-top: 10px;
-  border-top: 1px solid var(--line);
   min-width: 0;
 }
 
-.image-field label {
-  margin: 0;
+.image-field .hint {
+  grid-column: 1 / -1;
 }
 
 .recent-field {
-  grid-column: 1 / -1;
-  padding-top: 10px;
-  border-top: 1px solid var(--line);
   min-width: 0;
 }
 
@@ -484,6 +581,14 @@ button {
 .checks input {
   width: 16px;
   min-height: 16px;
+}
+
+.checks.quick-checks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  align-content: unset;
 }
 
 .drop-zone {
@@ -665,6 +770,18 @@ button {
   gap: 12px;
   padding: 0 2px;
   margin-bottom: 10px;
+  padding: 9px 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.resultbar strong {
+  font-size: 18px;
+}
+
+.resultbar span {
+  color: var(--muted);
 }
 
 .cart-panel,
@@ -675,6 +792,33 @@ button {
   padding: 12px;
   min-width: 0;
   overflow: hidden;
+}
+
+.collapsible-panel {
+  padding: 0;
+}
+
+.panel-summary {
+  padding: 12px;
+}
+
+.panel-summary h2 {
+  margin: 0 0 4px;
+  font-size: 17px;
+}
+
+.panel-summary p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.panel-content {
+  padding: 0 12px 12px;
+}
+
+.panel-content .cart-actions {
+  justify-content: flex-end;
+  min-width: 0;
 }
 
 .cart-head {
@@ -1074,6 +1218,21 @@ h2 {
     overflow: hidden;
   }
 
+  .filter-primary,
+  .advanced-filter-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .filter-primary .search-field,
+  .filter-actions,
+  .advanced-filter-grid .recent-field {
+    grid-column: 1 / -1;
+  }
+
+  .filter-actions button {
+    flex: 1;
+  }
+
   .search-field,
   .image-field,
   .recent-field {
@@ -1111,6 +1270,10 @@ h2 {
     margin-top: 10px;
   }
 
+  .panel-content .cart-actions {
+    justify-content: stretch;
+  }
+
   .prices {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1119,6 +1282,11 @@ h2 {
 @media (max-width: 480px) {
   .layout {
     padding: 10px;
+  }
+
+  .filter-primary,
+  .advanced-filter-grid {
+    grid-template-columns: 1fr;
   }
 
   .card {

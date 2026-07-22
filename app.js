@@ -2,6 +2,7 @@ const PAGE_SIZE = 60;
 const CART_KEY = "ck-mtg-buylist-cart-v1";
 const HISTORY_KEY = "ck-mtg-buylist-history-v1";
 const HISTORY_LIMIT = 30;
+const DISCLOSURE_KEY = "ck-mtg-disclosure-state-v1";
 
 const state = {
   data: null,
@@ -90,6 +91,7 @@ const els = {
   resetButton: document.querySelector("#resetButton"),
   fullDataButton: document.querySelector("#fullDataButton"),
   fastModeNotice: document.querySelector("#fastModeNotice"),
+  filterSummary: document.querySelector("#filterSummary"),
   resultCount: document.querySelector("#resultCount"),
   pageLine: document.querySelector("#pageLine"),
   prevButton: document.querySelector("#prevButton"),
@@ -755,6 +757,54 @@ function readControls() {
   els.foilOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
   els.reservedOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
   els.missingCnOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
+  updateFilterSummary();
+}
+
+function updateFilterSummary() {
+  if (!els.filterSummary) return;
+  const active = [
+    state.category,
+    state.rarity,
+    state.setCode,
+    state.edition,
+    state.minPrice > 0 ? String(state.minPrice) : "",
+    state.foilOnly ? "foil" : "",
+    state.reservedOnly ? "reserved" : "",
+    state.withImageOnly ? "image" : "",
+    state.missingCnOnly ? "cn" : "",
+  ].filter(Boolean).length;
+  els.filterSummary.textContent = active ? `${active} 项已筛选` : "默认筛选";
+}
+
+function disclosureState() {
+  try {
+    return JSON.parse(localStorage.getItem(DISCLOSURE_KEY) || "{}");
+  } catch (error) {
+    return {};
+  }
+}
+
+function restoreDisclosureState() {
+  const saved = disclosureState();
+  document.querySelectorAll("details[data-disclosure]").forEach((item) => {
+    const key = item.dataset.disclosure;
+    if (Object.prototype.hasOwnProperty.call(saved, key)) item.open = Boolean(saved[key]);
+  });
+}
+
+function bindDisclosureState() {
+  document.querySelectorAll("details[data-disclosure]").forEach((item) => {
+    item.addEventListener("toggle", () => {
+      const saved = disclosureState();
+      saved[item.dataset.disclosure] = item.open;
+      localStorage.setItem(DISCLOSURE_KEY, JSON.stringify(saved));
+    });
+  });
+}
+
+function openDisclosure(key) {
+  const item = document.querySelector(`details[data-disclosure="${key}"]`);
+  if (item && !item.open) item.open = true;
 }
 
 function bindEvents() {
@@ -765,6 +815,15 @@ function bindEvents() {
   });
   els.queryTab.addEventListener("click", () => switchView("query"));
   els.moversTab.addEventListener("click", () => switchView("movers"));
+  document.addEventListener("keydown", (event) => {
+    const target = event.target;
+    const typing = target instanceof HTMLInputElement || target instanceof HTMLSelectElement || target instanceof HTMLTextAreaElement;
+    if (event.key === "/" && !typing) {
+      event.preventDefault();
+      switchView("query");
+      els.searchInput.focus();
+    }
+  });
   els.moversSearch.addEventListener("input", debounce(() => {
     state.moversQuery = els.moversSearch.value;
     renderMovers();
@@ -979,8 +1038,10 @@ async function init() {
   populateSets();
   populateEditions();
   populateRecentSets();
+  restoreDisclosureState();
   readControls();
   bindEvents();
+  bindDisclosureState();
   render();
   renderCart();
   renderHistory();
@@ -1060,6 +1121,7 @@ function addToCart(row) {
   addHistory(row);
   saveCart();
   renderCart();
+  openDisclosure("cart");
   render();
 }
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MTG 单卡价格雷达</title>
-  <link rel="stylesheet" href="./styles.css?v=20260720-condition-guide">
+  <link rel="stylesheet" href="./styles.css?v=20260722-workspace">
 </head>
 <body>
   <header class="topbar">
@@ -95,142 +95,136 @@
 
   <main id="queryView" class="layout">
     <aside class="filters" aria-label="filters">
-      <div class="field search-field">
-        <label for="searchInput">搜索</label>
-        <input id="searchInput" type="search" placeholder="中文、英文、系列、SKU">
-      </div>
-
-      <div class="field fast-field">
-        <label>加载模式</label>
-        <button id="fullDataButton" type="button">加载全量低价牌</button>
-        <div id="fastModeNotice" class="hint">快速版：先加载高价牌和最近系列，打开更快。</div>
-      </div>
-
-      <div class="field image-field">
-        <label for="imageInput">图片识别入车</label>
-        <div id="imageDropZone" class="drop-zone">
-          <input id="imageInput" type="file" accept="image/*">
-          <span>点击选择，或把多张牌照片拖到这里</span>
+      <div class="filter-primary">
+        <div class="field search-field">
+          <label for="searchInput">搜索单卡</label>
+          <input id="searchInput" type="search" placeholder="中文、英文、系列、编号、SKU">
         </div>
-        <select id="imageLayout" aria-label="照片排布">
-          <option value="auto">自动识别排布</option>
-          <option value="3x5">3 行 × 5 张</option>
-          <option value="3x4">3 行 × 4 张</option>
-          <option value="3x3">3 行 × 3 张</option>
-          <option value="2x5">2 行 × 5 张</option>
-        </select>
-        <input id="imageGuessInput" type="search" placeholder="OCR失败时，可在这里输入/粘贴牌名">
-        <button id="imageGuessButton" type="button">按这个牌名搜索</button>
-        <div id="imageOcrStatus" class="hint">支持一张照片多张牌。会先切图，再淡化红色手写价，识别牌名和底部系列/编号；每张候选可确认后直接加入回收车。</div>
-        <section id="imageBatchResults" class="image-batch-results" hidden aria-live="polite">
-          <div class="image-batch-head">
-            <div>
-              <strong id="imageBatchTitle">识别候选</strong>
-              <span id="imageBatchSummary"></span>
-            </div>
-            <div class="image-batch-actions">
-              <button id="imageExportCodexButton" type="button" title="导出给 Codex 的识别请求">导出 Codex 请求</button>
-              <input id="imageCodexResultInput" type="file" accept="application/json,.json" hidden>
-              <button id="imageImportCodexButton" type="button" title="导入 Codex 返回的精确版本结果">导入 Codex 结果</button>
-              <button id="imageAddAllButton" type="button">将已确认候选加入回收车</button>
-            </div>
-          </div>
-          <div id="imageBatchGrid" class="image-batch-grid"></div>
-        </section>
+        <div class="field">
+          <label for="typeSelect">类型</label>
+          <select id="typeSelect">
+            <option value="cards">单卡</option>
+            <option value="sealed">密封产品</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="minPrice">最低回收价</label>
+          <input id="minPrice" type="number" min="0" step="1" value="0" aria-label="最低回收价（美元）">
+        </div>
+        <div class="field">
+          <label for="sortSelect">排序</label>
+          <select id="sortSelect">
+            <option value="cashDesc">回收价从高到低</option>
+            <option value="cashAsc">回收价从低到高</option>
+            <option value="qtyDesc">收购数量从高到低</option>
+            <option value="euDesc">欧洲参考价从高到低</option>
+            <option value="spreadDesc">CK/欧洲价差从高到低</option>
+            <option value="nameAsc">英文名 A-Z</option>
+            <option value="editionAsc">版本 A-Z</option>
+          </select>
+        </div>
+        <div class="filter-actions">
+          <button id="fullDataButton" type="button">加载全量</button>
+          <button id="resetButton" class="secondary-button" type="button">重置</button>
+        </div>
       </div>
+      <div id="fastModeNotice" class="filter-notice hint">快速版：先加载高价牌和最近系列，打开更快。</div>
 
-      <div class="field">
-        <label for="typeSelect">类型</label>
-        <select id="typeSelect">
-          <option value="cards">单卡</option>
-          <option value="sealed">密封产品</option>
-        </select>
-      </div>
-
-      <div class="field" id="categoryField">
-        <label for="categorySelect">分拣分类</label>
-        <select id="categorySelect">
-          <option value="">全部分类</option>
-          <option value="standard">常规系列</option>
-          <option value="promo">Promo / 奖闪</option>
-          <option value="secret">Secret Lair</option>
-          <option value="list">Mystery Booster / The List</option>
-          <option value="ub">Universes Beyond / 联动</option>
-          <option value="commander">Commander</option>
-          <option value="token">Token / Helper / Oversized</option>
-        </select>
-      </div>
-
-      <div class="field" id="rarityField">
-        <label for="raritySelect">稀有度</label>
-        <select id="raritySelect">
-          <option value="">全部稀有度</option>
-          <option value="bulk">银铁 common/uncommon</option>
-          <option value="common">铁 common</option>
-          <option value="uncommon">银 uncommon</option>
-          <option value="rare">rare</option>
-          <option value="mythic">mythic</option>
-        </select>
-      </div>
-
-      <div class="field recent-field" id="recentSetsField">
-        <label>最近系列单卡</label>
-        <div id="recentSets" class="set-chips" aria-label="recent sets"></div>
-      </div>
-
-      <div class="field" id="setField">
-        <label for="setSelect">系列（按发行时间）</label>
-        <select id="setSelect">
-          <option value="">全部系列</option>
-        </select>
-      </div>
-
-      <div class="field" id="editionField">
-        <label for="editionSelect">CK版本</label>
-        <select id="editionSelect">
-          <option value="">全部CK版本</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="minPrice">最低回收价（美元）</label>
-        <input id="minPrice" type="number" min="0" step="1" value="0">
-      </div>
-
-      <div class="checks">
+      <div class="checks quick-checks">
         <label><input id="foilOnly" type="checkbox"> 只看闪卡</label>
         <label><input id="reservedOnly" type="checkbox"> 只看 RL / 保留牌表</label>
         <label><input id="withImageOnly" type="checkbox"> 只看有图片</label>
         <label><input id="missingCnOnly" type="checkbox"> 只看未匹配中文</label>
       </div>
 
-      <div class="field">
-        <label for="sortSelect">排序</label>
-        <select id="sortSelect">
-          <option value="cashDesc">回收价从高到低</option>
-          <option value="cashAsc">回收价从低到高</option>
-          <option value="qtyDesc">收购数量从高到低</option>
-          <option value="euDesc">欧洲参考价从高到低</option>
-          <option value="spreadDesc">CK/欧洲价差从高到低</option>
-          <option value="nameAsc">英文名 A-Z</option>
-          <option value="editionAsc">版本 A-Z</option>
-        </select>
-      </div>
+      <details class="filter-drawer" data-disclosure="advancedFilters">
+        <summary><span>系列与版本筛选</span><small id="filterSummary">默认筛选</small></summary>
+        <div class="drawer-body advanced-filter-grid">
+          <div class="field" id="categoryField">
+            <label for="categorySelect">分拣分类</label>
+            <select id="categorySelect">
+              <option value="">全部分类</option>
+              <option value="standard">常规系列</option>
+              <option value="promo">Promo / 奖闪</option>
+              <option value="secret">Secret Lair</option>
+              <option value="list">Mystery Booster / The List</option>
+              <option value="ub">Universes Beyond / 联动</option>
+              <option value="commander">Commander</option>
+              <option value="token">Token / Helper / Oversized</option>
+            </select>
+          </div>
+          <div class="field" id="rarityField">
+            <label for="raritySelect">稀有度</label>
+            <select id="raritySelect">
+              <option value="">全部稀有度</option>
+              <option value="bulk">银铁 common/uncommon</option>
+              <option value="common">铁 common</option>
+              <option value="uncommon">银 uncommon</option>
+              <option value="rare">rare</option>
+              <option value="mythic">mythic</option>
+            </select>
+          </div>
+          <div class="field" id="setField">
+            <label for="setSelect">系列（按发行时间）</label>
+            <select id="setSelect"><option value="">全部系列</option></select>
+          </div>
+          <div class="field" id="editionField">
+            <label for="editionSelect">CK版本</label>
+            <select id="editionSelect"><option value="">全部CK版本</option></select>
+          </div>
+          <div class="field recent-field" id="recentSetsField">
+            <label>最近系列单卡</label>
+            <div id="recentSets" class="set-chips" aria-label="recent sets"></div>
+          </div>
+        </div>
+      </details>
 
-      <button id="resetButton" type="button">重置筛选</button>
+      <details class="filter-drawer image-drawer" data-disclosure="imageRecognition">
+        <summary><span>批量图片识别入车</span><small>多张卡一图 / OCR / 确认版本</small></summary>
+        <div class="drawer-body image-field">
+          <div id="imageDropZone" class="drop-zone">
+            <input id="imageInput" type="file" accept="image/*">
+            <span>点击选择，或把多张牌照片拖到这里</span>
+          </div>
+          <select id="imageLayout" aria-label="照片排布">
+            <option value="auto">自动识别排布</option>
+            <option value="3x5">3 行 × 5 张</option>
+            <option value="3x4">3 行 × 4 张</option>
+            <option value="3x3">3 行 × 3 张</option>
+            <option value="2x5">2 行 × 5 张</option>
+          </select>
+          <input id="imageGuessInput" type="search" placeholder="OCR失败时输入或粘贴牌名">
+          <button id="imageGuessButton" type="button">按牌名搜索</button>
+          <div id="imageOcrStatus" class="hint">每张候选需要确认版本后才可加入回收车。</div>
+          <section id="imageBatchResults" class="image-batch-results" hidden aria-live="polite">
+            <div class="image-batch-head">
+              <div><strong id="imageBatchTitle">识别候选</strong><span id="imageBatchSummary"></span></div>
+              <div class="image-batch-actions">
+                <button id="imageExportCodexButton" type="button" title="导出给 Codex 的识别请求">导出 Codex 请求</button>
+                <input id="imageCodexResultInput" type="file" accept="application/json,.json" hidden>
+                <button id="imageImportCodexButton" type="button" title="导入 Codex 返回的精确版本结果">导入 Codex 结果</button>
+                <button id="imageAddAllButton" type="button">将已确认候选加入回收车</button>
+              </div>
+            </div>
+            <div id="imageBatchGrid" class="image-batch-grid"></div>
+          </section>
+        </div>
+      </details>
     </aside>
 
-    <section class="cart-panel" aria-label="buylist cart">
-      <div class="cart-head">
+    <details class="cart-panel collapsible-panel" data-disclosure="cart" open aria-label="buylist cart">
+      <summary class="panel-summary">
         <div>
           <h2>回收车</h2>
           <p id="cartSummary">0 种 / 0 张 / 现金 $0.00 / 积分 $0.00</p>
         </div>
+        <span class="summary-toggle" aria-hidden="true"></span>
+      </summary>
+      <div class="panel-content">
         <div class="cart-actions">
           <button id="exportCartButton" type="button">导出牌表 CSV</button>
           <button id="clearCartButton" type="button">清空</button>
         </div>
-      </div>
       <div id="cartTableWrap" class="cart-table-wrap">
         <table class="cart-table">
           <thead>
@@ -247,21 +241,25 @@
         </table>
       </div>
       <div id="cartEmpty" class="cart-empty">还没有加入回收车</div>
-    </section>
+      </div>
+    </details>
 
-    <section class="history-panel" aria-label="browse history">
-      <div class="cart-head">
+    <details class="history-panel collapsible-panel" data-disclosure="history" aria-label="browse history">
+      <summary class="panel-summary">
         <div>
           <h2>历史浏览</h2>
           <p id="historySummary">最近看过的单卡会显示在这里</p>
         </div>
+        <span class="summary-toggle" aria-hidden="true"></span>
+      </summary>
+      <div class="panel-content">
         <div class="cart-actions">
           <button id="clearHistoryButton" type="button">清空历史</button>
         </div>
-      </div>
       <div id="historyRows" class="history-list"></div>
       <div id="historyEmpty" class="cart-empty">还没有浏览记录</div>
-    </section>
+      </div>
+    </details>
 
     <section class="results">
       <div class="resultbar">
@@ -299,6 +297,6 @@
     </article>
   </template>
 
-  <script src="./app.js?v=20260720-condition-guide"></script>
+  <script src="./app.js?v=20260722-workspace"></script>
 </body>
 </html>
