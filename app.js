@@ -1507,6 +1507,11 @@ function findImageCandidates(rawText, titleText = "") {
   const nameLine = pickCardNameFromOcr(titleText) || titleText || rawText;
   const clean = cleanOcrText(nameLine);
   const tokenSet = new Set(ocrTokens(clean));
+  for (const token of [...tokenSet]) {
+    // Tesseract commonly reads a trailing apostrophe as "s" (Stormchaser's
+    // becomes Stormchasers).  Keep both forms for name matching.
+    if (token.length >= 5 && token.endsWith("s")) tokenSet.add(token.slice(0, -1));
+  }
   const pool = new Set();
   for (const token of tokenSet) {
     for (const row of index.tokenMap.get(token) || []) pool.add(row);
@@ -1525,10 +1530,12 @@ function findImageCandidates(rawText, titleText = "") {
     const rowTokens = [...new Set(ocrTokens(row.name))];
     const tokenScores = rowTokens.map((rowToken) => Math.max(...[...tokenSet].map((token) => diceSimilarity(rowToken, token))));
     const hits = tokenScores.filter((score) => score >= 0.64).length;
+    const exactHits = rowTokens.filter((rowToken) => tokenSet.has(rowToken)).length;
     const tokenScore = rowTokens.length ? tokenScores.reduce((sum, score) => sum + score, 0) / rowTokens.length : 0;
     const nameScore = diceSimilarity(normalize(row.name), compact);
     const hintScore = extractPrintHints(rawText).some((hint) => normalize(row.scryfallSet).toUpperCase() === hint.set && normalize(row.collectorNumber).toUpperCase() === hint.number) ? 1 : 0;
-    return { row, score: hintScore ? 1.2 : (tokenScore * 0.78 + nameScore * 0.62), tokenHits: hits, nameTokenCount: rowTokens.length, exactPrint: hintScore > 0 };
+    const exactTokenScore = rowTokens.length ? exactHits / rowTokens.length : 0;
+    return { row, score: hintScore ? 1.2 : (exactTokenScore * 1.12 + tokenScore * 0.58 + nameScore * 0.52), tokenHits: hits, exactTokenScore, nameTokenCount: rowTokens.length, exactPrint: hintScore > 0 };
   }).filter((item) => item.score >= 0.62).sort((a, b) => b.score - a.score);
 
   // Rank card *names* first.  A high-priced printing must never push a better
@@ -1605,12 +1612,13 @@ function redReducedCanvas(image, sourceX, sourceY, sourceWidth, sourceHeight) {
 
 function ocrStrip(cardCanvas, kind) {
   const isTitle = kind === "title";
+  const isNarrowTitle = kind === "narrow-title";
   const isFull = kind === "full";
-  const sourceY = isTitle ? Math.round(cardCanvas.height * 0.035) : isFull ? Math.round(cardCanvas.height * 0.025) : Math.round(cardCanvas.height * 0.84);
-  const sourceHeight = isTitle ? Math.round(cardCanvas.height * 0.24) : isFull ? Math.round(cardCanvas.height * 0.95) : Math.round(cardCanvas.height * 0.14);
+  const sourceY = isNarrowTitle ? Math.round(cardCanvas.height * 0.025) : isTitle ? Math.round(cardCanvas.height * 0.035) : isFull ? Math.round(cardCanvas.height * 0.025) : Math.round(cardCanvas.height * 0.84);
+  const sourceHeight = isNarrowTitle ? Math.round(cardCanvas.height * 0.16) : isTitle ? Math.round(cardCanvas.height * 0.24) : isFull ? Math.round(cardCanvas.height * 0.95) : Math.round(cardCanvas.height * 0.14);
   const sourceX = Math.round(cardCanvas.width * 0.025);
   const sourceWidth = Math.round(cardCanvas.width * 0.95);
-  const scale = isFull ? 1.4 : 3;
+  const scale = isFull ? 1.4 : isNarrowTitle ? 4 : 3;
   const canvas = document.createElement("canvas");
   canvas.width = sourceWidth * scale;
   canvas.height = sourceHeight * scale;
@@ -1851,8 +1859,20 @@ async function handleImageFile(file) {
         els.imageOcrStatus.textContent = `正在识别第 ${crop.index + 1}/${layout.crops.length} 张：牌名...`;
         const titleResult = await worker.recognize(ocrStrip(crop.canvas, "title"));
         const titleText = String(titleResult.data?.text || "");
+        let matchTitleText = titleText;
         let rawText = titleText;
         let candidates = findImageCandidates(rawText, titleText);
+        if (!candidates.length || (candidates[0]?.exactTokenScore || 0) < 0.75) {
+          els.imageOcrStatus.textContent = `正在识别第 ${crop.index + 1}/${layout.crops.length} 张：精读标题栏...`;
+          const narrowResult = await worker.recognize(ocrStrip(crop.canvas, "narrow-title"));
+          const narrowText = String(narrowResult.data?.text || "");
+          const narrowCandidates = findImageCandidates(`${titleText}\n${narrowText}`, narrowText);
+          if ((narrowCandidates[0]?.score || 0) > (candidates[0]?.score || 0)) {
+            candidates = narrowCandidates;
+            rawText = `${titleText}\n${narrowText}`;
+            matchTitleText = narrowText;
+          }
+        }
         // If the title bar is obscured by a price mark or a foreign-language
         // title, a lower-resolution full-card pass frequently recovers the
         // English rules text or the printed English subtitle.
@@ -1864,6 +1884,7 @@ async function handleImageFile(file) {
           if ((fallbackCandidates[0]?.score || 0) > (candidates[0]?.score || 0)) {
             candidates = fallbackCandidates;
             rawText = `${titleText}\n${fullText}`;
+            matchTitleText = fullText;
           }
         }
         // Bottom set/collector text is useful only after a name candidate exists.
@@ -1872,7 +1893,7 @@ async function handleImageFile(file) {
           els.imageOcrStatus.textContent = `正在识别第 ${crop.index + 1}/${layout.crops.length} 张：核对底部编号...`;
           const footerResult = await worker.recognize(ocrStrip(crop.canvas, "footer"));
           rawText = `${titleText}\n${String(footerResult.data?.text || "")}`;
-          candidates = findImageCandidates(rawText, titleText);
+          candidates = findImageCandidates(rawText, matchTitleText);
         }
         const best = candidates[0];
         // A name match is not an exact printing.  Only a readable set + number
