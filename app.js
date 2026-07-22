@@ -1529,7 +1529,7 @@ function findImageCandidates(rawText, titleText = "") {
     const nameScore = diceSimilarity(normalize(row.name), compact);
     const hintScore = extractPrintHints(rawText).some((hint) => normalize(row.scryfallSet).toUpperCase() === hint.set && normalize(row.collectorNumber).toUpperCase() === hint.number) ? 1 : 0;
     return { row, score: hintScore ? 1.2 : (tokenScore * 0.78 + nameScore * 0.62), tokenHits: hits, nameTokenCount: rowTokens.length, exactPrint: hintScore > 0 };
-  }).filter((item) => item.score >= 0.5).sort((a, b) => b.score - a.score);
+  }).filter((item) => item.score >= 0.62).sort((a, b) => b.score - a.score);
 
   // Rank card *names* first.  A high-priced printing must never push a better
   // OCR name out of the visible choices merely because it has many variants.
