@@ -1605,11 +1605,12 @@ function redReducedCanvas(image, sourceX, sourceY, sourceWidth, sourceHeight) {
 
 function ocrStrip(cardCanvas, kind) {
   const isTitle = kind === "title";
-  const sourceY = isTitle ? Math.round(cardCanvas.height * 0.035) : Math.round(cardCanvas.height * 0.84);
-  const sourceHeight = isTitle ? Math.round(cardCanvas.height * 0.24) : Math.round(cardCanvas.height * 0.14);
+  const isFull = kind === "full";
+  const sourceY = isTitle ? Math.round(cardCanvas.height * 0.035) : isFull ? Math.round(cardCanvas.height * 0.025) : Math.round(cardCanvas.height * 0.84);
+  const sourceHeight = isTitle ? Math.round(cardCanvas.height * 0.24) : isFull ? Math.round(cardCanvas.height * 0.95) : Math.round(cardCanvas.height * 0.14);
   const sourceX = Math.round(cardCanvas.width * 0.025);
   const sourceWidth = Math.round(cardCanvas.width * 0.95);
-  const scale = 3;
+  const scale = isFull ? 1.4 : 3;
   const canvas = document.createElement("canvas");
   canvas.width = sourceWidth * scale;
   canvas.height = sourceHeight * scale;
@@ -1848,6 +1849,19 @@ async function handleImageFile(file) {
         const titleText = String(titleResult.data?.text || "");
         let rawText = titleText;
         let candidates = findImageCandidates(rawText, titleText);
+        // If the title bar is obscured by a price mark or a foreign-language
+        // title, a lower-resolution full-card pass frequently recovers the
+        // English rules text or the printed English subtitle.
+        if (!candidates.length || (candidates[0]?.score || 0) < 0.72) {
+          els.imageOcrStatus.textContent = `正在识别第 ${crop.index + 1}/${layout.crops.length} 张：补读卡面文字...`;
+          const fullResult = await worker.recognize(ocrStrip(crop.canvas, "full"));
+          const fullText = String(fullResult.data?.text || "");
+          const fallbackCandidates = findImageCandidates(`${titleText}\n${fullText}`, fullText);
+          if ((fallbackCandidates[0]?.score || 0) > (candidates[0]?.score || 0)) {
+            candidates = fallbackCandidates;
+            rawText = `${titleText}\n${fullText}`;
+          }
+        }
         // Bottom set/collector text is useful only after a name candidate exists.
         // It is deliberately not allowed to create a name match by itself.
         if (candidates.length) {
