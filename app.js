@@ -1457,7 +1457,7 @@ function makeOcrIndex() {
     const nameKey = normalize(row.name);
     if (nameKey && !names.has(nameKey)) names.set(nameKey, row);
   }
-  state.ocrIndex = { data: state.data, tokenMap, printMap, names };
+  state.ocrIndex = { data: state.data, tokenMap, printMap, names, tokenKeys: [...tokenMap.keys()], nearTokenCache: new Map() };
   return state.ocrIndex;
 }
 
@@ -1487,13 +1487,34 @@ function extractPrintHints(text) {
   return hints;
 }
 
+function nearestOcrTokens(token, index) {
+  if (!token || index.tokenMap.has(token)) return [token];
+  if (index.nearTokenCache.has(token)) return index.nearTokenCache.get(token);
+  const threshold = token.length <= 3 ? 0.5 : 0.64;
+  const matches = index.tokenKeys
+    .filter((candidate) => Math.abs(candidate.length - token.length) <= 3)
+    .map((candidate) => ({ candidate, score: diceSimilarity(token, candidate) }))
+    .filter((item) => item.score >= threshold)
+    .sort((left, right) => right.score - left.score)
+    .slice(0, 3)
+    .map((item) => item.candidate);
+  index.nearTokenCache.set(token, matches);
+  return matches;
+}
+
 function findImageCandidates(rawText, titleText = "") {
   const index = makeOcrIndex();
-  const clean = cleanOcrText(titleText || rawText);
+  const nameLine = pickCardNameFromOcr(titleText) || titleText || rawText;
+  const clean = cleanOcrText(nameLine);
   const tokenSet = new Set(ocrTokens(clean));
   const pool = new Set();
   for (const token of tokenSet) {
     for (const row of index.tokenMap.get(token) || []) pool.add(row);
+    if (!index.tokenMap.has(token)) {
+      for (const nearest of nearestOcrTokens(token, index)) {
+        for (const row of index.tokenMap.get(nearest) || []) pool.add(row);
+      }
+    }
   }
   for (const hint of extractPrintHints(rawText)) {
     const exact = index.printMap.get(`${hint.set}|${hint.number}`);
@@ -1502,19 +1523,29 @@ function findImageCandidates(rawText, titleText = "") {
   const compact = normalize(clean);
   const ranked = [...pool].map((row) => {
     const rowTokens = [...new Set(ocrTokens(row.name))];
-    const hits = rowTokens.filter((token) => tokenSet.has(token)).length;
-    const tokenScore = rowTokens.length ? hits / rowTokens.length : 0;
+    const tokenScores = rowTokens.map((rowToken) => Math.max(...[...tokenSet].map((token) => diceSimilarity(rowToken, token))));
+    const hits = tokenScores.filter((score) => score >= 0.64).length;
+    const tokenScore = rowTokens.length ? tokenScores.reduce((sum, score) => sum + score, 0) / rowTokens.length : 0;
     const nameScore = diceSimilarity(normalize(row.name), compact);
     const hintScore = extractPrintHints(rawText).some((hint) => normalize(row.scryfallSet).toUpperCase() === hint.set && normalize(row.collectorNumber).toUpperCase() === hint.number) ? 1 : 0;
-    return { row, score: hintScore ? 1.2 : (tokenScore * 0.84 + nameScore * 0.42), tokenHits: hits, nameTokenCount: rowTokens.length, exactPrint: hintScore > 0 };
-  }).filter((item) => item.score >= 0.45).sort((a, b) => b.score - a.score);
-  const uniqueNames = new Set();
-  return ranked.filter((item) => {
-    const key = `${item.row.name}|${item.row.scryfallSet}|${item.row.collectorNumber}|${item.row.foil}`;
-    if (uniqueNames.has(key)) return false;
-    uniqueNames.add(key);
-    return true;
-  }).slice(0, 4);
+    return { row, score: hintScore ? 1.2 : (tokenScore * 0.78 + nameScore * 0.62), tokenHits: hits, nameTokenCount: rowTokens.length, exactPrint: hintScore > 0 };
+  }).filter((item) => item.score >= 0.5).sort((a, b) => b.score - a.score);
+
+  // Rank card *names* first.  A high-priced printing must never push a better
+  // OCR name out of the visible choices merely because it has many variants.
+  const bestByName = new Map();
+  for (const item of ranked) {
+    const key = normalize(item.row.name);
+    if (!bestByName.has(key)) bestByName.set(key, item);
+  }
+  const winningName = [...bestByName.values()].sort((left, right) => right.score - left.score)[0];
+  if (!winningName) return [];
+  const winnerKey = normalize(winningName.row.name);
+  return ranked
+    .filter((item) => normalize(item.row.name) === winnerKey)
+    .sort((left, right) => Number(right.exactPrint) - Number(left.exactPrint) || right.score - left.score || Number(right.row.cashUsd || 0) - Number(left.row.cashUsd || 0))
+    .filter((item, position, list) => list.findIndex((candidate) => rowKey(candidate.row) === rowKey(item.row)) === position)
+    .slice(0, 4);
 }
 
 function parseImageLayout(value, width, height) {
