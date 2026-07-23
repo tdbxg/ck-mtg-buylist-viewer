@@ -1637,16 +1637,16 @@ function makeImageCrops(image) {
   // right-most column is visually closer to the centre than a full-frame grid
   // assumes.  These bounds align the card centres before the per-cell inset.
   const deskPhoto = rows === 3 && cols === 5 && image.naturalWidth / Math.max(1, image.naturalHeight) >= 1.18;
-  const x0 = image.naturalWidth * (deskPhoto ? 0.092 : 0.075);
+  const x0 = image.naturalWidth * (deskPhoto ? 0.09 : 0.075);
   const y0 = image.naturalHeight * 0.07;
-  const totalWidth = image.naturalWidth * (deskPhoto ? 0.776 : 0.85);
+  const totalWidth = image.naturalWidth * (deskPhoto ? 0.82 : 0.85);
   const totalHeight = image.naturalHeight * 0.88;
   const cellWidth = totalWidth / cols;
   const cellHeight = totalHeight / rows;
   const crops = [];
   for (let row = 0; row < rows; row += 1) {
     for (let col = 0; col < cols; col += 1) {
-      const insetX = cellWidth * (deskPhoto ? 0.03 : 0.095);
+      const insetX = cellWidth * (deskPhoto ? 0.04 : 0.095);
       const insetY = cellHeight * 0.02;
       const sourceX = x0 + col * cellWidth + insetX;
       const sourceY = y0 + row * cellHeight + insetY;
