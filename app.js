@@ -1003,6 +1003,18 @@ function bindEvents() {
       if (match) applyImageGuess(match.ocrText || "");
       return;
     }
+    const versions = event.target.closest("[data-image-versions]");
+    if (versions) {
+      const match = state.imageMatches[Number(versions.dataset.imageVersions)];
+      const selected = match?.candidates?.[match.selected];
+      if (!match || !selected) return;
+      const exactPrints = findImageNameVersions(selected.row);
+      match.candidates = exactPrints;
+      match.selected = -1;
+      els.imageOcrStatus.textContent = `已列出 ${displayedCardName(selected.row)} 的 ${exactPrints.length} 个 CK 版本；请按系列、编号和闪/平确认。`;
+      renderImageMatches();
+      return;
+    }
     const lookup = event.target.closest("[data-image-lookup]");
     if (!lookup) return;
     const index = Number(lookup.dataset.imageLookup);
@@ -1012,7 +1024,7 @@ function bindEvents() {
     const query = input.value.trim();
     match.ocrText = query || match.ocrText;
     match.candidates = findImageCandidates(query);
-    match.selected = match.candidates.length === 1 ? 0 : -1;
+    match.selected = match.candidates[0]?.exactPrint && match.candidates.length === 1 ? 0 : -1;
     renderImageMatches();
   });
   els.imageExportCodexButton.addEventListener("click", exportCodexImageRequest);
@@ -1431,6 +1443,17 @@ function cleanOcrText(text) {
     .trim();
 }
 
+function ocrNamesForRow(row) {
+  return [...new Set([row?.name, row?.flavorName, row?.variation]
+    .map((value) => String(value || "").trim())
+    .filter(Boolean))];
+}
+
+function displayedCardName(row) {
+  const printed = String(row?.flavorName || row?.variation || "").trim();
+  return printed || String(row?.name || "").trim();
+}
+
 function escapeHtml(value) {
   return String(value || "")
     .replace(/&/g, "&amp;")
@@ -1446,7 +1469,7 @@ function makeOcrIndex() {
   const printMap = new Map();
   const names = new Map();
   for (const row of state.data.cards || []) {
-    for (const token of new Set(ocrTokens(row.name))) {
+    for (const token of new Set(ocrNamesForRow(row).flatMap(ocrTokens))) {
       const list = tokenMap.get(token) || [];
       list.push(row);
       tokenMap.set(token, list);
@@ -1454,7 +1477,7 @@ function makeOcrIndex() {
     const set = normalize(row.scryfallSet).toUpperCase();
     const number = normalize(row.collectorNumber).toUpperCase();
     if (set && number) printMap.set(`${set}|${number}`, row);
-    const nameKey = normalize(row.name);
+    const nameKey = normalize(displayedCardName(row));
     if (nameKey && !names.has(nameKey)) names.set(nameKey, row);
   }
   state.ocrIndex = { data: state.data, tokenMap, printMap, names, tokenKeys: [...tokenMap.keys()], nearTokenCache: new Map() };
@@ -1527,12 +1550,13 @@ function findImageCandidates(rawText, titleText = "") {
   }
   const compact = normalize(clean);
   const ranked = [...pool].map((row) => {
-    const rowTokens = [...new Set(ocrTokens(row.name))];
+    const rowNames = ocrNamesForRow(row);
+    const rowTokens = [...new Set(rowNames.flatMap(ocrTokens))];
     const tokenScores = rowTokens.map((rowToken) => Math.max(...[...tokenSet].map((token) => diceSimilarity(rowToken, token))));
     const hits = tokenScores.filter((score) => score >= 0.64).length;
     const exactHits = rowTokens.filter((rowToken) => tokenSet.has(rowToken)).length;
     const tokenScore = rowTokens.length ? tokenScores.reduce((sum, score) => sum + score, 0) / rowTokens.length : 0;
-    const nameScore = diceSimilarity(normalize(row.name), compact);
+    const nameScore = Math.max(...rowNames.map((name) => diceSimilarity(normalize(name), compact)));
     const hintScore = extractPrintHints(rawText).some((hint) => normalize(row.scryfallSet).toUpperCase() === hint.set && normalize(row.collectorNumber).toUpperCase() === hint.number) ? 1 : 0;
     const exactTokenScore = rowTokens.length ? exactHits / rowTokens.length : 0;
     return { row, score: hintScore ? 1.2 : (exactTokenScore * 1.12 + tokenScore * 0.58 + nameScore * 0.52), tokenHits: hits, exactTokenScore, nameTokenCount: rowTokens.length, exactPrint: hintScore > 0 };
@@ -1542,17 +1566,32 @@ function findImageCandidates(rawText, titleText = "") {
   // OCR name out of the visible choices merely because it has many variants.
   const bestByName = new Map();
   for (const item of ranked) {
-    const key = normalize(item.row.name);
+    const key = normalize(displayedCardName(item.row));
     if (!bestByName.has(key)) bestByName.set(key, item);
   }
-  const winningName = [...bestByName.values()].sort((left, right) => right.score - left.score)[0];
-  if (!winningName) return [];
-  const winnerKey = normalize(winningName.row.name);
-  return ranked
-    .filter((item) => normalize(item.row.name) === winnerKey)
+  // Keep several *names*, not merely several printings of the strongest name.
+  // Handwritten price marks often make one title token ambiguous; hiding the
+  // next OCR name would make a correct manual confirmation impossible.
+  return [...bestByName.values()]
     .sort((left, right) => Number(right.exactPrint) - Number(left.exactPrint) || right.score - left.score || Number(right.row.cashUsd || 0) - Number(left.row.cashUsd || 0))
-    .filter((item, position, list) => list.findIndex((candidate) => rowKey(candidate.row) === rowKey(item.row)) === position)
-    .slice(0, 4);
+    .slice(0, 6);
+}
+
+function findImageNameVersions(sourceRow) {
+  const key = normalize(displayedCardName(sourceRow));
+  if (!key) return [];
+  const rows = (state.data?.cards || [])
+    .filter((row) => normalize(displayedCardName(row)) === key)
+    .sort((left, right) => String(right.releasedAt || "").localeCompare(String(left.releasedAt || ""))
+      || String(left.scryfallSet || "").localeCompare(String(right.scryfallSet || ""))
+      || String(left.collectorNumber || "").localeCompare(String(right.collectorNumber || ""))
+      || Number(!!right.foil) - Number(!!left.foil));
+  return rows
+    .filter((row, position) => rows.findIndex((candidate) => rowKey(candidate) === rowKey(row)) === position)
+    .slice(0, 80)
+    // This list is shown only after the user explicitly chose its card name.
+    // Selecting one item from it is the user's exact-print confirmation.
+    .map((row) => ({ row, score: 0, tokenHits: 0, exactTokenScore: 0, nameTokenCount: 0, exactPrint: true }));
 }
 
 function parseImageLayout(value, width, height) {
@@ -1668,28 +1707,36 @@ async function ensureFullDataForImage() {
 function imageCandidateLabel(item) {
   const row = item.row;
   const finish = row.foil ? "闪" : "平";
-  return `${row.name} · ${String(row.scryfallSet || "-").toUpperCase()} #${row.collectorNumber || "-"} · ${finish} · ${moneyUsd(row.cashUsd)}`;
+  const printed = displayedCardName(row);
+  const oracle = printed === row.name ? "" : ` (${row.name})`;
+  return `${printed}${oracle} · ${String(row.scryfallSet || "-").toUpperCase()} #${row.collectorNumber || "-"} · ${finish} · ${moneyUsd(row.cashUsd)}`;
 }
 
 function renderImageMatches() {
-  const resolved = state.imageMatches.filter((match) => match.candidates.length && match.selected >= 0).length;
+  const resolved = state.imageMatches.filter((match) => {
+    const selected = match.candidates?.[match.selected];
+    return !!selected?.exactPrint;
+  }).length;
   els.imageBatchResults.hidden = state.imageMatches.length === 0;
-  els.imageBatchTitle.textContent = `识别候选：${resolved}/${state.imageMatches.length} 张`;
-  els.imageBatchSummary.textContent = "只加入你确认过的精确版本";
+  els.imageBatchTitle.textContent = `已确认精确版本：${resolved}/${state.imageMatches.length} 张`;
+  els.imageBatchSummary.textContent = "OCR 牌名候选不等于版本确认；只加入你确认过的精确版本";
   els.imageAddAllButton.disabled = resolved === 0;
   const fragment = document.createDocumentFragment();
   state.imageMatches.forEach((match, index) => {
     const node = document.createElement("article");
     node.className = "image-match";
     const selected = match.selected >= 0 ? match.candidates[match.selected] : null;
-    const options = [`<option value="">请选择精确版本</option>`, ...match.candidates.map((item, candidateIndex) => `<option value="${candidateIndex}" ${candidateIndex === match.selected ? "selected" : ""}>${escapeHtml(imageCandidateLabel(item))}</option>`)].join("");
+    const options = [`<option value="">请选择牌名 / 精确版本</option>`, ...match.candidates.map((item, candidateIndex) => `<option value="${candidateIndex}" ${candidateIndex === match.selected ? "selected" : ""}>${escapeHtml(imageCandidateLabel(item))}</option>`)].join("");
+    const versionButton = selected && !selected.exactPrint
+      ? `<button type="button" class="image-versions" data-image-versions="${index}">查看 ${escapeHtml(displayedCardName(selected.row))} 的全部 CK 版本</button>`
+      : "";
     node.innerHTML = `
       <img src="${match.preview}" alt="照片切图 ${index + 1}">
       <div class="image-match-body">
         <strong>第 ${index + 1} 张</strong>
         <small>${match.ocrText ? `OCR：${match.ocrText.slice(0, 70)}` : "未读到可用文字"}</small>
         <div class="image-match-lookup"><input data-image-query="${index}" type="search" value="${escapeHtml(match.ocrText || "")}" placeholder="可改成准确英文牌名"><button type="button" class="image-search" data-image-lookup="${index}">匹配</button></div>
-        ${match.candidates.length ? `<select data-image-match="${index}">${options}</select><div class="image-match-meta">${selected ? `${selected.row.cn || "未匹配中文"} ｜ ${selected.row.edition || "-"}` : "请选择候选版本，再加入回收车"}</div><button type="button" data-image-add="${index}" ${selected ? "" : "disabled"}>加入回收车</button>` : `<button type="button" class="image-search" data-image-search="${index}">用 OCR 文本搜索</button>`}
+        ${match.candidates.length ? `<select data-image-match="${index}">${options}</select><div class="image-match-meta">${selected ? `${selected.row.cn || "未匹配中文"} ｜ ${selected.row.edition || "-"}` : "先选 OCR 牌名候选；版本不清晰时，再展开该牌所有 CK 版本确认。"}</div>${versionButton}<button type="button" data-image-add="${index}" ${selected?.exactPrint ? "" : "disabled"}>加入回收车</button>` : `<button type="button" class="image-search" data-image-search="${index}">用 OCR 文本搜索</button>`}
       </div>
     `;
     fragment.appendChild(node);
@@ -1700,7 +1747,7 @@ function renderImageMatches() {
 function addImageMatchToCart(index) {
   const match = state.imageMatches[index];
   const selected = match?.candidates?.[match.selected];
-  if (!selected) return;
+  if (!selected?.exactPrint) return;
   addToCart(selected.row);
   els.imageOcrStatus.textContent = `已将第 ${index + 1} 张：${selected.row.name} 加入回收车。`;
 }
@@ -1709,7 +1756,7 @@ function addAllImageMatchesToCart() {
   let added = 0;
   for (const match of state.imageMatches) {
     const selected = match.candidates?.[match.selected];
-    if (!selected) continue;
+    if (!selected?.exactPrint) continue;
     addToCart(selected.row);
     added += 1;
   }
