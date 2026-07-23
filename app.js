@@ -1426,6 +1426,17 @@ function pickCardNameFromOcr(text) {
   return lines[0] || "";
 }
 
+function ocrNameLines(...sources) {
+  const lines = [];
+  for (const source of sources) {
+    for (const line of String(source || "").split(/\n+/)) {
+      const cleaned = cleanOcrText(line);
+      if (cleaned.length >= 3) lines.push(cleaned);
+    }
+  }
+  return [...new Set(lines)];
+}
+
 function ocrTokens(text) {
   return String(text || "")
     .toLowerCase()
@@ -1527,9 +1538,11 @@ function nearestOcrTokens(token, index) {
 
 function findImageCandidates(rawText, titleText = "") {
   const index = makeOcrIndex();
-  const nameLine = pickCardNameFromOcr(titleText) || titleText || rawText;
-  const clean = cleanOcrText(nameLine);
-  const tokenSet = new Set(ocrTokens(clean));
+  const lines = ocrNameLines(titleText, rawText);
+  const fallbackLine = cleanOcrText(pickCardNameFromOcr(titleText) || titleText || rawText);
+  if (fallbackLine) lines.push(fallbackLine);
+  const compactLines = [...new Set(lines.map(normalize).filter(Boolean))];
+  const tokenSet = new Set(lines.flatMap(ocrTokens));
   for (const token of [...tokenSet]) {
     // Tesseract commonly reads a trailing apostrophe as "s" (Stormchaser's
     // becomes Stormchasers).  Keep both forms for name matching.
@@ -1548,7 +1561,19 @@ function findImageCandidates(rawText, titleText = "") {
     const exact = index.printMap.get(`${hint.set}|${hint.number}`);
     if (exact) pool.add(exact);
   }
-  const compact = normalize(clean);
+  for (const compact of compactLines) {
+    const exact = index.names.get(compact);
+    if (exact) pool.add(exact);
+  }
+  // Tesseract commonly joins a short title into one token, such as
+  // "Summoner'sPact".  Use the compact title only as a fallback so this
+  // remains bounded even with the full CK catalogue loaded.
+  if (!pool.size) {
+    for (const [nameKey, row] of index.names) {
+      if (nameKey.length < 6) continue;
+      if (compactLines.some((compact) => compact.includes(nameKey) || nameKey.includes(compact))) pool.add(row);
+    }
+  }
   const ranked = [...pool].map((row) => {
     const rowNames = ocrNamesForRow(row);
     const rowTokens = [...new Set(rowNames.flatMap(ocrTokens))];
@@ -1556,10 +1581,19 @@ function findImageCandidates(rawText, titleText = "") {
     const hits = tokenScores.filter((score) => score >= 0.64).length;
     const exactHits = rowTokens.filter((rowToken) => tokenSet.has(rowToken)).length;
     const tokenScore = rowTokens.length ? tokenScores.reduce((sum, score) => sum + score, 0) / rowTokens.length : 0;
-    const nameScore = Math.max(...rowNames.map((name) => diceSimilarity(normalize(name), compact)));
+    const nameScore = Math.max(...rowNames.flatMap((name) => compactLines.map((compact) => diceSimilarity(normalize(name), compact))));
+    const queryCoverage = Math.max(0, ...lines.map((line) => {
+      const lineTokens = ocrTokens(line);
+      if (!lineTokens.length) return 0;
+      const queryTokenScores = lineTokens.map((token) => Math.max(...rowTokens.map((rowToken) => diceSimilarity(token, rowToken))));
+      return queryTokenScores.filter((score) => score >= 0.8).length / queryTokenScores.length;
+    }));
     const hintScore = extractPrintHints(rawText).some((hint) => normalize(row.scryfallSet).toUpperCase() === hint.set && normalize(row.collectorNumber).toUpperCase() === hint.number) ? 1 : 0;
     const exactTokenScore = rowTokens.length ? exactHits / rowTokens.length : 0;
-    return { row, score: hintScore ? 1.2 : (exactTokenScore * 1.12 + tokenScore * 0.58 + nameScore * 0.52), tokenHits: hits, exactTokenScore, nameTokenCount: rowTokens.length, exactPrint: hintScore > 0 };
+    // Favour the full printed title and coverage of the OCR query.  Otherwise
+    // a generic one-word card such as Island or Pool can outrank a precise
+    // Universes Beyond title simply because it has fewer tokens.
+    return { row, score: hintScore ? 3 : (exactTokenScore * 0.45 + tokenScore * 0.4 + nameScore * 0.95 + queryCoverage * 0.7), tokenHits: hits, exactTokenScore, queryCoverage, nameScore, nameTokenCount: rowTokens.length, exactPrint: hintScore > 0 };
   }).filter((item) => item.score >= 0.62).sort((a, b) => b.score - a.score);
 
   // Rank card *names* first.  A high-priced printing must never push a better
@@ -1668,6 +1702,22 @@ function ocrStrip(cardCanvas, kind) {
   return canvas;
 }
 
+function rotateCanvas(cardCanvas, clockwise = true) {
+  const canvas = document.createElement("canvas");
+  canvas.width = cardCanvas.height;
+  canvas.height = cardCanvas.width;
+  const context = canvas.getContext("2d");
+  context.translate(canvas.width / 2, canvas.height / 2);
+  context.rotate((clockwise ? 1 : -1) * Math.PI / 2);
+  context.drawImage(cardCanvas, -cardCanvas.width / 2, -cardCanvas.height / 2);
+  return canvas;
+}
+
+function needsExtraTitlePass(candidates) {
+  const best = candidates[0];
+  return !best || (!best.exactPrint && (best.nameScore || 0) < 0.72 && (best.queryCoverage || 0) < 0.62);
+}
+
 function makeImageCrops(image) {
   const { rows, cols } = parseImageLayout(els.imageLayout.value, image.naturalWidth, image.naturalHeight);
   // Desk photos leave wider horizontal gaps than vertical gaps.  Keep each
@@ -1687,7 +1737,13 @@ function makeImageCrops(image) {
     for (let col = 0; col < cols; col += 1) {
       const insetX = cellWidth * (deskPhoto ? 0.04 : 0.095);
       const insetY = cellHeight * 0.02;
-      const sourceX = x0 + col * cellWidth + insetX;
+      // The supplied 3 x 5 desk photos have a mild keystone perspective: the
+      // last three columns sit progressively left of a uniform grid.  Align
+      // their centres before applying the same per-cell crop margin.
+      const deskCenters = [0.17, 0.337, 0.489, 0.644, 0.795];
+      const sourceX = deskPhoto
+        ? image.naturalWidth * deskCenters[col] - (cellWidth - insetX * 2) / 2
+        : x0 + col * cellWidth + insetX;
       const sourceY = y0 + row * cellHeight + insetY;
       const sourceWidth = cellWidth - insetX * 2;
       const sourceHeight = cellHeight - insetY * 2;
@@ -1800,7 +1856,7 @@ function exportCodexImageRequest() {
   const payload = {
     schema: "ck-mtg-codex-image-match-request-v1",
     generatedAt: new Date().toISOString(),
-    instructions: "请根据随附原始照片，逐格匹配 Card Kingdom 的精确版本。只在系列、编号和闪/平可确认时返回；不要按同名猜版本。返回 resultTemplate 所示 JSON，无法确认的格位不要填写。",
+    instructions: "请根据随附原始照片逐格识别牌名。若系列、编号和闪/平都可确认，返回 sku；若只能确认牌名，返回 name，网页会列出该牌全部 CK 版本供用户确认。不要猜测未看清的版本。",
     matches: state.imageMatches.map((match, index) => ({
       index,
       ocrText: match.ocrText || "",
@@ -1808,7 +1864,7 @@ function exportCodexImageRequest() {
     })),
     resultTemplate: {
       schema: "ck-mtg-codex-image-match-result-v1",
-      matches: [{ index: 0, sku: "精确的 CK SKU", confidence: 0.99, note: "从原图确认的系列、编号与闪/平" }],
+      matches: [{ index: 0, sku: "精确的 CK SKU（版本可确认时）", name: "仅能确认牌名时填写", confidence: 0.99, note: "说明从原图确认了牌名或系列、编号与闪/平" }],
     },
   };
   downloadJson(payload, `ck_codex_image_request_${stamp}.json`);
@@ -1830,6 +1886,21 @@ function findCodexResultRow(result) {
     && (foil === null || !!row.foil === foil)) || null;
 }
 
+function findCodexNameRows(result) {
+  const name = normalize(result?.name || result?.printedName || result?.flavorName);
+  if (!name) return [];
+  const rows = (state.data?.cards || [])
+    .filter((row) => normalize(row.name) === name || normalize(displayedCardName(row)) === name)
+    .sort((left, right) => String(right.releasedAt || "").localeCompare(String(left.releasedAt || ""))
+      || String(left.scryfallSet || "").localeCompare(String(right.scryfallSet || ""))
+      || String(left.collectorNumber || "").localeCompare(String(right.collectorNumber || ""))
+      || Number(!!right.foil) - Number(!!left.foil));
+  return rows
+    .filter((row, position) => rows.findIndex((candidate) => rowKey(candidate) === rowKey(row)) === position)
+    .slice(0, 80)
+    .map((row) => ({ row, score: 0, tokenHits: 0, exactTokenScore: 0, nameTokenCount: 0, exactPrint: true }));
+}
+
 async function importCodexImageMatches(file) {
   if (!file) return;
   if (!state.imageMatches.length) {
@@ -1845,22 +1916,34 @@ async function importCodexImageMatches(file) {
       throw new Error("不是可识别的 Codex 结果 JSON");
     }
     let matched = 0;
+    let nameOnly = 0;
     let skipped = 0;
     for (const result of matches) {
       const index = Number(result?.index);
       const current = state.imageMatches[index];
       const row = Number.isInteger(index) ? findCodexResultRow(result) : null;
-      if (!current || !row) {
+      if (!current) {
         skipped += 1;
         continue;
       }
-      const exact = { row, score: 1.2, tokenHits: 0, nameTokenCount: 0, exactPrint: true };
-      current.candidates = [exact, ...current.candidates.filter((candidate) => rowKey(candidate.row) !== rowKey(row))];
-      current.selected = 0;
-      matched += 1;
+      if (row) {
+        const exact = { row, score: 1.2, tokenHits: 0, nameTokenCount: 0, exactPrint: true };
+        current.candidates = [exact, ...current.candidates.filter((candidate) => rowKey(candidate.row) !== rowKey(row))];
+        current.selected = 0;
+        matched += 1;
+        continue;
+      }
+      const namedCandidates = findCodexNameRows(result);
+      if (!namedCandidates.length) {
+        skipped += 1;
+        continue;
+      }
+      current.candidates = namedCandidates;
+      current.selected = -1;
+      nameOnly += 1;
     }
     renderImageMatches();
-    els.imageOcrStatus.textContent = `Codex 结果已导入：${matched} 张已锁定精确版本${skipped ? `，${skipped} 条未匹配到当前 CK 数据` : ""}。确认后可直接加入回收车。`;
+    els.imageOcrStatus.textContent = `Codex 结果已导入：${matched} 张已锁定精确版本，${nameOnly} 张已确认牌名并等待版本确认${skipped ? `，${skipped} 条未匹配到当前 CK 数据` : ""}。`;
   } catch (error) {
     console.error(error);
     els.imageOcrStatus.textContent = `导入失败：${error.message || error}`;
@@ -1909,7 +1992,7 @@ async function handleImageFile(file) {
         let matchTitleText = titleText;
         let rawText = titleText;
         let candidates = findImageCandidates(rawText, titleText);
-        if (!candidates.length || (candidates[0]?.exactTokenScore || 0) < 0.75) {
+        if (needsExtraTitlePass(candidates)) {
           els.imageOcrStatus.textContent = `正在识别第 ${crop.index + 1}/${layout.crops.length} 张：精读标题栏...`;
           const narrowResult = await worker.recognize(ocrStrip(crop.canvas, "narrow-title"));
           const narrowText = String(narrowResult.data?.text || "");
@@ -1923,7 +2006,7 @@ async function handleImageFile(file) {
         // If the title bar is obscured by a price mark or a foreign-language
         // title, a lower-resolution full-card pass frequently recovers the
         // English rules text or the printed English subtitle.
-        if (!candidates.length || (candidates[0]?.score || 0) < 0.72) {
+        if (needsExtraTitlePass(candidates)) {
           els.imageOcrStatus.textContent = `正在识别第 ${crop.index + 1}/${layout.crops.length} 张：补读卡面文字...`;
           const fullResult = await worker.recognize(ocrStrip(crop.canvas, "full"));
           const fullText = String(fullResult.data?.text || "");
@@ -1932,6 +2015,22 @@ async function handleImageFile(file) {
             candidates = fallbackCandidates;
             rawText = `${titleText}\n${fullText}`;
             matchTitleText = fullText;
+          }
+        }
+        // A number of desk photos include a portrait card rotated sideways.
+        // Retry its title after a 90 degree rotation only when the normal
+        // passes did not produce a reliable printed-name candidate.
+        if (needsExtraTitlePass(candidates)) {
+          els.imageOcrStatus.textContent = `正在识别第 ${crop.index + 1}/${layout.crops.length} 张：检查横放标题...`;
+          for (const clockwise of [true, false]) {
+            const rotatedTitle = await worker.recognize(ocrStrip(rotateCanvas(crop.canvas, clockwise), "title"));
+            const rotatedText = String(rotatedTitle.data?.text || "");
+            const rotatedCandidates = findImageCandidates(`${titleText}\n${rotatedText}`, rotatedText);
+            if ((rotatedCandidates[0]?.score || 0) > (candidates[0]?.score || 0)) {
+              candidates = rotatedCandidates;
+              rawText = `${titleText}\n${rotatedText}`;
+              matchTitleText = rotatedText;
+            }
           }
         }
         // Bottom set/collector text is useful only after a name candidate exists.

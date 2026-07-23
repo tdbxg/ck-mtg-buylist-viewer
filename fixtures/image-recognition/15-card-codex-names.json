@@ -1,0 +1,20 @@
+{
+  "schema": "ck-mtg-codex-image-match-result-v1",
+  "matches": [
+    { "index": 0, "name": "Lorehold, the Historian", "confidence": 0.99, "note": "English printed title" },
+    { "index": 1, "name": "Summoner's Pact", "confidence": 0.99, "note": "English printed title" },
+    { "index": 2, "name": "Last March of the Ents", "confidence": 0.99, "note": "English printed title" },
+    { "index": 3, "name": "Volcano of Roku's Island", "confidence": 0.99, "note": "Printed Avatar title; version intentionally unconfirmed" },
+    { "index": 4, "name": "Breeding Pool", "confidence": 0.99, "note": "English printed title" },
+    { "index": 5, "name": "Innkeeper's Talent", "confidence": 0.99, "note": "Sideways card title" },
+    { "index": 6, "name": "Swords to Plowshares", "confidence": 0.99, "note": "English printed title" },
+    { "index": 7, "name": "Cloud, Midgar Mercenary", "confidence": 0.99, "note": "Japanese printing; title identified visually" },
+    { "index": 8, "name": "Myrel, Shield of Argive", "confidence": 0.99, "note": "English printed title" },
+    { "index": 9, "name": "Final Fortune", "confidence": 0.99, "note": "English printed title" },
+    { "index": 10, "name": "Stormchaser's Talent", "confidence": 0.99, "note": "English printed title" },
+    { "index": 11, "name": "Prismari, the Inspiration", "confidence": 0.99, "note": "English printed title" },
+    { "index": 12, "name": "Isochron Scepter", "confidence": 0.99, "note": "English printed title" },
+    { "index": 13, "name": "Krark-Clan Ironworks", "confidence": 0.99, "note": "English printed title" },
+    { "index": 14, "name": "Phyrexian Ironworks", "confidence": 0.99, "note": "English printed title" }
+  ]
+}
