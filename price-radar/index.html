@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="公开的电商商品价格、CK 回收价与外链异常监控台">
+  <title>价格雷达｜电商商品监控台</title>
+  <link rel="stylesheet" href="./styles.css?v=20260726-1">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top"><span class="brand-mark">价</span><span><b>价格雷达</b><small>公开商品监控台</small></span></a>
+    <div class="sync-state"><span class="pulse"></span><span><b>公开访问</b><small id="checkedAt">正在载入数据</small></span></div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div><p class="eyebrow">PRICE WATCH · 多方价格参考</p><h1>价格、回收机会和异常链接，一页看清。</h1><p>整合店内售价、成本、TCGplayer 参考价与 Card Kingdom 现金回收价。所有异常只做标记，不会自动修改售价。</p></div>
+      <aside><span>数据来源</span><b id="sourceFile">电商总表</b><small id="ckTime">CK 数据载入中</small></aside>
+    </section>
+
+    <section class="kpis" aria-label="价格概览">
+      <article><span>商品记录</span><strong id="productCount">—</strong><small>清洗后的有效记录</small></article>
+      <article class="ck"><span>CK 精确连接</span><strong id="ckExact">—</strong><small>同一规格或印刷 UUID</small></article>
+      <article class="opportunity"><span>低于 CK 回收价</span><strong id="ckBelow">—</strong><small>未扣物流和结算成本</small></article>
+      <article class="warning"><span>外链待处理</span><strong id="linkIssues">—</strong><small>错规格、重复 ID 或访问异常</small></article>
+    </section>
+
+    <section class="notes panel">
+      <div><p class="eyebrow">MATCHING POLICY</p><h2>匹配与风险边界</h2></div>
+      <ul><li><b>单卡</b>只接受相同 Scryfall 印刷 UUID，不按牌名猜版本。</li><li><b>密封产品</b>名称、版本及包装规格一致才显示 CK 价格。</li><li><b>外链异常</b>会直接标注；403 代表访问受限，需要人工复核。</li></ul>
+    </section>
+
+    <section class="catalog panel">
+      <div class="catalog-head"><div><p class="eyebrow">PRODUCT CATALOG</p><h2>商品价格明细</h2><span id="resultCount">正在载入</span></div><a class="download" href="./data/products.csv" download>下载清洗数据</a></div>
+      <div class="filters">
+        <label class="search"><span>搜索</span><input id="search" type="search" placeholder="商品名、SKU、系列、商品 ID"></label>
+        <label><span>类别</span><select id="category"><option value="">全部类别</option></select></label>
+        <label><span>状态</span><select id="status"><option value="">全部状态</option><option value="below-ck">低于 CK 回收价</option><option value="ck-exact">CK 精确连接</option><option value="link-issue">外链有问题</option><option value="critical">严重问题</option><option value="review">待复核</option><option value="below-external">低于外网价</option></select></label>
+        <label><span>排序</span><select id="sort"><option value="default">默认</option><option value="ck-gap">CK 价差从高到低</option><option value="price-desc">售价从高到低</option><option value="price-asc">售价从低到高</option><option value="stock">库存从高到低</option></select></label>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>商品</th><th>类别 / 系列</th><th>库存</th><th>成本</th><th>当前售价</th><th>CK 现金回收</th><th>状态</th><th>查价</th></tr></thead><tbody id="rows"><tr><td colspan="8" class="empty">正在整理商品数据…</td></tr></tbody></table></div>
+      <div class="pagination"><span id="pageInfo">第 1 / 1 页</span><div><button id="prev" type="button">上一页</button><button id="next" type="button">下一页</button></div></div>
+    </section>
+  </main>
+
+  <footer><b>价格雷达</b><span>CK 回收价未扣国际运费、品相折价、税费、汇率和结算成本，仅供决策参考。</span></footer>
+  <script src="./app.js?v=20260726-1" defer></script>
+</body>
+</html>
