@@ -850,15 +850,82 @@ def scryfall_bulk_cards() -> list[dict]:
     download_uri = meta.get("download_uri")
     if not download_uri:
         raise RuntimeError("Scryfall default-cards bulk download URI missing")
-    req = urllib.request.Request(download_uri, headers=JSON_HEADERS)
-    with urllib.request.urlopen(req, timeout=900) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+    # The Scryfall bulk file is large enough that a single streaming request can
+    # be interrupted. Let curl resume a partial temporary download instead of
+    # discarding hundreds of MB and aborting the entire price refresh.
+    bulk_path = ROOT / ".scryfall-default-cards.json"
+    command = [
+        "curl",
+        "-fL",
+        "--retry", "5",
+        "--retry-delay", "2",
+        "--retry-all-errors",
+        "--connect-timeout", "30",
+        "--max-time", "1800",
+        "-A", USER_AGENT,
+    ]
+    if bulk_path.exists() and bulk_path.stat().st_size:
+        command.extend(["-C", "-"])
+    command.extend(["-o", str(bulk_path), download_uri])
+    try:
+        subprocess.run(command, check=True)
+        with open(bulk_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    finally:
+        bulk_path.unlink(missing_ok=True)
 
 
-def enrich_market_reference(payload: dict) -> dict:
+def previous_market_refs(previous: dict) -> dict[str, dict]:
+    refs: dict[str, dict] = {}
+    fields = (
+        "marketUsd",
+        "marketEur",
+        "tcgplayerUrl",
+        "cardmarketUrl",
+        "legalities",
+        "formatBucket",
+    )
+    for row in previous.get("cards", []):
+        record = {field: row[field] for field in fields if row.get(field) not in (None, "")}
+        if not record:
+            continue
+        sid = row.get("scryfallId") or ""
+        if sid:
+            refs[f"id:{sid}"] = record
+        key = market_key(
+            row.get("name") or row.get("ckName") or "",
+            row.get("scryfallSet") or "",
+            row.get("collectorNumber") or "",
+        )
+        if key:
+            refs[f"key:{key}"] = record
+    return refs
+
+
+def enrich_market_reference(payload: dict, previous: dict | None = None) -> dict:
     if os.environ.get("CK_SKIP_MARKET_BULK") == "1":
-        payload.setdefault("meta", {})["scryfallMarketSource"] = "Scryfall public USD/EUR price fields"
-        payload.setdefault("meta", {})["scryfallMarketSkipped"] = "local_skip"
+        refs = previous_market_refs(previous or {})
+        restored_usd = 0
+        restored_eur = 0
+        for row in payload.get("cards", []):
+            key = market_key(
+                row.get("name") or row.get("ckName") or "",
+                row.get("scryfallSet") or "",
+                row.get("collectorNumber") or "",
+            )
+            rec = refs.get(f"id:{row.get('scryfallId') or ''}") or refs.get(f"key:{key}")
+            if not rec:
+                continue
+            row.update(rec)
+            if row.get("marketUsd") is not None:
+                restored_usd += 1
+            if row.get("marketEur") is not None:
+                restored_eur += 1
+        meta = payload.setdefault("meta", {})
+        meta["scryfallMarketSource"] = "Last successful Scryfall public USD/EUR snapshot"
+        meta["scryfallMarketSkipped"] = "bulk_download_unavailable"
+        meta["scryfallMarketMatchedUsd"] = restored_usd
+        meta["scryfallMarketMatchedEur"] = restored_eur
         return payload
 
     cards = payload.get("cards", [])
@@ -1181,7 +1248,7 @@ def main() -> int:
         prev_cn_by_name,
         prev_skin_cn_by_name,
     )
-    payload = enrich_market_reference(payload)
+    payload = enrich_market_reference(payload, previous)
     payload = enrich_sealed_images(payload, previous)
     write_payload_files(payload)
     write_fast_payload(payload)
