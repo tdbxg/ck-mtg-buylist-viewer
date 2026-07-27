@@ -166,10 +166,15 @@
           </div>
           <div class="field" id="setField">
             <label for="setSelect">系列（按发行时间）</label>
+            <input id="setFinderInput" type="search" placeholder="查系列代码、名称或年份，如 Alpha / 1994">
+            <select id="setYearSelect" aria-label="按发行年份筛选系列"><option value="">全部年份</option></select>
+            <div id="setFinderResults" class="finder-results" aria-live="polite"></div>
             <select id="setSelect"><option value="">全部系列</option></select>
           </div>
           <div class="field" id="editionField">
             <label for="editionSelect">CK版本</label>
+            <input id="editionFinderInput" type="search" placeholder="查 CK 版本，如 Legends / Promotional">
+            <div id="editionFinderResults" class="finder-results" aria-live="polite"></div>
             <select id="editionSelect"><option value="">全部CK版本</option></select>
           </div>
           <div class="field recent-field" id="recentSetsField">
@@ -225,10 +230,17 @@
           <button id="exportCartButton" type="button">导出牌表 CSV</button>
           <button id="clearCartButton" type="button">清空</button>
         </div>
+        <div class="cart-bulk-tools">
+          <input id="cartSearchInput" type="search" placeholder="在回收车中查牌名、系列、编号、SKU">
+          <label><input id="cartSelectVisible" type="checkbox"> 全选当前结果</label>
+          <button id="removeSelectedCartButton" type="button" class="danger-button">移除已选</button>
+          <span id="cartSelectionSummary" class="hint"></span>
+        </div>
       <div id="cartTableWrap" class="cart-table-wrap">
         <table class="cart-table">
           <thead>
             <tr>
+              <th class="cart-check-col">选</th>
               <th>牌名</th>
               <th>版本</th>
               <th>编号</th>

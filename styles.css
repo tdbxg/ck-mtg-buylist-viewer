@@ -845,6 +845,65 @@ button {
   min-width: 260px;
 }
 
+.cart-bulk-tools {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin: 10px 0;
+}
+
+.cart-bulk-tools > input {
+  flex: 1 1 260px;
+  min-width: 180px;
+}
+
+.cart-bulk-tools label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  color: var(--muted);
+}
+
+.danger-button,
+.cart-actions .danger-button {
+  background: #fff;
+  color: var(--danger);
+  border-color: #f0b7b2;
+}
+
+.finder-results {
+  display: grid;
+  gap: 5px;
+  max-height: 184px;
+  overflow: auto;
+  margin-top: 6px;
+}
+
+.finder-result {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 7px 9px;
+  text-align: left;
+  background: #f8fafc;
+  border-color: var(--line);
+}
+
+.finder-result strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.finder-result small {
+  flex: 0 0 auto;
+  color: var(--muted);
+}
+
 .cart-actions button:last-child,
 .remove-cart {
   background: #fff;
@@ -875,6 +934,16 @@ button {
   border-bottom: 1px solid var(--line);
   text-align: left;
   vertical-align: middle;
+}
+
+.cart-check-col {
+  width: 42px;
+  text-align: center !important;
+}
+
+.cart-check-col input {
+  width: auto;
+  min-height: auto;
 }
 
 .cart-table th {

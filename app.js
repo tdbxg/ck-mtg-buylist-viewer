@@ -31,6 +31,8 @@ const state = {
   moversFormat: "all",
   moversQuery: "",
   cart: new Map(),
+  cartQuery: "",
+  cartSelected: new Set(),
   history: [],
   ocrIndex: null,
   imageMatches: [],
@@ -78,8 +80,13 @@ const els = {
   raritySelect: document.querySelector("#raritySelect"),
   editionField: document.querySelector("#editionField"),
   editionSelect: document.querySelector("#editionSelect"),
+  editionFinderInput: document.querySelector("#editionFinderInput"),
+  editionFinderResults: document.querySelector("#editionFinderResults"),
   setField: document.querySelector("#setField"),
   setSelect: document.querySelector("#setSelect"),
+  setFinderInput: document.querySelector("#setFinderInput"),
+  setYearSelect: document.querySelector("#setYearSelect"),
+  setFinderResults: document.querySelector("#setFinderResults"),
   recentSetsField: document.querySelector("#recentSetsField"),
   recentSets: document.querySelector("#recentSets"),
   minPrice: document.querySelector("#minPrice"),
@@ -104,6 +111,10 @@ const els = {
   cartTableWrap: document.querySelector("#cartTableWrap"),
   exportCartButton: document.querySelector("#exportCartButton"),
   clearCartButton: document.querySelector("#clearCartButton"),
+  cartSearchInput: document.querySelector("#cartSearchInput"),
+  cartSelectVisible: document.querySelector("#cartSelectVisible"),
+  removeSelectedCartButton: document.querySelector("#removeSelectedCartButton"),
+  cartSelectionSummary: document.querySelector("#cartSelectionSummary"),
   historySummary: document.querySelector("#historySummary"),
   historyRows: document.querySelector("#historyRows"),
   historyEmpty: document.querySelector("#historyEmpty"),
@@ -314,7 +325,7 @@ function populateEditions() {
   first.value = "";
   first.textContent = "全部CK版本";
   frag.appendChild(first);
-  for (const item of state.data.editions.slice(0, 800)) {
+  for (const item of state.data.editions) {
     const option = document.createElement("option");
     option.value = item.name;
     const date = item.latestReleasedAt ? ` · ${item.latestReleasedAt}` : "";
@@ -322,6 +333,69 @@ function populateEditions() {
     frag.appendChild(option);
   }
   els.editionSelect.replaceChildren(frag);
+  renderEditionFinder();
+}
+
+function renderFinderResults(container, items, toButton) {
+  const frag = document.createDocumentFragment();
+  for (const item of items.slice(0, 16)) frag.appendChild(toButton(item));
+  container.replaceChildren(frag);
+}
+
+function populateSetYears() {
+  const current = els.setYearSelect.value;
+  const years = [...new Set(getSets().map((item) => String(item.releasedAt || "").slice(0, 4)).filter(Boolean))].sort((a, b) => b.localeCompare(a));
+  const frag = document.createDocumentFragment();
+  const first = document.createElement("option");
+  first.value = "";
+  first.textContent = "全部年份";
+  frag.appendChild(first);
+  for (const year of years) {
+    const option = document.createElement("option");
+    option.value = year;
+    option.textContent = year;
+    frag.appendChild(option);
+  }
+  els.setYearSelect.replaceChildren(frag);
+  els.setYearSelect.value = years.includes(current) ? current : "";
+}
+
+function renderSetFinder() {
+  const query = normalize(els.setFinderInput.value);
+  const year = els.setYearSelect.value;
+  if (!query && !year) {
+    els.setFinderResults.replaceChildren();
+    return;
+  }
+  const matches = getSets().filter((item) => {
+    const text = normalize(`${item.code} ${item.name} ${item.releasedAt}`);
+    return (!query || text.includes(query)) && (!year || String(item.releasedAt || "").startsWith(year));
+  });
+  renderFinderResults(els.setFinderResults, matches, (item) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "finder-result";
+    button.dataset.setFinder = item.code;
+    button.innerHTML = `<strong>${String(item.code).toUpperCase()} · ${escapeHtml(item.name)}</strong><small>${item.releasedAt || "未知日期"} · ${item.count} 张</small>`;
+    return button;
+  });
+}
+
+function renderEditionFinder() {
+  const query = normalize(els.editionFinderInput.value);
+  if (!query) {
+    els.editionFinderResults.replaceChildren();
+    return;
+  }
+  const matches = state.data.editions.filter((item) => normalize(`${item.name} ${item.latestReleasedAt}`).includes(query));
+  renderFinderResults(els.editionFinderResults, matches, (item) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "finder-result";
+    button.dataset.editionFinder = item.name;
+    button.innerHTML = `<strong>${escapeHtml(item.name)}</strong><small>${item.latestReleasedAt || "未知日期"} · ${item.count} 张</small>`;
+    return button;
+  });
 }
 
 function getSets() {
@@ -369,6 +443,8 @@ function populateSets() {
     frag.appendChild(option);
   }
   els.setSelect.replaceChildren(frag);
+  populateSetYears();
+  renderSetFinder();
 }
 
 function getRecentSets(limit = 18) {
@@ -860,6 +936,29 @@ function bindEvents() {
     el.addEventListener("input", rerender);
     el.addEventListener("change", rerender);
   }
+  els.setFinderInput.addEventListener("input", renderSetFinder);
+  els.setYearSelect.addEventListener("change", renderSetFinder);
+  els.setFinderResults.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-set-finder]");
+    if (!button) return;
+    els.typeSelect.value = "cards";
+    els.setSelect.value = button.dataset.setFinder;
+    els.editionSelect.value = "";
+    els.setFinderInput.value = button.textContent.trim();
+    state.page = 1;
+    readControls();
+    render();
+  });
+  els.editionFinderInput.addEventListener("input", renderEditionFinder);
+  els.editionFinderResults.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-edition-finder]");
+    if (!button) return;
+    els.typeSelect.value = "cards";
+    els.editionSelect.value = button.dataset.editionFinder;
+    state.page = 1;
+    readControls();
+    render();
+  });
   els.sortSelect.addEventListener("change", () => {
     if ((els.sortSelect.value === "euDesc" || els.sortSelect.value === "spreadDesc") && !state.cardmarketLoaded) {
       els.metaLine.textContent = "正在按需加载欧洲参考价...";
@@ -916,6 +1015,26 @@ function bindEvents() {
     if (!button) return;
     removeFromCart(button.dataset.key);
   });
+  els.cartRows.addEventListener("change", (event) => {
+    const checkbox = event.target.closest(".cart-select");
+    if (!checkbox) return;
+    if (checkbox.checked) state.cartSelected.add(checkbox.dataset.key);
+    else state.cartSelected.delete(checkbox.dataset.key);
+    renderCart();
+  });
+  els.cartSearchInput.addEventListener("input", () => {
+    state.cartQuery = els.cartSearchInput.value;
+    renderCart();
+  });
+  els.cartSelectVisible.addEventListener("change", () => {
+    const visible = cartVisibleRows();
+    for (const row of visible) {
+      if (els.cartSelectVisible.checked) state.cartSelected.add(row.key);
+      else state.cartSelected.delete(row.key);
+    }
+    renderCart();
+  });
+  els.removeSelectedCartButton.addEventListener("click", removeSelectedCart);
   els.exportCartButton.addEventListener("click", exportCartCsv);
   els.clearCartButton.addEventListener("click", clearCart);
   els.clearHistoryButton.addEventListener("click", clearHistory);
@@ -1143,6 +1262,7 @@ function updateCartQty(key, qty) {
   const nextQty = Math.max(0, Math.floor(Number(qty || 0)));
   if (nextQty <= 0) {
     state.cart.delete(key);
+    state.cartSelected.delete(key);
   } else {
     item.qty = nextQty;
   }
@@ -1153,6 +1273,7 @@ function updateCartQty(key, qty) {
 
 function removeFromCart(key) {
   state.cart.delete(key);
+  state.cartSelected.delete(key);
   saveCart();
   renderCart();
   render();
@@ -1160,28 +1281,64 @@ function removeFromCart(key) {
 
 function clearCart() {
   if (!state.cart.size) return;
+  if (!window.confirm(`确定清空回收车中的 ${state.cart.size} 种牌吗？`)) return;
   state.cart.clear();
+  state.cartSelected.clear();
+  saveCart();
+  renderCart();
+  render();
+}
+
+function cartVisibleRows() {
+  const query = normalize(state.cartQuery);
+  return [...state.cart.values()]
+    .filter((row) => !query || normalize([
+      row.name,
+      row.cn,
+      row.edition,
+      row.scryfallSetName,
+      row.scryfallSet,
+      row.collectorNumber,
+      row.sku,
+    ].join(" ")).includes(query))
+    .sort((a, b) => b.cashUsd - a.cashUsd);
+}
+
+function removeSelectedCart() {
+  const keys = [...state.cartSelected].filter((key) => state.cart.has(key));
+  if (!keys.length) return;
+  if (!window.confirm(`确定移除已选的 ${keys.length} 种牌吗？`)) return;
+  for (const key of keys) state.cart.delete(key);
+  state.cartSelected.clear();
   saveCart();
   renderCart();
   render();
 }
 
 function renderCart() {
-  const rows = [...state.cart.values()].sort((a, b) => b.cashUsd - a.cashUsd);
-  const totalQty = rows.reduce((sum, row) => sum + Number(row.qty || 0), 0);
-  const totalCash = rows.reduce((sum, row) => sum + Number(row.qty || 0) * Number(row.cashUsd || 0), 0);
-  const totalCredit = rows.reduce((sum, row) => sum + Number(row.qty || 0) * Number(row.creditUsd || 0), 0);
-  const totalRetail = rows.reduce((sum, row) => sum + Number(row.qty || 0) * Number(row.retailUsd || 0), 0);
-  els.cartSummary.textContent = `${rows.length.toLocaleString("zh-CN")} 种 / ${totalQty.toLocaleString("zh-CN")} 张 / 现金 ${moneyUsd(totalCash)} (${pct(valueRatio(totalCash, totalRetail))}) / 积分 ${moneyUsd(totalCredit)} (${pct(valueRatio(totalCredit, totalRetail))}) / CK售价 ${moneyUsd(totalRetail)}`;
-  els.cartEmpty.hidden = rows.length !== 0;
-  els.cartTableWrap.hidden = rows.length === 0;
-  els.exportCartButton.disabled = rows.length === 0;
-  els.clearCartButton.disabled = rows.length === 0;
+  const allRows = [...state.cart.values()].sort((a, b) => b.cashUsd - a.cashUsd);
+  const rows = cartVisibleRows();
+  const totalQty = allRows.reduce((sum, row) => sum + Number(row.qty || 0), 0);
+  const totalCash = allRows.reduce((sum, row) => sum + Number(row.qty || 0) * Number(row.cashUsd || 0), 0);
+  const totalCredit = allRows.reduce((sum, row) => sum + Number(row.qty || 0) * Number(row.creditUsd || 0), 0);
+  const totalRetail = allRows.reduce((sum, row) => sum + Number(row.qty || 0) * Number(row.retailUsd || 0), 0);
+  const selectedCount = [...state.cartSelected].filter((key) => state.cart.has(key)).length;
+  const allVisibleSelected = rows.length > 0 && rows.every((row) => state.cartSelected.has(row.key));
+  els.cartSummary.textContent = `${allRows.length.toLocaleString("zh-CN")} 种 / ${totalQty.toLocaleString("zh-CN")} 张 / 现金 ${moneyUsd(totalCash)} (${pct(valueRatio(totalCash, totalRetail))}) / 积分 ${moneyUsd(totalCredit)} (${pct(valueRatio(totalCredit, totalRetail))}) / CK售价 ${moneyUsd(totalRetail)}`;
+  els.cartEmpty.hidden = allRows.length !== 0;
+  els.cartTableWrap.hidden = allRows.length === 0;
+  els.exportCartButton.disabled = allRows.length === 0;
+  els.clearCartButton.disabled = allRows.length === 0;
+  els.cartSelectVisible.checked = allVisibleSelected;
+  els.cartSelectVisible.indeterminate = selectedCount > 0 && !allVisibleSelected;
+  els.removeSelectedCartButton.disabled = selectedCount === 0;
+  els.cartSelectionSummary.textContent = allRows.length ? `显示 ${rows.length}/${allRows.length} 种 · 已选 ${selectedCount} 种` : "";
 
   const frag = document.createDocumentFragment();
   for (const row of rows) {
     const tr = document.createElement("tr");
     tr.innerHTML = `
+      <td class="cart-check-col"><input class="cart-select" data-key="${row.key}" type="checkbox" aria-label="选择 ${escapeHtml(row.name)}" ${state.cartSelected.has(row.key) ? "checked" : ""}></td>
       <td><strong>${row.name}</strong><br><span>${row.cn || ""}${row.foil ? " / Foil" : ""}</span></td>
       <td>${row.edition || "-"}<br><span>${String(row.scryfallSet || "").toUpperCase()}${row.collectorNumber ? ` #${row.collectorNumber}` : ""}${row.scryfallSetName ? ` · ${row.scryfallSetName}` : ""}</span></td>
       <td>${row.collectorNumber || "-"}<br><span>${row.sku || ""}</span></td>
