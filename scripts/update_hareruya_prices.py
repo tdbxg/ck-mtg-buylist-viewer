@@ -39,10 +39,14 @@ def text(value: str) -> str:
 def find_title(html: str) -> tuple[str, str]:
     match = re.search(r"<title>\s*(?:買取：)?\s*(.*?)\s*\|", html, re.S)
     raw = text(match.group(1)) if match else ""
+    paired = re.search(r"《([^/》]+?)\s*/\s*([^》]+?)》", raw)
+    if paired:
+        return paired.group(1).strip(), paired.group(2).strip()
     if "/" in raw:
         ja, en = raw.split("/", 1)
-        return ja.strip("《》 "), en.split("》", 1)[0].strip("《》 ")
-    return raw.strip("《》 "), raw.strip("《》 ")
+        return ja.split("《")[-1].strip("《》 "), en.split("》", 1)[0].strip("《》 ")
+    cleaned = raw.split("《")[-1].split("》", 1)[0].strip("《》 ")
+    return cleaned, cleaned
 
 
 def find_image(html: str) -> str:

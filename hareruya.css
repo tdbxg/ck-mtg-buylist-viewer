@@ -3,20 +3,25 @@
 .hareruya-search { min-width: 0; }
 .official-link { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 8px 12px; border: 1px solid var(--green); border-radius: 6px; color: #fff; background: var(--green); font-weight: 700; text-decoration: none; white-space: nowrap; }
 .hareruya-note { margin: 12px 0; padding: 10px 12px; color: var(--muted); border: 1px solid #c9d9d6; border-left: 4px solid var(--green); border-radius: 6px; background: #f4fbf9; }
-.hareruya-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(440px, 1fr)); gap: 12px; }
-.hareruya-card { display: grid; grid-template-columns: 118px minmax(0, 1fr); gap: 12px; padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
-.hareruya-image { width: 118px; height: 164px; object-fit: cover; border-radius: 5px; background: #eef1f5; }
-.hareruya-main { min-width: 0; }
-.hareruya-main h2 { margin: 0; font-size: 19px; }
-.hareruya-subtitle { margin: 4px 0 9px; color: var(--muted); }
-.hareruya-details { display: grid; gap: 3px; color: var(--muted); font-size: 13px; }
-.hareruya-prices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; margin-top: 11px; }
-.hareruya-price { padding: 8px; border: 1px solid var(--line); border-radius: 6px; background: #fafbfc; }
-.hareruya-price.buy { border-color: #acd6cf; background: #eefaf7; }
-.hareruya-price span, .hareruya-price small { display: block; color: var(--muted); }
-.hareruya-price strong { display: block; margin-top: 2px; font-size: 17px; }
-.hareruya-links { display: flex; gap: 12px; margin-top: 10px; }
-.hareruya-links a { color: var(--blue); font-weight: 700; text-decoration: none; }
+.hareruya-results { overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
+.hareruya-results-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+.hareruya-results-head strong { font-size: 16px; }
+.hareruya-results-head span { color: var(--muted); font-size: 13px; }
+.hareruya-table-wrap { overflow-x: auto; }
+.hareruya-table { width: 100%; min-width: 940px; border-collapse: collapse; font-size: 14px; }
+.hareruya-table th, .hareruya-table td { padding: 11px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.hareruya-table th { position: sticky; top: 0; z-index: 1; color: #445268; background: #f4f7fa; font-size: 12px; white-space: nowrap; }
+.hareruya-table tbody tr:hover { background: #f8fbfc; }
+.hareruya-table tbody tr:last-child td { border-bottom: 0; }
+.hareruya-name { max-width: 290px; font-weight: 800; line-height: 1.35; overflow-wrap: anywhere; }
+.hareruya-name small, .hareruya-muted { display: block; margin-top: 3px; color: var(--muted); font-size: 12px; font-weight: 400; line-height: 1.35; }
+.hareruya-language { font-weight: 700; white-space: nowrap; }
+.hareruya-price-cell { min-width: 98px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.hareruya-price-cell strong { display: block; font-size: 15px; }
+.hareruya-price-cell small { display: block; margin-top: 2px; color: var(--muted); font-size: 11px; }
+.hareruya-buy { background: #f0fbf8; }
+.hareruya-source { display: flex; gap: 8px; white-space: nowrap; }
+.hareruya-source a { color: var(--blue); font-weight: 700; text-decoration: none; }
 .app-tabs .tab-link.active { color: #fff; border-color: var(--blue); background: var(--blue); }
 @media (max-width: 900px) { .hareruya-controls { grid-template-columns: 1fr 1fr; } .hareruya-search { grid-column: 1 / -1; } .official-link { min-width: 0; } }
-@media (max-width: 560px) { .hareruya-layout { padding: 10px; } .hareruya-controls, .hareruya-cards { grid-template-columns: 1fr; } .hareruya-card { grid-template-columns: 88px minmax(0, 1fr); } .hareruya-image { width: 88px; height: 122px; } .hareruya-prices { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .hareruya-layout { padding: 10px; } .hareruya-controls { grid-template-columns: 1fr; } .hareruya-results-head { align-items: flex-start; flex-direction: column; gap: 4px; } }

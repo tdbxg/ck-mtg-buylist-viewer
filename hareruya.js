@@ -6,9 +6,9 @@ const els = {
   queryInput: document.querySelector("#queryInput"),
   languageSelect: document.querySelector("#languageSelect"),
   sortSelect: document.querySelector("#sortSelect"),
-  cards: document.querySelector("#cards"),
+  rows: document.querySelector("#hareruyaRows"),
+  resultCount: document.querySelector("#resultCount"),
   emptyState: document.querySelector("#emptyState"),
-  template: document.querySelector("#cardTemplate"),
 };
 
 const state = { payload: null, query: "", language: "", sort: "buyDesc" };
@@ -26,38 +26,35 @@ function cny(value) {
   return `¥${(Number(value) * state.payload.meta.jpyCny).toFixed(2)}`;
 }
 
-function conditionPrice(row, condition) {
-  const price = row.sale?.[row.language]?.[condition];
-  return `<div class="hareruya-price"><span>售价 ${condition}</span><strong>${yen(price)}</strong><small>${cny(price)}</small></div>`;
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>'"]/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[char]);
 }
 
-function renderCard(row) {
-  const node = els.template.content.firstElementChild.cloneNode(true);
-  const image = node.querySelector(".hareruya-image");
-  image.src = row.image || "";
-  image.alt = row.name || "";
-  image.hidden = !row.image;
-  node.querySelector("h2").textContent = row.name || row.nameJa || "未命名商品";
-  node.querySelector(".badge").textContent = row.language === "JP" ? "日文" : row.language === "EN" ? "英文" : "其他";
-  node.querySelector(".hareruya-subtitle").textContent = `${row.nameJa || row.name || "-"} · 晴屋 #${row.productId}`;
-  node.querySelector(".hareruya-details").innerHTML = [
-    `系列：<strong>${String(row.set || "-").toUpperCase()}${row.collectorNumber ? ` #${row.collectorNumber}` : ""}</strong>`,
-    `晴屋语言：<strong>${row.language === "JP" ? "日文" : row.language === "EN" ? "英文" : row.language || "-"}</strong>`,
-    `采集时间：${row.capturedAt || "-"}`,
-  ].map(value => `<div>${value}</div>`).join("");
+function cleanCardName(value) {
+  return String(value || "").replace(/^.*《/, "").replace(/》.*$/, "").trim();
+}
+
+function priceCell(value, buy = false) {
+  return `<td class="hareruya-price-cell${buy ? " hareruya-buy" : ""}"><strong>${yen(value)}</strong>${value === null || value === undefined ? "" : `<small>${cny(value)}</small>`}</td>`;
+}
+
+function renderRow(row) {
+  const name = cleanCardName(row.name || row.nameJa) || "未命名商品";
+  const japaneseName = cleanCardName(row.nameJa);
+  const marker = [row.set ? String(row.set).toUpperCase() : "", row.collectorNumber ? `#${row.collectorNumber}` : "", `晴屋 #${row.productId}`].filter(Boolean).join(" · ");
+  const language = row.language === "JP" ? "日文" : row.language === "EN" ? "英文" : row.language || "其他";
+  const sale = row.sale?.[row.language] || {};
   const buy = row.buy?.[row.language] ?? null;
-  node.querySelector(".hareruya-prices").innerHTML = [
-    `<div class="hareruya-price buy"><span>晴屋收购</span><strong>${yen(buy)}</strong><small>${cny(buy)}</small></div>`,
-    conditionPrice(row, "NM"),
-    conditionPrice(row, "SP"),
-    conditionPrice(row, "MP"),
-    conditionPrice(row, "HP"),
-  ].join("");
-  node.querySelector(".hareruya-links").innerHTML = [
-    row.saleUrl ? `<a href="${row.saleUrl}" target="_blank" rel="noreferrer">晴屋售价页</a>` : "",
-    row.buyUrl ? `<a href="${row.buyUrl}" target="_blank" rel="noreferrer">晴屋收购页</a>` : "",
-  ].join("");
-  return node;
+  return `<tr>
+    <td><div class="hareruya-name">${escapeHtml(name)}${japaneseName && japaneseName !== name ? `<small>${escapeHtml(japaneseName)}</small>` : ""}<small>${escapeHtml(marker)}</small></div></td>
+    <td class="hareruya-language">${escapeHtml(language)}</td>
+    ${priceCell(buy, true)}
+    ${priceCell(sale.NM ?? null)}
+    ${priceCell(sale.SP ?? null)}
+    ${priceCell(sale.MP ?? null)}
+    ${priceCell(sale.HP ?? null)}
+    <td><div class="hareruya-source">${row.saleUrl ? `<a href="${escapeHtml(row.saleUrl)}" target="_blank" rel="noreferrer">售价</a>` : ""}${row.buyUrl ? `<a href="${escapeHtml(row.buyUrl)}" target="_blank" rel="noreferrer">收购</a>` : ""}</div></td>
+  </tr>`;
 }
 
 function render() {
@@ -70,12 +67,13 @@ function render() {
     if (state.sort === "nameAsc") return (a.name || a.nameJa || "").localeCompare(b.name || b.nameJa || "");
     return (b.buy?.[b.language] || 0) - (a.buy?.[a.language] || 0);
   });
-  els.cards.replaceChildren(...rows.map(renderCard));
+  els.rows.innerHTML = rows.map(renderRow).join("");
+  els.resultCount.textContent = `显示 ${rows.length.toLocaleString("zh-CN")} 条商品`;
   els.emptyState.hidden = rows.length > 0;
 }
 
 async function load() {
-  const response = await fetch("./hareruya_prices.json?v=20260730-hareruyamtg", { cache: "no-store" });
+  const response = await fetch("./hareruya_prices.json?v=20260731-hareruyamtg-table", { cache: "no-store" });
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   state.payload = await response.json();
   const meta = state.payload.meta || {};

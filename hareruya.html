@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>晴屋日本价格 | MTG 单卡价格雷达</title>
-  <link rel="stylesheet" href="./styles.css?v=20260730-hareruyamtg">
-  <link rel="stylesheet" href="./hareruya.css?v=20260730-hareruyamtg">
+  <link rel="stylesheet" href="./styles.css?v=20260731-hareruyamtg-table">
+  <link rel="stylesheet" href="./hareruya.css?v=20260731-hareruyamtg-table">
 </head>
 <body>
   <header class="topbar">
@@ -14,7 +14,7 @@
       <p id="metaLine">正在载入晴屋价格快照...</p>
     </div>
     <div class="summary" aria-label="summary">
-      <div><span id="itemCount">-</span><small>精确商品</small></div>
+      <div><span id="itemCount">-</span><small>公开商品</small></div>
       <div><span id="jpyRate">-</span><small>JPY/CNY</small></div>
       <div><span id="updatedAt">-</span><small>最后更新</small></div>
     </div>
@@ -43,23 +43,30 @@
       <a class="official-link" href="https://www.hareruyamtg.com/ja/" target="_blank" rel="noreferrer">打开晴屋官网</a>
     </section>
     <section class="hareruya-note">
-      <strong>精确版本规则：</strong>每行仅对应一个晴屋商品 ID。售价按 NM/SP/MP/HP 分列；收购价以晴屋公开收购页当期标价为准。未配置商品 ID 的牌不会按同名猜测匹配。
+      <strong>查看方式：</strong>每行仅对应一个晴屋商品 ID 与语言，不按同名合并。收购和 NM/SP/MP/HP 售价分列；“版本”仅显示晴屋页面公开标记，未验证的 Scryfall 编号不会猜测补写。
     </section>
-    <section id="cards" class="hareruya-cards" aria-live="polite"></section>
+    <section class="hareruya-results" aria-live="polite">
+      <div class="hareruya-results-head"><strong id="resultCount">-</strong><span>日文与英文版本单独列出，可按收购价或 NM 售价排序</span></div>
+      <div class="hareruya-table-wrap">
+        <table class="hareruya-table">
+          <thead>
+            <tr>
+              <th>牌名 / 晴屋标记</th>
+              <th>语言</th>
+              <th>晴屋收购</th>
+              <th>售价 NM</th>
+              <th>SP</th>
+              <th>MP</th>
+              <th>HP</th>
+              <th>来源</th>
+            </tr>
+          </thead>
+          <tbody id="hareruyaRows"></tbody>
+        </table>
+      </div>
+    </section>
     <section id="emptyState" class="empty-state" hidden>没有符合条件的晴屋商品。</section>
   </main>
-  <template id="cardTemplate">
-    <article class="hareruya-card">
-      <img class="hareruya-image" alt="" loading="lazy">
-      <div class="hareruya-main">
-        <div class="name-row"><h2></h2><span class="badge"></span></div>
-        <p class="hareruya-subtitle"></p>
-        <div class="hareruya-details"></div>
-        <div class="hareruya-prices"></div>
-        <div class="hareruya-links"></div>
-      </div>
-    </article>
-  </template>
-  <script src="./hareruya.js?v=20260730-hareruyamtg"></script>
+  <script src="./hareruya.js?v=20260731-hareruyamtg-table"></script>
 </body>
 </html>
