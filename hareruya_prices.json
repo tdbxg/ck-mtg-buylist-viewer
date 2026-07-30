@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "generatedAt": "2026-07-30T17:34:04+08:00",
+    "items": 1,
+    "jpyCny": 0.041399,
+    "source": "Hareruya public product and purchase pages",
+    "failures": []
+  },
+  "items": [
+    {
+      "productId": "14789",
+      "name": "Metallic Mimic",
+      "nameJa": "金属ミミック",
+      "set": "AER",
+      "collectorNumber": "164",
+      "language": "JP",
+      "image": "https://api.scryfall.com/cards/aer/164/ja?format=image&version=normal",
+      "sale": {
+        "JP": {
+          "NM": 200,
+          "SP": 160
+        }
+      },
+      "buy": {
+        "JP": 30
+      },
+      "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/14789",
+      "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/14789",
+      "capturedAt": "2026-07-30T17:34:03+08:00"
+    }
+  ]
+}

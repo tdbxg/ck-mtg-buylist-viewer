@@ -1,0 +1,10 @@
+[
+  {
+    "productId": "14789",
+    "set": "AER",
+    "collectorNumber": "164",
+    "language": "JP",
+    "image": "https://api.scryfall.com/cards/aer/164/ja?format=image&version=normal",
+    "note": "首批精确商品样例；新增商品时仅加入已确认的晴屋商品 ID。"
+  }
+]

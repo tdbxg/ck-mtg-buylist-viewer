@@ -86,12 +86,30 @@ h1 {
   z-index: 9;
 }
 
-.app-tabs button {
+.app-tabs button,
+.app-tabs .tab-link {
   width: auto;
   min-width: 150px;
   background: #fff;
   color: var(--muted);
   border-color: var(--line);
+}
+
+.app-tabs .tab-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px 6px 0 0;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.app-tabs .tab-link:hover {
+  background: #f1f7f6;
+  color: var(--green);
 }
 
 .app-tabs button.active {
