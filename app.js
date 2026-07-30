@@ -19,7 +19,7 @@ const state = {
   reservedOnly: false,
   withImageOnly: false,
   missingCnOnly: false,
-  sort: "cashDesc",
+  sort: "creditRatioDesc",
   page: 1,
   results: [],
   cardmarketLoaded: false,
@@ -495,7 +495,10 @@ function updateRecentSetButtons() {
 }
 
 function applySort(rows) {
+  const creditRetailRatio = (row) => valueRatio(row.creditUsd, row.retailUsd || row.conditions?.nm_price) ?? -1;
   const sorters = {
+    creditRatioDesc: (a, b) => creditRetailRatio(b) - creditRetailRatio(a),
+    creditDesc: (a, b) => b.creditUsd - a.creditUsd,
     cashDesc: (a, b) => b.cashUsd - a.cashUsd,
     cashAsc: (a, b) => a.cashUsd - b.cashUsd,
     qtyDesc: (a, b) => b.qtyBuying - a.qtyBuying,
@@ -508,7 +511,7 @@ function applySort(rows) {
     nameAsc: (a, b) => a.name.localeCompare(b.name),
     editionAsc: (a, b) => (a.edition || "").localeCompare(b.edition || ""),
   };
-  return rows.sort(sorters[state.sort] || sorters.cashDesc);
+  return rows.sort(sorters[state.sort] || sorters.creditRatioDesc);
 }
 
 function filterRows() {
@@ -1079,7 +1082,7 @@ function bindEvents() {
     els.reservedOnly.checked = false;
     els.withImageOnly.checked = false;
     els.missingCnOnly.checked = false;
-    els.sortSelect.value = "cashDesc";
+    els.sortSelect.value = "creditRatioDesc";
     state.page = 1;
     readControls();
     render();

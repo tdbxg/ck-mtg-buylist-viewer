@@ -119,7 +119,9 @@
         <div class="field">
           <label for="sortSelect">排序</label>
           <select id="sortSelect">
-            <option value="cashDesc">回收价从高到低</option>
+            <option value="creditRatioDesc">积分回收/CK售价比例从高到低</option>
+            <option value="creditDesc">积分回收价从高到低</option>
+            <option value="cashDesc">现金回收价从高到低</option>
             <option value="cashAsc">回收价从低到高</option>
             <option value="qtyDesc">收购数量从高到低</option>
             <option value="euDesc">欧洲参考价从高到低</option>
@@ -314,6 +316,6 @@
     </article>
   </template>
 
-  <script src="./app.js?v=20260730-dual-print-search"></script>
+  <script src="./app.js?v=20260730-credit-sort"></script>
 </body>
 </html>
