@@ -56,6 +56,14 @@ def find_image(html: str) -> str:
         match = re.search(r"content=[\"']([^\"']+)[\"']", tag, re.I)
         if match:
             return unescape(match.group(1))
+    for tag in re.findall(r"<img\b[^>]*>", html, re.I):
+        if not re.search(r"class=[\"'][^\"']*\bChangePhoto\b", tag, re.I):
+            continue
+        match = re.search(r"src=[\"']([^\"']+)[\"']", tag, re.I)
+        if match:
+            image = unescape(match.group(1))
+            if not re.search(r"/(?:jyunbityuu|noimg)\.(?:jpg|png|webp)(?:\?|$)", image, re.I):
+                return image
     return ""
 
 
@@ -113,7 +121,39 @@ def discover_targets(existing: list[dict]) -> list[dict]:
     return targets
 
 
+def refresh_images_only() -> int:
+    payload = load_previous()
+    rows = payload.get("items", [])
+    failures = []
+    updated = 0
+    limit = next((int(value.split("=", 1)[1]) for value in sys.argv if value.startswith("--image-limit=")), 0)
+    pending = [row for row in rows if not row.get("image")]
+    if limit:
+        pending = pending[:limit]
+    for row in pending:
+        product_id = str(row.get("productId", ""))
+        sale_url = row.get("saleUrl") or f"{BASE}/products/detail/{product_id}"
+        try:
+            image = find_image(fetch(sale_url))
+            if not image:
+                raise ValueError("missing product image in public page")
+            row["image"] = image
+            updated += 1
+        except Exception as error:
+            failures.append(f"{product_id}: {error}")
+        time.sleep(REQUEST_PAUSE_SECONDS)
+    meta = payload.setdefault("meta", {})
+    meta["imageRefreshedAt"] = datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds")
+    meta["images"] = sum(bool(row.get("image")) for row in rows)
+    meta["imageFailures"] = failures
+    OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps({"items": len(rows), "images": meta["images"], "updated": updated, "remaining": sum(not row.get("image") for row in rows), "failures": len(failures)}, ensure_ascii=False))
+    return 0 if rows else 1
+
+
 def main() -> int:
+    if "--images-only" in sys.argv:
+        return refresh_images_only()
     targets = json.loads(TARGETS.read_text(encoding="utf-8"))
     if "--discover" in sys.argv:
         targets = discover_targets(targets)

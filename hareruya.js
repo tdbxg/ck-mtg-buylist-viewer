@@ -46,6 +46,7 @@ function renderRow(row) {
   const sale = row.sale?.[row.language] || {};
   const buy = row.buy?.[row.language] ?? null;
   return `<tr>
+    <td class="hareruya-image-cell">${row.image ? `<img class="hareruya-thumb" src="${escapeHtml(row.image)}" alt="${escapeHtml(name)}" loading="lazy">` : '<span class="hareruya-no-image">无图</span>'}</td>
     <td><div class="hareruya-name">${escapeHtml(name)}${japaneseName && japaneseName !== name ? `<small>${escapeHtml(japaneseName)}</small>` : ""}<small>${escapeHtml(marker)}</small></div></td>
     <td class="hareruya-language">${escapeHtml(language)}</td>
     ${priceCell(buy, true)}
@@ -73,7 +74,7 @@ function render() {
 }
 
 async function load() {
-  const response = await fetch("./hareruya_prices.json?v=20260731-hareruyamtg-table", { cache: "no-store" });
+  const response = await fetch("./hareruya_prices.json?v=20260731-hareruyamtg-images", { cache: "no-store" });
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   state.payload = await response.json();
   const meta = state.payload.meta || {};

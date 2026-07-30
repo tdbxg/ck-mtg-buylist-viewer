@@ -8,11 +8,14 @@
 .hareruya-results-head strong { font-size: 16px; }
 .hareruya-results-head span { color: var(--muted); font-size: 13px; }
 .hareruya-table-wrap { overflow-x: auto; }
-.hareruya-table { width: 100%; min-width: 940px; border-collapse: collapse; font-size: 14px; }
+.hareruya-table { width: 100%; min-width: 1020px; border-collapse: collapse; font-size: 14px; }
 .hareruya-table th, .hareruya-table td { padding: 11px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
 .hareruya-table th { position: sticky; top: 0; z-index: 1; color: #445268; background: #f4f7fa; font-size: 12px; white-space: nowrap; }
 .hareruya-table tbody tr:hover { background: #f8fbfc; }
 .hareruya-table tbody tr:last-child td { border-bottom: 0; }
+.hareruya-image-cell { width: 62px; padding-right: 4px !important; }
+.hareruya-thumb { display: block; width: 54px; height: 76px; object-fit: cover; border: 1px solid var(--line); border-radius: 4px; background: #eef1f5; }
+.hareruya-no-image { display: inline-flex; width: 54px; height: 76px; align-items: center; justify-content: center; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; background: #f6f8fa; font-size: 11px; }
 .hareruya-name { max-width: 290px; font-weight: 800; line-height: 1.35; overflow-wrap: anywhere; }
 .hareruya-name small, .hareruya-muted { display: block; margin-top: 3px; color: var(--muted); font-size: 12px; font-weight: 400; line-height: 1.35; }
 .hareruya-language { font-weight: 700; white-space: nowrap; }
