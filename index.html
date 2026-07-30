@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MTG 单卡价格雷达</title>
-  <link rel="stylesheet" href="./styles.css?v=20260722-workspace">
+  <link rel="stylesheet" href="./styles.css?v=20260730-dual-print-search">
 </head>
 <body>
   <header class="topbar">
@@ -96,9 +96,13 @@
   <main id="queryView" class="layout">
     <aside class="filters" aria-label="filters">
       <div class="filter-primary">
-        <div class="field search-field">
-          <label for="searchInput">搜索单卡</label>
-          <input id="searchInput" type="search" placeholder="中文、英文、系列、编号、SKU">
+        <div class="field query-field">
+          <label for="searchInput">牌名片段</label>
+          <input id="searchInput" type="search" placeholder="中文或英文牌名，可只输一部分">
+        </div>
+        <div class="field query-field">
+          <label for="printSearchInput">版本定位</label>
+          <input id="printSearchInput" type="search" placeholder="系列、编号、CK版本或 SKU，如 MH3 352">
         </div>
         <div class="field">
           <label for="typeSelect">类型</label>
@@ -309,6 +313,6 @@
     </article>
   </template>
 
-  <script src="./app.js?v=20260724-image-ocr-v10"></script>
+  <script src="./app.js?v=20260730-dual-print-search"></script>
 </body>
 </html>

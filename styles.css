@@ -354,7 +354,7 @@ h1 {
 
 .filter-primary {
   display: grid;
-  grid-template-columns: minmax(280px, 1.8fr) minmax(130px, .7fr) minmax(130px, .65fr) minmax(185px, .9fr) auto;
+  grid-template-columns: minmax(220px, 1.25fr) minmax(220px, 1.25fr) minmax(120px, .6fr) minmax(120px, .55fr) minmax(165px, .75fr) auto;
   gap: 10px;
   align-items: end;
 }
@@ -529,7 +529,7 @@ button {
   font-weight: 650;
 }
 
-.search-field {
+.query-field {
   grid-column: span 1;
 }
 
@@ -1292,7 +1292,7 @@ h2 {
     grid-template-columns: 1fr 1fr;
   }
 
-  .filter-primary .search-field,
+  .filter-primary .query-field,
   .filter-actions,
   .advanced-filter-grid .recent-field {
     grid-column: 1 / -1;
@@ -1302,7 +1302,7 @@ h2 {
     flex: 1;
   }
 
-  .search-field,
+  .query-field,
   .image-field,
   .recent-field {
     grid-column: auto;

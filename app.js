@@ -8,6 +8,7 @@ const state = {
   data: null,
   source: "cards",
   query: "",
+  printQuery: "",
   category: "",
   rarity: "",
   edition: "",
@@ -59,6 +60,7 @@ const els = {
   moversWinners: document.querySelector("#moversWinners"),
   moversLosers: document.querySelector("#moversLosers"),
   searchInput: document.querySelector("#searchInput"),
+  printSearchInput: document.querySelector("#printSearchInput"),
   imageInput: document.querySelector("#imageInput"),
   imageDropZone: document.querySelector("#imageDropZone"),
   imageLayout: document.querySelector("#imageLayout"),
@@ -192,15 +194,21 @@ function debounce(fn, delay = 140) {
   };
 }
 
-function buildSearch(row) {
+function buildNameSearch(row) {
   return normalize([
     row.name,
     row.ckName,
     row.flavorName,
     row.cn,
+  ].filter(Boolean).join(" "));
+}
+
+function buildPrintSearch(row) {
+  return normalize([
     row.edition,
     row.variation,
     row.scryfallSetName,
+    row.scryfallSet,
     row.collectorNumber,
     row.sku,
   ].filter(Boolean).join(" "));
@@ -307,7 +315,9 @@ function expandPackedData(payload) {
     item.reserved = Boolean(item.reserved);
     item.conditions = item.conditions || {};
     item.finishes = [];
-    item.search = buildSearch(item);
+    item.nameSearch = buildNameSearch(item);
+    item.printSearch = buildPrintSearch(item);
+    item.search = `${item.nameSearch} ${item.printSearch}`;
     return item;
   };
   return {
@@ -504,9 +514,13 @@ function applySort(rows) {
 function filterRows() {
   const rows = state.source === "cards" ? state.data.cards : state.data.sealed;
   const query = normalize(state.query);
+  const printQuery = normalize(state.printQuery);
   const minPrice = Number(state.minPrice || 0);
   let next = rows.filter((row) => {
-    if (query && !row.search.includes(query)) return false;
+    const nameSearch = row.nameSearch || buildNameSearch(row) || row.search || "";
+    const versionSearch = row.printSearch || buildPrintSearch(row) || row.search || "";
+    if (query && !nameSearch.includes(query)) return false;
+    if (printQuery && !versionSearch.includes(printQuery)) return false;
     if (state.source === "cards" && state.category && classifyRow(row) !== state.category) return false;
     if (state.source === "cards" && !rarityMatches(row, state.rarity)) return false;
     if (state.source === "cards" && state.recentSet && row.scryfallSet !== state.recentSet) return false;
@@ -812,6 +826,7 @@ function switchView(view, updateHash = true) {
 function readControls() {
   state.source = els.typeSelect.value;
   state.query = els.searchInput.value;
+  state.printQuery = els.printSearchInput.value;
   state.category = state.source === "cards" ? els.categorySelect.value : "";
   state.rarity = state.source === "cards" ? els.raritySelect.value : "";
   if (state.source !== "cards") state.recentSet = "";
@@ -932,7 +947,7 @@ function bindEvents() {
       renderMovers();
     });
   });
-  for (const el of [els.searchInput, els.typeSelect, els.categorySelect, els.raritySelect, els.setSelect, els.editionSelect, els.minPrice, els.foilOnly, els.reservedOnly, els.withImageOnly, els.missingCnOnly, els.sortSelect]) {
+  for (const el of [els.searchInput, els.printSearchInput, els.typeSelect, els.categorySelect, els.raritySelect, els.setSelect, els.editionSelect, els.minPrice, els.foilOnly, els.reservedOnly, els.withImageOnly, els.missingCnOnly, els.sortSelect]) {
     el.addEventListener("input", rerender);
     el.addEventListener("change", rerender);
   }
@@ -1051,6 +1066,7 @@ function bindEvents() {
   });
   els.resetButton.addEventListener("click", () => {
     els.searchInput.value = "";
+    els.printSearchInput.value = "";
     els.typeSelect.value = "cards";
     els.categorySelect.value = "";
     els.raritySelect.value = "";
