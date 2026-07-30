@@ -10,6 +10,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+import time
 import urllib.request
 from datetime import datetime, timezone
 from html import unescape
@@ -20,7 +21,9 @@ TARGETS = ROOT / "hareruya_targets.json"
 OUTPUT = ROOT / "hareruya_prices.json"
 FX_URL = "https://open.er-api.com/v6/latest/JPY"
 BASE = "https://www.hareruyamtg.com/ja"
+SITEMAP_URL = "https://www.hareruyamtg.com/sitemap.xml"
 CONDITIONS = ("NM", "SP", "MP", "HP")
+REQUEST_PAUSE_SECONDS = 0.7
 
 
 def fetch(url: str) -> str:
@@ -50,6 +53,12 @@ def find_image(html: str) -> str:
         if match:
             return unescape(match.group(1))
     return ""
+
+
+def find_set(html: str) -> str:
+    title = re.search(r"<title>\s*(?:買取：)?\s*(.*?)\s*\|", html, re.S)
+    match = re.search(r"\[([^\]]+)\]", text(title.group(1))) if title else None
+    return match.group(1) if match else ""
 
 
 def table_fragment(html: str, language: str) -> str:
@@ -90,9 +99,21 @@ def load_previous() -> dict:
         return {"items": []}
 
 
+def discover_targets(existing: list[dict]) -> list[dict]:
+    known = {(str(item.get("productId")), item.get("language", "JP")): item for item in existing}
+    urls = re.findall(r"https://www\.hareruyamtg\.com/ja/purchase/detail/(\d+)\?lang=(JP|EN)", fetch(SITEMAP_URL))
+    for product_id, language in urls:
+        known.setdefault((product_id, language), {"productId": product_id, "language": language})
+    targets = sorted(known.values(), key=lambda item: (int(item["productId"]), item.get("language", "JP")))
+    TARGETS.write_text(json.dumps(targets, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return targets
+
+
 def main() -> int:
     targets = json.loads(TARGETS.read_text(encoding="utf-8"))
-    previous = {str(row.get("productId")): row for row in load_previous().get("items", [])}
+    if "--discover" in sys.argv:
+        targets = discover_targets(targets)
+    previous = {(str(row.get("productId")), row.get("language", "JP")): row for row in load_previous().get("items", [])}
     items = []
     failures = []
     for target in targets:
@@ -101,14 +122,16 @@ def main() -> int:
         buy_url = f"{BASE}/purchase/detail/{product_id}"
         try:
             sale_html = fetch(sale_url)
+            time.sleep(REQUEST_PAUSE_SECONDS)
             buy_html = fetch(f"{buy_url}?lang={target.get('language', 'JP')}")
+            time.sleep(REQUEST_PAUSE_SECONDS)
             name_ja, name_en = find_title(sale_html)
             language = target.get("language", "JP")
             item = {
                 "productId": product_id,
                 "name": name_en or name_ja,
                 "nameJa": name_ja,
-                "set": target.get("set", ""),
+                "set": target.get("set") or find_set(sale_html),
                 "collectorNumber": str(target.get("collectorNumber", "")),
                 "language": language,
                 "image": target.get("image") or find_image(sale_html),
@@ -122,7 +145,7 @@ def main() -> int:
                 raise ValueError("missing sale or buy price in public page")
             items.append(item)
         except Exception as error:  # Preserve a verified previous snapshot instead of publishing blanks.
-            old = previous.get(product_id)
+            old = previous.get((product_id, target.get("language", "JP")))
             if old:
                 items.append(old)
             failures.append(f"{product_id}: {error}")
@@ -139,6 +162,7 @@ def main() -> int:
             "items": len(items),
             "jpyCny": jpy_cny,
             "source": "Hareruya public product and purchase pages",
+            "scope": "Public purchase-detail URLs listed in Hareruya sitemap",
             "failures": failures,
         },
         "items": items,
