@@ -61,9 +61,10 @@ jobs:
               raise SystemExit("missing Card Kingdom timestamp")
           if len(payload.get("sets", [])) < 300:
               raise SystemExit(f"unexpected set count: {len(payload.get('sets', []))}")
-          if meta.get("scryfallMarketMatchedUsd", 0) < 50000:
+          market_fallback = meta.get("scryfallMarketSkipped") == "bulk_download_unavailable"
+          if not market_fallback and meta.get("scryfallMarketMatchedUsd", 0) < 50000:
               raise SystemExit("missing Scryfall USD market references")
-          if meta.get("scryfallMarketMatchedEur", 0) < 50000:
+          if not market_fallback and meta.get("scryfallMarketMatchedEur", 0) < 50000:
               raise SystemExit("missing Scryfall EUR market references")
 
           with gzip.open("data_fast.json.gz", "rt", encoding="utf-8") as f:

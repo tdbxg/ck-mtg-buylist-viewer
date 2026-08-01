@@ -12,7 +12,7 @@ const state = {
   minBuy: 0,
   withImageOnly: false,
   buyableOnly: false,
-  sort: "buyDesc",
+  sort: "buyRatioDesc",
   page: 1,
   results: [],
   cart: new Map(),
@@ -95,6 +95,16 @@ function buyPrice(row) {
 
 function salePrice(row, condition) {
   return row.sale?.[row.language]?.[condition] ?? null;
+}
+
+function buySaleRatio(row) {
+  const buy = Number(buyPrice(row) || 0);
+  const nm = Number(salePrice(row, "NM") || 0);
+  return nm > 0 ? buy / nm : null;
+}
+
+function pct(value) {
+  return value === null || value === undefined ? "-" : `${(Number(value) * 100).toFixed(1)}%`;
 }
 
 function displayedName(row) {
@@ -263,7 +273,9 @@ function renderCart() {
   const allRows = [...state.cart.values()];
   const totalQty = allRows.reduce((sum, row) => sum + Number(row.qty || 0), 0);
   const totalBuy = allRows.reduce((sum, row) => sum + Number(row.buyJpy || 0) * Number(row.qty || 0), 0);
-  els.cartSummary.textContent = `${allRows.length} 种 / ${totalQty} 张 / 收购 ${yen(totalBuy)} / ${cny(totalBuy)}`;
+  const totalNm = allRows.reduce((sum, row) => sum + Number(row.nmJpy || 0) * Number(row.qty || 0), 0);
+  const totalRatio = totalNm > 0 ? totalBuy / totalNm : null;
+  els.cartSummary.textContent = `${allRows.length} 种 / ${totalQty} 张 / 收购 ${yen(totalBuy)} / ${cny(totalBuy)} ｜ NM ${yen(totalNm)} ｜ 收购/NM ${pct(totalRatio)}`;
   els.cartEmpty.hidden = allRows.length > 0;
   els.cartTableWrap.hidden = allRows.length === 0;
   els.cartRows.innerHTML = rows.map((row) => `<tr>
@@ -273,6 +285,7 @@ function renderCart() {
     <td>${escapeHtml(languageLabel(row.language))}</td>
     <td><input class="cart-qty" type="number" min="0" step="1" data-key="${escapeHtml(row.key)}" value="${Number(row.qty || 0)}"></td>
     <td><strong>${yen(row.buyJpy)}</strong><small class="hareruya-cart-subtitle">${cny(row.buyJpy)}</small></td>
+    <td><strong>${yen(row.nmJpy)}</strong><small class="hareruya-cart-subtitle">${cny(row.nmJpy)}</small></td>
     <td><button class="remove-cart" type="button" data-key="${escapeHtml(row.key)}">移除</button></td>
   </tr>`).join("");
   const visibleKeys = rows.map((row) => row.key);
@@ -327,6 +340,7 @@ function filterRows() {
     if (state.buyableOnly && buyPrice(row) === null) return false;
     return true;
   }).sort((a, b) => {
+    if (state.sort === "buyRatioDesc") return (buySaleRatio(b) ?? -1) - (buySaleRatio(a) ?? -1);
     if (state.sort === "saleDesc") return Number(salePrice(b, "NM") || 0) - Number(salePrice(a, "NM") || 0);
     if (state.sort === "saleAsc") return Number(salePrice(a, "NM") ?? Infinity) - Number(salePrice(b, "NM") ?? Infinity);
     if (state.sort === "nameAsc") return displayedName(a).localeCompare(displayedName(b));
@@ -343,6 +357,10 @@ function updateFilterSummary() {
 
 function priceBlock(label, value, className = "") {
   return `<div class="price ${className}"><span>${label}</span><strong>${yen(value)}</strong><span>${cny(value) || "未报价"}</span></div>`;
+}
+
+function ratioBlock(row) {
+  return `<div class="price ratio"><span>收购 / NM 售价</span><strong>${pct(buySaleRatio(row))}</strong><span>晴屋公开标价对比</span></div>`;
 }
 
 function renderCard(row) {
@@ -377,6 +395,7 @@ function renderCard(row) {
     priceBlock("晴屋售价 SP", salePrice(row, "SP")),
     priceBlock("晴屋售价 MP", salePrice(row, "MP")),
     priceBlock("晴屋售价 HP", salePrice(row, "HP")),
+    ratioBlock(row),
   ].join("");
   node.querySelector(".links").innerHTML = `${row.saleUrl ? `<a href="${escapeHtml(row.saleUrl)}" target="_blank" rel="noreferrer">晴屋售价页</a>` : ""}${row.buyUrl ? `<a href="${escapeHtml(row.buyUrl)}" target="_blank" rel="noreferrer">晴屋收购页</a>` : ""}`;
   const cart = state.cart.get(rowKey(row));
@@ -424,7 +443,7 @@ function bindEvents() {
     els.printSearchInput.value = "";
     els.languageSelect.value = "";
     els.minBuyInput.value = "0";
-    els.sortSelect.value = "buyDesc";
+    els.sortSelect.value = "buyRatioDesc";
     els.withImageOnly.checked = false;
     els.buyableOnly.checked = false;
     els.setFinderInput.value = "";

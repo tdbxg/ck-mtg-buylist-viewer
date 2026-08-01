@@ -32,6 +32,7 @@ SEALED_URL = "https://api.cardkingdom.com/api/sealed_pricelist"
 FX_URL = "https://open.er-api.com/v6/latest/USD"
 SCRYFALL_COLLECTION_URL = "https://api.scryfall.com/cards/collection"
 SCRYFALL_BULK_URL = "https://api.scryfall.com/bulk-data/default-cards"
+SCRYFALL_BULK_LIST_URL = "https://api.scryfall.com/bulk-data"
 MTGCH_NAMES_URL = "https://mtgch.com/static/card_names.json"
 USER_AGENT = "ck-mtg-buylist-viewer-github-actions/1.0"
 JSON_HEADERS = {"User-Agent": USER_AGENT, "Accept": "application/json"}
@@ -849,6 +850,12 @@ def scryfall_bulk_cards() -> list[dict]:
     meta = fetch_json(SCRYFALL_BULK_URL, timeout=120)
     download_uri = meta.get("download_uri")
     if not download_uri:
+        # Scryfall has returned both a direct record and a collection payload.
+        # Fall back to locating the default_cards entry in the collection.
+        catalog = fetch_json(SCRYFALL_BULK_LIST_URL, timeout=120)
+        record = next((item for item in catalog.get("data", []) if item.get("type") == "default_cards"), {})
+        download_uri = record.get("download_uri")
+    if not download_uri:
         raise RuntimeError("Scryfall default-cards bulk download URI missing")
     # The Scryfall bulk file is large enough that a single streaming request can
     # be interrupted. Let curl resume a partial temporary download instead of
@@ -985,6 +992,24 @@ def enrich_market_reference(payload: dict, previous: dict | None = None) -> dict
     payload.setdefault("meta", {})["scryfallMarketMatchedEur"] = matched_eur
     payload.setdefault("meta", {})["scryfallMarketSource"] = "Scryfall public USD/EUR price fields"
     return payload
+
+
+def enrich_market_reference_resilient(payload: dict, previous: dict) -> dict:
+    try:
+        return enrich_market_reference(payload, previous)
+    except Exception as error:
+        # CK price data remains useful when the optional Scryfall bulk file is
+        # unavailable. Preserve the latest complete market reference snapshot.
+        print(f"WARN: Scryfall bulk reference unavailable; preserving prior reference: {error}")
+        previous_setting = os.environ.get("CK_SKIP_MARKET_BULK")
+        os.environ["CK_SKIP_MARKET_BULK"] = "1"
+        try:
+            return enrich_market_reference(payload, previous)
+        finally:
+            if previous_setting is None:
+                os.environ.pop("CK_SKIP_MARKET_BULK", None)
+            else:
+                os.environ["CK_SKIP_MARKET_BULK"] = previous_setting
 
 
 def mover_row_key(row: dict) -> str:
@@ -1248,7 +1273,7 @@ def main() -> int:
         prev_cn_by_name,
         prev_skin_cn_by_name,
     )
-    payload = enrich_market_reference(payload, previous)
+    payload = enrich_market_reference_resilient(payload, previous)
     payload = enrich_sealed_images(payload, previous)
     write_payload_files(payload)
     write_fast_payload(payload)

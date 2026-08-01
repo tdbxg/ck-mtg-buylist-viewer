@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>晴屋日本价格 | MTG 单卡价格雷达</title>
-  <link rel="stylesheet" href="./styles.css?v=20260731-hareruyamtg-app">
-  <link rel="stylesheet" href="./hareruya.css?v=20260731-hareruyamtg-app">
+  <link rel="stylesheet" href="./styles.css?v=20260801-hareruyamtg-refresh">
+  <link rel="stylesheet" href="./hareruya.css?v=20260801-hareruyamtg-refresh">
 </head>
 <body>
   <header class="topbar">
@@ -48,6 +48,7 @@
         <div class="field">
           <label for="sortSelect">排序</label>
           <select id="sortSelect">
+            <option value="buyRatioDesc">收购 / NM 售价比例从高到低</option>
             <option value="buyDesc">收购价从高到低</option>
             <option value="saleDesc">NM 售价从高到低</option>
             <option value="saleAsc">NM 售价从低到高</option>
@@ -102,7 +103,7 @@
         </div>
         <div id="cartTableWrap" class="cart-table-wrap">
           <table class="cart-table hareruya-cart-table">
-            <thead><tr><th class="cart-check-col">选</th><th>牌名</th><th>晴屋标记</th><th>语言</th><th>数量</th><th>收购</th><th>操作</th></tr></thead>
+            <thead><tr><th class="cart-check-col">选</th><th>牌名</th><th>晴屋标记</th><th>语言</th><th>数量</th><th>收购</th><th>NM 售价</th><th>操作</th></tr></thead>
             <tbody id="cartRows"></tbody>
           </table>
         </div>
@@ -147,6 +148,6 @@
       </div>
     </article>
   </template>
-  <script src="./hareruya.js?v=20260731-hareruyamtg-app"></script>
+  <script src="./hareruya.js?v=20260801-hareruyamtg-refresh"></script>
 </body>
 </html>
