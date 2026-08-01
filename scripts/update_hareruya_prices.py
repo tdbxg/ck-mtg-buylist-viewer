@@ -157,7 +157,13 @@ def main() -> int:
     targets = json.loads(TARGETS.read_text(encoding="utf-8"))
     if "--discover" in sys.argv:
         targets = discover_targets(targets)
-    previous = {(str(row.get("productId")), row.get("language", "JP")): row for row in load_previous().get("items", [])}
+    previous_payload = load_previous()
+    previous = {(str(row.get("productId")), row.get("language", "JP")): row for row in previous_payload.get("items", [])}
+    if "--existing-only" in sys.argv:
+        targets = [
+            target for target in targets
+            if (str(target.get("productId")), target.get("language", "JP")) in previous
+        ]
     items = []
     failures = []
     for target in targets:
@@ -204,9 +210,10 @@ def main() -> int:
         "meta": {
             "generatedAt": datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
             "items": len(items),
+            "images": sum(bool(item.get("image")) for item in items),
             "jpyCny": jpy_cny,
             "source": "Hareruya public product and purchase pages",
-            "scope": "Public purchase-detail URLs listed in Hareruya sitemap",
+            "scope": "Previously verified public purchase-detail URLs" if "--existing-only" in sys.argv else "Public purchase-detail URLs listed in Hareruya sitemap",
             "failures": failures,
         },
         "items": items,

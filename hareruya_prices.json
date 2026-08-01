@@ -1,8 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-30T22:33:45+08:00",
-    "items": 110,
-    "jpyCny": 0.041399,
+    "generatedAt": "2026-08-01T19:43:06+08:00",
+    "items": 117,
+    "images": 117,
+    "jpyCny": 0.042569,
     "source": "Hareruya public product and purchase pages",
     "scope": "Public purchase-detail URLs listed in Hareruya sitemap",
     "failures": [
@@ -13,13 +14,9 @@
       "13456: missing sale or buy price in public page",
       "13457: missing sale or buy price in public page",
       "13461: missing sale or buy price in public page",
-      "13464: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>",
+      "13464: missing sale or buy price in public page",
       "13852: missing sale or buy price in public page",
-      "13938: missing sale or buy price in public page",
       "13939: missing sale or buy price in public page",
-      "13942: missing sale or buy price in public page",
-      "13944: missing sale or buy price in public page",
-      "14063: missing sale or buy price in public page",
       "14183: missing sale or buy price in public page",
       "20090: missing sale or buy price in public page",
       "20149: missing sale or buy price in public page",
@@ -29,32 +26,34 @@
       "20153: missing sale or buy price in public page",
       "20155: missing sale or buy price in public page",
       "20156: missing sale or buy price in public page",
-      "20157: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>",
+      "20157: missing sale or buy price in public page",
       "20158: missing sale or buy price in public page",
-      "20159: missing sale or buy price in public page",
+      "20159: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>",
       "21294: missing sale or buy price in public page",
-      "21344: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>",
-      "21345: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>",
+      "21344: missing sale or buy price in public page",
+      "21345: missing sale or buy price in public page",
       "21346: missing sale or buy price in public page",
       "21347: missing sale or buy price in public page",
       "21348: missing sale or buy price in public page",
       "21349: missing sale or buy price in public page",
-      "21350: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>",
+      "21350: missing sale or buy price in public page",
       "21351: missing sale or buy price in public page",
       "21352: missing sale or buy price in public page",
       "21353: missing sale or buy price in public page",
+      "30253: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>",
       "30317: missing sale or buy price in public page",
       "45526: missing sale or buy price in public page",
       "45526: missing sale or buy price in public page",
       "48136: missing sale or buy price in public page",
-      "49302: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>",
+      "49302: missing sale or buy price in public page",
+      "49302: missing sale or buy price in public page",
       "49662: missing sale or buy price in public page",
       "49662: missing sale or buy price in public page",
       "67824: missing sale or buy price in public page",
       "69348: missing sale or buy price in public page",
       "69348: missing sale or buy price in public page",
       "69818: missing sale or buy price in public page",
-      "70064: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>",
+      "70064: missing sale or buy price in public page",
       "70065: missing sale or buy price in public page",
       "70066: missing sale or buy price in public page",
       "70067: missing sale or buy price in public page",
@@ -64,13 +63,11 @@
       "70082: missing sale or buy price in public page",
       "70084: missing sale or buy price in public page",
       "70085: missing sale or buy price in public page",
-      "70086: missing sale or buy price in public page",
+      "70086: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>",
       "70087: missing sale or buy price in public page",
-      "70252: missing sale or buy price in public page",
       "70255: missing sale or buy price in public page",
       "70257: missing sale or buy price in public page",
       "70257: missing sale or buy price in public page",
-      "70262: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>",
       "70326: missing sale or buy price in public page",
       "70578: missing sale or buy price in public page",
       "73664: missing sale or buy price in public page",
@@ -100,10 +97,11 @@
       "89834: missing sale or buy price in public page",
       "89834: missing sale or buy price in public page",
       "90023: missing sale or buy price in public page",
-      "90023: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>",
       "90041: missing sale or buy price in public page",
       "90041: missing sale or buy price in public page",
+      "90134: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>",
       "90152: missing sale or buy price in public page",
+      "91029: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>",
       "91384: missing sale or buy price in public page",
       "91384: missing sale or buy price in public page",
       "91390: missing sale or buy price in public page",
@@ -120,21 +118,18 @@
       "92115: missing sale or buy price in public page",
       "92117: missing sale or buy price in public page",
       "92117: missing sale or buy price in public page",
-      "92131: missing sale or buy price in public page",
+      "92131: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>",
       "92131: missing sale or buy price in public page",
       "92136: missing sale or buy price in public page",
       "92175: missing sale or buy price in public page",
       "92175: missing sale or buy price in public page"
-    ],
-    "imageRefreshedAt": "2026-07-31T02:13:49+08:00",
-    "images": 110,
-    "imageFailures": []
+    ]
   },
   "items": [
     {
       "productId": "2639",
-      "name": "Wheel of Fortune》[3ED] 赤R",
-      "nameJa": "Wheel of Fortune》[3ED] 赤R",
+      "name": "Wheel of Fortune",
+      "nameJa": "Wheel of Fortune",
       "set": "3ED",
       "collectorNumber": "",
       "language": "EN",
@@ -142,7 +137,8 @@
       "sale": {
         "EN": {
           "NM": 90000,
-          "SP": 81000
+          "SP": 81000,
+          "MP": 72000
         }
       },
       "buy": {
@@ -150,7 +146,7 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/2639",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/2639",
-      "capturedAt": "2026-07-30T22:06:03+08:00"
+      "capturedAt": "2026-08-01T19:16:51+08:00"
     },
     {
       "productId": "7629",
@@ -167,11 +163,11 @@
         }
       },
       "buy": {
-        "JP": 3500
+        "JP": 3000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/7629",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/7629",
-      "capturedAt": "2026-07-30T22:06:14+08:00"
+      "capturedAt": "2026-08-01T19:17:04+08:00"
     },
     {
       "productId": "10082",
@@ -191,7 +187,7 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/10082",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/10082",
-      "capturedAt": "2026-07-30T22:06:23+08:00"
+      "capturedAt": "2026-08-01T19:17:10+08:00"
     },
     {
       "productId": "10082",
@@ -211,12 +207,32 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/10082",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/10082",
-      "capturedAt": "2026-07-30T22:06:30+08:00"
+      "capturedAt": "2026-08-01T19:17:16+08:00"
+    },
+    {
+      "productId": "13938",
+      "name": "Taiga",
+      "nameJa": "Taiga",
+      "set": "LEB",
+      "collectorNumber": "",
+      "language": "EN",
+      "image": "https://files.hareruyamtg.com/img/goods/L/581.jpg",
+      "sale": {
+        "EN": {
+          "NM": 700000
+        }
+      },
+      "buy": {
+        "EN": 33000
+      },
+      "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/13938",
+      "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/13938",
+      "capturedAt": "2026-08-01T19:18:07+08:00"
     },
     {
       "productId": "13941",
-      "name": "Tundra》[LEB] 土地R",
-      "nameJa": "Tundra》[LEB] 土地R",
+      "name": "Tundra",
+      "nameJa": "Tundra",
       "set": "LEB",
       "collectorNumber": "",
       "language": "EN",
@@ -231,7 +247,67 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/13941",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/13941",
-      "capturedAt": "2026-07-30T22:07:47+08:00"
+      "capturedAt": "2026-08-01T19:18:21+08:00"
+    },
+    {
+      "productId": "13942",
+      "name": "Underground Sea",
+      "nameJa": "Underground Sea",
+      "set": "LEB",
+      "collectorNumber": "",
+      "language": "EN",
+      "image": "https://files.hareruyamtg.com/img/goods/L/584.jpg",
+      "sale": {
+        "EN": {
+          "MP": 1300000
+        }
+      },
+      "buy": {
+        "EN": 120000
+      },
+      "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/13942",
+      "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/13942",
+      "capturedAt": "2026-08-01T19:18:31+08:00"
+    },
+    {
+      "productId": "13944",
+      "name": "Volcanic Island",
+      "nameJa": "Volcanic Island",
+      "set": "LEB",
+      "collectorNumber": "",
+      "language": "EN",
+      "image": "https://files.hareruyamtg.com/img/goods/L/585.jpg",
+      "sale": {
+        "EN": {
+          "NM": 2600000
+        }
+      },
+      "buy": {
+        "EN": 100000
+      },
+      "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/13944",
+      "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/13944",
+      "capturedAt": "2026-08-01T19:18:38+08:00"
+    },
+    {
+      "productId": "14063",
+      "name": "Mana Drain",
+      "nameJa": "マナ吸収",
+      "set": "LEG",
+      "collectorNumber": "",
+      "language": "EN",
+      "image": "https://files.hareruyamtg.com/img/goods/L/1491.jpg",
+      "sale": {
+        "EN": {
+          "SP": 36000
+        }
+      },
+      "buy": {
+        "EN": 2500
+      },
+      "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/14063",
+      "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/14063",
+      "capturedAt": "2026-08-01T19:18:45+08:00"
     },
     {
       "productId": "14183",
@@ -247,11 +323,11 @@
         }
       },
       "buy": {
-        "EN": 7000
+        "EN": 8000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/14183",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/14183",
-      "capturedAt": "2026-07-30T22:08:24+08:00"
+      "capturedAt": "2026-08-01T19:18:51+08:00"
     },
     {
       "productId": "14360",
@@ -267,11 +343,11 @@
         }
       },
       "buy": {
-        "EN": 3500
+        "EN": 3000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/14360",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/14360",
-      "capturedAt": "2026-07-30T22:08:38+08:00"
+      "capturedAt": "2026-08-01T19:19:05+08:00"
     },
     {
       "productId": "14360",
@@ -287,11 +363,11 @@
         }
       },
       "buy": {
-        "JP": 3500
+        "JP": 3000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/14360",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/14360",
-      "capturedAt": "2026-07-30T22:08:53+08:00"
+      "capturedAt": "2026-08-01T19:19:14+08:00"
     },
     {
       "productId": "14789",
@@ -312,7 +388,7 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/14789",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/14789",
-      "capturedAt": "2026-07-30T22:09:02+08:00"
+      "capturedAt": "2026-08-01T19:19:25+08:00"
     },
     {
       "productId": "27588",
@@ -324,8 +400,7 @@
       "image": "https://files.hareruyamtg.com/img/goods/L/BFZ/15_eng.jpg",
       "sale": {
         "EN": {
-          "NM": 3500,
-          "SP": 3150
+          "NM": 3500
         }
       },
       "buy": {
@@ -333,7 +408,7 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/27588",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/27588",
-      "capturedAt": "2026-07-30T22:11:58+08:00"
+      "capturedAt": "2026-08-01T19:21:56+08:00"
     },
     {
       "productId": "27588",
@@ -353,7 +428,7 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/27588",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/27588",
-      "capturedAt": "2026-07-30T22:12:04+08:00"
+      "capturedAt": "2026-08-01T19:22:02+08:00"
     },
     {
       "productId": "30253",
@@ -377,8 +452,8 @@
     },
     {
       "productId": "30268",
-      "name": "【Foil】《Wheel of Fortune》(ジャッジ褒賞)[DCIマーク] 赤",
-      "nameJa": "【Foil】《Wheel of Fortune》(ジャッジ褒賞)[DCIマーク] 赤",
+      "name": "Wheel of Fortune",
+      "nameJa": "Wheel of Fortune",
       "set": "DCIマーク",
       "collectorNumber": "",
       "language": "EN",
@@ -394,12 +469,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/30268",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/30268",
-      "capturedAt": "2026-07-30T22:12:15+08:00"
+      "capturedAt": "2026-08-01T19:22:17+08:00"
     },
     {
       "productId": "30320",
       "name": "Force of Will",
-      "nameJa": "【Foil】《意志の力",
+      "nameJa": "意志の力",
       "set": "流星マーク",
       "collectorNumber": "",
       "language": "EN",
@@ -411,16 +486,16 @@
         }
       },
       "buy": {
-        "EN": 7000
+        "EN": 8000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/30320",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/30320",
-      "capturedAt": "2026-07-30T22:12:30+08:00"
+      "capturedAt": "2026-08-01T19:22:33+08:00"
     },
     {
       "productId": "30341",
       "name": "Vampiric Tutor",
-      "nameJa": "【Foil】《吸血の教示者",
+      "nameJa": "吸血の教示者",
       "set": "流星マーク",
       "collectorNumber": "",
       "language": "EN",
@@ -431,16 +506,16 @@
         }
       },
       "buy": {
-        "EN": 3500
+        "EN": 3000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/30341",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/30341",
-      "capturedAt": "2026-07-30T22:12:44+08:00"
+      "capturedAt": "2026-08-01T19:22:39+08:00"
     },
     {
       "productId": "44962",
       "name": "Vampiric Tutor",
-      "nameJa": "【Foil】《吸血の教示者",
+      "nameJa": "吸血の教示者",
       "set": "EMA",
       "collectorNumber": "",
       "language": "EN",
@@ -452,16 +527,16 @@
         }
       },
       "buy": {
-        "EN": 3500
+        "EN": 3000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/44962",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/44962",
-      "capturedAt": "2026-07-30T22:12:57+08:00"
+      "capturedAt": "2026-08-01T19:22:46+08:00"
     },
     {
       "productId": "44962",
       "name": "Vampiric Tutor",
-      "nameJa": "【Foil】《吸血の教示者",
+      "nameJa": "吸血の教示者",
       "set": "EMA",
       "collectorNumber": "",
       "language": "JP",
@@ -472,16 +547,16 @@
         }
       },
       "buy": {
-        "JP": 3500
+        "JP": 3000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/44962",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/44962",
-      "capturedAt": "2026-07-30T22:13:10+08:00"
+      "capturedAt": "2026-08-01T19:22:52+08:00"
     },
     {
       "productId": "48136",
       "name": "Vesuva",
-      "nameJa": "【Foil】《ヴェズーヴァ",
+      "nameJa": "ヴェズーヴァ",
       "set": "TSP",
       "collectorNumber": "",
       "language": "EN",
@@ -497,7 +572,7 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/48136",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/48136",
-      "capturedAt": "2026-07-30T22:13:34+08:00"
+      "capturedAt": "2026-08-01T19:23:13+08:00"
     },
     {
       "productId": "49302",
@@ -522,7 +597,7 @@
     {
       "productId": "52259",
       "name": "Vesuva",
-      "nameJa": "【Foil】《ヴェズーヴァ",
+      "nameJa": "ヴェズーヴァ",
       "set": "FtV:Realms",
       "collectorNumber": "",
       "language": "EN",
@@ -539,7 +614,7 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/52259",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/52259",
-      "capturedAt": "2026-07-30T22:14:14+08:00"
+      "capturedAt": "2026-08-01T19:23:58+08:00"
     },
     {
       "productId": "53802",
@@ -562,7 +637,7 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/53802",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/53802",
-      "capturedAt": "2026-07-30T22:14:23+08:00"
+      "capturedAt": "2026-08-01T19:24:04+08:00"
     },
     {
       "productId": "53802",
@@ -576,8 +651,7 @@
         "JP": {
           "NM": 15000,
           "SP": 12000,
-          "MP": 10500,
-          "HP": 9000
+          "MP": 10500
         }
       },
       "buy": {
@@ -585,7 +659,7 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/53802",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/53802",
-      "capturedAt": "2026-07-30T22:14:32+08:00"
+      "capturedAt": "2026-08-01T19:24:10+08:00"
     },
     {
       "productId": "54859",
@@ -607,7 +681,7 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/54859",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/54859",
-      "capturedAt": "2026-07-30T22:14:43+08:00"
+      "capturedAt": "2026-08-01T19:24:17+08:00"
     },
     {
       "productId": "54859",
@@ -627,7 +701,7 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/54859",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/54859",
-      "capturedAt": "2026-07-30T22:14:49+08:00"
+      "capturedAt": "2026-08-01T19:24:23+08:00"
     },
     {
       "productId": "56894",
@@ -639,7 +713,8 @@
       "image": "https://files.hareruyamtg.com/img/goods/L/5837.jpg",
       "sale": {
         "EN": {
-          "NM": 30000
+          "NM": 30000,
+          "SP": 27000
         }
       },
       "buy": {
@@ -647,7 +722,7 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/56894",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/56894",
-      "capturedAt": "2026-07-30T22:14:54+08:00"
+      "capturedAt": "2026-08-01T19:24:30+08:00"
     },
     {
       "productId": "56894",
@@ -660,8 +735,7 @@
       "sale": {
         "JP": {
           "NM": 25000,
-          "SP": 22500,
-          "MP": 20000
+          "SP": 22500
         }
       },
       "buy": {
@@ -669,7 +743,7 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/56894",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/56894",
-      "capturedAt": "2026-07-30T22:14:59+08:00"
+      "capturedAt": "2026-08-01T19:24:37+08:00"
     },
     {
       "productId": "57637",
@@ -686,11 +760,11 @@
         }
       },
       "buy": {
-        "EN": 3500
+        "EN": 3000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/57637",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/57637",
-      "capturedAt": "2026-07-30T22:15:05+08:00"
+      "capturedAt": "2026-08-01T19:24:44+08:00"
     },
     {
       "productId": "57637",
@@ -708,11 +782,11 @@
         }
       },
       "buy": {
-        "JP": 3500
+        "JP": 3000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/57637",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/57637",
-      "capturedAt": "2026-07-30T22:15:11+08:00"
+      "capturedAt": "2026-08-01T19:24:50+08:00"
     },
     {
       "productId": "59288",
@@ -725,8 +799,7 @@
       "sale": {
         "EN": {
           "NM": 4000,
-          "SP": 3200,
-          "MP": 2800
+          "SP": 3200
         }
       },
       "buy": {
@@ -734,7 +807,7 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/59288",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/59288",
-      "capturedAt": "2026-07-30T22:15:17+08:00"
+      "capturedAt": "2026-08-01T19:24:57+08:00"
     },
     {
       "productId": "59288",
@@ -754,7 +827,7 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/59288",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/59288",
-      "capturedAt": "2026-07-30T22:15:25+08:00"
+      "capturedAt": "2026-08-01T19:25:04+08:00"
     },
     {
       "productId": "60786",
@@ -776,7 +849,7 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/60786",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/60786",
-      "capturedAt": "2026-07-30T22:15:31+08:00"
+      "capturedAt": "2026-08-01T19:25:10+08:00"
     },
     {
       "productId": "60786",
@@ -789,7 +862,8 @@
       "sale": {
         "JP": {
           "SP": 5400,
-          "MP": 4800
+          "MP": 4800,
+          "HP": 4200
         }
       },
       "buy": {
@@ -797,12 +871,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/60786",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/60786",
-      "capturedAt": "2026-07-30T22:15:37+08:00"
+      "capturedAt": "2026-08-01T19:25:16+08:00"
     },
     {
       "productId": "67827",
-      "name": "Savannah》[LEB] 土地R",
-      "nameJa": "Savannah》[LEB] 土地R",
+      "name": "Savannah",
+      "nameJa": "Savannah",
       "set": "LEB",
       "collectorNumber": "",
       "language": "EN",
@@ -817,12 +891,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/67827",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/67827",
-      "capturedAt": "2026-07-30T22:15:54+08:00"
+      "capturedAt": "2026-08-01T19:25:30+08:00"
     },
     {
       "productId": "69728",
       "name": "Force of Will",
-      "nameJa": "【Foil】《意志の力",
+      "nameJa": "意志の力",
       "set": "MPS2",
       "collectorNumber": "",
       "language": "EN",
@@ -833,11 +907,11 @@
         }
       },
       "buy": {
-        "EN": 7000
+        "EN": 8000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/69728",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/69728",
-      "capturedAt": "2026-07-30T22:16:11+08:00"
+      "capturedAt": "2026-08-01T19:25:52+08:00"
     },
     {
       "productId": "69787",
@@ -853,16 +927,16 @@
         }
       },
       "buy": {
-        "EN": 7000
+        "EN": 8000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/69787",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/69787",
-      "capturedAt": "2026-07-30T22:16:18+08:00"
+      "capturedAt": "2026-08-01T19:25:59+08:00"
     },
     {
       "productId": "69820",
-      "name": "Tundra》[LEA] 土地R",
-      "nameJa": "Tundra》[LEA] 土地R",
+      "name": "Tundra",
+      "nameJa": "Tundra",
       "set": "LEA",
       "collectorNumber": "",
       "language": "EN",
@@ -877,12 +951,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/69820",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/69820",
-      "capturedAt": "2026-07-30T22:16:31+08:00"
+      "capturedAt": "2026-08-01T19:26:13+08:00"
     },
     {
       "productId": "70068",
-      "name": "Plateau》[LEB] 土地R",
-      "nameJa": "Plateau》[LEB] 土地R",
+      "name": "Plateau",
+      "nameJa": "Plateau",
       "set": "LEB",
       "collectorNumber": "",
       "language": "EN",
@@ -899,12 +973,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/70068",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/70068",
-      "capturedAt": "2026-07-30T22:17:07+08:00"
+      "capturedAt": "2026-08-01T19:26:57+08:00"
     },
     {
       "productId": "70081",
-      "name": "Savannah》[2ED] 土地R",
-      "nameJa": "Savannah》[2ED] 土地R",
+      "name": "Savannah",
+      "nameJa": "Savannah",
       "set": "2ED",
       "collectorNumber": "",
       "language": "EN",
@@ -920,12 +994,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/70081",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/70081",
-      "capturedAt": "2026-07-30T22:17:36+08:00"
+      "capturedAt": "2026-08-01T19:27:20+08:00"
     },
     {
       "productId": "70083",
-      "name": "Taiga》[2ED] 土地R",
-      "nameJa": "Taiga》[2ED] 土地R",
+      "name": "Taiga",
+      "nameJa": "Taiga",
       "set": "2ED",
       "collectorNumber": "",
       "language": "EN",
@@ -940,12 +1014,32 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/70083",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/70083",
-      "capturedAt": "2026-07-30T22:17:52+08:00"
+      "capturedAt": "2026-08-01T19:27:32+08:00"
+    },
+    {
+      "productId": "70252",
+      "name": "Badlands",
+      "nameJa": "Badlands",
+      "set": "3ED",
+      "collectorNumber": "",
+      "language": "EN",
+      "image": "https://files.hareruyamtg.com/img/goods/L/1376.jpg",
+      "sale": {
+        "EN": {
+          "NM": 100000
+        }
+      },
+      "buy": {
+        "EN": 45000
+      },
+      "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/70252",
+      "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/70252",
+      "capturedAt": "2026-08-01T19:28:04+08:00"
     },
     {
       "productId": "70256",
-      "name": "Plateau》[3ED] 土地R",
-      "nameJa": "Plateau》[3ED] 土地R",
+      "name": "Plateau",
+      "nameJa": "Plateau",
       "set": "3ED",
       "collectorNumber": "",
       "language": "EN",
@@ -962,12 +1056,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/70256",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/70256",
-      "capturedAt": "2026-07-30T22:18:38+08:00"
+      "capturedAt": "2026-08-01T19:28:19+08:00"
     },
     {
       "productId": "70258",
-      "name": "Savannah》[3ED] 土地R",
-      "nameJa": "Savannah》[3ED] 土地R",
+      "name": "Savannah",
+      "nameJa": "Savannah",
       "set": "3ED",
       "collectorNumber": "",
       "language": "EN",
@@ -984,21 +1078,21 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/70258",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/70258",
-      "capturedAt": "2026-07-30T22:18:57+08:00"
+      "capturedAt": "2026-08-01T19:28:38+08:00"
     },
     {
       "productId": "70259",
-      "name": "Scrubland》[3ED] 土地R",
-      "nameJa": "Scrubland》[3ED] 土地R",
+      "name": "Scrubland",
+      "nameJa": "Scrubland",
       "set": "3ED",
       "collectorNumber": "",
       "language": "EN",
       "image": "https://files.hareruyamtg.com/img/goods/L/1380.jpg",
       "sale": {
         "EN": {
+          "NM": 95000,
           "SP": 80750,
-          "MP": 71250,
-          "HP": 66500
+          "MP": 71250
         }
       },
       "buy": {
@@ -1006,12 +1100,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/70259",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/70259",
-      "capturedAt": "2026-07-30T22:19:03+08:00"
+      "capturedAt": "2026-08-01T19:28:44+08:00"
     },
     {
       "productId": "70260",
-      "name": "Taiga》[3ED] 土地R",
-      "nameJa": "Taiga》[3ED] 土地R",
+      "name": "Taiga",
+      "nameJa": "Taiga",
       "set": "3ED",
       "collectorNumber": "",
       "language": "EN",
@@ -1029,12 +1123,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/70260",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/70260",
-      "capturedAt": "2026-07-30T22:19:09+08:00"
+      "capturedAt": "2026-08-01T19:28:51+08:00"
     },
     {
       "productId": "70261",
-      "name": "Tropical Island》[3ED] 土地R",
-      "nameJa": "Tropical Island》[3ED] 土地R",
+      "name": "Tropical Island",
+      "nameJa": "Tropical Island",
       "set": "3ED",
       "collectorNumber": "",
       "language": "EN",
@@ -1051,12 +1145,35 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/70261",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/70261",
-      "capturedAt": "2026-07-30T22:19:16+08:00"
+      "capturedAt": "2026-08-01T19:28:57+08:00"
+    },
+    {
+      "productId": "70262",
+      "name": "Tundra",
+      "nameJa": "Tundra",
+      "set": "3ED",
+      "collectorNumber": "",
+      "language": "EN",
+      "image": "https://files.hareruyamtg.com/img/goods/L/1383.jpg",
+      "sale": {
+        "EN": {
+          "NM": 140000,
+          "SP": 119000,
+          "MP": 105000,
+          "HP": 98000
+        }
+      },
+      "buy": {
+        "EN": 65000
+      },
+      "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/70262",
+      "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/70262",
+      "capturedAt": "2026-08-01T19:29:03+08:00"
     },
     {
       "productId": "70263",
-      "name": "Underground Sea》[3ED] 土地R",
-      "nameJa": "Underground Sea》[3ED] 土地R",
+      "name": "Underground Sea",
+      "nameJa": "Underground Sea",
       "set": "3ED",
       "collectorNumber": "",
       "language": "EN",
@@ -1071,18 +1188,19 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/70263",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/70263",
-      "capturedAt": "2026-07-30T22:19:32+08:00"
+      "capturedAt": "2026-08-01T19:29:10+08:00"
     },
     {
       "productId": "70579",
-      "name": "Scrubland》[LEB] 土地R",
-      "nameJa": "Scrubland》[LEB] 土地R",
+      "name": "Scrubland",
+      "nameJa": "Scrubland",
       "set": "LEB",
       "collectorNumber": "",
       "language": "EN",
       "image": "https://files.hareruyamtg.com/img/goods/L/580.jpg",
       "sale": {
         "EN": {
+          "NM": 650000,
           "MP": 455000
         }
       },
@@ -1091,12 +1209,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/70579",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/70579",
-      "capturedAt": "2026-07-30T22:19:50+08:00"
+      "capturedAt": "2026-08-01T19:29:30+08:00"
     },
     {
       "productId": "73325",
       "name": "Force of Negation",
-      "nameJa": "(052)《否定の力",
+      "nameJa": "否定の力",
       "set": "MH1",
       "collectorNumber": "",
       "language": "EN",
@@ -1111,12 +1229,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/73325",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/73325",
-      "capturedAt": "2026-07-30T22:19:58+08:00"
+      "capturedAt": "2026-08-01T19:29:42+08:00"
     },
     {
       "productId": "73325",
       "name": "Force of Negation",
-      "nameJa": "(052)《否定の力",
+      "nameJa": "否定の力",
       "set": "MH1",
       "collectorNumber": "",
       "language": "JP",
@@ -1131,12 +1249,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/73325",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/73325",
-      "capturedAt": "2026-07-30T22:20:04+08:00"
+      "capturedAt": "2026-08-01T19:29:49+08:00"
     },
     {
       "productId": "73410",
       "name": "Ranger-Captain of Eos",
-      "nameJa": "(021)《イーオスのレインジャー長",
+      "nameJa": "イーオスのレインジャー長",
       "set": "MH1",
       "collectorNumber": "",
       "language": "EN",
@@ -1151,12 +1269,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/73410",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/73410",
-      "capturedAt": "2026-07-30T22:20:10+08:00"
+      "capturedAt": "2026-08-01T19:29:57+08:00"
     },
     {
       "productId": "73410",
       "name": "Ranger-Captain of Eos",
-      "nameJa": "(021)《イーオスのレインジャー長",
+      "nameJa": "イーオスのレインジャー長",
       "set": "MH1",
       "collectorNumber": "",
       "language": "JP",
@@ -1171,12 +1289,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/73410",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/73410",
-      "capturedAt": "2026-07-30T22:20:16+08:00"
+      "capturedAt": "2026-08-01T19:30:04+08:00"
     },
     {
       "productId": "73432",
       "name": "Seasoned Pyromancer",
-      "nameJa": "(145)《歴戦の紅蓮術士",
+      "nameJa": "歴戦の紅蓮術士",
       "set": "MH1",
       "collectorNumber": "",
       "language": "EN",
@@ -1191,12 +1309,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/73432",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/73432",
-      "capturedAt": "2026-07-30T22:20:22+08:00"
+      "capturedAt": "2026-08-01T19:30:09+08:00"
     },
     {
       "productId": "73432",
       "name": "Seasoned Pyromancer",
-      "nameJa": "(145)《歴戦の紅蓮術士",
+      "nameJa": "歴戦の紅蓮術士",
       "set": "MH1",
       "collectorNumber": "",
       "language": "JP",
@@ -1211,12 +1329,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/73432",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/73432",
-      "capturedAt": "2026-07-30T22:20:27+08:00"
+      "capturedAt": "2026-08-01T19:30:16+08:00"
     },
     {
       "productId": "73512",
       "name": "Wrenn and Six",
-      "nameJa": "(217)《レンと六番",
+      "nameJa": "レンと六番",
       "set": "MH1",
       "collectorNumber": "",
       "language": "EN",
@@ -1231,12 +1349,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/73512",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/73512",
-      "capturedAt": "2026-07-30T22:20:37+08:00"
+      "capturedAt": "2026-08-01T19:30:22+08:00"
     },
     {
       "productId": "73512",
       "name": "Wrenn and Six",
-      "nameJa": "(217)《レンと六番",
+      "nameJa": "レンと六番",
       "set": "MH1",
       "collectorNumber": "",
       "language": "JP",
@@ -1251,19 +1369,19 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/73512",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/73512",
-      "capturedAt": "2026-07-30T22:20:43+08:00"
+      "capturedAt": "2026-08-01T19:30:27+08:00"
     },
     {
       "productId": "73579",
       "name": "Force of Negation",
-      "nameJa": "【Foil】(052)《否定の力",
+      "nameJa": "否定の力",
       "set": "MH1",
       "collectorNumber": "",
       "language": "EN",
       "image": "https://files.hareruyamtg.com/img/goods/L/MH1/jn/force_of_negation.png",
       "sale": {
         "EN": {
-          "NM": 18000
+          "NM": 16000
         }
       },
       "buy": {
@@ -1271,19 +1389,19 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/73579",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/73579",
-      "capturedAt": "2026-07-30T22:20:49+08:00"
+      "capturedAt": "2026-08-01T19:30:37+08:00"
     },
     {
       "productId": "73579",
       "name": "Force of Negation",
-      "nameJa": "【Foil】(052)《否定の力",
+      "nameJa": "否定の力",
       "set": "MH1",
       "collectorNumber": "",
       "language": "JP",
       "image": "https://files.hareruyamtg.com/img/goods/L/MH1/jn/force_of_negation.png",
       "sale": {
         "JP": {
-          "NM": 18000
+          "NM": 16000
         }
       },
       "buy": {
@@ -1291,12 +1409,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/73579",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/73579",
-      "capturedAt": "2026-07-30T22:20:55+08:00"
+      "capturedAt": "2026-08-01T19:30:44+08:00"
     },
     {
       "productId": "73766",
       "name": "Wrenn and Six",
-      "nameJa": "【Foil】(217)《レンと六番",
+      "nameJa": "レンと六番",
       "set": "MH1",
       "collectorNumber": "",
       "language": "EN",
@@ -1311,12 +1429,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/73766",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/73766",
-      "capturedAt": "2026-07-30T22:21:24+08:00"
+      "capturedAt": "2026-08-01T19:31:23+08:00"
     },
     {
       "productId": "76100",
       "name": "The Great Henge",
-      "nameJa": "(161)《グレートヘンジ",
+      "nameJa": "グレートヘンジ",
       "set": "ELD",
       "collectorNumber": "",
       "language": "EN",
@@ -1331,19 +1449,20 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/76100",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/76100",
-      "capturedAt": "2026-07-30T22:21:36+08:00"
+      "capturedAt": "2026-08-01T19:31:37+08:00"
     },
     {
       "productId": "76100",
       "name": "The Great Henge",
-      "nameJa": "(161)《グレートヘンジ",
+      "nameJa": "グレートヘンジ",
       "set": "ELD",
       "collectorNumber": "",
       "language": "JP",
       "image": "https://files.hareruyamtg.com/img/goods/L/ELD/JP/JP0161.jpg",
       "sale": {
         "JP": {
-          "NM": 5000
+          "NM": 5000,
+          "SP": 4500
         }
       },
       "buy": {
@@ -1351,12 +1470,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/76100",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/76100",
-      "capturedAt": "2026-07-30T22:21:45+08:00"
+      "capturedAt": "2026-08-01T19:31:46+08:00"
     },
     {
       "productId": "76271",
       "name": "The Great Henge",
-      "nameJa": "(370)■拡張アート■《グレートヘンジ",
+      "nameJa": "グレートヘンジ",
       "set": "ELD-BF",
       "collectorNumber": "",
       "language": "JP",
@@ -1371,12 +1490,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/76271",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/76271",
-      "capturedAt": "2026-07-30T22:22:03+08:00"
+      "capturedAt": "2026-08-01T19:31:58+08:00"
     },
     {
       "productId": "76471",
       "name": "The Great Henge",
-      "nameJa": "【Foil】(161)《グレートヘンジ",
+      "nameJa": "グレートヘンジ",
       "set": "ELD",
       "collectorNumber": "",
       "language": "JP",
@@ -1391,12 +1510,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/76471",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/76471",
-      "capturedAt": "2026-07-30T22:22:16+08:00"
+      "capturedAt": "2026-08-01T19:32:11+08:00"
     },
     {
       "productId": "76713",
       "name": "The Great Henge",
-      "nameJa": "【Foil】■プレリリース■《グレートヘンジ",
+      "nameJa": "グレートヘンジ",
       "set": "ELD-PRE",
       "collectorNumber": "",
       "language": "EN",
@@ -1411,19 +1530,20 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/76713",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/76713",
-      "capturedAt": "2026-07-30T22:22:34+08:00"
+      "capturedAt": "2026-08-01T19:32:29+08:00"
     },
     {
       "productId": "78845",
       "name": "Kroxa, Titan of Death's Hunger",
-      "nameJa": "(221)《死の飢えのタイタン、クロクサ",
+      "nameJa": "死の飢えのタイタン、クロクサ",
       "set": "THB",
       "collectorNumber": "",
       "language": "EN",
       "image": "https://files.hareruyamtg.com/img/goods/L/THB/JP/通常/jp0221.jpg",
       "sale": {
         "EN": {
-          "NM": 1000
+          "NM": 1000,
+          "SP": 800
         }
       },
       "buy": {
@@ -1431,12 +1551,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/78845",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/78845",
-      "capturedAt": "2026-07-30T22:22:50+08:00"
+      "capturedAt": "2026-08-01T19:32:42+08:00"
     },
     {
       "productId": "78845",
       "name": "Kroxa, Titan of Death's Hunger",
-      "nameJa": "(221)《死の飢えのタイタン、クロクサ",
+      "nameJa": "死の飢えのタイタン、クロクサ",
       "set": "THB",
       "collectorNumber": "",
       "language": "JP",
@@ -1451,12 +1571,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/78845",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/78845",
-      "capturedAt": "2026-07-30T22:22:58+08:00"
+      "capturedAt": "2026-08-01T19:32:50+08:00"
     },
     {
       "productId": "78964",
       "name": "Kroxa, Titan of Death's Hunger",
-      "nameJa": "(340)■拡張アート■《死の飢えのタイタン、クロクサ",
+      "nameJa": "死の飢えのタイタン、クロクサ",
       "set": "THB-BF",
       "collectorNumber": "",
       "language": "EN",
@@ -1471,12 +1591,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/78964",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/78964",
-      "capturedAt": "2026-07-30T22:23:04+08:00"
+      "capturedAt": "2026-08-01T19:32:57+08:00"
     },
     {
       "productId": "78964",
       "name": "Kroxa, Titan of Death's Hunger",
-      "nameJa": "(340)■拡張アート■《死の飢えのタイタン、クロクサ",
+      "nameJa": "死の飢えのタイタン、クロクサ",
       "set": "THB-BF",
       "collectorNumber": "",
       "language": "JP",
@@ -1491,12 +1611,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/78964",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/78964",
-      "capturedAt": "2026-07-30T22:23:10+08:00"
+      "capturedAt": "2026-08-01T19:33:03+08:00"
     },
     {
       "productId": "79472",
       "name": "Kroxa, Titan of Death's Hunger",
-      "nameJa": "【Foil】(221)《死の飢えのタイタン、クロクサ",
+      "nameJa": "死の飢えのタイタン、クロクサ",
       "set": "THB",
       "collectorNumber": "",
       "language": "EN",
@@ -1511,19 +1631,19 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/79472",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/79472",
-      "capturedAt": "2026-07-30T22:23:16+08:00"
+      "capturedAt": "2026-08-01T19:33:10+08:00"
     },
     {
       "productId": "79472",
       "name": "Kroxa, Titan of Death's Hunger",
-      "nameJa": "【Foil】(221)《死の飢えのタイタン、クロクサ",
+      "nameJa": "死の飢えのタイタン、クロクサ",
       "set": "THB",
       "collectorNumber": "",
       "language": "JP",
       "image": "https://files.hareruyamtg.com/img/goods/L/THB/JP/通常/jp0221.jpg",
       "sale": {
         "JP": {
-          "NM": 1000
+          "SP": 800
         }
       },
       "buy": {
@@ -1531,12 +1651,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/79472",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/79472",
-      "capturedAt": "2026-07-30T22:23:25+08:00"
+      "capturedAt": "2026-08-01T19:33:17+08:00"
     },
     {
       "productId": "88256",
       "name": "Force of Will",
-      "nameJa": "(051)《意志の力",
+      "nameJa": "意志の力",
       "set": "2XM",
       "collectorNumber": "",
       "language": "EN",
@@ -1547,16 +1667,16 @@
         }
       },
       "buy": {
-        "EN": 7000
+        "EN": 8000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/88256",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/88256",
-      "capturedAt": "2026-07-30T22:24:05+08:00"
+      "capturedAt": "2026-08-01T19:33:51+08:00"
     },
     {
       "productId": "88545",
       "name": "Force of Will",
-      "nameJa": "(340)■ボーダーレス■《意志の力",
+      "nameJa": "意志の力",
       "set": "2XM-BF",
       "collectorNumber": "",
       "language": "EN",
@@ -1567,16 +1687,16 @@
         }
       },
       "buy": {
-        "EN": 7000
+        "EN": 8000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/88545",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/88545",
-      "capturedAt": "2026-07-30T22:24:22+08:00"
+      "capturedAt": "2026-08-01T19:34:05+08:00"
     },
     {
       "productId": "88929",
       "name": "Force of Will",
-      "nameJa": "【Foil】(340)■ボーダーレス■《意志の力",
+      "nameJa": "意志の力",
       "set": "2XM-BF",
       "collectorNumber": "",
       "language": "EN",
@@ -1587,16 +1707,16 @@
         }
       },
       "buy": {
-        "EN": 7000
+        "EN": 8000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/88929",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/88929",
-      "capturedAt": "2026-07-30T22:25:03+08:00"
+      "capturedAt": "2026-08-01T19:34:34+08:00"
     },
     {
       "productId": "88929",
       "name": "Force of Will",
-      "nameJa": "【Foil】(340)■ボーダーレス■《意志の力",
+      "nameJa": "意志の力",
       "set": "2XM-BF",
       "collectorNumber": "",
       "language": "JP",
@@ -1607,16 +1727,16 @@
         }
       },
       "buy": {
-        "JP": 7000
+        "JP": 8000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/88929",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/88929",
-      "capturedAt": "2026-07-30T22:25:10+08:00"
+      "capturedAt": "2026-08-01T19:34:43+08:00"
     },
     {
       "productId": "89242",
       "name": "Skyclave Apparition",
-      "nameJa": "(039)《スカイクレイブの亡霊",
+      "nameJa": "スカイクレイブの亡霊",
       "set": "ZNR",
       "collectorNumber": "",
       "language": "EN",
@@ -1631,12 +1751,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/89242",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/89242",
-      "capturedAt": "2026-07-30T22:25:16+08:00"
+      "capturedAt": "2026-08-01T19:34:52+08:00"
     },
     {
       "productId": "89242",
       "name": "Skyclave Apparition",
-      "nameJa": "(039)《スカイクレイブの亡霊",
+      "nameJa": "スカイクレイブの亡霊",
       "set": "ZNR",
       "collectorNumber": "",
       "language": "JP",
@@ -1652,12 +1772,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/89242",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/89242",
-      "capturedAt": "2026-07-30T22:25:25+08:00"
+      "capturedAt": "2026-08-01T19:34:59+08:00"
     },
     {
       "productId": "89293",
       "name": "Agadeem's Awakening",
-      "nameJa": "(090)《アガディームの覚醒",
+      "nameJa": "アガディームの覚醒",
       "set": "ZNR",
       "collectorNumber": "",
       "language": "EN",
@@ -1672,12 +1792,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/89293",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/89293",
-      "capturedAt": "2026-07-30T22:25:31+08:00"
+      "capturedAt": "2026-08-01T19:35:05+08:00"
     },
     {
       "productId": "89293",
       "name": "Agadeem's Awakening",
-      "nameJa": "(090)《アガディームの覚醒",
+      "nameJa": "アガディームの覚醒",
       "set": "ZNR",
       "collectorNumber": "",
       "language": "JP",
@@ -1692,12 +1812,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/89293",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/89293",
-      "capturedAt": "2026-07-30T22:25:37+08:00"
+      "capturedAt": "2026-08-01T19:35:12+08:00"
     },
     {
       "productId": "89364",
       "name": "Shatterskull Smashing",
-      "nameJa": "(161)《髑髏砕きの一撃",
+      "nameJa": "髑髏砕きの一撃",
       "set": "ZNR",
       "collectorNumber": "",
       "language": "EN",
@@ -1712,12 +1832,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/89364",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/89364",
-      "capturedAt": "2026-07-30T22:25:44+08:00"
+      "capturedAt": "2026-08-01T19:35:18+08:00"
     },
     {
       "productId": "89364",
       "name": "Shatterskull Smashing",
-      "nameJa": "(161)《髑髏砕きの一撃",
+      "nameJa": "髑髏砕きの一撃",
       "set": "ZNR",
       "collectorNumber": "",
       "language": "JP",
@@ -1732,12 +1852,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/89364",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/89364",
-      "capturedAt": "2026-07-30T22:25:51+08:00"
+      "capturedAt": "2026-08-01T19:35:25+08:00"
     },
     {
       "productId": "89548",
       "name": "Skyclave Apparition",
-      "nameJa": "【Foil】(039)《スカイクレイブの亡霊",
+      "nameJa": "スカイクレイブの亡霊",
       "set": "ZNR",
       "collectorNumber": "",
       "language": "EN",
@@ -1753,12 +1873,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/89548",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/89548",
-      "capturedAt": "2026-07-30T22:25:56+08:00"
+      "capturedAt": "2026-08-01T19:35:31+08:00"
     },
     {
       "productId": "89548",
       "name": "Skyclave Apparition",
-      "nameJa": "【Foil】(039)《スカイクレイブの亡霊",
+      "nameJa": "スカイクレイブの亡霊",
       "set": "ZNR",
       "collectorNumber": "",
       "language": "JP",
@@ -1773,19 +1893,20 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/89548",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/89548",
-      "capturedAt": "2026-07-30T22:26:03+08:00"
+      "capturedAt": "2026-08-01T19:35:37+08:00"
     },
     {
       "productId": "89670",
       "name": "Shatterskull Smashing",
-      "nameJa": "【Foil】(161)《髑髏砕きの一撃",
+      "nameJa": "髑髏砕きの一撃",
       "set": "ZNR",
       "collectorNumber": "",
       "language": "JP",
       "image": "https://files.hareruyamtg.com/img/goods/L/ZNR/jp/0161.jpg",
       "sale": {
         "JP": {
-          "NM": 2200
+          "NM": 2000,
+          "MP": 1400
         }
       },
       "buy": {
@@ -1793,12 +1914,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/89670",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/89670",
-      "capturedAt": "2026-07-30T22:26:35+08:00"
+      "capturedAt": "2026-08-01T19:36:04+08:00"
     },
     {
       "productId": "89799",
       "name": "Skyclave Apparition",
-      "nameJa": "【Foil】■プレリリース■《スカイクレイブの亡霊",
+      "nameJa": "スカイクレイブの亡霊",
       "set": "ZNR-PRE",
       "collectorNumber": "",
       "language": "JP",
@@ -1813,19 +1934,20 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/89799",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/89799",
-      "capturedAt": "2026-07-30T22:26:47+08:00"
+      "capturedAt": "2026-08-01T19:36:17+08:00"
     },
     {
       "productId": "90009",
       "name": "Skyclave Apparition",
-      "nameJa": "(322)■拡張アート■《スカイクレイブの亡霊",
+      "nameJa": "スカイクレイブの亡霊",
       "set": "ZNR-BF",
       "collectorNumber": "",
       "language": "EN",
       "image": "https://files.hareruyamtg.com/img/goods/L/ZNR/en/0322.jpg",
       "sale": {
         "EN": {
-          "NM": 400
+          "NM": 400,
+          "SP": 360
         }
       },
       "buy": {
@@ -1833,12 +1955,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/90009",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/90009",
-      "capturedAt": "2026-07-30T22:27:19+08:00"
+      "capturedAt": "2026-08-01T19:36:49+08:00"
     },
     {
       "productId": "90009",
       "name": "Skyclave Apparition",
-      "nameJa": "(322)■拡張アート■《スカイクレイブの亡霊",
+      "nameJa": "スカイクレイブの亡霊",
       "set": "ZNR-BF",
       "collectorNumber": "",
       "language": "JP",
@@ -1853,12 +1975,32 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/90009",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/90009",
-      "capturedAt": "2026-07-30T22:27:25+08:00"
+      "capturedAt": "2026-08-01T19:36:55+08:00"
+    },
+    {
+      "productId": "90023",
+      "name": "Agadeem's Awakening",
+      "nameJa": "アガディームの覚醒",
+      "set": "ZNR-BF",
+      "collectorNumber": "",
+      "language": "JP",
+      "image": "https://files.hareruyamtg.com/img/goods/L/ZNR/en/0336.jpg",
+      "sale": {
+        "JP": {
+          "NM": 4000
+        }
+      },
+      "buy": {
+        "JP": 1500
+      },
+      "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/90023",
+      "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/90023",
+      "capturedAt": "2026-08-01T19:37:08+08:00"
     },
     {
       "productId": "90120",
       "name": "Skyclave Apparition",
-      "nameJa": "【Foil】(322)■拡張アート■《スカイクレイブの亡霊",
+      "nameJa": "スカイクレイブの亡霊",
       "set": "ZNR-BF",
       "collectorNumber": "",
       "language": "EN",
@@ -1873,12 +2015,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/90120",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/90120",
-      "capturedAt": "2026-07-30T22:28:02+08:00"
+      "capturedAt": "2026-08-01T19:37:28+08:00"
     },
     {
       "productId": "90120",
       "name": "Skyclave Apparition",
-      "nameJa": "【Foil】(322)■拡張アート■《スカイクレイブの亡霊",
+      "nameJa": "スカイクレイブの亡霊",
       "set": "ZNR-BF",
       "collectorNumber": "",
       "language": "JP",
@@ -1893,12 +2035,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/90120",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/90120",
-      "capturedAt": "2026-07-30T22:28:08+08:00"
+      "capturedAt": "2026-08-01T19:37:35+08:00"
     },
     {
       "productId": "90134",
       "name": "Agadeem's Awakening",
-      "nameJa": "【Foil】(336)■拡張アート■《アガディームの覚醒",
+      "nameJa": "アガディームの覚醒",
       "set": "ZNR-BF",
       "collectorNumber": "",
       "language": "EN",
@@ -1913,7 +2055,7 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/90134",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/90134",
-      "capturedAt": "2026-07-30T22:28:14+08:00"
+      "capturedAt": "2026-08-01T19:37:42+08:00"
     },
     {
       "productId": "90134",
@@ -1938,7 +2080,7 @@
     {
       "productId": "90152",
       "name": "Shatterskull Smashing",
-      "nameJa": "【Foil】(354)■拡張アート■《髑髏砕きの一撃",
+      "nameJa": "髑髏砕きの一撃",
       "set": "ZNR-BF",
       "collectorNumber": "",
       "language": "EN",
@@ -1953,7 +2095,7 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/90152",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/90152",
-      "capturedAt": "2026-07-30T22:28:26+08:00"
+      "capturedAt": "2026-08-01T19:38:07+08:00"
     },
     {
       "productId": "90454",
@@ -1973,7 +2115,7 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/90454",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/90454",
-      "capturedAt": "2026-07-30T22:28:43+08:00"
+      "capturedAt": "2026-08-01T19:38:22+08:00"
     },
     {
       "productId": "90520",
@@ -1993,12 +2135,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/90520",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/90520",
-      "capturedAt": "2026-07-30T22:28:49+08:00"
+      "capturedAt": "2026-08-01T19:38:27+08:00"
     },
     {
       "productId": "91023",
       "name": "Hullbreacher",
-      "nameJa": "(074)《船殻破り",
+      "nameJa": "船殻破り",
       "set": "CMR",
       "collectorNumber": "",
       "language": "EN",
@@ -2013,12 +2155,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/91023",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/91023",
-      "capturedAt": "2026-07-30T22:28:55+08:00"
+      "capturedAt": "2026-08-01T19:38:33+08:00"
     },
     {
       "productId": "91023",
       "name": "Hullbreacher",
-      "nameJa": "(074)《船殻破り",
+      "nameJa": "船殻破り",
       "set": "CMR",
       "collectorNumber": "",
       "language": "JP",
@@ -2033,12 +2175,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/91023",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/91023",
-      "capturedAt": "2026-07-30T22:29:00+08:00"
+      "capturedAt": "2026-08-01T19:38:39+08:00"
     },
     {
       "productId": "91029",
       "name": "Mana Drain",
-      "nameJa": "(080)《マナ吸収",
+      "nameJa": "マナ吸収",
       "set": "CMR",
       "collectorNumber": "",
       "language": "EN",
@@ -2053,7 +2195,7 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/91029",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/91029",
-      "capturedAt": "2026-07-30T22:29:07+08:00"
+      "capturedAt": "2026-08-01T19:38:46+08:00"
     },
     {
       "productId": "91029",
@@ -2078,7 +2220,7 @@
     {
       "productId": "91090",
       "name": "Opposition Agent",
-      "nameJa": "(141)《敵対工作員",
+      "nameJa": "敵対工作員",
       "set": "CMR",
       "collectorNumber": "",
       "language": "EN",
@@ -2093,12 +2235,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/91090",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/91090",
-      "capturedAt": "2026-07-30T22:29:19+08:00"
+      "capturedAt": "2026-08-01T19:38:57+08:00"
     },
     {
       "productId": "91090",
       "name": "Opposition Agent",
-      "nameJa": "(141)《敵対工作員",
+      "nameJa": "敵対工作員",
       "set": "CMR",
       "collectorNumber": "",
       "language": "JP",
@@ -2113,12 +2255,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/91090",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/91090",
-      "capturedAt": "2026-07-30T22:29:26+08:00"
+      "capturedAt": "2026-08-01T19:39:03+08:00"
     },
     {
       "productId": "91105",
       "name": "Vampiric Tutor",
-      "nameJa": "(156)《吸血の教示者",
+      "nameJa": "吸血の教示者",
       "set": "CMR",
       "collectorNumber": "",
       "language": "EN",
@@ -2129,16 +2271,16 @@
         }
       },
       "buy": {
-        "EN": 3500
+        "EN": 3000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/91105",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/91105",
-      "capturedAt": "2026-07-30T22:29:32+08:00"
+      "capturedAt": "2026-08-01T19:39:10+08:00"
     },
     {
       "productId": "91105",
       "name": "Vampiric Tutor",
-      "nameJa": "(156)《吸血の教示者",
+      "nameJa": "吸血の教示者",
       "set": "CMR",
       "collectorNumber": "",
       "language": "JP",
@@ -2149,16 +2291,16 @@
         }
       },
       "buy": {
-        "JP": 3500
+        "JP": 3000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/91105",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/91105",
-      "capturedAt": "2026-07-30T22:29:39+08:00"
+      "capturedAt": "2026-08-01T19:39:16+08:00"
     },
     {
       "productId": "91268",
       "name": "Jeweled Lotus",
-      "nameJa": "(319)《宝石の睡蓮",
+      "nameJa": "宝石の睡蓮",
       "set": "CMR",
       "collectorNumber": "",
       "language": "EN",
@@ -2174,12 +2316,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/91268",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/91268",
-      "capturedAt": "2026-07-30T22:29:45+08:00"
+      "capturedAt": "2026-08-01T19:39:22+08:00"
     },
     {
       "productId": "91268",
       "name": "Jeweled Lotus",
-      "nameJa": "(319)《宝石の睡蓮",
+      "nameJa": "宝石の睡蓮",
       "set": "CMR",
       "collectorNumber": "",
       "language": "JP",
@@ -2194,19 +2336,19 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/91268",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/91268",
-      "capturedAt": "2026-07-30T22:29:51+08:00"
+      "capturedAt": "2026-08-01T19:39:33+08:00"
     },
     {
       "productId": "91451",
       "name": "Opposition Agent",
-      "nameJa": "【Foil】(141)《敵対工作員",
+      "nameJa": "敵対工作員",
       "set": "CMR",
       "collectorNumber": "",
       "language": "JP",
       "image": "https://files.hareruyamtg.com/img/goods/L/CMR/JP/0141.jpg",
       "sale": {
         "JP": {
-          "NM": 4500
+          "NM": 4000
         }
       },
       "buy": {
@@ -2214,32 +2356,32 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/91451",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/91451",
-      "capturedAt": "2026-07-30T22:30:36+08:00"
+      "capturedAt": "2026-08-01T19:40:23+08:00"
     },
     {
       "productId": "91466",
       "name": "Vampiric Tutor",
-      "nameJa": "【Foil】(156)《吸血の教示者",
+      "nameJa": "吸血の教示者",
       "set": "CMR",
       "collectorNumber": "",
       "language": "JP",
       "image": "https://files.hareruyamtg.com/img/goods/L/CMR/JP/0156.jpg",
       "sale": {
         "JP": {
-          "NM": 7000
+          "NM": 6500
         }
       },
       "buy": {
-        "JP": 3500
+        "JP": 3000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/91466",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/91466",
-      "capturedAt": "2026-07-30T22:30:49+08:00"
+      "capturedAt": "2026-08-01T19:40:37+08:00"
     },
     {
       "productId": "91940",
       "name": "Hullbreacher",
-      "nameJa": "(635)■拡張アート■《船殻破り",
+      "nameJa": "船殻破り",
       "set": "CMR-BF",
       "collectorNumber": "",
       "language": "EN",
@@ -2254,12 +2396,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/91940",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/91940",
-      "capturedAt": "2026-07-30T22:31:16+08:00"
+      "capturedAt": "2026-08-01T19:40:56+08:00"
     },
     {
       "productId": "91942",
       "name": "Mana Drain",
-      "nameJa": "(637)■拡張アート■《マナ吸収",
+      "nameJa": "マナ吸収",
       "set": "CMR-BF",
       "collectorNumber": "",
       "language": "EN",
@@ -2274,12 +2416,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/91942",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/91942",
-      "capturedAt": "2026-07-30T22:31:29+08:00"
+      "capturedAt": "2026-08-01T19:41:09+08:00"
     },
     {
       "productId": "91956",
       "name": "Opposition Agent",
-      "nameJa": "(651)■拡張アート■《敵対工作員",
+      "nameJa": "敵対工作員",
       "set": "CMR-BF",
       "collectorNumber": "",
       "language": "EN",
@@ -2294,12 +2436,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/91956",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/91956",
-      "capturedAt": "2026-07-30T22:31:45+08:00"
+      "capturedAt": "2026-08-01T19:41:22+08:00"
     },
     {
       "productId": "91956",
       "name": "Opposition Agent",
-      "nameJa": "(651)■拡張アート■《敵対工作員",
+      "nameJa": "敵対工作員",
       "set": "CMR-BF",
       "collectorNumber": "",
       "language": "JP",
@@ -2314,12 +2456,12 @@
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/91956",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/91956",
-      "capturedAt": "2026-07-30T22:31:55+08:00"
+      "capturedAt": "2026-08-01T19:41:29+08:00"
     },
     {
       "productId": "91961",
       "name": "Vampiric Tutor",
-      "nameJa": "(656)■拡張アート■《吸血の教示者",
+      "nameJa": "吸血の教示者",
       "set": "CMR-BF",
       "collectorNumber": "",
       "language": "EN",
@@ -2330,36 +2472,36 @@
         }
       },
       "buy": {
-        "EN": 3500
+        "EN": 3000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/91961",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/91961",
-      "capturedAt": "2026-07-30T22:32:01+08:00"
+      "capturedAt": "2026-08-01T19:41:36+08:00"
     },
     {
       "productId": "91961",
       "name": "Vampiric Tutor",
-      "nameJa": "(656)■拡張アート■《吸血の教示者",
+      "nameJa": "吸血の教示者",
       "set": "CMR-BF",
       "collectorNumber": "",
       "language": "JP",
       "image": "https://files.hareruyamtg.com/img/goods/L/CMR/JP/0656.jpg",
       "sale": {
         "JP": {
-          "NM": 7000
+          "NM": 6500
         }
       },
       "buy": {
-        "JP": 3500
+        "JP": 3000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/91961",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/91961",
-      "capturedAt": "2026-07-30T22:32:07+08:00"
+      "capturedAt": "2026-08-01T19:41:43+08:00"
     },
     {
       "productId": "92136",
       "name": "Vampiric Tutor",
-      "nameJa": "【Foil】(656)■拡張アート■《吸血の教示者",
+      "nameJa": "吸血の教示者",
       "set": "CMR-BF",
       "collectorNumber": "",
       "language": "JP",
@@ -2370,11 +2512,11 @@
         }
       },
       "buy": {
-        "JP": 3500
+        "JP": 3000
       },
       "saleUrl": "https://www.hareruyamtg.com/ja/products/detail/92136",
       "buyUrl": "https://www.hareruyamtg.com/ja/purchase/detail/92136",
-      "capturedAt": "2026-07-30T22:33:32+08:00"
+      "capturedAt": "2026-08-01T19:42:52+08:00"
     }
   ]
 }
