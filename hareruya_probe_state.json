@@ -1,0 +1,185 @@
+{
+  "probed": {
+    "thesoulstone": {
+      "name": "The Soul Stone",
+      "cashUsd": 30000.0,
+      "checkedAt": "2026-08-02T13:17:32+08:00",
+      "matches": 8
+    },
+    "blacklotus": {
+      "name": "Black Lotus",
+      "cashUsd": 68000.0,
+      "checkedAt": "2026-08-02T13:17:32+08:00",
+      "matches": 21
+    },
+    "themindstone": {
+      "name": "The Mind Stone",
+      "cashUsd": 25920.0,
+      "checkedAt": "2026-08-02T13:17:32+08:00",
+      "matches": 10
+    },
+    "moxsapphire": {
+      "name": "Mox Sapphire",
+      "cashUsd": 13800.0,
+      "checkedAt": "2026-08-02T13:17:32+08:00",
+      "matches": 9
+    },
+    "ancestralrecall": {
+      "name": "Ancestral Recall",
+      "cashUsd": 13200.0,
+      "checkedAt": "2026-08-02T13:17:32+08:00",
+      "matches": 8
+    },
+    "timetwister": {
+      "name": "Timetwister",
+      "cashUsd": 11000.0,
+      "checkedAt": "2026-08-02T13:17:32+08:00",
+      "matches": 7
+    },
+    "moxemerald": {
+      "name": "Mox Emerald",
+      "cashUsd": 10800.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 7
+    },
+    "volcanicisland": {
+      "name": "Volcanic Island",
+      "cashUsd": 10260.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 8
+    },
+    "moxjet": {
+      "name": "Mox Jet",
+      "cashUsd": 10000.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 7
+    },
+    "undergroundsea": {
+      "name": "Underground Sea",
+      "cashUsd": 9600.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 9
+    },
+    "moxpearl": {
+      "name": "Mox Pearl",
+      "cashUsd": 9000.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 7
+    },
+    "moxruby": {
+      "name": "Mox Ruby",
+      "cashUsd": 9000.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 7
+    },
+    "chaosorb": {
+      "name": "Chaos Orb",
+      "cashUsd": 6600.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 18
+    },
+    "tropicalisland": {
+      "name": "Tropical Island",
+      "cashUsd": 5760.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 9
+    },
+    "timewalk": {
+      "name": "Time Walk",
+      "cashUsd": 5700.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 9
+    },
+    "tundra": {
+      "name": "Tundra",
+      "cashUsd": 5280.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 12
+    },
+    "travelingchocobo": {
+      "name": "Traveling Chocobo",
+      "cashUsd": 4980.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 20
+    },
+    "wheeloffortune": {
+      "name": "Wheel of Fortune",
+      "cashUsd": 4500.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 23
+    },
+    "bayou": {
+      "name": "Bayou",
+      "cashUsd": 4380.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 10
+    },
+    "shivandragon": {
+      "name": "Shivan Dragon",
+      "cashUsd": 4380.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 51
+    },
+    "gaeascradle": {
+      "name": "Gaea's Cradle",
+      "cashUsd": 4060.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 4
+    },
+    "tifalockhart": {
+      "name": "Tifa Lockhart",
+      "cashUsd": 3970.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 19
+    },
+    "manacrypt": {
+      "name": "Mana Crypt",
+      "cashUsd": 3960.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 28
+    },
+    "mishrasworkshop": {
+      "name": "Mishra's Workshop",
+      "cashUsd": 3580.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 2
+    },
+    "badlands": {
+      "name": "Badlands",
+      "cashUsd": 3480.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 9
+    },
+    "plateau": {
+      "name": "Plateau",
+      "cashUsd": 3480.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 9
+    },
+    "grimmonolith": {
+      "name": "Grim Monolith",
+      "cashUsd": 3420.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 6
+    },
+    "birdsofparadise": {
+      "name": "Birds of Paradise",
+      "cashUsd": 3300.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 60
+    },
+    "scrubland": {
+      "name": "Scrubland",
+      "cashUsd": 3300.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 9
+    },
+    "savannah": {
+      "name": "Savannah",
+      "cashUsd": 3180.0,
+      "checkedAt": "2026-08-02T13:21:50+08:00",
+      "matches": 26
+    }
+  },
+  "unmatched": {}
+}

@@ -130,12 +130,17 @@ def listing_targets_from_html(listing: str) -> list[dict]:
         buy = re.search(r"itemDetail__price[^>]*>\s*[￥¥]\s*([\d,]+)", block, re.S)
         if not (detail and name and buy):
             continue
-        name_ja, name_en = find_listing_names(name.group(1))
+        listing_name = text(name.group(1))
+        name_ja, name_en = find_listing_names(listing_name)
+        set_match = re.search(r"\[([^\]]+)\]", listing_name)
+        collector_match = re.search(r"\(([^)]+)\)", listing_name)
         targets.append({
             "productId": detail.group(1),
             "language": detail.group(2),
             "name": name_en or name_ja,
             "nameJa": name_ja,
+            "set": set_match.group(1).strip() if set_match else "",
+            "collectorNumber": collector_match.group(1).strip() if collector_match else "",
             "image": unescape(image.group(1)).split("?", 1)[0] if image else "",
             "buyPrice": int(buy.group(1).replace(",", "")),
         })
@@ -255,15 +260,17 @@ def refresh_listing_only() -> int:
     previous = {(str(row.get("productId")), row.get("language", "JP")): row for row in previous_payload.get("items", [])}
     listed, listing_pages = purchase_listing_targets_all()
     items = []
+    listed_keys = set()
     for row in listed:
         key = (str(row["productId"]), row["language"])
+        listed_keys.add(key)
         old = previous.get(key, {})
         items.append({
             "productId": row["productId"],
             "name": row["name"],
             "nameJa": row["nameJa"],
-            "set": old.get("set", ""),
-            "collectorNumber": old.get("collectorNumber", ""),
+            "set": row.get("set") or old.get("set", ""),
+            "collectorNumber": row.get("collectorNumber") or old.get("collectorNumber", ""),
             "language": row["language"],
             "image": row["image"] or old.get("image", ""),
             "sale": old.get("sale", {}),
@@ -272,7 +279,11 @@ def refresh_listing_only() -> int:
             "buyUrl": f"{BASE}/purchase/detail/{row['productId']}?lang={row['language']}",
             "capturedAt": datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
             "retailVerified": bool(old.get("sale", {}).get(row["language"])),
+            "source": "publicListing",
         })
+    # Preserve previously confirmed priority matches that are not in the
+    # rotating public category pages.
+    items.extend(old for key, old in previous.items() if key not in listed_keys)
     try:
         jpy_cny = float(json.loads(fetch(FX_URL))["rates"]["CNY"])
     except Exception:
@@ -284,6 +295,8 @@ def refresh_listing_only() -> int:
             "images": sum(bool(item.get("image")) for item in items),
             "verifiedRetailItems": sum(bool(item.get("retailVerified")) for item in items),
             "listingPages": listing_pages,
+            "listingItems": len(listed),
+            "retainedItems": len(items) - len(listed),
             "jpyCny": jpy_cny,
             "source": "Hareruya public purchase listing, with verified retail snapshots retained",
             "scope": "Public purchase listing; NM/SP/MP/HP only shown for separately verified product pages",
