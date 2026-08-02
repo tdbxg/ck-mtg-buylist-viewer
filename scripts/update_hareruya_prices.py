@@ -12,6 +12,7 @@ import re
 import sys
 import time
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from html import unescape
 from pathlib import Path
@@ -23,6 +24,7 @@ FX_URL = "https://open.er-api.com/v6/latest/JPY"
 BASE = "https://www.hareruyamtg.com/ja"
 SITEMAP_URL = "https://www.hareruyamtg.com/sitemap.xml"
 PURCHASE_LIST_URL = f"{BASE}/purchase/"
+BUYLIST_TAGS = (633, 634, 635, 636, 637)
 CONDITIONS = ("NM", "SP", "MP", "HP")
 REQUEST_PAUSE_SECONDS = 0.7
 
@@ -118,6 +120,57 @@ def purchase_listing_targets() -> list[dict]:
     return targets
 
 
+def listing_targets_from_html(listing: str) -> list[dict]:
+    targets = []
+    pattern = r"<li\b[^>]*class=[\"'][^\"']*\bitemList\b[^\"']*[\"'][^>]*>(.*?)</li>"
+    for block in re.findall(pattern, listing, re.S | re.I):
+        detail = re.search(r"href=[\"'](?:https://www\.hareruyamtg\.com)?/ja/purchase/detail/(\d+)\?lang=(JP|EN)[\"'][^>]*class=[\"'][^\"']*\bitemName\b", block, re.I)
+        name = re.search(r"class=[\"'][^\"']*\bitemName\b[^\"']*[\"'][^>]*>(.*?)</a>", block, re.S | re.I)
+        image = re.search(r"data-original=[\"']([^\"']+)", block, re.I)
+        buy = re.search(r"itemDetail__price[^>]*>\s*[￥¥]\s*([\d,]+)", block, re.S)
+        if not (detail and name and buy):
+            continue
+        name_ja, name_en = find_listing_names(name.group(1))
+        targets.append({
+            "productId": detail.group(1),
+            "language": detail.group(2),
+            "name": name_en or name_ja,
+            "nameJa": name_ja,
+            "image": unescape(image.group(1)).split("?", 1)[0] if image else "",
+            "buyPrice": int(buy.group(1).replace(",", "")),
+        })
+    return targets
+
+
+def purchase_listing_targets_all() -> tuple[list[dict], int]:
+    """Load every page from the public buylist categories and de-duplicate IDs."""
+    category_urls = [
+        f"{BASE}/purchase/search?tags={tag}&purchaseFlg=1&page=1"
+        for tag in BUYLIST_TAGS
+    ]
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        first_pages = list(pool.map(fetch, category_urls))
+
+    page_urls = [PURCHASE_LIST_URL, *category_urls]
+    extra_page_urls = []
+    page_html = [fetch(PURCHASE_LIST_URL), *first_pages]
+    for url, html in zip(category_urls, first_pages):
+        last_page = max([int(value) for value in re.findall(r"page=(\d+)", html)] or [1])
+        extra_page_urls.extend(f"{url.rsplit('=', 1)[0]}={page}" for page in range(2, last_page + 1))
+    page_urls.extend(extra_page_urls)
+
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        futures = {pool.submit(fetch, url): url for url in extra_page_urls}
+        for future in as_completed(futures):
+            page_html.append(future.result())
+
+    unique = {}
+    for html in page_html:
+        for target in listing_targets_from_html(html):
+            unique[(target["productId"], target["language"])] = target
+    return sorted(unique.values(), key=lambda row: (int(row["productId"]), row["language"])), len(page_urls)
+
+
 def table_fragment(html: str, language: str) -> str:
     marker = f'id="priceTable-{language}"'
     start = html.find(marker)
@@ -200,7 +253,7 @@ def refresh_listing_only() -> int:
     """Refresh all public buylist rows without guessing retail condition prices."""
     previous_payload = load_previous()
     previous = {(str(row.get("productId")), row.get("language", "JP")): row for row in previous_payload.get("items", [])}
-    listed = purchase_listing_targets()
+    listed, listing_pages = purchase_listing_targets_all()
     items = []
     for row in listed:
         key = (str(row["productId"]), row["language"])
@@ -230,6 +283,7 @@ def refresh_listing_only() -> int:
             "items": len(items),
             "images": sum(bool(item.get("image")) for item in items),
             "verifiedRetailItems": sum(bool(item.get("retailVerified")) for item in items),
+            "listingPages": listing_pages,
             "jpyCny": jpy_cny,
             "source": "Hareruya public purchase listing, with verified retail snapshots retained",
             "scope": "Public purchase listing; NM/SP/MP/HP only shown for separately verified product pages",
