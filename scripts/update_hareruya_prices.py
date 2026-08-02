@@ -22,6 +22,7 @@ OUTPUT = ROOT / "hareruya_prices.json"
 FX_URL = "https://open.er-api.com/v6/latest/JPY"
 BASE = "https://www.hareruyamtg.com/ja"
 SITEMAP_URL = "https://www.hareruyamtg.com/sitemap.xml"
+PURCHASE_LIST_URL = f"{BASE}/purchase/"
 CONDITIONS = ("NM", "SP", "MP", "HP")
 REQUEST_PAUSE_SECONDS = 0.7
 
@@ -71,6 +72,50 @@ def find_set(html: str) -> str:
     title = re.search(r"<title>\s*(?:買取：)?\s*(.*?)\s*\|", html, re.S)
     match = re.search(r"\[([^\]]+)\]", text(title.group(1))) if title else None
     return match.group(1) if match else ""
+
+
+def find_listing_names(value: str) -> tuple[str, str]:
+    """Keep the public listing text intact unless it contains a JP/EN pair."""
+    raw = text(value)
+    paired = re.search(r"《([^/》]+?)\s*/\s*([^》]+?)》", raw)
+    if paired:
+        return paired.group(1).strip(), paired.group(2).strip()
+    return raw, raw
+
+
+def purchase_listing_targets() -> list[dict]:
+    """Extract exact buylist product IDs, images, and prices from one public page.
+
+    The public sitemap intentionally contains only a small subset of current
+    buylist products. The purchase list exposes many more exact product IDs,
+    so it is the appropriate source for buy-only entries. Retail conditions are
+    left blank until the product page has been separately verified.
+    """
+    listing = fetch(PURCHASE_LIST_URL)
+    targets = []
+    for block in re.findall(r"<li\b[^>]*class=[\"'][^\"']*\bitemList\b[^\"']*[\"'][^>]*>(.*?)</li>", listing, re.S | re.I):
+        r"""
+        detail = re.search(r'href=[\"\'](?:https://www\\.hareruyamtg\\.com)?/ja/purchase/detail/(\d+)\?lang=(JP|EN)[\"\'][^>]*class=[\"\'][^\"']*\bitemName\b', block, re.I)
+        name = re.search(r'class=[\"\'][^\"']*\bitemName\b[^\"']*[\"'][^>]*>(.*?)</a>', block, re.S | re.I)
+        image = re.search(r'data-original=[\"\']([^\"\']+)', block, re.I)
+        """
+        detail = re.search(r"href=[\"'](?:https://www\.hareruyamtg\.com)?/ja/purchase/detail/(\d+)\?lang=(JP|EN)[\"'][^>]*class=[\"'][^\"']*\bitemName\b", block, re.I)
+        name = re.search(r"class=[\"'][^\"']*\bitemName\b[^\"']*[\"'][^>]*>(.*?)</a>", block, re.S | re.I)
+        image = re.search(r"data-original=[\"']([^\"']+)", block, re.I)
+        buy = re.search(r'itemDetail__price[^>]*>\s*[￥¥]\s*([\d,]+)', block, re.S)
+        if not (detail and name and buy):
+            continue
+        name_ja, name_en = find_listing_names(name.group(1))
+        image_url = unescape(image.group(1)).split("?", 1)[0] if image else ""
+        targets.append({
+            "productId": detail.group(1),
+            "language": detail.group(2),
+            "name": name_en or name_ja,
+            "nameJa": name_ja,
+            "image": image_url,
+            "buyPrice": int(buy.group(1).replace(",", "")),
+        })
+    return targets
 
 
 def table_fragment(html: str, language: str) -> str:
@@ -151,9 +196,58 @@ def refresh_images_only() -> int:
     return 0 if rows else 1
 
 
+def refresh_listing_only() -> int:
+    """Refresh all public buylist rows without guessing retail condition prices."""
+    previous_payload = load_previous()
+    previous = {(str(row.get("productId")), row.get("language", "JP")): row for row in previous_payload.get("items", [])}
+    listed = purchase_listing_targets()
+    items = []
+    for row in listed:
+        key = (str(row["productId"]), row["language"])
+        old = previous.get(key, {})
+        items.append({
+            "productId": row["productId"],
+            "name": row["name"],
+            "nameJa": row["nameJa"],
+            "set": old.get("set", ""),
+            "collectorNumber": old.get("collectorNumber", ""),
+            "language": row["language"],
+            "image": row["image"] or old.get("image", ""),
+            "sale": old.get("sale", {}),
+            "buy": {row["language"]: row["buyPrice"]},
+            "saleUrl": old.get("saleUrl") or f"{BASE}/products/detail/{row['productId']}",
+            "buyUrl": f"{BASE}/purchase/detail/{row['productId']}?lang={row['language']}",
+            "capturedAt": datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
+            "retailVerified": bool(old.get("sale", {}).get(row["language"])),
+        })
+    try:
+        jpy_cny = float(json.loads(fetch(FX_URL))["rates"]["CNY"])
+    except Exception:
+        jpy_cny = previous_payload.get("meta", {}).get("jpyCny")
+    payload = {
+        "meta": {
+            "generatedAt": datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
+            "items": len(items),
+            "images": sum(bool(item.get("image")) for item in items),
+            "verifiedRetailItems": sum(bool(item.get("retailVerified")) for item in items),
+            "jpyCny": jpy_cny,
+            "source": "Hareruya public purchase listing, with verified retail snapshots retained",
+            "scope": "Public purchase listing; NM/SP/MP/HP only shown for separately verified product pages",
+            "failures": [],
+        },
+        "items": items,
+    }
+    OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    TARGETS.write_text(json.dumps([{k: row[k] for k in ("productId", "language")} for row in items], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps(payload["meta"], ensure_ascii=False))
+    return 0 if items else 1
+
+
 def main() -> int:
     if "--images-only" in sys.argv:
         return refresh_images_only()
+    if "--listing-only" in sys.argv:
+        return refresh_listing_only()
     targets = json.loads(TARGETS.read_text(encoding="utf-8"))
     if "--discover" in sys.argv:
         targets = discover_targets(targets)

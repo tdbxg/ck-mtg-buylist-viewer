@@ -28,8 +28,8 @@ jobs:
       - name: Refresh static data
         run: python scripts/update_site_data.py
 
-      - name: Refresh configured Hareruya prices
-        run: python scripts/update_hareruya_prices.py --discover --existing-only
+      - name: Refresh public Hareruya buylist listing
+        run: python scripts/update_hareruya_prices.py --listing-only
         continue-on-error: true
 
       - name: Validate generated files

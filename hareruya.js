@@ -374,7 +374,8 @@ function renderCard(row) {
   node.querySelector(".badge").textContent = languageLabel(row.language);
   node.querySelector(".cn").textContent = japaneseName && japaneseName !== name ? japaneseName : `晴屋 ${languageLabel(row.language)}版`;
   if (row.image) {
-    image.src = row.image;
+    const imageVersion = encodeURIComponent(state.payload?.meta?.generatedAt || "latest");
+    image.src = `${row.image}${row.image.includes("?") ? "&" : "?"}v=${imageVersion}`;
     image.alt = name;
     image.addEventListener("error", () => {
       image.remove();
@@ -518,14 +519,15 @@ function bindEvents() {
 
 async function init() {
   loadPersisted();
-  const response = await fetch("./hareruya_prices.json?v=20260731-hareruyamtg-app", { cache: "no-store" });
+  const response = await fetch(`./hareruya_prices.json?v=${Date.now()}`, { cache: "no-store" });
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   state.payload = await response.json();
   const meta = state.payload.meta || {};
   els.itemCount.textContent = Number(meta.items || state.payload.items?.length || 0).toLocaleString("zh-CN");
   els.jpyRate.textContent = meta.jpyCny ? Number(meta.jpyCny).toFixed(4) : "-";
   els.updatedAt.textContent = meta.generatedAt ? String(meta.generatedAt).replace("T", " ").slice(0, 16) : "-";
-  els.metaLine.textContent = `晴屋公开商品页与收购页快照 ｜ 图片 ${Number(meta.images || 0).toLocaleString("zh-CN")} 张 ｜ 价格 ${meta.generatedAt || "未更新"}`;
+  const verifiedRetail = Number(meta.verifiedRetailItems || 0).toLocaleString("zh-CN");
+  els.metaLine.textContent = `晴屋公开回收列表 ｜ 收购 ${Number(meta.items || 0).toLocaleString("zh-CN")} 条 ｜ 已验证品相售价 ${verifiedRetail} 条 ｜ 图片 ${Number(meta.images || 0).toLocaleString("zh-CN")} 张 ｜ 更新 ${meta.generatedAt || "未更新"}`;
   populateSets();
   readControls();
   bindEvents();
