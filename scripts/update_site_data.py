@@ -126,9 +126,30 @@ CSV_HEADERS = [
 
 
 def fetch_json(url: str, timeout: int = 120) -> Any:
-    req = urllib.request.Request(url, headers=JSON_HEADERS)
-    with urllib.request.urlopen(req, timeout=timeout) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+    result = subprocess.run(
+        [
+            "curl",
+            "-sS",
+            "-L",
+            "--fail",
+            "--retry",
+            "5",
+            "--retry-delay",
+            "2",
+            "--retry-all-errors",
+            "--max-time",
+            str(timeout),
+            "-H",
+            f"User-Agent: {USER_AGENT}",
+            "-H",
+            "Accept: application/json",
+            url,
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    return json.loads(result.stdout)
 
 
 def post_json(url: str, payload: dict, timeout: int = 120) -> Any:
