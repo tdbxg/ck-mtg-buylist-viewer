@@ -15,6 +15,7 @@ const state = {
   setCode: "",
   recentSet: "",
   minPrice: 0,
+  buyingOnly: false,
   foilOnly: false,
   reservedOnly: false,
   withImageOnly: false,
@@ -92,6 +93,7 @@ const els = {
   recentSetsField: document.querySelector("#recentSetsField"),
   recentSets: document.querySelector("#recentSets"),
   minPrice: document.querySelector("#minPrice"),
+  buyingOnly: document.querySelector("#buyingOnly"),
   foilOnly: document.querySelector("#foilOnly"),
   reservedOnly: document.querySelector("#reservedOnly"),
   withImageOnly: document.querySelector("#withImageOnly"),
@@ -530,6 +532,7 @@ function filterRows() {
     if (state.source === "cards" && state.setCode && row.scryfallSet !== state.setCode) return false;
     if (state.edition && row.edition !== state.edition) return false;
     if (row.cashUsd < minPrice) return false;
+    if (state.source === "cards" && state.buyingOnly && !row.activeBuying) return false;
     if (state.source === "cards" && state.foilOnly && !row.foil) return false;
     if (state.source === "cards" && state.reservedOnly && !row.reserved) return false;
     if (state.withImageOnly && !row.image) return false;
@@ -838,6 +841,7 @@ function readControls() {
   state.setCode = selectedSet;
   state.edition = state.source === "cards" ? els.editionSelect.value : "";
   state.minPrice = Number(els.minPrice.value || 0);
+  state.buyingOnly = state.source === "cards" && els.buyingOnly.checked;
   state.foilOnly = els.foilOnly.checked;
   state.reservedOnly = els.reservedOnly.checked;
   state.withImageOnly = els.withImageOnly.checked;
@@ -848,6 +852,7 @@ function readControls() {
   els.rarityField.style.display = state.source === "cards" ? "" : "none";
   els.setField.style.display = state.source === "cards" ? "" : "none";
   els.editionField.style.display = state.source === "cards" ? "" : "none";
+  els.buyingOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
   els.foilOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
   els.reservedOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
   els.missingCnOnly.closest("label").style.display = state.source === "cards" ? "" : "none";
@@ -862,6 +867,7 @@ function updateFilterSummary() {
     state.setCode,
     state.edition,
     state.minPrice > 0 ? String(state.minPrice) : "",
+    state.buyingOnly ? "buying" : "",
     state.foilOnly ? "foil" : "",
     state.reservedOnly ? "reserved" : "",
     state.withImageOnly ? "image" : "",
@@ -950,7 +956,7 @@ function bindEvents() {
       renderMovers();
     });
   });
-  for (const el of [els.searchInput, els.printSearchInput, els.typeSelect, els.categorySelect, els.raritySelect, els.setSelect, els.editionSelect, els.minPrice, els.foilOnly, els.reservedOnly, els.withImageOnly, els.missingCnOnly, els.sortSelect]) {
+  for (const el of [els.searchInput, els.printSearchInput, els.typeSelect, els.categorySelect, els.raritySelect, els.setSelect, els.editionSelect, els.minPrice, els.buyingOnly, els.foilOnly, els.reservedOnly, els.withImageOnly, els.missingCnOnly, els.sortSelect]) {
     el.addEventListener("input", rerender);
     el.addEventListener("change", rerender);
   }
@@ -1078,6 +1084,7 @@ function bindEvents() {
     state.setCode = "";
     state.recentSet = "";
     els.minPrice.value = "0";
+    els.buyingOnly.checked = false;
     els.foilOnly.checked = false;
     els.reservedOnly.checked = false;
     els.withImageOnly.checked = false;
