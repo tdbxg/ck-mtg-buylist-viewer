@@ -6479,6 +6479,528 @@
       "cashUsd": 51.0,
       "checkedAt": "2026-08-07T14:21:06+00:00",
       "matches": 7
+    },
+    "chainsofmephistopheles": {
+      "name": "Chains of Mephistopheles",
+      "cashUsd": 605.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 1
+    },
+    "powerartifact": {
+      "name": "Power Artifact",
+      "cashUsd": 100.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 1
+    },
+    "twilightshepherd": {
+      "name": "Twilight Shepherd",
+      "cashUsd": 60.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 4
+    },
+    "underworldbreach": {
+      "name": "Underworld Breach",
+      "cashUsd": 60.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 27
+    },
+    "wallofswords": {
+      "name": "Wall of Swords",
+      "cashUsd": 54.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 9
+    },
+    "lordofthenazgl": {
+      "name": "Lord of the Nazgûl",
+      "cashUsd": 51.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 6
+    },
+    "okinatempletothegrandfathers": {
+      "name": "Okina, Temple to the Grandfathers",
+      "cashUsd": 51.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 5
+    },
+    "plungeintodarkness": {
+      "name": "Plunge into Darkness",
+      "cashUsd": 51.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 4
+    },
+    "vesuva": {
+      "name": "Vesuva",
+      "cashUsd": 51.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 46
+    },
+    "timewarp": {
+      "name": "Time Warp",
+      "cashUsd": 51.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 25
+    },
+    "vivispersistence": {
+      "name": "Vivi's Persistence",
+      "cashUsd": 51.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 4
+    },
+    "whirofinvention": {
+      "name": "Whir of Invention",
+      "cashUsd": 51.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 19
+    },
+    "zhangheweigeneral": {
+      "name": "Zhang He, Wei General",
+      "cashUsd": 51.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 2
+    },
+    "accumulatedknowledge": {
+      "name": "Accumulated Knowledge",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 4
+    },
+    "angelsgrace": {
+      "name": "Angel's Grace",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 21
+    },
+    "atraxapraetorsvoice": {
+      "name": "Atraxa, Praetors' Voice",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 23
+    },
+    "attrition": {
+      "name": "Attrition",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 7
+    },
+    "banishingknack": {
+      "name": "Banishing Knack",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 4
+    },
+    "borrowingtheeastwind": {
+      "name": "Borrowing the East Wind",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 2
+    },
+    "confusionintheranks": {
+      "name": "Confusion in the Ranks",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 4
+    },
+    "containmentpriest": {
+      "name": "Containment Priest",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 23
+    },
+    "counterbalance": {
+      "name": "Counterbalance",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 12
+    },
+    "cursedscroll": {
+      "name": "Cursed Scroll",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 10
+    },
+    "devoteddruid": {
+      "name": "Devoted Druid",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 22
+    },
+    "emetselchofthethirdseat": {
+      "name": "Emet-Selch of the Third Seat",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 9
+    },
+    "everlastingtorment": {
+      "name": "Everlasting Torment",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 4
+    },
+    "faeriemacabre": {
+      "name": "Faerie Macabre",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 13
+    },
+    "forbiddenorchard": {
+      "name": "Forbidden Orchard",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 19
+    },
+    "fireelemental": {
+      "name": "Fire Elemental",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 9
+    },
+    "galagreeters": {
+      "name": "Gala Greeters",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 7
+    },
+    "generousplunderer": {
+      "name": "Generous Plunderer",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 16
+    },
+    "gemhidesliver": {
+      "name": "Gemhide Sliver",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 5
+    },
+    "humility": {
+      "name": "Humility",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 2
+    },
+    "inkmothnexus": {
+      "name": "Inkmoth Nexus",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 40
+    },
+    "kaitobaneofnightmares": {
+      "name": "Kaito, Bane of Nightmares",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 24
+    },
+    "lokilordofmisrule": {
+      "name": "Loki, Lord of Misrule",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 4
+    },
+    "ninjapizza": {
+      "name": "Ninja Pizza",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 6
+    },
+    "monk": {
+      "name": "Monk",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 44
+    },
+    "nirkanarevenant": {
+      "name": "Nirkana Revenant",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 12
+    },
+    "nukacolavendingmachine": {
+      "name": "Nuka-Cola Vending Machine",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 14
+    },
+    "paradoxicaloutcome": {
+      "name": "Paradoxical Outcome",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 9
+    },
+    "primevaltitan": {
+      "name": "Primeval Titan",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 33
+    },
+    "reaperking": {
+      "name": "Reaper King",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 10
+    },
+    "spreadingplague": {
+      "name": "Spreading Plague",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 4
+    },
+    "sterlinggrove": {
+      "name": "Sterling Grove",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 9
+    },
+    "tamiyocollectoroftales": {
+      "name": "Tamiyo, Collector of Tales",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 7
+    },
+    "thawingglaciers": {
+      "name": "Thawing Glaciers",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 3
+    },
+    "zhugejinwustrategist": {
+      "name": "Zhuge Jin, Wu Strategist",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 2
+    },
+    "zombieinfestation": {
+      "name": "Zombie Infestation",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 4
+    },
+    "arcanedenial": {
+      "name": "Arcane Denial",
+      "cashUsd": 49.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 45
+    },
+    "brunathefadinglight": {
+      "name": "Bruna, the Fading Light",
+      "cashUsd": 49.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 11
+    },
+    "ralstormconduit": {
+      "name": "Ral, Storm Conduit",
+      "cashUsd": 49.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 10
+    },
+    "tetsuoumezawa": {
+      "name": "Tetsuo Umezawa",
+      "cashUsd": 49.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 1
+    },
+    "spellskite": {
+      "name": "Spellskite",
+      "cashUsd": 49.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 21
+    },
+    "ydwenefreet": {
+      "name": "Ydwen Efreet",
+      "cashUsd": 49.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 1
+    },
+    "ancientgolddragon": {
+      "name": "Ancient Gold Dragon",
+      "cashUsd": 48.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 14
+    },
+    "animateartifact": {
+      "name": "Animate Artifact",
+      "cashUsd": 48.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 7
+    },
+    "arcumdagsson": {
+      "name": "Arcum Dagsson",
+      "cashUsd": 48.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 8
+    },
+    "dawnstrider": {
+      "name": "Dawnstrider",
+      "cashUsd": 48.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 3
+    },
+    "elvishspiritguide": {
+      "name": "Elvish Spirit Guide",
+      "cashUsd": 48.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 12
+    },
+    "fatefuldiscovery": {
+      "name": "Fateful Discovery",
+      "cashUsd": 48.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 10
+    },
+    "goblinlackey": {
+      "name": "Goblin Lackey",
+      "cashUsd": 48.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 9
+    },
+    "heartoframos": {
+      "name": "Heart of Ramos",
+      "cashUsd": 48.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 3
+    },
+    "goblinwizard": {
+      "name": "Goblin Wizard",
+      "cashUsd": 48.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 1
+    },
+    "huangzhongshugeneral": {
+      "name": "Huang Zhong, Shu General",
+      "cashUsd": 48.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 2
+    },
+    "overwhelmingforces": {
+      "name": "Overwhelming Forces",
+      "cashUsd": 48.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 6
+    },
+    "overlordofthemistmoors": {
+      "name": "Overlord of the Mistmoors",
+      "cashUsd": 48.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 18
+    },
+    "recurringnightmare": {
+      "name": "Recurring Nightmare",
+      "cashUsd": 48.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 3
+    },
+    "skydiamond": {
+      "name": "Sky Diamond",
+      "cashUsd": 48.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 3
+    },
+    "solemnsimulacrum": {
+      "name": "Solemn Simulacrum",
+      "cashUsd": 48.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 52
+    },
+    "tsabotavoc": {
+      "name": "Tsabo Tavoc",
+      "cashUsd": 48.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 2
+    },
+    "wolfpack": {
+      "name": "Wolf Pack",
+      "cashUsd": 48.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 5
+    },
+    "yoshimarueverfaithful": {
+      "name": "Yoshimaru, Ever Faithful",
+      "cashUsd": 48.0,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 11
+    },
+    "ashlingtheextinguisher": {
+      "name": "Ashling, the Extinguisher",
+      "cashUsd": 47.5,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 4
+    },
+    "bojukabog": {
+      "name": "Bojuka Bog",
+      "cashUsd": 47.5,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 60
+    },
+    "circularlogic": {
+      "name": "Circular Logic",
+      "cashUsd": 47.5,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 7
+    },
+    "crystalspray": {
+      "name": "Crystal Spray",
+      "cashUsd": 47.5,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 5
+    },
+    "formofthesquirrel": {
+      "name": "Form of the Squirrel",
+      "cashUsd": 47.5,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 2
+    },
+    "gutshot": {
+      "name": "Gut Shot",
+      "cashUsd": 47.5,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 9
+    },
+    "lavadart": {
+      "name": "Lava Dart",
+      "cashUsd": 47.5,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 12
+    },
+    "livingend": {
+      "name": "Living End",
+      "cashUsd": 47.5,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 24
+    },
+    "lure": {
+      "name": "Lure",
+      "cashUsd": 47.5,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 23
+    },
+    "needforspeed": {
+      "name": "Need for Speed",
+      "cashUsd": 47.5,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 4
+    },
+    "preordain": {
+      "name": "Preordain",
+      "cashUsd": 47.5,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 50
+    },
+    "reiterate": {
+      "name": "Reiterate",
+      "cashUsd": 47.5,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 8
+    },
+    "spiritofresistance": {
+      "name": "Spirit of Resistance",
+      "cashUsd": 47.5,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 4
+    },
+    "stealartifact": {
+      "name": "Steal Artifact",
+      "cashUsd": 47.5,
+      "checkedAt": "2026-08-08T03:02:44+00:00",
+      "matches": 9
     }
   },
   "unmatched": {
