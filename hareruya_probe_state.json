@@ -8915,6 +8915,450 @@
       "cashUsd": 36.0,
       "checkedAt": "2026-08-10T03:20:22+00:00",
       "matches": 11
+    },
+    "lothocorruptshirriff": {
+      "name": "Lotho, Corrupt Shirriff",
+      "cashUsd": 42.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 19
+    },
+    "spitefulvisions": {
+      "name": "Spiteful Visions",
+      "cashUsd": 37.5,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 8
+    },
+    "frodoadventuroushobbit": {
+      "name": "Frodo, Adventurous Hobbit",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 2
+    },
+    "ghaltaprimalhunger": {
+      "name": "Ghalta, Primal Hunger",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 40
+    },
+    "griselbrand": {
+      "name": "Griselbrand",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 32
+    },
+    "higurethestillwind": {
+      "name": "Higure, the Still Wind",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 10
+    },
+    "horizoncanopy": {
+      "name": "Horizon Canopy",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 32
+    },
+    "jandorssaddlebags": {
+      "name": "Jandor's Saddlebags",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 5
+    },
+    "karakas": {
+      "name": "Karakas",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 18
+    },
+    "kodamaofthewesttree": {
+      "name": "Kodama of the West Tree",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 22
+    },
+    "krenkotinstreetkingpin": {
+      "name": "Krenko, Tin Street Kingpin",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 13
+    },
+    "lootthekeytoeverything": {
+      "name": "Loot, the Key to Everything",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 12
+    },
+    "loyalapprentice": {
+      "name": "Loyal Apprentice",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 5
+    },
+    "makeanexample": {
+      "name": "Make an Example",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 6
+    },
+    "maskwoodnexus": {
+      "name": "Maskwood Nexus",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 23
+    },
+    "mindseye": {
+      "name": "Mind's Eye",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 22
+    },
+    "millstone": {
+      "name": "Millstone",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 11
+    },
+    "mirari": {
+      "name": "Mirari",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 30
+    },
+    "muyanlingwindrider": {
+      "name": "Mu Yanling, Wind Rider",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 10
+    },
+    "necrologia": {
+      "name": "Necrologia",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 2
+    },
+    "nutcollector": {
+      "name": "Nut Collector",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 10
+    },
+    "oblivionstone": {
+      "name": "Oblivion Stone",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 11
+    },
+    "phyrexianscuta": {
+      "name": "Phyrexian Scuta",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 4
+    },
+    "rotlungreanimator": {
+      "name": "Rotlung Reanimator",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 4
+    },
+    "steeloverseer": {
+      "name": "Steel Overseer",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 12
+    },
+    "stonegiant": {
+      "name": "Stone Giant",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 20
+    },
+    "storagematrix": {
+      "name": "Storage Matrix",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 6
+    },
+    "sunkenruins": {
+      "name": "Sunken Ruins",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 15
+    },
+    "tauntingchallenge": {
+      "name": "Taunting Challenge",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 2
+    },
+    "tragicslip": {
+      "name": "Tragic Slip",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 9
+    },
+    "utvarahellkite": {
+      "name": "Utvara Hellkite",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 22
+    },
+    "vendilionclique": {
+      "name": "Vendilion Clique",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 19
+    },
+    "wheelanddeal": {
+      "name": "Wheel and Deal",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 5
+    },
+    "woundreflection": {
+      "name": "Wound Reflection",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 20
+    },
+    "xunyuweiadvisor": {
+      "name": "Xun Yu, Wei Advisor",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 2
+    },
+    "yarokthedesecrated": {
+      "name": "Yarok, the Desecrated",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 18
+    },
+    "zhangliaoheroofhefei": {
+      "name": "Zhang Liao, Hero of Hefei",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 2
+    },
+    "zuocithemockingsage": {
+      "name": "Zuo Ci, the Mocking Sage",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 2
+    },
+    "aerialextortionist": {
+      "name": "Aerial Extortionist",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 8
+    },
+    "angelicdestiny": {
+      "name": "Angelic Destiny",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 10
+    },
+    "anuridbrushhopper": {
+      "name": "Anurid Brushhopper",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 5
+    },
+    "akromasvengeance": {
+      "name": "Akroma's Vengeance",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 6
+    },
+    "artificersintuition": {
+      "name": "Artificer's Intuition",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 4
+    },
+    "bloodshotcyclops": {
+      "name": "Bloodshot Cyclops",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 6
+    },
+    "bannerofkinship": {
+      "name": "Banner of Kinship",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 19
+    },
+    "bolasscitadel": {
+      "name": "Bolas's Citadel",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 20
+    },
+    "burgeoning": {
+      "name": "Burgeoning",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 14
+    },
+    "cauldronofsouls": {
+      "name": "Cauldron of Souls",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 8
+    },
+    "eerieinterlude": {
+      "name": "Eerie Interlude",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 13
+    },
+    "eiganjocastle": {
+      "name": "Eiganjo Castle",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 7
+    },
+    "elvesofdeepshadow": {
+      "name": "Elves of Deep Shadow",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 13
+    },
+    "filth": {
+      "name": "Filth",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 10
+    },
+    "firelitthicket": {
+      "name": "Fire-Lit Thicket",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 13
+    },
+    "flagstonesoftrokair": {
+      "name": "Flagstones of Trokair",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 12
+    },
+    "gravitysphere": {
+      "name": "Gravity Sphere",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 1
+    },
+    "geosurge": {
+      "name": "Geosurge",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 4
+    },
+    "grizzlybears": {
+      "name": "Grizzly Bears",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 15
+    },
+    "hiddenstrings": {
+      "name": "Hidden Strings",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 4
+    },
+    "honorthefallen": {
+      "name": "Honor the Fallen",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 4
+    },
+    "huatuohonoredphysician": {
+      "name": "Hua Tuo, Honored Physician",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 2
+    },
+    "intruderalarm": {
+      "name": "Intruder Alarm",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 16
+    },
+    "ironstar": {
+      "name": "Iron Star",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 35
+    },
+    "kratosgodofwar": {
+      "name": "Kratos, God of War",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 2
+    },
+    "massacre": {
+      "name": "Massacre",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 60
+    },
+    "minasmorguldarkfortress": {
+      "name": "Minas Morgul, Dark Fortress",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 9
+    },
+    "mindslaver": {
+      "name": "Mindslaver",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 12
+    },
+    "morphicpool": {
+      "name": "Morphic Pool",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 18
+    },
+    "mosswortbridge": {
+      "name": "Mosswort Bridge",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 41
+    },
+    "peatbog": {
+      "name": "Peat Bog",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 5
+    },
+    "persecuteartist": {
+      "name": "Persecute Artist",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 1
+    },
+    "plaguerats": {
+      "name": "Plague Rats",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 7
+    },
+    "pulverize": {
+      "name": "Pulverize",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 4
+    },
+    "quietspeculation": {
+      "name": "Quiet Speculation",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 10
+    },
+    "radstorm": {
+      "name": "Radstorm",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-10T14:34:15+00:00",
+      "matches": 12
     }
   },
   "unmatched": {
