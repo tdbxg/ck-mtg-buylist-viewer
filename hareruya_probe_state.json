@@ -10163,6 +10163,390 @@
       "cashUsd": 32.0,
       "checkedAt": "2026-08-11T14:34:02+00:00",
       "matches": 3
+    },
+    "shreddershadowmaster": {
+      "name": "Shredder, Shadow Master",
+      "cashUsd": 52.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 6
+    },
+    "gaeasblessing": {
+      "name": "Gaea's Blessing",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 13
+    },
+    "oversoldcemetery": {
+      "name": "Oversold Cemetery",
+      "cashUsd": 39.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 14
+    },
+    "toshiroumezawa": {
+      "name": "Toshiro Umezawa",
+      "cashUsd": 37.5,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 6
+    },
+    "pestilence": {
+      "name": "Pestilence",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 10
+    },
+    "urzastower": {
+      "name": "Urza's Tower",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 34
+    },
+    "yuffiemateriahunter": {
+      "name": "Yuffie, Materia Hunter",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 9
+    },
+    "eldraziconfluence": {
+      "name": "Eldrazi Confluence",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 3
+    },
+    "decreeofjustice": {
+      "name": "Decree of Justice",
+      "cashUsd": 33.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 7
+    },
+    "devildinosaur": {
+      "name": "Devil Dinosaur",
+      "cashUsd": 33.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 6
+    },
+    "morophontheboundless": {
+      "name": "Morophon, the Boundless",
+      "cashUsd": 33.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 27
+    },
+    "sisaysring": {
+      "name": "Sisay's Ring",
+      "cashUsd": 33.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 2
+    },
+    "chaoswarp": {
+      "name": "Chaos Warp",
+      "cashUsd": 32.5,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 60
+    },
+    "goblinengineer": {
+      "name": "Goblin Engineer",
+      "cashUsd": 32.5,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 15
+    },
+    "dualcastermage": {
+      "name": "Dualcaster Mage",
+      "cashUsd": 32.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 24
+    },
+    "floodedgrove": {
+      "name": "Flooded Grove",
+      "cashUsd": 32.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 33
+    },
+    "lordofextinction": {
+      "name": "Lord of Extinction",
+      "cashUsd": 32.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 14
+    },
+    "manowar": {
+      "name": "Man-o'-War",
+      "cashUsd": 32.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 1
+    },
+    "nissaworldwaker": {
+      "name": "Nissa, Worldwaker",
+      "cashUsd": 32.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 5
+    },
+    "oketrathetrue": {
+      "name": "Oketra the True",
+      "cashUsd": 32.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 7
+    },
+    "obnixilisthefallen": {
+      "name": "Ob Nixilis, the Fallen",
+      "cashUsd": 32.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 14
+    },
+    "sporefrog": {
+      "name": "Spore Frog",
+      "cashUsd": 32.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 5
+    },
+    "thassadeepdwelling": {
+      "name": "Thassa, Deep-Dwelling",
+      "cashUsd": 32.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 16
+    },
+    "thranduilthestrategist": {
+      "name": "Thranduil the Strategist",
+      "cashUsd": 32.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 2
+    },
+    "isochronscepter": {
+      "name": "Isochron Scepter",
+      "cashUsd": 31.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 21
+    },
+    "killerbees": {
+      "name": "Killer Bees",
+      "cashUsd": 31.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 2
+    },
+    "rhonastheindomitable": {
+      "name": "Rhonas the Indomitable",
+      "cashUsd": 31.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 9
+    },
+    "suddenedict": {
+      "name": "Sudden Edict",
+      "cashUsd": 31.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 2
+    },
+    "torrentialgearhulk": {
+      "name": "Torrential Gearhulk",
+      "cashUsd": 31.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 12
+    },
+    "academyruins": {
+      "name": "Academy Ruins",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 19
+    },
+    "acererakthearchlich": {
+      "name": "Acererak the Archlich",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 17
+    },
+    "adunoakenshield": {
+      "name": "Adun Oakenshield",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 1
+    },
+    "ajanithegreathearted": {
+      "name": "Ajani, the Greathearted",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 9
+    },
+    "alphadeathclaw": {
+      "name": "Alpha Deathclaw",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 12
+    },
+    "antivenomhorrifyinghealer": {
+      "name": "Anti-Venom, Horrifying Healer",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 11
+    },
+    "arwenweaverofhope": {
+      "name": "Arwen, Weaver of Hope",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 12
+    },
+    "ascendantevincar": {
+      "name": "Ascendant Evincar",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 8
+    },
+    "astarionthedecadent": {
+      "name": "Astarion, the Decadent",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 9
+    },
+    "auramutation": {
+      "name": "Aura Mutation",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 3
+    },
+    "avatarofwill": {
+      "name": "Avatar of Will",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 2
+    },
+    "beastofburden": {
+      "name": "Beast of Burden",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 9
+    },
+    "bloodlinebidding": {
+      "name": "Bloodline Bidding",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 10
+    },
+    "braidoffire": {
+      "name": "Braid of Fire",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 10
+    },
+    "burrowing": {
+      "name": "Burrowing",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 7
+    },
+    "cabalpit": {
+      "name": "Cabal Pit",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 5
+    },
+    "castle": {
+      "name": "Castle",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 60
+    },
+    "castlelocthwain": {
+      "name": "Castle Locthwain",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 16
+    },
+    "changeofplans": {
+      "name": "Change of Plans",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 6
+    },
+    "cleansingmeditation": {
+      "name": "Cleansing Meditation",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 4
+    },
+    "contagionengine": {
+      "name": "Contagion Engine",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 12
+    },
+    "crawwurm": {
+      "name": "Craw Wurm",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 7
+    },
+    "crumblingsanctuary": {
+      "name": "Crumbling Sanctuary",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 2
+    },
+    "darksteelcolossus": {
+      "name": "Darksteel Colossus",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 15
+    },
+    "cryptofagadeem": {
+      "name": "Crypt of Agadeem",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 8
+    },
+    "drainlife": {
+      "name": "Drain Life",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 11
+    },
+    "devouringstrossus": {
+      "name": "Devouring Strossus",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 2
+    },
+    "dwarvendemolitionteam": {
+      "name": "Dwarven Demolition Team",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 6
+    },
+    "everflowingchalice": {
+      "name": "Everflowing Chalice",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 23
+    },
+    "everybodylives": {
+      "name": "Everybody Lives!",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 12
+    },
+    "extract": {
+      "name": "Extract",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 44
+    },
+    "ezioauditoredafirenze": {
+      "name": "Ezio Auditore da Firenze",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 16
+    },
+    "flareofdenial": {
+      "name": "Flare of Denial",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 14
+    },
+    "gempalmincinerator": {
+      "name": "Gempalm Incinerator",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 4
+    },
+    "goblingoon": {
+      "name": "Goblin Goon",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-12T03:31:58+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
