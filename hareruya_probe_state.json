@@ -11657,6 +11657,372 @@
       "cashUsd": 27.5,
       "checkedAt": "2026-08-14T03:32:46+00:00",
       "matches": 6
+    },
+    "bitterordeal": {
+      "name": "Bitter Ordeal",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 4
+    },
+    "skeletalscrying": {
+      "name": "Skeletal Scrying",
+      "cashUsd": 32.5,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 6
+    },
+    "startingtown": {
+      "name": "Starting Town",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 6
+    },
+    "stitchtogether": {
+      "name": "Stitch Together",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 16
+    },
+    "swordofhearthandhome": {
+      "name": "Sword of Hearth and Home",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 24
+    },
+    "takenumaabandonedmire": {
+      "name": "Takenuma, Abandoned Mire",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 20
+    },
+    "tangle": {
+      "name": "Tangle",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 51
+    },
+    "tendrilsofagony": {
+      "name": "Tendrils of Agony",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 15
+    },
+    "testofendurance": {
+      "name": "Test of Endurance",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 14
+    },
+    "theastonishingantman": {
+      "name": "The Astonishing Ant-Man",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 1
+    },
+    "therack": {
+      "name": "The Rack",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 29
+    },
+    "toothandnail": {
+      "name": "Tooth and Nail",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 16
+    },
+    "trinketmage": {
+      "name": "Trinket Mage",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 10
+    },
+    "valkyriescall": {
+      "name": "Valkyrie's Call",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 15
+    },
+    "verdeloththeancient": {
+      "name": "Verdeloth the Ancient",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 4
+    },
+    "vraskabetrayalssting": {
+      "name": "Vraska, Betrayal's Sting",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 21
+    },
+    "wanderlust": {
+      "name": "Wanderlust",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 7
+    },
+    "xanderslounge": {
+      "name": "Xander's Lounge",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 18
+    },
+    "zagothtriome": {
+      "name": "Zagoth Triome",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 14
+    },
+    "arcadessabboth": {
+      "name": "Arcades Sabboth",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 3
+    },
+    "bastionofremembrance": {
+      "name": "Bastion of Remembrance",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 15
+    },
+    "blastfromthepast": {
+      "name": "Blast from the Past",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 3
+    },
+    "centaurgarden": {
+      "name": "Centaur Garden",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 3
+    },
+    "cavernharpy": {
+      "name": "Cavern Harpy",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 2
+    },
+    "circleofprotectionred": {
+      "name": "Circle of Protection: Red",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 14
+    },
+    "displaceddinosaurs": {
+      "name": "Displaced Dinosaurs",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 6
+    },
+    "dizzyspell": {
+      "name": "Dizzy Spell",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 4
+    },
+    "dreadhordearcanist": {
+      "name": "Dreadhorde Arcanist",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 8
+    },
+    "eldrazimonument": {
+      "name": "Eldrazi Monument",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 12
+    },
+    "eldritchevolution": {
+      "name": "Eldritch Evolution",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 19
+    },
+    "endurancebobblehead": {
+      "name": "Endurance Bobblehead",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 6
+    },
+    "ferozsban": {
+      "name": "Feroz's Ban",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 2
+    },
+    "fling": {
+      "name": "Fling",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 30
+    },
+    "gatetophyrexia": {
+      "name": "Gate to Phyrexia",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 1
+    },
+    "ghaveguruofspores": {
+      "name": "Ghave, Guru of Spores",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 6
+    },
+    "glory": {
+      "name": "Glory",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 60
+    },
+    "huntinggrounds": {
+      "name": "Hunting Grounds",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 5
+    },
+    "grinningdemon": {
+      "name": "Grinning Demon",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 4
+    },
+    "infernoofthestarmounts": {
+      "name": "Inferno of the Star Mounts",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 16
+    },
+    "keensense": {
+      "name": "Keen Sense",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 9
+    },
+    "kilnmouthdragon": {
+      "name": "Kilnmouth Dragon",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 3
+    },
+    "knowledgevault": {
+      "name": "Knowledge Vault",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 1
+    },
+    "lastlaugh": {
+      "name": "Last Laugh",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 4
+    },
+    "lierdiscipleofthedrowned": {
+      "name": "Lier, Disciple of the Drowned",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 24
+    },
+    "lilianascaress": {
+      "name": "Liliana's Caress",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 5
+    },
+    "loyalretainers": {
+      "name": "Loyal Retainers",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 14
+    },
+    "momentspeace": {
+      "name": "Moment's Peace",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 8
+    },
+    "moxjasper": {
+      "name": "Mox Jasper",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 15
+    },
+    "onewithnothing": {
+      "name": "One with Nothing",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 3
+    },
+    "rootwaterthief": {
+      "name": "Rootwater Thief",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 3
+    },
+    "rout": {
+      "name": "Rout",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 35
+    },
+    "runicarmasaur": {
+      "name": "Runic Armasaur",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 10
+    },
+    "secludedstarforge": {
+      "name": "Secluded Starforge",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 6
+    },
+    "slaughterpact": {
+      "name": "Slaughter Pact",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 8
+    },
+    "supersecrettech": {
+      "name": "Super Secret Tech",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 1
+    },
+    "taintedpeak": {
+      "name": "Tainted Peak",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 9
+    },
+    "temporaladept": {
+      "name": "Temporal Adept",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 8
+    },
+    "terminate": {
+      "name": "Terminate",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 16
+    },
+    "thefifteenthdoctor": {
+      "name": "The Fifteenth Doctor",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 2
+    },
+    "thornelemental": {
+      "name": "Thorn Elemental",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 7
+    },
+    "truebeliever": {
+      "name": "True Believer",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-14T14:22:34+00:00",
+      "matches": 6
     }
   },
   "unmatched": {
