@@ -13319,6 +13319,306 @@
       "cashUsd": 22.5,
       "checkedAt": "2026-08-16T13:47:13+00:00",
       "matches": 2
+    },
+    "captainamericasupersoldier": {
+      "name": "Captain America, Super-Soldier",
+      "cashUsd": 28.0,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 15
+    },
+    "ephemerate": {
+      "name": "Ephemerate",
+      "cashUsd": 28.0,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 28
+    },
+    "ruskoclockmaker": {
+      "name": "Rusko, Clockmaker",
+      "cashUsd": 28.0,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 1
+    },
+    "angelofjubilation": {
+      "name": "Angel of Jubilation",
+      "cashUsd": 25.0,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 4
+    },
+    "battlescreech": {
+      "name": "Battle Screech",
+      "cashUsd": 24.0,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 2
+    },
+    "genesiswave": {
+      "name": "Genesis Wave",
+      "cashUsd": 24.0,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 8
+    },
+    "sorinthemirthless": {
+      "name": "Sorin the Mirthless",
+      "cashUsd": 24.0,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 27
+    },
+    "lyradawnbringer": {
+      "name": "Lyra Dawnbringer",
+      "cashUsd": 22.8,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 28
+    },
+    "darienkingofkjeldor": {
+      "name": "Darien, King of Kjeldor",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 8
+    },
+    "endlessfootassault": {
+      "name": "Endless Foot Assault",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 4
+    },
+    "essencesliver": {
+      "name": "Essence Sliver",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 9
+    },
+    "firesofyavimaya": {
+      "name": "Fires of Yavimaya",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 6
+    },
+    "flareoffortitude": {
+      "name": "Flare of Fortitude",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 14
+    },
+    "fleshwrither": {
+      "name": "Fleshwrither",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 4
+    },
+    "flyingcarpet": {
+      "name": "Flying Carpet",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 7
+    },
+    "furnaceofrath": {
+      "name": "Furnace of Rath",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 17
+    },
+    "hordeofnotions": {
+      "name": "Horde of Notions",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 4
+    },
+    "giantspider": {
+      "name": "Giant Spider",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 8
+    },
+    "infernalspawnofinfernalspawnofevil": {
+      "name": "Infernal Spawn of Infernal Spawn of Evil",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 2
+    },
+    "inspiringcall": {
+      "name": "Inspiring Call",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 16
+    },
+    "iroasgodofvictory": {
+      "name": "Iroas, God of Victory",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 10
+    },
+    "ixidorrealitysculptor": {
+      "name": "Ixidor, Reality Sculptor",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 4
+    },
+    "kozilekthebrokenreality": {
+      "name": "Kozilek, the Broken Reality",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 17
+    },
+    "leechriddenswamp": {
+      "name": "Leechridden Swamp",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 2
+    },
+    "locketreasurehunter": {
+      "name": "Locke, Treasure Hunter",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 8
+    },
+    "memnarch": {
+      "name": "Memnarch",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 13
+    },
+    "manareflection": {
+      "name": "Mana Reflection",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 10
+    },
+    "mirriweatherlightduelist": {
+      "name": "Mirri, Weatherlight Duelist",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 14
+    },
+    "naliadearnise": {
+      "name": "Nalia de'Arnise",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 2
+    },
+    "nazglbattlemace": {
+      "name": "Nazgûl Battle-Mace",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 3
+    },
+    "nicominorurunaway": {
+      "name": "Nico Minoru, Runaway",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 4
+    },
+    "numotthedevastator": {
+      "name": "Numot, the Devastator",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 2
+    },
+    "oldfogey": {
+      "name": "Old Fogey",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 1
+    },
+    "parallelevolution": {
+      "name": "Parallel Evolution",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 4
+    },
+    "peek": {
+      "name": "Peek",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 5
+    },
+    "planarportal": {
+      "name": "Planar Portal",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 6
+    },
+    "pulsemageadvocate": {
+      "name": "Pulsemage Advocate",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 3
+    },
+    "rathidragon": {
+      "name": "Rathi Dragon",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 4
+    },
+    "realmsuncharted": {
+      "name": "Realms Uncharted",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 6
+    },
+    "reavertitan": {
+      "name": "Reaver Titan",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 3
+    },
+    "remotefarm": {
+      "name": "Remote Farm",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 2
+    },
+    "resplendentangel": {
+      "name": "Resplendent Angel",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 24
+    },
+    "sarkhandragonascendant": {
+      "name": "Sarkhan, Dragon Ascendant",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 7
+    },
+    "savelife": {
+      "name": "Save Life",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 1
+    },
+    "serrasblessing": {
+      "name": "Serra's Blessing",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 2
+    },
+    "shadowinthewarp": {
+      "name": "Shadow in the Warp",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 3
+    },
+    "shiftingwoodland": {
+      "name": "Shifting Woodland",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 10
+    },
+    "six": {
+      "name": "Six",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 60
+    },
+    "spawnsireofulamog": {
+      "name": "Spawnsire of Ulamog",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 4
+    },
+    "soulwarden": {
+      "name": "Soul Warden",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T02:36:04+00:00",
+      "matches": 25
     }
   },
   "unmatched": {
