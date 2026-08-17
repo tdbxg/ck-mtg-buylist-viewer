@@ -13619,6 +13619,306 @@
       "cashUsd": 22.5,
       "checkedAt": "2026-08-17T02:36:04+00:00",
       "matches": 25
+    },
+    "uginslabyrinth": {
+      "name": "Ugin's Labyrinth",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 14
+    },
+    "shatter": {
+      "name": "Shatter",
+      "cashUsd": 25.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 59
+    },
+    "serrathebenevolent": {
+      "name": "Serra the Benevolent",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 8
+    },
+    "spectatorseating": {
+      "name": "Spectator Seating",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 23
+    },
+    "spiritualfocus": {
+      "name": "Spiritual Focus",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 4
+    },
+    "spiregarden": {
+      "name": "Spire Garden",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 22
+    },
+    "springjackpasture": {
+      "name": "Springjack Pasture",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 2
+    },
+    "strengthbobblehead": {
+      "name": "Strength Bobblehead",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 7
+    },
+    "steelofthegodhead": {
+      "name": "Steel of the Godhead",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 7
+    },
+    "supercombo": {
+      "name": "Super Combo",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 4
+    },
+    "symbioticwurm": {
+      "name": "Symbiotic Wurm",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 7
+    },
+    "thechainveil": {
+      "name": "The Chain Veil",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 7
+    },
+    "thousandyearelixir": {
+      "name": "Thousand-Year Elixir",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 14
+    },
+    "timemachine": {
+      "name": "Time Machine",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 1
+    },
+    "tirelesstribe": {
+      "name": "Tireless Tribe",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 5
+    },
+    "trainingcenter": {
+      "name": "Training Center",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 19
+    },
+    "transcendence": {
+      "name": "Transcendence",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 4
+    },
+    "urabraskthehidden": {
+      "name": "Urabrask the Hidden",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 19
+    },
+    "vendetta": {
+      "name": "Vendetta",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 3
+    },
+    "utopiatree": {
+      "name": "Utopia Tree",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 6
+    },
+    "voidmageprodigy": {
+      "name": "Voidmage Prodigy",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 9
+    },
+    "wallofwater": {
+      "name": "Wall of Water",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 7
+    },
+    "wavesofaggression": {
+      "name": "Waves of Aggression",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 8
+    },
+    "wordsofwaste": {
+      "name": "Words of Waste",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 4
+    },
+    "ziatorasprovingground": {
+      "name": "Ziatora's Proving Ground",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 18
+    },
+    "zirdathedawnwaker": {
+      "name": "Zirda, the Dawnwaker",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 10
+    },
+    "aetherize": {
+      "name": "Aetherize",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 24
+    },
+    "alelacunningconqueror": {
+      "name": "Alela, Cunning Conqueror",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 8
+    },
+    "apriloneilhacktivist": {
+      "name": "April O'Neil, Hacktivist",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 4
+    },
+    "ashcoatoftheshadowswarm": {
+      "name": "Ashcoat of the Shadow Swarm",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 6
+    },
+    "blindobedience": {
+      "name": "Blind Obedience",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 22
+    },
+    "caocaolordofwei": {
+      "name": "Cao Cao, Lord of Wei",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 3
+    },
+    "cataclysmicgearhulk": {
+      "name": "Cataclysmic Gearhulk",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 6
+    },
+    "consider": {
+      "name": "Consider",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 13
+    },
+    "chronicleofvictory": {
+      "name": "Chronicle of Victory",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 12
+    },
+    "combatcelebrant": {
+      "name": "Combat Celebrant",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 12
+    },
+    "deathriteshaman": {
+      "name": "Deathrite Shaman",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 24
+    },
+    "crueltutor": {
+      "name": "Cruel Tutor",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 7
+    },
+    "cryptghast": {
+      "name": "Crypt Ghast",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 22
+    },
+    "dinoftheancienthalls": {
+      "name": "Dáin of the Ancient Halls",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 2
+    },
+    "faeriemastermind": {
+      "name": "Faerie Mastermind",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 16
+    },
+    "firestormphoenix": {
+      "name": "Firestorm Phoenix",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 1
+    },
+    "heirloomblade": {
+      "name": "Heirloom Blade",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 2
+    },
+    "isolatedchapel": {
+      "name": "Isolated Chapel",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 33
+    },
+    "heroicintervention": {
+      "name": "Heroic Intervention",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 60
+    },
+    "izzetsignet": {
+      "name": "Izzet Signet",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 45
+    },
+    "lifeline": {
+      "name": "Lifeline",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 2
+    },
+    "jeweledbird": {
+      "name": "Jeweled Bird",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 2
+    },
+    "merchantship": {
+      "name": "Merchant Ship",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 1
+    },
+    "mesapegasus": {
+      "name": "Mesa Pegasus",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-17T13:55:30+00:00",
+      "matches": 7
     }
   },
   "unmatched": {
