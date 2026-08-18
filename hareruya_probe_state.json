@@ -13919,6 +13919,294 @@
       "cashUsd": 22.0,
       "checkedAt": "2026-08-17T13:55:30+00:00",
       "matches": 7
+    },
+    "thorinmountainking": {
+      "name": "Thorin, Mountain-king",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 10
+    },
+    "sorinvengefulbloodlord": {
+      "name": "Sorin, Vengeful Bloodlord",
+      "cashUsd": 39.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 10
+    },
+    "mindovermatter": {
+      "name": "Mind Over Matter",
+      "cashUsd": 25.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 2
+    },
+    "faithlesslooting": {
+      "name": "Faithless Looting",
+      "cashUsd": 24.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 23
+    },
+    "inundate": {
+      "name": "Inundate",
+      "cashUsd": 22.8,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 8
+    },
+    "bitterbloombearer": {
+      "name": "Bitterbloom Bearer",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 15
+    },
+    "broodsliver": {
+      "name": "Brood Sliver",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 10
+    },
+    "shadowybackstreet": {
+      "name": "Shadowy Backstreet",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 14
+    },
+    "voiceofvictory": {
+      "name": "Voice of Victory",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 14
+    },
+    "voltaickey": {
+      "name": "Voltaic Key",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 9
+    },
+    "fabledpassage": {
+      "name": "Fabled Passage",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 60
+    },
+    "gildedlotus": {
+      "name": "Gilded Lotus",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 47
+    },
+    "midnightreaper": {
+      "name": "Midnight Reaper",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 5
+    },
+    "omnathlocusofrage": {
+      "name": "Omnath, Locus of Rage",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 14
+    },
+    "ozaithephoenixking": {
+      "name": "Ozai, the Phoenix King",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 14
+    },
+    "reassemblingskeleton": {
+      "name": "Reassembling Skeleton",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 6
+    },
+    "phyrexiandevourer": {
+      "name": "Phyrexian Devourer",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 1
+    },
+    "ruggedprairie": {
+      "name": "Rugged Prairie",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 22
+    },
+    "reconnaissance": {
+      "name": "Reconnaissance",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 26
+    },
+    "schemingsymmetry": {
+      "name": "Scheming Symmetry",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 14
+    },
+    "seaserpent": {
+      "name": "Sea Serpent",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 7
+    },
+    "spinalvillain": {
+      "name": "Spinal Villain",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 1
+    },
+    "swordoftheanimist": {
+      "name": "Sword of the Animist",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 39
+    },
+    "telekinesis": {
+      "name": "Telekinesis",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 1
+    },
+    "topdeckthehalls": {
+      "name": "Topdeck the Halls",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 1
+    },
+    "thranquarry": {
+      "name": "Thran Quarry",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 5
+    },
+    "drudgeskeletons": {
+      "name": "Drudge Skeletons",
+      "cashUsd": 21.5,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 9
+    },
+    "scavengingghoul": {
+      "name": "Scavenging Ghoul",
+      "cashUsd": 21.5,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 7
+    },
+    "witheredwretch": {
+      "name": "Withered Wretch",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 13
+    },
+    "alabarascarpet": {
+      "name": "Al-abara's Carpet",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 1
+    },
+    "bind": {
+      "name": "Bind",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 60
+    },
+    "bearscape": {
+      "name": "Bearscape",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 6
+    },
+    "blessedreversal": {
+      "name": "Blessed Reversal",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 6
+    },
+    "corpsedance": {
+      "name": "Corpse Dance",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 3
+    },
+    "crookedscales": {
+      "name": "Crooked Scales",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 2
+    },
+    "crystalbarricade": {
+      "name": "Crystal Barricade",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 19
+    },
+    "descendantspath": {
+      "name": "Descendants' Path",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 9
+    },
+    "diamondweapon": {
+      "name": "Diamond Weapon",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 1
+    },
+    "discordlordofdisharmony": {
+      "name": "Discord, Lord of Disharmony",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 2
+    },
+    "dwarvenwarriors": {
+      "name": "Dwarven Warriors",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 9
+    },
+    "echoingdeeps": {
+      "name": "Echoing Deeps",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 15
+    },
+    "eightfoldmaze": {
+      "name": "Eightfold Maze",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 2
+    },
+    "greatermorphling": {
+      "name": "Greater Morphling",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 1
+    },
+    "hallowedhaunting": {
+      "name": "Hallowed Haunting",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 20
+    },
+    "howlsquadheavy": {
+      "name": "Howlsquad Heavy",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 19
+    },
+    "moralityshift": {
+      "name": "Morality Shift",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 3
+    },
+    "laquatusschampion": {
+      "name": "Laquatus's Champion",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 5
+    },
+    "mortivore": {
+      "name": "Mortivore",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-18T02:31:34+00:00",
+      "matches": 9
     }
   },
   "unmatched": {
