@@ -14465,6 +14465,270 @@
       "cashUsd": 20.0,
       "checkedAt": "2026-08-18T13:59:02+00:00",
       "matches": 30
+    },
+    "pyreticritual": {
+      "name": "Pyretic Ritual",
+      "cashUsd": 42.5,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 13
+    },
+    "knucklebonewitch": {
+      "name": "Knucklebone Witch",
+      "cashUsd": 33.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 4
+    },
+    "celestialconvergence": {
+      "name": "Celestial Convergence",
+      "cashUsd": 25.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 2
+    },
+    "surrakandgoreclaw": {
+      "name": "Surrak and Goreclaw",
+      "cashUsd": 24.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 6
+    },
+    "nihilspellbomb": {
+      "name": "Nihil Spellbomb",
+      "cashUsd": 22.8,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 17
+    },
+    "mijaedjinn": {
+      "name": "Mijae Djinn",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 3
+    },
+    "ezurirenegadeleader": {
+      "name": "Ezuri, Renegade Leader",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 10
+    },
+    "lavaspike": {
+      "name": "Lava Spike",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 15
+    },
+    "magusofthemoat": {
+      "name": "Magus of the Moat",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 5
+    },
+    "mahaitsfeathersnight": {
+      "name": "Maha, Its Feathers Night",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 14
+    },
+    "wirewoodchanneler": {
+      "name": "Wirewood Channeler",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 7
+    },
+    "abolish": {
+      "name": "Abolish",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 42
+    },
+    "bontusmonument": {
+      "name": "Bontu's Monument",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 8
+    },
+    "bodysnatcher": {
+      "name": "Body Snatcher",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 2
+    },
+    "breathoflife": {
+      "name": "Breath of Life",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 2
+    },
+    "bountifulpromenade": {
+      "name": "Bountiful Promenade",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 24
+    },
+    "collectorouphe": {
+      "name": "Collector Ouphe",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 8
+    },
+    "deepanalysis": {
+      "name": "Deep Analysis",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 3
+    },
+    "dakmorsalvage": {
+      "name": "Dakmor Salvage",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 5
+    },
+    "cosmiccube": {
+      "name": "Cosmic Cube",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 12
+    },
+    "fieryemancipation": {
+      "name": "Fiery Emancipation",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 22
+    },
+    "formidablespeaker": {
+      "name": "Formidable Speaker",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 12
+    },
+    "fontofmythos": {
+      "name": "Font of Mythos",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 7
+    },
+    "fountainwatch": {
+      "name": "Fountain Watch",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 3
+    },
+    "gaddockteeg": {
+      "name": "Gaddock Teeg",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 11
+    },
+    "futuresight": {
+      "name": "Future Sight",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 20
+    },
+    "gaeasavenger": {
+      "name": "Gaea's Avenger",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 1
+    },
+    "glenelendraguardian": {
+      "name": "Glen Elendra Guardian",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 7
+    },
+    "godeternalbontu": {
+      "name": "God-Eternal Bontu",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 5
+    },
+    "hellkitetyrant": {
+      "name": "Hellkite Tyrant",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 25
+    },
+    "heraldofsecretstreams": {
+      "name": "Herald of Secret Streams",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 13
+    },
+    "helmofthehost": {
+      "name": "Helm of the Host",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 27
+    },
+    "hullbreacher": {
+      "name": "Hullbreacher",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 9
+    },
+    "jugantherisingstar": {
+      "name": "Jugan, the Rising Star",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 11
+    },
+    "ironclaworcs": {
+      "name": "Ironclaw Orcs",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 6
+    },
+    "kiorasovereignofthedeep": {
+      "name": "Kiora, Sovereign of the Deep",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 11
+    },
+    "knightofthereliquary": {
+      "name": "Knight of the Reliquary",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 15
+    },
+    "kozilekthegreatdistortion": {
+      "name": "Kozilek, the Great Distortion",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 20
+    },
+    "ladyevangela": {
+      "name": "Lady Evangela",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 1
+    },
+    "lolthspiderqueen": {
+      "name": "Lolth, Spider Queen",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 16
+    },
+    "marchesatheblackrose": {
+      "name": "Marchesa, the Black Rose",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 11
+    },
+    "masterofceremonies": {
+      "name": "Master of Ceremonies",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 8
+    },
+    "memoryplunder": {
+      "name": "Memory Plunder",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 4
+    },
+    "minastirith": {
+      "name": "Minas Tirith",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T02:34:21+00:00",
+      "matches": 25
     }
   },
   "unmatched": {
