@@ -14729,6 +14729,264 @@
       "cashUsd": 20.0,
       "checkedAt": "2026-08-19T02:34:21+00:00",
       "matches": 25
+    },
+    "carnophage": {
+      "name": "Carnophage",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 1
+    },
+    "essencewarden": {
+      "name": "Essence Warden",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 11
+    },
+    "secondsunrise": {
+      "name": "Second Sunrise",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 5
+    },
+    "summonknightsofround": {
+      "name": "Summon: Knights of Round",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 10
+    },
+    "bontutheglorified": {
+      "name": "Bontu the Glorified",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 6
+    },
+    "mirrorentity": {
+      "name": "Mirror Entity",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 12
+    },
+    "moonmist": {
+      "name": "Moonmist",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 5
+    },
+    "nethertraitor": {
+      "name": "Nether Traitor",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 10
+    },
+    "mysticenforcer": {
+      "name": "Mystic Enforcer",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 6
+    },
+    "phantasmalimage": {
+      "name": "Phantasmal Image",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 16
+    },
+    "patronofthemoon": {
+      "name": "Patron of the Moon",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 3
+    },
+    "platinumemperion": {
+      "name": "Platinum Emperion",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 9
+    },
+    "polyraptor": {
+      "name": "Polyraptor",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 14
+    },
+    "priceofglory": {
+      "name": "Price of Glory",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 6
+    },
+    "proteusstaff": {
+      "name": "Proteus Staff",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 5
+    },
+    "rdssecretlair": {
+      "name": "R&D's Secret Lair",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 2
+    },
+    "radiate": {
+      "name": "Radiate",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 5
+    },
+    "reshape": {
+      "name": "Reshape",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 23
+    },
+    "redward": {
+      "name": "Red Ward",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 9
+    },
+    "redirectlightning": {
+      "name": "Redirect Lightning",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 10
+    },
+    "riftstoneportal": {
+      "name": "Riftstone Portal",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 3
+    },
+    "reshapetheearth": {
+      "name": "Reshape the Earth",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 8
+    },
+    "revtitheextractor": {
+      "name": "Rev, Tithe Extractor",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 2
+    },
+    "scythecatcub": {
+      "name": "Scythecat Cub",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 2
+    },
+    "shapesharer": {
+      "name": "Shapesharer",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 5
+    },
+    "secludedglen": {
+      "name": "Secluded Glen",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 5
+    },
+    "shuko": {
+      "name": "Shuko",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 5
+    },
+    "sinkhole": {
+      "name": "Sinkhole",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 14
+    },
+    "skitteringcicada": {
+      "name": "Skittering Cicada",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 6
+    },
+    "sliver": {
+      "name": "Sliver",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 60
+    },
+    "smaugtheimpenetrable": {
+      "name": "Smaug the Impenetrable",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 3
+    },
+    "sliverhivelord": {
+      "name": "Sliver Hivelord",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 9
+    },
+    "southernpaladin": {
+      "name": "Southern Paladin",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 2
+    },
+    "splintertwin": {
+      "name": "Splinter Twin",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 9
+    },
+    "squirrelnest": {
+      "name": "Squirrel Nest",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 6
+    },
+    "starfieldofnyx": {
+      "name": "Starfield of Nyx",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 6
+    },
+    "surgicalextraction": {
+      "name": "Surgical Extraction",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 28
+    },
+    "swordofdungeonsdragons": {
+      "name": "Sword of Dungeons & Dragons",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 4
+    },
+    "taureanmauler": {
+      "name": "Taurean Mauler",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 20
+    },
+    "temursabertooth": {
+      "name": "Temur Sabertooth",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 11
+    },
+    "terraingenerator": {
+      "name": "Terrain Generator",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 19
+    },
+    "thewanderingrescuer": {
+      "name": "The Wandering Rescuer",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 17
+    },
+    "thereandbackagain": {
+      "name": "There and Back Again",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-19T13:59:55+00:00",
+      "matches": 5
     }
   },
   "unmatched": {
