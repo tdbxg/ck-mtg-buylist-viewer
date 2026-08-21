@@ -15743,6 +15743,240 @@
       "cashUsd": 19.0,
       "checkedAt": "2026-08-21T02:38:57+00:00",
       "matches": 1
+    },
+    "skithiryxtheblightdragon": {
+      "name": "Skithiryx, the Blight Dragon",
+      "cashUsd": 32.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 24
+    },
+    "archaeomancersmap": {
+      "name": "Archaeomancer's Map",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 15
+    },
+    "plaguespitter": {
+      "name": "Plague Spitter",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 8
+    },
+    "jaradgolgarilichlord": {
+      "name": "Jarad, Golgari Lich Lord",
+      "cashUsd": 19.8,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 10
+    },
+    "hellscaretaker": {
+      "name": "Hell's Caretaker",
+      "cashUsd": 19.5,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 7
+    },
+    "chiefofthewilds": {
+      "name": "Chief of the Wilds",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 2
+    },
+    "flameofanor": {
+      "name": "Flame of Anor",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 18
+    },
+    "planequake": {
+      "name": "Planequake",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 1
+    },
+    "preacher": {
+      "name": "Preacher",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 13
+    },
+    "powerfist": {
+      "name": "Power Fist",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 12
+    },
+    "prismaticending": {
+      "name": "Prismatic Ending",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 18
+    },
+    "predatorflagship": {
+      "name": "Predator, Flagship",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 2
+    },
+    "quilledgreatwurm": {
+      "name": "Quilled Greatwurm",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 19
+    },
+    "ravenousrats": {
+      "name": "Ravenous Rats",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 6
+    },
+    "rebuffthewicked": {
+      "name": "Rebuff the Wicked",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 8
+    },
+    "realmwalker": {
+      "name": "Realmwalker",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 22
+    },
+    "reverberation": {
+      "name": "Reverberation",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 2
+    },
+    "returnofthewildspeaker": {
+      "name": "Return of the Wildspeaker",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 19
+    },
+    "roccostreetchef": {
+      "name": "Rocco, Street Chef",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 5
+    },
+    "selflessspirit": {
+      "name": "Selfless Spirit",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 17
+    },
+    "sarkhansoulaflame": {
+      "name": "Sarkhan, Soul Aflame",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 13
+    },
+    "scourgeofthethrone": {
+      "name": "Scourge of the Throne",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 13
+    },
+    "sepharaskysblade": {
+      "name": "Sephara, Sky's Blade",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 17
+    },
+    "shelteredbyghosts": {
+      "name": "Sheltered by Ghosts",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 10
+    },
+    "serpentofyawningdepths": {
+      "name": "Serpent of Yawning Depths",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 4
+    },
+    "shieldofkaldra": {
+      "name": "Shield of Kaldra",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 5
+    },
+    "sproutswarm": {
+      "name": "Sprout Swarm",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 3
+    },
+    "spellstuttersprite": {
+      "name": "Spellstutter Sprite",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 11
+    },
+    "stormherd": {
+      "name": "Storm Herd",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 13
+    },
+    "sunforger": {
+      "name": "Sunforger",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 15
+    },
+    "syggriverguide": {
+      "name": "Sygg, River Guide",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 2
+    },
+    "templeofthefalsegod": {
+      "name": "Temple of the False God",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 12
+    },
+    "thelocustgod": {
+      "name": "The Locust God",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 13
+    },
+    "toothyimaginaryfriend": {
+      "name": "Toothy, Imaginary Friend",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 7
+    },
+    "trainedorgg": {
+      "name": "Trained Orgg",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 2
+    },
+    "tributetotheworldtree": {
+      "name": "Tribute to the World Tree",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 14
+    },
+    "twilightscall": {
+      "name": "Twilight's Call",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 3
+    },
+    "untaidakethecloudkeeper": {
+      "name": "Untaidake, the Cloud Keeper",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 4
+    },
+    "tyvarthebellicose": {
+      "name": "Tyvar the Bellicose",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-21T14:00:31+00:00",
+      "matches": 18
     }
   },
   "unmatched": {
