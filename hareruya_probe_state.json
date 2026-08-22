@@ -15977,6 +15977,216 @@
       "cashUsd": 19.0,
       "checkedAt": "2026-08-21T14:00:31+00:00",
       "matches": 18
+    },
+    "plaguebearer": {
+      "name": "Plaguebearer",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 2
+    },
+    "notofthisworld": {
+      "name": "Not of This World",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 7
+    },
+    "timeofneed": {
+      "name": "Time of Need",
+      "cashUsd": 19.8,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 8
+    },
+    "uktabiwildcats": {
+      "name": "Uktabi Wildcats",
+      "cashUsd": 19.8,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 2
+    },
+    "traininggrounds": {
+      "name": "Training Grounds",
+      "cashUsd": 19.8,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 30
+    },
+    "oranriefthevastwood": {
+      "name": "Oran-Rief, the Vastwood",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 3
+    },
+    "roilelemental": {
+      "name": "Roil Elemental",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 6
+    },
+    "urzasfilter": {
+      "name": "Urza's Filter",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 3
+    },
+    "throughthebreach": {
+      "name": "Through the Breach",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 20
+    },
+    "vitothornoftheduskrose": {
+      "name": "Vito, Thorn of the Dusk Rose",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 23
+    },
+    "warstoll": {
+      "name": "War's Toll",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 8
+    },
+    "warreninstigator": {
+      "name": "Warren Instigator",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 8
+    },
+    "welcomingvampire": {
+      "name": "Welcoming Vampire",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 23
+    },
+    "wellwisher": {
+      "name": "Wellwisher",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 10
+    },
+    "wordsofwind": {
+      "name": "Words of Wind",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 4
+    },
+    "xenagosgodofrevels": {
+      "name": "Xenagos, God of Revels",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 11
+    },
+    "zopandrelhungerdominus": {
+      "name": "Zopandrel, Hunger Dominus",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 17
+    },
+    "chandraawakenedinferno": {
+      "name": "Chandra, Awakened Inferno",
+      "cashUsd": 18.5,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 13
+    },
+    "jetmirnexusofrevels": {
+      "name": "Jetmir, Nexus of Revels",
+      "cashUsd": 18.5,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 17
+    },
+    "heavyfog": {
+      "name": "Heavy Fog",
+      "cashUsd": 18.5,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 1
+    },
+    "jovialevil": {
+      "name": "Jovial Evil",
+      "cashUsd": 18.5,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 1
+    },
+    "livonyasilone": {
+      "name": "Livonya Silone",
+      "cashUsd": 18.5,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 1
+    },
+    "musclesliver": {
+      "name": "Muscle Sliver",
+      "cashUsd": 18.5,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 3
+    },
+    "nebuchadnezzar": {
+      "name": "Nebuchadnezzar",
+      "cashUsd": 18.5,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 1
+    },
+    "palladiamors": {
+      "name": "Palladia-Mors",
+      "cashUsd": 18.5,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 7
+    },
+    "phenaxgodofdeception": {
+      "name": "Phenax, God of Deception",
+      "cashUsd": 18.5,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 6
+    },
+    "serrasemissary": {
+      "name": "Serra's Emissary",
+      "cashUsd": 18.5,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 11
+    },
+    "sorcererclass": {
+      "name": "Sorcerer Class",
+      "cashUsd": 18.5,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 6
+    },
+    "themeep": {
+      "name": "The Meep",
+      "cashUsd": 18.5,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 2
+    },
+    "thunderingfalls": {
+      "name": "Thundering Falls",
+      "cashUsd": 18.5,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 14
+    },
+    "typhoon": {
+      "name": "Typhoon",
+      "cashUsd": 18.5,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 19
+    },
+    "urzalordprotector": {
+      "name": "Urza, Lord Protector",
+      "cashUsd": 18.5,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 6
+    },
+    "woodelemental": {
+      "name": "Wood Elemental",
+      "cashUsd": 18.5,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 5
+    },
+    "ancestraltribute": {
+      "name": "Ancestral Tribute",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 2
+    },
+    "vivienchampionofthewilds": {
+      "name": "Vivien, Champion of the Wilds",
+      "cashUsd": 18.5,
+      "checkedAt": "2026-08-22T02:30:58+00:00",
+      "matches": 9
     }
   },
   "unmatched": {
