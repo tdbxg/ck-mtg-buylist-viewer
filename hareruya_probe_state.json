@@ -16595,6 +16595,210 @@
       "cashUsd": 17.5,
       "checkedAt": "2026-08-23T02:39:40+00:00",
       "matches": 39
+    },
+    "ledgershredder": {
+      "name": "Ledger Shredder",
+      "cashUsd": 34.0,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 18
+    },
+    "triumphofthehordes": {
+      "name": "Triumph of the Hordes",
+      "cashUsd": 34.0,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 15
+    },
+    "invigorate": {
+      "name": "Invigorate",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 4
+    },
+    "mogmooglewarrior": {
+      "name": "Mog, Moogle Warrior",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 7
+    },
+    "hedroncrab": {
+      "name": "Hedron Crab",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 9
+    },
+    "lifeblood": {
+      "name": "Lifeblood",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 4
+    },
+    "thorincompanysleader": {
+      "name": "Thorin, Company's Leader",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 2
+    },
+    "desperateritual": {
+      "name": "Desperate Ritual",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 14
+    },
+    "disallow": {
+      "name": "Disallow",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 10
+    },
+    "avatarofgrowth": {
+      "name": "Avatar of Growth",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 1
+    },
+    "diviningwitch": {
+      "name": "Divining Witch",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 2
+    },
+    "doordie": {
+      "name": "Do or Die",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 3
+    },
+    "domrianarchofbolas": {
+      "name": "Domri, Anarch of Bolas",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 11
+    },
+    "dreamhalls": {
+      "name": "Dream Halls",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 2
+    },
+    "dreambornmuse": {
+      "name": "Dreamborn Muse",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 12
+    },
+    "easternpaladin": {
+      "name": "Eastern Paladin",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 4
+    },
+    "erietteofthecharmedapple": {
+      "name": "Eriette of the Charmed Apple",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 11
+    },
+    "elspethsunschampion": {
+      "name": "Elspeth, Sun's Champion",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 15
+    },
+    "familiarground": {
+      "name": "Familiar Ground",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 2
+    },
+    "endlesshorizons": {
+      "name": "Endless Horizons",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 4
+    },
+    "flaringpain": {
+      "name": "Flaring Pain",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 5
+    },
+    "fighterclass": {
+      "name": "Fighter Class",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 11
+    },
+    "flayerofloyalties": {
+      "name": "Flayer of Loyalties",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 6
+    },
+    "freedfromthereal": {
+      "name": "Freed from the Real",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 10
+    },
+    "gloomlakeverge": {
+      "name": "Gloomlake Verge",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 14
+    },
+    "glowrider": {
+      "name": "Glowrider",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 5
+    },
+    "godeternalkefnet": {
+      "name": "God-Eternal Kefnet",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 6
+    },
+    "harabazdruid": {
+      "name": "Harabaz Druid",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 5
+    },
+    "heatshimmer": {
+      "name": "Heat Shimmer",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 14
+    },
+    "hydroblast": {
+      "name": "Hydroblast",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 15
+    },
+    "hedronarchive": {
+      "name": "Hedron Archive",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 11
+    },
+    "imotekhthestormlord": {
+      "name": "Imotekh the Stormlord",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 3
+    },
+    "kayaghostassassin": {
+      "name": "Kaya, Ghost Assassin",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 7
+    },
+    "innocentblood": {
+      "name": "Innocent Blood",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T13:47:59+00:00",
+      "matches": 6
     }
   },
   "unmatched": {
