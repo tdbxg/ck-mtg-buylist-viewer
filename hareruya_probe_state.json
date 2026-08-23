@@ -16397,6 +16397,204 @@
       "cashUsd": 17.5,
       "checkedAt": "2026-08-22T13:46:50+00:00",
       "matches": 4
+    },
+    "bigmothermouser": {
+      "name": "Big Mother Mouser",
+      "cashUsd": 24.0,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 6
+    },
+    "lotusvale": {
+      "name": "Lotus Vale",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 2
+    },
+    "thewanderingminstrel": {
+      "name": "The Wandering Minstrel",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 11
+    },
+    "darksteelcitadel": {
+      "name": "Darksteel Citadel",
+      "cashUsd": 20.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 29
+    },
+    "nehebtheeternal": {
+      "name": "Neheb, the Eternal",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 20
+    },
+    "woodlandbellower": {
+      "name": "Woodland Bellower",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 4
+    },
+    "urzaspowerplant": {
+      "name": "Urza's Power Plant",
+      "cashUsd": 19.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 34
+    },
+    "celestialmantle": {
+      "name": "Celestial Mantle",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 4
+    },
+    "mossdiamond": {
+      "name": "Moss Diamond",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 2
+    },
+    "thegaffer": {
+      "name": "The Gaffer",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 12
+    },
+    "aragornandarwenwed": {
+      "name": "Aragorn and Arwen, Wed",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 10
+    },
+    "ravenfamiliar": {
+      "name": "Raven Familiar",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 2
+    },
+    "grayogre": {
+      "name": "Gray Ogre",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 7
+    },
+    "ashesofthefallen": {
+      "name": "Ashes of the Fallen",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 4
+    },
+    "archonofcruelty": {
+      "name": "Archon of Cruelty",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 14
+    },
+    "avatarofhope": {
+      "name": "Avatar of Hope",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 5
+    },
+    "barrenmoor": {
+      "name": "Barren Moor",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 3
+    },
+    "belakorthedarkmaster": {
+      "name": "Be'lakor, the Dark Master",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 3
+    },
+    "biggerontheinside": {
+      "name": "Bigger on the Inside",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 6
+    },
+    "blastoderm": {
+      "name": "Blastoderm",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 4
+    },
+    "blinkmothurn": {
+      "name": "Blinkmoth Urn",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 5
+    },
+    "bloodfiredwarf": {
+      "name": "Bloodfire Dwarf",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 2
+    },
+    "borneuponawind": {
+      "name": "Borne Upon a Wind",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 13
+    },
+    "brallinskysharkrider": {
+      "name": "Brallin, Skyshark Rider",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 5
+    },
+    "briariptiderogue": {
+      "name": "Bria, Riptide Rogue",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 2
+    },
+    "chancelloroftheannex": {
+      "name": "Chancellor of the Annex",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 5
+    },
+    "cloudcover": {
+      "name": "Cloud Cover",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 2
+    },
+    "coinofmastery": {
+      "name": "Coin of Mastery",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 4
+    },
+    "crystallinesliver": {
+      "name": "Crystalline Sliver",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 7
+    },
+    "constantmists": {
+      "name": "Constant Mists",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 5
+    },
+    "deathward": {
+      "name": "Death Ward",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 7
+    },
+    "diabolictutor": {
+      "name": "Diabolic Tutor",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 30
+    },
+    "dimirsignet": {
+      "name": "Dimir Signet",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-23T02:39:40+00:00",
+      "matches": 39
     }
   },
   "unmatched": {
