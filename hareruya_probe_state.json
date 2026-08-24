@@ -16799,6 +16799,210 @@
       "cashUsd": 17.5,
       "checkedAt": "2026-08-23T13:47:59+00:00",
       "matches": 6
+    },
+    "saplingofcolfenor": {
+      "name": "Sapling of Colfenor",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 6
+    },
+    "stockup": {
+      "name": "Stock Up",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 10
+    },
+    "ezuriclawofprogress": {
+      "name": "Ezuri, Claw of Progress",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 14
+    },
+    "kioratherisingtide": {
+      "name": "Kiora, the Rising Tide",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 8
+    },
+    "helmofobedience": {
+      "name": "Helm of Obedience",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 1
+    },
+    "klauthunrivaledancient": {
+      "name": "Klauth, Unrivaled Ancient",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 7
+    },
+    "keldonfirebombers": {
+      "name": "Keldon Firebombers",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 3
+    },
+    "legionextruder": {
+      "name": "Legion Extruder",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 16
+    },
+    "lostjitte": {
+      "name": "Lost Jitte",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 16
+    },
+    "lordofthevoid": {
+      "name": "Lord of the Void",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 17
+    },
+    "magatraitortomortals": {
+      "name": "Maga, Traitor to Mortals",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 4
+    },
+    "magnivore": {
+      "name": "Magnivore",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 5
+    },
+    "merfolkofthepearltrident": {
+      "name": "Merfolk of the Pearl Trident",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 10
+    },
+    "mesmericorb": {
+      "name": "Mesmeric Orb",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 19
+    },
+    "meteorcrater": {
+      "name": "Meteor Crater",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 11
+    },
+    "mindslicer": {
+      "name": "Mindslicer",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 6
+    },
+    "myrmatrix": {
+      "name": "Myr Matrix",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 4
+    },
+    "nematagroveguardian": {
+      "name": "Nemata, Grove Guardian",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 2
+    },
+    "nibelheimaflame": {
+      "name": "Nibelheim Aflame",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 12
+    },
+    "nickfuryagentofshield": {
+      "name": "Nick Fury, Agent of S.H.I.E.L.D.",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 8
+    },
+    "oliviacrimsonbride": {
+      "name": "Olivia, Crimson Bride",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 18
+    },
+    "omnathlocusoftheroil": {
+      "name": "Omnath, Locus of the Roil",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 8
+    },
+    "overlaidterrain": {
+      "name": "Overlaid Terrain",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 2
+    },
+    "pearlmedallion": {
+      "name": "Pearl Medallion",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 19
+    },
+    "pendelhaven": {
+      "name": "Pendelhaven",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 12
+    },
+    "pheliaexuberantshepherd": {
+      "name": "Phelia, Exuberant Shepherd",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 13
+    },
+    "phyrexianplaguelord": {
+      "name": "Phyrexian Plaguelord",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 6
+    },
+    "primalrage": {
+      "name": "Primal Rage",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 6
+    },
+    "repeal": {
+      "name": "Repeal",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 5
+    },
+    "riptidegearhulk": {
+      "name": "Riptide Gearhulk",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 18
+    },
+    "rohgahhofkherkeep": {
+      "name": "Rohgahh of Kher Keep",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 1
+    },
+    "ryuseithefallingstar": {
+      "name": "Ryusei, the Falling Star",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 8
+    },
+    "sabsunenluxaembodied": {
+      "name": "Sab-Sunen, Luxa Embodied",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 18
+    },
+    "sakashimasstudent": {
+      "name": "Sakashima's Student",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T02:39:29+00:00",
+      "matches": 8
     }
   },
   "unmatched": {
