@@ -17003,6 +17003,198 @@
       "cashUsd": 17.5,
       "checkedAt": "2026-08-24T02:39:29+00:00",
       "matches": 8
+    },
+    "superstate": {
+      "name": "Super State",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 2
+    },
+    "saprazzanheir": {
+      "name": "Saprazzan Heir",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 3
+    },
+    "seahunter": {
+      "name": "Seahunter",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 4
+    },
+    "scarecrone": {
+      "name": "Scarecrone",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 6
+    },
+    "serumpowder": {
+      "name": "Serum Powder",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 9
+    },
+    "shamanofforgottenways": {
+      "name": "Shaman of Forgotten Ways",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 3
+    },
+    "shock": {
+      "name": "Shock",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 22
+    },
+    "soothsaying": {
+      "name": "Soothsaying",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 2
+    },
+    "sparkmage": {
+      "name": "Spark Mage",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 5
+    },
+    "spectrallynx": {
+      "name": "Spectral Lynx",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 2
+    },
+    "stormkilnartist": {
+      "name": "Storm-Kiln Artist",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 15
+    },
+    "suturedghoul": {
+      "name": "Sutured Ghoul",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 2
+    },
+    "tekuthalinquirydominus": {
+      "name": "Tekuthal, Inquiry Dominus",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 18
+    },
+    "talionthekindlylord": {
+      "name": "Talion, the Kindly Lord",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 14
+    },
+    "timberwatchelf": {
+      "name": "Timberwatch Elf",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 17
+    },
+    "timesieve": {
+      "name": "Time Sieve",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 11
+    },
+    "treeofperdition": {
+      "name": "Tree of Perdition",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 14
+    },
+    "urenioftheunwritten": {
+      "name": "Ureni of the Unwritten",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 4
+    },
+    "unnaturalselection": {
+      "name": "Unnatural Selection",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 3
+    },
+    "urotitanofnatureswrath": {
+      "name": "Uro, Titan of Nature's Wrath",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 21
+    },
+    "valgavothharrowerofsouls": {
+      "name": "Valgavoth, Harrower of Souls",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 4
+    },
+    "urza": {
+      "name": "Urza",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 60
+    },
+    "veilofsummer": {
+      "name": "Veil of Summer",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 16
+    },
+    "virulentsliver": {
+      "name": "Virulent Sliver",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 5
+    },
+    "wargrider": {
+      "name": "Warg Rider",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 2
+    },
+    "weinightraiders": {
+      "name": "Wei Night Raiders",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 2
+    },
+    "wordsofworship": {
+      "name": "Words of Worship",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 3
+    },
+    "yellowscarvesgeneral": {
+      "name": "Yellow Scarves General",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 2
+    },
+    "abyssalhorror": {
+      "name": "Abyssal Horror",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 2
+    },
+    "asheprincessofdalmasca": {
+      "name": "Ashe, Princess of Dalmasca",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 3
+    },
+    "auntieshovel": {
+      "name": "Auntie's Hovel",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 6
+    },
+    "baneslayerangel": {
+      "name": "Baneslayer Angel",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-24T14:05:36+00:00",
+      "matches": 22
     }
   },
   "unmatched": {
