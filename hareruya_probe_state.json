@@ -17195,6 +17195,204 @@
       "cashUsd": 16.8,
       "checkedAt": "2026-08-24T14:05:36+00:00",
       "matches": 22
+    },
+    "wallofbrambles": {
+      "name": "Wall of Brambles",
+      "cashUsd": 29.0,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 7
+    },
+    "greenward": {
+      "name": "Green Ward",
+      "cashUsd": 24.0,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 38
+    },
+    "owynshieldmaiden": {
+      "name": "Éowyn, Shieldmaiden",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 2
+    },
+    "noctisprinceoflucis": {
+      "name": "Noctis, Prince of Lucis",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 9
+    },
+    "inspiringvantage": {
+      "name": "Inspiring Vantage",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 26
+    },
+    "planarnexus": {
+      "name": "Planar Nexus",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 5
+    },
+    "raisethepalisade": {
+      "name": "Raise the Palisade",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 18
+    },
+    "screechingscorchbeast": {
+      "name": "Screeching Scorchbeast",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 9
+    },
+    "zaxaratheexemplary": {
+      "name": "Zaxara, the Exemplary",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 7
+    },
+    "blinkmothnexus": {
+      "name": "Blinkmoth Nexus",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 20
+    },
+    "bloodfountain": {
+      "name": "Blood Fountain",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 4
+    },
+    "cabalstronghold": {
+      "name": "Cabal Stronghold",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 10
+    },
+    "chandranalaar": {
+      "name": "Chandra Nalaar",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 13
+    },
+    "corpsejackmenace": {
+      "name": "Corpsejack Menace",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 10
+    },
+    "decayingtimeloop": {
+      "name": "Decaying Time Loop",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 6
+    },
+    "druidscall": {
+      "name": "Druid's Call",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 2
+    },
+    "feldonscane": {
+      "name": "Feldon's Cane",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 5
+    },
+    "ethersworncanonist": {
+      "name": "Ethersworn Canonist",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 13
+    },
+    "flash": {
+      "name": "Flash",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 60
+    },
+    "forgottencave": {
+      "name": "Forgotten Cave",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 2
+    },
+    "gimlioftheglitteringcaves": {
+      "name": "Gimli of the Glittering Caves",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 6
+    },
+    "gratuitousviolence": {
+      "name": "Gratuitous Violence",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 12
+    },
+    "iridescentangel": {
+      "name": "Iridescent Angel",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 5
+    },
+    "kassandraeaglebearer": {
+      "name": "Kassandra, Eagle Bearer",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 12
+    },
+    "krosanbeast": {
+      "name": "Krosan Beast",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 5
+    },
+    "murkfiendliege": {
+      "name": "Murkfiend Liege",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 10
+    },
+    "lotusring": {
+      "name": "Lotus Ring",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 17
+    },
+    "myrenforcer": {
+      "name": "Myr Enforcer",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 11
+    },
+    "nefariouslich": {
+      "name": "Nefarious Lich",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 3
+    },
+    "oracleofmuldaya": {
+      "name": "Oracle of Mul Daya",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 19
+    },
+    "palacejailer": {
+      "name": "Palace Jailer",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 4
+    },
+    "portrazer": {
+      "name": "Port Razer",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 14
+    },
+    "shipwreckmarsh": {
+      "name": "Shipwreck Marsh",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T02:33:06+00:00",
+      "matches": 32
     }
   },
   "unmatched": {
