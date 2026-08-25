@@ -17393,6 +17393,210 @@
       "cashUsd": 16.8,
       "checkedAt": "2026-08-25T02:33:06+00:00",
       "matches": 32
+    },
+    "secludedcourtyard": {
+      "name": "Secluded Courtyard",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 9
+    },
+    "glimpseofnature": {
+      "name": "Glimpse of Nature",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 9
+    },
+    "nomadsenkor": {
+      "name": "Nomads en-Kor",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 1
+    },
+    "scionofoona": {
+      "name": "Scion of Oona",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 8
+    },
+    "whirlpoolwarrior": {
+      "name": "Whirlpool Warrior",
+      "cashUsd": 19.8,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 3
+    },
+    "pucasmischief": {
+      "name": "Puca's Mischief",
+      "cashUsd": 19.5,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 5
+    },
+    "emrylurkeroftheloch": {
+      "name": "Emry, Lurker of the Loch",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 31
+    },
+    "necrodominance": {
+      "name": "Necrodominance",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 10
+    },
+    "dawnstruce": {
+      "name": "Dawn's Truce",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 14
+    },
+    "raultroubleshooter": {
+      "name": "Raul, Trouble Shooter",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 4
+    },
+    "sickeningdreams": {
+      "name": "Sickening Dreams",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 5
+    },
+    "spawningpit": {
+      "name": "Spawning Pit",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 7
+    },
+    "tasigurthegoldenfang": {
+      "name": "Tasigur, the Golden Fang",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 10
+    },
+    "tek": {
+      "name": "Tek",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 60
+    },
+    "tidalbore": {
+      "name": "Tidal Bore",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 2
+    },
+    "windbornmuse": {
+      "name": "Windborn Muse",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 13
+    },
+    "wordsofwilding": {
+      "name": "Words of Wilding",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 4
+    },
+    "ancientden": {
+      "name": "Ancient Den",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 39
+    },
+    "anowontheruinsage": {
+      "name": "Anowon, the Ruin Sage",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 5
+    },
+    "aniktheahandoferebos": {
+      "name": "Anikthea, Hand of Erebos",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 6
+    },
+    "armyofthedamned": {
+      "name": "Army of the Damned",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 11
+    },
+    "assquatch": {
+      "name": "Assquatch",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 2
+    },
+    "bloodoath": {
+      "name": "Blood Oath",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 4
+    },
+    "bodycount": {
+      "name": "Body Count",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 6
+    },
+    "crosisscatacombs": {
+      "name": "Crosis's Catacombs",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 2
+    },
+    "canoptekscarabswarm": {
+      "name": "Canoptek Scarab Swarm",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 3
+    },
+    "courtofgrace": {
+      "name": "Court of Grace",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 14
+    },
+    "damningverdict": {
+      "name": "Damning Verdict",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 10
+    },
+    "delayingshield": {
+      "name": "Delaying Shield",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 4
+    },
+    "destructiveflow": {
+      "name": "Destructive Flow",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 2
+    },
+    "diplomaticimmunity": {
+      "name": "Diplomatic Immunity",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 2
+    },
+    "evolutionsage": {
+      "name": "Evolution Sage",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 10
+    },
+    "dispel": {
+      "name": "Dispel",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 11
+    },
+    "excaliburswordofeden": {
+      "name": "Excalibur, Sword of Eden",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-25T14:07:58+00:00",
+      "matches": 10
     }
   },
   "unmatched": {
