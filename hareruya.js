@@ -149,7 +149,8 @@ function snapshot(row) {
 }
 
 function historySnapshot(row) {
-  return { ...snapshot(row), viewedAt: new Date().toISOString() };
+  const { image: _image, ...historyRow } = snapshot(row);
+  return { ...historyRow, viewedAt: new Date().toISOString() };
 }
 
 function loadPersisted() {
@@ -161,7 +162,12 @@ function loadPersisted() {
   }
   try {
     const rows = JSON.parse(localStorage.getItem(HISTORY_KEY) || "[]");
-    state.history = Array.isArray(rows) ? rows.slice(0, HISTORY_LIMIT) : [];
+    const limitedRows = Array.isArray(rows) ? rows.slice(0, HISTORY_LIMIT) : [];
+    state.history = limitedRows.map((row) => {
+      const { image: _image, ...historyRow } = row || {};
+      return historyRow;
+    });
+    if (limitedRows.some((row) => row && Object.prototype.hasOwnProperty.call(row, "image"))) saveHistory();
   } catch (error) {
     console.warn("Hareruya history not loaded", error);
   }

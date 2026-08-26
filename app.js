@@ -295,6 +295,11 @@ function historySnapshot(row) {
   };
 }
 
+function withoutHistoryImage(row) {
+  const { image: _image, ...historyRow } = row || {};
+  return historyRow;
+}
+
 function expandPackedData(payload) {
   if (!Array.isArray(payload.fields)) return payload;
   const cardFields = payload.fields;
@@ -1238,7 +1243,9 @@ function loadCart() {
 function loadHistory() {
   try {
     const rows = JSON.parse(localStorage.getItem(HISTORY_KEY) || "[]");
-    state.history = Array.isArray(rows) ? rows.slice(0, HISTORY_LIMIT) : [];
+    const limitedRows = Array.isArray(rows) ? rows.slice(0, HISTORY_LIMIT) : [];
+    state.history = limitedRows.map(withoutHistoryImage);
+    if (limitedRows.some((row) => row && Object.prototype.hasOwnProperty.call(row, "image"))) saveHistory();
   } catch (error) {
     console.warn("History not loaded", error);
     state.history = [];
