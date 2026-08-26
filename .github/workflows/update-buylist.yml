@@ -19,6 +19,10 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          # Two updates run each day. Keep enough dated snapshots for a true
+          # seven-day comparison without downloading the repository's full history.
+          fetch-depth: 20
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -40,6 +44,7 @@ jobs:
         run: |
           python - <<'PY'
           import gzip, json
+          from datetime import datetime
           from pathlib import Path
 
           required = [
@@ -84,6 +89,18 @@ jobs:
               raise SystemExit("movers payload missing daily or weekly sections")
           if "changedRows" not in movers["daily"] or "changedRows" not in movers["weekly"]:
               raise SystemExit("movers payload missing changedRows")
+          mover_meta = movers.get("meta", {})
+          current_at = mover_meta.get("currentDataAt")
+          daily_at = mover_meta.get("dailyPreviousDataAt")
+          weekly_at = mover_meta.get("weeklyPreviousDataAt")
+          if not current_at or not daily_at or not weekly_at:
+              raise SystemExit("movers payload missing comparison timestamps")
+          if daily_at == weekly_at:
+              raise SystemExit("daily and weekly movers use the same snapshot")
+          parse_ck_time = lambda value: datetime.fromisoformat(value.replace(" ", "T"))
+          weekly_age = parse_ck_time(current_at) - parse_ck_time(weekly_at)
+          if weekly_age.total_seconds() < 5 * 86400:
+              raise SystemExit(f"weekly movers snapshot is only {weekly_age} old")
           sources = movers.get("marketSources", {})
           if "tcgplayer" not in sources or "cardmarket" not in sources:
               raise SystemExit("movers payload missing market source sections")

@@ -21,7 +21,7 @@ import subprocess
 import time
 import urllib.request
 from urllib.error import HTTPError
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
@@ -236,6 +236,63 @@ def load_git_payload(rev: str) -> dict | None:
     except Exception as exc:
         print(f"WARN: previous git payload unreadable at {rev}: {exc}")
         return None
+
+
+def parse_snapshot_time(value: Any) -> datetime | None:
+    text = str(value or "").strip()
+    if not text:
+        return None
+    try:
+        parsed = datetime.fromisoformat(text.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if parsed.tzinfo is not None:
+        parsed = parsed.astimezone(timezone.utc).replace(tzinfo=None)
+    return parsed
+
+
+def load_historical_payload(current: dict, days: int) -> dict | None:
+    """Load a dated CK snapshot without assuming one commit equals one day."""
+    try:
+        history = subprocess.check_output(
+            ["git", "log", "--format=%H%x09%cI", "--", "data.json.gz"],
+            cwd=ROOT,
+            text=True,
+        ).splitlines()
+    except Exception as exc:
+        print(f"WARN: git history unavailable for {days}-day snapshot: {exc}")
+        return None
+
+    current_time = parse_snapshot_time(current.get("meta", {}).get("cardKingdomCreatedAt"))
+    target_commit_time = datetime.now(timezone.utc) - timedelta(days=days)
+    minimum_age = timedelta(days=max(1, days - 2))
+    candidates: list[str] = []
+    for line in history:
+        try:
+            rev, committed_at = line.split("\t", 1)
+            commit_time = datetime.fromisoformat(committed_at.replace("Z", "+00:00"))
+        except ValueError:
+            continue
+        if commit_time <= target_commit_time:
+            candidates.append(rev)
+
+    for rev in candidates:
+        candidate = load_git_payload(rev)
+        if not candidate:
+            continue
+        candidate_time = parse_snapshot_time(candidate.get("meta", {}).get("cardKingdomCreatedAt"))
+        if current_time and candidate_time and current_time - candidate_time < minimum_age:
+            continue
+        print(
+            "Using historical CK snapshot",
+            rev[:12],
+            candidate.get("meta", {}).get("cardKingdomCreatedAt", "unknown time"),
+            f"for {days}-day movers",
+        )
+        return candidate
+
+    print(f"WARN: no CK snapshot at least {minimum_age.days} days old is available")
+    return None
 
 
 def scryfall_image(card: dict) -> str:
@@ -1299,7 +1356,7 @@ def main() -> int:
     write_payload_files(payload)
     write_fast_payload(payload)
     write_exports(payload)
-    weekly_previous = load_git_payload("HEAD~7") or previous
+    weekly_previous = load_historical_payload(payload, 7) or previous
     write_movers(payload, previous, weekly_previous)
 
     # The uncompressed file is useful locally but too large for GitHub Pages repo.
