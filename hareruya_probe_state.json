@@ -17597,6 +17597,198 @@
       "cashUsd": 16.5,
       "checkedAt": "2026-08-25T14:07:58+00:00",
       "matches": 10
+    },
+    "knacksawclique": {
+      "name": "Knacksaw Clique",
+      "cashUsd": 25.0,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 3
+    },
+    "fatedfirepower": {
+      "name": "Fated Firepower",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 14
+    },
+    "grafdiggerscage": {
+      "name": "Grafdigger's Cage",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 22
+    },
+    "generouspatron": {
+      "name": "Generous Patron",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 9
+    },
+    "greatgoblinfoulhearted": {
+      "name": "Great Goblin, Foul-Hearted",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 2
+    },
+    "peregrinedrake": {
+      "name": "Peregrine Drake",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 4
+    },
+    "spiritedcompanion": {
+      "name": "Spirited Companion",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 5
+    },
+    "vaultofthearchangel": {
+      "name": "Vault of the Archangel",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 4
+    },
+    "doublingcubedoublingcube": {
+      "name": "Doubling Cube // Doubling Cube",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 2
+    },
+    "firebreathing": {
+      "name": "Firebreathing",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 7
+    },
+    "flamingtyrannosaurus": {
+      "name": "Flaming Tyrannosaurus",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 12
+    },
+    "generalsregalia": {
+      "name": "General's Regalia",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 2
+    },
+    "goblincharbelcher": {
+      "name": "Goblin Charbelcher",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 19
+    },
+    "glinthornbuccaneer": {
+      "name": "Glint-Horn Buccaneer",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 12
+    },
+    "greelmindraker": {
+      "name": "Greel, Mind Raker",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 2
+    },
+    "intetthedreamer": {
+      "name": "Intet, the Dreamer",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 3
+    },
+    "hazeofrage": {
+      "name": "Haze of Rage",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 6
+    },
+    "jolraelempressofbeasts": {
+      "name": "Jolrael, Empress of Beasts",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 4
+    },
+    "latullakeldonoverseer": {
+      "name": "Latulla, Keldon Overseer",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 2
+    },
+    "legacyweapon": {
+      "name": "Legacy Weapon",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 5
+    },
+    "letterbomb": {
+      "name": "Letter Bomb",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 2
+    },
+    "leylineaxe": {
+      "name": "Leyline Axe",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 19
+    },
+    "liability": {
+      "name": "Liability",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 2
+    },
+    "littlegirl": {
+      "name": "Little Girl",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 2
+    },
+    "llawancephalidempress": {
+      "name": "Llawan, Cephalid Empress",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 4
+    },
+    "magnusthered": {
+      "name": "Magnus the Red",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 3
+    },
+    "luminarchascension": {
+      "name": "Luminarch Ascension",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 8
+    },
+    "magusluceakane": {
+      "name": "Magus Lucea Kane",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 3
+    },
+    "mastertransmuter": {
+      "name": "Master Transmuter",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 12
+    },
+    "mazeofith": {
+      "name": "Maze of Ith",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 23
+    },
+    "meekattack": {
+      "name": "Meek Attack",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 16
+    },
+    "melokuthecloudedmirror": {
+      "name": "Meloku the Clouded Mirror",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T02:41:18+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
