@@ -3,6 +3,7 @@ const CART_KEY = "ck-mtg-buylist-cart-v1";
 const HISTORY_KEY = "ck-mtg-buylist-history-v1";
 const HISTORY_LIMIT = 30;
 const DISCLOSURE_KEY = "ck-mtg-disclosure-state-v1";
+const LIVE_MOVERS_URL = "https://tdbxg.github.io/mtg-price-radar-live/movers/";
 
 const state = {
   data: null,
@@ -919,7 +920,10 @@ function bindEvents() {
     render();
   });
   els.queryTab.addEventListener("click", () => switchView("query"));
-  els.moversTab.addEventListener("click", () => switchView("movers"));
+  els.moversTab.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.location.href = LIVE_MOVERS_URL;
+  });
   document.addEventListener("keydown", (event) => {
     const target = event.target;
     const typing = target instanceof HTMLInputElement || target instanceof HTMLSelectElement || target instanceof HTMLTextAreaElement;
@@ -1184,11 +1188,12 @@ function bindEvents() {
 }
 
 async function init() {
+  if (wantsMoversView()) {
+    window.location.replace(LIVE_MOVERS_URL);
+    return;
+  }
   loadCart();
   loadHistory();
-  if (wantsMoversView()) {
-    switchView("movers", false);
-  }
   state.data = await loadData(wantsFullData());
   await applyReservedList(state.data);
   state.fullDataLoaded = state.data.meta?.mode !== "fast";
@@ -1207,11 +1212,7 @@ async function init() {
   render();
   renderCart();
   renderHistory();
-  if (wantsMoversView()) {
-    switchView("movers", false);
-  } else {
-    switchView("query", false);
-  }
+  switchView("query", false);
 }
 
 function updateMetaLine() {
