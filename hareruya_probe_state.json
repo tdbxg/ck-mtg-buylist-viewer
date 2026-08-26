@@ -17789,6 +17789,198 @@
       "cashUsd": 16.5,
       "checkedAt": "2026-08-26T02:41:18+00:00",
       "matches": 4
+    },
+    "unholystrength": {
+      "name": "Unholy Strength",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 9
+    },
+    "ivorycup": {
+      "name": "Ivory Cup",
+      "cashUsd": 25.0,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 8
+    },
+    "rejuvenatingsprings": {
+      "name": "Rejuvenating Springs",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 25
+    },
+    "brawn": {
+      "name": "Brawn",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 2
+    },
+    "questforrenewal": {
+      "name": "Quest for Renewal",
+      "cashUsd": 19.8,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 4
+    },
+    "krriksonofyawgmoth": {
+      "name": "K'rrik, Son of Yawgmoth",
+      "cashUsd": 19.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 9
+    },
+    "dovescape": {
+      "name": "Dovescape",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 7
+    },
+    "headlessrider": {
+      "name": "Headless Rider",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 16
+    },
+    "mirrisguile": {
+      "name": "Mirri's Guile",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 5
+    },
+    "moxtantalite": {
+      "name": "Mox Tantalite",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 5
+    },
+    "mrhousepresidentandceo": {
+      "name": "Mr. House, President and CEO",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 9
+    },
+    "murktideregent": {
+      "name": "Murktide Regent",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 19
+    },
+    "myojinofseeingwinds": {
+      "name": "Myojin of Seeing Winds",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 4
+    },
+    "omnathlocusofmana": {
+      "name": "Omnath, Locus of Mana",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 15
+    },
+    "narsetenlightenedexile": {
+      "name": "Narset, Enlightened Exile",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 18
+    },
+    "paralyze": {
+      "name": "Paralyze",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 7
+    },
+    "phyrexiantyranny": {
+      "name": "Phyrexian Tyranny",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 4
+    },
+    "rakdosthedefiler": {
+      "name": "Rakdos the Defiler",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 5
+    },
+    "primordialhydra": {
+      "name": "Primordial Hydra",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 15
+    },
+    "ramsesoverdark": {
+      "name": "Ramses Overdark",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 1
+    },
+    "regalforce": {
+      "name": "Regal Force",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 14
+    },
+    "razakeththefoulblooded": {
+      "name": "Razaketh, the Foulblooded",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 15
+    },
+    "skizzik": {
+      "name": "Skizzik",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 2
+    },
+    "shanodindryads": {
+      "name": "Shanodin Dryads",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 9
+    },
+    "sapphiremedallion": {
+      "name": "Sapphire Medallion",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 20
+    },
+    "sphereofsafety": {
+      "name": "Sphere of Safety",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 18
+    },
+    "starstorm": {
+      "name": "Starstorm",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 2
+    },
+    "suturepriest": {
+      "name": "Suture Priest",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 8
+    },
+    "theearthcrystal": {
+      "name": "The Earth Crystal",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 10
+    },
+    "timeelemental": {
+      "name": "Time Elemental",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 3
+    },
+    "thewretched": {
+      "name": "The Wretched",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 8
+    },
+    "tophgreatestearthbender": {
+      "name": "Toph, Greatest Earthbender",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-26T14:07:02+00:00",
+      "matches": 3
     }
   },
   "unmatched": {
