@@ -17981,6 +17981,192 @@
       "cashUsd": 16.5,
       "checkedAt": "2026-08-26T14:07:02+00:00",
       "matches": 3
+    },
+    "sealoffire": {
+      "name": "Seal of Fire",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 5
+    },
+    "vraskaswarmseminence": {
+      "name": "Vraska, Swarm's Eminence",
+      "cashUsd": 18.5,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 5
+    },
+    "narcomoeba": {
+      "name": "Narcomoeba",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 13
+    },
+    "expressiveiteration": {
+      "name": "Expressive Iteration",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 18
+    },
+    "urzasmine": {
+      "name": "Urza's Mine",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 32
+    },
+    "wolverinebestthereis": {
+      "name": "Wolverine, Best There Is",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 6
+    },
+    "goblinwardrums": {
+      "name": "Goblin War Drums",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 3
+    },
+    "joragatreespeaker": {
+      "name": "Joraga Treespeaker",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 6
+    },
+    "lanternofinsight": {
+      "name": "Lantern of Insight",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 6
+    },
+    "andrilnarsilreforged": {
+      "name": "Andúril, Narsil Reforged",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 9
+    },
+    "castleardenvale": {
+      "name": "Castle Ardenvale",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 18
+    },
+    "lazotepquarry": {
+      "name": "Lazotep Quarry",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 6
+    },
+    "pongify": {
+      "name": "Pongify",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 27
+    },
+    "werebear": {
+      "name": "Werebear",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 2
+    },
+    "westernpaladin": {
+      "name": "Western Paladin",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 4
+    },
+    "undeadgladiator": {
+      "name": "Undead Gladiator",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 5
+    },
+    "xyristhewrithingstorm": {
+      "name": "Xyris, the Writhing Storm",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 8
+    },
+    "zulashurlichlord": {
+      "name": "Zul Ashur, Lich Lord",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 11
+    },
+    "cathedralofserra": {
+      "name": "Cathedral of Serra",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 1
+    },
+    "applejack": {
+      "name": "Applejack",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 2
+    },
+    "charismaticconqueror": {
+      "name": "Charismatic Conqueror",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 4
+    },
+    "dihadabinderofwills": {
+      "name": "Dihada, Binder of Wills",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 4
+    },
+    "fluttershy": {
+      "name": "Fluttershy",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 2
+    },
+    "devastation": {
+      "name": "Devastation",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 43
+    },
+    "glisteningoil": {
+      "name": "Glistening Oil",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 4
+    },
+    "gandalfshadowsfoe": {
+      "name": "Gandalf, Shadow's Foe",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 2
+    },
+    "freyalisellanowarsfury": {
+      "name": "Freyalise, Llanowar's Fury",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 13
+    },
+    "inventorymanagement": {
+      "name": "Inventory Management",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 12
+    },
+    "ivorytower": {
+      "name": "Ivory Tower",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 16
+    },
+    "kambalconsulofallocation": {
+      "name": "Kambal, Consul of Allocation",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 10
+    },
+    "leylinebinding": {
+      "name": "Leyline Binding",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T11:14:57+00:00",
+      "matches": 23
     }
   },
   "unmatched": {
