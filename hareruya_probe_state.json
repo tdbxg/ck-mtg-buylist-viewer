@@ -18167,6 +18167,186 @@
       "cashUsd": 16.0,
       "checkedAt": "2026-08-27T11:14:57+00:00",
       "matches": 23
+    },
+    "zodiachorse": {
+      "name": "Zodiac Horse",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 2
+    },
+    "esikaschariot": {
+      "name": "Esika's Chariot",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 17
+    },
+    "thrabeninspector": {
+      "name": "Thraben Inspector",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 6
+    },
+    "indomitableancients": {
+      "name": "Indomitable Ancients",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 6
+    },
+    "necromancy": {
+      "name": "Necromancy",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 5
+    },
+    "nerfwar": {
+      "name": "Nerf War",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 1
+    },
+    "priceofprogress": {
+      "name": "Price of Progress",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 11
+    },
+    "ramsesassassinlord": {
+      "name": "Ramses, Assassin Lord",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 5
+    },
+    "relentlessdead": {
+      "name": "Relentless Dead",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 7
+    },
+    "selenia": {
+      "name": "Selenia",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 3
+    },
+    "shatterstorm": {
+      "name": "Shatterstorm",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 6
+    },
+    "spirebluffcanal": {
+      "name": "Spirebluff Canal",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 22
+    },
+    "talismanofhierarchy": {
+      "name": "Talisman of Hierarchy",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 36
+    },
+    "uncivilunrest": {
+      "name": "Uncivil Unrest",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 6
+    },
+    "vedalkenorrery": {
+      "name": "Vedalken Orrery",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 19
+    },
+    "zodiacrat": {
+      "name": "Zodiac Rat",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 2
+    },
+    "appasteadfastguardian": {
+      "name": "Appa, Steadfast Guardian",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 10
+    },
+    "avatarkyoshiearthbender": {
+      "name": "Avatar Kyoshi, Earthbender",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 8
+    },
+    "boroscharm": {
+      "name": "Boros Charm",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 34
+    },
+    "biomancersfamiliar": {
+      "name": "Biomancer's Familiar",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 5
+    },
+    "casallurkwoodpathfindercasalpathbreakerowlbear": {
+      "name": "Casal, Lurkwood Pathfinder // Casal, Pathbreaker Owlbear",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 1
+    },
+    "descentintoavernus": {
+      "name": "Descent into Avernus",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 12
+    },
+    "crestedsunmare": {
+      "name": "Crested Sunmare",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 10
+    },
+    "flumph": {
+      "name": "Flumph",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 8
+    },
+    "jaceunravelerofsecrets": {
+      "name": "Jace, Unraveler of Secrets",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 12
+    },
+    "karazikartheeyetyrant": {
+      "name": "Karazikar, the Eye Tyrant",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 6
+    },
+    "knucklestheechidna": {
+      "name": "Knuckles the Echidna",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 2
+    },
+    "mayhemdevil": {
+      "name": "Mayhem Devil",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 9
+    },
+    "nestingdovehawk": {
+      "name": "Nesting Dovehawk",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 4
+    },
+    "northstar": {
+      "name": "North Star",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-27T23:00:33+00:00",
+      "matches": 1
     }
   },
   "unmatched": {
