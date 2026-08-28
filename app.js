@@ -3,7 +3,7 @@ const CART_KEY = "ck-mtg-buylist-cart-v1";
 const HISTORY_KEY = "ck-mtg-buylist-history-v1";
 const HISTORY_LIMIT = 30;
 const DISCLOSURE_KEY = "ck-mtg-disclosure-state-v1";
-const LIVE_MOVERS_URL = "https://tdbxg.github.io/mtg-price-radar-live/movers/";
+const LIVE_MOVERS_URL = "https://tdbxg.github.io/mtg-price-radar-live/movers/?v=20260829-72h";
 const BUYLIST_WORKFLOW_URL = "https://github.com/tdbxg/ck-mtg-buylist-viewer/actions/workflows/update-buylist.yml";
 
 const state = {
