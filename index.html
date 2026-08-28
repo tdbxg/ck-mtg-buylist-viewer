@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MTG 单卡价格雷达</title>
-  <link rel="stylesheet" href="./styles.css?v=20260803-refresh">
+  <link rel="stylesheet" href="./styles.css?v=20260829-data-refresh">
 </head>
 <body>
   <header class="topbar">
@@ -12,10 +12,19 @@
       <h1>MTG 单卡价格雷达</h1>
       <p id="metaLine">正在载入数据...</p>
     </div>
-    <div class="summary" aria-label="summary">
-      <div><span id="cardCount">-</span><small>单卡</small></div>
-      <div><span id="sealedCount">-</span><small>密封</small></div>
-      <div><span id="rate">-</span><small>USD/CNY</small></div>
+    <div class="header-actions">
+      <div class="data-refresh" aria-label="回收数据更新">
+        <div class="data-refresh-buttons">
+          <button id="triggerBuylistUpdateButton" type="button">更新回收数据</button>
+          <button id="reloadDataButton" class="icon-button" type="button" title="重新读取最新数据" aria-label="重新读取最新数据">↻</button>
+        </div>
+        <small id="dataRefreshStatus">每天 09:20 / 21:20 自动更新</small>
+      </div>
+      <div class="summary" aria-label="summary">
+        <div><span id="cardCount">-</span><small>单卡</small></div>
+        <div><span id="sealedCount">-</span><small>密封</small></div>
+        <div><span id="rate">-</span><small>USD/CNY</small></div>
+      </div>
     </div>
   </header>
 
@@ -317,6 +326,6 @@
     </article>
   </template>
 
-  <script src="./app.js?v=20260826-live-movers-link"></script>
+  <script src="./app.js?v=20260829-data-refresh"></script>
 </body>
 </html>

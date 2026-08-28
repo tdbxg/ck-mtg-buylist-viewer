@@ -53,6 +53,52 @@ h1 {
   color: var(--muted);
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex: 0 0 auto;
+}
+
+.data-refresh {
+  display: grid;
+  gap: 5px;
+  justify-items: end;
+}
+
+.data-refresh-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.data-refresh button {
+  width: auto;
+  min-height: 38px;
+  white-space: nowrap;
+}
+
+.data-refresh .icon-button {
+  width: 38px;
+  padding: 0;
+  font-size: 21px;
+  line-height: 1;
+  background: #fff;
+  color: var(--blue);
+  border-color: var(--line);
+}
+
+.data-refresh .icon-button:hover {
+  background: #eef5fb;
+  border-color: var(--blue);
+}
+
+.data-refresh small {
+  color: var(--muted);
+  line-height: 1.25;
+  text-align: right;
+}
+
 .summary {
   display: grid;
   grid-template-columns: repeat(3, 92px);
@@ -1265,6 +1311,25 @@ h2 {
     display: block;
   }
 
+  .header-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .data-refresh {
+    justify-items: stretch;
+  }
+
+  .data-refresh-buttons button:first-child {
+    flex: 1;
+  }
+
+  .data-refresh small {
+    text-align: left;
+  }
+
   .app-tabs {
     position: sticky;
     top: 0;
@@ -1292,7 +1357,7 @@ h2 {
 
   .summary {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    margin-top: 12px;
+    margin-top: 0;
   }
 
   .layout {

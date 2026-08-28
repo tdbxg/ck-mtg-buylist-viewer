@@ -4,6 +4,7 @@ const HISTORY_KEY = "ck-mtg-buylist-history-v1";
 const HISTORY_LIMIT = 30;
 const DISCLOSURE_KEY = "ck-mtg-disclosure-state-v1";
 const LIVE_MOVERS_URL = "https://tdbxg.github.io/mtg-price-radar-live/movers/";
+const BUYLIST_WORKFLOW_URL = "https://github.com/tdbxg/ck-mtg-buylist-viewer/actions/workflows/update-buylist.yml";
 
 const state = {
   data: null,
@@ -46,6 +47,9 @@ const els = {
   cardCount: document.querySelector("#cardCount"),
   sealedCount: document.querySelector("#sealedCount"),
   rate: document.querySelector("#rate"),
+  triggerBuylistUpdateButton: document.querySelector("#triggerBuylistUpdateButton"),
+  reloadDataButton: document.querySelector("#reloadDataButton"),
+  dataRefreshStatus: document.querySelector("#dataRefreshStatus"),
   queryTab: document.querySelector("#queryTab"),
   moversTab: document.querySelector("#moversTab"),
   queryView: document.querySelector("#queryView"),
@@ -918,6 +922,15 @@ function bindEvents() {
     state.page = 1;
     readControls();
     render();
+  });
+  els.triggerBuylistUpdateButton.addEventListener("click", () => {
+    window.open(BUYLIST_WORKFLOW_URL, "_blank", "noopener,noreferrer");
+    els.dataRefreshStatus.textContent = "已请求打开更新页；运行完成后点右侧 ↻";
+  });
+  els.reloadDataButton.addEventListener("click", () => {
+    els.reloadDataButton.disabled = true;
+    els.dataRefreshStatus.textContent = "正在重新读取最新回收数据...";
+    window.location.reload();
   });
   els.queryTab.addEventListener("click", () => switchView("query"));
   els.moversTab.addEventListener("click", (event) => {
