@@ -18347,6 +18347,180 @@
       "cashUsd": 15.5,
       "checkedAt": "2026-08-27T23:00:33+00:00",
       "matches": 1
+    },
+    "queenbrahne": {
+      "name": "Queen Brahne",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 2
+    },
+    "arenaofglory": {
+      "name": "Arena of Glory",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 11
+    },
+    "reset": {
+      "name": "Reset",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 7
+    },
+    "saheelirai": {
+      "name": "Saheeli Rai",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 4
+    },
+    "surlybadgersaur": {
+      "name": "Surly Badgersaur",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 2
+    },
+    "tazeem": {
+      "name": "Tazeem",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 3
+    },
+    "theimmortalsun": {
+      "name": "The Immortal Sun",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 16
+    },
+    "throneofthegodpharaoh": {
+      "name": "Throne of the God-Pharaoh",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 5
+    },
+    "undiscoveredparadise": {
+      "name": "Undiscovered Paradise",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 6
+    },
+    "agentstoolkit": {
+      "name": "Agent's Toolkit",
+      "cashUsd": 15.2,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 6
+    },
+    "aragornkingofgondor": {
+      "name": "Aragorn, King of Gondor",
+      "cashUsd": 15.2,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 6
+    },
+    "bronzebombshell": {
+      "name": "Bronze Bombshell",
+      "cashUsd": 15.2,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 4
+    },
+    "giverofrunes": {
+      "name": "Giver of Runes",
+      "cashUsd": 15.2,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 13
+    },
+    "newfrontiers": {
+      "name": "New Frontiers",
+      "cashUsd": 15.2,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 4
+    },
+    "shireishizoscaretaker": {
+      "name": "Shirei, Shizo's Caretaker",
+      "cashUsd": 15.2,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 2
+    },
+    "themastermultiplied": {
+      "name": "The Master, Multiplied",
+      "cashUsd": 15.2,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 18
+    },
+    "aboshancephalidemperor": {
+      "name": "Aboshan, Cephalid Emperor",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 2
+    },
+    "aettirandpriwen": {
+      "name": "Aettir and Priwen",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 10
+    },
+    "agentfrankhorrigan": {
+      "name": "Agent Frank Horrigan",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 12
+    },
+    "ajanigoldmane": {
+      "name": "Ajani Goldmane",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 15
+    },
+    "alphastatus": {
+      "name": "Alpha Status",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 3
+    },
+    "ajanivengeant": {
+      "name": "Ajani Vengeant",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 6
+    },
+    "amugaba": {
+      "name": "Amugaba",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 2
+    },
+    "anofferyoucantrefuse": {
+      "name": "An Offer You Can't Refuse",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 25
+    },
+    "archmageofrunes": {
+      "name": "Archmage of Runes",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 17
+    },
+    "autonsoldier": {
+      "name": "Auton Soldier",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 12
+    },
+    "balancingact": {
+      "name": "Balancing Act",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 3
+    },
+    "balthierandfran": {
+      "name": "Balthier and Fran",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 8
+    },
+    "barretavalancheleader": {
+      "name": "Barret, Avalanche Leader",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-28T12:50:31+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
