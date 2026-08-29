@@ -19181,6 +19181,162 @@
       "cashUsd": 15.0,
       "checkedAt": "2026-08-29T14:26:22+00:00",
       "matches": 4
+    },
+    "ratcolony": {
+      "name": "Rat Colony",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 10
+    },
+    "expeditionmap": {
+      "name": "Expedition Map",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 29
+    },
+    "sidisiundeadvizier": {
+      "name": "Sidisi, Undead Vizier",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 11
+    },
+    "sigiltracer": {
+      "name": "Sigil Tracer",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 4
+    },
+    "silverseraph": {
+      "name": "Silver Seraph",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 2
+    },
+    "sphinxofthesecondsun": {
+      "name": "Sphinx of the Second Sun",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 12
+    },
+    "sisterhospitaller": {
+      "name": "Sister Hospitaller",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 3
+    },
+    "spiritloop": {
+      "name": "Spirit Loop",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 4
+    },
+    "spontaneousgeneration": {
+      "name": "Spontaneous Generation",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 4
+    },
+    "standardbearer": {
+      "name": "Standard Bearer",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 7
+    },
+    "stuffydoll": {
+      "name": "Stuffy Doll",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 14
+    },
+    "tarnationvista": {
+      "name": "Tarnation Vista",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 17
+    },
+    "tectonicinstability": {
+      "name": "Tectonic Instability",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 3
+    },
+    "teferimasteroftime": {
+      "name": "Teferi, Master of Time",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 42
+    },
+    "telekineticbonds": {
+      "name": "Telekinetic Bonds",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 2
+    },
+    "templebell": {
+      "name": "Temple Bell",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 12
+    },
+    "temporalmanipulation": {
+      "name": "Temporal Manipulation",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 17
+    },
+    "temporalmastery": {
+      "name": "Temporal Mastery",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 17
+    },
+    "teysaorzhovscion": {
+      "name": "Teysa, Orzhov Scion",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 15
+    },
+    "thedestinedwhitemage": {
+      "name": "The Destined White Mage",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 4
+    },
+    "thedominionbracelet": {
+      "name": "The Dominion Bracelet",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 9
+    },
+    "thewardoctor": {
+      "name": "The War Doctor",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 7
+    },
+    "thesixthdoctor": {
+      "name": "The Sixth Doctor",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 9
+    },
+    "thespiansstage": {
+      "name": "Thespian's Stage",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 37
+    },
+    "thunderhawkgunship": {
+      "name": "Thunderhawk Gunship",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 3
+    },
+    "tidalkraken": {
+      "name": "Tidal Kraken",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T17:12:13+00:00",
+      "matches": 8
     }
   },
   "unmatched": {
