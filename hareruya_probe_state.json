@@ -19025,6 +19025,162 @@
       "cashUsd": 15.0,
       "checkedAt": "2026-08-29T13:23:16+00:00",
       "matches": 5
+    },
+    "waveofreckoning": {
+      "name": "Wave of Reckoning",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 7
+    },
+    "melirasylvokoutcast": {
+      "name": "Melira, Sylvok Outcast",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 4
+    },
+    "natureswill": {
+      "name": "Nature's Will",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 14
+    },
+    "nerdrage": {
+      "name": "Nerd Rage",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 6
+    },
+    "onduspiritdancer": {
+      "name": "Ondu Spiritdancer",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 8
+    },
+    "oust": {
+      "name": "Oust",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 3
+    },
+    "patrolsignaler": {
+      "name": "Patrol Signaler",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 1
+    },
+    "planarcollapse": {
+      "name": "Planar Collapse",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 2
+    },
+    "primalsurge": {
+      "name": "Primal Surge",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 4
+    },
+    "primespeakervannifar": {
+      "name": "Prime Speaker Vannifar",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 4
+    },
+    "qasalislingers": {
+      "name": "Qasali Slingers",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 4
+    },
+    "questingphelddagrif": {
+      "name": "Questing Phelddagrif",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 8
+    },
+    "quinaqugourmet": {
+      "name": "Quina, Qu Gourmet",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 2
+    },
+    "rarebgone": {
+      "name": "Rare-B-Gone",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 1
+    },
+    "recklessimpulse": {
+      "name": "Reckless Impulse",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 8
+    },
+    "renoandrude": {
+      "name": "Reno and Rude",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 2
+    },
+    "resurrectionorb": {
+      "name": "Resurrection Orb",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 3
+    },
+    "rielletheeverwise": {
+      "name": "Rielle, the Everwise",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 12
+    },
+    "rinoaheartilly": {
+      "name": "Rinoa Heartilly",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 4
+    },
+    "saprazzancove": {
+      "name": "Saprazzan Cove",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 2
+    },
+    "sakikomotherofsummer": {
+      "name": "Sakiko, Mother of Summer",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 3
+    },
+    "sauronlordoftherings": {
+      "name": "Sauron, Lord of the Rings",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 4
+    },
+    "selvalaexplorerreturned": {
+      "name": "Selvala, Explorer Returned",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 4
+    },
+    "seshirotheanointed": {
+      "name": "Seshiro the Anointed",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 7
+    },
+    "shelldockisle": {
+      "name": "Shelldock Isle",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 9
+    },
+    "shivanwurm": {
+      "name": "Shivan Wurm",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T14:26:22+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
