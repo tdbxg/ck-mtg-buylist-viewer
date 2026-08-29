@@ -18869,6 +18869,162 @@
       "cashUsd": 15.0,
       "checkedAt": "2026-08-29T07:55:57+00:00",
       "matches": 5
+    },
+    "forceofdespair": {
+      "name": "Force of Despair",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 8
+    },
+    "goblinbomb": {
+      "name": "Goblin Bomb",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 33
+    },
+    "goblinmarshal": {
+      "name": "Goblin Marshal",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 2
+    },
+    "gravestorm": {
+      "name": "Gravestorm",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 3
+    },
+    "gripofchaos": {
+      "name": "Grip of Chaos",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 4
+    },
+    "gurmagangler": {
+      "name": "Gurmag Angler",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 6
+    },
+    "hammerheim": {
+      "name": "Hammerheim",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 3
+    },
+    "headgames": {
+      "name": "Head Games",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 5
+    },
+    "hiddenhideout": {
+      "name": "Hidden Hideout",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 4
+    },
+    "holyarmor": {
+      "name": "Holy Armor",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 7
+    },
+    "horobideathswail": {
+      "name": "Horobi, Death's Wail",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 6
+    },
+    "idolofoblivion": {
+      "name": "Idol of Oblivion",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 31
+    },
+    "ignoblehierarch": {
+      "name": "Ignoble Hierarch",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 27
+    },
+    "kavulair": {
+      "name": "Kavu Lair",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 2
+    },
+    "keeperoftheninegales": {
+      "name": "Keeper of the Nine Gales",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 5
+    },
+    "kraumludevicsopus": {
+      "name": "Kraum, Ludevic's Opus",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 8
+    },
+    "kongmingsleepingdragon": {
+      "name": "Kongming, \"Sleeping Dragon\"",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 2
+    },
+    "leoninwarleader": {
+      "name": "Leonin Warleader",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 10
+    },
+    "lifegift": {
+      "name": "Lifegift",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 4
+    },
+    "lightpawsemperorsvoice": {
+      "name": "Light-Paws, Emperor's Voice",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 15
+    },
+    "longtermplans": {
+      "name": "Long-Term Plans",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 5
+    },
+    "loxodonwarhammer": {
+      "name": "Loxodon Warhammer",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 34
+    },
+    "lrienrevealed": {
+      "name": "Lórien Revealed",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 6
+    },
+    "manatithe": {
+      "name": "Mana Tithe",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 14
+    },
+    "maskoflawandgrace": {
+      "name": "Mask of Law and Grace",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 3
+    },
+    "matoyaarchonelder": {
+      "name": "Matoya, Archon Elder",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T13:23:16+00:00",
+      "matches": 5
     }
   },
   "unmatched": {
