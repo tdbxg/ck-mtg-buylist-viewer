@@ -18695,6 +18695,180 @@
       "cashUsd": 15.0,
       "checkedAt": "2026-08-28T22:21:08+00:00",
       "matches": 3
+    },
+    "soulcatchersaerie": {
+      "name": "Soulcatchers' Aerie",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 5
+    },
+    "momentousfall": {
+      "name": "Momentous Fall",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 7
+    },
+    "sevinnesreclamation": {
+      "name": "Sevinne's Reclamation",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 28
+    },
+    "guidedpassage": {
+      "name": "Guided Passage",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 3
+    },
+    "halfdane": {
+      "name": "Halfdane",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 1
+    },
+    "vexingshusher": {
+      "name": "Vexing Shusher",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 9
+    },
+    "urborg": {
+      "name": "Urborg",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 54
+    },
+    "danceofthedead": {
+      "name": "Dance of the Dead",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 2
+    },
+    "darigaazscaldera": {
+      "name": "Darigaaz's Caldera",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 2
+    },
+    "cruxoffate": {
+      "name": "Crux of Fate",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 19
+    },
+    "davrielrogueshadowmage": {
+      "name": "Davriel, Rogue Shadowmage",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 5
+    },
+    "dominusoffealty": {
+      "name": "Dominus of Fealty",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 2
+    },
+    "doomednecromancer": {
+      "name": "Doomed Necromancer",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 5
+    },
+    "doorofdestinies": {
+      "name": "Door of Destinies",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 24
+    },
+    "dragonbroodmother": {
+      "name": "Dragon Broodmother",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 6
+    },
+    "dragonspeakershaman": {
+      "name": "Dragonspeaker Shaman",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 17
+    },
+    "dragonhawkfatestempest": {
+      "name": "Dragonhawk, Fate's Tempest",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 14
+    },
+    "dramaticreversal": {
+      "name": "Dramatic Reversal",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 6
+    },
+    "elvishreclaimer": {
+      "name": "Elvish Reclaimer",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 14
+    },
+    "eternaldominion": {
+      "name": "Eternal Dominion",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 3
+    },
+    "etheriumsculptor": {
+      "name": "Etherium Sculptor",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 20
+    },
+    "evilpresence": {
+      "name": "Evil Presence",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 8
+    },
+    "evasiveaction": {
+      "name": "Evasive Action",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 2
+    },
+    "eyeforaneye": {
+      "name": "Eye for an Eye",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 3
+    },
+    "faithfulmending": {
+      "name": "Faithful Mending",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 6
+    },
+    "fear": {
+      "name": "Fear",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 60
+    },
+    "feathertheredeemed": {
+      "name": "Feather, the Redeemed",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 11
+    },
+    "flight": {
+      "name": "Flight",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 20
+    },
+    "glaringfleshraker": {
+      "name": "Glaring Fleshraker",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-29T07:55:57+00:00",
+      "matches": 5
     }
   },
   "unmatched": {
