@@ -20,14 +20,27 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
         with:
-          # Two updates run each day. Keep enough dated snapshots for a true
-          # seven-day comparison without downloading the repository's full history.
-          fetch-depth: 20
+          # Data and UI commits share this history. Keep enough commits for a
+          # true seven-day comparison without downloading the full repository.
+          fetch-depth: 40
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: Verify weekly comparison history
+        run: |
+          python - <<'PY'
+          from scripts.update_site_data import load_historical_payload, load_previous_payload
+
+          current = load_previous_payload()
+          weekly = load_historical_payload(current, 7)
+          if weekly is None:
+              raise SystemExit(
+                  "No seven-day CK snapshot is available. Increase checkout fetch-depth before refreshing."
+              )
+          PY
 
       - name: Refresh static data
         run: python scripts/update_site_data.py
