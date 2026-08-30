@@ -19481,6 +19481,150 @@
       "cashUsd": 14.5,
       "checkedAt": "2026-08-30T06:45:24+00:00",
       "matches": 31
+    },
+    "campsitecuisine": {
+      "name": "Campsite Cuisine",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 4
+    },
+    "hammerofbogardan": {
+      "name": "Hammer of Bogardan",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 6
+    },
+    "cityonfire": {
+      "name": "City on Fire",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 16
+    },
+    "colossushammer": {
+      "name": "Colossus Hammer",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 22
+    },
+    "hexmagic": {
+      "name": "Hex Magic",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 4
+    },
+    "jumbocactuar": {
+      "name": "Jumbo Cactuar",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 10
+    },
+    "lairofthehydra": {
+      "name": "Lair of the Hydra",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 10
+    },
+    "nautiloidship": {
+      "name": "Nautiloid Ship",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 10
+    },
+    "magdabrazenoutlaw": {
+      "name": "Magda, Brazen Outlaw",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 17
+    },
+    "overwhelmingsplendor": {
+      "name": "Overwhelming Splendor",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 6
+    },
+    "talismanofcuriosity": {
+      "name": "Talisman of Curiosity",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 28
+    },
+    "shivandevastator": {
+      "name": "Shivan Devastator",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 12
+    },
+    "slimefootandsquee": {
+      "name": "Slimefoot and Squee",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 6
+    },
+    "theworldtree": {
+      "name": "The World Tree",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 31
+    },
+    "titaniavoiceofgaea": {
+      "name": "Titania, Voice of Gaea",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 6
+    },
+    "urzasworkshop": {
+      "name": "Urza's Workshop",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 8
+    },
+    "voracioushydra": {
+      "name": "Voracious Hydra",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 9
+    },
+    "zethiarcaneblademaster": {
+      "name": "Zethi, Arcane Blademaster",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 1
+    },
+    "circleofprotectiongreen": {
+      "name": "Circle of Protection: Green",
+      "cashUsd": 14.4,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 9
+    },
+    "creaturebond": {
+      "name": "Creature Bond",
+      "cashUsd": 14.4,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 7
+    },
+    "howlfrombeyond": {
+      "name": "Howl from Beyond",
+      "cashUsd": 14.4,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 8
+    },
+    "ancientcornucopia": {
+      "name": "Ancient Cornucopia",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 17
+    },
+    "angelofretribution": {
+      "name": "Angel of Retribution",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 3
+    },
+    "atsushitheblazingsky": {
+      "name": "Atsushi, the Blazing Sky",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-30T10:21:38+00:00",
+      "matches": 21
     }
   },
   "unmatched": {
