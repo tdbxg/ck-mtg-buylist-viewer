@@ -19907,6 +19907,144 @@
       "cashUsd": 14.0,
       "checkedAt": "2026-08-31T07:07:02+00:00",
       "matches": 4
+    },
+    "falsecure": {
+      "name": "False Cure",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 4
+    },
+    "snowcoveredforest": {
+      "name": "Snow-Covered Forest",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 12
+    },
+    "professionalfacebreaker": {
+      "name": "Professional Face-Breaker",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 25
+    },
+    "argentumarmor": {
+      "name": "Argentum Armor",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 11
+    },
+    "earthbendingstudent": {
+      "name": "Earthbending Student",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 2
+    },
+    "snowcoveredplains": {
+      "name": "Snow-Covered Plains",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 12
+    },
+    "blackwidowsuperspy": {
+      "name": "Black Widow, Super Spy",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 13
+    },
+    "erebosgodofthedead": {
+      "name": "Erebos, God of the Dead",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 5
+    },
+    "generalsenforcer": {
+      "name": "General's Enforcer",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 4
+    },
+    "gibberingdescent": {
+      "name": "Gibbering Descent",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 4
+    },
+    "flickerwisp": {
+      "name": "Flickerwisp",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 7
+    },
+    "gisasfavoriteshovel": {
+      "name": "Gisa's Favorite Shovel",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 1
+    },
+    "giselabladeofgoldnight": {
+      "name": "Gisela, Blade of Goldnight",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 27
+    },
+    "glinthawk": {
+      "name": "Glint Hawk",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 4
+    },
+    "gogomysteriousmime": {
+      "name": "Gogo, Mysterious Mime",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 8
+    },
+    "golgarigravetroll": {
+      "name": "Golgari Grave-Troll",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 21
+    },
+    "golostirelesspilgrim": {
+      "name": "Golos, Tireless Pilgrim",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 8
+    },
+    "grothamaalldevouring": {
+      "name": "Grothama, All-Devouring",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 3
+    },
+    "hallofstormgiants": {
+      "name": "Hall of Storm Giants",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 13
+    },
+    "hallofheliodsgenerosity": {
+      "name": "Hall of Heliod's Generosity",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 12
+    },
+    "huntingcheetah": {
+      "name": "Hunting Cheetah",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 2
+    },
+    "hypnox": {
+      "name": "Hypnox",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 3
+    },
+    "illustriouswanderglyph": {
+      "name": "Illustrious Wanderglyph",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T19:32:42+00:00",
+      "matches": 8
     }
   },
   "unmatched": {
