@@ -19769,6 +19769,144 @@
       "cashUsd": 14.0,
       "checkedAt": "2026-08-30T17:34:05+00:00",
       "matches": 2
+    },
+    "lulusternguardian": {
+      "name": "Lulu, Stern Guardian",
+      "cashUsd": 75.0,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 7
+    },
+    "wallofair": {
+      "name": "Wall of Air",
+      "cashUsd": 25.0,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 9
+    },
+    "celestialprism": {
+      "name": "Celestial Prism",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 7
+    },
+    "karma": {
+      "name": "Karma",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 9
+    },
+    "kondalordofeiganjo": {
+      "name": "Konda, Lord of Eiganjo",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 3
+    },
+    "sporocyst": {
+      "name": "Sporocyst",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 3
+    },
+    "wellrested": {
+      "name": "Well Rested",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 6
+    },
+    "cateransummons": {
+      "name": "Cateran Summons",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 2
+    },
+    "krosanverge": {
+      "name": "Krosan Verge",
+      "cashUsd": 15.2,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 2
+    },
+    "cleverconcealment": {
+      "name": "Clever Concealment",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 14
+    },
+    "inallaarchmageritualist": {
+      "name": "Inalla, Archmage Ritualist",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 7
+    },
+    "reprieve": {
+      "name": "Reprieve",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 22
+    },
+    "rottenmouthviper": {
+      "name": "Rottenmouth Viper",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 14
+    },
+    "galadhrimbrigade": {
+      "name": "Galadhrim Brigade",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 3
+    },
+    "shadowheartdarkjusticiar": {
+      "name": "Shadowheart, Dark Justiciar",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 5
+    },
+    "brionstoutarm": {
+      "name": "Brion Stoutarm",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 5
+    },
+    "elendatheduskrose": {
+      "name": "Elenda, the Dusk Rose",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 20
+    },
+    "ensnaredbythemara": {
+      "name": "Ensnared by the Mara",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 12
+    },
+    "entangler": {
+      "name": "Entangler",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 4
+    },
+    "epicstruggle": {
+      "name": "Epic Struggle",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 4
+    },
+    "eyeofvecna": {
+      "name": "Eye of Vecna",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 5
+    },
+    "feldonofthethirdpath": {
+      "name": "Feldon of the Third Path",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 5
+    },
+    "fishinggear": {
+      "name": "Fishing Gear",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-08-31T07:07:02+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
