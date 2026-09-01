@@ -20189,6 +20189,150 @@
       "cashUsd": 14.0,
       "checkedAt": "2026-09-01T06:18:42+00:00",
       "matches": 4
+    },
+    "streetwraith": {
+      "name": "Street Wraith",
+      "cashUsd": 42.5,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 19
+    },
+    "swordofkaldra": {
+      "name": "Sword of Kaldra",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 5
+    },
+    "setessanchampion": {
+      "name": "Setessan Champion",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 18
+    },
+    "markofsakiko": {
+      "name": "Mark of Sakiko",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 4
+    },
+    "marwynthenurturer": {
+      "name": "Marwyn, the Nurturer",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 12
+    },
+    "masterhealer": {
+      "name": "Master Healer",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 6
+    },
+    "mercadiasdownfall": {
+      "name": "Mercadia's Downfall",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 2
+    },
+    "mishraartificerprodigy": {
+      "name": "Mishra, Artificer Prodigy",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 3
+    },
+    "mistbladeshinobi": {
+      "name": "Mistblade Shinobi",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 7
+    },
+    "mulldrifter": {
+      "name": "Mulldrifter",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 15
+    },
+    "myojinofnightsreach": {
+      "name": "Myojin of Night's Reach",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 5
+    },
+    "multaniyavimayasavatar": {
+      "name": "Multani, Yavimaya's Avatar",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 6
+    },
+    "myrretriever": {
+      "name": "Myr Retriever",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 15
+    },
+    "nantukoshrine": {
+      "name": "Nantuko Shrine",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 2
+    },
+    "nightswhisper": {
+      "name": "Night's Whisper",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 44
+    },
+    "nivmizzetreborn": {
+      "name": "Niv-Mizzet Reborn",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 13
+    },
+    "nourishingshoal": {
+      "name": "Nourishing Shoal",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 8
+    },
+    "outofthetombs": {
+      "name": "Out of the Tombs",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 3
+    },
+    "paladindansesteelmaverick": {
+      "name": "Paladin Danse, Steel Maverick",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 6
+    },
+    "penumbrawurm": {
+      "name": "Penumbra Wurm",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 2
+    },
+    "powerleak": {
+      "name": "Power Leak",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 7
+    },
+    "poxwalkers": {
+      "name": "Poxwalkers",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 3
+    },
+    "psychicbattle": {
+      "name": "Psychic Battle",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 2
+    },
+    "psychoticfury": {
+      "name": "Psychotic Fury",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T17:23:00+00:00",
+      "matches": 3
     }
   },
   "unmatched": {
