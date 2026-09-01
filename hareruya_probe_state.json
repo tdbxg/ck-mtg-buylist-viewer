@@ -20045,6 +20045,150 @@
       "cashUsd": 14.0,
       "checkedAt": "2026-08-31T19:32:42+00:00",
       "matches": 8
+    },
+    "ricochettrap": {
+      "name": "Ricochet Trap",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 2
+    },
+    "eightandahalftails": {
+      "name": "Eight-and-a-Half-Tails",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 5
+    },
+    "myojinofinfiniterage": {
+      "name": "Myojin of Infinite Rage",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 4
+    },
+    "nantukovigilante": {
+      "name": "Nantuko Vigilante",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 3
+    },
+    "samitehealer": {
+      "name": "Samite Healer",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 8
+    },
+    "biophagus": {
+      "name": "Biophagus",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 3
+    },
+    "fumikothelowblood": {
+      "name": "Fumiko the Lowblood",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 2
+    },
+    "imaryllelfhameelite": {
+      "name": "Imaryll, Elfhame Elite",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 2
+    },
+    "industrialadvancement": {
+      "name": "Industrial Advancement",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 6
+    },
+    "intelligencebobblehead": {
+      "name": "Intelligence Bobblehead",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 6
+    },
+    "isamaruhoundofkonda": {
+      "name": "Isamaru, Hound of Konda",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 4
+    },
+    "jadarghoulcallerofnephalia": {
+      "name": "Jadar, Ghoulcaller of Nephalia",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 14
+    },
+    "jaheirafriendoftheforest": {
+      "name": "Jaheira, Friend of the Forest",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 12
+    },
+    "jhoiraoftheghitu": {
+      "name": "Jhoira of the Ghitu",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 6
+    },
+    "joineradept": {
+      "name": "Joiner Adept",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 8
+    },
+    "karrthustyrantofjund": {
+      "name": "Karrthus, Tyrant of Jund",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 10
+    },
+    "kondasbanner": {
+      "name": "Konda's Banner",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 4
+    },
+    "kiragreatglassspinner": {
+      "name": "Kira, Great Glass-Spinner",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 9
+    },
+    "krosancloudscraper": {
+      "name": "Krosan Cloudscraper",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 4
+    },
+    "lazavdimirmastermind": {
+      "name": "Lazav, Dimir Mastermind",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 3
+    },
+    "kruphixgodofhorizons": {
+      "name": "Kruphix, God of Horizons",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 6
+    },
+    "leylineofanticipation": {
+      "name": "Leyline of Anticipation",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 19
+    },
+    "liesaforgottenarchangel": {
+      "name": "Liesa, Forgotten Archangel",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 10
+    },
+    "manabond": {
+      "name": "Manabond",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-01T06:18:42+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
