@@ -20333,6 +20333,144 @@
       "cashUsd": 14.0,
       "checkedAt": "2026-09-01T17:23:00+00:00",
       "matches": 3
+    },
+    "rocksteadymutantmarauder": {
+      "name": "Rocksteady, Mutant Marauder",
+      "cashUsd": 24.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 4
+    },
+    "valleyfloodcaller": {
+      "name": "Valley Floodcaller",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 14
+    },
+    "orderofwhiteclay": {
+      "name": "Order of Whiteclay",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 2
+    },
+    "unearth": {
+      "name": "Unearth",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 12
+    },
+    "dirtcowlwurm": {
+      "name": "Dirtcowl Wurm",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 2
+    },
+    "eggnoggersstache": {
+      "name": "Eggnogger's 'Stache",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 1
+    },
+    "glarbcalamitysaugur": {
+      "name": "Glarb, Calamity's Augur",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 13
+    },
+    "massacrewurm": {
+      "name": "Massacre Wurm",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 27
+    },
+    "puppetsverdict": {
+      "name": "Puppet's Verdict",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 4
+    },
+    "ragnar": {
+      "name": "Ragnar",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 9
+    },
+    "rapidhybridization": {
+      "name": "Rapid Hybridization",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 22
+    },
+    "rashelfistoftorm": {
+      "name": "Rashel, Fist of Torm",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 1
+    },
+    "readthebones": {
+      "name": "Read the Bones",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 8
+    },
+    "retract": {
+      "name": "Retract",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 12
+    },
+    "reversaloffortune": {
+      "name": "Reversal of Fortune",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 4
+    },
+    "saffieriksdotter": {
+      "name": "Saffi Eriksdotter",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 6
+    },
+    "seasonofthewitch": {
+      "name": "Season of the Witch",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 1
+    },
+    "seizanperverteroftruth": {
+      "name": "Seizan, Perverter of Truth",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 8
+    },
+    "securitronsquadron": {
+      "name": "Securitron Squadron",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 12
+    },
+    "sekkuardeathkeeper": {
+      "name": "Sek'Kuar, Deathkeeper",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 2
+    },
+    "shatteredsanctum": {
+      "name": "Shattered Sanctum",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 34
+    },
+    "shepherdofrot": {
+      "name": "Shepherd of Rot",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 3
+    },
+    "slyspy": {
+      "name": "Sly Spy",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-02T05:54:19+00:00",
+      "matches": 6
     }
   },
   "unmatched": {
