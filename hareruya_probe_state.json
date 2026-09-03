@@ -20753,6 +20753,138 @@
       "cashUsd": 13.8,
       "checkedAt": "2026-09-03T05:53:59+00:00",
       "matches": 3
+    },
+    "empressgalina": {
+      "name": "Empress Galina",
+      "cashUsd": 40.0,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 7
+    },
+    "tandemlookout": {
+      "name": "Tandem Lookout",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 11
+    },
+    "ramunapruins": {
+      "name": "Ramunap Ruins",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 6
+    },
+    "shadrixsilverquill": {
+      "name": "Shadrix Silverquill",
+      "cashUsd": 15.2,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 11
+    },
+    "angelstrumpet": {
+      "name": "Angel's Trumpet",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 3
+    },
+    "jump": {
+      "name": "Jump",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 53
+    },
+    "hourofrevelation": {
+      "name": "Hour of Revelation",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 10
+    },
+    "karlovoftheghostcouncil": {
+      "name": "Karlov of the Ghost Council",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 16
+    },
+    "kaaliazenithseeker": {
+      "name": "Kaalia, Zenith Seeker",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 10
+    },
+    "manacache": {
+      "name": "Mana Cache",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 2
+    },
+    "nightmarelash": {
+      "name": "Nightmare Lash",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 4
+    },
+    "pariahsshield": {
+      "name": "Pariah's Shield",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 8
+    },
+    "prizedamalgam": {
+      "name": "Prized Amalgam",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 9
+    },
+    "rampagingyaoguai": {
+      "name": "Rampaging Yao Guai",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 12
+    },
+    "raisethepast": {
+      "name": "Raise the Past",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 19
+    },
+    "repayinkind": {
+      "name": "Repay in Kind",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 4
+    },
+    "shamanstrance": {
+      "name": "Shaman's Trance",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 2
+    },
+    "skyshroudranger": {
+      "name": "Skyshroud Ranger",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 2
+    },
+    "torgalafinehound": {
+      "name": "Torgal, A Fine Hound",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 3
+    },
+    "transmutationfont": {
+      "name": "Transmutation Font",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 17
+    },
+    "vanillecheerfullcie": {
+      "name": "Vanille, Cheerful l'Cie",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 4
+    },
+    "weakness": {
+      "name": "Weakness",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T17:06:25+00:00",
+      "matches": 6
     }
   },
   "unmatched": {
