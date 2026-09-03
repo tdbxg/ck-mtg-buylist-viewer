@@ -20885,6 +20885,132 @@
       "cashUsd": 13.8,
       "checkedAt": "2026-09-03T17:06:25+00:00",
       "matches": 6
+    },
+    "weatheredsentinels": {
+      "name": "Weathered Sentinels",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 8
+    },
+    "yawgmothsagenda": {
+      "name": "Yawgmoth's Agenda",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 2
+    },
+    "beholdthesinistersix": {
+      "name": "Behold the Sinister Six!",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 11
+    },
+    "courtofgarenbrig": {
+      "name": "Court of Garenbrig",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 8
+    },
+    "dawnsiresunstardreadnought": {
+      "name": "Dawnsire, Sunstar Dreadnought",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 14
+    },
+    "dragonskullsummit": {
+      "name": "Dragonskull Summit",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 38
+    },
+    "iymrithdesertdoom": {
+      "name": "Iymrith, Desert Doom",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 13
+    },
+    "komacosmosserpent": {
+      "name": "Koma, Cosmos Serpent",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 22
+    },
+    "kumenatyrantoforazca": {
+      "name": "Kumena, Tyrant of Orazca",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 6
+    },
+    "lordxanderthecollector": {
+      "name": "Lord Xander, the Collector",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 8
+    },
+    "manavortex": {
+      "name": "Mana Vortex",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 1
+    },
+    "misleadingsignpost": {
+      "name": "Misleading Signpost",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 4
+    },
+    "mycoloth": {
+      "name": "Mycoloth",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 13
+    },
+    "neyithofthedirehunt": {
+      "name": "Neyith of the Dire Hunt",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 1
+    },
+    "orzhovsignet": {
+      "name": "Orzhov Signet",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 51
+    },
+    "piratedcopy": {
+      "name": "Pirated Copy",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 4
+    },
+    "plaguecrafter": {
+      "name": "Plaguecrafter",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 7
+    },
+    "planetariumofwanshitong": {
+      "name": "Planetarium of Wan Shi Tong",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 10
+    },
+    "ringofimmortals": {
+      "name": "Ring of Immortals",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 1
+    },
+    "secretrendezvous": {
+      "name": "Secret Rendezvous",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 18
+    },
+    "sowingmycospawn": {
+      "name": "Sowing Mycospawn",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-03T17:35:27+00:00",
+      "matches": 12
     }
   },
   "unmatched": {
