@@ -20609,6 +20609,150 @@
       "cashUsd": 14.0,
       "checkedAt": "2026-09-02T17:13:19+00:00",
       "matches": 5
+    },
+    "rithsgrove": {
+      "name": "Rith's Grove",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 2
+    },
+    "skitteringskirge": {
+      "name": "Skittering Skirge",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 1
+    },
+    "praetorscounsel": {
+      "name": "Praetor's Counsel",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 8
+    },
+    "relicofprogenitus": {
+      "name": "Relic of Progenitus",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 16
+    },
+    "sigardafontofblessings": {
+      "name": "Sigarda, Font of Blessings",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 20
+    },
+    "ajanimentorofheroes": {
+      "name": "Ajani, Mentor of Heroes",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 7
+    },
+    "falsedefeat": {
+      "name": "False Defeat",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 2
+    },
+    "emptycityruse": {
+      "name": "Empty City Ruse",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 4
+    },
+    "zodiacox": {
+      "name": "Zodiac Ox",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 2
+    },
+    "memoryerosion": {
+      "name": "Memory Erosion",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 8
+    },
+    "zaskskitteringswarmlord": {
+      "name": "Zask, Skittering Swarmlord",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 2
+    },
+    "baralchiefofcompliance": {
+      "name": "Baral, Chief of Compliance",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 25
+    },
+    "biotransference": {
+      "name": "Biotransference",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 3
+    },
+    "benniebrackszoologist": {
+      "name": "Bennie Bracks, Zoologist",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 10
+    },
+    "boneshredder": {
+      "name": "Bone Shredder",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 3
+    },
+    "brightstoneritual": {
+      "name": "Brightstone Ritual",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 5
+    },
+    "brotherhoodoutcast": {
+      "name": "Brotherhood Outcast",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 5
+    },
+    "brunalightofalabaster": {
+      "name": "Bruna, Light of Alabaster",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 5
+    },
+    "citanulflute": {
+      "name": "Citanul Flute",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 4
+    },
+    "desert": {
+      "name": "Desert",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 60
+    },
+    "etherealarmor": {
+      "name": "Ethereal Armor",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 8
+    },
+    "forcedfruition": {
+      "name": "Forced Fruition",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 8
+    },
+    "guiltfeeder": {
+      "name": "Guiltfeeder",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 4
+    },
+    "hairstrungkoto": {
+      "name": "Hair-Strung Koto",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-03T05:53:59+00:00",
+      "matches": 3
     }
   },
   "unmatched": {
