@@ -21125,6 +21125,114 @@
       "cashUsd": 13.0,
       "checkedAt": "2026-09-04T05:59:13+00:00",
       "matches": 4
+    },
+    "vensersjournal": {
+      "name": "Venser's Journal",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-04T16:55:48+00:00",
+      "matches": 7
+    },
+    "molteninfluence": {
+      "name": "Molten Influence",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-04T16:55:48+00:00",
+      "matches": 4
+    },
+    "amzuswarmshunger": {
+      "name": "Amzu, Swarm's Hunger",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-04T16:55:48+00:00",
+      "matches": 1
+    },
+    "catharscrusade": {
+      "name": "Cathars' Crusade",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-04T16:55:48+00:00",
+      "matches": 21
+    },
+    "cyclone": {
+      "name": "Cyclone",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-04T16:55:48+00:00",
+      "matches": 6
+    },
+    "carrionants": {
+      "name": "Carrion Ants",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-04T16:55:48+00:00",
+      "matches": 1
+    },
+    "darksteelplate": {
+      "name": "Darksteel Plate",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-04T16:55:48+00:00",
+      "matches": 18
+    },
+    "dionuselvisharchdruid": {
+      "name": "Dionus, Elvish Archdruid",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-04T16:55:48+00:00",
+      "matches": 2
+    },
+    "novapentacle": {
+      "name": "Nova Pentacle",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-04T16:55:48+00:00",
+      "matches": 1
+    },
+    "mishraclaimedbygix": {
+      "name": "Mishra, Claimed by Gix",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-04T16:55:48+00:00",
+      "matches": 6
+    },
+    "phyrexiancrusader": {
+      "name": "Phyrexian Crusader",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-04T16:55:48+00:00",
+      "matches": 7
+    },
+    "poisonarrow": {
+      "name": "Poison Arrow",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-04T16:55:48+00:00",
+      "matches": 2
+    },
+    "revelation": {
+      "name": "Revelation",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-04T16:55:48+00:00",
+      "matches": 59
+    },
+    "spawningkraken": {
+      "name": "Spawning Kraken",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-04T16:55:48+00:00",
+      "matches": 4
+    },
+    "stormforceofnature": {
+      "name": "Storm, Force of Nature",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-04T16:55:48+00:00",
+      "matches": 5
+    },
+    "spikefeeder": {
+      "name": "Spike Feeder",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-04T16:55:48+00:00",
+      "matches": 11
+    },
+    "tezzeretartificemaster": {
+      "name": "Tezzeret, Artifice Master",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-04T16:55:48+00:00",
+      "matches": 9
+    },
+    "vonashunger": {
+      "name": "Vona's Hunger",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-04T16:55:48+00:00",
+      "matches": 10
     }
   },
   "unmatched": {
