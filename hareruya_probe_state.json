@@ -21011,6 +21011,120 @@
       "cashUsd": 13.5,
       "checkedAt": "2026-09-03T17:35:27+00:00",
       "matches": 12
+    },
+    "ubamask": {
+      "name": "Uba Mask",
+      "cashUsd": 24.0,
+      "checkedAt": "2026-09-04T05:59:13+00:00",
+      "matches": 4
+    },
+    "elvishharbinger": {
+      "name": "Elvish Harbinger",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-09-04T05:59:13+00:00",
+      "matches": 9
+    },
+    "swordofforgeandfrontier": {
+      "name": "Sword of Forge and Frontier",
+      "cashUsd": 15.2,
+      "checkedAt": "2026-09-04T05:59:13+00:00",
+      "matches": 15
+    },
+    "alelaartfulprovocateur": {
+      "name": "Alela, Artful Provocateur",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-04T05:59:13+00:00",
+      "matches": 5
+    },
+    "coastaltower": {
+      "name": "Coastal Tower",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-04T05:59:13+00:00",
+      "matches": 10
+    },
+    "godobanditwarlord": {
+      "name": "Godo, Bandit Warlord",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-04T05:59:13+00:00",
+      "matches": 18
+    },
+    "heartlesshidetsugu": {
+      "name": "Heartless Hidetsugu",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-04T05:59:13+00:00",
+      "matches": 13
+    },
+    "imperiousperfect": {
+      "name": "Imperious Perfect",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-04T05:59:13+00:00",
+      "matches": 22
+    },
+    "sarcomancy": {
+      "name": "Sarcomancy",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-04T05:59:13+00:00",
+      "matches": 2
+    },
+    "tashathewitchqueen": {
+      "name": "Tasha, the Witch Queen",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-04T05:59:13+00:00",
+      "matches": 10
+    },
+    "spoilsofvictory": {
+      "name": "Spoils of Victory",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-04T05:59:13+00:00",
+      "matches": 3
+    },
+    "threadsofdisloyalty": {
+      "name": "Threads of Disloyalty",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-04T05:59:13+00:00",
+      "matches": 3
+    },
+    "vilisbrokerofblood": {
+      "name": "Vilis, Broker of Blood",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-04T05:59:13+00:00",
+      "matches": 16
+    },
+    "witchsclinic": {
+      "name": "Witch's Clinic",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-04T05:59:13+00:00",
+      "matches": 6
+    },
+    "manageyser": {
+      "name": "Mana Geyser",
+      "cashUsd": 13.2,
+      "checkedAt": "2026-09-04T05:59:13+00:00",
+      "matches": 22
+    },
+    "teferismoat": {
+      "name": "Teferi's Moat",
+      "cashUsd": 13.2,
+      "checkedAt": "2026-09-04T05:59:13+00:00",
+      "matches": 4
+    },
+    "astraldragon": {
+      "name": "Astral Dragon",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-04T05:59:13+00:00",
+      "matches": 4
+    },
+    "bartelruneaxe": {
+      "name": "Bartel Runeaxe",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-04T05:59:13+00:00",
+      "matches": 1
+    },
+    "bothersomequasit": {
+      "name": "Bothersome Quasit",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-04T05:59:13+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
