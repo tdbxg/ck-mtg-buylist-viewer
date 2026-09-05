@@ -21329,6 +21329,102 @@
       "cashUsd": 12.5,
       "checkedAt": "2026-09-05T05:49:55+00:00",
       "matches": 4
+    },
+    "gerrardsverdict": {
+      "name": "Gerrard's Verdict",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-05T16:08:56+00:00",
+      "matches": 6
+    },
+    "kalastriahighborn": {
+      "name": "Kalastria Highborn",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-09-05T16:08:56+00:00",
+      "matches": 4
+    },
+    "autumnsveil": {
+      "name": "Autumn's Veil",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-05T16:08:56+00:00",
+      "matches": 5
+    },
+    "beaconofcreation": {
+      "name": "Beacon of Creation",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-05T16:08:56+00:00",
+      "matches": 4
+    },
+    "avenbrigadier": {
+      "name": "Aven Brigadier",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-05T16:08:56+00:00",
+      "matches": 2
+    },
+    "beholdthebeyond": {
+      "name": "Behold the Beyond",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-05T16:08:56+00:00",
+      "matches": 5
+    },
+    "bellowingfiend": {
+      "name": "Bellowing Fiend",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-05T16:08:56+00:00",
+      "matches": 2
+    },
+    "bilbosring": {
+      "name": "Bilbo's Ring",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-05T16:08:56+00:00",
+      "matches": 11
+    },
+    "breachthemultiverse": {
+      "name": "Breach the Multiverse",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-05T16:08:56+00:00",
+      "matches": 14
+    },
+    "breakthrough": {
+      "name": "Breakthrough",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-05T16:08:56+00:00",
+      "matches": 4
+    },
+    "burningsands": {
+      "name": "Burning Sands",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-05T16:08:56+00:00",
+      "matches": 3
+    },
+    "cathedralacolyte": {
+      "name": "Cathedral Acolyte",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-05T16:08:56+00:00",
+      "matches": 6
+    },
+    "celestialarmor": {
+      "name": "Celestial Armor",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-05T16:08:56+00:00",
+      "matches": 8
+    },
+    "circleofprotectionblue": {
+      "name": "Circle of Protection: Blue",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-05T16:08:56+00:00",
+      "matches": 11
+    },
+    "cloudkey": {
+      "name": "Cloud Key",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-05T16:08:56+00:00",
+      "matches": 19
+    },
+    "cometstorm": {
+      "name": "Comet Storm",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-05T16:08:56+00:00",
+      "matches": 14
     }
   },
   "unmatched": {
