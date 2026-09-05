@@ -21233,6 +21233,102 @@
       "cashUsd": 13.0,
       "checkedAt": "2026-09-04T16:55:48+00:00",
       "matches": 10
+    },
+    "declarationofnaught": {
+      "name": "Declaration of Naught",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-05T05:49:55+00:00",
+      "matches": 4
+    },
+    "fieryislet": {
+      "name": "Fiery Islet",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-05T05:49:55+00:00",
+      "matches": 20
+    },
+    "xantcha": {
+      "name": "Xantcha",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-05T05:49:55+00:00",
+      "matches": 11
+    },
+    "authorityoftheconsuls": {
+      "name": "Authority of the Consuls",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-05T05:49:55+00:00",
+      "matches": 25
+    },
+    "snowcoveredswamp": {
+      "name": "Snow-Covered Swamp",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-05T05:49:55+00:00",
+      "matches": 12
+    },
+    "abrade": {
+      "name": "Abrade",
+      "cashUsd": 13.2,
+      "checkedAt": "2026-09-05T05:49:55+00:00",
+      "matches": 23
+    },
+    "deafeningsilence": {
+      "name": "Deafening Silence",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-05T05:49:55+00:00",
+      "matches": 9
+    },
+    "nyleagodofthehunt": {
+      "name": "Nylea, God of the Hunt",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-05T05:49:55+00:00",
+      "matches": 6
+    },
+    "raucoustheater": {
+      "name": "Raucous Theater",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-05T05:49:55+00:00",
+      "matches": 14
+    },
+    "reyhanlastoftheabzan": {
+      "name": "Reyhan, Last of the Abzan",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-05T05:49:55+00:00",
+      "matches": 5
+    },
+    "toothclawandtail": {
+      "name": "Tooth, Claw, and Tail",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-05T05:49:55+00:00",
+      "matches": 1
+    },
+    "scuteswarm": {
+      "name": "Scute Swarm",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-05T05:49:55+00:00",
+      "matches": 26
+    },
+    "akromaangeloffury": {
+      "name": "Akroma, Angel of Fury",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-05T05:49:55+00:00",
+      "matches": 9
+    },
+    "archdruidscharm": {
+      "name": "Archdruid's Charm",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-05T05:49:55+00:00",
+      "matches": 14
+    },
+    "alexizephyrmage": {
+      "name": "Alexi, Zephyr Mage",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-05T05:49:55+00:00",
+      "matches": 2
+    },
+    "aurification": {
+      "name": "Aurification",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-05T05:49:55+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
