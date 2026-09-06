@@ -21425,6 +21425,102 @@
       "cashUsd": 12.5,
       "checkedAt": "2026-09-05T16:08:56+00:00",
       "matches": 14
+    },
+    "staffofcompleation": {
+      "name": "Staff of Compleation",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-09-06T06:02:06+00:00",
+      "matches": 13
+    },
+    "adagiawindsweptbastion": {
+      "name": "Adagia, Windswept Bastion",
+      "cashUsd": 15.2,
+      "checkedAt": "2026-09-06T06:02:06+00:00",
+      "matches": 16
+    },
+    "taintedwood": {
+      "name": "Tainted Wood",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-06T06:02:06+00:00",
+      "matches": 7
+    },
+    "brotherhoodregalia": {
+      "name": "Brotherhood Regalia",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-06T06:02:06+00:00",
+      "matches": 6
+    },
+    "keranosgodofstorms": {
+      "name": "Keranos, God of Storms",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-06T06:02:06+00:00",
+      "matches": 5
+    },
+    "sindbad": {
+      "name": "Sindbad",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-06T06:02:06+00:00",
+      "matches": 1
+    },
+    "creditvoucher": {
+      "name": "Credit Voucher",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-06T06:02:06+00:00",
+      "matches": 2
+    },
+    "edricspymasteroftrest": {
+      "name": "Edric, Spymaster of Trest",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-06T06:02:06+00:00",
+      "matches": 9
+    },
+    "theshire": {
+      "name": "The Shire",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-06T06:02:06+00:00",
+      "matches": 22
+    },
+    "recklessendeavor": {
+      "name": "Reckless Endeavor",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-06T06:02:06+00:00",
+      "matches": 6
+    },
+    "councilsjudgment": {
+      "name": "Council's Judgment",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-06T06:02:06+00:00",
+      "matches": 8
+    },
+    "cultivate": {
+      "name": "Cultivate",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-06T06:02:06+00:00",
+      "matches": 30
+    },
+    "dampingengine": {
+      "name": "Damping Engine",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-06T06:02:06+00:00",
+      "matches": 2
+    },
+    "deathcapglade": {
+      "name": "Deathcap Glade",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-06T06:02:06+00:00",
+      "matches": 29
+    },
+    "denryklineditorinchief": {
+      "name": "Denry Klin, Editor in Chief",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-06T06:02:06+00:00",
+      "matches": 6
+    },
+    "elektradaughterofthehand": {
+      "name": "Elektra, Daughter of the Hand",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-06T06:02:06+00:00",
+      "matches": 8
     }
   },
   "unmatched": {
