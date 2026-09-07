@@ -21707,6 +21707,102 @@
       "cashUsd": 12.5,
       "checkedAt": "2026-09-07T06:11:48+00:00",
       "matches": 4
+    },
+    "uthdentroll": {
+      "name": "Uthden Troll",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-09-07T18:20:00+00:00",
+      "matches": 8
+    },
+    "dragonsapproach": {
+      "name": "Dragon's Approach",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-09-07T18:20:00+00:00",
+      "matches": 6
+    },
+    "windingway": {
+      "name": "Winding Way",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-07T18:20:00+00:00",
+      "matches": 6
+    },
+    "dinosaursonaspaceship": {
+      "name": "Dinosaurs on a Spaceship",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-07T18:20:00+00:00",
+      "matches": 12
+    },
+    "jacesarchivist": {
+      "name": "Jace's Archivist",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T18:20:00+00:00",
+      "matches": 11
+    },
+    "jacethelivingguildpact": {
+      "name": "Jace, the Living Guildpact",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T18:20:00+00:00",
+      "matches": 3
+    },
+    "kayasghostform": {
+      "name": "Kaya's Ghostform",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T18:20:00+00:00",
+      "matches": 3
+    },
+    "keldonnecropolis": {
+      "name": "Keldon Necropolis",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T18:20:00+00:00",
+      "matches": 2
+    },
+    "khalnihydra": {
+      "name": "Khalni Hydra",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T18:20:00+00:00",
+      "matches": 5
+    },
+    "kinsbailecavalier": {
+      "name": "Kinsbaile Cavalier",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T18:20:00+00:00",
+      "matches": 9
+    },
+    "lavarunner": {
+      "name": "Lava Runner",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T18:20:00+00:00",
+      "matches": 5
+    },
+    "lavabornmuse": {
+      "name": "Lavaborn Muse",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T18:20:00+00:00",
+      "matches": 3
+    },
+    "levelup": {
+      "name": "Level Up",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T18:20:00+00:00",
+      "matches": 4
+    },
+    "lightfromwithin": {
+      "name": "Light from Within",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T18:20:00+00:00",
+      "matches": 3
+    },
+    "masterwarcraft": {
+      "name": "Master Warcraft",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T18:20:00+00:00",
+      "matches": 4
+    },
+    "mizzixsmastery": {
+      "name": "Mizzix's Mastery",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T18:20:00+00:00",
+      "matches": 28
     }
   },
   "unmatched": {
