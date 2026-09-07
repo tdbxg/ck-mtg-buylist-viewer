@@ -21611,6 +21611,102 @@
       "cashUsd": 12.5,
       "checkedAt": "2026-09-06T16:21:29+00:00",
       "matches": 3
+    },
+    "freyacrescent": {
+      "name": "Freya Crescent",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-07T06:11:48+00:00",
+      "matches": 2
+    },
+    "rathsedge": {
+      "name": "Rath's Edge",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-07T06:11:48+00:00",
+      "matches": 2
+    },
+    "scrapheap": {
+      "name": "Scrapheap",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-07T06:11:48+00:00",
+      "matches": 5
+    },
+    "tirelesstracker": {
+      "name": "Tireless Tracker",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-07T06:11:48+00:00",
+      "matches": 31
+    },
+    "sephirothfallenhero": {
+      "name": "Sephiroth, Fallen Hero",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-07T06:11:48+00:00",
+      "matches": 7
+    },
+    "elspethknighterrantemblem": {
+      "name": "Elspeth, Knight-Errant Emblem",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-07T06:11:48+00:00",
+      "matches": 3
+    },
+    "visionsofbeyond": {
+      "name": "Visions of Beyond",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-07T06:11:48+00:00",
+      "matches": 14
+    },
+    "bloodforthebloodgod": {
+      "name": "Blood for the Blood God!",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T06:11:48+00:00",
+      "matches": 3
+    },
+    "championoflambholt": {
+      "name": "Champion of Lambholt",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T06:11:48+00:00",
+      "matches": 20
+    },
+    "galadhrimambush": {
+      "name": "Galadhrim Ambush",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T06:11:48+00:00",
+      "matches": 6
+    },
+    "ichormoongauntlet": {
+      "name": "Ichormoon Gauntlet",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T06:11:48+00:00",
+      "matches": 11
+    },
+    "harbingerofnight": {
+      "name": "Harbinger of Night",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T06:11:48+00:00",
+      "matches": 2
+    },
+    "hexparasite": {
+      "name": "Hex Parasite",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T06:11:48+00:00",
+      "matches": 4
+    },
+    "ingarrukswake": {
+      "name": "In Garruk's Wake",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T06:11:48+00:00",
+      "matches": 17
+    },
+    "improvisationcapstone": {
+      "name": "Improvisation Capstone",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T06:11:48+00:00",
+      "matches": 12
+    },
+    "inthedarknessbindthem": {
+      "name": "In the Darkness Bind Them",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-07T06:11:48+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
