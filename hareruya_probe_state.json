@@ -21803,6 +21803,114 @@
       "cashUsd": 12.5,
       "checkedAt": "2026-09-07T18:20:00+00:00",
       "matches": 28
+    },
+    "propheticbolt": {
+      "name": "Prophetic Bolt",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-08T06:02:43+00:00",
+      "matches": 2
+    },
+    "monkeycage": {
+      "name": "Monkey Cage",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-08T06:02:43+00:00",
+      "matches": 4
+    },
+    "nightscapefamiliar": {
+      "name": "Nightscape Familiar",
+      "cashUsd": 13.2,
+      "checkedAt": "2026-09-08T06:02:43+00:00",
+      "matches": 4
+    },
+    "mockingbird": {
+      "name": "Mockingbird",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T06:02:43+00:00",
+      "matches": 14
+    },
+    "mysteriousstranger": {
+      "name": "Mysterious Stranger",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T06:02:43+00:00",
+      "matches": 6
+    },
+    "necrogenmists": {
+      "name": "Necrogen Mists",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T06:02:43+00:00",
+      "matches": 6
+    },
+    "opulentpalace": {
+      "name": "Opulent Palace",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T06:02:43+00:00",
+      "matches": 4
+    },
+    "overabundance": {
+      "name": "Overabundance",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T06:02:43+00:00",
+      "matches": 4
+    },
+    "prohibit": {
+      "name": "Prohibit",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T06:02:43+00:00",
+      "matches": 2
+    },
+    "peerintotheabyss": {
+      "name": "Peer into the Abyss",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T06:02:43+00:00",
+      "matches": 18
+    },
+    "pangosaur": {
+      "name": "Pangosaur",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T06:02:43+00:00",
+      "matches": 2
+    },
+    "putridgoblin": {
+      "name": "Putrid Goblin",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T06:02:43+00:00",
+      "matches": 3
+    },
+    "rayofrevelation": {
+      "name": "Ray of Revelation",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T06:02:43+00:00",
+      "matches": 2
+    },
+    "quillspike": {
+      "name": "Quillspike",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T06:02:43+00:00",
+      "matches": 4
+    },
+    "reveillark": {
+      "name": "Reveillark",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T06:02:43+00:00",
+      "matches": 8
+    },
+    "rivendell": {
+      "name": "Rivendell",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T06:02:43+00:00",
+      "matches": 14
+    },
+    "robeofstars": {
+      "name": "Robe of Stars",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T06:02:43+00:00",
+      "matches": 6
+    },
+    "runescarreddemon": {
+      "name": "Rune-Scarred Demon",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T06:02:43+00:00",
+      "matches": 11
     }
   },
   "unmatched": {

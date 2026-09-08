@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-07T18:18:26+00:00",
-  "cardKingdomCreatedAt": "2026-09-07 11:05:35",
-  "fastRows": 35555,
+  "generatedAt": "2026-09-08T06:01:17+00:00",
+  "cardKingdomCreatedAt": "2026-09-07 22:05:31",
+  "fastRows": 35426,
   "topRows": 5000,
   "fullRows": 150315,
   "files": {
-    "ck_buylist_fast_high_recent.csv": 11461963,
-    "ck_buylist_top5000.csv": 1621966,
-    "ck_buylist_full.csv.gz": 8806079
+    "ck_buylist_fast_high_recent.csv": 11417489,
+    "ck_buylist_top5000.csv": 1621870,
+    "ck_buylist_full.csv.gz": 8800521
   }
 }
