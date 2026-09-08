@@ -21911,6 +21911,102 @@
       "cashUsd": 12.5,
       "checkedAt": "2026-09-08T06:02:43+00:00",
       "matches": 11
+    },
+    "thadaadelacquisitor": {
+      "name": "Thada Adel, Acquisitor",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-08T17:19:41+00:00",
+      "matches": 4
+    },
+    "subterraneantremors": {
+      "name": "Subterranean Tremors",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-08T17:19:41+00:00",
+      "matches": 8
+    },
+    "stingingstudy": {
+      "name": "Stinging Study",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-08T17:19:41+00:00",
+      "matches": 6
+    },
+    "flametonguekavu": {
+      "name": "Flametongue Kavu",
+      "cashUsd": 13.2,
+      "checkedAt": "2026-09-08T17:19:41+00:00",
+      "matches": 5
+    },
+    "riveroftears": {
+      "name": "River of Tears",
+      "cashUsd": 13.2,
+      "checkedAt": "2026-09-08T17:19:41+00:00",
+      "matches": 6
+    },
+    "elementalbond": {
+      "name": "Elemental Bond",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T17:19:41+00:00",
+      "matches": 17
+    },
+    "shivanhellkite": {
+      "name": "Shivan Hellkite",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T17:19:41+00:00",
+      "matches": 2
+    },
+    "sleeperagent": {
+      "name": "Sleeper Agent",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T17:19:41+00:00",
+      "matches": 27
+    },
+    "stigmalasher": {
+      "name": "Stigma Lasher",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T17:19:41+00:00",
+      "matches": 4
+    },
+    "stonysilence": {
+      "name": "Stony Silence",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T17:19:41+00:00",
+      "matches": 9
+    },
+    "sundownpass": {
+      "name": "Sundown Pass",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T17:19:41+00:00",
+      "matches": 44
+    },
+    "teferimageofzhalfir": {
+      "name": "Teferi, Mage of Zhalfir",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T17:19:41+00:00",
+      "matches": 17
+    },
+    "tenebtheharvester": {
+      "name": "Teneb, the Harvester",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T17:19:41+00:00",
+      "matches": 3
+    },
+    "thefantasticfour": {
+      "name": "The Fantastic Four",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T17:19:41+00:00",
+      "matches": 4
+    },
+    "throatslitter": {
+      "name": "Throat Slitter",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T17:19:41+00:00",
+      "matches": 12
+    },
+    "tribalforcemage": {
+      "name": "Tribal Forcemage",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-08T17:19:41+00:00",
+      "matches": 2
     }
   },
   "unmatched": {
