@@ -22097,6 +22097,84 @@
       "cashUsd": 12.5,
       "checkedAt": "2026-09-09T06:03:58+00:00",
       "matches": 2
+    },
+    "scryingsheets": {
+      "name": "Scrying Sheets",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-09T17:13:16+00:00",
+      "matches": 9
+    },
+    "susursecundivoidaltar": {
+      "name": "Susur Secundi, Void Altar",
+      "cashUsd": 13.2,
+      "checkedAt": "2026-09-09T17:13:16+00:00",
+      "matches": 16
+    },
+    "wormfangbehemoth": {
+      "name": "Wormfang Behemoth",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-09T17:13:16+00:00",
+      "matches": 2
+    },
+    "xiraarien": {
+      "name": "Xira Arien",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-09T17:13:16+00:00",
+      "matches": 2
+    },
+    "youngpyromancer": {
+      "name": "Young Pyromancer",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-09T17:13:16+00:00",
+      "matches": 5
+    },
+    "academymanufactor": {
+      "name": "Academy Manufactor",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-09T17:13:16+00:00",
+      "matches": 25
+    },
+    "andtheyshallknownofear": {
+      "name": "And They Shall Know No Fear",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-09T17:13:16+00:00",
+      "matches": 3
+    },
+    "arcanebombardment": {
+      "name": "Arcane Bombardment",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-09T17:13:16+00:00",
+      "matches": 11
+    },
+    "archivetrap": {
+      "name": "Archive Trap",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-09T17:13:16+00:00",
+      "matches": 9
+    },
+    "balanwanderingknight": {
+      "name": "Balan, Wandering Knight",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-09T17:13:16+00:00",
+      "matches": 6
+    },
+    "balefulstrix": {
+      "name": "Baleful Strix",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-09T17:13:16+00:00",
+      "matches": 38
+    },
+    "boggartharbinger": {
+      "name": "Boggart Harbinger",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-09T17:13:16+00:00",
+      "matches": 3
+    },
+    "bottomlesspit": {
+      "name": "Bottomless Pit",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-09T17:13:16+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
