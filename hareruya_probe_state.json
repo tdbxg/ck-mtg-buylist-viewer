@@ -22007,6 +22007,96 @@
       "cashUsd": 12.5,
       "checkedAt": "2026-09-08T17:19:41+00:00",
       "matches": 2
+    },
+    "nanogeneconversion": {
+      "name": "Nanogene Conversion",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-09T06:03:58+00:00",
+      "matches": 12
+    },
+    "summonyojimbo": {
+      "name": "Summon: Yojimbo",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-09T06:03:58+00:00",
+      "matches": 8
+    },
+    "finalshowdown": {
+      "name": "Final Showdown",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-09T06:03:58+00:00",
+      "matches": 18
+    },
+    "terrasymbiosis": {
+      "name": "Terrasymbiosis",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-09T06:03:58+00:00",
+      "matches": 14
+    },
+    "cryptolithrite": {
+      "name": "Cryptolith Rite",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-09T06:03:58+00:00",
+      "matches": 20
+    },
+    "dusttodust": {
+      "name": "Dust to Dust",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-09T06:03:58+00:00",
+      "matches": 21
+    },
+    "mutagenicgrowth": {
+      "name": "Mutagenic Growth",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-09T06:03:58+00:00",
+      "matches": 9
+    },
+    "nethergoyf": {
+      "name": "Nethergoyf",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-09T06:03:58+00:00",
+      "matches": 10
+    },
+    "powerconduit": {
+      "name": "Power Conduit",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-09T06:03:58+00:00",
+      "matches": 7
+    },
+    "saprolingcluster": {
+      "name": "Saproling Cluster",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-09T06:03:58+00:00",
+      "matches": 2
+    },
+    "undeadwarchief": {
+      "name": "Undead Warchief",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-09T06:03:58+00:00",
+      "matches": 10
+    },
+    "urzaacademyheadmaster": {
+      "name": "Urza, Academy Headmaster",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-09T06:03:58+00:00",
+      "matches": 2
+    },
+    "virtustheveiled": {
+      "name": "Virtus the Veiled",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-09T06:03:58+00:00",
+      "matches": 6
+    },
+    "volatilestormdrake": {
+      "name": "Volatile Stormdrake",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-09T06:03:58+00:00",
+      "matches": 14
+    },
+    "wartax": {
+      "name": "War Tax",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-09T06:03:58+00:00",
+      "matches": 2
     }
   },
   "unmatched": {
