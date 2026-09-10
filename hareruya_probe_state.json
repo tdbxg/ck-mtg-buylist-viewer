@@ -22265,6 +22265,84 @@
       "cashUsd": 12.5,
       "checkedAt": "2026-09-10T06:03:12+00:00",
       "matches": 2
+    },
+    "skyshroudclaim": {
+      "name": "Skyshroud Claim",
+      "cashUsd": 32.5,
+      "checkedAt": "2026-09-10T17:04:41+00:00",
+      "matches": 8
+    },
+    "masterofthehunt": {
+      "name": "Master of the Hunt",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-10T17:04:41+00:00",
+      "matches": 21
+    },
+    "hushbringer": {
+      "name": "Hushbringer",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-10T17:04:41+00:00",
+      "matches": 6
+    },
+    "shadowofdoubt": {
+      "name": "Shadow of Doubt",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-10T17:04:41+00:00",
+      "matches": 6
+    },
+    "earthbind": {
+      "name": "Earthbind",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-10T17:04:41+00:00",
+      "matches": 6
+    },
+    "mistrisevillage": {
+      "name": "Mistrise Village",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-10T17:04:41+00:00",
+      "matches": 14
+    },
+    "stormscapefamiliar": {
+      "name": "Stormscape Familiar",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-10T17:04:41+00:00",
+      "matches": 4
+    },
+    "thetenrings": {
+      "name": "The Ten Rings",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-10T17:04:41+00:00",
+      "matches": 9
+    },
+    "wanderwineprophets": {
+      "name": "Wanderwine Prophets",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-10T17:04:41+00:00",
+      "matches": 8
+    },
+    "bardclass": {
+      "name": "Bard Class",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-10T17:04:41+00:00",
+      "matches": 7
+    },
+    "bloodfirecolossus": {
+      "name": "Bloodfire Colossus",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-10T17:04:41+00:00",
+      "matches": 4
+    },
+    "bondersenclave": {
+      "name": "Bonders' Enclave",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-10T17:04:41+00:00",
+      "matches": 23
+    },
+    "caretakerstalent": {
+      "name": "Caretaker's Talent",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-10T17:04:41+00:00",
+      "matches": 10
     }
   },
   "unmatched": {
