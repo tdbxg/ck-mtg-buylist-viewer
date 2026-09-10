@@ -22175,6 +22175,96 @@
       "cashUsd": 12.0,
       "checkedAt": "2026-09-09T17:13:16+00:00",
       "matches": 4
+    },
+    "temptingwurm": {
+      "name": "Tempting Wurm",
+      "cashUsd": 40.0,
+      "checkedAt": "2026-09-10T06:03:12+00:00",
+      "matches": 5
+    },
+    "whipflare": {
+      "name": "Whipflare",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-09-10T06:03:12+00:00",
+      "matches": 9
+    },
+    "birthingritual": {
+      "name": "Birthing Ritual",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-10T06:03:12+00:00",
+      "matches": 10
+    },
+    "katarawaterbendingmaster": {
+      "name": "Katara, Waterbending Master",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-10T06:03:12+00:00",
+      "matches": 8
+    },
+    "daringapprentice": {
+      "name": "Daring Apprentice",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-10T06:03:12+00:00",
+      "matches": 6
+    },
+    "nicolbolasplaneswalker": {
+      "name": "Nicol Bolas, Planeswalker",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-10T06:03:12+00:00",
+      "matches": 13
+    },
+    "opaleyekondasyojimbo": {
+      "name": "Opal-Eye, Konda's Yojimbo",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-10T06:03:12+00:00",
+      "matches": 3
+    },
+    "magusofthewheel": {
+      "name": "Magus of the Wheel",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-10T06:03:12+00:00",
+      "matches": 25
+    },
+    "shorikaigenesisengine": {
+      "name": "Shorikai, Genesis Engine",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-10T06:03:12+00:00",
+      "matches": 7
+    },
+    "talismanofconviction": {
+      "name": "Talisman of Conviction",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-10T06:03:12+00:00",
+      "matches": 41
+    },
+    "thefirecrystal": {
+      "name": "The Fire Crystal",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-10T06:03:12+00:00",
+      "matches": 10
+    },
+    "ancientstirrings": {
+      "name": "Ancient Stirrings",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-10T06:03:12+00:00",
+      "matches": 24
+    },
+    "dawnofthedead": {
+      "name": "Dawn of the Dead",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-10T06:03:12+00:00",
+      "matches": 2
+    },
+    "hatcherysliver": {
+      "name": "Hatchery Sliver",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-10T06:03:12+00:00",
+      "matches": 6
+    },
+    "martyrscause": {
+      "name": "Martyr's Cause",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-10T06:03:12+00:00",
+      "matches": 2
     }
   },
   "unmatched": {
