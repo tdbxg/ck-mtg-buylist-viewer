@@ -22343,6 +22343,78 @@
       "cashUsd": 12.0,
       "checkedAt": "2026-09-10T17:04:41+00:00",
       "matches": 10
+    },
+    "garrukprimalhunter": {
+      "name": "Garruk, Primal Hunter",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-09-11T06:05:31+00:00",
+      "matches": 10
+    },
+    "rufusshinra": {
+      "name": "Rufus Shinra",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-11T06:05:31+00:00",
+      "matches": 2
+    },
+    "dragonlordkolaghan": {
+      "name": "Dragonlord Kolaghan",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-11T06:05:31+00:00",
+      "matches": 9
+    },
+    "molimomarosorcerer": {
+      "name": "Molimo, Maro-Sorcerer",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-11T06:05:31+00:00",
+      "matches": 4
+    },
+    "narsettranscendent": {
+      "name": "Narset Transcendent",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-11T06:05:31+00:00",
+      "matches": 4
+    },
+    "rukhegg": {
+      "name": "Rukh Egg",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-11T06:05:31+00:00",
+      "matches": 5
+    },
+    "eiganjoseatoftheempire": {
+      "name": "Eiganjo, Seat of the Empire",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-11T06:05:31+00:00",
+      "matches": 20
+    },
+    "secludedsteppe": {
+      "name": "Secluded Steppe",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-11T06:05:31+00:00",
+      "matches": 3
+    },
+    "spiritualsanctuary": {
+      "name": "Spiritual Sanctuary",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-11T06:05:31+00:00",
+      "matches": 1
+    },
+    "squeetheimmortal": {
+      "name": "Squee, the Immortal",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-11T06:05:31+00:00",
+      "matches": 12
+    },
+    "swayofthestars": {
+      "name": "Sway of the Stars",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-11T06:05:31+00:00",
+      "matches": 4
+    },
+    "taintedstrike": {
+      "name": "Tainted Strike",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-11T06:05:31+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
