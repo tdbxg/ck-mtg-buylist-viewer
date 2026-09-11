@@ -22415,6 +22415,78 @@
       "cashUsd": 12.5,
       "checkedAt": "2026-09-11T06:05:31+00:00",
       "matches": 4
+    },
+    "marvinmurderousmimic": {
+      "name": "Marvin, Murderous Mimic",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-11T17:05:39+00:00",
+      "matches": 14
+    },
+    "deathorglory": {
+      "name": "Death or Glory",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-11T17:05:39+00:00",
+      "matches": 2
+    },
+    "tidusblitzballstar": {
+      "name": "Tidus, Blitzball Star",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-11T17:05:39+00:00",
+      "matches": 2
+    },
+    "shalaivoiceofplenty": {
+      "name": "Shalai, Voice of Plenty",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-11T17:05:39+00:00",
+      "matches": 13
+    },
+    "zacamaprimalcalamity": {
+      "name": "Zacama, Primal Calamity",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-11T17:05:39+00:00",
+      "matches": 21
+    },
+    "sedgemoorwitch": {
+      "name": "Sedgemoor Witch",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-11T17:05:39+00:00",
+      "matches": 11
+    },
+    "borossignet": {
+      "name": "Boros Signet",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-11T17:05:39+00:00",
+      "matches": 36
+    },
+    "cadricsoulkindler": {
+      "name": "Cadric, Soul Kindler",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-11T17:05:39+00:00",
+      "matches": 4
+    },
+    "burninginquiry": {
+      "name": "Burning Inquiry",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-11T17:05:39+00:00",
+      "matches": 6
+    },
+    "cephalidconstable": {
+      "name": "Cephalid Constable",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-11T17:05:39+00:00",
+      "matches": 8
+    },
+    "crushofwurms": {
+      "name": "Crush of Wurms",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-11T17:05:39+00:00",
+      "matches": 3
+    },
+    "cowardice": {
+      "name": "Cowardice",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-11T17:05:39+00:00",
+      "matches": 6
     }
   },
   "unmatched": {
