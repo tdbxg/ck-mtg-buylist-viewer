@@ -22565,6 +22565,84 @@
       "cashUsd": 12.5,
       "checkedAt": "2026-09-12T05:52:20+00:00",
       "matches": 60
+    },
+    "floodfarmverge": {
+      "name": "Floodfarm Verge",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-12T16:22:42+00:00",
+      "matches": 14
+    },
+    "breenathedemagogue": {
+      "name": "Breena, the Demagogue",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-12T16:22:42+00:00",
+      "matches": 8
+    },
+    "abandonedairtemple": {
+      "name": "Abandoned Air Temple",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-12T16:22:42+00:00",
+      "matches": 10
+    },
+    "dralnuscrusade": {
+      "name": "Dralnu's Crusade",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-12T16:22:42+00:00",
+      "matches": 2
+    },
+    "drmadisonli": {
+      "name": "Dr. Madison Li",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-12T16:22:42+00:00",
+      "matches": 6
+    },
+    "edeapossessedsorceress": {
+      "name": "Edea, Possessed Sorceress",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-12T16:22:42+00:00",
+      "matches": 4
+    },
+    "emeraldmedallion": {
+      "name": "Emerald Medallion",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-12T16:22:42+00:00",
+      "matches": 16
+    },
+    "endlesswhispers": {
+      "name": "Endless Whispers",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-12T16:22:42+00:00",
+      "matches": 4
+    },
+    "forestbear": {
+      "name": "Forest Bear",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-12T16:22:42+00:00",
+      "matches": 5
+    },
+    "guardianoffaith": {
+      "name": "Guardian of Faith",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-12T16:22:42+00:00",
+      "matches": 16
+    },
+    "forsakenmonument": {
+      "name": "Forsaken Monument",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-12T16:22:42+00:00",
+      "matches": 19
+    },
+    "gigantosaurus": {
+      "name": "Gigantosaurus",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-12T16:22:42+00:00",
+      "matches": 13
+    },
+    "hardenedscales": {
+      "name": "Hardened Scales",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-12T16:22:42+00:00",
+      "matches": 46
     }
   },
   "unmatched": {
