@@ -22487,6 +22487,84 @@
       "cashUsd": 12.0,
       "checkedAt": "2026-09-11T17:05:39+00:00",
       "matches": 6
+    },
+    "oathkeepertakenosdaisho": {
+      "name": "Oathkeeper, Takeno's Daisho",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-09-12T05:52:20+00:00",
+      "matches": 4
+    },
+    "aetherbarrier": {
+      "name": "Aether Barrier",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-09-12T05:52:20+00:00",
+      "matches": 4
+    },
+    "godheadofawe": {
+      "name": "Godhead of Awe",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-12T05:52:20+00:00",
+      "matches": 3
+    },
+    "lushportico": {
+      "name": "Lush Portico",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-12T05:52:20+00:00",
+      "matches": 14
+    },
+    "magnetictheft": {
+      "name": "Magnetic Theft",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-12T05:52:20+00:00",
+      "matches": 4
+    },
+    "removesoul": {
+      "name": "Remove Soul",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-12T05:52:20+00:00",
+      "matches": 3
+    },
+    "elhajjj": {
+      "name": "El-Hajjâj",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-12T05:52:20+00:00",
+      "matches": 3
+    },
+    "mindsdilation": {
+      "name": "Mind's Dilation",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-09-12T05:52:20+00:00",
+      "matches": 8
+    },
+    "miscast": {
+      "name": "Miscast",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-12T05:52:20+00:00",
+      "matches": 6
+    },
+    "arvinoxthemindflail": {
+      "name": "Arvinox, the Mind Flail",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-12T05:52:20+00:00",
+      "matches": 1
+    },
+    "calltothegrave": {
+      "name": "Call to the Grave",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-12T05:52:20+00:00",
+      "matches": 4
+    },
+    "cityscapeleveler": {
+      "name": "Cityscape Leveler",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-12T05:52:20+00:00",
+      "matches": 18
+    },
+    "mindstone": {
+      "name": "Mind Stone",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-12T05:52:20+00:00",
+      "matches": 60
     }
   },
   "unmatched": {
