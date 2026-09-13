@@ -22721,6 +22721,84 @@
       "cashUsd": 12.0,
       "checkedAt": "2026-09-13T06:14:50+00:00",
       "matches": 12
+    },
+    "sungrassprairie": {
+      "name": "Sungrass Prairie",
+      "cashUsd": 15.2,
+      "checkedAt": "2026-09-13T17:00:19+00:00",
+      "matches": 7
+    },
+    "faerieharbinger": {
+      "name": "Faerie Harbinger",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-13T17:00:19+00:00",
+      "matches": 4
+    },
+    "hiveoftheeyetyrant": {
+      "name": "Hive of the Eye Tyrant",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-13T17:00:19+00:00",
+      "matches": 8
+    },
+    "holisticwisdom": {
+      "name": "Holistic Wisdom",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-13T17:00:19+00:00",
+      "matches": 2
+    },
+    "holystrength": {
+      "name": "Holy Strength",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-13T17:00:19+00:00",
+      "matches": 18
+    },
+    "hondenofseeingwinds": {
+      "name": "Honden of Seeing Winds",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-13T17:00:19+00:00",
+      "matches": 8
+    },
+    "hornofgreed": {
+      "name": "Horn of Greed",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-13T17:00:19+00:00",
+      "matches": 12
+    },
+    "hornofplenty": {
+      "name": "Horn of Plenty",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-13T17:00:19+00:00",
+      "matches": 2
+    },
+    "inspiringoverseer": {
+      "name": "Inspiring Overseer",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-13T17:00:19+00:00",
+      "matches": 1
+    },
+    "kambalprofiteeringmayor": {
+      "name": "Kambal, Profiteering Mayor",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-13T17:00:19+00:00",
+      "matches": 13
+    },
+    "koglathetitanape": {
+      "name": "Kogla, the Titan Ape",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-13T17:00:19+00:00",
+      "matches": 13
+    },
+    "ladycaleria": {
+      "name": "Lady Caleria",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-13T17:00:19+00:00",
+      "matches": 1
+    },
+    "lastminutechopping": {
+      "name": "Last-Minute Chopping",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-13T17:00:19+00:00",
+      "matches": 1
     }
   },
   "unmatched": {
