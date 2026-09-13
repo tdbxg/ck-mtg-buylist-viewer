@@ -22643,6 +22643,84 @@
       "cashUsd": 12.0,
       "checkedAt": "2026-09-12T16:22:42+00:00",
       "matches": 46
+    },
+    "aetherspellbomb": {
+      "name": "Aether Spellbomb",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-13T06:14:50+00:00",
+      "matches": 4
+    },
+    "cheatyface": {
+      "name": "Cheatyface",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-13T06:14:50+00:00",
+      "matches": 1
+    },
+    "havenofthespiritdragon": {
+      "name": "Haven of the Spirit Dragon",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-13T06:14:50+00:00",
+      "matches": 8
+    },
+    "mwonvuliacidmoss": {
+      "name": "Mwonvuli Acid-Moss",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-13T06:14:50+00:00",
+      "matches": 5
+    },
+    "entertheinfinite": {
+      "name": "Enter the Infinite",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-13T06:14:50+00:00",
+      "matches": 8
+    },
+    "shamanicrevelation": {
+      "name": "Shamanic Revelation",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-13T06:14:50+00:00",
+      "matches": 29
+    },
+    "venomeddiebrock": {
+      "name": "Venom, Eddie Brock",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-13T06:14:50+00:00",
+      "matches": 15
+    },
+    "walkingatlas": {
+      "name": "Walking Atlas",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-13T06:14:50+00:00",
+      "matches": 4
+    },
+    "meditate": {
+      "name": "Meditate",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-09-13T06:14:50+00:00",
+      "matches": 4
+    },
+    "lonelysandbar": {
+      "name": "Lonely Sandbar",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-13T06:14:50+00:00",
+      "matches": 4
+    },
+    "moltenpsyche": {
+      "name": "Molten Psyche",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-13T06:14:50+00:00",
+      "matches": 6
+    },
+    "drownindreams": {
+      "name": "Drown in Dreams",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-13T06:14:50+00:00",
+      "matches": 10
+    },
+    "drownintheloch": {
+      "name": "Drown in the Loch",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-13T06:14:50+00:00",
+      "matches": 12
     }
   },
   "unmatched": {
