@@ -22871,6 +22871,78 @@
       "cashUsd": 12.0,
       "checkedAt": "2026-09-14T06:22:39+00:00",
       "matches": 8
+    },
+    "shuriwakandaninventor": {
+      "name": "Shuri, Wakandan Inventor",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-14T18:41:32+00:00",
+      "matches": 1
+    },
+    "marchofsouls": {
+      "name": "March of Souls",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-14T18:41:32+00:00",
+      "matches": 2
+    },
+    "orochileafcaller": {
+      "name": "Orochi Leafcaller",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-14T18:41:32+00:00",
+      "matches": 2
+    },
+    "nexos": {
+      "name": "Nexos",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-14T18:41:32+00:00",
+      "matches": 3
+    },
+    "recklessembermage": {
+      "name": "Reckless Embermage",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-14T18:41:32+00:00",
+      "matches": 2
+    },
+    "rafiqofthemany": {
+      "name": "Rafiq of the Many",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-14T18:41:32+00:00",
+      "matches": 4
+    },
+    "relicoflegends": {
+      "name": "Relic of Legends",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-14T18:41:32+00:00",
+      "matches": 11
+    },
+    "riversong": {
+      "name": "River Song",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-14T18:41:32+00:00",
+      "matches": 18
+    },
+    "ruinousultimatum": {
+      "name": "Ruinous Ultimatum",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-14T18:41:32+00:00",
+      "matches": 24
+    },
+    "sakuratribeelder": {
+      "name": "Sakura-Tribe Elder",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-14T18:41:32+00:00",
+      "matches": 18
+    },
+    "sozinscomet": {
+      "name": "Sozin's Comet",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-14T18:41:32+00:00",
+      "matches": 13
+    },
+    "sphereoflaw": {
+      "name": "Sphere of Law",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-14T18:41:32+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
