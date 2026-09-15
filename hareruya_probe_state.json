@@ -22943,6 +22943,78 @@
       "cashUsd": 12.0,
       "checkedAt": "2026-09-14T18:41:32+00:00",
       "matches": 4
+    },
+    "jacecunningcastaway": {
+      "name": "Jace, Cunning Castaway",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-09-15T06:14:20+00:00",
+      "matches": 5
+    },
+    "reforgethesoul": {
+      "name": "Reforge the Soul",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-15T06:14:20+00:00",
+      "matches": 11
+    },
+    "bloodartist": {
+      "name": "Blood Artist",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-15T06:14:20+00:00",
+      "matches": 42
+    },
+    "spiritualasylum": {
+      "name": "Spiritual Asylum",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-15T06:14:20+00:00",
+      "matches": 2
+    },
+    "nerivheartofthestorm": {
+      "name": "Neriv, Heart of the Storm",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-15T06:14:20+00:00",
+      "matches": 16
+    },
+    "whipoferebos": {
+      "name": "Whip of Erebos",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-15T06:14:20+00:00",
+      "matches": 10
+    },
+    "kindreddominance": {
+      "name": "Kindred Dominance",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-15T06:14:20+00:00",
+      "matches": 18
+    },
+    "spitefulsliver": {
+      "name": "Spiteful Sliver",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-15T06:14:20+00:00",
+      "matches": 4
+    },
+    "stonetonguebasilisk": {
+      "name": "Stone-Tongue Basilisk",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-15T06:14:20+00:00",
+      "matches": 3
+    },
+    "swordsmanssteel": {
+      "name": "Swordsman's Steel",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-15T06:14:20+00:00",
+      "matches": 4
+    },
+    "sunkencitadel": {
+      "name": "Sunken Citadel",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-15T06:14:20+00:00",
+      "matches": 26
+    },
+    "taintedadversary": {
+      "name": "Tainted Adversary",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-15T06:14:20+00:00",
+      "matches": 9
     }
   },
   "unmatched": {
