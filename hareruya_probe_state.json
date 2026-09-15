@@ -23015,6 +23015,66 @@
       "cashUsd": 12.0,
       "checkedAt": "2026-09-15T06:14:20+00:00",
       "matches": 9
+    },
+    "kozilekscommand": {
+      "name": "Kozilek's Command",
+      "cashUsd": 65.0,
+      "checkedAt": "2026-09-15T17:43:33+00:00",
+      "matches": 10
+    },
+    "spelltitheenforcer": {
+      "name": "Spelltithe Enforcer",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-15T17:43:33+00:00",
+      "matches": 5
+    },
+    "thespeeddemon": {
+      "name": "The Speed Demon",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-15T17:43:33+00:00",
+      "matches": 18
+    },
+    "vadrokapexofthunder": {
+      "name": "Vadrok, Apex of Thunder",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-15T17:43:33+00:00",
+      "matches": 7
+    },
+    "treeoftales": {
+      "name": "Tree of Tales",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-15T17:43:33+00:00",
+      "matches": 9
+    },
+    "vexingpuzzlebox": {
+      "name": "Vexing Puzzlebox",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-15T17:43:33+00:00",
+      "matches": 10
+    },
+    "walktheaeons": {
+      "name": "Walk the Aeons",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-15T17:43:33+00:00",
+      "matches": 8
+    },
+    "wolverineriders": {
+      "name": "Wolverine Riders",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-15T17:43:33+00:00",
+      "matches": 4
+    },
+    "zuranorb": {
+      "name": "Zuran Orb",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-15T17:43:33+00:00",
+      "matches": 19
+    },
+    "zendikarresurgent": {
+      "name": "Zendikar Resurgent",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-15T17:43:33+00:00",
+      "matches": 9
     }
   },
   "unmatched": {
