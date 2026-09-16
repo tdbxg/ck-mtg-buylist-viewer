@@ -23075,6 +23075,66 @@
       "cashUsd": 12.0,
       "checkedAt": "2026-09-15T17:43:33+00:00",
       "matches": 9
+    },
+    "sharedanimosity": {
+      "name": "Shared Animosity",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-09-16T06:07:22+00:00",
+      "matches": 14
+    },
+    "clowncar": {
+      "name": "Clown Car",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-16T06:07:22+00:00",
+      "matches": 3
+    },
+    "cephalidfacetaker": {
+      "name": "Cephalid Facetaker",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-16T06:07:22+00:00",
+      "matches": 6
+    },
+    "hammerofnazahn": {
+      "name": "Hammer of Nazahn",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-16T06:07:22+00:00",
+      "matches": 19
+    },
+    "onewithnature": {
+      "name": "One with Nature",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-16T06:07:22+00:00",
+      "matches": 5
+    },
+    "tashashideouslaughter": {
+      "name": "Tasha's Hideous Laughter",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-16T06:07:22+00:00",
+      "matches": 18
+    },
+    "themberchaud": {
+      "name": "Themberchaud",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-16T06:07:22+00:00",
+      "matches": 3
+    },
+    "aesityrantofgyrestrait": {
+      "name": "Aesi, Tyrant of Gyre Strait",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-16T06:07:22+00:00",
+      "matches": 7
+    },
+    "anzragthequakemole": {
+      "name": "Anzrag, the Quake-Mole",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-16T06:07:22+00:00",
+      "matches": 15
+    },
+    "atarkaworldrender": {
+      "name": "Atarka, World Render",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-16T06:07:22+00:00",
+      "matches": 15
     }
   },
   "unmatched": {
