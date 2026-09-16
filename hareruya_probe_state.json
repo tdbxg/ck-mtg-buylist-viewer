@@ -23135,6 +23135,60 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-09-16T06:07:22+00:00",
       "matches": 15
+    },
+    "simicgrowthchamber": {
+      "name": "Simic Growth Chamber",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-16T17:41:22+00:00",
+      "matches": 7
+    },
+    "minesofmoria": {
+      "name": "Mines of Moria",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-16T17:41:22+00:00",
+      "matches": 8
+    },
+    "witchkingskyscourge": {
+      "name": "Witch-king, Sky Scourge",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-16T17:41:22+00:00",
+      "matches": 3
+    },
+    "boldwyrheavyweights": {
+      "name": "Boldwyr Heavyweights",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-16T17:41:22+00:00",
+      "matches": 3
+    },
+    "brassman": {
+      "name": "Brass Man",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-16T17:41:22+00:00",
+      "matches": 2
+    },
+    "calmingverse": {
+      "name": "Calming Verse",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-16T17:41:22+00:00",
+      "matches": 2
+    },
+    "castleembereth": {
+      "name": "Castle Embereth",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-16T17:41:22+00:00",
+      "matches": 4
+    },
+    "cateranslaver": {
+      "name": "Cateran Slaver",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-16T17:41:22+00:00",
+      "matches": 2
+    },
+    "chandraablaze": {
+      "name": "Chandra Ablaze",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-16T17:41:22+00:00",
+      "matches": 3
     }
   },
   "unmatched": {
