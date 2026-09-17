@@ -23189,6 +23189,60 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-09-16T17:41:22+00:00",
       "matches": 3
+    },
+    "medomaitheageless": {
+      "name": "Medomai the Ageless",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-17T06:13:39+00:00",
+      "matches": 3
+    },
+    "streamoflife": {
+      "name": "Stream of Life",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-09-17T06:13:39+00:00",
+      "matches": 10
+    },
+    "darettiingeniousiconoclast": {
+      "name": "Daretti, Ingenious Iconoclast",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-17T06:13:39+00:00",
+      "matches": 7
+    },
+    "ebondeathdracolich": {
+      "name": "Ebondeath, Dracolich",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-17T06:13:39+00:00",
+      "matches": 16
+    },
+    "questingbeast": {
+      "name": "Questing Beast",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-17T06:13:39+00:00",
+      "matches": 17
+    },
+    "unboundflourishing": {
+      "name": "Unbound Flourishing",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-17T06:13:39+00:00",
+      "matches": 8
+    },
+    "coldsteelheart": {
+      "name": "Coldsteel Heart",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-17T06:13:39+00:00",
+      "matches": 12
+    },
+    "cosmicspiderman": {
+      "name": "Cosmic Spider-Man",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-17T06:13:39+00:00",
+      "matches": 10
+    },
+    "corrupt": {
+      "name": "Corrupt",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-17T06:13:39+00:00",
+      "matches": 45
     }
   },
   "unmatched": {
