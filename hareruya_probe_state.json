@@ -23243,6 +23243,60 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-09-17T06:13:39+00:00",
       "matches": 45
+    },
+    "deepchannelmentor": {
+      "name": "Deepchannel Mentor",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-17T17:40:57+00:00",
+      "matches": 4
+    },
+    "eldritchimmunity": {
+      "name": "Eldritch Immunity",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-17T17:40:57+00:00",
+      "matches": 3
+    },
+    "gandalfthegrey": {
+      "name": "Gandalf the Grey",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-17T17:40:57+00:00",
+      "matches": 4
+    },
+    "naturesrhythm": {
+      "name": "Nature's Rhythm",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-17T17:40:57+00:00",
+      "matches": 14
+    },
+    "rampagingferocidon": {
+      "name": "Rampaging Ferocidon",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-17T17:40:57+00:00",
+      "matches": 11
+    },
+    "stardewvalley": {
+      "name": "Stardew Valley",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-17T17:40:57+00:00",
+      "matches": 8
+    },
+    "sunbillowverge": {
+      "name": "Sunbillow Verge",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-17T17:40:57+00:00",
+      "matches": 16
+    },
+    "crystalvein": {
+      "name": "Crystal Vein",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-17T17:40:57+00:00",
+      "matches": 10
+    },
+    "darkslickshores": {
+      "name": "Darkslick Shores",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-17T17:40:57+00:00",
+      "matches": 24
     }
   },
   "unmatched": {
