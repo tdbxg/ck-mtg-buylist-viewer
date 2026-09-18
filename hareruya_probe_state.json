@@ -23297,6 +23297,66 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-09-17T17:40:57+00:00",
       "matches": 24
+    },
+    "trueconviction": {
+      "name": "True Conviction",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-18T06:00:40+00:00",
+      "matches": 12
+    },
+    "sphinxofforgottenlore": {
+      "name": "Sphinx of Forgotten Lore",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-18T06:00:40+00:00",
+      "matches": 7
+    },
+    "elugetheshorelesssea": {
+      "name": "Eluge, the Shoreless Sea",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-18T06:00:40+00:00",
+      "matches": 14
+    },
+    "laboratorymaniac": {
+      "name": "Laboratory Maniac",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-18T06:00:40+00:00",
+      "matches": 15
+    },
+    "teferiwhoslowsthesunset": {
+      "name": "Teferi, Who Slows the Sunset",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-18T06:00:40+00:00",
+      "matches": 11
+    },
+    "ambitionscost": {
+      "name": "Ambition's Cost",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-18T06:00:40+00:00",
+      "matches": 3
+    },
+    "bigscore": {
+      "name": "Big Score",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-18T06:00:40+00:00",
+      "matches": 32
+    },
+    "daybreakcoronet": {
+      "name": "Daybreak Coronet",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-18T06:00:40+00:00",
+      "matches": 14
+    },
+    "deathbaron": {
+      "name": "Death Baron",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-18T06:00:40+00:00",
+      "matches": 22
+    },
+    "doomwhisperer": {
+      "name": "Doom Whisperer",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-18T06:00:40+00:00",
+      "matches": 12
     }
   },
   "unmatched": {
