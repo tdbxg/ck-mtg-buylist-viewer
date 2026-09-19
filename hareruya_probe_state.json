@@ -23411,6 +23411,66 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-09-18T17:08:40+00:00",
       "matches": 2
+    },
+    "goshintaioflifesorigin": {
+      "name": "Go-Shintai of Life's Origin",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-19T05:57:50+00:00",
+      "matches": 7
+    },
+    "inquisitionofkozilek": {
+      "name": "Inquisition of Kozilek",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-19T05:57:50+00:00",
+      "matches": 16
+    },
+    "edgeofautumn": {
+      "name": "Edge of Autumn",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-19T05:57:50+00:00",
+      "matches": 2
+    },
+    "fulminatormage": {
+      "name": "Fulminator Mage",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-19T05:57:50+00:00",
+      "matches": 13
+    },
+    "gigapede": {
+      "name": "Gigapede",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-19T05:57:50+00:00",
+      "matches": 4
+    },
+    "lifeoftheparty": {
+      "name": "Life of the Party",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-19T05:57:50+00:00",
+      "matches": 6
+    },
+    "maritlage": {
+      "name": "Marit Lage",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-19T05:57:50+00:00",
+      "matches": 11
+    },
+    "secondharvest": {
+      "name": "Second Harvest",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-19T05:57:50+00:00",
+      "matches": 19
+    },
+    "gandalfofthesecretfire": {
+      "name": "Gandalf of the Secret Fire",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-19T05:57:50+00:00",
+      "matches": 3
+    },
+    "bfmbigfurrymonster": {
+      "name": "B.F.M. (Big Furry Monster)",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-19T05:57:50+00:00",
+      "matches": 2
     }
   },
   "unmatched": {
