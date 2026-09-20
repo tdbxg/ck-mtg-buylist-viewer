@@ -23531,6 +23531,60 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-09-19T16:33:29+00:00",
       "matches": 4
+    },
+    "yawgmothdemon": {
+      "name": "Yawgmoth Demon",
+      "cashUsd": 13.2,
+      "checkedAt": "2026-09-20T06:22:26+00:00",
+      "matches": 3
+    },
+    "cidtimelessartificer": {
+      "name": "Cid, Timeless Artificer",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-20T06:22:26+00:00",
+      "matches": 60
+    },
+    "cloutofthedominus": {
+      "name": "Clout of the Dominus",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-20T06:22:26+00:00",
+      "matches": 2
+    },
+    "thelordofpain": {
+      "name": "The Lord of Pain",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-20T06:22:26+00:00",
+      "matches": 4
+    },
+    "garlandroyalkidnapper": {
+      "name": "Garland, Royal Kidnapper",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-20T06:22:26+00:00",
+      "matches": 4
+    },
+    "hornetqueen": {
+      "name": "Hornet Queen",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-20T06:22:26+00:00",
+      "matches": 6
+    },
+    "hullbreach": {
+      "name": "Hull Breach",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-20T06:22:26+00:00",
+      "matches": 14
+    },
+    "increasingvengeance": {
+      "name": "Increasing Vengeance",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-20T06:22:26+00:00",
+      "matches": 10
+    },
+    "jandorsring": {
+      "name": "Jandor's Ring",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-20T06:22:26+00:00",
+      "matches": 2
     }
   },
   "unmatched": {
