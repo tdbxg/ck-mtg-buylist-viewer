@@ -23585,6 +23585,48 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-09-20T06:22:26+00:00",
       "matches": 2
+    },
+    "grimhireling": {
+      "name": "Grim Hireling",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-20T16:51:43+00:00",
+      "matches": 9
+    },
+    "karnscionofurza": {
+      "name": "Karn, Scion of Urza",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-20T16:51:43+00:00",
+      "matches": 13
+    },
+    "kjeldoranroyalguard": {
+      "name": "Kjeldoran Royal Guard",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-20T16:51:43+00:00",
+      "matches": 3
+    },
+    "kavumonarch": {
+      "name": "Kavu Monarch",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-20T16:51:43+00:00",
+      "matches": 2
+    },
+    "knightofthewhiteorchid": {
+      "name": "Knight of the White Orchid",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-20T16:51:43+00:00",
+      "matches": 19
+    },
+    "lilianathenecromancer": {
+      "name": "Liliana, the Necromancer",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-20T16:51:43+00:00",
+      "matches": 2
+    },
+    "luxunscholargeneral": {
+      "name": "Lu Xun, Scholar General",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-20T16:51:43+00:00",
+      "matches": 2
     }
   },
   "unmatched": {
