@@ -23663,6 +23663,36 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-09-21T06:26:23+00:00",
       "matches": 4
+    },
+    "knightofthekitchensink": {
+      "name": "Knight of the Kitchen Sink",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-09-21T18:46:56+00:00",
+      "matches": 6
+    },
+    "embermagegoblin": {
+      "name": "Embermage Goblin",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-21T18:46:56+00:00",
+      "matches": 2
+    },
+    "jhoiraweatherlightcaptain": {
+      "name": "Jhoira, Weatherlight Captain",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-21T18:46:56+00:00",
+      "matches": 11
+    },
+    "mirrithecursed": {
+      "name": "Mirri the Cursed",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-21T18:46:56+00:00",
+      "matches": 3
+    },
+    "muzziovisionaryarchitect": {
+      "name": "Muzzio, Visionary Architect",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-21T18:46:56+00:00",
+      "matches": 2
     }
   },
   "unmatched": {
