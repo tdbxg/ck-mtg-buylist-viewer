@@ -23627,6 +23627,42 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-09-20T16:51:43+00:00",
       "matches": 2
+    },
+    "estinienvarlineau": {
+      "name": "Estinien Varlineau",
+      "cashUsd": 13.2,
+      "checkedAt": "2026-09-21T06:26:23+00:00",
+      "matches": 4
+    },
+    "wistfulness": {
+      "name": "Wistfulness",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-09-21T06:26:23+00:00",
+      "matches": 12
+    },
+    "chancellorofthetangle": {
+      "name": "Chancellor of the Tangle",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-21T06:26:23+00:00",
+      "matches": 4
+    },
+    "glisteningsphere": {
+      "name": "Glistening Sphere",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-21T06:26:23+00:00",
+      "matches": 4
+    },
+    "merrowreejerey": {
+      "name": "Merrow Reejerey",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-21T06:26:23+00:00",
+      "matches": 3
+    },
+    "marbletitan": {
+      "name": "Marble Titan",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-21T06:26:23+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
