@@ -23693,6 +23693,36 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-09-21T18:46:56+00:00",
       "matches": 2
+    },
+    "uneshcriosphinxsovereign": {
+      "name": "Unesh, Criosphinx Sovereign",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-09-22T06:20:07+00:00",
+      "matches": 6
+    },
+    "phyrexianvindicator": {
+      "name": "Phyrexian Vindicator",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-22T06:20:07+00:00",
+      "matches": 17
+    },
+    "goldveinhydra": {
+      "name": "Goldvein Hydra",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-22T06:20:07+00:00",
+      "matches": 16
+    },
+    "simayiweifieldmarshal": {
+      "name": "Sima Yi, Wei Field Marshal",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-22T06:20:07+00:00",
+      "matches": 2
+    },
+    "flourishingdefenses": {
+      "name": "Flourishing Defenses",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-22T06:20:07+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
