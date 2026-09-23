@@ -23753,6 +23753,36 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-09-22T17:42:03+00:00",
       "matches": 7
+    },
+    "lighthousechronologist": {
+      "name": "Lighthouse Chronologist",
+      "cashUsd": 26.0,
+      "checkedAt": "2026-09-23T06:03:05+00:00",
+      "matches": 4
+    },
+    "triumphofsaintkatherine": {
+      "name": "Triumph of Saint Katherine",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-23T06:03:05+00:00",
+      "matches": 3
+    },
+    "gideonofthetrials": {
+      "name": "Gideon of the Trials",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-23T06:03:05+00:00",
+      "matches": 7
+    },
+    "seasidehaven": {
+      "name": "Seaside Haven",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-23T06:03:05+00:00",
+      "matches": 2
+    },
+    "rekithehistoryofkamigawa": {
+      "name": "Reki, the History of Kamigawa",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-23T06:03:05+00:00",
+      "matches": 7
     }
   },
   "unmatched": {
