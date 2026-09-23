@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-23T06:01:43+00:00",
-  "cardKingdomCreatedAt": "2026-09-22 22:07:22",
-  "sealedCreatedAt": "2026-09-22 22:07:29",
+  "generatedAt": "2026-09-23T17:53:51+00:00",
+  "cardKingdomCreatedAt": "2026-09-23 10:08:48",
+  "sealedCreatedAt": "2026-09-23 10:08:54",
   "usdCny": 6.71347,
   "fxUpdatedAt": "Wed, 23 Sep 2026 00:02:31 +0000",
   "cards": 151903,
-  "sealed": 1303,
+  "sealed": 1293,
   "missingCn": 251,
   "missingImage": 2017,
   "updateMode": "github-actions-static",
@@ -13,7 +13,7 @@
   "scryfallMarketSkipped": "bulk_download_unavailable",
   "scryfallMarketMatchedUsd": 126,
   "scryfallMarketMatchedEur": 50,
-  "sealedImagesCached": 1296,
-  "sealedImagesFetched": 7,
+  "sealedImagesCached": 1290,
+  "sealedImagesFetched": 3,
   "sealedImagesMissing": 0
 }
