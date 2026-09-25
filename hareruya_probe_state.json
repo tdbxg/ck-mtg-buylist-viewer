@@ -23897,6 +23897,54 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-09-24T17:55:29+00:00",
       "matches": 4
+    },
+    "elfwarrior": {
+      "name": "Elf Warrior",
+      "cashUsd": 80.0,
+      "checkedAt": "2026-09-25T06:13:39+00:00",
+      "matches": 4
+    },
+    "xantchasleeperagent": {
+      "name": "Xantcha, Sleeper Agent",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-09-25T06:13:39+00:00",
+      "matches": 10
+    },
+    "ishaiojutaidragonspeaker": {
+      "name": "Ishai, Ojutai Dragonspeaker",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-25T06:13:39+00:00",
+      "matches": 13
+    },
+    "rowankenrith": {
+      "name": "Rowan Kenrith",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-25T06:13:39+00:00",
+      "matches": 3
+    },
+    "theninthdoctor": {
+      "name": "The Ninth Doctor",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-25T06:13:39+00:00",
+      "matches": 3
+    },
+    "branchingevolution": {
+      "name": "Branching Evolution",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-25T06:13:39+00:00",
+      "matches": 19
+    },
+    "causticbronco": {
+      "name": "Caustic Bronco",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-25T06:13:39+00:00",
+      "matches": 7
+    },
+    "delayedblastfireball": {
+      "name": "Delayed Blast Fireball",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-25T06:13:39+00:00",
+      "matches": 6
     }
   },
   "unmatched": {
