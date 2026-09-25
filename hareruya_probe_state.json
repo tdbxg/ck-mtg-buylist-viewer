@@ -23945,6 +23945,30 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-09-25T06:13:39+00:00",
       "matches": 6
+    },
+    "lifematrix": {
+      "name": "Life Matrix",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-25T18:01:12+00:00",
+      "matches": 1
+    },
+    "masterapothecary": {
+      "name": "Master Apothecary",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-25T18:01:12+00:00",
+      "matches": 2
+    },
+    "silklashspider": {
+      "name": "Silklash Spider",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-25T18:01:12+00:00",
+      "matches": 5
+    },
+    "silverbluffbridge": {
+      "name": "Silverbluff Bridge",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-25T18:01:12+00:00",
+      "matches": 6
     }
   },
   "unmatched": {
