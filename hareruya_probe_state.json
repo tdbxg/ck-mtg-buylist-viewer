@@ -23969,6 +23969,30 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-09-25T18:01:12+00:00",
       "matches": 6
+    },
+    "deathpitsofrath": {
+      "name": "Death Pits of Rath",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-26T06:13:39+00:00",
+      "matches": 5
+    },
+    "explosivegetaway": {
+      "name": "Explosive Getaway",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-26T06:13:39+00:00",
+      "matches": 3
+    },
+    "lullmagementor": {
+      "name": "Lullmage Mentor",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-26T06:13:39+00:00",
+      "matches": 4
+    },
+    "getlost": {
+      "name": "Get Lost",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-26T06:13:39+00:00",
+      "matches": 18
     }
   },
   "unmatched": {
