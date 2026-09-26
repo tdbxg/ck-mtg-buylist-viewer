@@ -23993,6 +23993,42 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-09-26T06:13:39+00:00",
       "matches": 18
+    },
+    "primalvigor": {
+      "name": "Primal Vigor",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-26T17:15:10+00:00",
+      "matches": 16
+    },
+    "skirkfiremarshal": {
+      "name": "Skirk Fire Marshal",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-26T17:15:10+00:00",
+      "matches": 3
+    },
+    "sliponthering": {
+      "name": "Slip On the Ring",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-26T17:15:10+00:00",
+      "matches": 3
+    },
+    "splendidreclamation": {
+      "name": "Splendid Reclamation",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-26T17:15:10+00:00",
+      "matches": 17
+    },
+    "spheregrid": {
+      "name": "Sphere Grid",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-26T17:15:10+00:00",
+      "matches": 8
+    },
+    "stormcarvedcoast": {
+      "name": "Stormcarved Coast",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-26T17:15:10+00:00",
+      "matches": 44
     }
   },
   "unmatched": {
