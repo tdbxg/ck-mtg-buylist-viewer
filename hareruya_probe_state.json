@@ -24071,6 +24071,48 @@
       "cashUsd": 12.0,
       "checkedAt": "2026-09-27T06:41:46+00:00",
       "matches": 13
+    },
+    "hexhaveninvigorator": {
+      "name": "Hexhaven Invigorator",
+      "cashUsd": 150.0,
+      "checkedAt": "2026-09-27T17:48:39+00:00",
+      "matches": 6
+    },
+    "aeridkonstrari": {
+      "name": "Aerid Konstrari",
+      "cashUsd": 90.0,
+      "checkedAt": "2026-09-27T17:48:39+00:00",
+      "matches": 8
+    },
+    "ingrisstingerquill": {
+      "name": "Ingris Stingerquill",
+      "cashUsd": 90.0,
+      "checkedAt": "2026-09-27T17:48:39+00:00",
+      "matches": 8
+    },
+    "gardenize": {
+      "name": "Gardenize",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-09-27T17:48:39+00:00",
+      "matches": 2
+    },
+    "consigntomemory": {
+      "name": "Consign to Memory",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-09-27T17:48:39+00:00",
+      "matches": 6
+    },
+    "frostbitepyromental": {
+      "name": "Frostbite Pyromental",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-09-27T17:48:39+00:00",
+      "matches": 1
+    },
+    "highscore": {
+      "name": "High Score",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-27T17:48:39+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
