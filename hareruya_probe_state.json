@@ -24029,6 +24029,48 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-09-26T17:15:10+00:00",
       "matches": 44
+    },
+    "brigidheroofkinsbaile": {
+      "name": "Brigid, Hero of Kinsbaile",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-27T06:41:46+00:00",
+      "matches": 3
+    },
+    "braidsconjureradept": {
+      "name": "Braids, Conjurer Adept",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-27T06:41:46+00:00",
+      "matches": 4
+    },
+    "kusarigama": {
+      "name": "Kusari-Gama",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-27T06:41:46+00:00",
+      "matches": 4
+    },
+    "missy": {
+      "name": "Missy",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-27T06:41:46+00:00",
+      "matches": 3
+    },
+    "quintoriuskand": {
+      "name": "Quintorius Kand",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-27T06:41:46+00:00",
+      "matches": 18
+    },
+    "tishanavoiceofthunder": {
+      "name": "Tishana, Voice of Thunder",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-27T06:41:46+00:00",
+      "matches": 8
+    },
+    "unquestionedauthority": {
+      "name": "Unquestioned Authority",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-27T06:41:46+00:00",
+      "matches": 13
     }
   },
   "unmatched": {
