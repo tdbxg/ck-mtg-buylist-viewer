@@ -24113,6 +24113,54 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-09-27T17:48:39+00:00",
       "matches": 4
+    },
+    "thetheoristjacebeleren": {
+      "name": "The Theorist, Jace Beleren",
+      "cashUsd": 19.8,
+      "checkedAt": "2026-09-28T07:00:28+00:00",
+      "matches": 8
+    },
+    "theechoversefulcrum": {
+      "name": "The Echoverse Fulcrum",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-09-28T07:00:28+00:00",
+      "matches": 8
+    },
+    "loyaltutor": {
+      "name": "Loyal Tutor",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-28T07:00:28+00:00",
+      "matches": 4
+    },
+    "samuttyrantofnaktamun": {
+      "name": "Samut, Tyrant of Naktamun",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-28T07:00:28+00:00",
+      "matches": 8
+    },
+    "assassinstrophy": {
+      "name": "Assassin's Trophy",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-28T07:00:28+00:00",
+      "matches": 49
+    },
+    "cullingritual": {
+      "name": "Culling Ritual",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-28T07:00:28+00:00",
+      "matches": 26
+    },
+    "endlessswarm": {
+      "name": "Endless Swarm",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-28T07:00:28+00:00",
+      "matches": 2
+    },
+    "flickeringhound": {
+      "name": "Flickering Hound",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-28T07:00:28+00:00",
+      "matches": 8
     }
   },
   "unmatched": {
