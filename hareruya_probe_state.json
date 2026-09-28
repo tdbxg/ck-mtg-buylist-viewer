@@ -24191,6 +24191,36 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-09-28T15:36:32+00:00",
       "matches": 30
+    },
+    "kwiavigorbloom": {
+      "name": "Kwia Vigorbloom",
+      "cashUsd": 180.0,
+      "checkedAt": "2026-09-28T20:11:12+00:00",
+      "matches": 8
+    },
+    "emrakultheexigentdoom": {
+      "name": "Emrakul, the Exigent Doom",
+      "cashUsd": 200.0,
+      "checkedAt": "2026-09-28T20:11:12+00:00",
+      "matches": 4
+    },
+    "enlightenedconfidant": {
+      "name": "Enlightened Confidant",
+      "cashUsd": 90.0,
+      "checkedAt": "2026-09-28T20:11:12+00:00",
+      "matches": 6
+    },
+    "darklightphoenix": {
+      "name": "Darklight Phoenix",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-28T20:11:12+00:00",
+      "matches": 6
+    },
+    "shabraztheskyshark": {
+      "name": "Shabraz, the Skyshark",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-28T20:11:12+00:00",
+      "matches": 5
     }
   },
   "unmatched": {
