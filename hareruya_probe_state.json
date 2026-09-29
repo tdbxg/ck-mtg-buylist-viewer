@@ -24257,6 +24257,42 @@
       "cashUsd": 12.0,
       "checkedAt": "2026-09-29T07:01:01+00:00",
       "matches": 6
+    },
+    "ceruleanwisps": {
+      "name": "Cerulean Wisps",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-09-29T18:42:48+00:00",
+      "matches": 4
+    },
+    "wastes": {
+      "name": "Wastes",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-09-29T18:42:48+00:00",
+      "matches": 60
+    },
+    "magusofthecoffers": {
+      "name": "Magus of the Coffers",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-29T18:42:48+00:00",
+      "matches": 5
+    },
+    "angel": {
+      "name": "Angel",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-29T18:42:48+00:00",
+      "matches": 60
+    },
+    "stoneseederhierophant": {
+      "name": "Stone-Seeder Hierophant",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-29T18:42:48+00:00",
+      "matches": 2
+    },
+    "teyogeometrictactician": {
+      "name": "Teyo, Geometric Tactician",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-29T18:42:48+00:00",
+      "matches": 2
     }
   },
   "unmatched": {
