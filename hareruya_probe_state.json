@@ -24359,6 +24359,48 @@
       "cashUsd": 12.0,
       "checkedAt": "2026-09-30T06:49:29+00:00",
       "matches": 5
+    },
+    "seasonedcryomancer": {
+      "name": "Seasoned Cryomancer",
+      "cashUsd": 90.0,
+      "checkedAt": "2026-09-30T18:31:11+00:00",
+      "matches": 6
+    },
+    "venomsliver": {
+      "name": "Venom Sliver",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-09-30T18:31:11+00:00",
+      "matches": 6
+    },
+    "archangeloftithes": {
+      "name": "Archangel of Tithes",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-30T18:31:11+00:00",
+      "matches": 16
+    },
+    "bottlegnomes": {
+      "name": "Bottle Gnomes",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-30T18:31:11+00:00",
+      "matches": 3
+    },
+    "lilianawakerofthedead": {
+      "name": "Liliana, Waker of the Dead",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-30T18:31:11+00:00",
+      "matches": 15
+    },
+    "thethirteenthdoctor": {
+      "name": "The Thirteenth Doctor",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-30T18:31:11+00:00",
+      "matches": 8
+    },
+    "thewindcrystal": {
+      "name": "The Wind Crystal",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-09-30T18:31:11+00:00",
+      "matches": 10
     }
   },
   "unmatched": {
