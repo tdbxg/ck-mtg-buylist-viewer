@@ -24293,6 +24293,72 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-09-29T18:42:48+00:00",
       "matches": 2
+    },
+    "codieravenouscodex": {
+      "name": "Codie, Ravenous Codex",
+      "cashUsd": 78.0,
+      "checkedAt": "2026-09-30T06:49:29+00:00",
+      "matches": 2
+    },
+    "riseofthedeathbringer": {
+      "name": "Rise of the Deathbringer",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-09-30T06:49:29+00:00",
+      "matches": 1
+    },
+    "uldarostheorix": {
+      "name": "Uldaros Theorix",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-09-30T06:49:29+00:00",
+      "matches": 10
+    },
+    "avacynangelofhorror": {
+      "name": "Avacyn, Angel of Horror",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-09-30T06:49:29+00:00",
+      "matches": 2
+    },
+    "vampiriclink": {
+      "name": "Vampiric Link",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-09-30T06:49:29+00:00",
+      "matches": 5
+    },
+    "chakramretriever": {
+      "name": "Chakram Retriever",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-30T06:49:29+00:00",
+      "matches": 6
+    },
+    "chivalricalliance": {
+      "name": "Chivalric Alliance",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-30T06:49:29+00:00",
+      "matches": 4
+    },
+    "dunebroodnephilim": {
+      "name": "Dune-Brood Nephilim",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-30T06:49:29+00:00",
+      "matches": 2
+    },
+    "frankiepeanuts": {
+      "name": "Frankie Peanuts",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-30T06:49:29+00:00",
+      "matches": 1
+    },
+    "metropolisreformer": {
+      "name": "Metropolis Reformer",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-30T06:49:29+00:00",
+      "matches": 12
+    },
+    "mysticspeculation": {
+      "name": "Mystic Speculation",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-09-30T06:49:29+00:00",
+      "matches": 5
     }
   },
   "unmatched": {
