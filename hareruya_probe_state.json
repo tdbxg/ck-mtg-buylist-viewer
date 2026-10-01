@@ -24461,6 +24461,54 @@
       "cashUsd": 12.0,
       "checkedAt": "2026-10-01T07:16:03+00:00",
       "matches": 9
+    },
+    "enduringrenewal": {
+      "name": "Enduring Renewal",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-01T18:57:04+00:00",
+      "matches": 7
+    },
+    "corruptcourtofficial": {
+      "name": "Corrupt Court Official",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-01T18:57:04+00:00",
+      "matches": 2
+    },
+    "machinistsarsenal": {
+      "name": "Machinist's Arsenal",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-01T18:57:04+00:00",
+      "matches": 4
+    },
+    "silvermyr": {
+      "name": "Silver Myr",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-01T18:57:04+00:00",
+      "matches": 5
+    },
+    "temptingcontract": {
+      "name": "Tempting Contract",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-01T18:57:04+00:00",
+      "matches": 4
+    },
+    "thoughtsofruin": {
+      "name": "Thoughts of Ruin",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-01T18:57:04+00:00",
+      "matches": 4
+    },
+    "thranlens": {
+      "name": "Thran Lens",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-01T18:57:04+00:00",
+      "matches": 2
+    },
+    "timesifter": {
+      "name": "Timesifter",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-01T18:57:04+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
