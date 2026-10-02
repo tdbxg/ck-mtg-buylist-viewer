@@ -24569,6 +24569,54 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-10-02T07:04:53+00:00",
       "matches": 2
+    },
+    "windingconstrictor": {
+      "name": "Winding Constrictor",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-02T18:29:29+00:00",
+      "matches": 8
+    },
+    "woodlandcemetery": {
+      "name": "Woodland Cemetery",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-02T18:29:29+00:00",
+      "matches": 31
+    },
+    "wintermoonmesa": {
+      "name": "Wintermoon Mesa",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-02T18:29:29+00:00",
+      "matches": 2
+    },
+    "worldwalkerhelm": {
+      "name": "Worldwalker Helm",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-02T18:29:29+00:00",
+      "matches": 16
+    },
+    "rainofgore": {
+      "name": "Rain of Gore",
+      "cashUsd": 11.2,
+      "checkedAt": "2026-10-02T18:29:29+00:00",
+      "matches": 4
+    },
+    "tajurupreserver": {
+      "name": "Tajuru Preserver",
+      "cashUsd": 11.2,
+      "checkedAt": "2026-10-02T18:29:29+00:00",
+      "matches": 3
+    },
+    "archivistofoghma": {
+      "name": "Archivist of Oghma",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-02T18:29:29+00:00",
+      "matches": 12
+    },
+    "avatarrokufirebender": {
+      "name": "Avatar Roku, Firebender",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-02T18:29:29+00:00",
+      "matches": 8
     }
   },
   "unmatched": {
