@@ -24509,6 +24509,66 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-10-01T18:57:04+00:00",
       "matches": 4
+    },
+    "ajaniresolute": {
+      "name": "Ajani Resolute",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-10-02T07:04:53+00:00",
+      "matches": 8
+    },
+    "tradesecrets": {
+      "name": "Trade Secrets",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-10-02T07:04:53+00:00",
+      "matches": 2
+    },
+    "cloudplanetschampion": {
+      "name": "Cloud, Planet's Champion",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-02T07:04:53+00:00",
+      "matches": 6
+    },
+    "tyvarjubilantbrawler": {
+      "name": "Tyvar, Jubilant Brawler",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-02T07:04:53+00:00",
+      "matches": 16
+    },
+    "undergrowthstadium": {
+      "name": "Undergrowth Stadium",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-02T07:04:53+00:00",
+      "matches": 22
+    },
+    "urabraskhereticpraetor": {
+      "name": "Urabrask, Heretic Praetor",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-02T07:04:53+00:00",
+      "matches": 20
+    },
+    "uyosilentprophet": {
+      "name": "Uyo, Silent Prophet",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-02T07:04:53+00:00",
+      "matches": 2
+    },
+    "visceraseer": {
+      "name": "Viscera Seer",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-02T07:04:53+00:00",
+      "matches": 8
+    },
+    "veinripper": {
+      "name": "Vein Ripper",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-02T07:04:53+00:00",
+      "matches": 15
+    },
+    "wakeofdestruction": {
+      "name": "Wake of Destruction",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-02T07:04:53+00:00",
+      "matches": 2
     }
   },
   "unmatched": {
