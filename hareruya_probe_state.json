@@ -24617,6 +24617,60 @@
       "cashUsd": 11.0,
       "checkedAt": "2026-10-02T18:29:29+00:00",
       "matches": 8
+    },
+    "chandrachillofcompliance": {
+      "name": "Chandra, Chill of Compliance",
+      "cashUsd": 16.8,
+      "checkedAt": "2026-10-03T06:38:43+00:00",
+      "matches": 8
+    },
+    "riddlesinthedark": {
+      "name": "Riddles in the Dark",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-03T06:38:43+00:00",
+      "matches": 2
+    },
+    "vaevictisasmadithedire": {
+      "name": "Vaevictis Asmadi, the Dire",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-03T06:38:43+00:00",
+      "matches": 5
+    },
+    "zodiacrabbit": {
+      "name": "Zodiac Rabbit",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-03T06:38:43+00:00",
+      "matches": 2
+    },
+    "acornharvest": {
+      "name": "Acorn Harvest",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-03T06:38:43+00:00",
+      "matches": 2
+    },
+    "borisdevilboon": {
+      "name": "Boris Devilboon",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-03T06:38:43+00:00",
+      "matches": 1
+    },
+    "helixpinnacle": {
+      "name": "Helix Pinnacle",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-03T06:38:43+00:00",
+      "matches": 11
+    },
+    "moraugfuryofakoum": {
+      "name": "Moraug, Fury of Akoum",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-03T06:38:43+00:00",
+      "matches": 16
+    },
+    "prosshskyraiderofkher": {
+      "name": "Prossh, Skyraider of Kher",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-03T06:38:43+00:00",
+      "matches": 5
     }
   },
   "unmatched": {
