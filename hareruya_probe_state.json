@@ -24719,6 +24719,36 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-10-04T07:01:30+00:00",
       "matches": 6
+    },
+    "gostadirk": {
+      "name": "Gosta Dirk",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-04T17:39:02+00:00",
+      "matches": 1
+    },
+    "harmonicprodigy": {
+      "name": "Harmonic Prodigy",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-04T17:39:02+00:00",
+      "matches": 12
+    },
+    "infiniteauthority": {
+      "name": "Infinite Authority",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-04T17:39:02+00:00",
+      "matches": 1
+    },
+    "kessdissidentmage": {
+      "name": "Kess, Dissident Mage",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-04T17:39:02+00:00",
+      "matches": 8
+    },
+    "lastchance": {
+      "name": "Last Chance",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-04T17:39:02+00:00",
+      "matches": 16
     }
   },
   "unmatched": {
