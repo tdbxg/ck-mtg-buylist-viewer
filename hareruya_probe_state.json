@@ -24749,6 +24749,42 @@
       "cashUsd": 11.0,
       "checkedAt": "2026-10-04T17:39:02+00:00",
       "matches": 16
+    },
+    "mesmericfiend": {
+      "name": "Mesmeric Fiend",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-10-05T07:11:03+00:00",
+      "matches": 11
+    },
+    "mirrorgallery": {
+      "name": "Mirror Gallery",
+      "cashUsd": 13.2,
+      "checkedAt": "2026-10-05T07:11:03+00:00",
+      "matches": 5
+    },
+    "powerleech": {
+      "name": "Powerleech",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-10-05T07:11:03+00:00",
+      "matches": 1
+    },
+    "gaiusvanbaelsar": {
+      "name": "Gaius van Baelsar",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-05T07:11:03+00:00",
+      "matches": 2
+    },
+    "utopiasprawl": {
+      "name": "Utopia Sprawl",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-05T07:11:03+00:00",
+      "matches": 32
+    },
+    "nissastewardofelements": {
+      "name": "Nissa, Steward of Elements",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-05T07:11:03+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
