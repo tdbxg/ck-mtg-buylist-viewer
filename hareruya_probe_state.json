@@ -24785,6 +24785,48 @@
       "cashUsd": 11.5,
       "checkedAt": "2026-10-05T07:11:03+00:00",
       "matches": 4
+    },
+    "benalishhero": {
+      "name": "Benalish Hero",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-10-06T07:39:58+00:00",
+      "matches": 7
+    },
+    "davrosdalekcreator": {
+      "name": "Davros, Dalek Creator",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-06T07:39:58+00:00",
+      "matches": 7
+    },
+    "controlofthecourt": {
+      "name": "Control of the Court",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-06T07:39:58+00:00",
+      "matches": 3
+    },
+    "snowcoveredmountain": {
+      "name": "Snow-Covered Mountain",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-06T07:39:58+00:00",
+      "matches": 12
+    },
+    "heliodsintervention": {
+      "name": "Heliod's Intervention",
+      "cashUsd": 11.2,
+      "checkedAt": "2026-10-06T07:39:58+00:00",
+      "matches": 12
+    },
+    "bird": {
+      "name": "Bird",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-06T07:39:58+00:00",
+      "matches": 59
+    },
+    "cataclysm": {
+      "name": "Cataclysm",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-06T07:39:58+00:00",
+      "matches": 14
     }
   },
   "unmatched": {
