@@ -24863,6 +24863,48 @@
       "cashUsd": 11.0,
       "checkedAt": "2026-10-06T18:58:58+00:00",
       "matches": 10
+    },
+    "disintegrate": {
+      "name": "Disintegrate",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-10-07T07:20:10+00:00",
+      "matches": 9
+    },
+    "aminatouthefateshifter": {
+      "name": "Aminatou, the Fateshifter",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-10-07T07:20:10+00:00",
+      "matches": 11
+    },
+    "commodoreguff": {
+      "name": "Commodore Guff",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-10-07T07:20:10+00:00",
+      "matches": 2
+    },
+    "greensleevesmarosorcerer": {
+      "name": "Greensleeves, Maro-Sorcerer",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-07T07:20:10+00:00",
+      "matches": 11
+    },
+    "propaganda": {
+      "name": "Propaganda",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-07T07:20:10+00:00",
+      "matches": 43
+    },
+    "rubiniasoulsinger": {
+      "name": "Rubinia Soulsinger",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-07T07:20:10+00:00",
+      "matches": 2
+    },
+    "shireterrace": {
+      "name": "Shire Terrace",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-07T07:20:10+00:00",
+      "matches": 3
     }
   },
   "unmatched": {
