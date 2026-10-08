@@ -24947,6 +24947,54 @@
       "cashUsd": 10.8,
       "checkedAt": "2026-10-07T19:25:49+00:00",
       "matches": 1
+    },
+    "dampingsphere": {
+      "name": "Damping Sphere",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-08T07:29:42+00:00",
+      "matches": 11
+    },
+    "isperiatheinscrutable": {
+      "name": "Isperia the Inscrutable",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-08T07:29:42+00:00",
+      "matches": 2
+    },
+    "obscuringhaze": {
+      "name": "Obscuring Haze",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-08T07:29:42+00:00",
+      "matches": 13
+    },
+    "manaweb": {
+      "name": "Mana Web",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-08T07:29:42+00:00",
+      "matches": 2
+    },
+    "ayulaqueenamongbears": {
+      "name": "Ayula, Queen Among Bears",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-08T07:29:42+00:00",
+      "matches": 14
+    },
+    "blastzone": {
+      "name": "Blast Zone",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-08T07:29:42+00:00",
+      "matches": 23
+    },
+    "ayumithelastvisitor": {
+      "name": "Ayumi, the Last Visitor",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-08T07:29:42+00:00",
+      "matches": 2
+    },
+    "cloudshreddersliver": {
+      "name": "Cloudshredder Sliver",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-08T07:29:42+00:00",
+      "matches": 12
     }
   },
   "unmatched": {
