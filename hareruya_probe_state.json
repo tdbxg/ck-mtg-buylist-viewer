@@ -25043,6 +25043,60 @@
       "cashUsd": 10.8,
       "checkedAt": "2026-10-08T19:19:08+00:00",
       "matches": 6
+    },
+    "primalbeyond": {
+      "name": "Primal Beyond",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-10-09T07:27:26+00:00",
+      "matches": 4
+    },
+    "vampiresocialite": {
+      "name": "Vampire Socialite",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-10-09T07:27:26+00:00",
+      "matches": 2
+    },
+    "shardofthenightbringer": {
+      "name": "Shard of the Nightbringer",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-09T07:27:26+00:00",
+      "matches": 3
+    },
+    "soulsattendant": {
+      "name": "Soul's Attendant",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-09T07:27:26+00:00",
+      "matches": 9
+    },
+    "hystrodon": {
+      "name": "Hystrodon",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-09T07:27:26+00:00",
+      "matches": 2
+    },
+    "almscollector": {
+      "name": "Alms Collector",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-09T07:27:26+00:00",
+      "matches": 10
+    },
+    "mirkwoodbats": {
+      "name": "Mirkwood Bats",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-09T07:27:26+00:00",
+      "matches": 3
+    },
+    "deathpitoffering": {
+      "name": "Death Pit Offering",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-09T07:27:26+00:00",
+      "matches": 4
+    },
+    "handofthepraetors": {
+      "name": "Hand of the Praetors",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-09T07:27:26+00:00",
+      "matches": 3
     }
   },
   "unmatched": {
