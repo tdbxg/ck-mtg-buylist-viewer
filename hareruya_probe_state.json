@@ -25187,6 +25187,48 @@
       "cashUsd": 10.8,
       "checkedAt": "2026-10-10T07:14:01+00:00",
       "matches": 4
+    },
+    "stormcrow": {
+      "name": "Storm Crow",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-10T17:55:14+00:00",
+      "matches": 4
+    },
+    "swordofsinewandsteel": {
+      "name": "Sword of Sinew and Steel",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-10T17:55:14+00:00",
+      "matches": 12
+    },
+    "theeleventhdoctor": {
+      "name": "The Eleventh Doctor",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-10T17:55:14+00:00",
+      "matches": 6
+    },
+    "thundermawhellkite": {
+      "name": "Thundermaw Hellkite",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-10T17:55:14+00:00",
+      "matches": 10
+    },
+    "thraximundar": {
+      "name": "Thraximundar",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-10T17:55:14+00:00",
+      "matches": 4
+    },
+    "tinybonesthepickpocket": {
+      "name": "Tinybones, the Pickpocket",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-10T17:55:14+00:00",
+      "matches": 14
+    },
+    "trazyntheinfinite": {
+      "name": "Trazyn the Infinite",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-10T17:55:14+00:00",
+      "matches": 3
     }
   },
   "unmatched": {
