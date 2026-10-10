@@ -25145,6 +25145,48 @@
       "cashUsd": 10.8,
       "checkedAt": "2026-10-09T18:52:06+00:00",
       "matches": 1
+    },
+    "bridgefrombelow": {
+      "name": "Bridge from Below",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-10-10T07:14:01+00:00",
+      "matches": 14
+    },
+    "tyrranaxrex": {
+      "name": "Tyrranax Rex",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-10T07:14:01+00:00",
+      "matches": 17
+    },
+    "lilianathefaultless": {
+      "name": "Liliana the Faultless",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-10T07:14:01+00:00",
+      "matches": 12
+    },
+    "avaricetotem": {
+      "name": "Avarice Totem",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-10T07:14:01+00:00",
+      "matches": 2
+    },
+    "sakuratribescout": {
+      "name": "Sakura-Tribe Scout",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-10T07:14:01+00:00",
+      "matches": 5
+    },
+    "snakeumbra": {
+      "name": "Snake Umbra",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-10T07:14:01+00:00",
+      "matches": 5
+    },
+    "spidermanwebspinner": {
+      "name": "Spider-Man, Web-Spinner",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-10T07:14:01+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
