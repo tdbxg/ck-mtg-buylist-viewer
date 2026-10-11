@@ -25229,6 +25229,42 @@
       "cashUsd": 10.8,
       "checkedAt": "2026-10-10T17:55:14+00:00",
       "matches": 3
+    },
+    "gorogoroandsatoru": {
+      "name": "Goro-Goro and Satoru",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-11T07:17:31+00:00",
+      "matches": 6
+    },
+    "conjurersbauble": {
+      "name": "Conjurer's Bauble",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-11T07:17:31+00:00",
+      "matches": 4
+    },
+    "jeganthathewellspring": {
+      "name": "Jegantha, the Wellspring",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-11T07:17:31+00:00",
+      "matches": 7
+    },
+    "victorychimes": {
+      "name": "Victory Chimes",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-11T07:17:31+00:00",
+      "matches": 6
+    },
+    "waterspoutelemental": {
+      "name": "Waterspout Elemental",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-11T07:17:31+00:00",
+      "matches": 2
+    },
+    "worldbottlingkit": {
+      "name": "World-Bottling Kit",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-11T07:17:31+00:00",
+      "matches": 1
     }
   },
   "unmatched": {
