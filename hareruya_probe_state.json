@@ -25265,6 +25265,36 @@
       "cashUsd": 10.8,
       "checkedAt": "2026-10-11T07:17:31+00:00",
       "matches": 1
+    },
+    "overgrownfarmland": {
+      "name": "Overgrown Farmland",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-11T18:08:35+00:00",
+      "matches": 37
+    },
+    "wrexialtherisendeep": {
+      "name": "Wrexial, the Risen Deep",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-11T18:08:35+00:00",
+      "matches": 7
+    },
+    "yavimayaenchantress": {
+      "name": "Yavimaya Enchantress",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-11T18:08:35+00:00",
+      "matches": 6
+    },
+    "goblinsleighride": {
+      "name": "Goblin Sleigh Ride",
+      "cashUsd": 10.5,
+      "checkedAt": "2026-10-11T18:08:35+00:00",
+      "matches": 1
+    },
+    "greenwardenofmurasa": {
+      "name": "Greenwarden of Murasa",
+      "cashUsd": 10.5,
+      "checkedAt": "2026-10-11T18:08:35+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
