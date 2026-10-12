@@ -25295,6 +25295,54 @@
       "cashUsd": 10.5,
       "checkedAt": "2026-10-11T18:08:35+00:00",
       "matches": 4
+    },
+    "coastalpiracy": {
+      "name": "Coastal Piracy",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-10-12T07:26:46+00:00",
+      "matches": 6
+    },
+    "masshysteria": {
+      "name": "Mass Hysteria",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-12T07:26:46+00:00",
+      "matches": 12
+    },
+    "deathlessangel": {
+      "name": "Deathless Angel",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-12T07:26:46+00:00",
+      "matches": 4
+    },
+    "ripplesofundeath": {
+      "name": "Ripples of Undeath",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-12T07:26:46+00:00",
+      "matches": 10
+    },
+    "kykarzephyrawakener": {
+      "name": "Kykar, Zephyr Awakener",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-12T07:26:46+00:00",
+      "matches": 7
+    },
+    "traversetheoutlands": {
+      "name": "Traverse the Outlands",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-12T07:26:46+00:00",
+      "matches": 9
+    },
+    "phlagetitanoffiresfury": {
+      "name": "Phlage, Titan of Fire's Fury",
+      "cashUsd": 10.5,
+      "checkedAt": "2026-10-12T07:26:46+00:00",
+      "matches": 12
+    },
+    "sharedtriumph": {
+      "name": "Shared Triumph",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-12T07:26:46+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
