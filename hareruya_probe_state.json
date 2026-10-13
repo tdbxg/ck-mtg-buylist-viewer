@@ -25391,6 +25391,54 @@
       "cashUsd": 10.5,
       "checkedAt": "2026-10-12T21:48:18+00:00",
       "matches": 4
+    },
+    "cryptsliver": {
+      "name": "Crypt Sliver",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-13T07:47:41+00:00",
+      "matches": 2
+    },
+    "goblinpyromancer": {
+      "name": "Goblin Pyromancer",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-13T07:47:41+00:00",
+      "matches": 2
+    },
+    "vronosmaskedinquisitor": {
+      "name": "Vronos, Masked Inquisitor",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-13T07:47:41+00:00",
+      "matches": 2
+    },
+    "tivitsellerofsecrets": {
+      "name": "Tivit, Seller of Secrets",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-13T07:47:41+00:00",
+      "matches": 8
+    },
+    "bloodmoney": {
+      "name": "Blood Money",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-13T07:47:41+00:00",
+      "matches": 11
+    },
+    "coristeelcutter": {
+      "name": "Cori-Steel Cutter",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-13T07:47:41+00:00",
+      "matches": 14
+    },
+    "generaltazri": {
+      "name": "General Tazri",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-13T07:47:41+00:00",
+      "matches": 4
+    },
+    "judgmentofalexander": {
+      "name": "Judgment of Alexander",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-13T07:47:41+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
