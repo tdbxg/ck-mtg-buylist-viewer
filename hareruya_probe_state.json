@@ -25439,6 +25439,48 @@
       "cashUsd": 10.25,
       "checkedAt": "2026-10-13T07:47:41+00:00",
       "matches": 4
+    },
+    "aangairbendingmaster": {
+      "name": "Aang, Airbending Master",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-14T06:14:21+00:00",
+      "matches": 8
+    },
+    "azoriussignet": {
+      "name": "Azorius Signet",
+      "cashUsd": 10.5,
+      "checkedAt": "2026-10-14T06:14:21+00:00",
+      "matches": 37
+    },
+    "negate": {
+      "name": "Negate",
+      "cashUsd": 10.5,
+      "checkedAt": "2026-10-14T06:14:21+00:00",
+      "matches": 27
+    },
+    "torturedexistence": {
+      "name": "Tortured Existence",
+      "cashUsd": 10.5,
+      "checkedAt": "2026-10-14T06:14:21+00:00",
+      "matches": 5
+    },
+    "gelatinouscube": {
+      "name": "Gelatinous Cube",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-14T06:14:21+00:00",
+      "matches": 2
+    },
+    "kiorabehemothbeckoner": {
+      "name": "Kiora, Behemoth Beckoner",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-14T06:14:21+00:00",
+      "matches": 11
+    },
+    "minotaur": {
+      "name": "Minotaur",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-14T06:14:21+00:00",
+      "matches": 25
     }
   },
   "unmatched": {
