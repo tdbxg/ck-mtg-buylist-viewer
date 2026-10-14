@@ -25481,6 +25481,48 @@
       "cashUsd": 10.25,
       "checkedAt": "2026-10-14T06:14:21+00:00",
       "matches": 25
+    },
+    "peachgardenoath": {
+      "name": "Peach Garden Oath",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-14T18:04:22+00:00",
+      "matches": 4
+    },
+    "personaltutor": {
+      "name": "Personal Tutor",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-14T18:04:22+00:00",
+      "matches": 14
+    },
+    "regalcaracal": {
+      "name": "Regal Caracal",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-14T18:04:22+00:00",
+      "matches": 9
+    },
+    "sharktyphoon": {
+      "name": "Shark Typhoon",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-14T18:04:22+00:00",
+      "matches": 18
+    },
+    "silverbackelder": {
+      "name": "Silverback Elder",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-14T18:04:22+00:00",
+      "matches": 11
+    },
+    "suntitan": {
+      "name": "Sun Titan",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-14T18:04:22+00:00",
+      "matches": 37
+    },
+    "tamiyofieldresearcher": {
+      "name": "Tamiyo, Field Researcher",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-14T18:04:22+00:00",
+      "matches": 14
     }
   },
   "unmatched": {
