@@ -25523,6 +25523,48 @@
       "cashUsd": 10.25,
       "checkedAt": "2026-10-14T18:04:22+00:00",
       "matches": 14
+    },
+    "angelofdestiny": {
+      "name": "Angel of Destiny",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-15T05:58:45+00:00",
+      "matches": 15
+    },
+    "voiceofresurgence": {
+      "name": "Voice of Resurgence",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-15T05:58:45+00:00",
+      "matches": 15
+    },
+    "prideoftheclouds": {
+      "name": "Pride of the Clouds",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-15T05:58:45+00:00",
+      "matches": 6
+    },
+    "tauntfromtherampart": {
+      "name": "Taunt from the Rampart",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-15T05:58:45+00:00",
+      "matches": 8
+    },
+    "bohnbeguilingballadeer": {
+      "name": "Bohn, Beguiling Balladeer",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-15T05:58:45+00:00",
+      "matches": 1
+    },
+    "cursedtotem": {
+      "name": "Cursed Totem",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-15T05:58:45+00:00",
+      "matches": 11
+    },
+    "darkpetition": {
+      "name": "Dark Petition",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-15T05:58:45+00:00",
+      "matches": 15
     }
   },
   "unmatched": {
