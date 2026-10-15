@@ -25601,6 +25601,42 @@
       "cashUsd": 10.2,
       "checkedAt": "2026-10-15T12:56:40+00:00",
       "matches": 44
+    },
+    "diplomaticescort": {
+      "name": "Diplomatic Escort",
+      "cashUsd": 10.2,
+      "checkedAt": "2026-10-15T17:50:35+00:00",
+      "matches": 2
+    },
+    "elendasaintofdusk": {
+      "name": "Elenda, Saint of Dusk",
+      "cashUsd": 10.2,
+      "checkedAt": "2026-10-15T17:50:35+00:00",
+      "matches": 4
+    },
+    "experimentkraj": {
+      "name": "Experiment Kraj",
+      "cashUsd": 10.2,
+      "checkedAt": "2026-10-15T17:50:35+00:00",
+      "matches": 3
+    },
+    "fangfearlesslcie": {
+      "name": "Fang, Fearless l'Cie",
+      "cashUsd": 10.2,
+      "checkedAt": "2026-10-15T17:50:35+00:00",
+      "matches": 3
+    },
+    "fierytemper": {
+      "name": "Fiery Temper",
+      "cashUsd": 10.2,
+      "checkedAt": "2026-10-15T17:50:35+00:00",
+      "matches": 7
+    },
+    "foster": {
+      "name": "Foster",
+      "cashUsd": 10.2,
+      "checkedAt": "2026-10-15T17:50:35+00:00",
+      "matches": 5
     }
   },
   "unmatched": {
