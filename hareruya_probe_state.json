@@ -25565,6 +25565,42 @@
       "cashUsd": 10.25,
       "checkedAt": "2026-10-15T05:58:45+00:00",
       "matches": 15
+    },
+    "ardyntheusurper": {
+      "name": "Ardyn, the Usurper",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-15T12:56:40+00:00",
+      "matches": 19
+    },
+    "rogueclass": {
+      "name": "Rogue Class",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-15T12:56:40+00:00",
+      "matches": 6
+    },
+    "yahenniundyingpartisan": {
+      "name": "Yahenni, Undying Partisan",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-15T12:56:40+00:00",
+      "matches": 9
+    },
+    "ambassadorlaquatus": {
+      "name": "Ambassador Laquatus",
+      "cashUsd": 10.2,
+      "checkedAt": "2026-10-15T12:56:40+00:00",
+      "matches": 5
+    },
+    "assemblyhall": {
+      "name": "Assembly Hall",
+      "cashUsd": 10.2,
+      "checkedAt": "2026-10-15T12:56:40+00:00",
+      "matches": 2
+    },
+    "desertedbeach": {
+      "name": "Deserted Beach",
+      "cashUsd": 10.2,
+      "checkedAt": "2026-10-15T12:56:40+00:00",
+      "matches": 44
     }
   },
   "unmatched": {
