@@ -25637,6 +25637,48 @@
       "cashUsd": 10.2,
       "checkedAt": "2026-10-15T17:50:35+00:00",
       "matches": 5
+    },
+    "diminishingreturns": {
+      "name": "Diminishing Returns",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-16T05:56:29+00:00",
+      "matches": 7
+    },
+    "zodiacrooster": {
+      "name": "Zodiac Rooster",
+      "cashUsd": 10.5,
+      "checkedAt": "2026-10-16T05:56:29+00:00",
+      "matches": 2
+    },
+    "gisathehellraiser": {
+      "name": "Gisa, the Hellraiser",
+      "cashUsd": 10.2,
+      "checkedAt": "2026-10-16T05:56:29+00:00",
+      "matches": 14
+    },
+    "glacialwall": {
+      "name": "Glacial Wall",
+      "cashUsd": 10.2,
+      "checkedAt": "2026-10-16T05:56:29+00:00",
+      "matches": 2
+    },
+    "inameasone": {
+      "name": "Iname as One",
+      "cashUsd": 10.2,
+      "checkedAt": "2026-10-16T05:56:29+00:00",
+      "matches": 4
+    },
+    "jacetheperfectedmind": {
+      "name": "Jace, the Perfected Mind",
+      "cashUsd": 10.2,
+      "checkedAt": "2026-10-16T05:56:29+00:00",
+      "matches": 20
+    },
+    "lurkingskirge": {
+      "name": "Lurking Skirge",
+      "cashUsd": 10.2,
+      "checkedAt": "2026-10-16T05:56:29+00:00",
+      "matches": 2
     }
   },
   "unmatched": {
