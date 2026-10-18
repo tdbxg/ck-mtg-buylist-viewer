@@ -25769,6 +25769,36 @@
       "cashUsd": 10.25,
       "checkedAt": "2026-10-17T16:29:26+00:00",
       "matches": 8
+    },
+    "hyldaoftheicycrown": {
+      "name": "Hylda of the Icy Crown",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-10-18T06:00:31+00:00",
+      "matches": 10
+    },
+    "balefireliege": {
+      "name": "Balefire Liege",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-18T06:00:31+00:00",
+      "matches": 7
+    },
+    "ulvenwaldtracker": {
+      "name": "Ulvenwald Tracker",
+      "cashUsd": 10.5,
+      "checkedAt": "2026-10-18T06:00:31+00:00",
+      "matches": 10
+    },
+    "wrathfulreddragon": {
+      "name": "Wrathful Red Dragon",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-18T06:00:31+00:00",
+      "matches": 10
+    },
+    "stitcherssupplier": {
+      "name": "Stitcher's Supplier",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-18T06:00:31+00:00",
+      "matches": 24
     }
   },
   "unmatched": {
