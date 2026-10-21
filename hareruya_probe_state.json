@@ -25979,6 +25979,726 @@
       "cashUsd": 10.2,
       "checkedAt": "2026-10-21T06:07:22+00:00",
       "matches": 3
+    },
+    "aangswiftsavioraangandlaoceansfury": {
+      "name": "Aang, Swift Savior // Aang and La, Ocean's Fury",
+      "cashUsd": 510.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "avataraangaangmasterofelements": {
+      "name": "Avatar Aang // Aang, Master of Elements",
+      "cashUsd": 3180.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "optimusprimeherooptimusprimeautobotleader": {
+      "name": "Optimus Prime, Hero // Optimus Prime, Autobot Leader",
+      "cashUsd": 570.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "sephirothfabledsoldiersephirothonewingedangel": {
+      "name": "Sephiroth, Fabled SOLDIER // Sephiroth, One-Winged Angel",
+      "cashUsd": 380.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "megatrontyrantmegatrondestructiveforce": {
+      "name": "Megatron, Tyrant // Megatron, Destructive Force",
+      "cashUsd": 350.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "starscreampowerhungrystarscreamseekerleader": {
+      "name": "Starscream, Power Hungry // Starscream, Seeker Leader",
+      "cashUsd": 350.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "blitzwingcrueltormentorblitzwingadaptiveassailant": {
+      "name": "Blitzwing, Cruel Tormentor // Blitzwing, Adaptive Assailant",
+      "cashUsd": 228.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "flamewarbrashveteranflamewarstreetwiseoperative": {
+      "name": "Flamewar, Brash Veteran // Flamewar, Streetwise Operative",
+      "cashUsd": 228.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "soundwavesonicspysoundwavesuperiorcaptain": {
+      "name": "Soundwave, Sonic Spy // Soundwave, Superior Captain",
+      "cashUsd": 225.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ratchetfieldmedicratchetrescueracer": {
+      "name": "Ratchet, Field Medic // Ratchet, Rescue Racer",
+      "cashUsd": 180.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "grimlockdinobotleadergrimlockferociousking": {
+      "name": "Grimlock, Dinobot Leader // Grimlock, Ferocious King",
+      "cashUsd": 170.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "jacevrynsprodigyjacetelepathunbound": {
+      "name": "Jace, Vryn's Prodigy // Jace, Telepath Unbound",
+      "cashUsd": 165.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "lilianahereticalhealerlilianadefiantnecromancer": {
+      "name": "Liliana, Heretical Healer // Liliana, Defiant Necromancer",
+      "cashUsd": 165.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ultramagnustacticianultramagnusarmoredcarrier": {
+      "name": "Ultra Magnus, Tactician // Ultra Magnus, Armored Carrier",
+      "cashUsd": 150.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "thearkenstoneseektheheart": {
+      "name": "The Arkenstone // Seek the Heart",
+      "cashUsd": 140.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "blastercombatdjblastermoralebooster": {
+      "name": "Blaster, Combat DJ // Blaster, Morale Booster",
+      "cashUsd": 138.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "goldbughumanitysallygoldbugscrappyscout": {
+      "name": "Goldbug, Humanity's Ally // Goldbug, Scrappy Scout",
+      "cashUsd": 115.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "cyclonusthesaboteurcyclonuscybertronianfighter": {
+      "name": "Cyclonus, the Saboteur // Cyclonus, Cybertronian Fighter",
+      "cashUsd": 108.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "eddiebrockvenomlethalprotector": {
+      "name": "Eddie Brock // Venom, Lethal Protector",
+      "cashUsd": 100.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "jetfireingeniousscientistjetfireairguardian": {
+      "name": "Jetfire, Ingenious Scientist // Jetfire, Air Guardian",
+      "cashUsd": 90.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "gandalfgoblinsbaneflameshape": {
+      "name": "Gandalf, Goblins' Bane // Flameshape",
+      "cashUsd": 90.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "nightmaremoonprincessluna": {
+      "name": "Nightmare Moon // Princess Luna",
+      "cashUsd": 85.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "erayosoratamiascendanterayosessence": {
+      "name": "Erayo, Soratami Ascendant // Erayo's Essence",
+      "cashUsd": 75.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "terramagicaladeptesperterra": {
+      "name": "Terra, Magical Adept // Esper Terra",
+      "cashUsd": 80.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "prowlstoicstrategistprowlpursuitvehicle": {
+      "name": "Prowl, Stoic Strategist // Prowl, Pursuit Vehicle",
+      "cashUsd": 70.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "cliveifritsdominantifritwardenofinferno": {
+      "name": "Clive, Ifrit's Dominant // Ifrit, Warden of Inferno",
+      "cashUsd": 65.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "anointedprocessionanointedprocession": {
+      "name": "Anointed Procession // Anointed Procession",
+      "cashUsd": 62.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "seagaterestorationseagatereborn": {
+      "name": "Sea Gate Restoration // Sea Gate, Reborn",
+      "cashUsd": 54.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "witchenchanterwitchblessedmeadow": {
+      "name": "Witch Enchanter // Witch-Blessed Meadow",
+      "cashUsd": 51.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "kefkacourtmagekefkarulerofruin": {
+      "name": "Kefka, Court Mage // Kefka, Ruler of Ruin",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "emetselchunsunderedhadessorcererofeld": {
+      "name": "Emet-Selch, Unsundered // Hades, Sorcerer of Eld",
+      "cashUsd": 47.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "agadeemsawakeningagadeemtheundercrypt": {
+      "name": "Agadeem's Awakening // Agadeem, the Undercrypt",
+      "cashUsd": 45.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "chandrafireofkaladeshchandraroaringflame": {
+      "name": "Chandra, Fire of Kaladesh // Chandra, Roaring Flame",
+      "cashUsd": 43.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ajaninacatlpariahajaninacatlavenger": {
+      "name": "Ajani, Nacatl Pariah // Ajani, Nacatl Avenger",
+      "cashUsd": 42.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ugineyeofthestormsugineyeofthestorms": {
+      "name": "Ugin, Eye of the Storms // Ugin, Eye of the Storms",
+      "cashUsd": 42.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "etaliprimalconqueroretaliprimalsickness": {
+      "name": "Etali, Primal Conqueror // Etali, Primal Sickness",
+      "cashUsd": 42.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ralmonsoonmageralleylineprodigy": {
+      "name": "Ral, Monsoon Mage // Ral, Leyline Prodigy",
+      "cashUsd": 40.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "esikagodofthetreetheprismaticbridge": {
+      "name": "Esika, God of the Tree // The Prismatic Bridge",
+      "cashUsd": 39.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "nicolbolastheravagernicolbolasthearisen": {
+      "name": "Nicol Bolas, the Ravager // Nicol Bolas, the Arisen",
+      "cashUsd": 39.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "theemperorofpalameciathelordmasterofhell": {
+      "name": "The Emperor of Palamecia // The Lord Master of Hell",
+      "cashUsd": 37.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "propagandapropaganda": {
+      "name": "Propaganda // Propaganda",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "tamiyoinquisitivestudenttamiyoseasonedscholar": {
+      "name": "Tamiyo, Inquisitive Student // Tamiyo, Seasoned Scholar",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "fableofthemirrorbreakerreflectionofkikijiki": {
+      "name": "Fable of the Mirror-Breaker // Reflection of Kiki-Jiki",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "whowhatwhenwherewhy": {
+      "name": "Who // What // When // Where // Why",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "nissavastwoodseernissasageanimist": {
+      "name": "Nissa, Vastwood Seer // Nissa, Sage Animist",
+      "cashUsd": 33.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "runetailkitsuneascendantrunetailsessence": {
+      "name": "Rune-Tail, Kitsune Ascendant // Rune-Tail's Essence",
+      "cashUsd": 32.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "serahfarroncrystallizedserah": {
+      "name": "Serah Farron // Crystallized Serah",
+      "cashUsd": 32.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "birgigodofstorytellingharnfelhornofbounty": {
+      "name": "Birgi, God of Storytelling // Harnfel, Horn of Bounty",
+      "cashUsd": 31.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "brucebannertheincrediblehulk": {
+      "name": "Bruce Banner // The Incredible Hulk",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ultimeciatimesorceressultimeciaomnipotent": {
+      "name": "Ultimecia, Time Sorceress // Ultimecia, Omnipotent",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "tergridgodoffrighttergridslantern": {
+      "name": "Tergrid, God of Fright // Tergrid's Lantern",
+      "cashUsd": 29.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "halvargodofbattleswordoftherealms": {
+      "name": "Halvar, God of Battle // Sword of the Realms",
+      "cashUsd": 28.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "kujagenomesorcerertrancekujafatedefied": {
+      "name": "Kuja, Genome Sorcerer // Trance Kuja, Fate Defied",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "welcometojurassicpark": {
+      "name": "Welcome to . . . // Jurassic Park",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ojertaqdeepestfoundationtempleofcivilization": {
+      "name": "Ojer Taq, Deepest Foundation // Temple of Civilization",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "thelegendofrokuavatarroku": {
+      "name": "The Legend of Roku // Avatar Roku",
+      "cashUsd": 25.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ulamogtheceaselesshungerulamogtheceaselesshunger": {
+      "name": "Ulamog, the Ceaseless Hunger // Ulamog, the Ceaseless Hunger",
+      "cashUsd": 25.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "vincentvalentinegalianbeast": {
+      "name": "Vincent Valentine // Galian Beast",
+      "cashUsd": 25.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "slicerhiredmuscleslicerhighspeedantagonist": {
+      "name": "Slicer, Hired Muscle // Slicer, High-Speed Antagonist",
+      "cashUsd": 24.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "zndrsplteyeofwisdomzndrsplteyeofwisdom": {
+      "name": "Zndrsplt, Eye of Wisdom // Zndrsplt, Eye of Wisdom",
+      "cashUsd": 24.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "kytheonheroofakrosgideonbattleforged": {
+      "name": "Kytheon, Hero of Akros // Gideon, Battle-Forged",
+      "cashUsd": 23.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "urabraskthegreatwork": {
+      "name": "Urabrask // The Great Work",
+      "cashUsd": 23.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "sheoldredthetruescriptures": {
+      "name": "Sheoldred // The True Scriptures",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "sorinofhousemarkovsorinravenousneonate": {
+      "name": "Sorin of House Markov // Sorin, Ravenous Neonate",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "virtueofpersistencelocthwainscorn": {
+      "name": "Virtue of Persistence // Locthwain Scorn",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "valakutawakeningvalakutstoneforge": {
+      "name": "Valakut Awakening // Valakut Stoneforge",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "naughtynice": {
+      "name": "Naughty // Nice",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "normanosborngreengoblin": {
+      "name": "Norman Osborn // Green Goblin",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "norinthewarynorinthewary": {
+      "name": "Norin the Wary // Norin the Wary",
+      "cashUsd": 19.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "peterparkeramazingspiderman": {
+      "name": "Peter Parker // Amazing Spider-Man",
+      "cashUsd": 19.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "jetmirnexusofrevelsjetmirnexusofrevels": {
+      "name": "Jetmir, Nexus of Revels // Jetmir, Nexus of Revels",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ojeraxonildeepestmighttempleofpower": {
+      "name": "Ojer Axonil, Deepest Might // Temple of Power",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "thelegendofkyoshiavatarkyoshi": {
+      "name": "The Legend of Kyoshi // Avatar Kyoshi",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "tonystarktheinvincibleironman": {
+      "name": "Tony Stark // The Invincible Iron Man",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "captainamericalivinglegend": {
+      "name": "Captain America, Living Legend",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "krarksthumbkrarksthumb": {
+      "name": "Krark's Thumb // Krark's Thumb",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "hallowedfountainhallowedfountain": {
+      "name": "Hallowed Fountain // Hallowed Fountain",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "wanderingarchaicexplorethevastlands": {
+      "name": "Wandering Archaic // Explore the Vastlands",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "zenosyaegalvusshinryutranscendentrival": {
+      "name": "Zenos yae Galvus // Shinryu, Transcendent Rival",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "jenniferwaltersthesensationalshehulk": {
+      "name": "Jennifer Walters // The Sensational She-Hulk",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "jillshivasdominantshivawardenofice": {
+      "name": "Jill, Shiva's Dominant // Shiva, Warden of Ice",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "lilianavesslilianavess": {
+      "name": "Liliana Vess // Liliana Vess",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "okauneyeofchaosokauneyeofchaos": {
+      "name": "Okaun, Eye of Chaos // Okaun, Eye of Chaos",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "shatterskullsmashingshatterskullthehammerpass": {
+      "name": "Shatterskull Smashing // Shatterskull, the Hammer Pass",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "indulgeexcess": {
+      "name": "Indulge // Excess",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "gwenstacyghostspider": {
+      "name": "Gwen Stacy // Ghost-Spider",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "weartear": {
+      "name": "Wear // Tear",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "blexvexingpestsearchforblex": {
+      "name": "Blex, Vexing Pest // Search for Blex",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "emeritusofwoedemonictutor": {
+      "name": "Emeritus of Woe // Demonic Tutor",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "decoratedknightpresentarms": {
+      "name": "Decorated Knight // Present Arms",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "growingritesofitlimocitlimoccradleofthesun": {
+      "name": "Growing Rites of Itlimoc // Itlimoc, Cradle of the Sun",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "jingitaxiasthegreatsynthesis": {
+      "name": "Jin-Gitaxias // The Great Synthesis",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "joshuaphoenixsdominantphoenixwardenoffire": {
+      "name": "Joshua, Phoenix's Dominant // Phoenix, Warden of Fire",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "kingtchallablackpantherhopeenduring": {
+      "name": "King T'Challa // Black Panther, Hope Enduring",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "thelegendofkurukavatarkuruk": {
+      "name": "The Legend of Kuruk // Avatar Kuruk",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "sidequesthuntthemarkyiazmatultimatemark": {
+      "name": "Sidequest: Hunt the Mark // Yiazmat, Ultimate Mark",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "deathbarondeathbaron": {
+      "name": "Death Baron // Death Baron",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "grimgrincorpseborngrimgrincorpseborn": {
+      "name": "Grimgrin, Corpse-Born // Grimgrin, Corpse-Born",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "eleshnorntheargentetchings": {
+      "name": "Elesh Norn // The Argent Etchings",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "bloodlinekeeperlordoflineage": {
+      "name": "Bloodline Keeper // Lord of Lineage",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "valkigodofliestibaltcosmicimpostor": {
+      "name": "Valki, God of Lies // Tibalt, Cosmic Impostor",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ghaltaprimalhungerghaltaprimalhunger": {
+      "name": "Ghalta, Primal Hunger // Ghalta, Primal Hunger",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "homurahumanascendanthomurasessence": {
+      "name": "Homura, Human Ascendant // Homura's Essence",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "cecildarkknightcecilredeemedpaladin": {
+      "name": "Cecil, Dark Knight // Cecil, Redeemed Paladin",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "dionbahamutsdominantbahamutwardenoflight": {
+      "name": "Dion, Bahamut's Dominant // Bahamut, Warden of Light",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "westvaleabbeyormendahlprofaneprince": {
+      "name": "Westvale Abbey // Ormendahl, Profane Prince",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "emeriascallemeriashatteredskyclave": {
+      "name": "Emeria's Call // Emeria, Shattered Skyclave",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "walkinclosetforgottencellar": {
+      "name": "Walk-In Closet // Forgotten Cellar",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "venatheartofhydaelynhydaelynthemothercrystal": {
+      "name": "Venat, Heart of Hydaelyn // Hydaelyn, the Mothercrystal",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "timelesslotus": {
+      "name": "Timeless Lotus",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "steamventssteamvents": {
+      "name": "Steam Vents // Steam Vents",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "aesityrantofgyrestraitaesityrantofgyrestrait": {
+      "name": "Aesi, Tyrant of Gyre Strait // Aesi, Tyrant of Gyre Strait",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "monstermanualzoologicalstudy": {
+      "name": "Monster Manual // Zoological Study",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "balambgardenseedacademybalambgardenairborne": {
+      "name": "Balamb Garden, SeeD Academy // Balamb Garden, Airborne",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "abyssalharvester": {
+      "name": "Abyssal Harvester",
+      "cashUsd": 10.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ancestralvision": {
+      "name": "Ancestral Vision",
+      "cashUsd": 10.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "angelicsleuth": {
+      "name": "Angelic Sleuth",
+      "cashUsd": 10.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "archmageascension": {
+      "name": "Archmage Ascension",
+      "cashUsd": 10.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "arlinnthepackshopearlinnthemoonsfury": {
+      "name": "Arlinn, the Pack's Hope // Arlinn, the Moon's Fury",
+      "cashUsd": 10.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ashnod": {
+      "name": "Ashnod",
+      "cashUsd": 10.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
     }
   },
   "unmatched": {
@@ -25986,6 +26706,726 @@
       "name": "Foil",
       "cashUsd": 225.0,
       "checkedAt": "2026-08-03T15:54:10+00:00",
+      "matches": 0
+    },
+    "aangswiftsavioraangandlaoceansfury": {
+      "name": "Aang, Swift Savior // Aang and La, Ocean's Fury",
+      "cashUsd": 510.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "avataraangaangmasterofelements": {
+      "name": "Avatar Aang // Aang, Master of Elements",
+      "cashUsd": 3180.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "optimusprimeherooptimusprimeautobotleader": {
+      "name": "Optimus Prime, Hero // Optimus Prime, Autobot Leader",
+      "cashUsd": 570.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "sephirothfabledsoldiersephirothonewingedangel": {
+      "name": "Sephiroth, Fabled SOLDIER // Sephiroth, One-Winged Angel",
+      "cashUsd": 380.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "megatrontyrantmegatrondestructiveforce": {
+      "name": "Megatron, Tyrant // Megatron, Destructive Force",
+      "cashUsd": 350.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "starscreampowerhungrystarscreamseekerleader": {
+      "name": "Starscream, Power Hungry // Starscream, Seeker Leader",
+      "cashUsd": 350.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "blitzwingcrueltormentorblitzwingadaptiveassailant": {
+      "name": "Blitzwing, Cruel Tormentor // Blitzwing, Adaptive Assailant",
+      "cashUsd": 228.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "flamewarbrashveteranflamewarstreetwiseoperative": {
+      "name": "Flamewar, Brash Veteran // Flamewar, Streetwise Operative",
+      "cashUsd": 228.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "soundwavesonicspysoundwavesuperiorcaptain": {
+      "name": "Soundwave, Sonic Spy // Soundwave, Superior Captain",
+      "cashUsd": 225.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ratchetfieldmedicratchetrescueracer": {
+      "name": "Ratchet, Field Medic // Ratchet, Rescue Racer",
+      "cashUsd": 180.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "grimlockdinobotleadergrimlockferociousking": {
+      "name": "Grimlock, Dinobot Leader // Grimlock, Ferocious King",
+      "cashUsd": 170.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "jacevrynsprodigyjacetelepathunbound": {
+      "name": "Jace, Vryn's Prodigy // Jace, Telepath Unbound",
+      "cashUsd": 165.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "lilianahereticalhealerlilianadefiantnecromancer": {
+      "name": "Liliana, Heretical Healer // Liliana, Defiant Necromancer",
+      "cashUsd": 165.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ultramagnustacticianultramagnusarmoredcarrier": {
+      "name": "Ultra Magnus, Tactician // Ultra Magnus, Armored Carrier",
+      "cashUsd": 150.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "thearkenstoneseektheheart": {
+      "name": "The Arkenstone // Seek the Heart",
+      "cashUsd": 140.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "blastercombatdjblastermoralebooster": {
+      "name": "Blaster, Combat DJ // Blaster, Morale Booster",
+      "cashUsd": 138.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "goldbughumanitysallygoldbugscrappyscout": {
+      "name": "Goldbug, Humanity's Ally // Goldbug, Scrappy Scout",
+      "cashUsd": 115.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "cyclonusthesaboteurcyclonuscybertronianfighter": {
+      "name": "Cyclonus, the Saboteur // Cyclonus, Cybertronian Fighter",
+      "cashUsd": 108.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "eddiebrockvenomlethalprotector": {
+      "name": "Eddie Brock // Venom, Lethal Protector",
+      "cashUsd": 100.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "jetfireingeniousscientistjetfireairguardian": {
+      "name": "Jetfire, Ingenious Scientist // Jetfire, Air Guardian",
+      "cashUsd": 90.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "gandalfgoblinsbaneflameshape": {
+      "name": "Gandalf, Goblins' Bane // Flameshape",
+      "cashUsd": 90.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "nightmaremoonprincessluna": {
+      "name": "Nightmare Moon // Princess Luna",
+      "cashUsd": 85.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "erayosoratamiascendanterayosessence": {
+      "name": "Erayo, Soratami Ascendant // Erayo's Essence",
+      "cashUsd": 75.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "terramagicaladeptesperterra": {
+      "name": "Terra, Magical Adept // Esper Terra",
+      "cashUsd": 80.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "prowlstoicstrategistprowlpursuitvehicle": {
+      "name": "Prowl, Stoic Strategist // Prowl, Pursuit Vehicle",
+      "cashUsd": 70.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "cliveifritsdominantifritwardenofinferno": {
+      "name": "Clive, Ifrit's Dominant // Ifrit, Warden of Inferno",
+      "cashUsd": 65.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "anointedprocessionanointedprocession": {
+      "name": "Anointed Procession // Anointed Procession",
+      "cashUsd": 62.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "seagaterestorationseagatereborn": {
+      "name": "Sea Gate Restoration // Sea Gate, Reborn",
+      "cashUsd": 54.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "witchenchanterwitchblessedmeadow": {
+      "name": "Witch Enchanter // Witch-Blessed Meadow",
+      "cashUsd": 51.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "kefkacourtmagekefkarulerofruin": {
+      "name": "Kefka, Court Mage // Kefka, Ruler of Ruin",
+      "cashUsd": 50.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "emetselchunsunderedhadessorcererofeld": {
+      "name": "Emet-Selch, Unsundered // Hades, Sorcerer of Eld",
+      "cashUsd": 47.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "agadeemsawakeningagadeemtheundercrypt": {
+      "name": "Agadeem's Awakening // Agadeem, the Undercrypt",
+      "cashUsd": 45.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "chandrafireofkaladeshchandraroaringflame": {
+      "name": "Chandra, Fire of Kaladesh // Chandra, Roaring Flame",
+      "cashUsd": 43.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ajaninacatlpariahajaninacatlavenger": {
+      "name": "Ajani, Nacatl Pariah // Ajani, Nacatl Avenger",
+      "cashUsd": 42.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ugineyeofthestormsugineyeofthestorms": {
+      "name": "Ugin, Eye of the Storms // Ugin, Eye of the Storms",
+      "cashUsd": 42.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "etaliprimalconqueroretaliprimalsickness": {
+      "name": "Etali, Primal Conqueror // Etali, Primal Sickness",
+      "cashUsd": 42.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ralmonsoonmageralleylineprodigy": {
+      "name": "Ral, Monsoon Mage // Ral, Leyline Prodigy",
+      "cashUsd": 40.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "esikagodofthetreetheprismaticbridge": {
+      "name": "Esika, God of the Tree // The Prismatic Bridge",
+      "cashUsd": 39.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "nicolbolastheravagernicolbolasthearisen": {
+      "name": "Nicol Bolas, the Ravager // Nicol Bolas, the Arisen",
+      "cashUsd": 39.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "theemperorofpalameciathelordmasterofhell": {
+      "name": "The Emperor of Palamecia // The Lord Master of Hell",
+      "cashUsd": 37.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "propagandapropaganda": {
+      "name": "Propaganda // Propaganda",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "tamiyoinquisitivestudenttamiyoseasonedscholar": {
+      "name": "Tamiyo, Inquisitive Student // Tamiyo, Seasoned Scholar",
+      "cashUsd": 36.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "fableofthemirrorbreakerreflectionofkikijiki": {
+      "name": "Fable of the Mirror-Breaker // Reflection of Kiki-Jiki",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "whowhatwhenwherewhy": {
+      "name": "Who // What // When // Where // Why",
+      "cashUsd": 35.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "nissavastwoodseernissasageanimist": {
+      "name": "Nissa, Vastwood Seer // Nissa, Sage Animist",
+      "cashUsd": 33.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "runetailkitsuneascendantrunetailsessence": {
+      "name": "Rune-Tail, Kitsune Ascendant // Rune-Tail's Essence",
+      "cashUsd": 32.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "serahfarroncrystallizedserah": {
+      "name": "Serah Farron // Crystallized Serah",
+      "cashUsd": 32.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "birgigodofstorytellingharnfelhornofbounty": {
+      "name": "Birgi, God of Storytelling // Harnfel, Horn of Bounty",
+      "cashUsd": 31.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "brucebannertheincrediblehulk": {
+      "name": "Bruce Banner // The Incredible Hulk",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ultimeciatimesorceressultimeciaomnipotent": {
+      "name": "Ultimecia, Time Sorceress // Ultimecia, Omnipotent",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "tergridgodoffrighttergridslantern": {
+      "name": "Tergrid, God of Fright // Tergrid's Lantern",
+      "cashUsd": 29.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "halvargodofbattleswordoftherealms": {
+      "name": "Halvar, God of Battle // Sword of the Realms",
+      "cashUsd": 28.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "kujagenomesorcerertrancekujafatedefied": {
+      "name": "Kuja, Genome Sorcerer // Trance Kuja, Fate Defied",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "welcometojurassicpark": {
+      "name": "Welcome to . . . // Jurassic Park",
+      "cashUsd": 27.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ojertaqdeepestfoundationtempleofcivilization": {
+      "name": "Ojer Taq, Deepest Foundation // Temple of Civilization",
+      "cashUsd": 27.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "thelegendofrokuavatarroku": {
+      "name": "The Legend of Roku // Avatar Roku",
+      "cashUsd": 25.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ulamogtheceaselesshungerulamogtheceaselesshunger": {
+      "name": "Ulamog, the Ceaseless Hunger // Ulamog, the Ceaseless Hunger",
+      "cashUsd": 25.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "vincentvalentinegalianbeast": {
+      "name": "Vincent Valentine // Galian Beast",
+      "cashUsd": 25.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "slicerhiredmuscleslicerhighspeedantagonist": {
+      "name": "Slicer, Hired Muscle // Slicer, High-Speed Antagonist",
+      "cashUsd": 24.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "zndrsplteyeofwisdomzndrsplteyeofwisdom": {
+      "name": "Zndrsplt, Eye of Wisdom // Zndrsplt, Eye of Wisdom",
+      "cashUsd": 24.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "kytheonheroofakrosgideonbattleforged": {
+      "name": "Kytheon, Hero of Akros // Gideon, Battle-Forged",
+      "cashUsd": 23.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "urabraskthegreatwork": {
+      "name": "Urabrask // The Great Work",
+      "cashUsd": 23.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "sheoldredthetruescriptures": {
+      "name": "Sheoldred // The True Scriptures",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "sorinofhousemarkovsorinravenousneonate": {
+      "name": "Sorin of House Markov // Sorin, Ravenous Neonate",
+      "cashUsd": 22.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "virtueofpersistencelocthwainscorn": {
+      "name": "Virtue of Persistence // Locthwain Scorn",
+      "cashUsd": 22.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "valakutawakeningvalakutstoneforge": {
+      "name": "Valakut Awakening // Valakut Stoneforge",
+      "cashUsd": 21.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "naughtynice": {
+      "name": "Naughty // Nice",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "normanosborngreengoblin": {
+      "name": "Norman Osborn // Green Goblin",
+      "cashUsd": 20.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "norinthewarynorinthewary": {
+      "name": "Norin the Wary // Norin the Wary",
+      "cashUsd": 19.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "peterparkeramazingspiderman": {
+      "name": "Peter Parker // Amazing Spider-Man",
+      "cashUsd": 19.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "jetmirnexusofrevelsjetmirnexusofrevels": {
+      "name": "Jetmir, Nexus of Revels // Jetmir, Nexus of Revels",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ojeraxonildeepestmighttempleofpower": {
+      "name": "Ojer Axonil, Deepest Might // Temple of Power",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "thelegendofkyoshiavatarkyoshi": {
+      "name": "The Legend of Kyoshi // Avatar Kyoshi",
+      "cashUsd": 19.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "tonystarktheinvincibleironman": {
+      "name": "Tony Stark // The Invincible Iron Man",
+      "cashUsd": 18.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "captainamericalivinglegend": {
+      "name": "Captain America, Living Legend",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "krarksthumbkrarksthumb": {
+      "name": "Krark's Thumb // Krark's Thumb",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "hallowedfountainhallowedfountain": {
+      "name": "Hallowed Fountain // Hallowed Fountain",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "wanderingarchaicexplorethevastlands": {
+      "name": "Wandering Archaic // Explore the Vastlands",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "zenosyaegalvusshinryutranscendentrival": {
+      "name": "Zenos yae Galvus // Shinryu, Transcendent Rival",
+      "cashUsd": 17.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "jenniferwaltersthesensationalshehulk": {
+      "name": "Jennifer Walters // The Sensational She-Hulk",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "jillshivasdominantshivawardenofice": {
+      "name": "Jill, Shiva's Dominant // Shiva, Warden of Ice",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "lilianavesslilianavess": {
+      "name": "Liliana Vess // Liliana Vess",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "okauneyeofchaosokauneyeofchaos": {
+      "name": "Okaun, Eye of Chaos // Okaun, Eye of Chaos",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "shatterskullsmashingshatterskullthehammerpass": {
+      "name": "Shatterskull Smashing // Shatterskull, the Hammer Pass",
+      "cashUsd": 16.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "indulgeexcess": {
+      "name": "Indulge // Excess",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "gwenstacyghostspider": {
+      "name": "Gwen Stacy // Ghost-Spider",
+      "cashUsd": 15.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "weartear": {
+      "name": "Wear // Tear",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "blexvexingpestsearchforblex": {
+      "name": "Blex, Vexing Pest // Search for Blex",
+      "cashUsd": 14.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "emeritusofwoedemonictutor": {
+      "name": "Emeritus of Woe // Demonic Tutor",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "decoratedknightpresentarms": {
+      "name": "Decorated Knight // Present Arms",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "growingritesofitlimocitlimoccradleofthesun": {
+      "name": "Growing Rites of Itlimoc // Itlimoc, Cradle of the Sun",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "jingitaxiasthegreatsynthesis": {
+      "name": "Jin-Gitaxias // The Great Synthesis",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "joshuaphoenixsdominantphoenixwardenoffire": {
+      "name": "Joshua, Phoenix's Dominant // Phoenix, Warden of Fire",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "kingtchallablackpantherhopeenduring": {
+      "name": "King T'Challa // Black Panther, Hope Enduring",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "thelegendofkurukavatarkuruk": {
+      "name": "The Legend of Kuruk // Avatar Kuruk",
+      "cashUsd": 14.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "sidequesthuntthemarkyiazmatultimatemark": {
+      "name": "Sidequest: Hunt the Mark // Yiazmat, Ultimate Mark",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "deathbarondeathbaron": {
+      "name": "Death Baron // Death Baron",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "grimgrincorpseborngrimgrincorpseborn": {
+      "name": "Grimgrin, Corpse-Born // Grimgrin, Corpse-Born",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "eleshnorntheargentetchings": {
+      "name": "Elesh Norn // The Argent Etchings",
+      "cashUsd": 13.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "bloodlinekeeperlordoflineage": {
+      "name": "Bloodline Keeper // Lord of Lineage",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "valkigodofliestibaltcosmicimpostor": {
+      "name": "Valki, God of Lies // Tibalt, Cosmic Impostor",
+      "cashUsd": 12.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ghaltaprimalhungerghaltaprimalhunger": {
+      "name": "Ghalta, Primal Hunger // Ghalta, Primal Hunger",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "homurahumanascendanthomurasessence": {
+      "name": "Homura, Human Ascendant // Homura's Essence",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "cecildarkknightcecilredeemedpaladin": {
+      "name": "Cecil, Dark Knight // Cecil, Redeemed Paladin",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "dionbahamutsdominantbahamutwardenoflight": {
+      "name": "Dion, Bahamut's Dominant // Bahamut, Warden of Light",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "westvaleabbeyormendahlprofaneprince": {
+      "name": "Westvale Abbey // Ormendahl, Profane Prince",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "emeriascallemeriashatteredskyclave": {
+      "name": "Emeria's Call // Emeria, Shattered Skyclave",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "walkinclosetforgottencellar": {
+      "name": "Walk-In Closet // Forgotten Cellar",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "venatheartofhydaelynhydaelynthemothercrystal": {
+      "name": "Venat, Heart of Hydaelyn // Hydaelyn, the Mothercrystal",
+      "cashUsd": 10.8,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "timelesslotus": {
+      "name": "Timeless Lotus",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "steamventssteamvents": {
+      "name": "Steam Vents // Steam Vents",
+      "cashUsd": 11.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "aesityrantofgyrestraitaesityrantofgyrestrait": {
+      "name": "Aesi, Tyrant of Gyre Strait // Aesi, Tyrant of Gyre Strait",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "monstermanualzoologicalstudy": {
+      "name": "Monster Manual // Zoological Study",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "balambgardenseedacademybalambgardenairborne": {
+      "name": "Balamb Garden, SeeD Academy // Balamb Garden, Airborne",
+      "cashUsd": 10.25,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "abyssalharvester": {
+      "name": "Abyssal Harvester",
+      "cashUsd": 10.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ancestralvision": {
+      "name": "Ancestral Vision",
+      "cashUsd": 10.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "angelicsleuth": {
+      "name": "Angelic Sleuth",
+      "cashUsd": 10.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "archmageascension": {
+      "name": "Archmage Ascension",
+      "cashUsd": 10.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "arlinnthepackshopearlinnthemoonsfury": {
+      "name": "Arlinn, the Pack's Hope // Arlinn, the Moon's Fury",
+      "cashUsd": 10.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
+      "matches": 0
+    },
+    "ashnod": {
+      "name": "Ashnod",
+      "cashUsd": 10.0,
+      "checkedAt": "2026-10-21T18:06:34+00:00",
       "matches": 0
     }
   }
