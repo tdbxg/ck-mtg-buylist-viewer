@@ -27371,6 +27371,654 @@
       "cashUsd": 9.5,
       "checkedAt": "2026-10-22T06:10:55+00:00",
       "matches": 8
+    },
+    "mirrorstrike": {
+      "name": "Mirror Strike",
+      "cashUsd": 10.2,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 2
+    },
+    "extirpate": {
+      "name": "Extirpate",
+      "cashUsd": 11.5,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 10
+    },
+    "cityofsolitude": {
+      "name": "City of Solitude",
+      "cashUsd": 10.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 3
+    },
+    "persistentconstrictor": {
+      "name": "Persistent Constrictor",
+      "cashUsd": 10.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 4
+    },
+    "apheliaviperwhisperer": {
+      "name": "Aphelia, Viper Whisperer",
+      "cashUsd": 9.5,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 2
+    },
+    "imprisonedinthemoon": {
+      "name": "Imprisoned in the Moon",
+      "cashUsd": 9.5,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 8
+    },
+    "kioramasterofthedepths": {
+      "name": "Kiora, Master of the Depths",
+      "cashUsd": 9.5,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 4
+    },
+    "tippytoeterrificpartner": {
+      "name": "Tippy-Toe, Terrific Partner",
+      "cashUsd": 9.5,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 4
+    },
+    "panglacialwurm": {
+      "name": "Panglacial Wurm",
+      "cashUsd": 9.2,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 6
+    },
+    "harvesterofmisery": {
+      "name": "Harvester of Misery",
+      "cashUsd": 9.2,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 16
+    },
+    "agateinstigator": {
+      "name": "Agate Instigator",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 6
+    },
+    "ajaniadversaryoftyrants": {
+      "name": "Ajani, Adversary of Tyrants",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 7
+    },
+    "akromavisionofixidor": {
+      "name": "Akroma, Vision of Ixidor",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 6
+    },
+    "ancientgrudge": {
+      "name": "Ancient Grudge",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 9
+    },
+    "animpakalthousandthmoon": {
+      "name": "Anim Pakal, Thousandth Moon",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 14
+    },
+    "ashioknightmaremuse": {
+      "name": "Ashiok, Nightmare Muse",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 9
+    },
+    "augurofautumn": {
+      "name": "Augur of Autumn",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 8
+    },
+    "bargainingtable": {
+      "name": "Bargaining Table",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 2
+    },
+    "avalancheriders": {
+      "name": "Avalanche Riders",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 8
+    },
+    "benevolentbodyguard": {
+      "name": "Benevolent Bodyguard",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 4
+    },
+    "bighornerrancher": {
+      "name": "Bighorner Rancher",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 6
+    },
+    "blackcleavecliffs": {
+      "name": "Blackcleave Cliffs",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 25
+    },
+    "bladeofselves": {
+      "name": "Blade of Selves",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 20
+    },
+    "brudicladtelchorengineer": {
+      "name": "Brudiclad, Telchor Engineer",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 2
+    },
+    "cairnwanderer": {
+      "name": "Cairn Wanderer",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 2
+    },
+    "blood": {
+      "name": "Blood",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 59
+    },
+    "calltothenetherworld": {
+      "name": "Call to the Netherworld",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 5
+    },
+    "carnagetyrant": {
+      "name": "Carnage Tyrant",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 17
+    },
+    "cemeteryreaper": {
+      "name": "Cemetery Reaper",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 4
+    },
+    "chthoniannightmare": {
+      "name": "Chthonian Nightmare",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 13
+    },
+    "collectivevoyage": {
+      "name": "Collective Voyage",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 7
+    },
+    "clifftopretreat": {
+      "name": "Clifftop Retreat",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 15
+    },
+    "conduitofruin": {
+      "name": "Conduit of Ruin",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 5
+    },
+    "cruelcelebrant": {
+      "name": "Cruel Celebrant",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 4
+    },
+    "cosmograndzenith": {
+      "name": "Cosmogrand Zenith",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 14
+    },
+    "dakmorlancer": {
+      "name": "Dakmor Lancer",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 2
+    },
+    "dereviempyrialtactician": {
+      "name": "Derevi, Empyrial Tactician",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 9
+    },
+    "draconicvisitor": {
+      "name": "Draconic Visitor",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 12
+    },
+    "dreamrootcascade": {
+      "name": "Dreamroot Cascade",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 35
+    },
+    "ebonyowlnetsuke": {
+      "name": "Ebony Owl Netsuke",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 2
+    },
+    "dregscapesliver": {
+      "name": "Dregscape Sliver",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 3
+    },
+    "egg": {
+      "name": "Egg",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 58
+    },
+    "edgarkingoffigaro": {
+      "name": "Edgar, King of Figaro",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 3
+    },
+    "edgewalker": {
+      "name": "Edgewalker",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 4
+    },
+    "elspethresplendent": {
+      "name": "Elspeth Resplendent",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 23
+    },
+    "emperorcrocodile": {
+      "name": "Emperor Crocodile",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 6
+    },
+    "escapetothewilds": {
+      "name": "Escape to the Wilds",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 10
+    },
+    "eviscerator": {
+      "name": "Eviscerator",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 2
+    },
+    "explosivevegetation": {
+      "name": "Explosive Vegetation",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 6
+    },
+    "fallenshinobi": {
+      "name": "Fallen Shinobi",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 7
+    },
+    "farmercotton": {
+      "name": "Farmer Cotton",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 6
+    },
+    "feedtheswarm": {
+      "name": "Feed the Swarm",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 16
+    },
+    "finaleofrevelation": {
+      "name": "Finale of Revelation",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 8
+    },
+    "firionwildrosewarrior": {
+      "name": "Firion, Wild Rose Warrior",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 9
+    },
+    "flareofmalice": {
+      "name": "Flare of Malice",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 14
+    },
+    "fleetingimage": {
+      "name": "Fleeting Image",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 6
+    },
+    "genjuoftherealm": {
+      "name": "Genju of the Realm",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 4
+    },
+    "gameofchaos": {
+      "name": "Game of Chaos",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 3
+    },
+    "ghastlordoffugue": {
+      "name": "Ghastlord of Fugue",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 3
+    },
+    "ghostlyflicker": {
+      "name": "Ghostly Flicker",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 17
+    },
+    "gerrardweatherlighthero": {
+      "name": "Gerrard, Weatherlight Hero",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 2
+    },
+    "ghostway": {
+      "name": "Ghostway",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 10
+    },
+    "grenzodungeonwarden": {
+      "name": "Grenzo, Dungeon Warden",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 7
+    },
+    "grazilaxxillithidscholar": {
+      "name": "Grazilaxx, Illithid Scholar",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 11
+    },
+    "hapatravizierofpoisons": {
+      "name": "Hapatra, Vizier of Poisons",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 6
+    },
+    "ibhalfheartgoblintactician": {
+      "name": "Ib Halfheart, Goblin Tactician",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 2
+    },
+    "ideasunbound": {
+      "name": "Ideas Unbound",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 2
+    },
+    "insect": {
+      "name": "Insect",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 27
+    },
+    "jalumtome": {
+      "name": "Jalum Tome",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 5
+    },
+    "jhovallqueen": {
+      "name": "Jhovall Queen",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 2
+    },
+    "intothenorth": {
+      "name": "Into the North",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 4
+    },
+    "kasminaenigmasage": {
+      "name": "Kasmina, Enigma Sage",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 14
+    },
+    "kedissemberclawfamiliar": {
+      "name": "Kediss, Emberclaw Familiar",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 8
+    },
+    "kinjallissunwing": {
+      "name": "Kinjalli's Sunwing",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 7
+    },
+    "laviniaazoriusrenegade": {
+      "name": "Lavinia, Azorius Renegade",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 19
+    },
+    "leveler": {
+      "name": "Leveler",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 27
+    },
+    "lieutenantkirtar": {
+      "name": "Lieutenant Kirtar",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 2
+    },
+    "lutrithespellchaser": {
+      "name": "Lutri, the Spellchaser",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 13
+    },
+    "lyzoldathebloodwitch": {
+      "name": "Lyzolda, the Blood Witch",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 2
+    },
+    "mantleoftheancients": {
+      "name": "Mantle of the Ancients",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 18
+    },
+    "marchofswirlingmist": {
+      "name": "March of Swirling Mist",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 18
+    },
+    "moltenhydra": {
+      "name": "Molten Hydra",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 2
+    },
+    "moltenrain": {
+      "name": "Molten Rain",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 7
+    },
+    "multanisacolyte": {
+      "name": "Multani's Acolyte",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 2
+    },
+    "nashimoonsagesscion": {
+      "name": "Nashi, Moon Sage's Scion",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 21
+    },
+    "nestofscarabs": {
+      "name": "Nest of Scarabs",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 3
+    },
+    "nissarevane": {
+      "name": "Nissa Revane",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 5
+    },
+    "ninelives": {
+      "name": "Nine Lives",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 36
+    },
+    "oliviavoldaren": {
+      "name": "Olivia Voldaren",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 11
+    },
+    "oracle": {
+      "name": "Oracle",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 60
+    },
+    "petrasphinx": {
+      "name": "Petra Sphinx",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 1
+    },
+    "polymorphistsjest": {
+      "name": "Polymorphist's Jest",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 4
+    },
+    "primevalbounty": {
+      "name": "Primeval Bounty",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 2
+    },
+    "princeofthralls": {
+      "name": "Prince of Thralls",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 5
+    },
+    "prospertomebound": {
+      "name": "Prosper, Tome-Bound",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 7
+    },
+    "rakdospatronofchaos": {
+      "name": "Rakdos, Patron of Chaos",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 16
+    },
+    "pyrogoyf": {
+      "name": "Pyrogoyf",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 5
+    },
+    "razortidebridge": {
+      "name": "Razortide Bridge",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 5
+    },
+    "righteouscause": {
+      "name": "Righteous Cause",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 2
+    },
+    "righteousvalkyrie": {
+      "name": "Righteous Valkyrie",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 20
+    },
+    "rockfallvale": {
+      "name": "Rockfall Vale",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 33
+    },
+    "sageowl": {
+      "name": "Sage Owl",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 9
+    },
+    "sarkhanvol": {
+      "name": "Sarkhan Vol",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 7
+    },
+    "scytheofthewretched": {
+      "name": "Scythe of the Wretched",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 4
+    },
+    "shiningshoal": {
+      "name": "Shining Shoal",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 4
+    },
+    "shriekingmogg": {
+      "name": "Shrieking Mogg",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 2
+    },
+    "shriekmaw": {
+      "name": "Shriekmaw",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 7
+    },
+    "sinspiraspunishment": {
+      "name": "Sin, Spira's Punishment",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-22T18:02:33+00:00",
+      "matches": 7
     }
   },
   "unmatched": {
