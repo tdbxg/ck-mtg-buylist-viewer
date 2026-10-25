@@ -30113,6 +30113,432 @@
       "cashUsd": 7.8,
       "checkedAt": "2026-10-24T16:39:10+00:00",
       "matches": 9
+    },
+    "guardianspledge": {
+      "name": "Guardians' Pledge",
+      "cashUsd": 8.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 4
+    },
+    "grimgrincorpseborn": {
+      "name": "Grimgrin, Corpse-Born",
+      "cashUsd": 8.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 10
+    },
+    "magusofthevineyard": {
+      "name": "Magus of the Vineyard",
+      "cashUsd": 8.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 7
+    },
+    "alterreality": {
+      "name": "Alter Reality",
+      "cashUsd": 8.4,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 13
+    },
+    "hopeofghirapur": {
+      "name": "Hope of Ghirapur",
+      "cashUsd": 8.0,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 6
+    },
+    "hydra": {
+      "name": "Hydra",
+      "cashUsd": 8.0,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 57
+    },
+    "oliviamobilizedforwar": {
+      "name": "Olivia, Mobilized for War",
+      "cashUsd": 8.0,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 8
+    },
+    "khorvathsfury": {
+      "name": "Khorvath's Fury",
+      "cashUsd": 7.8,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 3
+    },
+    "kuratheboundlesssky": {
+      "name": "Kura, the Boundless Sky",
+      "cashUsd": 7.8,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 15
+    },
+    "vengefuldead": {
+      "name": "Vengeful Dead",
+      "cashUsd": 7.8,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 4
+    },
+    "arlinnvoiceofthepack": {
+      "name": "Arlinn, Voice of the Pack",
+      "cashUsd": 7.75,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 5
+    },
+    "barbariangeneral": {
+      "name": "Barbarian General",
+      "cashUsd": 7.75,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 1
+    },
+    "attunement": {
+      "name": "Attunement",
+      "cashUsd": 7.75,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 3
+    },
+    "maddeningcacophony": {
+      "name": "Maddening Cacophony",
+      "cashUsd": 7.75,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 14
+    },
+    "kasminaenigmaticmentor": {
+      "name": "Kasmina, Enigmatic Mentor",
+      "cashUsd": 7.75,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 6
+    },
+    "minionofthemighty": {
+      "name": "Minion of the Mighty",
+      "cashUsd": 7.75,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 4
+    },
+    "thefateoftheflammable": {
+      "name": "The Fate of the Flammable",
+      "cashUsd": 7.75,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 1
+    },
+    "agentoftreachery": {
+      "name": "Agent of Treachery",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 16
+    },
+    "ajaniwisecounselor": {
+      "name": "Ajani, Wise Counselor",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 2
+    },
+    "alchemistsrefuge": {
+      "name": "Alchemist's Refuge",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 8
+    },
+    "allianceofarms": {
+      "name": "Alliance of Arms",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 3
+    },
+    "angelofserenity": {
+      "name": "Angel of Serenity",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 8
+    },
+    "apexofpower": {
+      "name": "Apex of Power",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 10
+    },
+    "angeloftheruins": {
+      "name": "Angel of the Ruins",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 6
+    },
+    "ashlingthepilgrim": {
+      "name": "Ashling the Pilgrim",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 3
+    },
+    "asswhuppin": {
+      "name": "Ass Whuppin'",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 2
+    },
+    "attemptedmurder": {
+      "name": "Attempted Murder",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 1
+    },
+    "avacynsmemorial": {
+      "name": "Avacyn's Memorial",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 4
+    },
+    "battlehymn": {
+      "name": "Battle Hymn",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 7
+    },
+    "baraddr": {
+      "name": "Barad-dûr",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 12
+    },
+    "beaconoftomorrows": {
+      "name": "Beacon of Tomorrows",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 8
+    },
+    "bezatheboundingspring": {
+      "name": "Beza, the Bounding Spring",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 15
+    },
+    "blazingsunsteel": {
+      "name": "Blazing Sunsteel",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 2
+    },
+    "bloodtribute": {
+      "name": "Blood Tribute",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 4
+    },
+    "bounteouskirin": {
+      "name": "Bounteous Kirin",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 2
+    },
+    "caduceusstaffofhermes": {
+      "name": "Caduceus, Staff of Hermes",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 10
+    },
+    "changelingoutcast": {
+      "name": "Changeling Outcast",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 12
+    },
+    "chevillbaneofmonsters": {
+      "name": "Chevill, Bane of Monsters",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 8
+    },
+    "chromiumthemutable": {
+      "name": "Chromium, the Mutable",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 4
+    },
+    "chronozoa": {
+      "name": "Chronozoa",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 4
+    },
+    "confiscate": {
+      "name": "Confiscate",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 2
+    },
+    "damn": {
+      "name": "Damn",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 60
+    },
+    "darkheartsliver": {
+      "name": "Darkheart Sliver",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 4
+    },
+    "deeprootchampion": {
+      "name": "Deeproot Champion",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 2
+    },
+    "doomsdayspecter": {
+      "name": "Doomsday Specter",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 2
+    },
+    "denyingwind": {
+      "name": "Denying Wind",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 2
+    },
+    "doppelgang": {
+      "name": "Doppelgang",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 28
+    },
+    "dragonbornchampion": {
+      "name": "Dragonborn Champion",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 6
+    },
+    "dranaandlinvala": {
+      "name": "Drana and Linvala",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 13
+    },
+    "drawntogether": {
+      "name": "Drawn Together",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 1
+    },
+    "dromarscavern": {
+      "name": "Dromar's Cavern",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 2
+    },
+    "electrostaticfield": {
+      "name": "Electrostatic Field",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 5
+    },
+    "dumbass": {
+      "name": "Dumb Ass",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 1
+    },
+    "eivorwolfkissed": {
+      "name": "Eivor, Wolf-Kissed",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 10
+    },
+    "elminster": {
+      "name": "Elminster",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 12
+    },
+    "elvisharchdruid": {
+      "name": "Elvish Archdruid",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 44
+    },
+    "endlesssands": {
+      "name": "Endless Sands",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 10
+    },
+    "essenceharvest": {
+      "name": "Essence Harvest",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 3
+    },
+    "faithsreward": {
+      "name": "Faith's Reward",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 6
+    },
+    "fiendartisan": {
+      "name": "Fiend Artisan",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 20
+    },
+    "fullthrottle": {
+      "name": "Full Throttle",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 14
+    },
+    "furybornhellkite": {
+      "name": "Furyborn Hellkite",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 4
+    },
+    "fyndhornelder": {
+      "name": "Fyndhorn Elder",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 4
+    },
+    "gandalfwhiterider": {
+      "name": "Gandalf, White Rider",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 5
+    },
+    "geistofsaintthalia": {
+      "name": "Geist of Saint Thalia",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 8
+    },
+    "genesischamber": {
+      "name": "Genesis Chamber",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 10
+    },
+    "gimlisrecklessmight": {
+      "name": "Gimli's Reckless Might",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 3
+    },
+    "giottkingofthedwarves": {
+      "name": "Giott, King of the Dwarves",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 3
+    },
+    "goblinassassin": {
+      "name": "Goblin Assassin",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 2
+    },
+    "goblinchieftain": {
+      "name": "Goblin Chieftain",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 24
+    },
+    "greatintelligencesplan": {
+      "name": "Great Intelligence's Plan",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-25T06:13:31+00:00",
+      "matches": 3
     }
   },
   "unmatched": {
