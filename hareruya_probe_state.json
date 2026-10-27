@@ -31721,6 +31721,372 @@
       "cashUsd": 7.0,
       "checkedAt": "2026-10-26T19:24:36+00:00",
       "matches": 1
+    },
+    "goblinlore": {
+      "name": "Goblin Lore",
+      "cashUsd": 13.2,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 8
+    },
+    "acquire": {
+      "name": "Acquire",
+      "cashUsd": 9.2,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 10
+    },
+    "overgrownbattlement": {
+      "name": "Overgrown Battlement",
+      "cashUsd": 8.4,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 4
+    },
+    "alisaieleveilleur": {
+      "name": "Alisaie Leveilleur",
+      "cashUsd": 8.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 7
+    },
+    "pashalikmons": {
+      "name": "Pashalik Mons",
+      "cashUsd": 8.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 7
+    },
+    "sazhkatzroy": {
+      "name": "Sazh Katzroy",
+      "cashUsd": 8.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 4
+    },
+    "sephirothonewingedangelemblem": {
+      "name": "Sephiroth, One-Winged Angel Emblem",
+      "cashUsd": 7.8,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 3
+    },
+    "angelofsuffering": {
+      "name": "Angel of Suffering",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 9
+    },
+    "gyomemasterchef": {
+      "name": "Gyome, Master Chef",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 4
+    },
+    "jeskaiascendancy": {
+      "name": "Jeskai Ascendancy",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 10
+    },
+    "kethisthehiddenhand": {
+      "name": "Kethis, the Hidden Hand",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 10
+    },
+    "leylineofabundance": {
+      "name": "Leyline of Abundance",
+      "cashUsd": 7.2,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 14
+    },
+    "smokestack": {
+      "name": "Smokestack",
+      "cashUsd": 7.25,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 8
+    },
+    "unspeakablesymbol": {
+      "name": "Unspeakable Symbol",
+      "cashUsd": 7.2,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 4
+    },
+    "warpingwail": {
+      "name": "Warping Wail",
+      "cashUsd": 7.2,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 11
+    },
+    "ancientcellarspawn": {
+      "name": "Ancient Cellarspawn",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 4
+    },
+    "gamekeeper": {
+      "name": "Gamekeeper",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 2
+    },
+    "forsakenwastes": {
+      "name": "Forsaken Wastes",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 3
+    },
+    "ganaxastralhunter": {
+      "name": "Ganax, Astral Hunter",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 10
+    },
+    "grenzohavocraiser": {
+      "name": "Grenzo, Havoc Raiser",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 7
+    },
+    "greatergargadon": {
+      "name": "Greater Gargadon",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 6
+    },
+    "greengoblinnemesis": {
+      "name": "Green Goblin, Nemesis",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 3
+    },
+    "grimoireofthedead": {
+      "name": "Grimoire of the Dead",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 2
+    },
+    "guttersnipe": {
+      "name": "Guttersnipe",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 40
+    },
+    "gyrudadoomofdepths": {
+      "name": "Gyruda, Doom of Depths",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 13
+    },
+    "highnoon": {
+      "name": "High Noon",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 14
+    },
+    "hondenoflifesweb": {
+      "name": "Honden of Life's Web",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 8
+    },
+    "holyday": {
+      "name": "Holy Day",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 6
+    },
+    "knightofdusk": {
+      "name": "Knight of Dusk",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 2
+    },
+    "ichorclawmyr": {
+      "name": "Ichorclaw Myr",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 4
+    },
+    "kefkadancingmad": {
+      "name": "Kefka, Dancing Mad",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 8
+    },
+    "krarksotherthumb": {
+      "name": "Krark's Other Thumb",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 1
+    },
+    "kykarwindsfury": {
+      "name": "Kykar, Wind's Fury",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 9
+    },
+    "laststand": {
+      "name": "Last Stand",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 8
+    },
+    "leadenmyr": {
+      "name": "Leaden Myr",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 4
+    },
+    "lilianatherepentant": {
+      "name": "Liliana the Repentant",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 4
+    },
+    "maccreadylamplightmayor": {
+      "name": "MacCready, Lamplight Mayor",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 12
+    },
+    "manascrew": {
+      "name": "Mana Screw",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 1
+    },
+    "masumarofirsttolive": {
+      "name": "Masumaro, First to Live",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 2
+    },
+    "masterofthewildhunt": {
+      "name": "Master of the Wild Hunt",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 10
+    },
+    "mavrenfeinduskapostle": {
+      "name": "Mavren Fein, Dusk Apostle",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 8
+    },
+    "mercilessexecutioner": {
+      "name": "Merciless Executioner",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 11
+    },
+    "metamorphose": {
+      "name": "Metamorphose",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 4
+    },
+    "minaanddennwildborn": {
+      "name": "Mina and Denn, Wildborn",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 6
+    },
+    "miragemirror": {
+      "name": "Mirage Mirror",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 11
+    },
+    "misthollowgriffin": {
+      "name": "Misthollow Griffin",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 5
+    },
+    "multiversalpassage": {
+      "name": "Multiversal Passage",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 10
+    },
+    "nekote": {
+      "name": "Neko-Te",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 4
+    },
+    "nettlecyst": {
+      "name": "Nettlecyst",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 14
+    },
+    "omnibian": {
+      "name": "Omnibian",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 5
+    },
+    "overeagerapprentice": {
+      "name": "Overeager Apprentice",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 2
+    },
+    "overgrowth": {
+      "name": "Overgrowth",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 5
+    },
+    "packhunt": {
+      "name": "Pack Hunt",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 14
+    },
+    "painsreward": {
+      "name": "Pain's Reward",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 4
+    },
+    "perplex": {
+      "name": "Perplex",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 7
+    },
+    "priestofurabrask": {
+      "name": "Priest of Urabrask",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 3
+    },
+    "promptoargentum": {
+      "name": "Prompto Argentum",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 3
+    },
+    "professordellianfel": {
+      "name": "Professor Dellian Fel",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 16
+    },
+    "proteanhydra": {
+      "name": "Protean Hydra",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 7
+    },
+    "rainoftears": {
+      "name": "Rain of Tears",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 4
+    },
+    "rakdosthemuscle": {
+      "name": "Rakdos, the Muscle",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T06:21:41+00:00",
+      "matches": 11
     }
   },
   "unmatched": {
