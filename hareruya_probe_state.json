@@ -32087,6 +32087,342 @@
       "cashUsd": 7.0,
       "checkedAt": "2026-10-27T06:21:41+00:00",
       "matches": 11
+    },
+    "chandradressedtokill": {
+      "name": "Chandra, Dressed to Kill",
+      "cashUsd": 10.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 14
+    },
+    "riverbear": {
+      "name": "River Bear",
+      "cashUsd": 8.4,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 5
+    },
+    "bondofagony": {
+      "name": "Bond of Agony",
+      "cashUsd": 7.8,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 2
+    },
+    "ingotchewer": {
+      "name": "Ingot Chewer",
+      "cashUsd": 7.8,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 2
+    },
+    "llanowarreborn": {
+      "name": "Llanowar Reborn",
+      "cashUsd": 7.8,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 2
+    },
+    "direundercurrents": {
+      "name": "Dire Undercurrents",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 5
+    },
+    "stunningreversal": {
+      "name": "Stunning Reversal",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 4
+    },
+    "verdantsunsavatar": {
+      "name": "Verdant Sun's Avatar",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 4
+    },
+    "rancidearth": {
+      "name": "Rancid Earth",
+      "cashUsd": 7.2,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 2
+    },
+    "ramosianskymarshal": {
+      "name": "Ramosian Sky Marshal",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 2
+    },
+    "righteousfury": {
+      "name": "Righteous Fury",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 4
+    },
+    "riteofreplication": {
+      "name": "Rite of Replication",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 10
+    },
+    "rootboundcrag": {
+      "name": "Rootbound Crag",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 53
+    },
+    "rootpathpurifier": {
+      "name": "Rootpath Purifier",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 8
+    },
+    "ruleoflaw": {
+      "name": "Rule of Law",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 8
+    },
+    "ruxapatientprofessor": {
+      "name": "Ruxa, Patient Professor",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 4
+    },
+    "saimasterthopterist": {
+      "name": "Sai, Master Thopterist",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 10
+    },
+    "sailmonger": {
+      "name": "Sailmonger",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 2
+    },
+    "samuthazoretschampion": {
+      "name": "Samut, Hazoret's Champion",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 12
+    },
+    "secretbase": {
+      "name": "Secret Base",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 5
+    },
+    "seraphsanctuary": {
+      "name": "Seraph Sanctuary",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 12
+    },
+    "shalaiandhallar": {
+      "name": "Shalai and Hallar",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 8
+    },
+    "silentspecter": {
+      "name": "Silent Specter",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 3
+    },
+    "skitterbeambattalion": {
+      "name": "Skitterbeam Battalion",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 6
+    },
+    "skullbriarthewalkinggrave": {
+      "name": "Skullbriar, the Walking Grave",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 5
+    },
+    "skullsnatcher": {
+      "name": "Skullsnatcher",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 2
+    },
+    "slipperybogle": {
+      "name": "Slippery Bogle",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 13
+    },
+    "snag": {
+      "name": "Snag",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 4
+    },
+    "soldeviexcavations": {
+      "name": "Soldevi Excavations",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 1
+    },
+    "solvetheequation": {
+      "name": "Solve the Equation",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 7
+    },
+    "spidermanmilesmorales": {
+      "name": "Spider-Man, Miles Morales",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 19
+    },
+    "stalwartshieldbearers": {
+      "name": "Stalwart Shield-Bearers",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 4
+    },
+    "starwinder": {
+      "name": "Starwinder",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 13
+    },
+    "stonehewergiant": {
+      "name": "Stonehewer Giant",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 13
+    },
+    "sythisharvestshand": {
+      "name": "Sythis, Harvest's Hand",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 13
+    },
+    "talismanofresilience": {
+      "name": "Talisman of Resilience",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 26
+    },
+    "thatwhichwastaken": {
+      "name": "That Which Was Taken",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 4
+    },
+    "thecircleofloyalty": {
+      "name": "The Circle of Loyalty",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 5
+    },
+    "themycosynthgardens": {
+      "name": "The Mycosynth Gardens",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 16
+    },
+    "treefolkharbinger": {
+      "name": "Treefolk Harbinger",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 3
+    },
+    "turbulentfen": {
+      "name": "Turbulent Fen",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 4
+    },
+    "turbulentmoor": {
+      "name": "Turbulent Moor",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 4
+    },
+    "turbulentsprings": {
+      "name": "Turbulent Springs",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 4
+    },
+    "unmarkedgrave": {
+      "name": "Unmarked Grave",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 14
+    },
+    "urdrago": {
+      "name": "Ur-Drago",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 27
+    },
+    "veritycircle": {
+      "name": "Verity Circle",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 3
+    },
+    "vhatiildal": {
+      "name": "Vhati il-Dal",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 2
+    },
+    "viraldrake": {
+      "name": "Viral Drake",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 5
+    },
+    "vnwxtverbosehost": {
+      "name": "Vnwxt, Verbose Host",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 5
+    },
+    "wayfarersbauble": {
+      "name": "Wayfarer's Bauble",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 14
+    },
+    "wheeloftorture": {
+      "name": "Wheel of Torture",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 2
+    },
+    "weepingangel": {
+      "name": "Weeping Angel",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 15
+    },
+    "widespreadbrutality": {
+      "name": "Widespread Brutality",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 2
+    },
+    "worrybeads": {
+      "name": "Worry Beads",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 2
+    },
+    "wornpowerstone": {
+      "name": "Worn Powerstone",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 8
+    },
+    "wrathfulraptors": {
+      "name": "Wrathful Raptors",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-27T18:45:54+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
