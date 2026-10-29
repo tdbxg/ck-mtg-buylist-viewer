@@ -33401,6 +33401,318 @@
       "cashUsd": 6.5,
       "checkedAt": "2026-10-29T07:11:17+00:00",
       "matches": 3
+    },
+    "archmageemeritus": {
+      "name": "Archmage Emeritus",
+      "cashUsd": 6.6,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 19
+    },
+    "mistformskyreaver": {
+      "name": "Mistform Skyreaver",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 2
+    },
+    "morselhoarder": {
+      "name": "Morselhoarder",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 2
+    },
+    "mossbridgetroll": {
+      "name": "Mossbridge Troll",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 3
+    },
+    "multiversalrecruitment": {
+      "name": "Multiversal Recruitment",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 4
+    },
+    "mutationaladvantage": {
+      "name": "Mutational Advantage",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 14
+    },
+    "myojinofcleansingfire": {
+      "name": "Myojin of Cleansing Fire",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 4
+    },
+    "myr": {
+      "name": "Myr",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 60
+    },
+    "mysticmonastery": {
+      "name": "Mystic Monastery",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 7
+    },
+    "necropolisregent": {
+      "name": "Necropolis Regent",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 2
+    },
+    "nantukocultivator": {
+      "name": "Nantuko Cultivator",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 2
+    },
+    "neverendingtorment": {
+      "name": "Neverending Torment",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 2
+    },
+    "norestforthewicked": {
+      "name": "No Rest for the Wicked",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 2
+    },
+    "notoriousassassin": {
+      "name": "Notorious Assassin",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 2
+    },
+    "nyleakeeneyed": {
+      "name": "Nylea, Keen-Eyed",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 14
+    },
+    "oboshthepreypiercer": {
+      "name": "Obosh, the Preypiercer",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 5
+    },
+    "obzedatghostcouncil": {
+      "name": "Obzedat, Ghost Council",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 5
+    },
+    "orvartheallform": {
+      "name": "Orvar, the All-Form",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 16
+    },
+    "pactweapon": {
+      "name": "Pact Weapon",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 6
+    },
+    "parkheightsmaverick": {
+      "name": "Park Heights Maverick",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 6
+    },
+    "phyrexianinfiltrator": {
+      "name": "Phyrexian Infiltrator",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 2
+    },
+    "possessedaven": {
+      "name": "Possessed Aven",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 2
+    },
+    "piannanomadcaptain": {
+      "name": "Pianna, Nomad Captain",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 2
+    },
+    "pirswhim": {
+      "name": "Pir's Whim",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 4
+    },
+    "raubahnbullofalamhigo": {
+      "name": "Raubahn, Bull of Ala Mhigo",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 13
+    },
+    "possibilitystorm": {
+      "name": "Possibility Storm",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 5
+    },
+    "ragereflection": {
+      "name": "Rage Reflection",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 6
+    },
+    "riddlekeeper": {
+      "name": "Riddlekeeper",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 3
+    },
+    "restock": {
+      "name": "Restock",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 2
+    },
+    "rhoxfaithmender": {
+      "name": "Rhox Faithmender",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 9
+    },
+    "rofellos": {
+      "name": "Rofellos",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 7
+    },
+    "rowanscionofwar": {
+      "name": "Rowan, Scion of War",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 11
+    },
+    "ruthlesstechnomancer": {
+      "name": "Ruthless Technomancer",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 8
+    },
+    "sanctumofall": {
+      "name": "Sanctum of All",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 12
+    },
+    "scoutingtrek": {
+      "name": "Scouting Trek",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 2
+    },
+    "sapphireleech": {
+      "name": "Sapphire Leech",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 2
+    },
+    "seiferalmasy": {
+      "name": "Seifer Almasy",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 9
+    },
+    "seismicmage": {
+      "name": "Seismic Mage",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 2
+    },
+    "sharedroots": {
+      "name": "Shared Roots",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 4
+    },
+    "sidarkondo": {
+      "name": "Sidar Kondo",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 2
+    },
+    "skyfirekirin": {
+      "name": "Skyfire Kirin",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 2
+    },
+    "sigardachampionoflight": {
+      "name": "Sigarda, Champion of Light",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 7
+    },
+    "songofcreation": {
+      "name": "Song of Creation",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 9
+    },
+    "summonvalefor": {
+      "name": "Summon: Valefor",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 7
+    },
+    "surgeofbrilliance": {
+      "name": "Surge of Brilliance",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 4
+    },
+    "sylvanscavenging": {
+      "name": "Sylvan Scavenging",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 3
+    },
+    "svyelunofseaandsky": {
+      "name": "Svyelun of Sea and Sky",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 16
+    },
+    "taintedremedy": {
+      "name": "Tainted Remedy",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 3
+    },
+    "tannuksteadfastsecond": {
+      "name": "Tannuk, Steadfast Second",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 14
+    },
+    "taroxbladewing": {
+      "name": "Tarox Bladewing",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 2
+    },
+    "tauntingelf": {
+      "name": "Taunting Elf",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 4
+    },
+    "tezzeretagentofbolas": {
+      "name": "Tezzeret, Agent of Bolas",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T19:00:14+00:00",
+      "matches": 7
     }
   },
   "unmatched": {
