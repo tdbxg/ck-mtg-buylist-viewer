@@ -33089,6 +33089,318 @@
       "cashUsd": 6.5,
       "checkedAt": "2026-10-28T18:59:55+00:00",
       "matches": 9
+    },
+    "slimefootthestowaway": {
+      "name": "Slimefoot, the Stowaway",
+      "cashUsd": 8.0,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 4
+    },
+    "ghirapurorrery": {
+      "name": "Ghirapur Orrery",
+      "cashUsd": 7.8,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 5
+    },
+    "packrat": {
+      "name": "Pack Rat",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 19
+    },
+    "retether": {
+      "name": "Retether",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 6
+    },
+    "hoptoit": {
+      "name": "Hop to It",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 2
+    },
+    "sawinhalf": {
+      "name": "Saw in Half",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 11
+    },
+    "gontisaetherheart": {
+      "name": "Gonti's Aether Heart",
+      "cashUsd": 6.9,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 5
+    },
+    "jeskairevelation": {
+      "name": "Jeskai Revelation",
+      "cashUsd": 6.9,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 14
+    },
+    "obekabrutechronologist": {
+      "name": "Obeka, Brute Chronologist",
+      "cashUsd": 6.9,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 2
+    },
+    "zndrsplteyeofwisdom": {
+      "name": "Zndrsplt, Eye of Wisdom",
+      "cashUsd": 6.9,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 7
+    },
+    "arachnogenesis": {
+      "name": "Arachnogenesis",
+      "cashUsd": 6.8,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 19
+    },
+    "tatsumasathedragonsfang": {
+      "name": "Tatsumasa, the Dragon's Fang",
+      "cashUsd": 6.8,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 4
+    },
+    "ravossoultender": {
+      "name": "Ravos, Soultender",
+      "cashUsd": 6.75,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 4
+    },
+    "deathsshadow": {
+      "name": "Death's Shadow",
+      "cashUsd": 6.6,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 21
+    },
+    "dreadreturn": {
+      "name": "Dread Return",
+      "cashUsd": 6.6,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 11
+    },
+    "swingingship": {
+      "name": "Swinging Ship",
+      "cashUsd": 6.6,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 2
+    },
+    "opportunity": {
+      "name": "Opportunity",
+      "cashUsd": 6.6,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 4
+    },
+    "wingrattlescarecrow": {
+      "name": "Wingrattle Scarecrow",
+      "cashUsd": 6.6,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 2
+    },
+    "admiralbeckettbrass": {
+      "name": "Admiral Beckett Brass",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 7
+    },
+    "bittertriumph": {
+      "name": "Bitter Triumph",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 13
+    },
+    "brotherhoodsend": {
+      "name": "Brotherhood's End",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 22
+    },
+    "enslaveddwarf": {
+      "name": "Enslaved Dwarf",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 2
+    },
+    "falsedawn": {
+      "name": "False Dawn",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 2
+    },
+    "forethoughtamulet": {
+      "name": "Forethought Amulet",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 1
+    },
+    "fracture": {
+      "name": "Fracture",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 60
+    },
+    "funeralcharm": {
+      "name": "Funeral Charm",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 5
+    },
+    "generouspup": {
+      "name": "Generous Pup",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 2
+    },
+    "germinationpracticum": {
+      "name": "Germination Practicum",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 14
+    },
+    "ghostlypilferer": {
+      "name": "Ghostly Pilferer",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 14
+    },
+    "ghoulishimpetus": {
+      "name": "Ghoulish Impetus",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 7
+    },
+    "gilgameshmasteratarms": {
+      "name": "Gilgamesh, Master-at-Arms",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 9
+    },
+    "goblingangleader": {
+      "name": "Goblin Gang Leader",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 1
+    },
+    "hanna": {
+      "name": "Hanna",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 13
+    },
+    "harmonicsliver": {
+      "name": "Harmonic Sliver",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 5
+    },
+    "heartmender": {
+      "name": "Heartmender",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 1
+    },
+    "hissingquagmire": {
+      "name": "Hissing Quagmire",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 7
+    },
+    "infernaltutor": {
+      "name": "Infernal Tutor",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 13
+    },
+    "hondenofcleansingfire": {
+      "name": "Honden of Cleansing Fire",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 8
+    },
+    "kaitoshizuki": {
+      "name": "Kaito Shizuki",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 24
+    },
+    "kellanthekid": {
+      "name": "Kellan, the Kid",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 8
+    },
+    "kavaronmemorialworld": {
+      "name": "Kavaron, Memorial World",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 10
+    },
+    "kirtarswrath": {
+      "name": "Kirtar's Wrath",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 2
+    },
+    "krosanrestorer": {
+      "name": "Krosan Restorer",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 2
+    },
+    "knightoftheebonlegion": {
+      "name": "Knight of the Ebon Legion",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 6
+    },
+    "leylineoftheguildpact": {
+      "name": "Leyline of the Guildpact",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 14
+    },
+    "magicalhacker": {
+      "name": "Magical Hacker",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 1
+    },
+    "lichsmirror": {
+      "name": "Lich's Mirror",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 5
+    },
+    "lotusguardian": {
+      "name": "Lotus Guardian",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 2
+    },
+    "marchofthemachines": {
+      "name": "March of the Machines",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 4
+    },
+    "massmanipulation": {
+      "name": "Mass Manipulation",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 5
+    },
+    "merfolksovereign": {
+      "name": "Merfolk Sovereign",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 3
+    },
+    "minelayer": {
+      "name": "Mine Layer",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-29T07:11:17+00:00",
+      "matches": 3
     }
   },
   "unmatched": {
