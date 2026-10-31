@@ -34313,6 +34313,306 @@
       "cashUsd": 6.0,
       "checkedAt": "2026-10-30T18:41:10+00:00",
       "matches": 3
+    },
+    "volcanicspray": {
+      "name": "Volcanic Spray",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 2
+    },
+    "skycloudegg": {
+      "name": "Skycloud Egg",
+      "cashUsd": 8.5,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 2
+    },
+    "maeveinsidioussinger": {
+      "name": "Maeve, Insidious Singer",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 2
+    },
+    "zombify": {
+      "name": "Zombify",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 12
+    },
+    "cursedmirror": {
+      "name": "Cursed Mirror",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 24
+    },
+    "zoologist": {
+      "name": "Zoologist",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 13
+    },
+    "shikoparagonoftheway": {
+      "name": "Shiko, Paragon of the Way",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 18
+    },
+    "soddenverdure": {
+      "name": "Sodden Verdure",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 6
+    },
+    "freneticefreet": {
+      "name": "Frenetic Efreet",
+      "cashUsd": 6.4,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 4
+    },
+    "spiritofthenight": {
+      "name": "Spirit of the Night",
+      "cashUsd": 6.4,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 3
+    },
+    "theooze": {
+      "name": "The Ooze",
+      "cashUsd": 6.4,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 28
+    },
+    "auraflux": {
+      "name": "Aura Flux",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 2
+    },
+    "breathweapon": {
+      "name": "Breath Weapon",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 5
+    },
+    "chimericidol": {
+      "name": "Chimeric Idol",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 2
+    },
+    "crowstorm": {
+      "name": "Crow Storm",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 4
+    },
+    "dampingmatrix": {
+      "name": "Damping Matrix",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 8
+    },
+    "darettiscrapsavant": {
+      "name": "Daretti, Scrap Savant",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 9
+    },
+    "darkwateregg": {
+      "name": "Darkwater Egg",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 2
+    },
+    "deepwoodelder": {
+      "name": "Deepwood Elder",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 2
+    },
+    "despark": {
+      "name": "Despark",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 10
+    },
+    "diffusionsliver": {
+      "name": "Diffusion Sliver",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 5
+    },
+    "dog": {
+      "name": "Dog",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 46
+    },
+    "dustelemental": {
+      "name": "Dust Elemental",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 2
+    },
+    "dragonturtle": {
+      "name": "Dragon Turtle",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 3
+    },
+    "drogskolreaver": {
+      "name": "Drogskol Reaver",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 7
+    },
+    "experimentalconfectioner": {
+      "name": "Experimental Confectioner",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 4
+    },
+    "exquisitefirecraft": {
+      "name": "Exquisite Firecraft",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 6
+    },
+    "faerieseer": {
+      "name": "Faerie Seer",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 7
+    },
+    "exterminate": {
+      "name": "Exterminate!",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 1
+    },
+    "famishedworldsire": {
+      "name": "Famished Worldsire",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 14
+    },
+    "firebenderascension": {
+      "name": "Firebender Ascension",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 6
+    },
+    "fieldsofsummer": {
+      "name": "Fields of Summer",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 1
+    },
+    "flameshadowconjuring": {
+      "name": "Flameshadow Conjuring",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 4
+    },
+    "ghostspidergwenstacy": {
+      "name": "Ghost-Spider, Gwen Stacy",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 18
+    },
+    "galadrielgiftgiver": {
+      "name": "Galadriel, Gift-Giver",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 4
+    },
+    "gildedgoose": {
+      "name": "Gilded Goose",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 29
+    },
+    "glissasunslayer": {
+      "name": "Glissa Sunslayer",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 14
+    },
+    "glinteyenephilim": {
+      "name": "Glint-Eye Nephilim",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 2
+    },
+    "glindwarfemissary": {
+      "name": "Glóin, Dwarf Emissary",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 7
+    },
+    "goblintrenches": {
+      "name": "Goblin Trenches",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 2
+    },
+    "goblinbushwhacker": {
+      "name": "Goblin Bushwhacker",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 10
+    },
+    "hammermage": {
+      "name": "Hammer Mage",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 2
+    },
+    "grmasarumansfootman": {
+      "name": "Gríma, Saruman's Footman",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 12
+    },
+    "guideofsouls": {
+      "name": "Guide of Souls",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 14
+    },
+    "harshmercy": {
+      "name": "Harsh Mercy",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 4
+    },
+    "havengullich": {
+      "name": "Havengul Lich",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 2
+    },
+    "hazoretsmonument": {
+      "name": "Hazoret's Monument",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 7
+    },
+    "heliodgodofthesun": {
+      "name": "Heliod, God of the Sun",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 7
+    },
+    "hordewingskaab": {
+      "name": "Hordewing Skaab",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 4
+    },
+    "intoodeep": {
+      "name": "In Too Deep",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-10-31T07:03:50+00:00",
+      "matches": 3
     }
   },
   "unmatched": {
