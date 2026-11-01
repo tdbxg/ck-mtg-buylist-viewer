@@ -34889,6 +34889,270 @@
       "cashUsd": 6.0,
       "checkedAt": "2026-10-31T17:48:15+00:00",
       "matches": 16
+    },
+    "hanskslayerzealot": {
+      "name": "Hansk, Slayer Zealot",
+      "cashUsd": 7.25,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 1
+    },
+    "treasurechest": {
+      "name": "Treasure Chest",
+      "cashUsd": 6.9,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 3
+    },
+    "liberateddwarf": {
+      "name": "Liberated Dwarf",
+      "cashUsd": 6.8,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 2
+    },
+    "phyresis": {
+      "name": "Phyresis",
+      "cashUsd": 6.8,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 9
+    },
+    "ajanisleeperagent": {
+      "name": "Ajani, Sleeper Agent",
+      "cashUsd": 6.6,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 14
+    },
+    "paradoxhaze": {
+      "name": "Paradox Haze",
+      "cashUsd": 6.6,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 7
+    },
+    "lightninghelix": {
+      "name": "Lightning Helix",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 20
+    },
+    "bringtolight": {
+      "name": "Bring to Light",
+      "cashUsd": 6.4,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 8
+    },
+    "acquiredmutation": {
+      "name": "Acquired Mutation",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 5
+    },
+    "ancestralstatue": {
+      "name": "Ancestral Statue",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 2
+    },
+    "demigodofrevenge": {
+      "name": "Demigod of Revenge",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 5
+    },
+    "dwarvengrunt": {
+      "name": "Dwarven Grunt",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 2
+    },
+    "echoingtruth": {
+      "name": "Echoing Truth",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 4
+    },
+    "fatass": {
+      "name": "Fat Ass",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 1
+    },
+    "goddriccloakedreveler": {
+      "name": "Goddric, Cloaked Reveler",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 2
+    },
+    "pirimaginativerascal": {
+      "name": "Pir, Imaginative Rascal",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 7
+    },
+    "phyrexiantriniform": {
+      "name": "Phyrexian Triniform",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 5
+    },
+    "prewarformalwear": {
+      "name": "Pre-War Formalwear",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 14
+    },
+    "planarchaos": {
+      "name": "Planar Chaos",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 18
+    },
+    "pleaforpower": {
+      "name": "Plea for Power",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 3
+    },
+    "prideoflions": {
+      "name": "Pride of Lions",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 2
+    },
+    "primordialsage": {
+      "name": "Primordial Sage",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 2
+    },
+    "purphorosbronzeblooded": {
+      "name": "Purphoros, Bronze-Blooded",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 13
+    },
+    "ralzarekguestlecturer": {
+      "name": "Ral Zarek, Guest Lecturer",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 14
+    },
+    "rammasechorancientshield": {
+      "name": "Rammas Echor, Ancient Shield",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 3
+    },
+    "realitysmasher": {
+      "name": "Reality Smasher",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 8
+    },
+    "redxiiiproudwarrior": {
+      "name": "Red XIII, Proud Warrior",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 7
+    },
+    "reverence": {
+      "name": "Reverence",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 6
+    },
+    "rocketpoweredturboslug": {
+      "name": "Rocket-Powered Turbo Slug",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 2
+    },
+    "rootsliver": {
+      "name": "Root Sliver",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 6
+    },
+    "ruination": {
+      "name": "Ruination",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 8
+    },
+    "rundvelthordemaster": {
+      "name": "Rundvelt Hordemaster",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 9
+    },
+    "samiteelder": {
+      "name": "Samite Elder",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 2
+    },
+    "saprazzanbailiff": {
+      "name": "Saprazzan Bailiff",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 2
+    },
+    "sarahjanesmith": {
+      "name": "Sarah Jane Smith",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 8
+    },
+    "sarulicaretaker": {
+      "name": "Saruli Caretaker",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 2
+    },
+    "serrasembrace": {
+      "name": "Serra's Embrace",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 4
+    },
+    "sethronhurloongeneral": {
+      "name": "Sethron, Hurloon General",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 1
+    },
+    "shaperssanctuary": {
+      "name": "Shapers' Sanctuary",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 8
+    },
+    "sicarianinfiltrator": {
+      "name": "Sicarian Infiltrator",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 6
+    },
+    "shivanphoenix": {
+      "name": "Shivan Phoenix",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 2
+    },
+    "sigiloftheemptythrone": {
+      "name": "Sigil of the Empty Throne",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 6
+    },
+    "silvercladferocidons": {
+      "name": "Silverclad Ferocidons",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 10
+    },
+    "sivvisvalor": {
+      "name": "Sivvi's Valor",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T07:38:11+00:00",
+      "matches": 2
     }
   },
   "unmatched": {
