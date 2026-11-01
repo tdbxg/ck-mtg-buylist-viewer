@@ -35153,6 +35153,258 @@
       "cashUsd": 6.0,
       "checkedAt": "2026-11-01T07:38:11+00:00",
       "matches": 2
+    },
+    "khalnigarden": {
+      "name": "Khalni Garden",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 15
+    },
+    "soullessone": {
+      "name": "Soulless One",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 17
+    },
+    "frenziedbaloth": {
+      "name": "Frenzied Baloth",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 14
+    },
+    "skulloform": {
+      "name": "Skull of Orm",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 4
+    },
+    "skyshroudbehemoth": {
+      "name": "Skyshroud Behemoth",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 2
+    },
+    "slaughterspecialist": {
+      "name": "Slaughter Specialist",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 8
+    },
+    "snapdaxapexofthehunt": {
+      "name": "Snapdax, Apex of the Hunt",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 7
+    },
+    "spawnbedprotector": {
+      "name": "Spawnbed Protector",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 2
+    },
+    "spectraward": {
+      "name": "Spectra Ward",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 3
+    },
+    "standardize": {
+      "name": "Standardize",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 2
+    },
+    "stangg": {
+      "name": "Stangg",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 1
+    },
+    "starnheimunleashed": {
+      "name": "Starnheim Unleashed",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 8
+    },
+    "stillmooncavalier": {
+      "name": "Stillmoon Cavalier",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 4
+    },
+    "stoicangel": {
+      "name": "Stoic Angel",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 3
+    },
+    "stranglehold": {
+      "name": "Stranglehold",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 6
+    },
+    "struggleforprojectpurity": {
+      "name": "Struggle for Project Purity",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 12
+    },
+    "suddenimpact": {
+      "name": "Sudden Impact",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 2
+    },
+    "suffocatingblast": {
+      "name": "Suffocating Blast",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 2
+    },
+    "sunbakedcanyon": {
+      "name": "Sunbaked Canyon",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 24
+    },
+    "teferitemporalarchmage": {
+      "name": "Teferi, Temporal Archmage",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 7
+    },
+    "surtrfieryjtun": {
+      "name": "Surtr, Fiery Jötun",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 1
+    },
+    "temptwithbunnies": {
+      "name": "Tempt with Bunnies",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 4
+    },
+    "thebattleofbywater": {
+      "name": "The Battle of Bywater",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 11
+    },
+    "terraeternal": {
+      "name": "Terra Eternal",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 3
+    },
+    "thecelestus": {
+      "name": "The Celestus",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 9
+    },
+    "theseventhdoctor": {
+      "name": "The Seventh Doctor",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 3
+    },
+    "themillenniumcalendar": {
+      "name": "The Millennium Calendar",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 9
+    },
+    "thesoundofdrums": {
+      "name": "The Sound of Drums",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 12
+    },
+    "timebeetle": {
+      "name": "Time Beetle",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 2
+    },
+    "timestreamnavigator": {
+      "name": "Timestream Navigator",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 8
+    },
+    "titanothrex": {
+      "name": "Titanoth Rex",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 4
+    },
+    "tomorrowazamisfamiliar": {
+      "name": "Tomorrow, Azami's Familiar",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 2
+    },
+    "togglodyte": {
+      "name": "Togglodyte",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 1
+    },
+    "twentytoedtoad": {
+      "name": "Twenty-Toed Toad",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 5
+    },
+    "unstoppableplan": {
+      "name": "Unstoppable Plan",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 16
+    },
+    "urzasarmor": {
+      "name": "Urza's Armor",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 2
+    },
+    "urzasmiter": {
+      "name": "Urza's Miter",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 1
+    },
+    "verdantsuccession": {
+      "name": "Verdant Succession",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 2
+    },
+    "vraskagolgariqueenemblem": {
+      "name": "Vraska, Golgari Queen Emblem",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 1
+    },
+    "visionskeins": {
+      "name": "Vision Skeins",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 2
+    },
+    "walkerofsecretways": {
+      "name": "Walker of Secret Ways",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 6
+    },
+    "whirlwindofthought": {
+      "name": "Whirlwind of Thought",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-01T18:28:48+00:00",
+      "matches": 3
     }
   },
   "unmatched": {
