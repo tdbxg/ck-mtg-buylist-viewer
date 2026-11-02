@@ -35861,6 +35861,216 @@
       "cashUsd": 5.5,
       "checkedAt": "2026-11-02T17:21:52+00:00",
       "matches": 3
+    },
+    "rayfilletwavewarrior": {
+      "name": "Ray Fillet, Wave Warrior",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 3
+    },
+    "gethsgrimoire": {
+      "name": "Geth's Grimoire",
+      "cashUsd": 6.4,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 6
+    },
+    "galadrielelvenqueen": {
+      "name": "Galadriel, Elven-Queen",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 4
+    },
+    "protectorofthecrown": {
+      "name": "Protector of the Crown",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 2
+    },
+    "saprolinginfestation": {
+      "name": "Saproling Infestation",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 2
+    },
+    "rubydaringtracker": {
+      "name": "Ruby, Daring Tracker",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 1
+    },
+    "cleansing": {
+      "name": "Cleansing",
+      "cashUsd": 5.75,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 37
+    },
+    "hellishrebuke": {
+      "name": "Hellish Rebuke",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 6
+    },
+    "liesashroudofdusk": {
+      "name": "Liesa, Shroud of Dusk",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 6
+    },
+    "bubblematrix": {
+      "name": "Bubble Matrix",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 2
+    },
+    "cavalierofgales": {
+      "name": "Cavalier of Gales",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 12
+    },
+    "celestialkirin": {
+      "name": "Celestial Kirin",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 4
+    },
+    "choarrimbruiser": {
+      "name": "Cho-Arrim Bruiser",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 2
+    },
+    "chulanetelleroftales": {
+      "name": "Chulane, Teller of Tales",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 8
+    },
+    "collectorprotector": {
+      "name": "Collector Protector",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 1
+    },
+    "collectorscage": {
+      "name": "Collector's Cage",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 16
+    },
+    "colossification": {
+      "name": "Colossification",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 7
+    },
+    "comeuppance": {
+      "name": "Comeuppance",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 8
+    },
+    "commanderssphere": {
+      "name": "Commander's Sphere",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 12
+    },
+    "concertedeffort": {
+      "name": "Concerted Effort",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 8
+    },
+    "consumingaberration": {
+      "name": "Consuming Aberration",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 5
+    },
+    "contentiousplan": {
+      "name": "Contentious Plan",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 3
+    },
+    "corpseharvester": {
+      "name": "Corpse Harvester",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 3
+    },
+    "cremate": {
+      "name": "Cremate",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 4
+    },
+    "cryptbreaker": {
+      "name": "Cryptbreaker",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 4
+    },
+    "curseofvengeance": {
+      "name": "Curse of Vengeance",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 2
+    },
+    "deadbridgechant": {
+      "name": "Deadbridge Chant",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 2
+    },
+    "defilerofsouls": {
+      "name": "Defiler of Souls",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 3
+    },
+    "desecratereality": {
+      "name": "Desecrate Reality",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 6
+    },
+    "direfleetpoisoner": {
+      "name": "Dire Fleet Poisoner",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 4
+    },
+    "duelistsflame": {
+      "name": "Duelist's Flame",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 4
+    },
+    "earthshape": {
+      "name": "Earthshape",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 3
+    },
+    "echoesofeternity": {
+      "name": "Echoes of Eternity",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 8
+    },
+    "ellywicktumblestrum": {
+      "name": "Ellywick Tumblestrum",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 7
+    },
+    "elvishclancaller": {
+      "name": "Elvish Clancaller",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T22:24:48+00:00",
+      "matches": 5
     }
   },
   "unmatched": {
