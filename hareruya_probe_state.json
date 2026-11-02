@@ -35405,6 +35405,240 @@
       "cashUsd": 6.0,
       "checkedAt": "2026-11-01T18:28:48+00:00",
       "matches": 3
+    },
+    "sylvanparadise": {
+      "name": "Sylvan Paradise",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 1
+    },
+    "mageslayer": {
+      "name": "Mage Slayer",
+      "cashUsd": 7.2,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 3
+    },
+    "loreholdthehistorian": {
+      "name": "Lorehold, the Historian",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 12
+    },
+    "whipcorder": {
+      "name": "Whipcorder",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 5
+    },
+    "darkmattermanipulator": {
+      "name": "Dark Matter Manipulator",
+      "cashUsd": 6.6,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 12
+    },
+    "gempalmpolluter": {
+      "name": "Gempalm Polluter",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 2
+    },
+    "nornschoirmaster": {
+      "name": "Norn's Choirmaster",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 5
+    },
+    "hakbalofthesurgingsoul": {
+      "name": "Hakbal of the Surging Soul",
+      "cashUsd": 6.4,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 6
+    },
+    "maraudingknight": {
+      "name": "Marauding Knight",
+      "cashUsd": 6.4,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 2
+    },
+    "ringwraiths": {
+      "name": "Ringwraiths",
+      "cashUsd": 6.4,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 3
+    },
+    "springleafparade": {
+      "name": "Springleaf Parade",
+      "cashUsd": 6.4,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 4
+    },
+    "cruelbargain": {
+      "name": "Cruel Bargain",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 2
+    },
+    "everythingcomestodust": {
+      "name": "Everything Comes to Dust",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 12
+    },
+    "kenessospriestofthassa": {
+      "name": "Kenessos, Priest of Thassa",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 2
+    },
+    "psychosiscrawler": {
+      "name": "Psychosis Crawler",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 16
+    },
+    "silverknight": {
+      "name": "Silver Knight",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 8
+    },
+    "witheringboon": {
+      "name": "Withering Boon",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 2
+    },
+    "winddrake": {
+      "name": "Wind Drake",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 2
+    },
+    "yevanaturesherald": {
+      "name": "Yeva, Nature's Herald",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 6
+    },
+    "zetalpaprimaldawn": {
+      "name": "Zetalpa, Primal Dawn",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 11
+    },
+    "axelrodgunnarson": {
+      "name": "Axelrod Gunnarson",
+      "cashUsd": 5.75,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 2
+    },
+    "frombeyond": {
+      "name": "From Beyond",
+      "cashUsd": 5.75,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 19
+    },
+    "artisanofkozilek": {
+      "name": "Artisan of Kozilek",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 4
+    },
+    "aylieternalpilgrim": {
+      "name": "Ayli, Eternal Pilgrim",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 3
+    },
+    "blossomingtortoise": {
+      "name": "Blossoming Tortoise",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 14
+    },
+    "chandraacolyteofflame": {
+      "name": "Chandra, Acolyte of Flame",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 4
+    },
+    "chaosdragon": {
+      "name": "Chaos Dragon",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 6
+    },
+    "chokedestuary": {
+      "name": "Choked Estuary",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 9
+    },
+    "devourerofdestiny": {
+      "name": "Devourer of Destiny",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 6
+    },
+    "dragonelemental": {
+      "name": "Dragon Elemental",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 4
+    },
+    "dragonlordojutai": {
+      "name": "Dragonlord Ojutai",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 10
+    },
+    "grimharuspex": {
+      "name": "Grim Haruspex",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 11
+    },
+    "fountainport": {
+      "name": "Fountainport",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 17
+    },
+    "hydroidkrasis": {
+      "name": "Hydroid Krasis",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 9
+    },
+    "mathisesurgechanneler": {
+      "name": "Mathise, Surge Channeler",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 1
+    },
+    "majesticgenesis": {
+      "name": "Majestic Genesis",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 10
+    },
+    "selflesssavior": {
+      "name": "Selfless Savior",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 6
+    },
+    "songofthedryads": {
+      "name": "Song of the Dryads",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 12
+    },
+    "teferisagelessinsightteferisagelessinsight": {
+      "name": "Teferi's Ageless Insight // Teferi's Ageless Insight",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T07:45:42+00:00",
+      "matches": 2
     }
   },
   "unmatched": {
