@@ -35639,6 +35639,228 @@
       "cashUsd": 5.7,
       "checkedAt": "2026-11-02T07:45:42+00:00",
       "matches": 2
+    },
+    "vampirecutthroat": {
+      "name": "Vampire Cutthroat",
+      "cashUsd": 6.6,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 3
+    },
+    "winterblast": {
+      "name": "Winter Blast",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 1
+    },
+    "courtofembereth": {
+      "name": "Court of Embereth",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 7
+    },
+    "hypergenesis": {
+      "name": "Hypergenesis",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 6
+    },
+    "smagolhelpfulguide": {
+      "name": "Sméagol, Helpful Guide",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 4
+    },
+    "thiefofblood": {
+      "name": "Thief of Blood",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 3
+    },
+    "zodiacgoat": {
+      "name": "Zodiac Goat",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 1
+    },
+    "capitalpunishment": {
+      "name": "Capital Punishment",
+      "cashUsd": 5.6,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 4
+    },
+    "coolbutrude": {
+      "name": "Cool but Rude",
+      "cashUsd": 5.6,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 4
+    },
+    "crystalshard": {
+      "name": "Crystal Shard",
+      "cashUsd": 5.6,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 5
+    },
+    "fledglingdragon": {
+      "name": "Fledgling Dragon",
+      "cashUsd": 5.6,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 2
+    },
+    "geralfvisionarystitcher": {
+      "name": "Geralf, Visionary Stitcher",
+      "cashUsd": 5.6,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 7
+    },
+    "memorysjourney": {
+      "name": "Memory's Journey",
+      "cashUsd": 5.6,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 4
+    },
+    "parallelthoughts": {
+      "name": "Parallel Thoughts",
+      "cashUsd": 5.6,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 2
+    },
+    "reckonerbankbuster": {
+      "name": "Reckoner Bankbuster",
+      "cashUsd": 5.6,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 11
+    },
+    "sauronthenecromancer": {
+      "name": "Sauron, the Necromancer",
+      "cashUsd": 5.6,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 4
+    },
+    "sedgesliver": {
+      "name": "Sedge Sliver",
+      "cashUsd": 5.6,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 4
+    },
+    "abaddonthedespoiler": {
+      "name": "Abaddon the Despoiler",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 2
+    },
+    "adornedpouncer": {
+      "name": "Adorned Pouncer",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 6
+    },
+    "anrakyrthetraveller": {
+      "name": "Anrakyr the Traveller",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 3
+    },
+    "angraththeflamechained": {
+      "name": "Angrath, the Flame-Chained",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 8
+    },
+    "arashitheskyasunder": {
+      "name": "Arashi, the Sky Asunder",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 2
+    },
+    "arcadecabinet": {
+      "name": "Arcade Cabinet",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 3
+    },
+    "arcboundcrusher": {
+      "name": "Arcbound Crusher",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 5
+    },
+    "ashlingsprerogative": {
+      "name": "Ashling's Prerogative",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 3
+    },
+    "archonofsunsgrace": {
+      "name": "Archon of Sun's Grace",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 5
+    },
+    "azraoddsmaker": {
+      "name": "Azra Oddsmaker",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 3
+    },
+    "baneofprogress": {
+      "name": "Bane of Progress",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 14
+    },
+    "bardheirofgirion": {
+      "name": "Bard, Heir of Girion",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 2
+    },
+    "befoul": {
+      "name": "Befoul",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 2
+    },
+    "bigapple3am": {
+      "name": "Big Apple, 3 a.m.",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 2
+    },
+    "betorancestorsvoice": {
+      "name": "Betor, Ancestor's Voice",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 4
+    },
+    "bishopofwings": {
+      "name": "Bishop of Wings",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 11
+    },
+    "boltbend": {
+      "name": "Bolt Bend",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 9
+    },
+    "boonofthespiritrealm": {
+      "name": "Boon of the Spirit Realm",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 6
+    },
+    "bulkup": {
+      "name": "Bulk Up",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 2
+    },
+    "catharcommando": {
+      "name": "Cathar Commando",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-02T17:21:52+00:00",
+      "matches": 3
     }
   },
   "unmatched": {
