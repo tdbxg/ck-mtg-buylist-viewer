@@ -36071,6 +36071,216 @@
       "cashUsd": 5.5,
       "checkedAt": "2026-11-02T22:24:48+00:00",
       "matches": 5
+    },
+    "forthecommongood": {
+      "name": "For the Common Good",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 8
+    },
+    "knighthood": {
+      "name": "Knighthood",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 4
+    },
+    "urzasfactory": {
+      "name": "Urza's Factory",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 4
+    },
+    "fieldmarshal": {
+      "name": "Field Marshal",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 17
+    },
+    "energychamber": {
+      "name": "Energy Chamber",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 4
+    },
+    "eonhub": {
+      "name": "Eon Hub",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 4
+    },
+    "exclude": {
+      "name": "Exclude",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 2
+    },
+    "expedite": {
+      "name": "Expedite",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 5
+    },
+    "fierceempath": {
+      "name": "Fierce Empath",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 4
+    },
+    "finaljudgment": {
+      "name": "Final Judgment",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 3
+    },
+    "extortion": {
+      "name": "Extortion",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 35
+    },
+    "firenationturret": {
+      "name": "Fire Nation Turret",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 3
+    },
+    "finaleofglory": {
+      "name": "Finale of Glory",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 3
+    },
+    "florianvoldarenscion": {
+      "name": "Florian, Voldaren Scion",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 5
+    },
+    "footstepsofthegoryo": {
+      "name": "Footsteps of the Goryo",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 4
+    },
+    "froghemoth": {
+      "name": "Froghemoth",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 3
+    },
+    "gaveloftherighteous": {
+      "name": "Gavel of the Righteous",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 2
+    },
+    "gamepreserve": {
+      "name": "Game Preserve",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 2
+    },
+    "gemstonearray": {
+      "name": "Gemstone Array",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 3
+    },
+    "giftofestates": {
+      "name": "Gift of Estates",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 10
+    },
+    "gilderbairn": {
+      "name": "Gilder Bairn",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 2
+    },
+    "goblingrenade": {
+      "name": "Goblin Grenade",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 3
+    },
+    "goblinmime": {
+      "name": "Goblin Mime",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 2
+    },
+    "goblinguide": {
+      "name": "Goblin Guide",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 19
+    },
+    "goblinsnowman": {
+      "name": "Goblin Snowman",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 3
+    },
+    "gruulwarplow": {
+      "name": "Gruul War Plow",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 3
+    },
+    "goldenwish": {
+      "name": "Golden Wish",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 2
+    },
+    "guardianofthegateless": {
+      "name": "Guardian of the Gateless",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 2
+    },
+    "haplessresearcher": {
+      "name": "Hapless Researcher",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 3
+    },
+    "heartbeatofspring": {
+      "name": "Heartbeat of Spring",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 10
+    },
+    "hedrondetonator": {
+      "name": "Hedron Detonator",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 4
+    },
+    "hellkiteoverlord": {
+      "name": "Hellkite Overlord",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 6
+    },
+    "herdheirloom": {
+      "name": "Herd Heirloom",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 14
+    },
+    "heritagedruid": {
+      "name": "Heritage Druid",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 9
+    },
+    "hero": {
+      "name": "Hero",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T07:59:47+00:00",
+      "matches": 60
     }
   },
   "unmatched": {
