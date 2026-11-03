@@ -36281,6 +36281,210 @@
       "cashUsd": 5.5,
       "checkedAt": "2026-11-03T07:59:47+00:00",
       "matches": 60
+    },
+    "wildmongrel": {
+      "name": "Wild Mongrel",
+      "cashUsd": 16.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 5
+    },
+    "searingblaze": {
+      "name": "Searing Blaze",
+      "cashUsd": 8.0,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 10
+    },
+    "vincentvengefulatoner": {
+      "name": "Vincent, Vengeful Atoner",
+      "cashUsd": 6.8,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 6
+    },
+    "pippinwardenofisengard": {
+      "name": "Pippin, Warden of Isengard",
+      "cashUsd": 6.4,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 6
+    },
+    "proftseideticmemory": {
+      "name": "Proft's Eidetic Memory",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 14
+    },
+    "pyrewoodgearhulk": {
+      "name": "Pyrewood Gearhulk",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 6
+    },
+    "syrixcarrieroftheflame": {
+      "name": "Syrix, Carrier of the Flame",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 2
+    },
+    "tegwylldukeofsplendor": {
+      "name": "Tegwyll, Duke of Splendor",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 6
+    },
+    "warpworld": {
+      "name": "Warp World",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 9
+    },
+    "obeliskspider": {
+      "name": "Obelisk Spider",
+      "cashUsd": 5.6,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 5
+    },
+    "ambushcommander": {
+      "name": "Ambush Commander",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 4
+    },
+    "ardenangel": {
+      "name": "Arden Angel",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 1
+    },
+    "azuredrake": {
+      "name": "Azure Drake",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 1
+    },
+    "bravetheelements": {
+      "name": "Brave the Elements",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 3
+    },
+    "circuitousroute": {
+      "name": "Circuitous Route",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 8
+    },
+    "esotericduplicator": {
+      "name": "Esoteric Duplicator",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 16
+    },
+    "hideoustaskmaster": {
+      "name": "Hideous Taskmaster",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 3
+    },
+    "iizukatheruthless": {
+      "name": "Iizuka the Ruthless",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 3
+    },
+    "impostermech": {
+      "name": "Imposter Mech",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 4
+    },
+    "impulsivemaneuvers": {
+      "name": "Impulsive Maneuvers",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 5
+    },
+    "inexorabletide": {
+      "name": "Inexorable Tide",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 22
+    },
+    "incandescentsoulstoke": {
+      "name": "Incandescent Soulstoke",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 3
+    },
+    "infiltrationlens": {
+      "name": "Infiltration Lens",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 4
+    },
+    "instigator": {
+      "name": "Instigator",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 35
+    },
+    "jasmineboreal": {
+      "name": "Jasmine Boreal",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 3
+    },
+    "inverteroftruth": {
+      "name": "Inverter of Truth",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 4
+    },
+    "jesterscap": {
+      "name": "Jester's Cap",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 6
+    },
+    "karnstouch": {
+      "name": "Karn's Touch",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 2
+    },
+    "karplusanminotaur": {
+      "name": "Karplusan Minotaur",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 5
+    },
+    "lashwrithe": {
+      "name": "Lashwrithe",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 2
+    },
+    "kravtheunredeemed": {
+      "name": "Krav, the Unredeemed",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 5
+    },
+    "lavaclawreaches": {
+      "name": "Lavaclaw Reaches",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 8
+    },
+    "lichsrelic": {
+      "name": "Lich's Relic",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 7
+    },
+    "legatelaniuscaesarsace": {
+      "name": "Legate Lanius, Caesar's Ace",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-03T20:14:55+00:00",
+      "matches": 3
     }
   },
   "unmatched": {
