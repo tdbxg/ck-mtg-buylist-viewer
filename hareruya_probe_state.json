@@ -36683,6 +36683,204 @@
       "cashUsd": 5.5,
       "checkedAt": "2026-11-04T07:34:20+00:00",
       "matches": 4
+    },
+    "mountaingoat": {
+      "name": "Mountain Goat",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 4
+    },
+    "generousent": {
+      "name": "Generous Ent",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 6
+    },
+    "starwhale": {
+      "name": "Star Whale",
+      "cashUsd": 6.8,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 6
+    },
+    "juxtapose": {
+      "name": "Juxtapose",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 2
+    },
+    "pardicminer": {
+      "name": "Pardic Miner",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 2
+    },
+    "stripedriverwinder": {
+      "name": "Striped Riverwinder",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 2
+    },
+    "paradigmshift": {
+      "name": "Paradigm Shift",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 2
+    },
+    "songoftotentanz": {
+      "name": "Song of Totentanz",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 14
+    },
+    "ashioknightmareweaver": {
+      "name": "Ashiok, Nightmare Weaver",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 3
+    },
+    "everywhere": {
+      "name": "Everywhere",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 4
+    },
+    "exsanguinate": {
+      "name": "Exsanguinate",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 9
+    },
+    "goforthethroat": {
+      "name": "Go for the Throat",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 17
+    },
+    "maskedvandal": {
+      "name": "Masked Vandal",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 9
+    },
+    "pestermite": {
+      "name": "Pestermite",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 2
+    },
+    "possessedportal": {
+      "name": "Possessed Portal",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 3
+    },
+    "postmortemlunge": {
+      "name": "Postmortem Lunge",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 2
+    },
+    "pristineangel": {
+      "name": "Pristine Angel",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 4
+    },
+    "pyromancy": {
+      "name": "Pyromancy",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 2
+    },
+    "quartzwoodcrasher": {
+      "name": "Quartzwood Crasher",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 6
+    },
+    "ragingkavu": {
+      "name": "Raging Kavu",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 3
+    },
+    "ragingravine": {
+      "name": "Raging Ravine",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 9
+    },
+    "rangingraptors": {
+      "name": "Ranging Raptors",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 3
+    },
+    "reiverdemon": {
+      "name": "Reiver Demon",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 4
+    },
+    "renegadesilent": {
+      "name": "Renegade Silent",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 6
+    },
+    "renounce": {
+      "name": "Renounce",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 2
+    },
+    "restorationseminar": {
+      "name": "Restoration Seminar",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 12
+    },
+    "reversethesands": {
+      "name": "Reverse the Sands",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 2
+    },
+    "rhonassmonument": {
+      "name": "Rhonas's Monument",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 6
+    },
+    "ridingredhare": {
+      "name": "Riding Red Hare",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 1
+    },
+    "ripapart": {
+      "name": "Rip Apart",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 6
+    },
+    "saberants": {
+      "name": "Saber Ants",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 2
+    },
+    "sacredcat": {
+      "name": "Sacred Cat",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 4
+    },
+    "scrabblingclaws": {
+      "name": "Scrabbling Claws",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T20:29:55+00:00",
+      "matches": 2
     }
   },
   "unmatched": {
