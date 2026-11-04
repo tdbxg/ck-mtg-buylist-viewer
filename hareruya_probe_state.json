@@ -36485,6 +36485,204 @@
       "cashUsd": 5.5,
       "checkedAt": "2026-11-03T20:14:55+00:00",
       "matches": 3
+    },
+    "nahiristormofstone": {
+      "name": "Nahiri, Storm of Stone",
+      "cashUsd": 13.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 5
+    },
+    "dirgebat": {
+      "name": "Dirge Bat",
+      "cashUsd": 8.0,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 3
+    },
+    "greattrainheist": {
+      "name": "Great Train Heist",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 11
+    },
+    "tezzeretcruelcaptainemblem": {
+      "name": "Tezzeret, Cruel Captain Emblem",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 2
+    },
+    "urilthemiststalker": {
+      "name": "Uril, the Miststalker",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 8
+    },
+    "lonewolf": {
+      "name": "Lone Wolf",
+      "cashUsd": 6.4,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 7
+    },
+    "cruelultimatum": {
+      "name": "Cruel Ultimatum",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 4
+    },
+    "litamechanicalengineer": {
+      "name": "Lita, Mechanical Engineer",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 4
+    },
+    "scavengerfolk": {
+      "name": "Scavenger Folk",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 3
+    },
+    "unsettledmariner": {
+      "name": "Unsettled Mariner",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 5
+    },
+    "wipeaway": {
+      "name": "Wipe Away",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 2
+    },
+    "elendashierophant": {
+      "name": "Elenda's Hierophant",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 5
+    },
+    "hermesoverseerofelpis": {
+      "name": "Hermes, Overseer of Elpis",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 7
+    },
+    "locustmiser": {
+      "name": "Locust Miser",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 3
+    },
+    "lithophage": {
+      "name": "Lithophage",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 2
+    },
+    "lumberingmegasloth": {
+      "name": "Lumbering Megasloth",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 6
+    },
+    "maelstromnexus": {
+      "name": "Maelstrom Nexus",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 8
+    },
+    "madauntie": {
+      "name": "Mad Auntie",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 3
+    },
+    "magosithewaterveil": {
+      "name": "Magosi, the Waterveil",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 3
+    },
+    "mazirekkrauldeathpriest": {
+      "name": "Mazirek, Kraul Death Priest",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 6
+    },
+    "meathookmassacreii": {
+      "name": "Meathook Massacre II",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 13
+    },
+    "memoryworm": {
+      "name": "Memory Worm",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 4
+    },
+    "mercadianlift": {
+      "name": "Mercadian Lift",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 2
+    },
+    "metamorphosisfanatic": {
+      "name": "Metamorphosis Fanatic",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 4
+    },
+    "mindgrind": {
+      "name": "Mind Grind",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 3
+    },
+    "muragandaraceway": {
+      "name": "Muraganda Raceway",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 3
+    },
+    "myfirsttome": {
+      "name": "My First Tome",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 1
+    },
+    "myundeadhordeawakens": {
+      "name": "My Undead Horde Awakens",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 1
+    },
+    "mysticalteachings": {
+      "name": "Mystical Teachings",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 7
+    },
+    "necravolver": {
+      "name": "Necravolver",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 2
+    },
+    "nightdealings": {
+      "name": "Night Dealings",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 2
+    },
+    "noblepanther": {
+      "name": "Noble Panther",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 2
+    },
+    "oldstickfingers": {
+      "name": "Old Stickfingers",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-04T07:34:20+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
