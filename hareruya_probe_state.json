@@ -37439,6 +37439,192 @@
       "cashUsd": 5.5,
       "checkedAt": "2026-11-06T06:54:26+00:00",
       "matches": 6
+    },
+    "alibaba": {
+      "name": "Ali Baba",
+      "cashUsd": 6.4,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 1
+    },
+    "commandchair": {
+      "name": "Command Chair",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 5
+    },
+    "spotfeliscatus": {
+      "name": "Spot, Felis catus",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 5
+    },
+    "weatherlightcompleated": {
+      "name": "Weatherlight Compleated",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 4
+    },
+    "whenfluffybunniesattack": {
+      "name": "When Fluffy Bunnies Attack",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 1
+    },
+    "whirlpoolrider": {
+      "name": "Whirlpool Rider",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 2
+    },
+    "whiteorchidphantom": {
+      "name": "White Orchid Phantom",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 16
+    },
+    "wiltleafliege": {
+      "name": "Wilt-Leaf Liege",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 3
+    },
+    "wishmonger": {
+      "name": "Wishmonger",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 2
+    },
+    "wulfgaroficewinddale": {
+      "name": "Wulfgar of Icewind Dale",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 4
+    },
+    "wyllsreversal": {
+      "name": "Wyll's Reversal",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 6
+    },
+    "xandedarkmage": {
+      "name": "Xande, Dark Mage",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 1
+    },
+    "yesmanpersonalsecuritron": {
+      "name": "Yes Man, Personal Securitron",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 12
+    },
+    "ashbarrens": {
+      "name": "Ash Barrens",
+      "cashUsd": 5.3,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 6
+    },
+    "cometstellarpup": {
+      "name": "Comet, Stellar Pup",
+      "cashUsd": 5.3,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 7
+    },
+    "corrupteunuchs": {
+      "name": "Corrupt Eunuchs",
+      "cashUsd": 5.3,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 2
+    },
+    "courtoflocthwain": {
+      "name": "Court of Locthwain",
+      "cashUsd": 5.3,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 8
+    },
+    "creepingbloodsucker": {
+      "name": "Creeping Bloodsucker",
+      "cashUsd": 5.3,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 4
+    },
+    "goblinrabblemaster": {
+      "name": "Goblin Rabblemaster",
+      "cashUsd": 5.3,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 5
+    },
+    "modok": {
+      "name": "M.O.D.O.K.",
+      "cashUsd": 5.3,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 12
+    },
+    "mysticaldispute": {
+      "name": "Mystical Dispute",
+      "cashUsd": 5.3,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 10
+    },
+    "ramunapexcavator": {
+      "name": "Ramunap Excavator",
+      "cashUsd": 5.3,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 16
+    },
+    "satoruumezawa": {
+      "name": "Satoru Umezawa",
+      "cashUsd": 5.3,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 9
+    },
+    "ravenouschupacabra": {
+      "name": "Ravenous Chupacabra",
+      "cashUsd": 5.3,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 18
+    },
+    "turbulentsteppe": {
+      "name": "Turbulent Steppe",
+      "cashUsd": 5.3,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 4
+    },
+    "wolf": {
+      "name": "Wolf",
+      "cashUsd": 5.3,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 59
+    },
+    "fleetswallower": {
+      "name": "Fleet Swallower",
+      "cashUsd": 5.25,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 6
+    },
+    "brokersconfluence": {
+      "name": "Brokers Confluence",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 6
+    },
+    "bloomingmarsh": {
+      "name": "Blooming Marsh",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 22
+    },
+    "creepingtarpit": {
+      "name": "Creeping Tar Pit",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 16
+    },
+    "holdoutsettlement": {
+      "name": "Holdout Settlement",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T08:00:43+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
