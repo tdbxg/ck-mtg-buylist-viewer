@@ -37625,6 +37625,186 @@
       "cashUsd": 5.2,
       "checkedAt": "2026-11-06T08:00:43+00:00",
       "matches": 4
+    },
+    "qstackingthedeck": {
+      "name": "Q, Stacking the Deck",
+      "cashUsd": 15.0,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 10
+    },
+    "orbofdreams": {
+      "name": "Orb of Dreams",
+      "cashUsd": 10.0,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 4
+    },
+    "suluspaceswashbuckler": {
+      "name": "Sulu, Space Swashbuckler",
+      "cashUsd": 10.0,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 6
+    },
+    "abolethspawn": {
+      "name": "Aboleth Spawn",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 4
+    },
+    "daruwarchief": {
+      "name": "Daru Warchief",
+      "cashUsd": 5.6,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 4
+    },
+    "supremeinquisitor": {
+      "name": "Supreme Inquisitor",
+      "cashUsd": 5.6,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 2
+    },
+    "silverquillthedisputant": {
+      "name": "Silverquill, the Disputant",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 10
+    },
+    "saurondinodevotee": {
+      "name": "Sauron, Dino Devotee",
+      "cashUsd": 5.3,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 4
+    },
+    "gleefularsonist": {
+      "name": "Gleeful Arsonist",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 4
+    },
+    "hornofdeafening": {
+      "name": "Horn of Deafening",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 2
+    },
+    "huatlithesunsheart": {
+      "name": "Huatli, the Sun's Heart",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 4
+    },
+    "lizardblades": {
+      "name": "Lizard Blades",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 11
+    },
+    "mindlessautomaton": {
+      "name": "Mindless Automaton",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 2
+    },
+    "minamo": {
+      "name": "Minamo",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 21
+    },
+    "minwuwhitemage": {
+      "name": "Minwu, White Mage",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 5
+    },
+    "mizzixoftheizmagnus": {
+      "name": "Mizzix of the Izmagnus",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 5
+    },
+    "plaguebelcher": {
+      "name": "Plague Belcher",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 3
+    },
+    "quarkhumbleproprietor": {
+      "name": "Quark, Humble Proprietor",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 8
+    },
+    "retreattocoralhelm": {
+      "name": "Retreat to Coralhelm",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 3
+    },
+    "serraparagon": {
+      "name": "Serra Paragon",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 15
+    },
+    "shrineoftheforsakengods": {
+      "name": "Shrine of the Forsaken Gods",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 4
+    },
+    "sorrowspath": {
+      "name": "Sorrow's Path",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 1
+    },
+    "sigardaheronsgrace": {
+      "name": "Sigarda, Heron's Grace",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 1
+    },
+    "superiorspiderman": {
+      "name": "Superior Spider-Man",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 10
+    },
+    "summonleviathan": {
+      "name": "Summon: Leviathan",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 8
+    },
+    "spellswindle": {
+      "name": "Spell Swindle",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 11
+    },
+    "thegitrogravenousride": {
+      "name": "The Gitrog, Ravenous Ride",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 10
+    },
+    "themasamune": {
+      "name": "The Masamune",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 5
+    },
+    "thelastagnikai": {
+      "name": "The Last Agni Kai",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 10
+    },
+    "tolaria": {
+      "name": "Tolaria",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-06T20:02:22+00:00",
+      "matches": 31
     }
   },
   "unmatched": {
