@@ -37235,6 +37235,210 @@
       "cashUsd": 5.5,
       "checkedAt": "2026-11-05T20:44:19+00:00",
       "matches": 14
+    },
+    "riptideshapeshifter": {
+      "name": "Riptide Shapeshifter",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 2
+    },
+    "locutusofborg": {
+      "name": "Locutus of Borg",
+      "cashUsd": 7.0,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 7
+    },
+    "cidfreeflierpilot": {
+      "name": "Cid, Freeflier Pilot",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 8
+    },
+    "boskbanneret": {
+      "name": "Bosk Banneret",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 2
+    },
+    "mrspockscienceofficer": {
+      "name": "Mr. Spock, Science Officer",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 14
+    },
+    "borgqueenperfectionmanifest": {
+      "name": "Borg Queen, Perfection Manifest",
+      "cashUsd": 6.4,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 1
+    },
+    "zodiacmonkey": {
+      "name": "Zodiac Monkey",
+      "cashUsd": 6.4,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 3
+    },
+    "animalsanctuary": {
+      "name": "Animal Sanctuary",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 7
+    },
+    "benjaminsiskobesieged": {
+      "name": "Benjamin Sisko, Besieged",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 1
+    },
+    "dawnelemental": {
+      "name": "Dawn Elemental",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 2
+    },
+    "drjosephmbenga": {
+      "name": "Dr. Joseph M'Benga",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 8
+    },
+    "federationresupply": {
+      "name": "Federation Resupply",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 10
+    },
+    "hatcheryspider": {
+      "name": "Hatchery Spider",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 2
+    },
+    "iraxxaempressofmars": {
+      "name": "Iraxxa, Empress of Mars",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 6
+    },
+    "knightexemplar": {
+      "name": "Knight Exemplar",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 14
+    },
+    "moonlitwake": {
+      "name": "Moonlit Wake",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 2
+    },
+    "spocklogicalchoice": {
+      "name": "Spock, Logical Choice",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 1
+    },
+    "theneedsofthemany": {
+      "name": "The Needs of the Many",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 10
+    },
+    "wesleycrusherstarfleetcadet": {
+      "name": "Wesley Crusher, Starfleet Cadet",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 2
+    },
+    "captainkathrynjaneway": {
+      "name": "Captain Kathryn Janeway",
+      "cashUsd": 5.75,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 14
+    },
+    "infernalgrasp": {
+      "name": "Infernal Grasp",
+      "cashUsd": 5.6,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 14
+    },
+    "angrathcaptainofchaos": {
+      "name": "Angrath, Captain of Chaos",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 1
+    },
+    "desynchronization": {
+      "name": "Desynchronization",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 10
+    },
+    "ecologicalappreciation": {
+      "name": "Ecological Appreciation",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 6
+    },
+    "genesisdevice": {
+      "name": "Genesis Device",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 10
+    },
+    "giantadephage": {
+      "name": "Giant Adephage",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 6
+    },
+    "maraudingraptor": {
+      "name": "Marauding Raptor",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 5
+    },
+    "picardsteadfastcaptain": {
+      "name": "Picard, Steadfast Captain",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 1
+    },
+    "oliviaopulentoutlaw": {
+      "name": "Olivia, Opulent Outlaw",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 4
+    },
+    "tibaltrakishinstigator": {
+      "name": "Tibalt, Rakish Instigator",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 6
+    },
+    "vraskathesilencer": {
+      "name": "Vraska, the Silencer",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 10
+    },
+    "voidrend": {
+      "name": "Void Rend",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 9
+    },
+    "wallofglare": {
+      "name": "Wall of Glare",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 2
+    },
+    "warofthelastalliance": {
+      "name": "War of the Last Alliance",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-06T06:54:26+00:00",
+      "matches": 6
     }
   },
   "unmatched": {
