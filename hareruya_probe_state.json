@@ -37967,6 +37967,180 @@
       "cashUsd": 5.2,
       "checkedAt": "2026-11-07T07:17:01+00:00",
       "matches": 6
+    },
+    "borgcube": {
+      "name": "Borg Cube",
+      "cashUsd": 12.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 8
+    },
+    "ussdiscoveryatblackalert": {
+      "name": "U.S.S. Discovery, at Black Alert",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 8
+    },
+    "sarekfederationambassador": {
+      "name": "Sarek, Federation Ambassador",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 2
+    },
+    "ussenterpriseafreespirit": {
+      "name": "U.S.S. Enterprise-A, Free Spirit",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 8
+    },
+    "ussreliantfromhellsheart": {
+      "name": "U.S.S. Reliant, From Hell's Heart",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 2
+    },
+    "ussenterprisedgalaxyclass": {
+      "name": "U.S.S. Enterprise-D, Galaxy-Class",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 2
+    },
+    "apocalypse": {
+      "name": "Apocalypse",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 60
+    },
+    "theunbeatablesquirrelgirl": {
+      "name": "The Unbeatable Squirrel Girl",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 6
+    },
+    "actofaggression": {
+      "name": "Act of Aggression",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 2
+    },
+    "alabasterleech": {
+      "name": "Alabaster Leech",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 2
+    },
+    "alrundsepiphany": {
+      "name": "Alrund's Epiphany",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 14
+    },
+    "ambiguity": {
+      "name": "Ambiguity",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 1
+    },
+    "angelofinvention": {
+      "name": "Angel of Invention",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 5
+    },
+    "annul": {
+      "name": "Annul",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 14
+    },
+    "archetypeofendurance": {
+      "name": "Archetype of Endurance",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 5
+    },
+    "aureliathelawabove": {
+      "name": "Aurelia, the Law Above",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 12
+    },
+    "avencourier": {
+      "name": "Aven Courier",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 6
+    },
+    "avenginghunter": {
+      "name": "Avenging Hunter",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 4
+    },
+    "balefulstare": {
+      "name": "Baleful Stare",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 1
+    },
+    "basriket": {
+      "name": "Basri Ket",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 14
+    },
+    "blessingofleeches": {
+      "name": "Blessing of Leeches",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 2
+    },
+    "bloodfunnel": {
+      "name": "Blood Funnel",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 4
+    },
+    "bloodbondmarch": {
+      "name": "Bloodbond March",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 2
+    },
+    "blotoutthesky": {
+      "name": "Blot Out the Sky",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 5
+    },
+    "cagedsun": {
+      "name": "Caged Sun",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 20
+    },
+    "calamityofthetitans": {
+      "name": "Calamity of the Titans",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 6
+    },
+    "calixdestinyshand": {
+      "name": "Calix, Destiny's Hand",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 8
+    },
+    "canopygargantuan": {
+      "name": "Canopy Gargantuan",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 4
+    },
+    "captainkirkboldlygoing": {
+      "name": "Captain Kirk, Boldly Going",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-07T18:06:21+00:00",
+      "matches": 7
     }
   },
   "unmatched": {
