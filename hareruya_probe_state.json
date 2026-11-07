@@ -37805,6 +37805,168 @@
       "cashUsd": 5.2,
       "checkedAt": "2026-11-06T20:02:22+00:00",
       "matches": 31
+    },
+    "lieutenantcommanderdata": {
+      "name": "Lieutenant Commander Data",
+      "cashUsd": 40.0,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 14
+    },
+    "drbeverlycrusher": {
+      "name": "Dr. Beverly Crusher",
+      "cashUsd": 30.0,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 10
+    },
+    "jadziadaxlivinglegacy": {
+      "name": "Jadzia Dax, Living Legacy",
+      "cashUsd": 10.0,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 8
+    },
+    "birchlorerangers": {
+      "name": "Birchlore Rangers",
+      "cashUsd": 9.2,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 2
+    },
+    "spireofindustry": {
+      "name": "Spire of Industry",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 34
+    },
+    "zombietrailblazer": {
+      "name": "Zombie Trailblazer",
+      "cashUsd": 8.0,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 2
+    },
+    "firebolt": {
+      "name": "Firebolt",
+      "cashUsd": 6.8,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 3
+    },
+    "whisperingmadness": {
+      "name": "Whispering Madness",
+      "cashUsd": 6.8,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 6
+    },
+    "dathonhisheartopen": {
+      "name": "Dathon, His Heart Open",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 2
+    },
+    "deathisirrelevant": {
+      "name": "Death Is Irrelevant",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 14
+    },
+    "garrukcursedhuntsman": {
+      "name": "Garruk, Cursed Huntsman",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 11
+    },
+    "slogurktheoverslime": {
+      "name": "Slogurk, the Overslime",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 1
+    },
+    "nemesisofreason": {
+      "name": "Nemesis of Reason",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 5
+    },
+    "ardennintrepidarchaeologist": {
+      "name": "Ardenn, Intrepid Archaeologist",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 6
+    },
+    "crystallineentity": {
+      "name": "Crystalline Entity",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 8
+    },
+    "contestofclaws": {
+      "name": "Contest of Claws",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 4
+    },
+    "gontinightminister": {
+      "name": "Gonti, Night Minister",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 9
+    },
+    "murmuringmystic": {
+      "name": "Murmuring Mystic",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 6
+    },
+    "replicator": {
+      "name": "Replicator",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 16
+    },
+    "tibaltthefiendblooded": {
+      "name": "Tibalt, the Fiend-Blooded",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 5
+    },
+    "openthearmory": {
+      "name": "Open the Armory",
+      "cashUsd": 5.3,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 10
+    },
+    "karnstemporalsundering": {
+      "name": "Karn's Temporal Sundering",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 5
+    },
+    "shapeshifter": {
+      "name": "Shapeshifter",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 30
+    },
+    "takethebait": {
+      "name": "Take the Bait",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 4
+    },
+    "thaliahereticcathar": {
+      "name": "Thalia, Heretic Cathar",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 17
+    },
+    "triumphantadventurer": {
+      "name": "Triumphant Adventurer",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 2
+    },
+    "urzachiefartificer": {
+      "name": "Urza, Chief Artificer",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-07T07:17:01+00:00",
+      "matches": 6
     }
   },
   "unmatched": {
