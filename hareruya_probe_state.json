@@ -38141,6 +38141,180 @@
       "cashUsd": 5.0,
       "checkedAt": "2026-11-07T18:06:21+00:00",
       "matches": 7
+    },
+    "snakepit": {
+      "name": "Snake Pit",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 2
+    },
+    "silvergladepathfinder": {
+      "name": "Silverglade Pathfinder",
+      "cashUsd": 7.2,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 2
+    },
+    "cogworklibrarian": {
+      "name": "Cogwork Librarian",
+      "cashUsd": 6.6,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 1
+    },
+    "courtofcunning": {
+      "name": "Court of Cunning",
+      "cashUsd": 6.4,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 8
+    },
+    "saprazzanlegate": {
+      "name": "Saprazzan Legate",
+      "cashUsd": 6.4,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 2
+    },
+    "chromeshellcrab": {
+      "name": "Chromeshell Crab",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 2
+    },
+    "thewarringtriad": {
+      "name": "The Warring Triad",
+      "cashUsd": 5.6,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 8
+    },
+    "cruelentertainment": {
+      "name": "Cruel Entertainment",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 2
+    },
+    "highsocietyhunter": {
+      "name": "High-Society Hunter",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 7
+    },
+    "remembrance": {
+      "name": "Remembrance",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 17
+    },
+    "ridersofthemark": {
+      "name": "Riders of the Mark",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 2
+    },
+    "helpinghand": {
+      "name": "Helping Hand",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 6
+    },
+    "trickerycharm": {
+      "name": "Trickery Charm",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 2
+    },
+    "utrommonitor": {
+      "name": "Utrom Monitor",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 1
+    },
+    "appathevigilant": {
+      "name": "Appa, the Vigilant",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 3
+    },
+    "caseofthelockedhothouse": {
+      "name": "Case of the Locked Hothouse",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 7
+    },
+    "cathedralofwar": {
+      "name": "Cathedral of War",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 10
+    },
+    "cateranenforcer": {
+      "name": "Cateran Enforcer",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 2
+    },
+    "cemeteryilluminator": {
+      "name": "Cemetery Illuminator",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 5
+    },
+    "choarrimlegate": {
+      "name": "Cho-Arrim Legate",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 2
+    },
+    "cloudchasereagle": {
+      "name": "Cloudchaser Eagle",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 2
+    },
+    "cryptcallerchariot": {
+      "name": "Cryptcaller Chariot",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 5
+    },
+    "curatorofdestinies": {
+      "name": "Curator of Destinies",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 3
+    },
+    "conflux": {
+      "name": "Conflux",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 12
+    },
+    "dayofdestiny": {
+      "name": "Day of Destiny",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 2
+    },
+    "deathmatch": {
+      "name": "Death Match",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 2
+    },
+    "deepseakraken": {
+      "name": "Deep-Sea Kraken",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 2
+    },
+    "dictateofkruphix": {
+      "name": "Dictate of Kruphix",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 9
+    },
+    "doggeddetective": {
+      "name": "Dogged Detective",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T07:32:48+00:00",
+      "matches": 3
     }
   },
   "unmatched": {
