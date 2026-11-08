@@ -38315,6 +38315,168 @@
       "cashUsd": 5.0,
       "checkedAt": "2026-11-08T07:32:48+00:00",
       "matches": 3
+    },
+    "favoroftheoverbeing": {
+      "name": "Favor of the Overbeing",
+      "cashUsd": 6.8,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 2
+    },
+    "kiorathecrashingwave": {
+      "name": "Kiora, the Crashing Wave",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 5
+    },
+    "sealofprimordium": {
+      "name": "Seal of Primordium",
+      "cashUsd": 5.6,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 2
+    },
+    "thedestinedwarrior": {
+      "name": "The Destined Warrior",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 4
+    },
+    "defilerofvigor": {
+      "name": "Defiler of Vigor",
+      "cashUsd": 5.3,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 9
+    },
+    "leonardodavinci": {
+      "name": "Leonardo da Vinci",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 9
+    },
+    "dreadpresence": {
+      "name": "Dread Presence",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 9
+    },
+    "dreamsalvage": {
+      "name": "Dream Salvage",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 2
+    },
+    "durnanoftheyawningportal": {
+      "name": "Durnan of the Yawning Portal",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 4
+    },
+    "eladamrisvineyard": {
+      "name": "Eladamri's Vineyard",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 4
+    },
+    "emberwildecaptain": {
+      "name": "Emberwilde Captain",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 8
+    },
+    "eldraziscion": {
+      "name": "Eldrazi Scion",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 6
+    },
+    "encountertheunknown": {
+      "name": "Encounter the Unknown",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 10
+    },
+    "faerietauntings": {
+      "name": "Faerie Tauntings",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 2
+    },
+    "fandanieltelophoroiascian": {
+      "name": "Fandaniel, Telophoroi Ascian",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 5
+    },
+    "flareofcultivation": {
+      "name": "Flare of Cultivation",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 14
+    },
+    "frostmarsh": {
+      "name": "Frost Marsh",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 3
+    },
+    "gargosviciouswatcher": {
+      "name": "Gargos, Vicious Watcher",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 9
+    },
+    "garrukrelentlessgarruktheveilcursed": {
+      "name": "Garruk Relentless // Garruk, the Veil-Cursed",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 2
+    },
+    "giantoctopus": {
+      "name": "Giant Octopus",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 2
+    },
+    "glimpsetheunthinkable": {
+      "name": "Glimpse the Unthinkable",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 19
+    },
+    "grimguardian": {
+      "name": "Grim Guardian",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 2
+    },
+    "glissathetraitor": {
+      "name": "Glissa, the Traitor",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 5
+    },
+    "heraldofslaanesh": {
+      "name": "Herald of Slaanesh",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 3
+    },
+    "harvestseason": {
+      "name": "Harvest Season",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 10
+    },
+    "heroofoxidridge": {
+      "name": "Hero of Oxid Ridge",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 2
+    },
+    "huatliradiantchampion": {
+      "name": "Huatli, Radiant Champion",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-08T18:25:41+00:00",
+      "matches": 7
     }
   },
   "unmatched": {
