@@ -38633,6 +38633,162 @@
       "cashUsd": 5.0,
       "checkedAt": "2026-11-09T08:03:52+00:00",
       "matches": 1
+    },
+    "captainjeanlucpicard": {
+      "name": "Captain Jean-Luc Picard",
+      "cashUsd": 75.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 10
+    },
+    "saltvampire": {
+      "name": "Salt Vampire",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 10
+    },
+    "livelongandprosper": {
+      "name": "Live Long and Prosper",
+      "cashUsd": 7.5,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 2
+    },
+    "selatalshiarparadox": {
+      "name": "Sela, Tal Shiar Paradox",
+      "cashUsd": 6.5,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 2
+    },
+    "disruptorflute": {
+      "name": "Disruptor Flute",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 10
+    },
+    "masscalcify": {
+      "name": "Mass Calcify",
+      "cashUsd": 5.6,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 5
+    },
+    "theghoulgunslinger": {
+      "name": "The Ghoul, Gunslinger",
+      "cashUsd": 5.3,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 2
+    },
+    "quicksilverfountain": {
+      "name": "Quicksilver Fountain",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 4
+    },
+    "brighthearthbanneret": {
+      "name": "Brighthearth Banneret",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 3
+    },
+    "locketofyesterdays": {
+      "name": "Locket of Yesterdays",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 4
+    },
+    "lionsash": {
+      "name": "Lion Sash",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 11
+    },
+    "lumberingworldwagon": {
+      "name": "Lumbering Worldwagon",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 11
+    },
+    "luxcannon": {
+      "name": "Lux Cannon",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 2
+    },
+    "maliciousaffliction": {
+      "name": "Malicious Affliction",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 4
+    },
+    "marionettemaster": {
+      "name": "Marionette Master",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 7
+    },
+    "marisibreakerofthecoil": {
+      "name": "Marisi, Breaker of the Coil",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 3
+    },
+    "mercenaryinformer": {
+      "name": "Mercenary Informer",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 2
+    },
+    "mindrot": {
+      "name": "Mind Rot",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 1
+    },
+    "monkgyatso": {
+      "name": "Monk Gyatso",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 8
+    },
+    "mindspringmerfolk": {
+      "name": "Mindspring Merfolk",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 5
+    },
+    "mythicproportions": {
+      "name": "Mythic Proportions",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 2
+    },
+    "nestingdragon": {
+      "name": "Nesting Dragon",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 2
+    },
+    "obeliskofurd": {
+      "name": "Obelisk of Urd",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 5
+    },
+    "ophiomancer": {
+      "name": "Ophiomancer",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 14
+    },
+    "oltecmatterweaver": {
+      "name": "Oltec Matterweaver",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 17
+    },
+    "perplexingchimera": {
+      "name": "Perplexing Chimera",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T23:02:40+00:00",
+      "matches": 3
     }
   },
   "unmatched": {
