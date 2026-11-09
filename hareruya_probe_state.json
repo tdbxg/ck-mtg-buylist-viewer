@@ -38477,6 +38477,162 @@
       "cashUsd": 5.0,
       "checkedAt": "2026-11-08T18:25:41+00:00",
       "matches": 7
+    },
+    "deepspace9": {
+      "name": "Deep Space 9",
+      "cashUsd": 8.0,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 8
+    },
+    "seagateloremaster": {
+      "name": "Sea Gate Loremaster",
+      "cashUsd": 6.4,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 4
+    },
+    "azlasktheswellingscourge": {
+      "name": "Azlask, the Swelling Scourge",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 2
+    },
+    "spidermanpeterparker": {
+      "name": "Spider-Man, Peter Parker",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 17
+    },
+    "simicascendancy": {
+      "name": "Simic Ascendancy",
+      "cashUsd": 5.75,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 6
+    },
+    "elvenriders": {
+      "name": "Elven Riders",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 1
+    },
+    "orcishsiegemaster": {
+      "name": "Orcish Siegemaster",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 4
+    },
+    "shardingsphinx": {
+      "name": "Sharding Sphinx",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 2
+    },
+    "thecheesestandsalone": {
+      "name": "The Cheese Stands Alone",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 1
+    },
+    "courtofvantress": {
+      "name": "Court of Vantress",
+      "cashUsd": 5.3,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 8
+    },
+    "captainjamestkirk": {
+      "name": "Captain James T. Kirk",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 10
+    },
+    "starshipenterprise": {
+      "name": "Starship Enterprise",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 7
+    },
+    "illusionistsbracers": {
+      "name": "Illusionist's Bracers",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 14
+    },
+    "ineffableblessing": {
+      "name": "Ineffable Blessing",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 6
+    },
+    "infest": {
+      "name": "Infest",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 35
+    },
+    "intangiblevirtue": {
+      "name": "Intangible Virtue",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 5
+    },
+    "innerfire": {
+      "name": "Inner Fire",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 2
+    },
+    "intrepidadversary": {
+      "name": "Intrepid Adversary",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 6
+    },
+    "irrigationditch": {
+      "name": "Irrigation Ditch",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 2
+    },
+    "jadelightranger": {
+      "name": "Jadelight Ranger",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 5
+    },
+    "invinciblehymn": {
+      "name": "Invincible Hymn",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 4
+    },
+    "jenaraasuraofwar": {
+      "name": "Jenara, Asura of War",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 3
+    },
+    "karnlivinglegacy": {
+      "name": "Karn, Living Legacy",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 5
+    },
+    "kirkenterprisingcaptain": {
+      "name": "Kirk, Enterprising Captain",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 1
+    },
+    "lastbreath": {
+      "name": "Last Breath",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 4
+    },
+    "lessermasticore": {
+      "name": "Lesser Masticore",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-09T08:03:52+00:00",
+      "matches": 1
     }
   },
   "unmatched": {
