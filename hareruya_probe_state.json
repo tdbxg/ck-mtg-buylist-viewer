@@ -38939,6 +38939,60 @@
       "cashUsd": 5.0,
       "checkedAt": "2026-11-10T08:30:08+00:00",
       "matches": 4
+    },
+    "squid": {
+      "name": "Squid",
+      "cashUsd": 10.5,
+      "checkedAt": "2026-11-10T20:31:43+00:00",
+      "matches": 8
+    },
+    "jeweledamulet": {
+      "name": "Jeweled Amulet",
+      "cashUsd": 7.8,
+      "checkedAt": "2026-11-10T20:31:43+00:00",
+      "matches": 1
+    },
+    "velomachuslorehold": {
+      "name": "Velomachus Lorehold",
+      "cashUsd": 5.7,
+      "checkedAt": "2026-11-10T20:31:43+00:00",
+      "matches": 11
+    },
+    "yargleandmultani": {
+      "name": "Yargle and Multani",
+      "cashUsd": 5.3,
+      "checkedAt": "2026-11-10T20:31:43+00:00",
+      "matches": 7
+    },
+    "samiwildcatcaptain": {
+      "name": "Sami, Wildcat Captain",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-10T20:31:43+00:00",
+      "matches": 11
+    },
+    "sandscout": {
+      "name": "Sand Scout",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-10T20:31:43+00:00",
+      "matches": 4
+    },
+    "sealofdoom": {
+      "name": "Seal of Doom",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-10T20:31:43+00:00",
+      "matches": 2
+    },
+    "scrambleverse": {
+      "name": "Scrambleverse",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-10T20:31:43+00:00",
+      "matches": 3
+    },
+    "seedtheland": {
+      "name": "Seed the Land",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-10T20:31:43+00:00",
+      "matches": 4
     }
   },
   "unmatched": {
