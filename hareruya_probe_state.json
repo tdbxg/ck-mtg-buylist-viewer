@@ -38993,6 +38993,78 @@
       "cashUsd": 5.0,
       "checkedAt": "2026-11-10T20:31:43+00:00",
       "matches": 4
+    },
+    "khanvengefulheart": {
+      "name": "Khan, Vengeful Heart",
+      "cashUsd": 120.0,
+      "checkedAt": "2026-11-11T07:48:58+00:00",
+      "matches": 10
+    },
+    "scottymiracleworker": {
+      "name": "Scotty, Miracle Worker",
+      "cashUsd": 60.0,
+      "checkedAt": "2026-11-11T07:48:58+00:00",
+      "matches": 12
+    },
+    "sevenofnineunassimilated": {
+      "name": "Seven of Nine, Unassimilated",
+      "cashUsd": 54.0,
+      "checkedAt": "2026-11-11T07:48:58+00:00",
+      "matches": 10
+    },
+    "willrikerfirstinthefield": {
+      "name": "Will Riker, First in the Field",
+      "cashUsd": 40.0,
+      "checkedAt": "2026-11-11T07:48:58+00:00",
+      "matches": 4
+    },
+    "infinitediversity": {
+      "name": "Infinite Diversity",
+      "cashUsd": 25.0,
+      "checkedAt": "2026-11-11T07:48:58+00:00",
+      "matches": 12
+    },
+    "jeanlucpicardluminary": {
+      "name": "Jean-Luc Picard, Luminary",
+      "cashUsd": 10.0,
+      "checkedAt": "2026-11-11T07:48:58+00:00",
+      "matches": 5
+    },
+    "desperatecharge": {
+      "name": "Desperate Charge",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-11T07:48:58+00:00",
+      "matches": 2
+    },
+    "shroofussproutsire": {
+      "name": "Shroofus Sproutsire",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-11T07:48:58+00:00",
+      "matches": 2
+    },
+    "tashayaroutoftime": {
+      "name": "Tasha Yar, Out of Time",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-11T07:48:58+00:00",
+      "matches": 6
+    },
+    "tempestefreet": {
+      "name": "Tempest Efreet",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-11T07:48:58+00:00",
+      "matches": 3
+    },
+    "yellowscarvescavalry": {
+      "name": "Yellow Scarves Cavalry",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-11T07:48:58+00:00",
+      "matches": 1
+    },
+    "nothingcanstopmenow": {
+      "name": "Nothing Can Stop Me Now",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-11T07:48:58+00:00",
+      "matches": 1
     }
   },
   "unmatched": {
