@@ -39065,6 +39065,48 @@
       "cashUsd": 5.2,
       "checkedAt": "2026-11-11T07:48:58+00:00",
       "matches": 1
+    },
+    "deannatroipsychiccounsel": {
+      "name": "Deanna Troi, Psychic Counsel",
+      "cashUsd": 13.8,
+      "checkedAt": "2026-11-11T20:15:48+00:00",
+      "matches": 10
+    },
+    "persist": {
+      "name": "Persist",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-11T20:15:48+00:00",
+      "matches": 60
+    },
+    "bitterthornnissasanimus": {
+      "name": "Bitterthorn, Nissa's Animus",
+      "cashUsd": 5.3,
+      "checkedAt": "2026-11-11T20:15:48+00:00",
+      "matches": 6
+    },
+    "otharrisunsglory": {
+      "name": "Otharri, Suns' Glory",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-11T20:15:48+00:00",
+      "matches": 8
+    },
+    "basimibnishaq": {
+      "name": "Basim Ibn Ishaq",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-11T20:15:48+00:00",
+      "matches": 10
+    },
+    "bristlebudfarmer": {
+      "name": "Bristlebud Farmer",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-11T20:15:48+00:00",
+      "matches": 15
+    },
+    "giantbadger": {
+      "name": "Giant Badger",
+      "cashUsd": 5.0,
+      "checkedAt": "2026-11-11T20:15:48+00:00",
+      "matches": 1
     }
   },
   "unmatched": {
