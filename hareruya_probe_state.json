@@ -39149,6 +39149,48 @@
       "cashUsd": 5.5,
       "checkedAt": "2026-11-12T08:25:41+00:00",
       "matches": 9
+    },
+    "recklessabandon": {
+      "name": "Reckless Abandon",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-12T20:54:37+00:00",
+      "matches": 2
+    },
+    "serpentgenerator": {
+      "name": "Serpent Generator",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-12T20:54:37+00:00",
+      "matches": 1
+    },
+    "debtorsknell": {
+      "name": "Debtors' Knell",
+      "cashUsd": 5.6,
+      "checkedAt": "2026-11-12T20:54:37+00:00",
+      "matches": 2
+    },
+    "kibouktabiprince": {
+      "name": "Kibo, Uktabi Prince",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-12T20:54:37+00:00",
+      "matches": 5
+    },
+    "kiorasfollower": {
+      "name": "Kiora's Follower",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-12T20:54:37+00:00",
+      "matches": 7
+    },
+    "somedisassemblyrequired": {
+      "name": "Some Disassembly Required",
+      "cashUsd": 5.5,
+      "checkedAt": "2026-11-12T20:54:37+00:00",
+      "matches": 1
+    },
+    "elvishguidance": {
+      "name": "Elvish Guidance",
+      "cashUsd": 5.2,
+      "checkedAt": "2026-11-12T20:54:37+00:00",
+      "matches": 2
     }
   },
   "unmatched": {
