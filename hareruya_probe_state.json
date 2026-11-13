@@ -39191,6 +39191,30 @@
       "cashUsd": 5.2,
       "checkedAt": "2026-11-12T20:54:37+00:00",
       "matches": 2
+    },
+    "auramancer": {
+      "name": "Auramancer",
+      "cashUsd": 6.4,
+      "checkedAt": "2026-11-13T08:04:45+00:00",
+      "matches": 10
+    },
+    "deadeyenavigator": {
+      "name": "Deadeye Navigator",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-13T08:04:45+00:00",
+      "matches": 16
+    },
+    "stitchintime": {
+      "name": "Stitch in Time",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-13T08:04:45+00:00",
+      "matches": 7
+    },
+    "theborgqueen": {
+      "name": "The Borg Queen",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-13T08:04:45+00:00",
+      "matches": 6
     }
   },
   "unmatched": {
