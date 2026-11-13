@@ -39215,6 +39215,36 @@
       "cashUsd": 6.0,
       "checkedAt": "2026-11-13T08:04:45+00:00",
       "matches": 6
+    },
+    "troublingtribbles": {
+      "name": "Troubling Tribbles",
+      "cashUsd": 9.6,
+      "checkedAt": "2026-11-13T20:32:55+00:00",
+      "matches": 10
+    },
+    "peaceinourtime": {
+      "name": "Peace in Our Time",
+      "cashUsd": 9.0,
+      "checkedAt": "2026-11-13T20:32:55+00:00",
+      "matches": 2
+    },
+    "helmofkaldra": {
+      "name": "Helm of Kaldra",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-13T20:32:55+00:00",
+      "matches": 6
+    },
+    "ixidron": {
+      "name": "Ixidron",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-13T20:32:55+00:00",
+      "matches": 2
+    },
+    "manipulatefate": {
+      "name": "Manipulate Fate",
+      "cashUsd": 6.0,
+      "checkedAt": "2026-11-13T20:32:55+00:00",
+      "matches": 2
     }
   },
   "unmatched": {
