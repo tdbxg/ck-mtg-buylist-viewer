@@ -3,7 +3,8 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from collect_x_buylist import normalize_post, parse_timeline
+from collect_x_buylist import normalize_post, parse_timeline, search_ids
+import json
 
 
 class XTests(unittest.TestCase):
@@ -23,3 +24,10 @@ class XTests(unittest.TestCase):
     def test_login_or_rate_limit_page_is_a_failure(self):
         with self.assertRaises(ValueError):
             parse_timeline("<html>Rate limit exceeded</html>")
+
+    def test_search_only_discovers_exact_official_account_links(self):
+        entries = [{"url": "https://x.com/hareruya_mtg/status/123", "screenName": "hareruya_mtg"},
+                   {"url": "https://x.com/other/status/456", "screenName": "other"}]
+        data = {"props": {"pageProps": {"pageData": {"searchError": {"errorType": ""}, "timeline": {"entry": entries}}}}}
+        page = '<script id="__NEXT_DATA__">' + json.dumps(data) + '</script>'
+        self.assertEqual(search_ids(page, "hareruya_mtg"), ["123"])

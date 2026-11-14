@@ -8,7 +8,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import urlencode, urlsplit
 
 from hareruya_capture import Document
 from update_hareruya_prices import fetch
@@ -39,6 +39,38 @@ def parse_timeline(html):
 
 def is_buylist_text(body):
     return bool(re.search(r"買取情報|買取表|強化.{0,6}買取|買取.{0,6}強化|買取価格|[\d,]+円.{0,12}買取|買取.{0,30}[\d,]+円|buylist|buying", body, re.I))
+
+
+def search_ids(html, handle):
+    node = next(Document(html).root.find_all(lambda n: n.tag == "script" and n.attrs.get("id") == "__NEXT_DATA__"), None)
+    if node is None:
+        raise ValueError("public search result unavailable")
+    data = json.loads("".join(c for c in node.children if isinstance(c, str)))
+    page = data.get("props", {}).get("pageProps", {}).get("pageData", {})
+    error = page.get("searchError", {}).get("errorType")
+    if error not in (None, "", "zeromatch"):
+        raise ValueError(f"public search error: {error}")
+    if "timeline" not in page and error != "zeromatch":
+        raise ValueError("public search timeline missing")
+    found = []
+    for entry in page.get("timeline", {}).get("entry", []):
+        url = urlsplit(entry.get("url", ""))
+        match = re.fullmatch(r"/([A-Za-z0-9_]+)/status/(\d+)", url.path)
+        if match and url.hostname == "x.com" and match[1].lower() == handle.lower() and entry.get("screenName", "").lower() == handle.lower():
+            found.append(match[2])
+    return list(dict.fromkeys(found))
+
+
+def recent_ids(account):
+    query = urlencode({"p": f"id:{account['handle']} 買取", "ei": "UTF-8"})
+    return search_ids(fetch(f"https://search.yahoo.co.jp/realtime/search?{query}"), account["handle"])
+
+
+def official_post(post_id):
+    tweet = json.loads(fetch(f"https://cdn.syndication.twimg.com/tweet-result?id={post_id}&lang=ja&token=1"))
+    if str(tweet.get("id_str")) != post_id:
+        raise ValueError("official post identity mismatch or unavailable")
+    return tweet
 
 
 def normalize_post(tweet, account, keywords, at):
@@ -114,26 +146,39 @@ def collect(urls=(), discover=False, timeline_file=None, account_handle=None):
             match = re.fullmatch(r"/([A-Za-z0-9_]+)/status/(\d+)(?:/.*)?", parsed.path)
             if parsed.scheme != "https" or parsed.hostname not in {"x.com", "twitter.com", "www.x.com"} or not match or match[1].lower() not in accounts:
                 raise ValueError("only configured official account post URLs may be imported")
-            data = json.loads(fetch(f"https://cdn.syndication.twimg.com/tweet-result?id={match[2]}&lang=ja&token=1"))
+            data = official_post(match[2])
             ingest(data, accounts[match[1].lower()])
     else:
+        candidates = []
         with ThreadPoolExecutor(max_workers=3) as pool:
-            futures = {pool.submit(fetch, f"https://syndication.twitter.com/srv/timeline-profile/screen-name/{a['handle']}"): a for a in accounts.values()}
+            futures = {pool.submit(recent_ids, a): a for a in accounts.values()}
             for future in as_completed(futures):
                 account = futures[future]
                 try:
-                    tweets = parse_timeline(future.result())
-                    for tweet in tweets:
-                        ingest(tweet, account)
-                    statuses.append({"account": account["handle"], "checkedAt": at, "status": "publicEmbedLimited", "visiblePosts": len(tweets)})
+                    ids = future.result()
+                    candidates.extend((post_id, account) for post_id in ids if post_id not in items)
+                    statuses.append({"account": account["handle"], "checkedAt": at, "status": "publicSearchIndex", "visiblePosts": len(ids)})
                 except Exception as error:
                     failures.append({"account": account["handle"], "error": f"{type(error).__name__}: {error}"})
+        # Bound requests per run and stop on an upstream rate limit.
+        candidates = sorted({post_id: account for post_id, account in candidates}.items(), key=lambda pair: int(pair[0]), reverse=True)
+        for post_id, account in candidates[:40]:
+            try:
+                ingest(official_post(post_id), account)
+            except Exception as error:
+                failures.append({"account": account["handle"], "postId": post_id, "error": f"{type(error).__name__}: {error}"})
+                if getattr(error, "code", None) == 429:
+                    break
     values = sorted(items.values(), key=lambda p: p["publishedAt"], reverse=True)[:config["maxItems"]]
+    for post in values:
+        account = accounts.get(post["account"].lower())
+        if account:
+            post["shop"] = account["label"]
     payload = {"meta": {
         "lastCheckedAt": at, "lastNewPostAt": at if new_ids else previous.get("meta", {}).get("lastNewPostAt"),
         "newItems": len(new_ids), "items": len(values), "accounts": len(accounts),
         "latestPublishedAt": values[0]["publishedAt"] if values else None,
-        "coverage": "publicEmbedLimited", "coverageNote": "公开嵌入页可能仅展示热门旧帖；不保证完整时间线。发布时间以原帖为准。",
+        "coverage": "publicIndexAndOfficialPosts", "coverageNote": "公开实时索引发现链接，X 原帖核验内容与时间；索引可能延迟，不保证完整时间线。图片报价须按版本复核。",
         "sources": statuses, "failures": failures, "checkIntervalMinutes": 60,
     }, "items": values}
     temp = OUTPUT.with_suffix(".tmp")

@@ -35,7 +35,7 @@ async function load() {
     if (responses.some((r) => !r.ok)) throw new Error("公告数据暂不可用");
     const [payload, config] = await Promise.all(responses.map((r) => r.json()));
     state.items = payload.items || []; state.accounts = config.accounts || [];
-    $("#sourceTime").textContent = `最近检查 ${new Date(payload.meta.lastCheckedAt).toLocaleString("zh-CN", {hour12:false})} · 每小时收集`;
+    $("#sourceTime").textContent = `最近检查 ${new Date(payload.meta.lastCheckedAt).toLocaleString("zh-CN", {hour12:false})} · 每小时收集${payload.meta.latestPublishedAt ? ` · 最新原帖 ${new Date(payload.meta.latestPublishedAt).toLocaleString("zh-CN", {hour12:false})}` : ""}`;
     $("#postCount").textContent = state.items.length;
     $("#accountCount").textContent = state.accounts.length;
     $("#coverage").textContent = `${payload.meta.coverageNote}${payload.meta.failures?.length ? ` 本次 ${payload.meta.failures.length} 个账号读取失败，保留上次存档。` : ""}`;
