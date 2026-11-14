@@ -38,7 +38,8 @@ async function load() {
     $("#sourceTime").textContent = `最近检查 ${new Date(payload.meta.lastCheckedAt).toLocaleString("zh-CN", {hour12:false})} · 每小时收集${payload.meta.latestPublishedAt ? ` · 最新原帖 ${new Date(payload.meta.latestPublishedAt).toLocaleString("zh-CN", {hour12:false})}` : ""}`;
     $("#postCount").textContent = state.items.length;
     $("#accountCount").textContent = state.accounts.length;
-    $("#coverage").textContent = `${payload.meta.coverageNote}${payload.meta.failures?.length ? ` 本次 ${payload.meta.failures.length} 个账号读取失败，保留上次存档。` : ""}`;
+    const failedAccounts = new Set((payload.meta.failures || []).map((f) => f.account)).size;
+    $("#coverage").textContent = `${payload.meta.coverageNote}${failedAccounts ? ` 本次 ${failedAccounts} 个账号部分读取失败，保留上次存档。` : ""}`;
     const selected = $("#accountFilter").value;
     $("#accountFilter").replaceChildren(new Option("全部晴屋店铺", ""), ...state.accounts.map((a) => new Option(a.label, a.handle)));
     $("#accountFilter").value = selected;

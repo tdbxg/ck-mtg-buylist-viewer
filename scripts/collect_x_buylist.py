@@ -125,6 +125,7 @@ def collect(urls=(), discover=False, timeline_file=None, account_handle=None):
     accounts = {a["handle"].lower(): a for a in config["accounts"]}
     previous = json.loads(OUTPUT.read_text()) if OUTPUT.exists() else {"items": []}
     items = {p["id"]: p for p in previous.get("items", []) if is_buylist_text(p.get("text", ""))}
+    ignored = set(previous.get("ignoredIds", []))
     at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     statuses, failures, new_ids = [], [], set()
 
@@ -134,6 +135,8 @@ def collect(urls=(), discover=False, timeline_file=None, account_handle=None):
             if post["id"] not in items:
                 items[post["id"]] = post
                 new_ids.add(post["id"])
+        elif str(tweet.get("id_str", "")).isdigit():
+            ignored.add(str(tweet["id_str"]))
 
     if timeline_file:
         account = accounts[account_handle.lower()]
@@ -156,7 +159,7 @@ def collect(urls=(), discover=False, timeline_file=None, account_handle=None):
                 account = futures[future]
                 try:
                     ids = future.result()
-                    candidates.extend((post_id, account) for post_id in ids if post_id not in items)
+                    candidates.extend((post_id, account) for post_id in ids if post_id not in items and post_id not in ignored)
                     statuses.append({"account": account["handle"], "checkedAt": at, "status": "publicSearchIndex", "visiblePosts": len(ids)})
                 except Exception as error:
                     failures.append({"account": account["handle"], "error": f"{type(error).__name__}: {error}"})
@@ -176,11 +179,13 @@ def collect(urls=(), discover=False, timeline_file=None, account_handle=None):
             post["shop"] = account["label"]
     payload = {"meta": {
         "lastCheckedAt": at, "lastNewPostAt": at if new_ids else previous.get("meta", {}).get("lastNewPostAt"),
+        "lastSuccessfulAt": at if not failures else previous.get("meta", {}).get("lastSuccessfulAt"),
+        "status": "partial" if failures else "ok",
         "newItems": len(new_ids), "items": len(values), "accounts": len(accounts),
         "latestPublishedAt": values[0]["publishedAt"] if values else None,
         "coverage": "publicIndexAndOfficialPosts", "coverageNote": "公开实时索引发现链接，X 原帖核验内容与时间；索引可能延迟，不保证完整时间线。图片报价须按版本复核。",
         "sources": statuses, "failures": failures, "checkIntervalMinutes": 60,
-    }, "items": values}
+    }, "items": values, "ignoredIds": sorted(ignored, key=int)[-2000:]}
     temp = OUTPUT.with_suffix(".tmp")
     temp.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
     temp.replace(OUTPUT)

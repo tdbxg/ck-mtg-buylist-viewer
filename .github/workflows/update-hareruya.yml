@@ -39,16 +39,18 @@ jobs:
         id: social
         if: always() && (github.event_name == 'workflow_dispatch' || github.event.schedule == '11,41 * * * *')
         continue-on-error: true
+        env:
+          FORCE_X: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
         run: |
           # X is checked hourly; price batches run every 30 minutes.
           python - <<'PY'
-          import json, subprocess
+          import json, os, subprocess
           from datetime import datetime, timezone
           from pathlib import Path
           path = Path('social_buylist.json')
           previous = json.loads(path.read_text()).get('meta', {}).get('lastCheckedAt') if path.exists() else None
           age = (datetime.now(timezone.utc) - datetime.fromisoformat(previous)).total_seconds() if previous else 99999
-          if age >= 3300:
+          if age >= 3300 or os.environ.get('FORCE_X') == '1':
               subprocess.run(['python', 'scripts/collect_x_buylist.py'], check=True)
           PY
       - name: Validate retained snapshot
