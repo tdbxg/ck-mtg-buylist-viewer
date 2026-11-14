@@ -16,6 +16,7 @@ from update_hareruya_prices import fetch
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "social_buylist.json"
 CONFIG = ROOT / "social_sources.json"
+ARCHIVE = ROOT / "social_archive.json"
 
 
 def iso(value):
@@ -102,6 +103,8 @@ def normalize_post(tweet, account, keywords, at):
 
 
 def discover_accounts(config):
+    if config.get("scope") == "headOffice":
+        return
     known = {r["handle"].lower(): r for r in config["accounts"]}
     for page in config.get("shopPages", []):
         try:
@@ -124,7 +127,12 @@ def collect(urls=(), discover=False, timeline_file=None, account_handle=None):
         discover_accounts(config)
     accounts = {a["handle"].lower(): a for a in config["accounts"]}
     previous = json.loads(OUTPUT.read_text()) if OUTPUT.exists() else {"items": []}
-    items = {p["id"]: p for p in previous.get("items", []) if is_buylist_text(p.get("text", ""))}
+    retired = [p for p in previous.get("items", []) if p.get("account", "").lower() not in accounts]
+    if retired:
+        archive = json.loads(ARCHIVE.read_text()) if ARCHIVE.exists() else {"items": []}
+        archived = {p["id"]: p for p in [*archive.get("items", []), *retired]}
+        ARCHIVE.write_text(json.dumps({"items": sorted(archived.values(), key=lambda p: p["publishedAt"], reverse=True)}, ensure_ascii=False, indent=2) + "\n")
+    items = {p["id"]: p for p in previous.get("items", []) if p.get("account", "").lower() in accounts and is_buylist_text(p.get("text", ""))}
     ignored = set(previous.get("ignoredIds", []))
     at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     statuses, failures, new_ids = [], [], set()

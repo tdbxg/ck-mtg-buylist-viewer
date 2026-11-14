@@ -1,63 +1,21 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-14T11:10:45+00:00",
+    "lastCheckedAt": "2026-11-14T11:44:19+00:00",
     "lastNewPostAt": "2026-11-14T11:10:45+00:00",
-    "lastSuccessfulAt": "2026-11-14T11:10:45+00:00",
+    "lastSuccessfulAt": "2026-11-14T11:44:19+00:00",
     "status": "ok",
-    "newItems": 33,
-    "items": 109,
-    "accounts": 8,
-    "latestPublishedAt": "2026-11-14T11:00:02+00:00",
+    "newItems": 0,
+    "items": 38,
+    "accounts": 1,
+    "latestPublishedAt": "2026-11-14T10:30:00+00:00",
     "coverage": "publicIndexAndOfficialPosts",
     "coverageNote": "公开实时索引发现链接，X 原帖核验内容与时间；索引可能延迟，不保证完整时间线。图片报价须按版本复核。",
     "sources": [
       {
-        "account": "hareruya__akiba",
-        "checkedAt": "2026-11-14T11:10:45+00:00",
-        "status": "publicSearchIndex",
-        "visiblePosts": 23
-      },
-      {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-14T11:10:45+00:00",
+        "checkedAt": "2026-11-14T11:44:19+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
-      },
-      {
-        "account": "hareruya_TC",
-        "checkedAt": "2026-11-14T11:10:45+00:00",
-        "status": "publicSearchIndex",
-        "visiblePosts": 34
-      },
-      {
-        "account": "hareruyaFukuoka",
-        "checkedAt": "2026-11-14T11:10:45+00:00",
-        "status": "publicSearchIndex",
-        "visiblePosts": 1
-      },
-      {
-        "account": "hareruya_nagoya",
-        "checkedAt": "2026-11-14T11:10:45+00:00",
-        "status": "publicSearchIndex",
-        "visiblePosts": 21
-      },
-      {
-        "account": "hareruya_osaka",
-        "checkedAt": "2026-11-14T11:10:45+00:00",
-        "status": "publicSearchIndex",
-        "visiblePosts": 39
-      },
-      {
-        "account": "hareruya_yokohm",
-        "checkedAt": "2026-11-14T11:10:45+00:00",
-        "status": "publicSearchIndex",
-        "visiblePosts": 39
-      },
-      {
-        "account": "hareruyaSapporo",
-        "checkedAt": "2026-11-14T11:10:45+00:00",
-        "status": "publicSearchIndex",
-        "visiblePosts": 40
       }
     ],
     "failures": [],
@@ -65,39 +23,9 @@
   },
   "items": [
     {
-      "id": "2121558772514459882",
-      "account": "hareruya_yokohm",
-      "shop": "晴屋横滨店",
-      "url": "https://x.com/hareruya_yokohm/status/2121558772514459882",
-      "publishedAt": "2026-11-14T11:00:02+00:00",
-      "collectedAt": "2026-11-14T11:03:10+00:00",
-      "text": "【買取情報】\n✨日本語版スタンダード買取中!!✨\n\n《ソウル・ストーン》 9,000円買取\n《マインド・ストーン》 7,000円買取\n《ベイルマークの大主》 4,500円買取\n《嵐の討伐者、エルズペス》 4,000円買取\n\n面倒なカードの仕分けは不要‼️\nスリーブに入れたままお持ちください💨\n買取は ＃晴れる屋横浜店 https://t.co/nzwsptErgZ",
-      "images": [
-        "https://pbs.twimg.com/media/HXFHrYrbwAALB09.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2121555131011588148",
-      "account": "hareruya_yokohm",
-      "shop": "晴屋横滨店",
-      "url": "https://x.com/hareruya_yokohm/status/2121555131011588148",
-      "publishedAt": "2026-11-14T10:45:34+00:00",
-      "collectedAt": "2026-11-14T11:03:10+00:00",
-      "text": "【買取情報】\n✨高額特殊Foil買取中!!✨\n\n【コンフェッティ・Foil】■ボーダーレス■《リスティックの研究》 240,000円買取\n【ロゴ入り版・Foil】■ボーダーレス■《貪欲なティラノサウルス》 200,000円買取\n【シンギュラリティ・Foil】■テキストレス■《スーパーヴォイド、ソセラ》 180,000円買取 https://t.co/zCM6d4JI6K",
-      "images": [
-        "https://pbs.twimg.com/media/HXFHG9GbsAAYYd7.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2121551214177632444",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2121551214177632444",
       "publishedAt": "2026-11-14T10:30:00+00:00",
       "collectedAt": "2026-11-14T11:01:30+00:00",
@@ -110,24 +38,9 @@
       "quotes": []
     },
     {
-      "id": "2121528749204320284",
-      "account": "hareruya_yokohm",
-      "shop": "晴屋横滨店",
-      "url": "https://x.com/hareruya_yokohm/status/2121528749204320284",
-      "publishedAt": "2026-11-14T09:00:44+00:00",
-      "collectedAt": "2026-11-14T11:03:10+00:00",
-      "text": "【買取情報】\n✨レガシー買取中!!✨\n\n《ファイレクシアン・ドレッドノート》 30,000円買取\n《無のロッド》 15,000円買取\n《一つの指輪》 15,000円買取\n《リシャーダの港》 10,000円買取\n\nお持ち込みはスリーブ抜き・仕分けなしでOK👍\n買取はぜひ、＃晴れる屋横浜店 へ！ https://t.co/G1UHdzcl7f",
-      "images": [
-        "https://pbs.twimg.com/media/HXEvDuraUAAHi2L.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2121513464439132332",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2121513464439132332",
       "publishedAt": "2026-11-14T08:00:00+00:00",
       "collectedAt": "2026-11-14T11:03:10+00:00",
@@ -143,7 +56,7 @@
     {
       "id": "2121468168082186324",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2121468168082186324",
       "publishedAt": "2026-11-14T05:00:00+00:00",
       "collectedAt": "2026-11-14T11:03:10+00:00",
@@ -161,7 +74,7 @@
     {
       "id": "2121407776220180927",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2121407776220180927",
       "publishedAt": "2026-11-14T01:00:02+00:00",
       "collectedAt": "2026-11-14T11:03:10+00:00",
@@ -174,37 +87,9 @@
       "quotes": []
     },
     {
-      "id": "2121211482344145012",
-      "account": "hareruya_nagoya",
-      "shop": "晴屋名古屋店",
-      "url": "https://x.com/hareruya_nagoya/status/2121211482344145012",
-      "publishedAt": "2026-11-13T12:00:02+00:00",
-      "collectedAt": "2026-11-14T11:03:10+00:00",
-      "text": "【買取情報】\n名古屋店では、\n《 平日 12:00～23:00 》《 土日祝 10:00～23:00 》\nまで買取の受付をしております☺️\n\nマジックに関するものならなんでも買取‼️\n＼＼ソート＆スリーブ抜き不要／／\n\n買取なら晴れる屋名古屋店へGO🏃‍♂️💨\n\n買取価格はこちらをチェック！\nhttps://t.co/l2nTrbPEoS https://t.co/iBL684UmUe",
-      "images": [
-        "https://pbs.twimg.com/media/HWxKEqCagAAz-ZP.png"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2121159350072865120",
-      "account": "hareruya_osaka",
-      "shop": "晴屋大阪 TC",
-      "url": "https://x.com/hareruya_osaka/status/2121159350072865120",
-      "publishedAt": "2026-11-13T08:32:52+00:00",
-      "collectedAt": "2026-11-14T11:03:10+00:00",
-      "text": "【買取情報】\n当店でも『マジック：ザ・ギャザリング | スター・トレック』のカードたちを大募集中！✨\n\n特に下記２種は当店限定強化買取中！\n\n⚪️《ビバリー・クラッシャー医師》\n日本語通常版：￥2,000-買取\n\n🟢《生ける遺産、ジャッジア・ダックス》\n日本語通常版：￥3,000-買取",
-      "images": [],
-      "priceStatus": "originalText",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2121151079085932661",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2121151079085932661",
       "publishedAt": "2026-11-13T08:00:00+00:00",
       "collectedAt": "2026-11-14T11:03:10+00:00",
@@ -218,41 +103,9 @@
       "quotes": []
     },
     {
-      "id": "2121143527094853967",
-      "account": "hareruya_yokohm",
-      "shop": "晴屋横滨店",
-      "url": "https://x.com/hareruya_yokohm/status/2121143527094853967",
-      "publishedAt": "2026-11-13T07:30:00+00:00",
-      "collectedAt": "2026-11-14T11:03:10+00:00",
-      "text": "【買取情報】\n晴れる屋では『スタンダードのレア土地』のカードを高価買取中です💰\n\n《リバーパイアーの境界》￥2,500\n《サンビロウの境界》￥2,500\n《轟音の滝》￥3,000\n《地底街の下水道》￥3,000\n\n個別の買取価格はコチラ⇩\nhttps://t.co/c3rwzXgCWp https://t.co/lmgvgPHPUX",
-      "images": [
-        "https://pbs.twimg.com/media/HW_GiYUacAAxKYT.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2121132201735766122",
-      "account": "hareruya_yokohm",
-      "shop": "晴屋横滨店",
-      "url": "https://x.com/hareruya_yokohm/status/2121132201735766122",
-      "publishedAt": "2026-11-13T06:45:00+00:00",
-      "collectedAt": "2026-11-14T11:03:10+00:00",
-      "text": "【#晴れ横 買取情報】\n⚓横浜店限定⚓\n現在の強化買取リストはコチラ‼\n《真夜中の盗人、ビルボ》1,800円\n《月影》6,500円\n《倍増の季節》2,000円\nなど、話題の日本語版カードを高額買取中✨\n\nリストに無いカード、未開封パック、マジック関連サプライも買取受付中です😊 https://t.co/sXtY641IA2",
-      "images": [
-        "https://pbs.twimg.com/media/HW_E3b6bAAAyG3c.jpg",
-        "https://pbs.twimg.com/media/HW_E4IFbgAArzC5.jpg",
-        "https://pbs.twimg.com/media/HW_E4gQbMAAHSlG.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2121105780451713080",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2121105780451713080",
       "publishedAt": "2026-11-13T05:00:00+00:00",
       "collectedAt": "2026-11-14T11:03:10+00:00",
@@ -270,7 +123,7 @@
     {
       "id": "2121090685805756821",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2121090685805756821",
       "publishedAt": "2026-11-13T04:00:02+00:00",
       "collectedAt": "2026-11-14T11:03:10+00:00",
@@ -285,7 +138,7 @@
     {
       "id": "2121083131172372914",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2121083131172372914",
       "publishedAt": "2026-11-13T03:30:00+00:00",
       "collectedAt": "2026-11-14T11:03:10+00:00",
@@ -300,7 +153,7 @@
     {
       "id": "2121075597333934258",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2121075597333934258",
       "publishedAt": "2026-11-13T03:00:04+00:00",
       "collectedAt": "2026-11-14T11:03:10+00:00",
@@ -313,54 +166,9 @@
       "quotes": []
     },
     {
-      "id": "2121065512280973426",
-      "account": "hareruya_TC",
-      "shop": "晴屋东京 TC",
-      "url": "https://x.com/hareruya_TC/status/2121065512280973426",
-      "publishedAt": "2026-11-13T02:20:00+00:00",
-      "collectedAt": "2026-11-14T11:03:10+00:00",
-      "text": "【#晴れる屋TC東京　買取情報】\n✨『マジック：ザ・ギャザリング スター・トレック』サージFoil 買取中!!✨\n\n【サージ・Foil】■ショーケース■《ジャン＝リュック・ピカード艦長》 12,000円買取\n【サージ・Foil】■ショーケース■《科学技官、ミスター・スポック》 9,000円買取 https://t.co/NSbZpzVLzB",
-      "images": [
-        "https://pbs.twimg.com/media/HW9sa96bkAAKBza.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2121062995744948354",
-      "account": "hareruya_TC",
-      "shop": "晴屋东京 TC",
-      "url": "https://x.com/hareruya_TC/status/2121062995744948354",
-      "publishedAt": "2026-11-13T02:10:00+00:00",
-      "collectedAt": "2026-11-14T11:03:10+00:00",
-      "text": "【#晴れる屋TC東京　買取情報】\n✨『マジック：ザ・ギャザリング スター・トレック』シングルカード買取中!!✨\n\n《ディープ・スペース・ナイン》 3,000円買取\n《ビバリー・クラッシャー医師》 1,800円買取\n《データ少佐》 1,200円買取\n《慎ましき経営者、クワーク》 1,200円買取 https://t.co/d0gnXvmKNx",
-      "images": [
-        "https://pbs.twimg.com/media/HW9slIea0AAnRDe.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2121060483457499560",
-      "account": "hareruya_TC",
-      "shop": "晴屋东京 TC",
-      "url": "https://x.com/hareruya_TC/status/2121060483457499560",
-      "publishedAt": "2026-11-13T02:00:01+00:00",
-      "collectedAt": "2026-11-14T11:03:10+00:00",
-      "text": "【#晴れる屋TC東京　買取情報】\n✨日本語版スタンダード買取中!!✨\n\n《ソウル・ストーン》 9,000円買取\n《量子の謎かけ屋》 8,000円買取\n《アガサの魂の大釜》 5,500円買取\n《ベイルマークの大主》 4,500円買取\n\n1枚からお気軽にどうぞ🙌\nスリーブのまま持込OK‼️\n全店同額買取です✨ https://t.co/3f7hS5rxkI",
-      "images": [
-        "https://pbs.twimg.com/media/HW9r7PaagAAQaed.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2120879288652017923",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2120879288652017923",
       "publishedAt": "2026-11-12T14:00:01+00:00",
       "collectedAt": "2026-11-14T11:03:10+00:00",
@@ -377,7 +185,7 @@
     {
       "id": "2120833994606641374",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2120833994606641374",
       "publishedAt": "2026-11-12T11:00:02+00:00",
       "collectedAt": "2026-11-14T11:03:10+00:00",
@@ -392,7 +200,7 @@
     {
       "id": "2120826436693176628",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2120826436693176628",
       "publishedAt": "2026-11-12T10:30:00+00:00",
       "collectedAt": "2026-11-14T11:03:10+00:00",
@@ -405,22 +213,9 @@
       "quotes": []
     },
     {
-      "id": "2120797303103754699",
-      "account": "hareruya_osaka",
-      "shop": "晴屋大阪 TC",
-      "url": "https://x.com/hareruya_osaka/status/2120797303103754699",
-      "publishedAt": "2026-11-12T08:34:14+00:00",
-      "collectedAt": "2026-11-14T11:03:10+00:00",
-      "text": "【買取情報】\nTC大阪でもパイオニア買取中💰\n\n《黙示録、シェオルドレッド》 9,000円買取\n《叫ぶ宿敵》1,000円買取\n《風景の変容》 2,500円買取\n《ニクスの祭殿、ニクソス》 3,000円買取\n\nスリーブ抜き・ソートの必要なし✨\n買取はぜひ晴れる屋TC大阪で💨",
-      "images": [],
-      "priceStatus": "originalText",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2120796241542139934",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2120796241542139934",
       "publishedAt": "2026-11-12T08:30:01+00:00",
       "collectedAt": "2026-11-14T11:03:10+00:00",
@@ -435,7 +230,7 @@
     {
       "id": "2120781139174437249",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2120781139174437249",
       "publishedAt": "2026-11-12T07:30:00+00:00",
       "collectedAt": "2026-11-14T11:03:10+00:00",
@@ -450,7 +245,7 @@
     {
       "id": "2120773588395417913",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2120773588395417913",
       "publishedAt": "2026-11-12T07:00:00+00:00",
       "collectedAt": "2026-11-14T11:03:10+00:00",
@@ -465,7 +260,7 @@
     {
       "id": "2120728294828245322",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2120728294828245322",
       "publishedAt": "2026-11-12T04:00:01+00:00",
       "collectedAt": "2026-11-14T11:03:10+00:00",
@@ -479,84 +274,9 @@
       "quotes": []
     },
     {
-      "id": "2120707654058450954",
-      "account": "hareruya_osaka",
-      "shop": "晴屋大阪 TC",
-      "url": "https://x.com/hareruya_osaka/status/2120707654058450954",
-      "publishedAt": "2026-11-12T02:38:00+00:00",
-      "collectedAt": "2026-11-14T11:03:10+00:00",
-      "text": "【買取情報】\nTC大阪ではスタンダードのレア土地を高価買取中💰\n\n《放棄された気の寺》[TLA]￥400-☀\n《ブリーチボーンの境界》[DFT]￥1,500-☀💀\n《サンビロウの境界》[DFT]￥2,500-☀🔥\n《フラッドファームの境界》[DSK]￥700-☀💧\n\nスリーブ抜き・ソートの必要なし✨\n買取はぜひ晴れる屋TC大阪で💨 https://t.co/UaSNabMZWX",
-      "images": [
-        "https://pbs.twimg.com/media/HW4_JQKaYAE9_zj.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2120703124533018947",
-      "account": "hareruya_TC",
-      "shop": "晴屋东京 TC",
-      "url": "https://x.com/hareruya_TC/status/2120703124533018947",
-      "publishedAt": "2026-11-12T02:20:00+00:00",
-      "collectedAt": "2026-11-14T11:03:10+00:00",
-      "text": "【#晴れる屋TC東京　買取情報】\n\n✨コマンダー買取中！✨\n\n《宝石の洞窟》 9,000円買取\n《久遠なる栄光の笏》 8,000円買取\n《偏向はたき》 7,000円買取\n《絞り取る徴税人、レヴ》 6,000円買取\n\n面倒なカードの仕分けは不要‼️\nスリーブに入れたままお持ちください💨 https://t.co/ZTBj07cKg5",
-      "images": [
-        "https://pbs.twimg.com/media/HW4zs36aIAAi5uo.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2120700607539593661",
-      "account": "hareruya_TC",
-      "shop": "晴屋东京 TC",
-      "url": "https://x.com/hareruya_TC/status/2120700607539593661",
-      "publishedAt": "2026-11-12T02:10:00+00:00",
-      "collectedAt": "2026-11-14T11:03:10+00:00",
-      "text": "【#晴れる屋TC東京　買取情報】\n\n✨パイオニア買取中！✨\n\n《黙示録、シェオルドレッド》 9,000円買取\n《約束された終末、エムラクール》 4,000円買取\n《耐え抜くもの、母聖樹》 3,500円買取\n《ヨーグモスの墳墓、アーボーグ》 3,000円買取\n\nスリーブ付きで持込OK🙆‍♀️\n仕分け不要＆全店同額買取です✨ https://t.co/P7Wq0Kcmrq",
-      "images": [
-        "https://pbs.twimg.com/media/HW4swRzbUAANGMa.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2120698099282620718",
-      "account": "hareruya_TC",
-      "shop": "晴屋东京 TC",
-      "url": "https://x.com/hareruya_TC/status/2120698099282620718",
-      "publishedAt": "2026-11-12T02:00:02+00:00",
-      "collectedAt": "2026-11-14T11:03:10+00:00",
-      "text": "【#晴れる屋TC東京　買取情報】\n\n✨スタンダードレア土地買取中!!✨\n\n《魂の洞窟》 6,000円買取\n《轟音の滝》 3,000円買取\n《リバーパイアーの境界》 2,500円買取\n《大音声の劇場》 2,000円買取\n\n面倒なカードの仕分けは不要‼️\nスリーブに入れたままお持ちください💨 https://t.co/4UZsBqCtXw",
-      "images": [
-        "https://pbs.twimg.com/media/HW4sDzYagAALyxr.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2120667893201346964",
-      "account": "hareruya_nagoya",
-      "shop": "晴屋名古屋店",
-      "url": "https://x.com/hareruya_nagoya/status/2120667893201346964",
-      "publishedAt": "2026-11-12T00:00:00+00:00",
-      "collectedAt": "2026-11-14T11:03:10+00:00",
-      "text": "【買取情報】\n名古屋店では、\n《 平日 12:00～23:00 》《 土日祝 10:00～23:00 》\nまで買取の受付をしております☺️\n\nマジックに関するものならなんでも買取‼️\n＼＼ソート＆スリーブ抜き不要／／\n\n買取なら晴れる屋名古屋店へGO🏃‍♂️💨\n\n買取価格はこちらをチェック！\nhttps://t.co/l2nTrbP6zk https://t.co/vv0l4YzLEE",
-      "images": [
-        "https://pbs.twimg.com/media/HWxJ4oqaIAAGjDA.png"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2120456505107366291",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2120456505107366291",
       "publishedAt": "2026-11-11T10:00:01+00:00",
       "collectedAt": "2026-11-14T11:03:10+00:00",
@@ -569,42 +289,9 @@
       "quotes": []
     },
     {
-      "id": "2120448954751914059",
-      "account": "hareruya__akiba",
-      "shop": "晴屋秋叶原店",
-      "url": "https://x.com/hareruya__akiba/status/2120448954751914059",
-      "publishedAt": "2026-11-11T09:30:01+00:00",
-      "collectedAt": "2026-11-14T11:03:10+00:00",
-      "text": "【買取情報】\n\n✨ゲームチェンジャー買取中!!✨\n\n《直観》 30,000円買取\n《伝国の玉璽》 12,000円買取\n《意志の力》 9,000円買取\n《オークの弓使い》 9,000円買取\n\n面倒なカードの仕分けは不要‼️\nスリーブに入れたままお持ちください💨\n\n＃晴れる屋秋葉原店 https://t.co/M5160K39fY",
-      "images": [
-        "https://pbs.twimg.com/media/HWz6vvObwAAZ9kJ.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2120426312276078961",
-      "account": "hareruya_osaka",
-      "shop": "晴屋大阪 TC",
-      "url": "https://x.com/hareruya_osaka/status/2120426312276078961",
-      "publishedAt": "2026-11-11T08:00:03+00:00",
-      "collectedAt": "2026-11-14T11:03:10+00:00",
-      "text": "【買取情報】\nTC大阪、緊急買取表を更新しました☀\n\n⬜️《浸食作用》2,000円\n🟩《豊穣の名誉教授》700円\n⬛️《悪意の閃光》1,200円\netc...\n\n人気のカードを激アツ高価買取🔥\nあなたのストレージにもお宝が眠ってるかも😆\n\nスリーブ抜き、ソートなど面倒な作業も不要✨\nMTG買取ならTC大阪にお任せあれ😎 https://t.co/XV3cI79XIt",
-      "images": [
-        "https://pbs.twimg.com/media/HW0icYWagAAdZ6q.jpg",
-        "https://pbs.twimg.com/media/HW0idO2bYAABlzh.jpg",
-        "https://pbs.twimg.com/media/HW0iesGbwAAtm_m.jpg",
-        "https://pbs.twimg.com/media/HW0ig7DacAAWmIF.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2120373454771720356",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2120373454771720356",
       "publishedAt": "2026-11-11T04:30:00+00:00",
       "collectedAt": "2026-11-14T11:03:10+00:00",
@@ -619,7 +306,7 @@
     {
       "id": "2120365904286695586",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2120365904286695586",
       "publishedAt": "2026-11-11T04:00:00+00:00",
       "collectedAt": "2026-11-14T11:03:10+00:00",
@@ -633,24 +320,9 @@
       "quotes": []
     },
     {
-      "id": "2120358604179935650",
-      "account": "hareruya__akiba",
-      "shop": "晴屋秋叶原店",
-      "url": "https://x.com/hareruya__akiba/status/2120358604179935650",
-      "publishedAt": "2026-11-11T03:31:00+00:00",
-      "collectedAt": "2026-11-14T11:03:10+00:00",
-      "text": "【買取情報】\n\n『マジック：ザ・ギャザリング | スター・トレック』\nサージFoil 買取中!!\n\n【サージ・Foil】ショーケース《ジェイムズ・T・カーク船長》 7,000円買取\n\n【サージ・Foil】ショーケース《奇跡を起こす男、スコッティ》 3,500円買取\netc\n\n1枚からお気軽にどうぞ🙌\nスリーブのまま持込OK‼️ https://t.co/IySlvfeeYB",
-      "images": [
-        "https://pbs.twimg.com/media/HWz5RD7awAEhc5d.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2120358355793596750",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2120358355793596750",
       "publishedAt": "2026-11-11T03:30:01+00:00",
       "collectedAt": "2026-11-14T11:03:10+00:00",
@@ -663,25 +335,9 @@
       "quotes": []
     },
     {
-      "id": "2120350818734125526",
-      "account": "hareruya__akiba",
-      "shop": "晴屋秋叶原店",
-      "url": "https://x.com/hareruya__akiba/status/2120350818734125526",
-      "publishedAt": "2026-11-11T03:00:04+00:00",
-      "collectedAt": "2026-11-14T11:05:53+00:00",
-      "text": "【買取情報】\n\n話題のカードや人気のカードを強化買取としてピックアップ中m9(^Д^)\n\n《バロウゴイフ》JP 通常版 5,500円買取\n《ネザーゴイフ》JP 通常版 3,500円買取\n《甦る死滅都市、ホガーク》JP 通常版 1,500円買取\n\nぜひ当店までお持ち込みください🏃🏃‍♀️🏃‍♂️💨\n\n＃晴れる屋秋葉原店 https://t.co/9TGqjYTHLa",
-      "images": [
-        "https://pbs.twimg.com/media/HWz1OzIbcAAR2ho.jpg",
-        "https://pbs.twimg.com/media/HWz1OzJbcAApgro.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2120350815072538867",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2120350815072538867",
       "publishedAt": "2026-11-11T03:00:03+00:00",
       "collectedAt": "2026-11-14T11:05:53+00:00",
@@ -696,39 +352,9 @@
       "quotes": []
     },
     {
-      "id": "2120343253660905533",
-      "account": "hareruya_osaka",
-      "shop": "晴屋大阪 TC",
-      "url": "https://x.com/hareruya_osaka/status/2120343253660905533",
-      "publishedAt": "2026-11-11T02:30:00+00:00",
-      "collectedAt": "2026-11-14T11:05:53+00:00",
-      "text": "【買取情報】\nTC大阪ではコマンダーの人気カードを高価買取中💰\n\nしゃあっオツリーミ流”ピッチスペル”\n《致命的なはしゃぎ回り》[CMM]￥3,000-💀\nやっぱし怖いスね無限マナは\n《ファイレクシアの供犠台》[UMA]￥3,000-⚰️\n\nスリーブ抜き・ソートの必要なし✨\n買取はぜひ晴れる屋TC大阪で💨 https://t.co/Nl3oddDn8l",
-      "images": [
-        "https://pbs.twimg.com/media/HWzrbSmaoAAXD0-.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2120305515238707400",
-      "account": "hareruya_nagoya",
-      "shop": "晴屋名古屋店",
-      "url": "https://x.com/hareruya_nagoya/status/2120305515238707400",
-      "publishedAt": "2026-11-11T00:00:02+00:00",
-      "collectedAt": "2026-11-14T11:05:53+00:00",
-      "text": "【買取情報】\n名古屋店では、\n《 平日 12:00～23:00 》《 土日祝 10:00～23:00 》\nまで買取の受付をしております☺️\n\nマジックに関するものならなんでも買取‼️\n＼＼ソート＆スリーブ抜き不要／／\n\n買取なら晴れる屋名古屋店へGO🏃‍♂️💨\n\n買取価格はこちらをチェック！\nhttps://t.co/l2nTrbPEoS https://t.co/LmTnOZb7Ym",
-      "images": [
-        "https://pbs.twimg.com/media/HWxJ2slbgAA0IaN.png"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2120101664665247912",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2120101664665247912",
       "publishedAt": "2026-11-10T10:30:01+00:00",
       "collectedAt": "2026-11-14T11:05:53+00:00",
@@ -743,7 +369,7 @@
     {
       "id": "2120094125038936530",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2120094125038936530",
       "publishedAt": "2026-11-10T10:00:03+00:00",
       "collectedAt": "2026-11-14T11:05:53+00:00",
@@ -756,22 +382,9 @@
       "quotes": []
     },
     {
-      "id": "2120091315912548829",
-      "account": "hareruya_osaka",
-      "shop": "晴屋大阪 TC",
-      "url": "https://x.com/hareruya_osaka/status/2120091315912548829",
-      "publishedAt": "2026-11-10T09:48:53+00:00",
-      "collectedAt": "2026-11-14T11:05:53+00:00",
-      "text": "【買取情報】\nTC大阪でもレガシーの人気カードを高価買取中💰\n\n晴れる屋の買取は全国一律💰✨\nお売りしたいカードや、整理したい時は是非お越しください🙌\n\n買取価格についてはこちらから👇\nhttps://t.co/BseG2Fzn4C",
-      "images": [],
-      "priceStatus": "originalText",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2120079018024186297",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2120079018024186297",
       "publishedAt": "2026-11-10T09:00:01+00:00",
       "collectedAt": "2026-11-14T11:05:53+00:00",
@@ -784,56 +397,9 @@
       "quotes": []
     },
     {
-      "id": "2120063925328773354",
-      "account": "hareruya_yokohm",
-      "shop": "晴屋横滨店",
-      "url": "https://x.com/hareruya_yokohm/status/2120063925328773354",
-      "publishedAt": "2026-11-10T08:00:03+00:00",
-      "collectedAt": "2026-11-14T11:05:53+00:00",
-      "text": "【買取情報】\n晴れる屋では『レガシー』のカードを高価買取中です💰\n\n《意志の力》￥11,000\n《魔の魅惑》￥8,000\n《金属モックス》￥15,000\n《一つの指輪》￥15,000\n《Lake of the Dead》￥10,000\n\n個別の買取価格はコチラ⇩\nhttps://t.co/c3rwzXg56R https://t.co/cCPFl9Rnka",
-      "images": [
-        "https://pbs.twimg.com/media/HWvQJOnbYAAjxZ-.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2120048818876022885",
-      "account": "hareruya_yokohm",
-      "shop": "晴屋横滨店",
-      "url": "https://x.com/hareruya_yokohm/status/2120048818876022885",
-      "publishedAt": "2026-11-10T07:00:01+00:00",
-      "collectedAt": "2026-11-14T11:05:53+00:00",
-      "text": "【買取情報】\n晴れる屋では『モダン』のカードを高価買取中です💰\n\n《引き裂かれし永劫、エムラクール》¥3,500\n《オセロットの群れ》¥5,000\n《オークの弓使い》¥9,000\n《風景の変容》¥5,000\n《オパールのモックス》¥28,000\n《成長の揺り篭、ヤヴィマヤ》¥1,800\n\n個別の買取価格はコチラ⇩ https://t.co/ccDCkLNFbC",
-      "images": [
-        "https://pbs.twimg.com/media/HWvOqM6bcAABzQW.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2120041263689056404",
-      "account": "hareruya_yokohm",
-      "shop": "晴屋横滨店",
-      "url": "https://x.com/hareruya_yokohm/status/2120041263689056404",
-      "publishedAt": "2026-11-10T06:30:00+00:00",
-      "collectedAt": "2026-11-14T11:05:53+00:00",
-      "text": "【#晴れ横 買取情報】\n⚓横浜店限定⚓\n強化買取リストを更新いたしました✨\n\n《冷酷な船長、テゼレット》4,000円\n《峰の恐怖》1,800円\n《倍増の季節》2,200円\nなど、話題のカードを高額買取中✨\n\nソートやスリーブ抜きは一切不要‼\n買取も晴れる屋横浜店にお任せください👍 https://t.co/yYgz9TvQfH",
-      "images": [
-        "https://pbs.twimg.com/media/HWsFCxObwAAa8NP.jpg",
-        "https://pbs.twimg.com/media/HWsFC8IbcAAxeMR.jpg",
-        "https://pbs.twimg.com/media/HWsFDOUbkAAjSxr.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2120018616804336126",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2120018616804336126",
       "publishedAt": "2026-11-10T05:00:00+00:00",
       "collectedAt": "2026-11-14T11:05:53+00:00",
@@ -851,7 +417,7 @@
     {
       "id": "2120003515728986496",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2120003515728986496",
       "publishedAt": "2026-11-10T04:00:00+00:00",
       "collectedAt": "2026-11-14T11:05:53+00:00",
@@ -864,24 +430,9 @@
       "quotes": []
     },
     {
-      "id": "2119997612669722728",
-      "account": "hareruya_osaka",
-      "shop": "晴屋大阪 TC",
-      "url": "https://x.com/hareruya_osaka/status/2119997612669722728",
-      "publishedAt": "2026-11-10T03:36:33+00:00",
-      "collectedAt": "2026-11-14T11:05:53+00:00",
-      "text": "【買取情報】\nTC大阪ではモダンの人気カードを高価買取中💰\n\n《風景の変容》[MOR]￥5,000-🗻\n《血の長の刃》[ZEN]￥1,200-⚔️\n《宝石の洞窟》[TSR]￥8,000-💎\n《水辺の学舎、水面院》[CHK]￥6,000-🏫\n\nスリーブ抜き・ソートの必要なし✨\n買取はぜひ晴れる屋TC大阪で💨 https://t.co/v3LfXXQzst",
-      "images": [
-        "https://pbs.twimg.com/media/HWu-l21bMAAieIZ.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2119988425407533513",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2119988425407533513",
       "publishedAt": "2026-11-10T03:00:02+00:00",
       "collectedAt": "2026-11-14T11:05:53+00:00",
@@ -894,24 +445,9 @@
       "quotes": []
     },
     {
-      "id": "2119792130566897938",
-      "account": "hareruya__akiba",
-      "shop": "晴屋秋叶原店",
-      "url": "https://x.com/hareruya__akiba/status/2119792130566897938",
-      "publishedAt": "2026-11-09T14:00:02+00:00",
-      "collectedAt": "2026-11-14T11:05:53+00:00",
-      "text": "【買取情報】\n＃晴れる屋秋葉原店\n🏝️デュアルランド 買取中🏝️\n\n💧💀《Underground Sea》200,000円買取\n💧🔥《Volcanic Island》160,000円買取\n💧🌞《Tundra》100,000円買取\n💧🌳《Tropical Island》85,000円買取\n\n専門スタッフが1枚1枚丁寧に査定します🔍\n全店舗＆ネット買取でも同額で買取中です！🙋 https://t.co/E1am83JPiG",
-      "images": [
-        "https://pbs.twimg.com/media/HWq3A6aaUAAse6f.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2119792129853493384",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2119792129853493384",
       "publishedAt": "2026-11-09T14:00:02+00:00",
       "collectedAt": "2026-11-14T11:05:53+00:00",
@@ -928,7 +464,7 @@
     {
       "id": "2119761924783247672",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2119761924783247672",
       "publishedAt": "2026-11-09T12:00:00+00:00",
       "collectedAt": "2026-11-14T11:05:53+00:00",
@@ -941,24 +477,9 @@
       "quotes": []
     },
     {
-      "id": "2119754379330748714",
-      "account": "hareruya_yokohm",
-      "shop": "晴屋横滨店",
-      "url": "https://x.com/hareruya_yokohm/status/2119754379330748714",
-      "publishedAt": "2026-11-09T11:30:01+00:00",
-      "collectedAt": "2026-11-14T11:05:53+00:00",
-      "text": "【買取情報】\n✨Secret Lair買取中!!✨\n\n《The Fourteenth Doctor》 12,000円買取\n■ボーダーレス■《激情の後見》 8,000円買取\n■ボーダーレス■《マナの合流点》 8,000円買取\n■ボーダーレス■《悪魔の教示者》 7,000円買取\n\nスリーブ抜き・仕分けは一切不要！👍 https://t.co/UiBKKR5Zfj",
-      "images": [
-        "https://pbs.twimg.com/media/HWqqJ3lb0AAvrh2.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2119754376608879031",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2119754376608879031",
       "publishedAt": "2026-11-09T11:30:01+00:00",
       "collectedAt": "2026-11-14T11:05:53+00:00",
@@ -971,22 +492,9 @@
       "quotes": []
     },
     {
-      "id": "2119739276841656552",
-      "account": "hareruya_osaka",
-      "shop": "晴屋大阪 TC",
-      "url": "https://x.com/hareruya_osaka/status/2119739276841656552",
-      "publishedAt": "2026-11-09T10:30:01+00:00",
-      "collectedAt": "2026-11-14T11:05:53+00:00",
-      "text": "【買取情報】\n当店でも引用先のカードを募集中✨\n\nコモンカードにもこんなお値段が⁉️\nご自宅のストレージに眠っているかもしれません😴\nカード整理の際はぜひ晴れる屋TC大阪で💨\n\n晴れる屋の買取は全国一律✨\n買取価格はこちらから確認できます👇\nhttps://t.co/BseG2FyPf4",
-      "images": [],
-      "priceStatus": "originalText",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2119739276413768154",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2119739276413768154",
       "publishedAt": "2026-11-09T10:30:01+00:00",
       "collectedAt": "2026-11-14T11:05:53+00:00",
@@ -999,24 +507,9 @@
       "quotes": []
     },
     {
-      "id": "2119735499128762397",
-      "account": "hareruya_yokohm",
-      "shop": "晴屋横滨店",
-      "url": "https://x.com/hareruya_yokohm/status/2119735499128762397",
-      "publishedAt": "2026-11-09T10:15:00+00:00",
-      "collectedAt": "2026-11-14T11:05:53+00:00",
-      "text": "【買取情報】\n✨『マジック：ザ・ギャザリング スター・トレック』シングルカード買取中!!✨\n\n《ビバリー・クラッシャー医師》 1,800円買取\n《データ少佐》 1,500円買取\n《ジャン＝リュック・ピカード艦長》 800円買取\n《ジョセフ・ムベンガ医師》 800円買取\n\nスリーブ抜き・仕分けなしでOK👍 https://t.co/p8dCuAYdLq",
-      "images": [
-        "https://pbs.twimg.com/media/HWqprMqacAAS_1K.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2119731736255041909",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2119731736255041909",
       "publishedAt": "2026-11-09T10:00:03+00:00",
       "collectedAt": "2026-11-14T11:05:53+00:00",
@@ -1031,7 +524,7 @@
     {
       "id": "2119716628854178066",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2119716628854178066",
       "publishedAt": "2026-11-09T09:00:01+00:00",
       "collectedAt": "2026-11-14T11:05:53+00:00",
@@ -1044,24 +537,9 @@
       "quotes": []
     },
     {
-      "id": "2119707235152715864",
-      "account": "hareruya__akiba",
-      "shop": "晴屋秋叶原店",
-      "url": "https://x.com/hareruya__akiba/status/2119707235152715864",
-      "publishedAt": "2026-11-09T08:22:41+00:00",
-      "collectedAt": "2026-11-14T11:05:53+00:00",
-      "text": "【買取情報】\n\n✨『マジック：ザ・ギャザリング | スター・トレック』サージFoil 買取中!!✨\n\n【サージ・Foil】■ショーケース■《ジャン＝リュック・ピカード艦長》 15,000円買取\n\n【サージ・Foil】■ショーケース■《ジェイムズ・T・カーク船長》 6,000円買取\n\netc…\n\n＃晴れる屋秋葉原店 https://t.co/LkGYquCUd9",
-      "images": [
-        "https://pbs.twimg.com/media/HWq2dzKbkAACYCv.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2119656230239277168",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2119656230239277168",
       "publishedAt": "2026-11-09T05:00:01+00:00",
       "collectedAt": "2026-11-14T11:05:53+00:00",
@@ -1079,7 +557,7 @@
     {
       "id": "2119369348473348176",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2119369348473348176",
       "publishedAt": "2026-11-08T10:00:03+00:00",
       "collectedAt": "2026-11-14T11:05:53+00:00",
@@ -1093,24 +571,9 @@
       "quotes": []
     },
     {
-      "id": "2119294089791238628",
-      "account": "hareruya_yokohm",
-      "shop": "晴屋横滨店",
-      "url": "https://x.com/hareruya_yokohm/status/2119294089791238628",
-      "publishedAt": "2026-11-08T05:01:00+00:00",
-      "collectedAt": "2026-11-14T11:05:53+00:00",
-      "text": "【買取情報】\n晴れる屋では『パウパー』のカードを高価買取中です💰\n\n《急送》￥200\n《Utrom Monitor》￥800\n《切り崩し》￥200\n《ブレス攻撃》￥900\n《汚損破》￥300\n《ギガントサウルス》￥300\n《悪意の大梟》￥800\n\n個別の買取価格はコチラ⇩\nhttps://t.co/c3rwzXg56R https://t.co/sFz2pVBghK",
-      "images": [
-        "https://pbs.twimg.com/media/HWkOzEibYAAXDGo.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2119293838112006506",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2119293838112006506",
       "publishedAt": "2026-11-08T05:00:00+00:00",
       "collectedAt": "2026-11-14T11:05:53+00:00",
@@ -1123,24 +586,9 @@
       "quotes": []
     },
     {
-      "id": "2119286791781900346",
-      "account": "hareruya_osaka",
-      "shop": "晴屋大阪 TC",
-      "url": "https://x.com/hareruya_osaka/status/2119286791781900346",
-      "publishedAt": "2026-11-08T04:32:00+00:00",
-      "collectedAt": "2026-11-14T11:05:53+00:00",
-      "text": "【買取情報】\nTC大阪ではパウパーの人気カードを高価買取中💰\n\n《急送》[NPH]￥200-☀\n《カザド＝ドゥームのトロール》[LTR]￥400-👿\n《復讐する狩人》[CLB]￥700-🐲\n《大渦の巨人》[CMR]￥100-🌀\n\n　And More！！\n\nスリーブ抜き・ソートの必要なし✨\n買取はぜひ晴れる屋TC大阪で💨 https://t.co/5lCNFJJWEs",
-      "images": [
-        "https://pbs.twimg.com/media/HWkM6BVbgAAJ3Jq.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "2119286290029900248",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/2119286290029900248",
       "publishedAt": "2026-11-08T04:30:00+00:00",
       "collectedAt": "2026-11-14T11:05:53+00:00",
@@ -1153,567 +601,9 @@
       "quotes": []
     },
     {
-      "id": "2119225517044047977",
-      "account": "hareruya_nagoya",
-      "shop": "晴屋名古屋店",
-      "url": "https://x.com/hareruya_nagoya/status/2119225517044047977",
-      "publishedAt": "2026-11-08T00:28:31+00:00",
-      "collectedAt": "2026-11-14T11:05:53+00:00",
-      "text": "【買取情報】#晴れる屋名古屋店\n🔥緊急買取更新🔥\n\n💥高額ピックアップ💥\n\n・《量子の謎かけ屋》 9,000\n・《月影》 ￥6,500\n・《バロウゴイフ》 ￥5,000\n\n是非お持ち込み下さい‼️\n\n※状態や在庫状況により価格が変動する場合がございます。 https://t.co/v1QSUeLXyC",
-      "images": [
-        "https://pbs.twimg.com/media/HWkAWzxbQAAORyi.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2118997326232785378",
-      "account": "hareruya_osaka",
-      "shop": "晴屋大阪 TC",
-      "url": "https://x.com/hareruya_osaka/status/2118997326232785378",
-      "publishedAt": "2026-11-07T09:21:46+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\nTC大阪、緊急買取表を更新しました☀\n\n⬜️《ビバリー・クラッシャー医師》2,000円\n🟩《生ける遺産、ジャッジア・ダックス》3,500円\netc...\n\n『マジック・ザ・ギャザリング | スター・トレック』発売‼️\n全世界で大人気の作品とコラボした最新セット✨\n注目の新カードを強化買取😆 https://t.co/WwOzShH2Sv",
-      "images": [
-        "https://pbs.twimg.com/media/HWgw1X8bQAEIZ1v.jpg",
-        "https://pbs.twimg.com/media/HWgw1X7a8AAQwQS.jpg",
-        "https://pbs.twimg.com/media/HWgw1X9aQAA6Ux8.jpg",
-        "https://pbs.twimg.com/media/HWgw1X7aAAA7nGX.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2118983526439907425",
-      "account": "hareruya_osaka",
-      "shop": "晴屋大阪 TC",
-      "url": "https://x.com/hareruya_osaka/status/2118983526439907425",
-      "publishedAt": "2026-11-07T08:26:56+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\nTC大阪でも『マジック：ザ・ギャザリング | スター・トレック』の買取中です‼️‼️‼️\n\nお持ち込みは1枚から受付しております、ぜひTC大阪までお越しください💫",
-      "images": [],
-      "priceStatus": "originalText",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2118953877752218045",
-      "account": "hareruya_nagoya",
-      "shop": "晴屋名古屋店",
-      "url": "https://x.com/hareruya_nagoya/status/2118953877752218045",
-      "publishedAt": "2026-11-07T06:29:07+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】＃晴れる屋名古屋店\n🔥緊急買取更新🔥\n\n💥高額ピックアップ💥\n\n・《量子の謎かけ屋》 9,00\n・《月影》 ￥6,500\n・《バロウゴイフ》 ￥5,000\n\n是非お持ち込み下さい‼️\n\n※状態や在庫状況により価格が変動する場合がございます。 https://t.co/CQefhtIqxa",
-      "images": [
-        "https://pbs.twimg.com/media/HWgI_uEbsAA0l_A.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2118920659002871909",
-      "account": "hareruya__akiba",
-      "shop": "晴屋秋叶原店",
-      "url": "https://x.com/hareruya__akiba/status/2118920659002871909",
-      "publishedAt": "2026-11-07T04:17:07+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\n✨『マジック：ザ・ギャザリング  スター・トレック』シングルカード買取中!!✨\n\n《ディープ・スペース・ナイン》 2,500円買取\n《科学技官、ミスター・スポック》 1,200円買取\n《吸塩鬼》 800円買取\n《ジャン＝リュック・ピカード艦長》 700円買取\n\n＃晴れる屋秋葉原 https://t.co/3x30YGipBS",
-      "images": [
-        "https://pbs.twimg.com/media/HWfrFigbAAApkwf.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2118919086344437842",
-      "account": "hareruya__akiba",
-      "shop": "晴屋秋叶原店",
-      "url": "https://x.com/hareruya__akiba/status/2118919086344437842",
-      "publishedAt": "2026-11-07T04:10:52+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\n#晴れる屋秋葉原\n✨スタンダードレア土地買取中!!✨\n\n《轟音の滝》 3,000円買取\n《行き届いた書庫》 2,500円買取\n《大音声の劇場》 2,000円買取\n《バーシンセー》 1,800円買取\n\n面倒なカードの仕分けは不要‼️\nスリーブに入れたままお持ちください💨 https://t.co/ch3IrcgA6H",
-      "images": [
-        "https://pbs.twimg.com/media/HWfprVWaIAAj9i1.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2118909052717842796",
-      "account": "hareruya_yokohm",
-      "shop": "晴屋横滨店",
-      "url": "https://x.com/hareruya_yokohm/status/2118909052717842796",
-      "publishedAt": "2026-11-07T03:31:00+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\n晴れる屋では『レガシー』のカードを高価買取中です💰\n\n《浅すぎる墓穴》￥10,000\n《アロサウルス飼い》￥5,000\n《金属モックス》￥15,000\n《カラカス》￥2,500\n\n個別の買取価格はコチラ⇩\nhttps://t.co/c3rwzXgCWp https://t.co/GKqJVcL5fy",
-      "images": [
-        "https://pbs.twimg.com/media/HWfBQqzbgAA-0iG.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2118893953156349994",
-      "account": "hareruya_osaka",
-      "shop": "晴屋大阪 TC",
-      "url": "https://x.com/hareruya_osaka/status/2118893953156349994",
-      "publishedAt": "2026-11-07T02:31:00+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\nTC大阪ではレガシーの人気カードを高価買取中💰\n\n《意志の力》[ALL]￥11,000-💧\n《騙し討ち》[USG]￥2,500-🐲\n《無のロッド》[WTH]￥15,000-☤\n《ウギンの目》[MM2]￥6,000-👁\n\nスリーブ抜き・ソートの必要なし✨\n買取はぜひ晴れる屋TC大阪で💨 https://t.co/ll7luQYrP8",
-      "images": [
-        "https://pbs.twimg.com/media/HWe_7qGbYAAsTm2.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2118891185192526155",
-      "account": "hareruya_TC",
-      "shop": "晴屋东京 TC",
-      "url": "https://x.com/hareruya_TC/status/2118891185192526155",
-      "publishedAt": "2026-11-07T02:20:00+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【#晴れる屋TC東京　買取情報】\n\n✨パイオニア買取中！✨\n\n《モックス・アンバー》 7,000円買取\n《約束された終末、エムラクール》 4,500円買取\n《マナの合流点》 4,000円買取\n《ニクスの祭殿、ニクソス》 3,000円買取\n\nスリーブ付きで持込OK🙆‍♀️\n仕分け不要＆全店同額買取です✨ https://t.co/k6ERdmsLFa",
-      "images": [
-        "https://pbs.twimg.com/media/HWezN3cbUAAIhpk.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2118888668245160386",
-      "account": "hareruya_TC",
-      "shop": "晴屋东京 TC",
-      "url": "https://x.com/hareruya_TC/status/2118888668245160386",
-      "publishedAt": "2026-11-07T02:10:00+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【#晴れる屋TC東京　買取情報】\n\n✨『マジック：ザ・ギャザリング  スター・トレック』サージFoil 買取中!!✨\n\n【サージ・Foil】■ショーケース■《ジェイムズ・T・カーク船長》 6,000円買取\n【サージ・Foil】■ショーケース■《ビバリー・クラッシャー医師》 4,000円買取 https://t.co/YhNT4rh8Ya",
-      "images": [
-        "https://pbs.twimg.com/media/HWezDdqbkAAmOyl.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2118886158721782199",
-      "account": "hareruya_TC",
-      "shop": "晴屋东京 TC",
-      "url": "https://x.com/hareruya_TC/status/2118886158721782199",
-      "publishedAt": "2026-11-07T02:00:01+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【#晴れる屋TC東京　買取情報】\n\n✨『マジック：ザ・ギャザリング  スター・トレック』シングルカード買取中!!✨\n\n《ディープ・スペース・ナイン》 2,500円買取\n《ビバリー・クラッシャー医師》 1,800円買取\n《データ少佐》 1,200円買取\n《ジェネシス装置》 800円買取\n\nスリーブのまま持込OK🙌 https://t.co/xMbDHyeMU0",
-      "images": [
-        "https://pbs.twimg.com/media/HWey3pfb0AAIbUG.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2118599262871208352",
-      "account": "hareruya_osaka",
-      "shop": "晴屋大阪 TC",
-      "url": "https://x.com/hareruya_osaka/status/2118599262871208352",
-      "publishedAt": "2026-11-06T07:00:00+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\nTC大阪でも画像のカードを買取中です😍\n\n晴れる屋の買取は全国一律💰✨\nお売りしたいカードや、整理したい時は是非お越しください🙌\n\n買取価格についてはこちらから👇\nhttps://t.co/yQbIKHXtGO",
-      "images": [],
-      "priceStatus": "originalText",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2118557737751806271",
-      "account": "hareruya_yokohm",
-      "shop": "晴屋横滨店",
-      "url": "https://x.com/hareruya_yokohm/status/2118557737751806271",
-      "publishedAt": "2026-11-06T04:15:00+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\n晴れる屋では『スター・トレック』のカードを高価買取中です💰\n\n《ビバリー・クラッシャー医師》￥1,800\n《データ少佐》￥1,200\n《慎ましき経営者、クワーク》￥1,500\n《生ける遺産、ジャッジア・ダックス》￥3,000\n《ディープ・スペース・ナイン》￥2,500\n\n個別の買取価格はコチラ⇩ https://t.co/wmsuw9MmiL",
-      "images": [
-        "https://pbs.twimg.com/media/HWaaEWMacAAujoL.jpg",
-        "https://pbs.twimg.com/media/HWaaEWNbIAE6ZOc.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2118251975196418222",
-      "account": "hareruya_yokohm",
-      "shop": "晴屋横滨店",
-      "url": "https://x.com/hareruya_yokohm/status/2118251975196418222",
-      "publishedAt": "2026-11-05T08:00:00+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\n晴れる屋では『モダン』のカードを高価買取中です💰\n\n《引き裂かれし永劫、エムラクール》¥3,500\n《否定の力》¥7,000\n《御霊の復讐》¥3,000\n《緑の太陽の頂点》¥3,500\n《オパールのモックス》¥28,000\n《成長の揺り篭、ヤヴィマヤ》¥1,800\n\n個別の買取価格はコチラ⇩ https://t.co/vccXIQmBry",
-      "images": [
-        "https://pbs.twimg.com/media/HWVtFpMa0AAp4JT.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2118238131891707926",
-      "account": "hareruya_osaka",
-      "shop": "晴屋大阪 TC",
-      "url": "https://x.com/hareruya_osaka/status/2118238131891707926",
-      "publishedAt": "2026-11-05T07:05:00+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\nTC大阪ではモダンの人気カードを高価買取中💰\n\n最近ますます需要が爆上がり⁉⤴️\n《オパールのモックス》[SOM]を28,000円で買取💎\nもはやイベントで見ない日はないのでは⁉\n《ウルザの物語》[MH2]を5,000円で買取🤖\n\nスリーブ抜き・ソートの必要なし✨\n買取はぜひ晴れる屋TC大阪で💨 https://t.co/tuETfNlQvY",
-      "images": [
-        "https://pbs.twimg.com/media/HWVpVBkaMAAbMXB.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2118236879900520846",
-      "account": "hareruya_yokohm",
-      "shop": "晴屋横滨店",
-      "url": "https://x.com/hareruya_yokohm/status/2118236879900520846",
-      "publishedAt": "2026-11-05T07:00:01+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\n晴れる屋では『デュアルランド』を高価買取中です💰\n\n《Underground Sea》\nNM：￥200,000\nSP：￥160,000\nMP：￥140,000\nHP：￥130,000\n\n《Bayou》\nNM：￥70,000\nSP：￥56,000\nMP：￥49,000\nHP：￥45,500\n\n個別の買取価格はコチラ⇩\nhttps://t.co/c3rwzXgCWp https://t.co/dGc8645fVY",
-      "images": [
-        "https://pbs.twimg.com/media/HWVsZwrboAAXomC.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2118169429083111831",
-      "account": "hareruya_osaka",
-      "shop": "晴屋大阪 TC",
-      "url": "https://x.com/hareruya_osaka/status/2118169429083111831",
-      "publishedAt": "2026-11-05T02:32:00+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\nTC大阪ではスタンダードの人気土地を高価買取中💰\n\n《神聖なる泉》[ECL]￥700-☀💧\n《バーシンセー》[TLA]￥1,800-🌳\n《ブレイズマイアの境界》[DSK]￥900-💀🔥\n\n　And More！！\n\nスリーブ抜き・ソートの必要なし✨\n買取はぜひ晴れる屋TC大阪で💨 https://t.co/leeILsGTA6",
-      "images": [
-        "https://pbs.twimg.com/media/HWU2JLBbwAASfjn.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2118166409247113337",
-      "account": "hareruya_TC",
-      "shop": "晴屋东京 TC",
-      "url": "https://x.com/hareruya_TC/status/2118166409247113337",
-      "publishedAt": "2026-11-05T02:20:00+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【#晴れる屋TC東京　買取情報】\n\n✨スタンダードレア土地買取中!!✨\n\n《地底街の下水道》 2,800円買取\n《リバーパイアーの境界》 2,500円買取\n《フォモーリの宝物庫》 2,500円買取\n《大音声の劇場》 2,000円買取\n\nスリーブ付きで持込OK🙆‍♀️\n仕分け不要＆全店同額買取です✨ https://t.co/EYf83HL214",
-      "images": [
-        "https://pbs.twimg.com/media/HWUoRMhaIAAFmBM.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2118163892509847817",
-      "account": "hareruya_TC",
-      "shop": "晴屋东京 TC",
-      "url": "https://x.com/hareruya_TC/status/2118163892509847817",
-      "publishedAt": "2026-11-05T02:10:00+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【#晴れる屋TC東京　買取情報】\n\n✨コマンダー買取中！✨\n\n《久遠なる栄光の笏》 8,000円買取\n《偏向はたき》 7,000円買取\n《キャベツ売りの商人》 6,000円買取\n《マダラの鉤爪門》 5,000円買取\n\n1枚からお気軽にどうぞ🙌\nスリーブのまま持込OK‼️\n全店同額買取です✨ https://t.co/XlFVkByNUA",
-      "images": [
-        "https://pbs.twimg.com/media/HWUoAFcaQAAvK8_.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2118161378934661609",
-      "account": "hareruya_TC",
-      "shop": "晴屋东京 TC",
-      "url": "https://x.com/hareruya_TC/status/2118161378934661609",
-      "publishedAt": "2026-11-05T02:00:00+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【#晴れる屋TC東京　買取情報】\n\n✨パイオニア買取中！✨\n\n《アナグマモグラの仔》 10,000円買取\n《約束された終末、エムラクール》 4,500円買取\n《グレートヘンジ》 4,000円買取\n《ニクスの祭殿、ニクソス》 3,000円買取\n\nスリーブ抜き・仕分け不要で全店同額買取🙌\n査定の待ち時間は大会参加可能‼️ https://t.co/QUWdoZzad5",
-      "images": [
-        "https://pbs.twimg.com/media/HWUnkWXbYAAhmlG.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2117950236014367043",
-      "account": "hareruya_yokohm",
-      "shop": "晴屋横滨店",
-      "url": "https://x.com/hareruya_yokohm/status/2117950236014367043",
-      "publishedAt": "2026-11-04T12:01:00+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\n晴れる屋では『スタンダードレア土地』のカードを高価買取中です💰\n\n《バーシンセー》￥1,800\n《始まりの町》￥1,600\n《リバーパイアーの境界》￥2,500\n《サンビロウの境界》￥2,500\n《ウェイストウッドの境界》￥1,200\n\n個別の買取価格はコチラ⇩\nhttps://t.co/c3rwzXg56R https://t.co/3aXRFGnSBK",
-      "images": [
-        "https://pbs.twimg.com/media/HWQ4NhGacAABW_O.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2117909065968075192",
-      "account": "hareruya_osaka",
-      "shop": "晴屋大阪 TC",
-      "url": "https://x.com/hareruya_osaka/status/2117909065968075192",
-      "publishedAt": "2026-11-04T09:17:24+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\n当店でも引用先のカードを募集中！✨\n\n『ウォーハンマー40,000』や『統率者マスターズ』の収録カードは最近注目が集まって、イイお値段になっております💵\n\n晴れる屋の買取は全国一律✨\n買取価格はこちらから確認できます👇\nhttps://t.co/0gSjyMhc8X",
-      "images": [],
-      "priceStatus": "originalText",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2117889593886544111",
-      "account": "hareruya_osaka",
-      "shop": "晴屋大阪 TC",
-      "url": "https://x.com/hareruya_osaka/status/2117889593886544111",
-      "publishedAt": "2026-11-04T08:00:02+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\nTC大阪、緊急買取表を更新しました☀\n\n⬛️🟩《デリアン・フェル教授》2,000円\n🟦《忌まわしき眼魔》1,800円\n🟫《三なる宝球》7,000円\netc...\n\nお家に使ってないカード、ありませんか！😆\n\n面倒なスリーブ抜き、ソート不要✨\nMTG買取ならTC大阪😎 https://t.co/PnL7jHq7dG",
-      "images": [
-        "https://pbs.twimg.com/media/HWQ5WQ_bkAAK6D7.jpg",
-        "https://pbs.twimg.com/media/HWQ5WQ_bUAAfYgQ.jpg",
-        "https://pbs.twimg.com/media/HWQ5WQ0aYAAvwio.jpg",
-        "https://pbs.twimg.com/media/HWQ5WQ-aEAAKqRm.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2117875744265380177",
-      "account": "hareruyaSapporo",
-      "shop": "晴屋札幌店",
-      "url": "https://x.com/hareruyaSapporo/status/2117875744265380177",
-      "publishedAt": "2026-11-04T07:05:00+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\n✨スタンダードレア土地買取中!!✨\n\n《地底街の下水道》 2,800円買取\n《リバーパイアーの境界》 2,500円買取\n《フォモーリの宝物庫》 2,500円買取\n《大音声の劇場》 2,000円買取\n\nスリーブ付きで持込OK🙆‍♀️\n仕分け不要＆全店同額買取です✨\n大会参加のついでにお気軽にお持ち込みを✨ https://t.co/931n6nwwQa",
-      "images": [
-        "https://pbs.twimg.com/media/HWQ0KEDawAAwzxd.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2117875492418117886",
-      "account": "hareruyaSapporo",
-      "shop": "晴屋札幌店",
-      "url": "https://x.com/hareruyaSapporo/status/2117875492418117886",
-      "publishedAt": "2026-11-04T07:04:00+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\n✨コマンダー買取中！✨\n\n《久遠なる栄光の笏》 8,000円買取\n《偏向はたき》 7,000円買取\n《キャベツ売りの商人》 6,000円買取\n《マダラの鉤爪門》 5,000円買取\n\n1枚からお気軽にどうぞ🙌\nスリーブのまま持込OK‼️\n全店同額買取です✨ https://t.co/H3qDIKIOOI",
-      "images": [
-        "https://pbs.twimg.com/media/HWQ0GSma0AAiZLt.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2117875240902545875",
-      "account": "hareruyaSapporo",
-      "shop": "晴屋札幌店",
-      "url": "https://x.com/hareruyaSapporo/status/2117875240902545875",
-      "publishedAt": "2026-11-04T07:03:00+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\n✨レガシー買取中!!✨\n\n《直観》 40,000円買取\n《ファイレクシアン・ドレッドノート》 30,000円買取\n《無のロッド》 15,000円買取\n《古えの墳墓》 15,000円買取\n\nスリーブ付きで持込OK🙆‍♀️\n仕分け不要＆全店同額買取です✨\n大会参加のついでにお気軽にお持ち込みを✨ https://t.co/jlcmijrHMo",
-      "images": [
-        "https://pbs.twimg.com/media/HWQ0CDJboAAHhoC.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2117874989211037832",
-      "account": "hareruyaSapporo",
-      "shop": "晴屋札幌店",
-      "url": "https://x.com/hareruyaSapporo/status/2117874989211037832",
-      "publishedAt": "2026-11-04T07:02:00+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\n✨モダンカード買取中!!✨\n\n《エスパーの歩哨》 6,000円買取\n《水辺の学舎、水面院》 6,000円買取\n《孤独》 5,500円買取\n《真実の解体者、コジレック》 5,000円買取\n\n1枚からお気軽にどうぞ🙌\nスリーブのまま持込OK‼️\n全店同額買取です✨ https://t.co/krUf1cCRVB",
-      "images": [
-        "https://pbs.twimg.com/media/HWQz73qbIAA25rJ.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2117874769295286626",
-      "account": "hareruyaSapporo",
-      "shop": "晴屋札幌店",
-      "url": "https://x.com/hareruyaSapporo/status/2117874769295286626",
-      "publishedAt": "2026-11-04T07:01:07+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\n✨パイオニア買取中！✨\n\n《アナグマモグラの仔》 10,000円買取\n《約束された終末、エムラクール》 4,500円買取\n《グレートヘンジ》 4,000円買取\n《ニクスの祭殿、ニクソス》 3,000円買取\n\nスリーブ抜き・仕分け不要で全店同額買取🙌\n査定の待ち時間は大会参加可能‼️ https://t.co/8AyYaAduiq",
-      "images": [
-        "https://pbs.twimg.com/media/HWQz4EqasAAta2q.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2117874728111321555",
-      "account": "hareruyaSapporo",
-      "shop": "晴屋札幌店",
-      "url": "https://x.com/hareruyaSapporo/status/2117874728111321555",
-      "publishedAt": "2026-11-04T07:00:58+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\n✨日本語版スタンダード買取中!!✨\n\n《月影》 5,500円買取\n《アガサの魂の大釜》 5,500円買取\n《七つの死の種父》 4,500円買取\n《ベイルマークの大主》 4,500円買取\n\n1枚からお気軽にどうぞ🙌\nスリーブのまま持込OK‼️\n全店同額買取です✨ https://t.co/VGqGmWuhei",
-      "images": [
-        "https://pbs.twimg.com/media/HWQz1qIa0AAaf34.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2117806789542686780",
-      "account": "hareruya_osaka",
-      "shop": "晴屋大阪 TC",
-      "url": "https://x.com/hareruya_osaka/status/2117806789542686780",
-      "publishedAt": "2026-11-04T02:31:00+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\nTC大阪ではパイオニアのカードを高価買取中💰\n\n《シガルダの助け》[EMN]￥1,500-👼\n《海門修復》[ZNR]￥2,500-💧\n《風景の変容》[M19]￥2,500-🏔\n《ニクスの祭殿、ニクソス》[THS]￥3,000-🌈\nAnd More！！\n\nスリーブ抜き・ソートの必要なし✨\n買取はぜひ晴れる屋TC大阪で💨 https://t.co/N1Y0Tg47j1",
-      "images": [
-        "https://pbs.twimg.com/media/HWPl0W0asAAikzD.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2117788921962614977",
-      "account": "hareruya_TC",
-      "shop": "晴屋东京 TC",
-      "url": "https://x.com/hareruya_TC/status/2117788921962614977",
-      "publishedAt": "2026-11-04T01:20:00+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【#晴れる屋TC東京　買取情報】\n\n✨コマンダー買取中！✨\n\n《久遠なる栄光の笏》 8,000円買取\n《偏向はたき》 7,000円買取\n《エインシャント・カッパー・ドラゴン》 7,000円買取\n《キャベツ売りの商人》 6,000円買取\n\nお持ち込みはスリーブ抜き・仕分けなしでOK👍 https://t.co/djDXCpXgZU",
-      "images": [
-        "https://pbs.twimg.com/media/HWPSDI4b0AA-8_L.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2117786405229547970",
-      "account": "hareruya_TC",
-      "shop": "晴屋东京 TC",
-      "url": "https://x.com/hareruya_TC/status/2117786405229547970",
-      "publishedAt": "2026-11-04T01:10:00+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【#晴れる屋TC東京　買取情報】\n\n✨パウパー買取中！✨\n\n《ブレス攻撃》 1,000円買取\n《フェアリーの忌み者》 900円買取\n《Thermokarst》 900円買取\n《復讐する狩人》 700円買取\n\n1枚からお気軽にどうぞ🙌\nスリーブのまま持込OK‼️\n全店同額買取です✨ https://t.co/yTkbYggMP2",
-      "images": [
-        "https://pbs.twimg.com/media/HWPRsuSboAAzsP6.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2117783893709656093",
-      "account": "hareruya_TC",
-      "shop": "晴屋东京 TC",
-      "url": "https://x.com/hareruya_TC/status/2117783893709656093",
-      "publishedAt": "2026-11-04T01:00:01+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【#晴れる屋TC東京　買取情報】\n\n✨日本語版スタンダード買取中!!✨\n\n《月影》 5,500円買取\n《アガサの魂の大釜》 5,500円買取\n《七つの死の種父》 4,500円買取\n《ベイルマークの大主》 4,500円買取\n\n1枚からお気軽にどうぞ🙌\nスリーブのまま持込OK‼️\n全店同額買取です✨ https://t.co/FagylXJH4E",
-      "images": [
-        "https://pbs.twimg.com/media/HWPSPZZaoAAQwRU.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "2117551353811943658",
-      "account": "hareruya_osaka",
-      "shop": "晴屋大阪 TC",
-      "url": "https://x.com/hareruya_osaka/status/2117551353811943658",
-      "publishedAt": "2026-11-03T09:35:59+00:00",
-      "collectedAt": "2026-11-14T11:10:45+00:00",
-      "text": "【買取情報】\nTC大阪でもスタンダード範囲のカードの買取実施中🔥\n\nコチラのカード、TC大阪で強化買取中💁\n✅《月影》\n✅《ベイルマークの大主》\n✅《ウロボロイド》\n\n大変な仕分けや、スリーブ抜きなどは不要🆗\nストレージのままお持ち込み頂いても問題なし👍\n\n買取はぜひ晴れる屋TC大阪へ☀️ https://t.co/jGPfHccqAW",
-      "images": [
-        "https://pbs.twimg.com/media/HWMNdozaEAAzSdR.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "1673251685295329280",
-      "account": "hareruya__akiba",
-      "shop": "晴屋秋叶原店",
-      "url": "https://x.com/hareruya__akiba/status/1673251685295329280",
-      "publishedAt": "2023-06-26T08:47:43+00:00",
-      "collectedAt": "2026-11-14T10:49:56+00:00",
-      "text": "【買取情報】\n🚨🚨🚨枚数限定緊急買取🚨🚨🚨\n\n《一つの指輪》 日本語版 10,000円買取‼️\n\n秋葉原店限定緊急買取を更新しました‼️\n最新セット『指輪物語：中つ国の伝承』から《一つの指輪》の価格を大幅に更新しました💍\nお持ちの方はぜひ、秋葉原店へ☀️\n皆様のご来店お待ちしております‼️ https://t.co/OJ5lKkHesO",
-      "images": [
-        "https://pbs.twimg.com/media/FziVihmaMAE4Py4.png"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "1203136855408951297",
-      "account": "hareruya__akiba",
-      "shop": "晴屋秋叶原店",
-      "url": "https://x.com/hareruya__akiba/status/1203136855408951297",
-      "publishedAt": "2019-12-07T02:19:14+00:00",
-      "collectedAt": "2026-11-14T10:49:56+00:00",
-      "text": "【買取情報】\nパイオニアの影響か。。このカードはどこまで行くのか。。\n《思考囲い》買取3000円！！\n《思考囲い》買取3000円！！\n《思考囲い》買取3000円！！\n日英問わず、版問わず！！です！！\nお手元に余らせているこのカード！晴れる屋秋葉原店までお越しください！\n\n#ハレルヤアキバ https://t.co/uT8gdZUFKk",
-      "images": [
-        "https://pbs.twimg.com/media/ELJmluxU0AAdsGb.png"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
-      "id": "1136922887225348096",
-      "account": "hareruya__akiba",
-      "shop": "晴屋秋叶原店",
-      "url": "https://x.com/hareruya__akiba/status/1136922887225348096",
-      "publishedAt": "2019-06-07T09:08:33+00:00",
-      "collectedAt": "2026-11-14T10:49:56+00:00",
-      "text": "【買取情報】晴れる屋秋葉原店では、本日より買取を行っております！\n《戦慄衆の将軍、リリアナ》イラスト違いFoil 90000円買取！\n《覆いを割く者、ナーセット》イラスト違いFoil 30000円買取！\n《沸騰する小湖》日本語 10000円買取など、数量限定の激アツ買取品も多数！\nお気軽にご依頼ください！ https://t.co/ygf7R58bIP",
-      "images": [
-        "https://pbs.twimg.com/media/D8coeJdUcAAwktj.jpg",
-        "https://pbs.twimg.com/media/D8cos0ZUIAAdGhH.jpg",
-        "https://pbs.twimg.com/media/D8cotfrUcAAc5gG.jpg"
-      ],
-      "priceStatus": "imageReviewNeeded",
-      "source": "X public post",
-      "quotes": []
-    },
-    {
       "id": "1121682632423510016",
       "account": "hareruya_mtg",
-      "shop": "晴屋官方",
+      "shop": "晴屋官方总账号",
       "url": "https://x.com/hareruya_mtg/status/1121682632423510016",
       "publishedAt": "2019-04-26T07:49:14+00:00",
       "collectedAt": "2026-11-14T10:56:55+00:00",

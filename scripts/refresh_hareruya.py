@@ -8,6 +8,7 @@ from datetime import datetime, timezone
 
 import update_hareruya_prices as legacy
 from hareruya_capture import annotate, detail_prices, merge_listing, timestamp
+from hareruya_movements import record_refresh
 
 
 def key(row):
@@ -84,6 +85,7 @@ def refresh(detail_limit=240, workers=3, retail_limit=12, listings=True):
             payload["meta"]["jpyCny"] = json.loads(legacy.fetch(legacy.FX_URL))["rates"]["CNY"]
         except Exception as error:
             payload["meta"]["fxError"] = str(error)
+    record_refresh(previous, payload, at)
     temp = legacy.OUTPUT.with_suffix(".tmp")
     temp.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     temp.replace(legacy.OUTPUT)

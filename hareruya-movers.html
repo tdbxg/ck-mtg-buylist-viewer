@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>晴屋回收价变动 | MTG 价格雷达</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./hareruya-movers.css?v=20261114">
+</head>
+<body>
+  <header class="topbar"><div><h1>晴屋回收价变动</h1><p id="rankStatus">正在读取晴屋核价记录…</p></div><a href="./hareruya.html" class="rank-back">晴屋单卡查询 ↗</a></header>
+  <nav class="app-tabs" aria-label="页面切换"><a class="tab-link" href="./index.html">CK 单卡查询</a><a class="tab-link" href="./hareruya.html">晴屋日本</a><a class="tab-link active" href="./hareruya-movers.html">晴屋涨跌榜</a><a class="tab-link" href="./social.html">总店 X 公告</a></nav>
+  <main class="rank-main">
+    <div class="rank-toolbar">
+      <div id="periodButtons" class="rank-segments" aria-label="比较时间窗口">
+        <button type="button" data-period="hour" aria-pressed="false">1 小时内</button>
+        <button type="button" data-period="day" aria-pressed="true">24 小时内</button>
+        <button type="button" data-period="threeDay" aria-pressed="false">72 小时内</button>
+        <button type="button" data-period="week" aria-pressed="false">7 天内</button>
+      </div>
+      <select id="metricSelect" aria-label="价格类型"><option value="buy">回收价</option><option value="sale">NM 售价</option></select>
+      <input id="rankSearch" type="search" aria-label="搜索牌名和版本" placeholder="牌名、系列、编号或晴屋 ID">
+      <button id="reloadRank" type="button" title="读取最新已发布榜单">刷新榜单</button>
+      <button id="exportRank" type="button" title="导出当前筛选结果">导出 CSV</button>
+    </div>
+    <details class="rank-filter-drawer"><summary>更多筛选</summary><div class="rank-filters">
+      <label>语言<select id="languageFilter"><option value="">全部语言</option><option value="JP">日文</option><option value="EN">英文</option></select></label>
+      <label>系列<select id="setFilter"><option value="">全部系列</option></select></label>
+      <label>闪别<select id="finishFilter"><option value="">全部</option><option value="nonfoil">仅不闪</option><option value="foil">仅闪卡</option></select></label>
+      <label>最低变动（日元）<input id="minDelta" type="number" min="0" step="100" value="0"></label>
+      <label>最低涨跌幅（%）<input id="minPct" type="number" min="0" step="1" value="0"></label>
+      <label>排序<select id="rankSort"><option value="amount">变动金额</option><option value="percent">涨跌幅</option></select></label>
+      <label class="rank-watch-only"><input id="watchedOnly" type="checkbox">仅看关注</label>
+    </div></details>
+    <div class="rank-summary"><span id="comparisonCount">-</span><span id="captureTime">-</span></div>
+    <p class="rank-method">晴屋官网统一收价 · 窗口内首次有效报价 → 末次有效报价 · 实际比较时间见每张牌。停收、缺价不计为降价。</p>
+    <div class="rank-boards">
+      <section class="rank-board rising" aria-label="上涨榜">
+        <header><h2 id="risingTitle">回收价上涨</h2><span id="risingCount">0 张</span></header>
+        <div class="rank-table-wrap"><table><thead><tr><th>单卡 / 版本 / 比较时间</th><th>前价 ¥</th><th>末价 ¥</th><th>变动 ¥</th><th>幅度</th><th class="watch-heading">关注</th></tr></thead><tbody id="risingRows"></tbody></table></div>
+        <p id="risingEmpty" class="rank-empty" hidden>本窗口内尚无可比较的上涨记录</p>
+        <div class="rank-pager"><button type="button" data-page="rising" data-step="-1" aria-label="上涨榜上一页">‹</button><span id="risingPage">1 / 1</span><button type="button" data-page="rising" data-step="1" aria-label="上涨榜下一页">›</button></div>
+      </section>
+      <section class="rank-board falling" aria-label="下跌榜">
+        <header><h2 id="fallingTitle">回收价下跌</h2><span id="fallingCount">0 张</span></header>
+        <div class="rank-table-wrap"><table><thead><tr><th>单卡 / 版本 / 比较时间</th><th>前价 ¥</th><th>末价 ¥</th><th>变动 ¥</th><th>幅度</th><th class="watch-heading">关注</th></tr></thead><tbody id="fallingRows"></tbody></table></div>
+        <p id="fallingEmpty" class="rank-empty" hidden>本窗口内尚无可比较的下跌记录</p>
+        <div class="rank-pager"><button type="button" data-page="falling" data-step="-1" aria-label="下跌榜上一页">‹</button><span id="fallingPage">1 / 1</span><button type="button" data-page="falling" data-step="1" aria-label="下跌榜下一页">›</button></div>
+      </section>
+    </div>
+  </main>
+  <script src="./hareruya-movers.js?v=20261114"></script>
+</body>
+</html>

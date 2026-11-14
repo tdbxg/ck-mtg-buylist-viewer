@@ -1,0 +1,65 @@
+.rank-main { max-width: 1800px; margin: 0 auto; padding: 20px; }
+.rank-back { flex: 0 0 auto; font-size: 14px; }
+.rank-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; padding-bottom: 14px; }
+.rank-toolbar > input { flex: 1 1 220px; min-width: 0; }
+.rank-toolbar > select { width: 130px; }
+.rank-toolbar > button { width: auto; }
+.rank-segments { display: inline-flex; flex: 0 0 auto; }
+.rank-segments button { width: auto; background: white; color: #374151; border-radius: 0; border-right-width: 0; font-weight: 500; white-space: nowrap; padding: 9px 12px; }
+.rank-segments button:first-child { border-radius: 5px 0 0 5px; }
+.rank-segments button:last-child { border-right-width: 1px; border-radius: 0 5px 5px 0; }
+.rank-segments button[aria-pressed=true] { background: #116b61; color: white; border-color: #116b61; }
+.rank-filter-drawer { border-top: 1px solid #d1d5db; border-bottom: 1px solid #d1d5db; padding: 10px 0; }
+.rank-filter-drawer summary { cursor: pointer; color: #374151; }
+.rank-filters { display: grid; grid-template-columns: repeat(6, minmax(100px, 1fr)) auto; gap: 12px; padding-top: 12px; align-items: end; }
+.rank-filters label { min-width: 0; font-size: 12px; color: #374151; }
+.rank-filters select, .rank-filters input { margin-top: 4px; }
+.rank-filters .rank-watch-only { display: flex; align-items: center; gap: 5px; min-height: 38px; white-space: nowrap; }
+.rank-watch-only input { width: 16px; min-height: 0; height: 16px; padding: 0; margin: 0; }
+.rank-summary { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; margin: 15px 0 5px; }
+.rank-method { color: #647067; font-size: 12px; margin: 8px 0 16px; line-height: 1.6; }
+.rank-boards { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
+.rank-board { min-width: 0; border-top: 3px solid #0f766e; }
+.rank-board.falling { border-top-color: #ba4242; }
+.rank-board > header { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; }
+.rank-board h2 { font-size: 18px; margin: 0; }
+.rank-board > header span { font-size: 13px; color: #52616f; }
+.rank-table-wrap { overflow-x: auto; }
+.rank-board table { width: 100%; min-width: 580px; border-collapse: collapse; table-layout: fixed; background: #fff; }
+.rank-board th { font-size: 11px; color: #52616f; background: #eef2f3; text-align: right; padding: 10px 6px; }
+.rank-board th:first-child { width: 45%; text-align: left; padding-left: 10px; }
+.rank-board th.watch-heading { width: 38px; }
+.rank-board td { border-bottom: 1px solid #dbe1e3; padding: 12px 6px; font-size: 13px; text-align: right; vertical-align: top; overflow-wrap: anywhere; }
+.rank-board td:first-child { text-align: left; padding-left: 10px; }
+.rank-card { display: grid; grid-template-columns: 42px minmax(0,1fr); gap: 9px; }
+.rank-card img { width: 42px; height: 59px; object-fit: contain; background: #f1f3f5; }
+.rank-card strong { display: block; font-size: 13px; line-height: 1.5; overflow-wrap: anywhere; }
+.rank-card small { display: block; font-size: 11px; color: #64716b; line-height: 1.55; margin-top: 3px; }
+.rank-card a { color: #17517e; text-decoration: none; }
+.delta-up { color: #087f68; font-weight: 700; }
+.delta-down { color: #b23838; font-weight: 700; }
+.rank-star { width: 28px; height: 30px; min-height: 0; padding: 0; font-size: 19px; color: #91610a; background: #fff; border: 0; }
+.rank-pager { display: flex; align-items: center; justify-content: flex-end; gap: 8px; margin: 12px 0; font-size: 12px; }
+.rank-pager button { width: 30px; height: 30px; padding: 0; }
+.rank-empty { color: #64716b; font-size: 13px; padding: 30px 10px; text-align: center; }
+@media (max-width: 1150px) { .rank-boards { grid-template-columns: minmax(0,1fr); } .rank-filters { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+@media (max-width: 640px) {
+  .app-tabs { flex-wrap: wrap; overflow: visible; }
+  .app-tabs .tab-link { flex: 1 1 calc(50% - 8px); min-width: 0; }
+  .rank-main { padding: 12px; }
+  .rank-back { font-size: 12px; }
+  .rank-segments { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); width: 100%; }
+  .rank-segments button { padding: 9px 4px; font-size: 12px; }
+  .rank-toolbar > input { flex-basis: 100%; order: 1; }
+  .rank-filters { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .rank-summary { display: grid; }
+  .rank-board table, .rank-board tbody { display: block; min-width: 0; }
+  .rank-board thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .rank-board tbody tr { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); position: relative; border-bottom: 1px solid #dbe1e3; }
+  .rank-board td { border: 0; text-align: left; padding: 8px 10px 14px; }
+  .rank-board td:first-child { grid-column: 1 / -1; padding: 12px 42px 4px 10px; }
+  .rank-board td[data-label]::before { content: attr(data-label); display: block; color: #52616f; font-size: 11px; font-weight: 400; margin-bottom: 5px; }
+  .rank-board td:last-child { position: absolute; right: 4px; top: 7px; padding: 0; }
+  .rank-card { grid-template-columns: 46px minmax(0,1fr); }
+  .rank-card img { width: 46px; height: 65px; }
+}

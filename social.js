@@ -41,7 +41,7 @@ async function load() {
     const failedAccounts = new Set((payload.meta.failures || []).map((f) => f.account)).size;
     $("#coverage").textContent = `${payload.meta.coverageNote}${failedAccounts ? ` 本次 ${failedAccounts} 个账号部分读取失败，保留上次存档。` : ""}`;
     const selected = $("#accountFilter").value;
-    $("#accountFilter").replaceChildren(new Option("全部晴屋店铺", ""), ...state.accounts.map((a) => new Option(a.label, a.handle)));
+    $("#accountFilter").replaceChildren(new Option("晴屋官方主账号", ""), ...state.accounts.map((a) => new Option(a.label, a.handle)));
     $("#accountFilter").value = selected;
     $("#accountList").innerHTML = state.accounts.map((a) => `<a href="https://x.com/${encodeURIComponent(a.handle)}" target="_blank" rel="noreferrer">${escapeText(a.label)} @${escapeText(a.handle)}</a>`).join("");
     render();

@@ -2,9 +2,11 @@
   "accounts": [
     {
       "handle": "hareruya_mtg",
-      "label": "晴屋官方",
+      "label": "晴屋官方总账号",
       "verifiedFrom": "https://www.hareruyamtg.com/ja/purchase/"
-    },
+    }
+  ],
+  "archivedAccounts": [
     {
       "handle": "hareruya__akiba",
       "label": "晴屋秋叶原店",
@@ -41,13 +43,8 @@
       "verifiedFrom": "https://www.hareruyamtg.com/ja/shoppage/sapporo"
     }
   ],
-  "shopPages": [
-    "https://www.hareruyamtg.com/ja/shoppage/fukuoka",
-    "https://www.hareruyamtg.com/ja/shoppage/osaka",
-    "https://www.hareruyamtg.com/ja/shoppage/nagoya",
-    "https://www.hareruyamtg.com/ja/shoppage/yokohama",
-    "https://www.hareruyamtg.com/ja/shoppage/sapporo"
-  ],
+  "shopPages": [],
+  "scope": "headOffice",
   "keywords": [
     "買取",
     "回收",
