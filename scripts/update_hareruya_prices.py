@@ -8,6 +8,7 @@ already-confirmed Hareruya print, so name-only matches are never invented.
 from __future__ import annotations
 
 import json
+import argparse
 import re
 import sys
 import time
@@ -16,6 +17,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from html import unescape
 from pathlib import Path
+from hareruya_capture import annotate, detail_prices, listing_rows, merge_listing, timestamp
 
 ROOT = Path(__file__).resolve().parents[1]
 TARGETS = ROOT / "hareruya_targets.json"
@@ -24,14 +26,15 @@ FX_URL = "https://open.er-api.com/v6/latest/JPY"
 BASE = "https://www.hareruyamtg.com/ja"
 SITEMAP_URL = "https://www.hareruyamtg.com/sitemap.xml"
 PURCHASE_LIST_URL = f"{BASE}/purchase/"
-BUYLIST_TAGS = (633, 634, 635, 636, 637)
+BUYLIST_TAGS = (633, 634, 635, 636, 637, 638)
 CONDITIONS = ("NM", "SP", "MP", "HP")
 REQUEST_PAUSE_SECONDS = 0.7
 
 
 def fetch(url: str) -> str:
     request = urllib.request.Request(url, headers={"User-Agent": "ck-mtg-price-radar/1.0"})
-    with urllib.request.urlopen(request, timeout=45) as response:
+    opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+    with opener.open(request, timeout=30) as response:
         return response.read().decode("utf-8", errors="replace")
 
 
@@ -121,53 +124,44 @@ def purchase_listing_targets() -> list[dict]:
 
 
 def listing_targets_from_html(listing: str) -> list[dict]:
-    targets = []
-    pattern = r"<li\b[^>]*class=[\"'][^\"']*\bitemList\b[^\"']*[\"'][^>]*>(.*?)</li>"
-    for block in re.findall(pattern, listing, re.S | re.I):
-        detail = re.search(r"href=[\"'](?:https://www\.hareruyamtg\.com)?/ja/purchase/detail/(\d+)\?lang=(JP|EN)[\"'][^>]*class=[\"'][^\"']*\bitemName\b", block, re.I)
-        name = re.search(r"class=[\"'][^\"']*\bitemName\b[^\"']*[\"'][^>]*>(.*?)</a>", block, re.S | re.I)
-        image = re.search(r"data-original=[\"']([^\"']+)", block, re.I)
-        buy = re.search(r"itemDetail__price[^>]*>\s*[￥¥]\s*([\d,]+)", block, re.S)
-        if not (detail and name and buy):
-            continue
-        listing_name = text(name.group(1))
-        name_ja, name_en = find_listing_names(listing_name)
-        set_match = re.search(r"\[([^\]]+)\]", listing_name)
-        collector_match = re.search(r"\(([^)]+)\)", listing_name)
-        targets.append({
-            "productId": detail.group(1),
-            "language": detail.group(2),
-            "name": name_en or name_ja,
-            "nameJa": name_ja,
-            "set": set_match.group(1).strip() if set_match else "",
-            "collectorNumber": collector_match.group(1).strip() if collector_match else "",
-            "image": unescape(image.group(1)).split("?", 1)[0] if image else "",
-            "buyPrice": int(buy.group(1).replace(",", "")),
-        })
-    return targets
+    return listing_rows(listing)
 
 
-def purchase_listing_targets_all() -> tuple[list[dict], int]:
+def purchase_listing_targets_all(failures=None) -> tuple[list[dict], int]:
     """Load every page from the public buylist categories and de-duplicate IDs."""
     category_urls = [
         f"{BASE}/purchase/search?tags={tag}&purchaseFlg=1&page=1"
         for tag in BUYLIST_TAGS
     ]
-    with ThreadPoolExecutor(max_workers=4) as pool:
-        first_pages = list(pool.map(fetch, category_urls))
-
+    failures = failures if failures is not None else []
     page_urls = [PURCHASE_LIST_URL, *category_urls]
+    page_html = []
     extra_page_urls = []
-    page_html = [fetch(PURCHASE_LIST_URL), *first_pages]
-    for url, html in zip(category_urls, first_pages):
-        last_page = max([int(value) for value in re.findall(r"page=(\d+)", html)] or [1])
-        extra_page_urls.extend(f"{url.rsplit('=', 1)[0]}={page}" for page in range(2, last_page + 1))
-    page_urls.extend(extra_page_urls)
-
-    with ThreadPoolExecutor(max_workers=4) as pool:
-        futures = {pool.submit(fetch, url): url for url in extra_page_urls}
+    with ThreadPoolExecutor(max_workers=3) as pool:
+        futures = {pool.submit(fetch, url): url for url in page_urls}
         for future in as_completed(futures):
-            page_html.append(future.result())
+            url = futures[future]
+            try:
+                html = future.result()
+                if not listing_rows(html):
+                    raise ValueError("no verified buylist rows")
+                page_html.append(html)
+                if url in category_urls:
+                    last_page = max([int(v) for v in re.findall(r"page=(\d+)", html)] or [1])
+                    if last_page > 250:
+                        raise ValueError("unexpected pagination size")
+                    extra_page_urls.extend(f"{url.rsplit('=', 1)[0]}={page}" for page in range(2, last_page + 1))
+            except Exception as error:
+                failures.append(f"{url}: {type(error).__name__}: {error}")
+        for future, url in [(pool.submit(fetch, u), u) for u in extra_page_urls]:
+            try:
+                html = future.result()
+                if not listing_rows(html):
+                    raise ValueError("empty purchase page")
+                page_html.append(html)
+            except Exception as error:
+                failures.append(f"{url}: {type(error).__name__}: {error}")
+    page_urls.extend(extra_page_urls)
 
     unique = {}
     for html in page_html:
@@ -187,22 +181,11 @@ def table_fragment(html: str, language: str) -> str:
 
 
 def sale_prices(html: str, language: str) -> dict[str, int]:
-    fragment = table_fragment(html, language)
-    prices: dict[str, int] = {}
-    for condition in CONDITIONS:
-        match = re.search(
-            rf">\s*{condition}\s*<(?:(?!>\s*(?:NM|SP|MP|HP)\s*<).)*?data-price=\"(\d+)\"",
-            fragment,
-            re.S,
-        )
-        if match:
-            prices[condition] = int(match.group(1))
-    return prices
+    return detail_prices(html, language)
 
 
-def buy_price(html: str) -> int | None:
-    match = re.search(r'itemDetail__stock[^>]*>\s*【買取価格】.*?itemDetail__price[^>]*>\s*[￥¥]\s*([\d,]+)', html, re.S)
-    return int(match.group(1).replace(",", "")) if match else None
+def buy_price(html: str, language: str = "JP") -> int | None:
+    return detail_prices(html, language, purchase=True).get("NM")
 
 
 def load_previous() -> dict:
@@ -347,7 +330,7 @@ def main() -> int:
                 "language": language,
                 "image": target.get("image") or find_image(sale_html),
                 "sale": {language: sale_prices(sale_html, language)},
-                "buy": {language: buy_price(buy_html)},
+                "buy": {language: buy_price(buy_html, language)},
                 "saleUrl": sale_url,
                 "buyUrl": buy_url,
                 "capturedAt": datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),

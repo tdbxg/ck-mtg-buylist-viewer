@@ -3,8 +3,7 @@ name: Update Card Kingdom buylist
 on:
   workflow_dispatch:
   schedule:
-    - cron: "20 1 * * *"
-    - cron: "20 13 * * *"
+    - cron: "20 1,7,13,19 * * *"
 
 permissions:
   contents: write
@@ -22,7 +21,7 @@ jobs:
         with:
           # Data and UI commits share this history. Keep enough commits for a
           # true seven-day comparison without downloading the full repository.
-          fetch-depth: 40
+          fetch-depth: 600
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -44,14 +43,6 @@ jobs:
 
       - name: Refresh static data
         run: python scripts/update_site_data.py
-
-      - name: Refresh public Hareruya buylist listing
-        run: python scripts/update_hareruya_prices.py --listing-only
-        continue-on-error: true
-
-      - name: Incrementally probe high-value Hareruya names
-        run: python scripts/probe_hareruya_priority.py --limit 120 --min-cash-usd 5 --workers 3
-        continue-on-error: true
 
       - name: Validate generated files
         run: |

@@ -2,6 +2,7 @@ const PAGE_SIZE = 60;
 const CART_KEY = "hareruya-mtg-buylist-cart-v1";
 const HISTORY_KEY = "hareruya-mtg-buylist-history-v1";
 const HISTORY_LIMIT = 30;
+const WATCH_KEY = "hareruya-mtg-watch-v1";
 
 const state = {
   payload: null,
@@ -19,6 +20,9 @@ const state = {
   cartQuery: "",
   cartSelected: new Set(),
   history: [],
+  watched: new Set(),
+  freshOnly: false,
+  watchedOnly: false,
 };
 
 const els = {
@@ -138,6 +142,8 @@ function snapshot(row) {
     collectorNumber: row.collectorNumber || "",
     image: row.image || "",
     buyJpy: buyPrice(row),
+    buyCapturedAt: row.buyCapturedAt || row.capturedAt || "",
+    captureError: row.captureError || "",
     nmJpy: salePrice(row, "NM"),
     spJpy: salePrice(row, "SP"),
     mpJpy: salePrice(row, "MP"),
@@ -154,6 +160,7 @@ function historySnapshot(row) {
 }
 
 function loadPersisted() {
+  try { state.watched = new Set(JSON.parse(localStorage.getItem(WATCH_KEY) || "[]")); } catch { state.watched = new Set(); }
   try {
     const rows = JSON.parse(localStorage.getItem(CART_KEY) || "[]");
     state.cart = new Map(Array.isArray(rows) ? rows.map((row) => [row.key, row]) : []);
@@ -175,6 +182,15 @@ function loadPersisted() {
 
 function saveCart() {
   localStorage.setItem(CART_KEY, JSON.stringify([...state.cart.values()]));
+}
+
+function isFresh(row) {
+  const age = Date.now() - Date.parse(row.buyCapturedAt || row.capturedAt || "");
+  return Number.isFinite(age) && age < 24 * 3600 * 1000 && !row.captureError;
+}
+
+function timeLabel(value) {
+  return value ? new Date(value).toLocaleString("zh-CN", { hour12: false }) : "尚未核价";
 }
 
 function saveHistory() {
@@ -282,6 +298,8 @@ function renderCart() {
   const totalNm = allRows.reduce((sum, row) => sum + Number(row.nmJpy || 0) * Number(row.qty || 0), 0);
   const totalRatio = totalNm > 0 ? totalBuy / totalNm : null;
   els.cartSummary.textContent = `${allRows.length} 种 / ${totalQty} 张 / 收购 ${yen(totalBuy)} / ${cny(totalBuy)} ｜ NM ${yen(totalNm)} ｜ 收购/NM ${pct(totalRatio)}`;
+  const staleCount = allRows.filter((row) => !isFresh(row)).length;
+  if (staleCount) els.cartSummary.textContent += ` ｜ ${staleCount} 种历史报价待核价`;
   els.cartEmpty.hidden = allRows.length > 0;
   els.cartTableWrap.hidden = allRows.length === 0;
   els.cartRows.innerHTML = rows.map((row) => `<tr>
@@ -320,6 +338,8 @@ function readControls() {
   state.withImageOnly = els.withImageOnly.checked;
   state.buyableOnly = els.buyableOnly.checked;
   state.sort = els.sortSelect.value;
+  state.freshOnly = document.querySelector("#freshOnly").checked;
+  state.watchedOnly = document.querySelector("#watchedOnly").checked;
 }
 
 function applySetFinder() {
@@ -336,6 +356,8 @@ function filterRows() {
   const query = normalize(state.query);
   const version = normalize(state.printQuery);
   state.results = (state.payload?.items || []).filter((row) => {
+    if (state.freshOnly && !isFresh(row)) return false;
+    if (state.watchedOnly && !state.watched.has(rowKey(row))) return false;
     if (query && !rowSearch(row).includes(query)) return false;
     if (version && !printSearch(row).includes(version)) return false;
     if (state.language && row.language !== state.language) return false;
@@ -346,7 +368,7 @@ function filterRows() {
     if (state.buyableOnly && buyPrice(row) === null) return false;
     return true;
   }).sort((a, b) => {
-    if (state.sort === "buyRatioDesc") return (buySaleRatio(b) ?? -1) - (buySaleRatio(a) ?? -1);
+    if (state.sort === "buyRatioDesc") return (buySaleRatio(b) ?? -1) - (buySaleRatio(a) ?? -1) || Number(buyPrice(b) || 0) - Number(buyPrice(a) || 0);
     if (state.sort === "saleDesc") return Number(salePrice(b, "NM") || 0) - Number(salePrice(a, "NM") || 0);
     if (state.sort === "saleAsc") return Number(salePrice(a, "NM") ?? Infinity) - Number(salePrice(b, "NM") ?? Infinity);
     if (state.sort === "nameAsc") return displayedName(a).localeCompare(displayedName(b));
@@ -394,7 +416,9 @@ function renderCard(row) {
   node.querySelector(".details").innerHTML = `
     <div>晴屋版本标记：<strong>${escapeHtml(row.set ? String(row.set).toUpperCase() : "-")}</strong>${row.collectorNumber ? ` #${escapeHtml(row.collectorNumber)}` : ""}</div>
     <div>晴屋商品 ID：<strong>#${escapeHtml(row.productId)}</strong> ｜ 语言：${escapeHtml(languageLabel(row.language))}</div>
-    <div>图片：晴屋公开商品页 ｜ 价格采集：${escapeHtml(row.capturedAt || state.payload?.meta?.generatedAt || "-")}</div>
+    <div>回收核价：${escapeHtml(timeLabel(row.buyCapturedAt || row.capturedAt))}</div>
+    <div class="freshness ${isFresh(row) ? "fresh" : "stale"}">${row.captureError ? "本次核价失败，显示上次价格" : isFresh(row) ? "24小时内已核价" : "历史报价，待重新核价"}${row.foil ? " · 闪卡" : ""}</div>
+    ${row.saleCapturedAt ? `<div>售价核价：${escapeHtml(timeLabel(row.saleCapturedAt))}</div>` : ""}
   `;
   node.querySelector(".prices").innerHTML = [
     priceBlock("晴屋收购", buyPrice(row)),
@@ -408,7 +432,7 @@ function renderCard(row) {
   const cart = state.cart.get(rowKey(row));
   const controls = document.createElement("div");
   controls.className = "cart-controls";
-  controls.innerHTML = `<button class="add-cart ${cart ? "in-cart" : ""}" type="button" data-key="${escapeHtml(rowKey(row))}">${cart ? `已加入 ×${cart.qty}` : "加入晴屋回收车"}</button>`;
+  controls.innerHTML = `<button class="add-cart ${cart ? "in-cart" : ""}" type="button" data-key="${escapeHtml(rowKey(row))}">${cart ? `已加入 ×${cart.qty}` : "加入晴屋回收车"}</button><button class="watch-card" data-key="${escapeHtml(rowKey(row))}" aria-label="${state.watched.has(rowKey(row)) ? "取消关注" : "关注此版本"}" title="${state.watched.has(rowKey(row)) ? "取消关注" : "关注此版本"}">${state.watched.has(rowKey(row)) ? "★" : "☆"}</button>`;
   node.querySelector(".links").after(controls);
   return node;
 }
@@ -439,8 +463,9 @@ function bindEvents() {
   };
   [els.searchInput, els.printSearchInput, els.languageSelect, els.minBuyInput, els.sortSelect, els.withImageOnly, els.buyableOnly, els.setSelect].forEach((element) => {
     element.addEventListener("input", rerender);
-    element.addEventListener("change", rerender);
   });
+  ["freshOnly", "watchedOnly"].forEach((id) => document.getElementById(id).addEventListener("change", rerender));
+  document.querySelector("#refreshButton").addEventListener("click", () => reloadPrices());
   els.setFinderInput.addEventListener("change", applySetFinder);
   els.setFinderInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter") applySetFinder();
@@ -453,6 +478,8 @@ function bindEvents() {
     els.sortSelect.value = "buyRatioDesc";
     els.withImageOnly.checked = false;
     els.buyableOnly.checked = false;
+    document.querySelector("#freshOnly").checked = true;
+    document.querySelector("#watchedOnly").checked = false;
     els.setFinderInput.value = "";
     els.setSelect.value = "";
     state.page = 1;
@@ -468,6 +495,14 @@ function bindEvents() {
     render();
   });
   els.cardsGrid.addEventListener("click", (event) => {
+    const watch = event.target.closest(".watch-card");
+    if (watch) {
+      const key = watch.dataset.key;
+      state.watched.has(key) ? state.watched.delete(key) : state.watched.add(key);
+      localStorage.setItem(WATCH_KEY, JSON.stringify([...state.watched]));
+      render();
+      return;
+    }
     const button = event.target.closest(".add-cart");
     if (button) {
       const row = state.results.find((item) => rowKey(item) === button.dataset.key);
@@ -523,23 +558,42 @@ function bindEvents() {
   });
 }
 
-async function init() {
-  loadPersisted();
+async function reloadPrices() {
+  const button = document.querySelector("#refreshButton");
+  button.disabled = true;
+  try {
   const response = await fetch(`./hareruya_prices.json?v=${Date.now()}`, { cache: "no-store" });
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   state.payload = await response.json();
+  const latest = new Map(state.payload.items.map((row) => [rowKey(row), row]));
+  for (const [key, cartRow] of state.cart) {
+    if (latest.has(key)) state.cart.set(key, { ...snapshot(latest.get(key)), qty: cartRow.qty });
+  }
+  saveCart();
   const meta = state.payload.meta || {};
   els.itemCount.textContent = Number(meta.items || state.payload.items?.length || 0).toLocaleString("zh-CN");
   els.jpyRate.textContent = meta.jpyCny ? Number(meta.jpyCny).toFixed(4) : "-";
-  els.updatedAt.textContent = meta.generatedAt ? String(meta.generatedAt).replace("T", " ").slice(0, 16) : "-";
+  els.updatedAt.textContent = timeLabel(meta.lastSuccessfulAt || meta.generatedAt);
   const verifiedRetail = Number(meta.verifiedRetailItems || 0).toLocaleString("zh-CN");
-  els.metaLine.textContent = `晴屋公开回收列表 ｜ 收购 ${Number(meta.items || 0).toLocaleString("zh-CN")} 条 ｜ 已验证品相售价 ${verifiedRetail} 条 ｜ 图片 ${Number(meta.images || 0).toLocaleString("zh-CN")} 张 ｜ 更新 ${meta.generatedAt || "未更新"}`;
+  const fresh = state.payload.items.filter(isFresh).length;
+  els.metaLine.textContent = `24小时内核价 ${fresh.toLocaleString("zh-CN")} 条 ｜ 历史报价 ${(state.payload.items.length - fresh).toLocaleString("zh-CN")} 条 ｜ 已验证品相售价 ${verifiedRetail} 条 ｜ 每30分钟采集${meta.failures?.length ? ` ｜ ${meta.failures.length} 项采集失败` : ""}`;
   populateSets();
-  readControls();
-  bindEvents();
+  els.setSelect.value = state.set;
   render();
   renderCart();
   renderHistory();
+  } catch (error) {
+    els.metaLine.textContent = `价格刷新失败，保留当前结果：${error.message}`;
+  } finally {
+    button.disabled = false;
+  }
+}
+
+async function init() {
+  loadPersisted();
+  readControls();
+  bindEvents();
+  await reloadPrices();
 }
 
 init().catch((error) => {

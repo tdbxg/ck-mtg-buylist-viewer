@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>X 回收公告 | MTG 价格雷达</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./social.css?v=20261114">
+</head>
+<body>
+  <header class="topbar"><div><h1>X 回收公告</h1><p id="sourceTime">正在加载公开公告…</p></div><div class="summary"><div><span id="postCount">0</span><small>已收集公告</small></div><div><span id="accountCount">0</span><small>晴屋账号</small></div></div></header>
+  <nav class="app-tabs" aria-label="页面切换"><a class="tab-link" href="./index.html">单卡查询 / 回收车</a><a class="tab-link" href="./index.html#movers">价格变动榜</a><a class="tab-link" href="./hareruya.html">晴屋日本</a><a class="tab-link active" href="./social.html">X 回收公告</a></nav>
+  <main class="social-main">
+    <div class="social-toolbar">
+      <input id="postSearch" type="search" placeholder="搜索牌名、系列或回收内容" aria-label="搜索回收公告">
+      <select id="accountFilter" aria-label="店铺"><option value="">全部晴屋店铺</option></select>
+      <select id="periodFilter" aria-label="发布时间"><option value="7">近7天</option><option value="30">近30天</option><option value="0" selected>全部存档</option></select>
+      <label><input id="savedOnly" type="checkbox">仅看收藏</label>
+      <button id="reloadPosts" type="button" title="载入最新已发布公告">刷新</button>
+      <button id="exportPosts" type="button" title="导出当前筛选结果">导出 CSV</button>
+    </div>
+    <p id="coverage" class="social-notice"></p>
+    <div class="social-resultbar"><strong id="resultCount">0 条</strong><span><button id="previousPosts" type="button" aria-label="上一页">‹</button> <span id="socialPage">1 / 1</span> <button id="nextPosts" type="button" aria-label="下一页">›</button></span></div>
+    <div id="postList" class="post-list"></div>
+    <p id="emptyPosts" class="cart-empty" hidden>当前时间范围没有已收集的回收公告</p>
+    <details class="account-directory"><summary>已关注的晴屋账号</summary><div id="accountList"></div><a href="https://github.com/tdbxg/ck-mtg-buylist-viewer/actions/workflows/update-hareruya.yml" target="_blank" rel="noreferrer">采集任务 ↗</a></details>
+  </main>
+  <script src="./social.js?v=20261114"></script>
+</body>
+</html>

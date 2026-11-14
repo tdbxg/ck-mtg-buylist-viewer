@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "lastCheckedAt": "2026-11-14T10:58:00+00:00",
+    "lastNewPostAt": "2026-11-14T10:56:55+00:00",
+    "newItems": 0,
+    "items": 4,
+    "accounts": 8,
+    "latestPublishedAt": "2023-06-26T08:47:43+00:00",
+    "coverage": "publicEmbedLimited",
+    "coverageNote": "公开嵌入页可能仅展示热门旧帖；不保证完整时间线。发布时间以原帖为准。",
+    "sources": [
+      {
+        "account": "hareruya_mtg",
+        "checkedAt": "2026-11-14T10:58:00+00:00",
+        "status": "importedPublicCapture"
+      }
+    ],
+    "failures": [],
+    "checkIntervalMinutes": 60
+  },
+  "items": [
+    {
+      "id": "1673251685295329280",
+      "account": "hareruya__akiba",
+      "shop": "晴屋秋叶原店",
+      "url": "https://x.com/hareruya__akiba/status/1673251685295329280",
+      "publishedAt": "2023-06-26T08:47:43+00:00",
+      "collectedAt": "2026-11-14T10:49:56+00:00",
+      "text": "【買取情報】\n🚨🚨🚨枚数限定緊急買取🚨🚨🚨\n\n《一つの指輪》 日本語版 10,000円買取‼️\n\n秋葉原店限定緊急買取を更新しました‼️\n最新セット『指輪物語：中つ国の伝承』から《一つの指輪》の価格を大幅に更新しました💍\nお持ちの方はぜひ、秋葉原店へ☀️\n皆様のご来店お待ちしております‼️ https://t.co/OJ5lKkHesO",
+      "images": [
+        "https://pbs.twimg.com/media/FziVihmaMAE4Py4.png"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "1203136855408951297",
+      "account": "hareruya__akiba",
+      "shop": "晴屋秋叶原店",
+      "url": "https://x.com/hareruya__akiba/status/1203136855408951297",
+      "publishedAt": "2019-12-07T02:19:14+00:00",
+      "collectedAt": "2026-11-14T10:49:56+00:00",
+      "text": "【買取情報】\nパイオニアの影響か。。このカードはどこまで行くのか。。\n《思考囲い》買取3000円！！\n《思考囲い》買取3000円！！\n《思考囲い》買取3000円！！\n日英問わず、版問わず！！です！！\nお手元に余らせているこのカード！晴れる屋秋葉原店までお越しください！\n\n#ハレルヤアキバ https://t.co/uT8gdZUFKk",
+      "images": [
+        "https://pbs.twimg.com/media/ELJmluxU0AAdsGb.png"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "1136922887225348096",
+      "account": "hareruya__akiba",
+      "shop": "晴屋秋叶原店",
+      "url": "https://x.com/hareruya__akiba/status/1136922887225348096",
+      "publishedAt": "2019-06-07T09:08:33+00:00",
+      "collectedAt": "2026-11-14T10:49:56+00:00",
+      "text": "【買取情報】晴れる屋秋葉原店では、本日より買取を行っております！\n《戦慄衆の将軍、リリアナ》イラスト違いFoil 90000円買取！\n《覆いを割く者、ナーセット》イラスト違いFoil 30000円買取！\n《沸騰する小湖》日本語 10000円買取など、数量限定の激アツ買取品も多数！\nお気軽にご依頼ください！ https://t.co/ygf7R58bIP",
+      "images": [
+        "https://pbs.twimg.com/media/D8coeJdUcAAwktj.jpg",
+        "https://pbs.twimg.com/media/D8cos0ZUIAAdGhH.jpg",
+        "https://pbs.twimg.com/media/D8cotfrUcAAc5gG.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "1121682632423510016",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方",
+      "url": "https://x.com/hareruya_mtg/status/1121682632423510016",
+      "publishedAt": "2019-04-26T07:49:14+00:00",
+      "collectedAt": "2026-11-14T10:56:55+00:00",
+      "text": "【買取情報】明日は新セットのカードをいち早く遊べる『灯争大戦』のプレリリースが開催されます！\n話題の天野喜孝氏による日本限定イラストの《戦慄衆の将軍、リリアナ》Foil版を50000円で買取します！\nプレリリースで引かれた方はぜひ晴れる屋へお売りください！ https://t.co/sQfMMRLsjE",
+      "images": [
+        "https://pbs.twimg.com/media/D5EETjEUIAEd-G7.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    }
+  ]
+}

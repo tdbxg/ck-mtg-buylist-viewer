@@ -1,0 +1,59 @@
+{
+  "accounts": [
+    {
+      "handle": "hareruya_mtg",
+      "label": "晴屋官方",
+      "verifiedFrom": "https://www.hareruyamtg.com/ja/purchase/"
+    },
+    {
+      "handle": "hareruya__akiba",
+      "label": "晴屋秋叶原店",
+      "verifiedFrom": "https://www.hareruyamtg.com/ja/user_data/shop_akihabara"
+    },
+    {
+      "handle": "hareruya_TC",
+      "label": "晴屋东京 TC",
+      "verifiedFrom": "https://www.hareruyamtg.com/ja/user_data/shop_tctokyo"
+    },
+    {
+      "handle": "hareruyaFukuoka",
+      "label": "店舗のご案内",
+      "verifiedFrom": "https://www.hareruyamtg.com/ja/shoppage/fukuoka"
+    },
+    {
+      "handle": "hareruya_osaka",
+      "label": "店舗のご案内",
+      "verifiedFrom": "https://www.hareruyamtg.com/ja/shoppage/osaka"
+    },
+    {
+      "handle": "hareruya_nagoya",
+      "label": "店舗のご案内",
+      "verifiedFrom": "https://www.hareruyamtg.com/ja/shoppage/nagoya"
+    },
+    {
+      "handle": "hareruya_yokohm",
+      "label": "店舗のご案内",
+      "verifiedFrom": "https://www.hareruyamtg.com/ja/shoppage/yokohama"
+    },
+    {
+      "handle": "hareruyaSapporo",
+      "label": "店舗のご案内",
+      "verifiedFrom": "https://www.hareruyamtg.com/ja/shoppage/sapporo"
+    }
+  ],
+  "shopPages": [
+    "https://www.hareruyamtg.com/ja/shoppage/fukuoka",
+    "https://www.hareruyamtg.com/ja/shoppage/osaka",
+    "https://www.hareruyamtg.com/ja/shoppage/nagoya",
+    "https://www.hareruyamtg.com/ja/shoppage/yokohama",
+    "https://www.hareruyamtg.com/ja/shoppage/sapporo"
+  ],
+  "keywords": [
+    "買取",
+    "回收",
+    "buylist",
+    "buying"
+  ],
+  "maxItems": 500,
+  "recentDays": 7
+}

@@ -8,3 +8,9 @@
 .hareruya-cart-table { min-width: 820px; }
 @media (max-width: 820px) { .hareruya-filter-primary, .hareruya-advanced-grid { grid-template-columns: 1fr 1fr; } .hareruya-filter-primary .query-field, .hareruya-filter-primary .filter-actions, .hareruya-data-note { grid-column: 1 / -1; } }
 @media (max-width: 480px) { .hareruya-filter-primary, .hareruya-advanced-grid { grid-template-columns: 1fr; } }
+.freshness { font-size: 12px; margin-top: 5px; }
+.freshness.fresh { color: #087f5b; }
+.freshness.stale { color: #9c5b15; }
+.watch-card { min-width: 38px; font-size: 20px; background: white; color: #7e4b00; }
+.button-link { font-size: 13px; padding: 8px 4px; align-self: center; }
+.summary small { line-height: 1.5; }

@@ -1,0 +1,80 @@
+name: Update Hareruya buylist and X announcements
+
+on:
+  workflow_dispatch:
+    inputs:
+      detail_limit:
+        description: Exact product detail batch size
+        default: '240'
+        required: true
+        type: string
+  schedule:
+    - cron: "11,41 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-card-kingdom-buylist
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Test exact-language capture and post deduplication
+        run: python -m unittest discover -s tests -v
+      - name: Capture public buylist and rotate existing prints
+        id: prices
+        continue-on-error: true
+        env:
+          DETAIL_LIMIT: ${{ inputs.detail_limit || '240' }}
+        run: python scripts/refresh_hareruya.py --detail-limit "$DETAIL_LIMIT" --workers 3 --retail-limit 12
+      - name: Collect official public X announcements
+        id: social
+        if: always() && (github.event_name == 'workflow_dispatch' || github.event.schedule == '11,41 * * * *')
+        continue-on-error: true
+        run: |
+          # X is checked hourly; price batches run every 30 minutes.
+          python - <<'PY'
+          import json, subprocess
+          from datetime import datetime, timezone
+          from pathlib import Path
+          path = Path('social_buylist.json')
+          previous = json.loads(path.read_text()).get('meta', {}).get('lastCheckedAt') if path.exists() else None
+          age = (datetime.now(timezone.utc) - datetime.fromisoformat(previous)).total_seconds() if previous else 99999
+          if age >= 3300:
+              subprocess.run(['python', 'scripts/collect_x_buylist.py'], check=True)
+          PY
+      - name: Validate retained snapshot
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path('hareruya_prices.json').read_text())
+          keys = [(r['productId'], r['language']) for r in data['items']]
+          assert len(keys) == len(set(keys)) and len(keys) > 1000
+          assert all(r.get('buyCapturedAt') for r in data['items'])
+          social = json.loads(Path('social_buylist.json').read_text())
+          assert len({r['id'] for r in social['items']}) == len(social['items'])
+          PY
+      - name: Publish snapshots and capture status
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add hareruya_prices.json social_buylist.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh Hareruya exact buy prices and official X posts'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Report capture outage
+        if: steps.prices.outcome == 'failure' || steps.social.outcome == 'failure'
+        run: exit 1
