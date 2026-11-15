@@ -1,4 +1,11 @@
 .app-tabs .tab-link.active { color: #116b61; border-bottom: 3px solid #116b61; }
+.opportunity-directions { display: flex; flex-wrap: wrap; gap: 8px; margin: 2px 0 20px; }
+.opportunity-directions button { width: auto; flex: 0 1 auto; border: 1px solid #bdcdca; border-radius: 4px; padding: 11px 16px; background: white; color: #52616f; font-size: 13px; }
+.opportunity-directions button[aria-pressed="true"] { color: white; background: #116b61; border-color: #116b61; }
+.audit-export { width: auto; padding: 8px 12px; margin: 10px 0; }
+.opportunity-metadata { padding: 12px 0; margin-bottom: 14px; color: #52616f; font-size: 12px; }
+.opportunity-metadata summary { cursor: pointer; }
+.opportunity-table .rank-card .opportunity-mobile-stock { display: none; }
 .opportunity-count { display: grid; gap: 5px; flex: 0 0 auto; text-align: right; font-size: 24px; color: #116b61; }
 .opportunity-count small { font-size: 12px; font-weight: 400; color: #52616f; }
 .opportunity-rule { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding: 4px 0 18px; }
@@ -65,7 +72,9 @@
   .opportunity-count { font-size: 22px; }
   .opportunity-count small { max-width: 70px; font-size: 11px; }
   .opportunity-filters { grid-template-columns: repeat(2,minmax(0,1fr)); }
-  .opportunity-scopes { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .opportunity-directions { display: grid; grid-template-columns: minmax(0,1fr); }
+  .opportunity-directions button { width: 100%; text-align: left; }
+  .opportunity-scopes { display: grid; grid-template-columns: minmax(0,1fr); }
   .opportunity-scopes button { justify-content: space-between; min-width: 0; padding: 11px 8px; font-size: 12px; }
   .opportunity-table, .opportunity-table tbody { display: block; min-width: 0; }
   .opportunity-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
@@ -79,6 +88,7 @@
   .opportunity-table .observation-cell > strong { display: inline; }
   .opportunity-table td:last-child { position: absolute; top: 9px; right: 5px; padding: 0; }
   .opportunity-mobile-stock { display: inline; }
+  .opportunity-table .rank-card .opportunity-mobile-stock { display: block; }
   .opportunity-sources { display: grid; gap: 7px; }
   .opportunity-event { grid-template-columns: 1fr 70px; gap: 8px; }
   .opportunity-event > div { grid-column: 1 / -1; }

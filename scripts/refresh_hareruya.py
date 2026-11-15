@@ -7,7 +7,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 
 import update_hareruya_prices as legacy
-from hareruya_capture import annotate, detail_prices, merge_listing, timestamp
+from hareruya_capture import annotate, detail_metadata, detail_prices, detail_stocks, merge_listing, timestamp
 from hareruya_movements import record_refresh
 
 
@@ -23,6 +23,9 @@ def capture_detail(old, at, retail=False):
     prices = detail_prices(page, lang, purchase=True)
     if "NM" not in prices:
         raise ValueError("target language/condition buy price missing; previous price retained")
+    identity = detail_metadata(page, lang)
+    identity["identityEvidence"].update({"url": url, "capturedAt": at})
+    row.update(identity)
     row.update({
         "buy": {lang: prices["NM"]}, "buyConditions": {lang: prices},
         "capturedAt": at, "buyCapturedAt": at, "buyUrl": url,
@@ -33,10 +36,15 @@ def capture_detail(old, at, retail=False):
     if retail:
         try:
             sale_url = f"{legacy.BASE}/products/detail/{row['productId']}?lang={lang}"
-            sales = detail_prices(legacy.fetch(sale_url), lang)
+            sale_page = legacy.fetch(sale_url)
+            sales = detail_prices(sale_page, lang)
             if not sales:
                 raise ValueError("target retail table missing")
-            row.update({"sale": {lang: sales}, "saleCapturedAt": at, "retailVerified": True, "saleUrl": sale_url})
+            sale_identity = detail_metadata(sale_page, lang)
+            if sale_identity["variation"] != identity["variation"]:
+                raise ValueError("retail print differs from the purchase page")
+            row.update({"sale": {lang: sales}, "saleStock": {lang: detail_stocks(sale_page, lang)},
+                        "saleCapturedAt": at, "retailVerified": True, "saleUrl": sale_url})
         except Exception as error:
             sale_error = f"{type(error).__name__}: {error}"
         row["saleCaptureError"] = sale_error

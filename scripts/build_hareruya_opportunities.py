@@ -2,6 +2,7 @@
 
 import argparse
 from collections import Counter, defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from decimal import Decimal, InvalidOperation
 import gzip
@@ -9,8 +10,10 @@ import json
 from pathlib import Path
 import re
 import time
+from threading import Event
 import unicodedata
-from urllib.parse import urljoin
+from urllib.parse import urlencode, urljoin
+from urllib.error import HTTPError
 from urllib.request import ProxyHandler, Request, build_opener
 
 from hareruya_capture import timestamp
@@ -23,6 +26,7 @@ IDENTITIES = ROOT / "hareruya_ck_identities.json.gz"
 FX = ROOT / "hareruya_ck_fx.json"
 CATALOG = ROOT / "hareruya_opportunity_catalog.json.gz"
 HISTORY = ROOT / "hareruya_history.json.gz"
+RESOLUTIONS = ROOT / "hareruya_ck_resolutions.json.gz"
 TRANSPORT_DAYS = 30
 CK_URL = "https://api.cardkingdom.com/api/v2/pricelist"
 FX_URL = "https://open.er-api.com/v6/latest/USD"
@@ -53,6 +57,7 @@ REASONS = {
     "specialFinish": "特殊工艺、签名或序列号未能准确对应",
     "numberMissing": "缺少可核对的收藏编号",
     "setUnknown": "系列代码或特殊版本尚未核实",
+    "ambiguousPrint": "同系列同闪别存在多种印刷，不能仅按牌名对齐",
 }
 
 
@@ -79,7 +84,7 @@ def normalized(value):
 
 
 def number(value):
-    value = str(value or "").strip().lower()
+    value = str(value or "").strip().lower().replace("★", "*")
     return (value.lstrip("0") or "0") if re.fullmatch(r"\d+[a-z*-]*", value) else ""
 
 
@@ -87,7 +92,11 @@ def without_names(title):
     return re.sub(r"《[^》]*》", "", title)
 
 
-def hareruya_identity(row):
+def resolution_key(row, code, finish):
+    return f"{normalized(row.get('name'))}|{code}|{finish}"
+
+
+def hareruya_identity(row, resolutions=None, at=None):
     title = row.get("variation") or ""
     if not title or "【EN】" not in title:
         return None, "identityMissing"
@@ -103,11 +112,26 @@ def hareruya_identity(row):
     if not match:
         return None, "setUnknown"
     code = SET_ALIASES.get(match[1], match[1].lower())
+    if f"[{raw_set}]" not in title:
+        return None, "identityMismatch"
     collector = number(row.get("collectorNumber"))
+    # The title must independently contain the identity; old parser leftovers are not proof.
+    title_number = re.search(r"\((\d+[A-Za-z★*-]*)\)", markers)
+    if not title_number:
+        entry = (resolutions or {}).get(resolution_key(row, code, finish), {})
+        prints = [c for c in entry.get("cards", []) if finish in c.get("finishes", [])]
+        title_names = " // ".join(pair[1].strip() for pair in re.findall(r"《([^/》]+)/([^》]+)》", title))
+        if normalized(title_names) != normalized(row.get("name")):
+            return None, "identityMismatch"
+        if entry.get("complete") is True and len(prints) > 1:
+            return None, "ambiguousPrint"
+        if entry.get("complete") is True and len(prints) == 1 and fresh(entry.get("checkedAt"), at or iso_now(), 168):
+            exact = prints[0]
+            if number(exact.get("collector_number")) and exact.get("lang") == "en" and exact.get("set") == code and finish in exact.get("finishes", []) and normalized(exact.get("name")) == normalized(row.get("name")) and not exact.get("oversized") and not any(SPECIAL.search(str(t)) for t in (exact.get("promo_types") or [])):
+                return (code, number(exact.get("collector_number")), finish), ""
+        return None, "numberMissing"
     if not collector:
         return None, "numberMissing"
-    # The title must independently contain the identity; old parser leftovers are not proof.
-    title_number = re.search(r"\((\d+[A-Za-z*-]*)\)", markers)
     if not title_number or number(title_number[1]) != collector or f"[{raw_set}]" not in title:
         return None, "identityMismatch"
     return (code, collector, finish), ""
@@ -129,6 +153,7 @@ def compact_retail(raw, metadata, requested, at):
         foil = item.get("is_foil") is True or str(item.get("is_foil")).lower() == "true"
         card = {k: known.get(k) for k in ("sku", "scryfallId", "scryfallSet", "collectorNumber", "name", "cn", "flavorName")}
         card.update({"foil": foil, "conditions": item.get("condition_values") or {},
+                     "cashUsd": float(decimal(item.get("price_buy"))), "qtyBuying": int(decimal(item.get("qty_buying"))),
                      "edition": item.get("edition", ""), "variation": item.get("variation", ""),
                      "ckName": item.get("name", ""), "ckUrl": urljoin(raw["meta"]["base_url"], item["url"])})
         if ck_key(card) in requested:
@@ -137,7 +162,7 @@ def compact_retail(raw, metadata, requested, at):
                      "source": CK_URL, "rawProducts": len(raw["data"]), "unmappedProducts": unmapped}, "cards": cards}
 
 
-def preliminaries(hareruya, retail, fx, at):
+def preliminaries(hareruya, retail, fx, at, resolutions=None):
     index = defaultdict(list)
     for card in retail.get("cards", []):
         index[ck_key(card)].append(card)
@@ -150,7 +175,7 @@ def preliminaries(hareruya, retail, fx, at):
             continue
         counts["englishRows"] += 1
         key = f"{row['productId']}|EN"
-        identity, reason = hareruya_identity(row)
+        identity, reason = hareruya_identity(row, resolutions, at)
         if row.get("captureError") or not fresh(row.get("buyCapturedAt"), at, AGES["hareruya"]):
             reason = "hareruyaStale"
         elif decimal(row.get("buy", {}).get("EN")) <= 0 or row.get("buyStatus") == "unavailable":
@@ -219,12 +244,12 @@ def observation_summary(row, history, at, cost):
             "floorSpreadJpy": float(decimal(minimum) - cost) if minimum is not None and cost is not None else None}
 
 
-def build_catalog(hareruya, retail, fx, identities, history, at):
+def build_catalog(hareruya, retail, fx, identities, history, at, resolutions=None):
     index = defaultdict(list)
     for card in retail.get("cards", []):
         index[ck_key(card)].append(card)
     english = [row for row in hareruya.get("items", []) if row.get("language") == "EN"]
-    parsed = [(row, *hareruya_identity(row)) for row in english]
+    parsed = [(row, *hareruya_identity(row, resolutions, at)) for row in english]
     duplicates = Counter(identity for _, identity, _ in parsed if identity)
     rate = decimal(fx.get("rates", {}).get("JPY"))
     ck_at = retail.get("meta", {}).get("capturedAt")
@@ -262,6 +287,14 @@ def build_catalog(hareruya, retail, fx, identities, history, at):
         finish = identity[2] if identity else "special" if SPECIAL.search(markers) else "foil" if "【Foil】" in markers else "nonfoil" if "【EN】" in markers else "unknown"
         images = (exact.get("image_uris") or (exact.get("card_faces") or [{}])[0].get("image_uris") or {}) if card else {}
         observation = observation_summary(row, history, at, cost)
+        sale = decimal(row.get("sale", {}).get("EN", {}).get("NM"))
+        sale_qty = row.get("saleStock", {}).get("EN", {}).get("NM")
+        cash = decimal(card.get("cashUsd")) if card else Decimal(0)
+        buying_qty = int(decimal(card.get("qtyBuying"))) if card else 0
+        cash_jpy = cash * rate if cash > 0 and rate > 0 else None
+        reverse_current = bool(card and cash > 0 and buying_qty > 0 and sale > 0 and sale_qty is not None and sale_qty > 0
+                               and row.get("retailVerified") is True and not row.get("saleCaptureError")
+                               and fresh(row.get("saleCapturedAt"), at, AGES["hareruya"]) and ck_current and fx_current)
         rows.append({"key": f"{row['productId']}|EN", "productId": row["productId"],
                      "name": row.get("name", ""), "nameJa": row.get("nameJa", ""), "cn": card.get("cn", "") if card else "",
                      "set": exact["set"].upper() if card else row.get("set", ""),
@@ -271,6 +304,15 @@ def build_catalog(hareruya, retail, fx, identities, history, at):
                      "ckSku": card["sku"] if card else "", "ckUrl": card["ckUrl"] if card else "",
                      "ckRetailUsd": float(price) if price > 0 else None, "ckRetailJpy": float(cost) if cost is not None else None,
                      "ckNmQty": stock, "ckCapturedAt": ck_at if card else None,
+                     "identityMethod": "explicitCollector" if re.search(r"\(\d+[A-Za-z*-]*\)", markers) else "uniqueScryfallPrint" if card else "unverified",
+                     "hareruyaSaleJpy": float(sale) if sale > 0 else None, "hareruyaNmQty": sale_qty,
+                     "saleCapturedAt": row.get("saleCapturedAt"), "saleCaptureError": bool(row.get("saleCaptureError")),
+                     "ckCashUsd": float(cash) if cash > 0 else None, "ckCashJpy": float(cash_jpy) if cash_jpy is not None else None,
+                     "ckBuyingQty": buying_qty, "reverseCurrent": reverse_current,
+                     "reverseEligible": bool(reverse_current and sale < cash_jpy * Decimal("0.7")),
+                     "reverseSpreadJpy": float(cash_jpy - sale) if cash_jpy is not None and sale > 0 else None,
+                     "reverseBufferJpy": float(cash_jpy * Decimal("0.7") - sale) if cash_jpy is not None and sale > 0 else None,
+                     "hareruyaSaleUrl": f"https://www.hareruyamtg.com/ja/products/detail/{row['productId']}?lang=EN",
                      "hareruyaBuyJpy": int(buy) if buy is not None else None, "hareruyaCapturedAt": captured,
                      "spreadJpy": float(spread) if spread is not None else None,
                      "spreadPct": round(float(spread / cost * 100), 2) if spread is not None else None,
@@ -286,8 +328,8 @@ def build_catalog(hareruya, retail, fx, identities, history, at):
     return {"meta": {"generatedAt": at, **summary}, "items": rows}
 
 
-def build_feed(hareruya, retail, fx, identities, previous, at, failures=(), history=None):
-    candidates, reasons, counts = preliminaries(hareruya, retail, fx, at)
+def build_feed(hareruya, retail, fx, identities, previous, at, failures=(), history=None, resolutions=None):
+    candidates, reasons, counts = preliminaries(hareruya, retail, fx, at, resolutions)
     valid = []
     for row, card, identity in candidates:
         exact = identities.get(card["scryfallId"])
@@ -298,10 +340,12 @@ def build_feed(hareruya, retail, fx, identities, previous, at, failures=(), hist
             continue
         valid.append((row, card, identity, exact))
     by_print = Counter((card["scryfallId"], identity[2]) for row, card, identity, exact in valid)
+    by_identity = Counter(identity for row in hareruya.get("items", []) if row.get("language") == "EN"
+                          for identity, _ in [hareruya_identity(row, resolutions, at)] if identity)
     items = []
     rate = decimal(fx.get("rates", {}).get("JPY"))
     for row, card, identity, exact in valid:
-        if by_print[(card["scryfallId"], identity[2])] > 1:
+        if by_print[(card["scryfallId"], identity[2])] > 1 or by_identity[identity] > 1:
             reasons[f"{row['productId']}|EN"] = "ambiguousHareruya"
             counts["ambiguousHareruya"] += 1
             continue
@@ -340,17 +384,18 @@ def build_feed(hareruya, retail, fx, identities, previous, at, failures=(), hist
             removed += 1
     cutoff = timestamp(at) - timedelta(days=7)
     events = sorted((e for e in events if timestamp(e["at"]) >= cutoff), key=lambda e: (e["at"], e["key"]), reverse=True)[:500]
-    catalog = build_catalog(hareruya, retail, fx, identities, history or {}, at)
+    catalog = build_catalog(hareruya, retail, fx, identities, history or {}, at, resolutions)
+    reverse = sorted((r for r in catalog["items"] if r["reverseEligible"]), key=lambda r: -r["reverseBufferJpy"])
     return {"meta": {"generatedAt": at, "hareruyaDataAt": hareruya.get("meta", {}).get("generatedAt"),
                      "ckCapturedAt": retail.get("meta", {}).get("capturedAt"), "ckSourceCreatedAtRaw": retail.get("meta", {}).get("sourceCreatedAtRaw"),
                      "fxAt": fx.get("sourceAt"), "usdJpy": float(rate), "usdCny": float(decimal(fx.get("rates", {}).get("CNY"))),
                      "fxSource": FX_URL, "ckSource": CK_URL, "hareruyaSource": "https://www.hareruyamtg.com/ja/purchase/",
                      "status": "partial" if failures else "ok", "failures": list(failures), "maxAgeHours": AGES,
                      "rule": "CK EN NM in-stock retail USD * USDJPY < Hareruya EN NM buy JPY",
-                     "automatic": True, "items": len(items), "catalog": catalog["meta"], "screenedEnglish": counts.pop("englishRows", 0),
+                     "automatic": True, "items": len(items), "reverseItems": len(reverse), "catalog": catalog["meta"], "screenedEnglish": counts.pop("englishRows", 0),
                      "excluded": dict(counts), "refreshIntervalMinutes": 30,
                      "initialBaseline": not bool(previous), "lastRunAdded": added, "lastRunRemoved": removed},
-            "items": items, "events": events, "catalog": catalog}
+            "items": items, "reverseItems": reverse, "events": events, "catalog": catalog}
 
 
 def read_json(path, zipped=False, default=None):
@@ -378,17 +423,84 @@ def fetch_json(url, body=None):
         return json.load(response)
 
 
-def refresh(ck_path=None, fx_path=None, no_network=False):
+def refresh_resolutions(hareruya, metadata, resolutions, identities, at, limit, failures):
+    known = {(normalized(c.get("name")), str(c.get("scryfallSet", "")).lower()) for c in metadata.get("cards", [])}
+    pending = {}
+    for row in hareruya.get("items", []):
+        if row.get("language") != "EN" or hareruya_identity(row)[1] != "numberMissing":
+            continue
+        title = row.get("variation", "")
+        match = re.fullmatch(r"([A-Z0-9]{2,5})(?:-(BF|BS|EX))?", row.get("set", ""))
+        if not match:
+            continue
+        code = SET_ALIASES.get(match[1], match[1].lower())
+        if (normalized(row.get("name")), code) not in known:
+            continue
+        finish = "foil" if any(t.lower() == "foil" for t in re.findall(r"【([^】]+)】", without_names(title))) else "nonfoil"
+        key = resolution_key(row, code, finish)
+        if key in resolutions and fresh(resolutions[key].get("checkedAt"), at, 168):
+            continue
+        pending[key] = (row, code)
+    ordered = sorted(pending.items(), key=lambda p: -decimal(p[1][0].get("buy", {}).get("EN")))[:limit]
+    stopped = Event()
+    def lookup(item):
+        key, (row, code) = item
+        if stopped.is_set():
+            return key, None, None
+        query = f'!{json.dumps(row["name"],ensure_ascii=False)} set:{code} lang:en'
+        url = "https://api.scryfall.com/cards/search?" + urlencode({"q": query, "unique": "prints", "include_extras": "true", "include_variations": "true"})
+        try:
+            time.sleep(0.35)
+            response = fetch_json(url)
+            if response.get("object") != "list" or not isinstance(response.get("data"), list):
+                raise ValueError("invalid exact-print search response")
+            cards = []
+            for card in response["data"]:
+                exact = {k: card.get(k) for k in ("id", "name", "flavor_name", "lang", "set", "collector_number", "finishes", "promo_types", "oversized", "card_faces", "image_uris", "scryfall_uri")}
+                exact["promo_types"] = card.get("promo_types") or []
+                cards.append(exact)
+            return key, {"query": query, "source": url, "checkedAt": iso_now(), "complete": response.get("has_more") is False, "cards": cards}, None
+        except HTTPError as error:
+            if error.code == 404:
+                return key, {"query": query, "source": url, "checkedAt": iso_now(), "complete": True, "cards": []}, None
+            else:
+                stopped.set()
+                return key, None, f"Scryfall print resolution: HTTP {error.code}; previous proofs retained"
+        except Exception as error:
+            stopped.set()
+            return key, None, f"Scryfall print resolution: {type(error).__name__}; previous proofs retained"
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        futures = [pool.submit(lookup, item) for item in ordered]
+        completed = 0
+        for future in as_completed(futures):
+            key, entry, error = future.result()
+            if error and error not in failures:
+                failures.append(error)
+            if entry:
+                resolutions[key] = entry
+                identities.update({c["id"]:c for c in entry["cards"]})
+                write_json(RESOLUTIONS, resolutions, zipped=True)
+                write_json(IDENTITIES, identities, zipped=True)
+                completed += 1
+                if completed % 20 == 0:
+                    print(json.dumps({"printProofsCompleted":completed,"requested":len(ordered)}), flush=True)
+
+
+def refresh(ck_path=None, fx_path=None, no_network=False, resolution_limit=120):
     at = iso_now()
     hareruya = read_json(ROOT / "hareruya_prices.json")
-    metadata = read_json(ROOT / "data.json.gz", zipped=True)
-    requested = {identity for row in hareruya.get("items", []) if row.get("language") == "EN" for identity, _ in [hareruya_identity(row)] if identity}
+    metadata = read_json(ROOT / "data.json.gz", zipped=True) if not no_network else {}
     failures = []
     if hareruya.get("meta", {}).get("status") == "partial":
         failures.append("Hareruya: partial capture; invalid rows excluded")
     retail = read_json(RETAIL, zipped=True)
     fx = read_json(FX)
     identities = read_json(IDENTITIES, zipped=True)
+    resolutions = read_json(RESOLUTIONS, zipped=True)
+    if not no_network:
+        refresh_resolutions(hareruya, metadata, resolutions, identities, iso_now(), resolution_limit, failures)
+    write_json(RESOLUTIONS, resolutions, zipped=True)
+    requested = {identity for row in hareruya.get("items", []) if row.get("language") == "EN" for identity, _ in [hareruya_identity(row, resolutions, iso_now())] if identity}
     if not no_network:
         try:
             raw = read_json(ck_path) if ck_path else fetch_json(CK_URL)
@@ -426,7 +538,7 @@ def refresh(ck_path=None, fx_path=None, no_network=False):
                 time.sleep(0.12)
             except Exception as error:
                 failures.append(f"Scryfall: {type(error).__name__}; unverified identities excluded")
-    feed = build_feed(hareruya, retail, fx, identities, read_json(FEED), iso_now(), failures, read_json(HISTORY, zipped=True))
+    feed = build_feed(hareruya, retail, fx, identities, read_json(FEED), iso_now(), failures, read_json(HISTORY, zipped=True), resolutions)
     write_json(CATALOG, feed.pop("catalog"), zipped=True)
     write_json(FEED, feed)
     print(json.dumps(feed["meta"], ensure_ascii=False))
@@ -441,14 +553,19 @@ def validate_outputs():
     identities = read_json(IDENTITIES, zipped=True)
     history = read_json(HISTORY, zipped=True)
     catalog = read_json(CATALOG, zipped=True)
+    resolutions = read_json(RESOLUTIONS, zipped=True)
     assert feed["meta"]["hareruyaDataAt"] == hareruya["meta"]["generatedAt"]
-    rebuilt = build_feed(hareruya, retail, fx, identities, {}, feed["meta"]["generatedAt"], history=history)
+    rebuilt = build_feed(hareruya, retail, fx, identities, {}, feed["meta"]["generatedAt"], history=history, resolutions=resolutions)
     assert feed["items"] == rebuilt["items"], "published rows differ from verified same-print quotes"
     assert len({r["key"] for r in feed["items"]}) == len(feed["items"])
     assert all(r["spreadJpy"] > 0 and r["ckNmQty"] > 0 and r["language"] == "EN" and r["condition"] == "NM" for r in feed["items"])
     assert feed["meta"]["items"] == len(feed["items"])
+    assert feed["reverseItems"] == rebuilt["reverseItems"]
+    assert all(r["reverseEligible"] and r["hareruyaNmQty"] > 0 and r["ckBuyingQty"] > 0 and decimal(r["hareruyaSaleJpy"]) < decimal(r["ckCashUsd"]) * decimal(feed["meta"]["usdJpy"]) * Decimal("0.7") for r in feed["reverseItems"])
     assert catalog == rebuilt["catalog"], "full English search catalogue differs from retained source quotes"
     assert feed["meta"]["catalog"] == catalog["meta"]
+    catalog_by_product = {r["productId"]:r for r in catalog["items"]}
+    assert all(catalog_by_product[r["productId"]]["matchStatus"] == "verified" and catalog_by_product[r["productId"]]["ckSku"] == r["ckSku"] for r in feed["items"])
     expected = {f"{r['productId']}|EN" for r in hareruya["items"] if r.get("language") == "EN"}
     assert {r["key"] for r in catalog["items"]} == expected and len(catalog["items"]) == len(expected)
     print(f"Validated {len(feed['items'])} live opportunities and all {len(expected)} English search records")
@@ -460,8 +577,11 @@ if __name__ == "__main__":
     parser.add_argument("--fx-json", type=Path)
     parser.add_argument("--no-network", action="store_true")
     parser.add_argument("--validate", action="store_true")
+    parser.add_argument("--resolution-limit", type=int, default=120)
     args = parser.parse_args()
     if args.validate:
         validate_outputs()
     else:
-        refresh(args.ck_json, args.fx_json, args.no_network)
+        if not 0 <= args.resolution_limit <= 500:
+            parser.error("resolution limit must be between 0 and 500")
+        refresh(args.ck_json, args.fx_json, args.no_network, args.resolution_limit)

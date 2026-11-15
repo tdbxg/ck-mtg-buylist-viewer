@@ -109,6 +109,12 @@ class OpportunityTests(unittest.TestCase):
         self.assertEqual(self.feed()["items"], [])
         self.assertEqual(self.feed()["meta"]["excluded"]["ambiguousHareruya"], 2)
 
+    def test_an_old_ambiguous_product_does_not_bypass_identity_checks(self):
+        other = copy.deepcopy(self.h["items"][0])
+        other.update(productId="11", buyCapturedAt="2026-08-01T00:00:00Z")
+        self.h["items"].append(other)
+        self.assertEqual(self.feed()["items"], [])
+
     def test_identity_service_result_must_match_exact_id_name_and_version(self):
         for field, value in (("id", "other"), ("name", "Other Card"), ("set", "mh1"), ("collector_number", "2")):
             with self.subTest(field=field):

@@ -36,6 +36,10 @@ jobs:
         env:
           DETAIL_LIMIT: ${{ inputs.detail_limit || '240' }}
         run: python scripts/refresh_hareruya.py --detail-limit "$DETAIL_LIMIT" --workers 3 --retail-limit 12
+      - name: Verify English product identities and sale stock
+        id: versions
+        continue-on-error: true
+        run: python scripts/verify_hareruya_versions.py --limit 80 --workers 2
       - name: Collect official public X announcements
         id: social
         if: always() && (github.event_name == 'workflow_dispatch' || github.event.schedule == '11,41 * * * *')
@@ -95,12 +99,12 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add hareruya_prices.json hareruya_movers.json hareruya_history.json.gz social_buylist.json social_archive.json
-          git add hareruya_opportunities.json hareruya_opportunity_catalog.json.gz hareruya_ck_retail.json.gz hareruya_ck_identities.json.gz hareruya_ck_fx.json
+          git add hareruya_opportunities.json hareruya_opportunity_catalog.json.gz hareruya_ck_retail.json.gz hareruya_ck_identities.json.gz hareruya_ck_resolutions.json.gz hareruya_ck_fx.json
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh Hareruya exact buy prices and official X posts'
             git pull --rebase origin main
             git push origin HEAD:main
           fi
       - name: Report capture outage
-        if: steps.prices.outcome == 'failure' || steps.social.outcome == 'failure' || steps.opportunities.outcome == 'failure'
+        if: steps.prices.outcome == 'failure' || steps.versions.outcome == 'failure' || steps.social.outcome == 'failure' || steps.opportunities.outcome == 'failure'
         run: exit 1

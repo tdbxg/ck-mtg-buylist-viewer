@@ -83,7 +83,7 @@ def listing_rows(html):
         name_ja = " // ".join(p[0].strip() for p in pairs) or title
         name_en = " // ".join(p[1].strip() for p in pairs) or title
         set_match = re.search(r"\[([^\]]+)\]", title)
-        number = re.search(r"\((\d+[a-zA-Z]?)\)", title)
+        number = re.search(r"\((\d+[a-zA-Z★*\-]*)\)", title)
         image = next(block.find_all(lambda n: n.tag == "img"), None)
         image_url = (image.attrs.get("data-original") or image.attrs.get("src") or "") if image else ""
         if image_url and not image_url.startswith("https://files.hareruyamtg.com/"):
@@ -91,8 +91,10 @@ def listing_rows(html):
         rows.append({
             "productId": identity[1], "language": language, "name": name_en, "nameJa": name_ja,
             "set": set_match[1] if set_match else "", "collectorNumber": number[1] if number else "",
-            "variation": title, "foil": "foil" in title.lower(),
+            "variation": title if f"【{language}】" in title else f"【{language}】{title}",
+            "foil": any("foil" in t.lower() for t in re.findall(r"【([^】]+)】", re.sub(r"《[^》]+》", "", title))),
             "image": image_url.split("?", 1)[0], "buyPrice": amount(price.text()),
+            "identityEvidence": {"title": title, "language": language, "kind": "officialListing", "url": url.geturl()},
         })
     return rows
 
@@ -115,6 +117,47 @@ def detail_prices(html, language, purchase=False):
         if price is not None:
             prices[condition] = price
     return prices
+
+
+def detail_metadata(html, language):
+    root = Document(html).root
+    title_node = next(root.find_all(lambda n: n.tag == "h2" and n.has_class("goods_name_")), None)
+    table = next(root.find_all(lambda n: n.attrs.get("id") == f"priceTable-{language}"), None)
+    if title_node is None or table is None:
+        raise ValueError("exact product title or language table missing")
+    title = title_node.text()
+    pairs = re.findall(r"《([^/》]+)/([^》]+)》", title)
+    series = re.search(r"\[([^\]]+)\]", title)
+    collector = re.search(r"\((\d+[a-zA-Z★*\-]*)\)", re.sub(r"《[^》]+》", "", title))
+    if not pairs or not series:
+        raise ValueError("product name or edition missing from official title")
+    if any(tag in title for tag in ("【EN】", "【JP】")) and f"【{language}】" not in title:
+        raise ValueError("product title language conflicts with requested table")
+    return {"name": " // ".join(p[1].strip() for p in pairs), "nameJa": " // ".join(p[0].strip() for p in pairs),
+            "set": series[1], "collectorNumber": collector[1] if collector else "",
+            "variation": title if f"【{language}】" in title else f"【{language}】{title}",
+            "foil": any("foil" in tag.lower() for tag in re.findall(r"【([^】]+)】", re.sub(r"《[^》]+》", "", title))),
+            "identityEvidence": {"title": title, "language": language, "kind": "officialDetail"}}
+
+
+def detail_stocks(html, language):
+    table = next(Document(html).root.find_all(lambda n: n.attrs.get("id") == f"priceTable-{language}"), None)
+    if table is None:
+        return {}
+    result = {}
+    for row in table.find_all(lambda n: n.has_class("row") or n.tag == "tr"):
+        cells = [n for n in row.children if isinstance(n, Node)]
+        if len(cells) < 3:
+            continue
+        condition = next((c for c in CONDITIONS if c in cells[0].text().split()), None)
+        if not condition or amount(cells[1].text()) is None:
+            continue
+        stock_cell = cells[2]
+        if any(stock_cell.find_all(lambda n: n.tag in {"select", "input"})):
+            continue
+        if re.fullmatch(r"[\d,]+", stock_cell.text()):
+            result[condition] = int(stock_cell.text().replace(",", ""))
+    return result
 
 
 def timestamp(value):
