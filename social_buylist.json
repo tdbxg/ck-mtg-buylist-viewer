@@ -1,19 +1,19 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-15T08:30:55+00:00",
-    "lastNewPostAt": "2026-11-15T08:30:55+00:00",
-    "lastSuccessfulAt": "2026-11-15T08:30:55+00:00",
+    "lastCheckedAt": "2026-11-15T11:05:55+00:00",
+    "lastNewPostAt": "2026-11-15T11:05:55+00:00",
+    "lastSuccessfulAt": "2026-11-15T11:05:55+00:00",
     "status": "ok",
     "newItems": 2,
-    "items": 40,
+    "items": 42,
     "accounts": 1,
-    "latestPublishedAt": "2026-11-15T08:00:00+00:00",
+    "latestPublishedAt": "2026-11-15T09:00:03+00:00",
     "coverage": "publicIndexAndOfficialPosts",
     "coverageNote": "公开实时索引发现链接，X 原帖核验内容与时间；索引可能延迟，不保证完整时间线。图片报价须按版本复核。",
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-15T08:30:55+00:00",
+        "checkedAt": "2026-11-15T11:05:55+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
@@ -22,6 +22,21 @@
     "checkIntervalMinutes": 60
   },
   "items": [
+    {
+      "id": "2121890962842493137",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2121890962842493137",
+      "publishedAt": "2026-11-15T09:00:03+00:00",
+      "collectedAt": "2026-11-15T11:05:55+00:00",
+      "text": "【買取情報】\n🏝️デュアルランド 買取中🏝️\n\n💧💀《Underground Sea》200,000円買取\n💧🔥《Volcanic Island》160,000円買取\n💧🌞《Tundra》100,000円買取\n💧🌳《Tropical Island》85,000円買取\n\n専門スタッフが1枚1枚丁寧に査定します🔍\n全店舗＆ネット買取でも同額で買取中です！🙋 https://t.co/IocGqnopQ1",
+      "images": [
+        "https://pbs.twimg.com/media/HXJSFmBbcAA7SJi.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
     {
       "id": "2121875852921036899",
       "account": "hareruya_mtg",
@@ -62,6 +77,21 @@
       "text": "【買取情報】\n✨日本語版スタンダード買取中!!✨\n\n《ソウル・ストーン》 9,000円買取\n《マインド・ストーン》 7,000円買取\n《ベイルマークの大主》 4,500円買取\n《嵐の討伐者、エルズペス》 4,000円買取\n\n面倒なカードの仕分けは不要‼️\nスリーブに入れたままお持ちください💨 https://t.co/SeRooeZMy5",
       "images": [
         "https://pbs.twimg.com/media/HXEYf6AbwAANatz.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2121543664564642045",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2121543664564642045",
+      "publishedAt": "2026-11-14T10:00:00+00:00",
+      "collectedAt": "2026-11-15T11:05:55+00:00",
+      "text": "【買取情報】\n✨高額特殊Foil買取中!!✨\n\n【コンフェッティ・Foil】■ボーダーレス■《リスティックの研究》 240,000円買取\n【ロゴ入り版・Foil】■ボーダーレス■《貪欲なティラノサウルス》 200,000円買取\n【シンギュラリティ・Foil】■テキストレス■《スーパーヴォイド、ソセラ》 180,000円買取 https://t.co/OQPOjx614x",
+      "images": [
+        "https://pbs.twimg.com/media/HXEbOKubcAA-TVg.jpg"
       ],
       "priceStatus": "imageReviewNeeded",
       "source": "X public post",
