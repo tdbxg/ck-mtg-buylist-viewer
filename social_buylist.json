@@ -1,19 +1,19 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-15T01:22:39+00:00",
-    "lastNewPostAt": "2026-11-14T11:10:45+00:00",
-    "lastSuccessfulAt": "2026-11-15T01:22:39+00:00",
+    "lastCheckedAt": "2026-11-15T08:30:55+00:00",
+    "lastNewPostAt": "2026-11-15T08:30:55+00:00",
+    "lastSuccessfulAt": "2026-11-15T08:30:55+00:00",
     "status": "ok",
-    "newItems": 0,
-    "items": 38,
+    "newItems": 2,
+    "items": 40,
     "accounts": 1,
-    "latestPublishedAt": "2026-11-14T10:30:00+00:00",
+    "latestPublishedAt": "2026-11-15T08:00:00+00:00",
     "coverage": "publicIndexAndOfficialPosts",
     "coverageNote": "公开实时索引发现链接，X 原帖核验内容与时间；索引可能延迟，不保证完整时间线。图片报价须按版本复核。",
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-15T01:22:39+00:00",
+        "checkedAt": "2026-11-15T08:30:55+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
@@ -22,6 +22,36 @@
     "checkIntervalMinutes": 60
   },
   "items": [
+    {
+      "id": "2121875852921036899",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2121875852921036899",
+      "publishedAt": "2026-11-15T08:00:00+00:00",
+      "collectedAt": "2026-11-15T08:30:55+00:00",
+      "text": "【買取情報】\n✨パウパー買取中！✨\n\n《塵は塵に》 1,500円買取\n《留意》 900円買取\n《殺し》 900円買取\n《虹色の断片》 700円買取\n\n面倒なカードの仕分けは不要‼️\nスリーブに入れたままお持ちください💨\n晴れる屋なら、店頭でもネットでも買取価格は同じです✨ https://t.co/1mG5zeK0NI",
+      "images": [
+        "https://pbs.twimg.com/media/HXJRwT0bgAAljaZ.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2121860758996664465",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2121860758996664465",
+      "publishedAt": "2026-11-15T07:00:01+00:00",
+      "collectedAt": "2026-11-15T08:30:55+00:00",
+      "text": "【買取情報】\n✨コマンダー買取中！✨\n\n《金粉のドレイク》 15,000円買取\n《宝石の洞窟》 9,000円買取\n《水辺の学舎、水面院》 6,000円買取\n《キャベツ売りの商人》 5,000円買取\n\nスリーブ抜き・仕分け不要で全店同額買取🙌\n査定の待ち時間は大会参加可能‼️ https://t.co/NUKUVz3UF4",
+      "images": [
+        "https://pbs.twimg.com/media/HXJVLlMbMAA93tV.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
     {
       "id": "2121551214177632444",
       "account": "hareruya_mtg",
