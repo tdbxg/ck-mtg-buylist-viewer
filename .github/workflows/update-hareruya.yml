@@ -95,7 +95,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add hareruya_prices.json hareruya_movers.json hareruya_history.json.gz social_buylist.json social_archive.json
-          git add hareruya_opportunities.json hareruya_ck_retail.json.gz hareruya_ck_identities.json.gz hareruya_ck_fx.json
+          git add hareruya_opportunities.json hareruya_opportunity_catalog.json.gz hareruya_ck_retail.json.gz hareruya_ck_identities.json.gz hareruya_ck_fx.json
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh Hareruya exact buy prices and official X posts'
             git pull --rebase origin main

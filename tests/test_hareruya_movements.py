@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from hareruya_movements import build_feed, epoch, observe
+from hareruya_movements import build_feed, epoch, observe, prune
 
 AT = "2026-11-14T12:00:00+00:00"
 
@@ -14,6 +14,14 @@ def row(price, captured, language="EN", product="1"):
 
 
 class MovementTests(unittest.TestCase):
+    def test_shipping_observations_are_retained_for_more_than_thirty_days(self):
+        old = epoch("2026-10-15T12:00:00Z")
+        middle = epoch("2026-10-25T12:00:00Z")
+        current = epoch(AT)
+        history = {"records": {"1|EN": {"buy": [[old, 100], [middle, 100], [current, 100]]}}}
+        prune(history, AT)
+        self.assertEqual(len(history["records"]["1|EN"]["buy"]), 3)
+
     def test_old_change_does_not_reappear_in_one_hour(self):
         history = {"records": {"1|EN": {"buy": [[epoch("2026-11-14T08:00:00Z"), 600], [epoch("2026-11-14T10:00:00Z"), 650], [epoch("2026-11-14T11:30:00Z"), 650], [epoch(AT), 650]]}}}
         feed = build_feed(history, {"items": [row(650, AT)]}, AT)

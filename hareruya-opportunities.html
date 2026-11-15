@@ -7,37 +7,45 @@
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./hareruya-movers.css?v=20261114">
-  <link rel="stylesheet" href="./hareruya-opportunities.css?v=20261115">
+  <link rel="stylesheet" href="./hareruya-opportunities.css?v=20261115-full">
 </head>
 <body>
-  <header class="topbar"><div><h1>CK → 晴屋价差榜</h1><p id="opportunityStatus" role="status">正在读取报价…</p></div><strong class="opportunity-count"><span id="activeCount">0</span><small>EN · NM · CK 有货</small></strong></header>
+  <header class="topbar"><div><h1>CK → 晴屋价格搜寻</h1><p id="opportunityStatus" role="status">正在读取全部英文报价…</p></div><strong class="opportunity-count"><span id="activeCount">0</span><small>英文报价 · 含历史</small></strong></header>
   <nav class="app-tabs" aria-label="页面切换"><a class="tab-link" href="./index.html">CK 单卡查询</a><a class="tab-link" href="./hareruya.html">晴屋日本</a><a class="tab-link" href="./hareruya-movers.html">晴屋涨跌榜</a><a class="tab-link active" href="./hareruya-opportunities.html" aria-current="page">CK → 晴屋价差</a><a class="tab-link" href="./social.html">总店 X 公告</a></nav>
   <main class="rank-main">
     <div class="opportunity-rule"><strong>CK NM 售价 × 美元兑日元汇率 &lt; 晴屋英文 NM 回收价</strong><span id="membershipSummary">自动维护</span></div>
+    <div class="opportunity-scopes" role="group" aria-label="报价范围">
+      <button type="button" data-scope="all" aria-pressed="true">全部英文 <span id="scopeAllCount">0</span></button>
+      <button type="button" data-scope="live" aria-pressed="false">实时价差 <span id="scopeLiveCount">0</span></button>
+      <button type="button" data-scope="history" aria-pressed="false">历史待更新 <span id="scopeHistoryCount">0</span></button>
+      <button type="button" data-scope="unmatched" aria-pressed="false">版本待匹配 <span id="scopeUnmatchedCount">0</span></button>
+    </div>
     <div class="rank-toolbar">
       <input id="opportunitySearch" type="search" placeholder="牌名、系列、编号或 CK SKU" aria-label="搜索价差榜">
-      <select id="opportunitySort" aria-label="排序"><option value="spread">价差金额优先</option><option value="percent">价差率优先</option><option value="price">CK 售价最低</option></select>
+      <select id="opportunitySort" aria-label="排序"><option value="spread">参考价差优先</option><option value="percent">参考价差率优先</option><option value="buy">晴屋收价最高</option><option value="price">CK 售价最低</option><option value="floor">30日最低观察价差</option><option value="coverage">30日核价覆盖优先</option></select>
       <button id="reloadOpportunities" type="button" title="读取最新已发布报价">刷新榜单</button>
       <button id="exportOpportunities" type="button" title="导出当前筛选结果">导出 CSV</button>
     </div>
     <details class="rank-filter-drawer"><summary>更多筛选</summary><div class="opportunity-filters">
-      <label>闪别<select id="opportunityFinish"><option value="">全部</option><option value="nonfoil">仅不闪</option><option value="foil">仅普通闪</option></select></label>
+      <label>闪别<select id="opportunityFinish"><option value="">全部</option><option value="nonfoil">仅不闪</option><option value="foil">仅普通闪</option><option value="special">特殊工艺待核验</option><option value="unknown">闪别待核验</option></select></label>
       <label>系列<select id="opportunitySet"><option value="">全部系列</option></select></label>
       <label>最低价差（日元）<input id="minimumSpread" type="number" min="0" step="100" value="0"></label>
       <label>最低价差率（%）<input id="minimumPercent" type="number" min="0" step="1" value="0"></label>
+      <label class="rank-watch-only"><input id="positiveSpreadOnly" type="checkbox">仅参考价差为正</label>
       <label class="rank-watch-only"><input id="opportunityWatched" type="checkbox">仅看关注</label>
     </div></details>
     <div class="opportunity-sources"><span id="ckQuoteTime">CK 核价 -</span><span id="hareruyaQuoteTime">晴屋核价 -</span><span id="exchangeRate">汇率 -</span></div>
-    <p class="opportunity-notice">价差未扣运费、税费及换汇成本，不等于净利润。<a href="https://www.hareruyamtg.com/ja/purchase/" target="_blank" rel="noreferrer">晴屋仅接受日本境内卖家</a>，最终按实物验收。</p>
+    <p class="opportunity-notice">历史报价不是当前可兑现收价；版本未核实的不计算价差。运输观察周期 30 天，未采集日期不代表价格稳定。价差未扣运费、税费及换汇成本，不等于净利润。<a href="https://www.hareruyamtg.com/ja/purchase/" target="_blank" rel="noreferrer">晴屋仅接受日本境内卖家</a>，最终按实物验收。</p>
     <section class="opportunity-board" aria-label="当前价差榜">
       <div class="opportunity-result"><strong id="visibleCount">0 张</strong><span id="builtAt">-</span></div>
-      <div class="opportunity-table-wrap"><table class="opportunity-table"><thead><tr><th>单卡 / 精确版本</th><th>CK NM 售价</th><th>晴屋 NM 回收（日元）</th><th>价差（日元）</th><th>价差率</th><th>库存</th><th>关注</th></tr></thead><tbody id="opportunityRows"></tbody></table></div>
-      <p id="opportunityEmpty" class="rank-empty" hidden>当前没有符合条件且报价有效的单卡</p>
+      <div class="opportunity-table-wrap"><table class="opportunity-table"><thead><tr><th>单卡 / 版本与核价状态</th><th>CK NM 售价</th><th>晴屋 NM 回收（日元）</th><th>参考价差（日元）</th><th>参考价差率</th><th>30日观察</th><th>库存</th><th>关注</th></tr></thead><tbody id="opportunityRows"></tbody></table></div>
+      <p id="opportunityEmpty" class="rank-empty" hidden>当前范围没有符合筛选条件的记录</p>
       <div class="rank-pager"><button type="button" id="previousOpportunities" aria-label="上一页">‹</button><span id="opportunityPage">1 / 1</span><button type="button" id="nextOpportunities" aria-label="下一页">›</button></div>
     </section>
     <details class="opportunity-audit"><summary>最近自动入榜 / 移除记录 <span id="eventCount"></span></summary><div class="opportunity-event-toolbar"><select id="eventFilter" aria-label="调整类型"><option value="">全部调整</option><option value="added">自动入榜</option><option value="removed">自动移除</option></select><small>近 7 天，最多显示 50 条</small></div><div id="opportunityEvents"></div></details>
-    <details class="opportunity-audit"><summary>未入榜记录与报价来源</summary><dl id="excludedReasons" class="opportunity-exclusions"></dl><div class="opportunity-source-links"><a href="https://api.cardkingdom.com/api/v2/pricelist" target="_blank" rel="noreferrer">CK 官方报价</a><a href="https://www.hareruyamtg.com/ja/purchase/" target="_blank" rel="noreferrer">晴屋官方回收</a><a href="https://open.er-api.com/v6/latest/USD" target="_blank" rel="noreferrer">汇率来源</a><a href="https://github.com/tdbxg/ck-mtg-buylist-viewer/actions/workflows/update-hareruya.yml" target="_blank" rel="noreferrer">更新任务</a></div></details>
+    <details class="opportunity-audit"><summary>未进入实时价差榜的原因与报价来源</summary><dl id="excludedReasons" class="opportunity-exclusions"></dl><div class="opportunity-source-links"><a href="https://api.cardkingdom.com/api/v2/pricelist" target="_blank" rel="noreferrer">CK 官方报价</a><a href="https://www.hareruyamtg.com/ja/purchase/" target="_blank" rel="noreferrer">晴屋官方回收</a><a href="https://open.er-api.com/v6/latest/USD" target="_blank" rel="noreferrer">汇率来源</a><a href="https://github.com/tdbxg/ck-mtg-buylist-viewer/actions/workflows/update-hareruya.yml" target="_blank" rel="noreferrer">更新任务</a></div></details>
   </main>
-  <script src="./hareruya-opportunities.js?v=20261115"></script>
+  <script src="./pako_inflate.min.js?v=20260706-pako"></script>
+  <script src="./hareruya-opportunities.js?v=20261115-full"></script>
 </body>
 </html>

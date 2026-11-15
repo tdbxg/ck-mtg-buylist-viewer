@@ -128,7 +128,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data.json.gz data_fast.json.gz movers.json last_update.json hareruya_targets.json hareruya_prices.json hareruya_probe_state.json exports/ck_buylist_top5000.csv exports/ck_buylist_fast_high_recent.csv exports/ck_buylist_full.csv.gz exports/manifest.json
-          git add hareruya_opportunities.json hareruya_ck_retail.json.gz hareruya_ck_identities.json.gz hareruya_ck_fx.json
+          git add hareruya_opportunities.json hareruya_opportunity_catalog.json.gz hareruya_ck_retail.json.gz hareruya_ck_identities.json.gz hareruya_ck_fx.json
           if git diff --cached --quiet; then
             echo "No data changes."
           else

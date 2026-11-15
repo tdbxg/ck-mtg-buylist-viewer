@@ -14,12 +14,16 @@ from urllib.parse import urljoin
 from urllib.request import ProxyHandler, Request, build_opener
 
 from hareruya_capture import timestamp
+from hareruya_movements import SOURCES, epoch
 
 ROOT = Path(__file__).resolve().parents[1]
 FEED = ROOT / "hareruya_opportunities.json"
 RETAIL = ROOT / "hareruya_ck_retail.json.gz"
 IDENTITIES = ROOT / "hareruya_ck_identities.json.gz"
 FX = ROOT / "hareruya_ck_fx.json"
+CATALOG = ROOT / "hareruya_opportunity_catalog.json.gz"
+HISTORY = ROOT / "hareruya_history.json.gz"
+TRANSPORT_DAYS = 30
 CK_URL = "https://api.cardkingdom.com/api/v2/pricelist"
 FX_URL = "https://open.er-api.com/v6/latest/USD"
 COLLECTION_URL = "https://api.scryfall.com/cards/collection"
@@ -193,7 +197,96 @@ def valid_print(row, card, identity, exact):
     return any(normalized(n) == normalized(row.get("name")) for n in names if n)
 
 
-def build_feed(hareruya, retail, fx, identities, previous, at, failures=()):
+def observation_summary(row, history, at, cost):
+    now = epoch(at)
+    start = now - TRANSPORT_DAYS * 86400
+    key = f"{row['productId']}|EN"
+    points = {int(t): int(p) for t, p in history.get("records", {}).get(key, {}).get("buy", [])
+              if start <= t <= now and p >= 0}
+    captured = epoch(row.get("buyCapturedAt"))
+    value = row.get("buy", {}).get("EN")
+    if row.get("source") in SOURCES and not row.get("captureError") and value is not None and start <= captured <= now and decimal(value) >= 0:
+        points[captured] = int(value)
+    ordered = sorted(points.items())
+    days = len({(now - t) // 86400 for t in points if t > start})
+    boundaries = [start, *(t for t, _ in ordered), now]
+    gap = max((b - a for a, b in zip(boundaries, boundaries[1:])), default=now-start)
+    minimum = min(points.values(), default=None)
+    return {"periodDays": TRANSPORT_DAYS, "samples": len(points), "observedDays": days,
+            "coverageComplete": days >= TRANSPORT_DAYS and gap <= 2 * 86400 and bool(ordered) and ordered[-1][0] >= now - 86400,
+            "maxGapHours": round(gap / 3600, 1), "minimumJpy": minimum,
+            "stopObserved": any(p == 0 for p in points.values()),
+            "floorSpreadJpy": float(decimal(minimum) - cost) if minimum is not None and cost is not None else None}
+
+
+def build_catalog(hareruya, retail, fx, identities, history, at):
+    index = defaultdict(list)
+    for card in retail.get("cards", []):
+        index[ck_key(card)].append(card)
+    english = [row for row in hareruya.get("items", []) if row.get("language") == "EN"]
+    parsed = [(row, *hareruya_identity(row)) for row in english]
+    duplicates = Counter(identity for _, identity, _ in parsed if identity)
+    rate = decimal(fx.get("rates", {}).get("JPY"))
+    ck_at = retail.get("meta", {}).get("capturedAt")
+    ck_current = fresh(ck_at, at, AGES["ck"])
+    fx_current = rate > 0 and fx.get("base_code") == "USD" and fresh(fx.get("sourceAt"), at, AGES["fx"])
+    rows, counts = [], Counter()
+    for row, identity, reason in parsed:
+        captured = row.get("buyCapturedAt")
+        quote_status = "failed" if row.get("captureError") else "current" if fresh(captured, at, AGES["hareruya"]) else "historical" if epoch(captured) else "unknown"
+        matches = index.get(identity, [])
+        card, exact = None, None
+        if not reason and len(matches) != 1:
+            reason = "ambiguousCK" if matches else "notObserved"
+        if not reason:
+            candidate = matches[0]
+            exact = identities.get(candidate.get("scryfallId"))
+            if not exact:
+                reason = "identityMissing"
+            elif not valid_print(row, candidate, identity, exact) or SPECIAL.search(candidate.get("variation", "")) or NON_ENGLISH.search(candidate.get("edition", "") + " " + candidate.get("variation", "")):
+                reason = "identityMismatch"
+            elif duplicates[identity] > 1:
+                reason = "ambiguousHareruya"
+            else:
+                card = candidate
+        status = reason or "verified"
+        price = decimal(card.get("conditions", {}).get("nm_price")) if card else Decimal(0)
+        stock = int(decimal(card.get("conditions", {}).get("nm_qty"))) if card else None
+        cost = price * rate if price > 0 and rate > 0 else None
+        raw_buy = row.get("buy", {}).get("EN")
+        buy = decimal(raw_buy) if raw_buy is not None else None
+        spread = buy - cost if buy is not None and buy > 0 and cost is not None else None
+        available = buy is not None and buy > 0 and row.get("buyStatus") != "unavailable"
+        current = bool(card and price > 0 and stock > 0 and available and quote_status == "current" and ck_current and fx_current)
+        markers = without_names(row.get("variation") or "")
+        finish = identity[2] if identity else "special" if SPECIAL.search(markers) else "foil" if "【Foil】" in markers else "nonfoil" if "【EN】" in markers else "unknown"
+        images = (exact.get("image_uris") or (exact.get("card_faces") or [{}])[0].get("image_uris") or {}) if card else {}
+        observation = observation_summary(row, history, at, cost)
+        rows.append({"key": f"{row['productId']}|EN", "productId": row["productId"],
+                     "name": row.get("name", ""), "nameJa": row.get("nameJa", ""), "cn": card.get("cn", "") if card else "",
+                     "set": exact["set"].upper() if card else row.get("set", ""),
+                     "collectorNumber": exact["collector_number"] if card else row.get("collectorNumber", ""),
+                     "hareruyaVariation": row.get("variation", ""), "finish": finish, "language": "EN", "condition": "NM",
+                     "matchStatus": status, "quoteStatus": quote_status, "currentComparison": current, "buyAvailable": bool(available),
+                     "ckSku": card["sku"] if card else "", "ckUrl": card["ckUrl"] if card else "",
+                     "ckRetailUsd": float(price) if price > 0 else None, "ckRetailJpy": float(cost) if cost is not None else None,
+                     "ckNmQty": stock, "ckCapturedAt": ck_at if card else None,
+                     "hareruyaBuyJpy": int(buy) if buy is not None else None, "hareruyaCapturedAt": captured,
+                     "spreadJpy": float(spread) if spread is not None else None,
+                     "spreadPct": round(float(spread / cost * 100), 2) if spread is not None else None,
+                     "image": images.get("normal") or row.get("image", ""),
+                     "hareruyaUrl": f"https://www.hareruyamtg.com/ja/purchase/detail/{row['productId']}?lang=EN",
+                     "observation": observation})
+        counts[quote_status] += 1
+        counts["matched" if card else "unmatched"] += 1
+        counts["observed30Days"] += int(observation["coverageComplete"])
+    rows.sort(key=lambda r: (r["spreadJpy"] is None, -(r["spreadJpy"] or 0), r["name"], r["key"]))
+    summary = {"path": CATALOG.name, "items": len(rows), "transportDays": TRANSPORT_DAYS, **dict(counts)}
+    summary["pending"] = sum(counts[k] for k in ("historical", "failed", "unknown"))
+    return {"meta": {"generatedAt": at, **summary}, "items": rows}
+
+
+def build_feed(hareruya, retail, fx, identities, previous, at, failures=(), history=None):
     candidates, reasons, counts = preliminaries(hareruya, retail, fx, at)
     valid = []
     for row, card, identity in candidates:
@@ -247,16 +340,17 @@ def build_feed(hareruya, retail, fx, identities, previous, at, failures=()):
             removed += 1
     cutoff = timestamp(at) - timedelta(days=7)
     events = sorted((e for e in events if timestamp(e["at"]) >= cutoff), key=lambda e: (e["at"], e["key"]), reverse=True)[:500]
+    catalog = build_catalog(hareruya, retail, fx, identities, history or {}, at)
     return {"meta": {"generatedAt": at, "hareruyaDataAt": hareruya.get("meta", {}).get("generatedAt"),
                      "ckCapturedAt": retail.get("meta", {}).get("capturedAt"), "ckSourceCreatedAtRaw": retail.get("meta", {}).get("sourceCreatedAtRaw"),
                      "fxAt": fx.get("sourceAt"), "usdJpy": float(rate), "usdCny": float(decimal(fx.get("rates", {}).get("CNY"))),
                      "fxSource": FX_URL, "ckSource": CK_URL, "hareruyaSource": "https://www.hareruyamtg.com/ja/purchase/",
                      "status": "partial" if failures else "ok", "failures": list(failures), "maxAgeHours": AGES,
                      "rule": "CK EN NM in-stock retail USD * USDJPY < Hareruya EN NM buy JPY",
-                     "automatic": True, "items": len(items), "screenedEnglish": counts.pop("englishRows", 0),
+                     "automatic": True, "items": len(items), "catalog": catalog["meta"], "screenedEnglish": counts.pop("englishRows", 0),
                      "excluded": dict(counts), "refreshIntervalMinutes": 30,
                      "initialBaseline": not bool(previous), "lastRunAdded": added, "lastRunRemoved": removed},
-            "items": items, "events": events}
+            "items": items, "events": events, "catalog": catalog}
 
 
 def read_json(path, zipped=False, default=None):
@@ -316,8 +410,9 @@ def refresh(ck_path=None, fx_path=None, no_network=False):
             failures.append(f"FX: {type(error).__name__}; previous rate retained")
     # Acquisition may take minutes; evaluate freshness at the completed capture time.
     at = iso_now()
-    candidates, _, _ = preliminaries(hareruya, retail, fx, at)
-    missing = sorted({c["scryfallId"] for row, c, key in candidates if c.get("scryfallId") and c["scryfallId"] not in identities})
+    # Identity verification covers historical quotes too; freshness only gates the live board.
+    missing = sorted({c["scryfallId"] for c in retail.get("cards", [])
+                      if c.get("scryfallId") and c["scryfallId"] not in identities})
     if not no_network:
         for offset in range(0, len(missing), 75):
             batch = missing[offset:offset + 75]
@@ -331,7 +426,8 @@ def refresh(ck_path=None, fx_path=None, no_network=False):
                 time.sleep(0.12)
             except Exception as error:
                 failures.append(f"Scryfall: {type(error).__name__}; unverified identities excluded")
-    feed = build_feed(hareruya, retail, fx, identities, read_json(FEED), iso_now(), failures)
+    feed = build_feed(hareruya, retail, fx, identities, read_json(FEED), iso_now(), failures, read_json(HISTORY, zipped=True))
+    write_json(CATALOG, feed.pop("catalog"), zipped=True)
     write_json(FEED, feed)
     print(json.dumps(feed["meta"], ensure_ascii=False))
     return feed
@@ -343,13 +439,19 @@ def validate_outputs():
     retail = read_json(RETAIL, zipped=True)
     fx = read_json(FX)
     identities = read_json(IDENTITIES, zipped=True)
+    history = read_json(HISTORY, zipped=True)
+    catalog = read_json(CATALOG, zipped=True)
     assert feed["meta"]["hareruyaDataAt"] == hareruya["meta"]["generatedAt"]
-    rebuilt = build_feed(hareruya, retail, fx, identities, {}, feed["meta"]["generatedAt"])
+    rebuilt = build_feed(hareruya, retail, fx, identities, {}, feed["meta"]["generatedAt"], history=history)
     assert feed["items"] == rebuilt["items"], "published rows differ from verified same-print quotes"
     assert len({r["key"] for r in feed["items"]}) == len(feed["items"])
     assert all(r["spreadJpy"] > 0 and r["ckNmQty"] > 0 and r["language"] == "EN" and r["condition"] == "NM" for r in feed["items"])
     assert feed["meta"]["items"] == len(feed["items"])
-    print(f"Validated {len(feed['items'])} same-print EN/NM price opportunities")
+    assert catalog == rebuilt["catalog"], "full English search catalogue differs from retained source quotes"
+    assert feed["meta"]["catalog"] == catalog["meta"]
+    expected = {f"{r['productId']}|EN" for r in hareruya["items"] if r.get("language") == "EN"}
+    assert {r["key"] for r in catalog["items"]} == expected and len(catalog["items"]) == len(expected)
+    print(f"Validated {len(feed['items'])} live opportunities and all {len(expected)} English search records")
 
 
 if __name__ == "__main__":

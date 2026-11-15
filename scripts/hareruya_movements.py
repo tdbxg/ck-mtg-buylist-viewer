@@ -14,6 +14,7 @@ FEED = ROOT / "hareruya_movers.json"
 WINDOWS = {"hour": 1, "day": 24, "threeDay": 72, "week": 168}
 SOURCES = {"publicListing", "priorityProbe", "verifiedDetail"}
 DAY = 86400
+RETENTION_DAYS = 40
 
 
 def iso(seconds):
@@ -69,7 +70,7 @@ def observe(history, payload, at):
 
 
 def prune(history, at):
-    cutoff = epoch(at) - 8 * DAY
+    cutoff = epoch(at) - RETENTION_DAYS * DAY
     for record in history["records"].values():
         for metric, points in record.items():
             recent = [point for point in points if point[0] >= cutoff]
