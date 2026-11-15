@@ -14,6 +14,12 @@ def row(price, captured, language="EN", product="1"):
 
 
 class MovementTests(unittest.TestCase):
+    def test_english_catalog_quotes_are_actual_history_observations(self):
+        h = {"records":{}}
+        entry = {**row(1200, AT), "source":"englishCatalog"}
+        observe(h, {"items":[entry]}, AT)
+        self.assertEqual(h["records"].get("1|EN", {}).get("buy"), [[epoch(AT), 1200]])
+
     def test_shipping_observations_are_retained_for_more_than_thirty_days(self):
         old = epoch("2026-10-15T12:00:00Z")
         middle = epoch("2026-10-25T12:00:00Z")

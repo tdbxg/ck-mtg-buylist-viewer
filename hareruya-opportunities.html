@@ -7,7 +7,7 @@
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./hareruya-movers.css?v=20261114">
-  <link rel="stylesheet" href="./hareruya-opportunities.css?v=20261115-two-way">
+  <link rel="stylesheet" href="./hareruya-opportunities.css?v=20261115-alignment">
 </head>
 <body>
   <header class="topbar"><div><h1>CK ↔ 晴屋正价差榜</h1><p id="opportunityStatus" role="status">正在核对同版本英文报价…</p></div><strong class="opportunity-count"><span id="activeCount">0</span><small>EN · NM · 有货</small></strong></header>
@@ -42,9 +42,16 @@
       <div class="rank-pager"><button type="button" id="previousOpportunities" aria-label="上一页">‹</button><span id="opportunityPage">1 / 1</span><button type="button" id="nextOpportunities" aria-label="下一页">›</button></div>
     </section>
     <details class="opportunity-audit"><summary>最近自动入榜 / 移除记录 <span id="eventCount"></span></summary><div class="opportunity-event-toolbar"><select id="eventFilter" aria-label="调整类型"><option value="">全部调整</option><option value="added">自动入榜</option><option value="removed">自动移除</option></select><small>近 7 天，最多显示 50 条</small></div><div id="opportunityEvents"></div></details>
-    <details class="opportunity-audit"><summary>全量核验覆盖 <span id="coverageSummary"></span></summary><p id="reverseCoverage" class="opportunity-notice"></p><button id="exportAudit" type="button" class="audit-export">导出全量核验明细</button><dl id="excludedReasons" class="opportunity-exclusions"></dl><div class="opportunity-source-links"><a href="./hareruya.html">全部晴屋原始报价</a><a href="https://api.cardkingdom.com/api/v2/pricelist" target="_blank" rel="noreferrer">CK 官方报价</a><a href="https://www.hareruyamtg.com/ja/purchase/" target="_blank" rel="noreferrer">晴屋官方回收</a><a href="https://open.er-api.com/v6/latest/USD" target="_blank" rel="noreferrer">汇率来源</a><a href="https://github.com/tdbxg/ck-mtg-buylist-viewer/actions/workflows/update-hareruya.yml" target="_blank" rel="noreferrer">更新任务</a></div></details>
+    <details class="opportunity-audit"><summary>全量核验覆盖 <span id="coverageSummary"></span></summary>
+      <p id="reverseCoverage" class="opportunity-notice"></p><p id="captureProgress" class="capture-progress"></p>
+      <button id="exportAudit" type="button" class="audit-export">导出全量核验明细</button>
+      <h3 class="coverage-heading">版本核验</h3><dl id="identityReasons" class="opportunity-exclusions"></dl>
+      <h3 class="coverage-heading">晴屋报价时效</h3><dl id="quoteCoverage" class="opportunity-exclusions"></dl>
+      <details class="eligibility-audit"><summary>CK 买入方向未入榜原因</summary><dl id="excludedReasons" class="opportunity-exclusions"></dl></details>
+      <div class="opportunity-source-links"><a href="./hareruya.html">全部晴屋原始报价</a><a href="https://api.cardkingdom.com/api/v2/pricelist" target="_blank" rel="noreferrer">CK 官方报价</a><a href="https://www.hareruyamtg.com/ja/purchase/" target="_blank" rel="noreferrer">晴屋官方回收</a><a href="https://open.er-api.com/v6/latest/USD" target="_blank" rel="noreferrer">汇率来源</a><a href="https://github.com/tdbxg/ck-mtg-buylist-viewer/actions/workflows/update-hareruya.yml" target="_blank" rel="noreferrer">更新任务</a></div>
+    </details>
   </main>
   <script src="./pako_inflate.min.js?v=20260706-pako"></script>
-  <script src="./hareruya-opportunities.js?v=20261115-two-way"></script>
+  <script src="./hareruya-opportunities.js?v=20261115-alignment"></script>
 </body>
 </html>

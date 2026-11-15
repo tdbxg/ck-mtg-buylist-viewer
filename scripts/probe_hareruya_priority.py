@@ -13,6 +13,7 @@ from pathlib import Path
 from urllib.parse import urlencode
 
 from update_hareruya_prices import BASE, OUTPUT, TARGETS, fetch, listing_targets_from_html
+from hareruya_capture import merge_listing
 
 ROOT = Path(__file__).resolve().parents[1]
 CK_DATA = ROOT / "data.json.gz"
@@ -86,22 +87,7 @@ def main() -> int:
                 for row in rows:
                     key = (str(row["productId"]), row["language"])
                     old = items.get(key, {})
-                    items[key] = {
-                        "productId": row["productId"],
-                        "name": row["name"],
-                        "nameJa": row["nameJa"],
-                        "set": row.get("set") or old.get("set", ""),
-                        "collectorNumber": row.get("collectorNumber") or old.get("collectorNumber", ""),
-                        "language": row["language"],
-                        "image": row.get("image") or old.get("image", ""),
-                        "sale": old.get("sale", {}),
-                        "buy": {row["language"]: row["buyPrice"]},
-                        "saleUrl": old.get("saleUrl") or f"{BASE}/products/detail/{row['productId']}",
-                        "buyUrl": f"{BASE}/purchase/detail/{row['productId']}?lang={row['language']}",
-                        "capturedAt": now,
-                        "retailVerified": bool(old.get("sale", {}).get(row["language"])),
-                        "source": "priorityProbe",
-                    }
+                    items[key] = merge_listing(old, row, now, source="priorityProbe")
                     if not old:
                         discovered += 1
             except Exception as exc:

@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 HISTORY = ROOT / "hareruya_history.json.gz"
 FEED = ROOT / "hareruya_movers.json"
 WINDOWS = {"hour": 1, "day": 24, "threeDay": 72, "week": 168}
-SOURCES = {"publicListing", "priorityProbe", "verifiedDetail"}
+SOURCES = {"publicListing", "priorityProbe", "verifiedDetail", "englishCatalog"}
 DAY = 86400
 RETENTION_DAYS = 40
 

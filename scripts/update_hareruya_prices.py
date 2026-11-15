@@ -248,22 +248,7 @@ def refresh_listing_only() -> int:
         key = (str(row["productId"]), row["language"])
         listed_keys.add(key)
         old = previous.get(key, {})
-        items.append({
-            "productId": row["productId"],
-            "name": row["name"],
-            "nameJa": row["nameJa"],
-            "set": row.get("set") or old.get("set", ""),
-            "collectorNumber": row.get("collectorNumber") or old.get("collectorNumber", ""),
-            "language": row["language"],
-            "image": row["image"] or old.get("image", ""),
-            "sale": old.get("sale", {}),
-            "buy": {row["language"]: row["buyPrice"]},
-            "saleUrl": old.get("saleUrl") or f"{BASE}/products/detail/{row['productId']}",
-            "buyUrl": f"{BASE}/purchase/detail/{row['productId']}?lang={row['language']}",
-            "capturedAt": datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
-            "retailVerified": bool(old.get("sale", {}).get(row["language"])),
-            "source": "publicListing",
-        })
+        items.append(merge_listing(old, row, datetime.now(timezone.utc).isoformat(timespec="seconds")))
     # Preserve previously confirmed priority matches that are not in the
     # rotating public category pages.
     items.extend(old for key, old in previous.items() if key not in listed_keys)
@@ -273,6 +258,7 @@ def refresh_listing_only() -> int:
         jpy_cny = previous_payload.get("meta", {}).get("jpyCny")
     payload = {
         "meta": {
+            **previous_payload.get("meta", {}),
             "generatedAt": datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
             "items": len(items),
             "images": sum(bool(item.get("image")) for item in items),

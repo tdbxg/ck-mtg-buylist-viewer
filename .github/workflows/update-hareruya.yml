@@ -30,12 +30,29 @@ jobs:
       - name: Test exact-language capture and post deduplication
         id: tests
         run: python -m unittest discover -s tests -v
+      - name: Identify daily official print archive
+        id: print_archive
+        continue-on-error: true
+        run: |
+          python - <<'PY'
+          import os, sys
+          sys.path.insert(0, 'scripts')
+          from build_hareruya_opportunities import fetch_json
+          record = next(r for r in fetch_json('https://api.scryfall.com/bulk-data')['data'] if r.get('type') == 'default_cards')
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('version=' + record['updated_at'].replace(':', '-') + '\n')
+          PY
+      - uses: actions/cache@v5
+        if: steps.print_archive.outcome == 'success'
+        with:
+          path: .cache/hareruya-scryfall
+          key: hareruya-default-prints-${{ steps.print_archive.outputs.version }}
       - name: Capture public buylist and rotate existing prints
         id: prices
         continue-on-error: true
         env:
           DETAIL_LIMIT: ${{ inputs.detail_limit || '240' }}
-        run: python scripts/refresh_hareruya.py --detail-limit "$DETAIL_LIMIT" --workers 3 --retail-limit 12
+        run: python scripts/refresh_hareruya.py --detail-limit "$DETAIL_LIMIT" --workers 3 --retail-limit 12 --catalog-pages 90
       - name: Verify English product identities and sale stock
         id: versions
         continue-on-error: true

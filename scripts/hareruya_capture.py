@@ -83,7 +83,7 @@ def listing_rows(html):
         name_ja = " // ".join(p[0].strip() for p in pairs) or title
         name_en = " // ".join(p[1].strip() for p in pairs) or title
         set_match = re.search(r"\[([^\]]+)\]", title)
-        number = re.search(r"\((\d+[a-zA-Z★*\-]*)\)", title)
+        number = re.search(r"\((\d+[a-zA-Z★*\-]*)\)", re.sub(r"《[^》]+》", "", title))
         image = next(block.find_all(lambda n: n.tag == "img"), None)
         image_url = (image.attrs.get("data-original") or image.attrs.get("src") or "") if image else ""
         if image_url and not image_url.startswith("https://files.hareruyamtg.com/"):
@@ -170,6 +170,12 @@ def timestamp(value):
 def merge_listing(old, row, at, source="publicListing"):
     result = dict(old)
     result.update({k: v for k, v in row.items() if k != "buyPrice" and v not in (None, "")})
+    # An authoritative title without a number must clear leftovers from older parsers.
+    if row.get("identityEvidence"):
+        result["collectorNumber"] = row.get("collectorNumber", "")
+        result["identityEvidence"] = {**row["identityEvidence"], "capturedAt": at}
+        if old.get("variation") and old["variation"] != row.get("variation"):
+            result["retailVerified"] = False
     lang = row["language"]
     result.update({
         "buy": {lang: row["buyPrice"]}, "sale": old.get("sale", {}),

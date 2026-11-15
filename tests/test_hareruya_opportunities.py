@@ -82,7 +82,14 @@ class OpportunityTests(unittest.TestCase):
     def test_card_named_foil_is_not_automatically_a_foil(self):
         row = self.h["items"][0]
         row["variation"] = "【EN】(001)《Example/Foil》[MH2]"
+        row["name"] = "Foil"
         self.assertEqual(hareruya_identity(row)[0], ("mh2", "1", "nonfoil"))
+
+    def test_explicit_collector_does_not_override_a_conflicting_title(self):
+        self.h["items"][0]["variation"] = "【EN】(001)《甲/Unrelated Card》[MH2]"
+        self.assertEqual(self.feed()["items"], [])
+        self.h["items"][0]["variation"] = "【EN】【JP】(001)《甲/Example Card》[MH2]"
+        self.assertEqual(self.feed()["items"], [])
 
     def test_prerelease_stamp_with_same_base_number_is_not_a_regular_print(self):
         self.h["items"][0]["variation"] = "【EN】(001)■プレリリース■《Example/Example Card》[MH2]"
@@ -94,6 +101,14 @@ class OpportunityTests(unittest.TestCase):
         self.assertEqual(self.feed()["items"], [])
         row["collectorNumber"] = ""
         self.assertEqual(self.feed()["meta"]["excluded"]["numberMissing"], 1)
+
+    def test_reskin_dual_names_require_both_names_on_the_exact_print(self):
+        row = self.h["items"][0]
+        row.update(name="Reskinned Name // Example Card", variation="【EN】(001)《甲/Reskinned Name》//《乙/Example Card》[MH2]")
+        self.ids[SID]["flavor_name"] = "Reskinned Name"
+        self.assertEqual(len(self.feed()["items"]), 1)
+        row.update(name="Unrelated Name // Example Card", variation="【EN】(001)《甲/Unrelated Name》//《乙/Example Card》[MH2]")
+        self.assertEqual(self.feed()["items"], [])
 
     def test_ambiguous_ck_print_is_not_resolved_by_cheapest_price(self):
         other = copy.deepcopy(self.ck["cards"][0])

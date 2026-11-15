@@ -51,6 +51,12 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(feed["catalog"]["items"][0]["hareruyaBuyJpy"], 1000)
         self.assertFalse(feed["catalog"]["items"][0]["currentComparison"])
 
+    def test_identity_coverage_does_not_disappear_behind_quote_age(self):
+        self.h["items"][0].update(variation="", buyCapturedAt="2026-08-01T00:00:00Z")
+        meta = self.feed()["catalog"]["meta"]
+        self.assertEqual(meta.get("identityReasons"), {"identityMissing":1})
+        self.assertEqual(meta["historical"], 1)
+
     def test_negative_spreads_and_out_of_stock_remain_searchable(self):
         self.ck["cards"][0]["conditions"] = {"nm_price": "12.00", "nm_qty": 0}
         feed = self.feed()
@@ -66,6 +72,12 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(row["matchStatus"], "identityMismatch")
         self.assertIsNone(row["ckRetailUsd"])
         self.assertIsNone(row["spreadJpy"])
+        self.assertEqual(row["scryfallId"], "")
+
+    def test_verified_rows_export_the_concrete_print_id(self):
+        row = self.feed()["catalog"]["items"][0]
+        self.assertEqual(row["scryfallId"], SID)
+        self.assertEqual(row["ckSku"], "MH2-1")
 
     def test_expired_ck_and_fx_stay_reference_only(self):
         for source in (self.ck["meta"], self.fx):
