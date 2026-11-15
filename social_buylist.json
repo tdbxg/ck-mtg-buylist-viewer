@@ -1,19 +1,19 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-15T11:05:55+00:00",
-    "lastNewPostAt": "2026-11-15T11:05:55+00:00",
-    "lastSuccessfulAt": "2026-11-15T11:05:55+00:00",
+    "lastCheckedAt": "2026-11-15T15:56:59+00:00",
+    "lastNewPostAt": "2026-11-15T15:56:59+00:00",
+    "lastSuccessfulAt": "2026-11-15T15:56:59+00:00",
     "status": "ok",
-    "newItems": 2,
-    "items": 42,
+    "newItems": 1,
+    "items": 43,
     "accounts": 1,
-    "latestPublishedAt": "2026-11-15T09:00:03+00:00",
+    "latestPublishedAt": "2026-11-15T12:00:01+00:00",
     "coverage": "publicIndexAndOfficialPosts",
     "coverageNote": "公开实时索引发现链接，X 原帖核验内容与时间；索引可能延迟，不保证完整时间线。图片报价须按版本复核。",
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-15T11:05:55+00:00",
+        "checkedAt": "2026-11-15T15:56:59+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
@@ -22,6 +22,23 @@
     "checkIntervalMinutes": 60
   },
   "items": [
+    {
+      "id": "2121936255457853728",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2121936255457853728",
+      "publishedAt": "2026-11-15T12:00:01+00:00",
+      "collectedAt": "2026-11-15T15:56:59+00:00",
+      "text": "【買取情報】\nネット買取では\n世界選手権で活躍しているカードたちを\n絶賛買取中です‼️\n\n✨【JP】(015)《浸食作用》[FDN] 1,600円✨\n✨【JP】(192)《氷耕しの探検家》[EOE]　3,000円✨\n✨【JP】(201)《ウロボロイド》[EOE] 3,000円✨\n※11月15日20時時点\n\n買取をご希望の方は https://t.co/oGAwlmQ7D5",
+      "images": [
+        "https://pbs.twimg.com/media/HXKazitbEAAzf9F.jpg",
+        "https://pbs.twimg.com/media/HXKbCXqaYAEFLVR.jpg",
+        "https://pbs.twimg.com/media/HXKbG6va4AARei1.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
     {
       "id": "2121890962842493137",
       "account": "hareruya_mtg",
