@@ -61,4 +61,3 @@ class RotationTests(unittest.TestCase):
         self.assertEqual(rows, [])
         self.assertEqual(report["pagesCompleted"], 0)
         self.assertIn("refine", report["failures"][0])
-
