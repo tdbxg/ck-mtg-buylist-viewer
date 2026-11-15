@@ -28,6 +28,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Test exact-language capture and post deduplication
+        id: tests
         run: python -m unittest discover -s tests -v
       - name: Capture public buylist and rotate existing prints
         id: prices
@@ -53,10 +54,16 @@ jobs:
           if age >= 3300 or os.environ.get('FORCE_X') == '1':
               subprocess.run(['python', 'scripts/collect_x_buylist.py'], check=True)
           PY
+      - name: Maintain CK retail to Hareruya EN NM opportunities
+        id: opportunities
+        if: always()
+        continue-on-error: true
+        run: python scripts/build_hareruya_opportunities.py
       - name: Validate retained snapshot
         id: validate
         if: always()
         run: |
+          python scripts/build_hareruya_opportunities.py --validate
           python - <<'PY'
           import json
           from pathlib import Path
@@ -83,16 +90,17 @@ jobs:
                       assert period['from'] <= row['previousAt'] < row['currentAt']
           PY
       - name: Publish snapshots and capture status
-        if: always() && steps.validate.outcome == 'success'
+        if: always() && steps.validate.outcome == 'success' && steps.tests.outcome == 'success'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add hareruya_prices.json hareruya_movers.json hareruya_history.json.gz social_buylist.json social_archive.json
+          git add hareruya_opportunities.json hareruya_ck_retail.json.gz hareruya_ck_identities.json.gz hareruya_ck_fx.json
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh Hareruya exact buy prices and official X posts'
             git pull --rebase origin main
             git push origin HEAD:main
           fi
       - name: Report capture outage
-        if: steps.prices.outcome == 'failure' || steps.social.outcome == 'failure'
+        if: steps.prices.outcome == 'failure' || steps.social.outcome == 'failure' || steps.opportunities.outcome == 'failure'
         run: exit 1
