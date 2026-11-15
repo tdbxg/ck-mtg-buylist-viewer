@@ -46,7 +46,7 @@ function rowMarkup(r){
   const image=url(r.image,["cards.scryfall.io","files.hareruyamtg.com"]);
   const thumb=image!=="#"?`<img src="${esc(image)}" alt="${esc(r.name)}" loading="lazy">`:'<span class="opportunity-no-image">无图</span>';
   const first=reverse?`<a href="${esc(h)}" target="_blank" rel="noreferrer">¥${money(r.hareruyaSaleJpy,0)}</a>`:`<a href="${esc(ck)}" target="_blank" rel="noreferrer">$${r.ckRetailUsd.toFixed(2)}</a><small>¥${money(v.cost)}</small>`;
-  const second=reverse?`<a href="${esc(ck)}" target="_blank" rel="noreferrer">$${r.ckCashUsd.toFixed(2)}</a><small>¥${money(v.proceeds)}</small><small>70% 阈值 ¥${money(v.proceeds*0.7)}</small>`:`<a href="${esc(h)}" target="_blank" rel="noreferrer">¥${money(r.hareruyaBuyJpy,0)}</a>`;
+  const second=reverse?`<a href="https://www.cardkingdom.com/purchasing/mtg_singles" target="_blank" rel="noreferrer">$${r.ckCashUsd.toFixed(2)}</a><small>¥${money(v.proceeds)}</small><small>70% 阈值 ¥${money(v.proceeds*0.7)}</small>`:`<a href="${esc(h)}" target="_blank" rel="noreferrer">¥${money(r.hareruyaBuyJpy,0)}</a>`;
   const qty=reverse?Math.min(r.hareruyaNmQty,r.ckBuyingQty):r.ckNmQty;
   const o=r.observation||{},observation=reverse?'<strong>CK 现金收价</strong><small>30天稳定性未确认</small>':`<strong>${o.observedDays||0} / 30 天</strong><small>${o.coverageComplete?"30日有核价覆盖":"样本不足30天"}${o.stopObserved?" · 含停收记录":""}</small>${o.minimumJpy!=null?`<small>已观察最低 ¥${money(o.minimumJpy,0)}</small>`:""}`;
   const proof=r.identityMethod==="uniqueScryfallPrint"?"编号经唯一印刷核验":"标题编号核验";

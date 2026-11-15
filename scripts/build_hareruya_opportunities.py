@@ -304,7 +304,7 @@ def build_catalog(hareruya, retail, fx, identities, history, at, resolutions=Non
                      "ckSku": card["sku"] if card else "", "ckUrl": card["ckUrl"] if card else "",
                      "ckRetailUsd": float(price) if price > 0 else None, "ckRetailJpy": float(cost) if cost is not None else None,
                      "ckNmQty": stock, "ckCapturedAt": ck_at if card else None,
-                     "identityMethod": "explicitCollector" if re.search(r"\(\d+[A-Za-z*-]*\)", markers) else "uniqueScryfallPrint" if card else "unverified",
+                     "identityMethod": "explicitCollector" if re.search(r"\(\d+[A-Za-z★*-]*\)", markers) else "uniqueScryfallPrint" if card else "unverified",
                      "hareruyaSaleJpy": float(sale) if sale > 0 else None, "hareruyaNmQty": sale_qty,
                      "saleCapturedAt": row.get("saleCapturedAt"), "saleCaptureError": bool(row.get("saleCaptureError")),
                      "ckCashUsd": float(cash) if cash > 0 else None, "ckCashJpy": float(cash_jpy) if cash_jpy is not None else None,
