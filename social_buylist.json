@@ -1,19 +1,19 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-16T08:07:01+00:00",
-    "lastNewPostAt": "2026-11-16T08:07:01+00:00",
-    "lastSuccessfulAt": "2026-11-16T08:07:01+00:00",
+    "lastCheckedAt": "2026-11-16T18:36:45+00:00",
+    "lastNewPostAt": "2026-11-16T18:36:45+00:00",
+    "lastSuccessfulAt": "2026-11-16T18:36:45+00:00",
     "status": "ok",
     "newItems": 1,
-    "items": 44,
+    "items": 45,
     "accounts": 1,
-    "latestPublishedAt": "2026-11-16T05:00:00+00:00",
+    "latestPublishedAt": "2026-11-16T08:30:00+00:00",
     "coverage": "publicIndexAndOfficialPosts",
     "coverageNote": "公开实时索引发现链接，X 原帖核验内容与时间；索引可能延迟，不保证完整时间线。图片报价须按版本复核。",
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-16T08:07:01+00:00",
+        "checkedAt": "2026-11-16T18:36:45+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
@@ -22,6 +22,21 @@
     "checkIntervalMinutes": 60
   },
   "items": [
+    {
+      "id": "2122245790299021672",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2122245790299021672",
+      "publishedAt": "2026-11-16T08:30:00+00:00",
+      "collectedAt": "2026-11-16T18:36:45+00:00",
+      "text": "【買取情報】\n✨日本語版スタンダード買取中!!✨\n\n《量子の謎かけ屋》 8,000円買取\n《マインド・ストーン》 7,000円買取\n《アガサの魂の大釜》 5,500円買取\n《七つの死の種父》 4,000円買取\n\n1枚からお気軽にどうぞ🙌\nスリーブのまま持込OK‼️\n全店同額買取です✨ https://t.co/LXuim2Aaml",
+      "images": [
+        "https://pbs.twimg.com/media/HXOwXuDaAAAvghb.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
     {
       "id": "2122192941125128316",
       "account": "hareruya_mtg",
