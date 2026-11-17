@@ -1,19 +1,19 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-17T02:12:44+00:00",
-    "lastNewPostAt": "2026-11-16T18:36:45+00:00",
-    "lastSuccessfulAt": "2026-11-17T02:12:44+00:00",
+    "lastCheckedAt": "2026-11-17T10:48:44+00:00",
+    "lastNewPostAt": "2026-11-17T10:48:44+00:00",
+    "lastSuccessfulAt": "2026-11-17T10:48:44+00:00",
     "status": "ok",
-    "newItems": 0,
-    "items": 45,
+    "newItems": 6,
+    "items": 51,
     "accounts": 1,
-    "latestPublishedAt": "2026-11-16T08:30:00+00:00",
+    "latestPublishedAt": "2026-11-17T08:30:00+00:00",
     "coverage": "publicIndexAndOfficialPosts",
     "coverageNote": "公开实时索引发现链接，X 原帖核验内容与时间；索引可能延迟，不保证完整时间线。图片报价须按版本复核。",
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-17T02:12:44+00:00",
+        "checkedAt": "2026-11-17T10:48:44+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
@@ -22,6 +22,99 @@
     "checkIntervalMinutes": 60
   },
   "items": [
+    {
+      "id": "2122608179196400114",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2122608179196400114",
+      "publishedAt": "2026-11-17T08:30:00+00:00",
+      "collectedAt": "2026-11-17T10:48:44+00:00",
+      "text": "【買取情報】\n✨モダン買取中!!✨\n\n《オークの弓使い》 7,000円買取\n《三なる宝球》 6,500円買取\n《否定の力》 6,000円買取\n《真実の解体者、コジレック》 5,000円買取\n\n1枚からお気軽にどうぞ🙌\nスリーブのまま持込OK‼️\n全店同額買取です✨ https://t.co/IUUluHkFcD",
+      "images": [
+        "https://pbs.twimg.com/media/HXTpCT5bsAAuFLD.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2122585532651725251",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2122585532651725251",
+      "publishedAt": "2026-11-17T07:00:01+00:00",
+      "collectedAt": "2026-11-17T10:48:44+00:00",
+      "text": "【買取情報】\n🧐「あるぞ…\nこのカード、持ってた記憶が、ある…❗」\nそのカード、ぜひネット買取でお売りください‼️\n\n✨【JP】【Foil】《はらわた撃ち》[NPH] 赤U　5,000円✨\n✨【JP】【Foil】《見えざる糸》[DGM] 青C　3,000円✨\n✨【JP】【Foil】(027)《聖なる猫》[AKH] 白C　1,000円✨ https://t.co/sB6FVIU73X",
+      "images": [
+        "https://pbs.twimg.com/media/HXS3vgyaIAAk7sc.jpg",
+        "https://pbs.twimg.com/media/HXS3wmjaIAAQlVM.jpg",
+        "https://pbs.twimg.com/media/HXS3yGybAAAZmOy.jpg",
+        "https://pbs.twimg.com/media/HXS3zKCbMAAD5VS.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2122570432419360930",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2122570432419360930",
+      "publishedAt": "2026-11-17T06:00:01+00:00",
+      "collectedAt": "2026-11-17T10:48:44+00:00",
+      "text": "【買取情報】\n✨『マジック：ザ・ギャザリング | スター・トレック』サージFoil 買取中!!✨\n\n《ジャン＝リュック・ピカード艦長》 14,000円買取\n《キャスリン・ジェインウェイ艦長》 5,000円買取\n《札を仕込むQ》 3,500円買取\n《ビバリー・クラッシャー医師》 3,000円買取 https://t.co/xTEINVeevF",
+      "images": [
+        "https://pbs.twimg.com/media/HXSqz-SacAAGq5n.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2122555328763932910",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2122555328763932910",
+      "publishedAt": "2026-11-17T05:00:00+00:00",
+      "collectedAt": "2026-11-17T10:48:44+00:00",
+      "text": "【買取情報】\n✨『マジック：ザ・ギャザリング | スター・トレック』シングルカード買取中!!✨\n\n《ビバリー・クラッシャー医師》 1,800円買取\n《科学技官、ミスター・スポック》 1,200円買取\n《慎ましき経営者、クワーク》 1,200円買取\n《吸塩鬼》 900円買取\n\nスリーブ付きで持込OK🙆‍♀️ https://t.co/Kca373PcSC",
+      "images": [
+        "https://pbs.twimg.com/media/HXSo4QIawAAp3mm.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2122532679849529529",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2122532679849529529",
+      "publishedAt": "2026-11-17T03:30:00+00:00",
+      "collectedAt": "2026-11-17T10:48:44+00:00",
+      "text": "【買取情報】\n✨ゲームチェンジャー買取中!!✨\n\n《セラの聖域》 35,000円買取\n《直観》 30,000円買取\n《金属モックス》 15,000円買取\n《一つの指輪》 15,000円買取\n\nスリーブのまま持込OK🙌\n全店同額買取‼️査定中は無料プレイスペースへ✨ https://t.co/HVD9BQat7j",
+      "images": [
+        "https://pbs.twimg.com/media/HXSofDMagAA5N2x.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2122525148599189785",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2122525148599189785",
+      "publishedAt": "2026-11-17T03:00:04+00:00",
+      "collectedAt": "2026-11-17T10:48:44+00:00",
+      "text": "【買取情報】\n✨レガシー買取中!!✨\n\n《直観》 35,000円買取\n《無のロッド》 15,000円買取\n《意志の力》 11,000円買取\n《リシャーダの港》 10,000円買取\n\n1枚からお気軽にどうぞ🙌\nスリーブのまま持込OK‼️\n全店同額買取です✨ https://t.co/nEtemhlsWv",
+      "images": [
+        "https://pbs.twimg.com/media/HXSoEyXbEAAWWwS.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
     {
       "id": "2122245790299021672",
       "account": "hareruya_mtg",
