@@ -1,10 +1,10 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-18T10:13:05+00:00",
+    "lastCheckedAt": "2026-11-18T18:58:21+00:00",
     "lastNewPostAt": "2026-11-18T10:13:05+00:00",
-    "lastSuccessfulAt": "2026-11-18T10:13:05+00:00",
+    "lastSuccessfulAt": "2026-11-18T18:58:21+00:00",
     "status": "ok",
-    "newItems": 5,
+    "newItems": 0,
     "items": 56,
     "accounts": 1,
     "latestPublishedAt": "2026-11-18T10:00:03+00:00",
@@ -13,7 +13,7 @@
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-18T10:13:05+00:00",
+        "checkedAt": "2026-11-18T18:58:21+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
