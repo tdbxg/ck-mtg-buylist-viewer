@@ -1,19 +1,19 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-18T02:00:58+00:00",
-    "lastNewPostAt": "2026-11-17T10:48:44+00:00",
-    "lastSuccessfulAt": "2026-11-18T02:00:58+00:00",
+    "lastCheckedAt": "2026-11-18T10:13:05+00:00",
+    "lastNewPostAt": "2026-11-18T10:13:05+00:00",
+    "lastSuccessfulAt": "2026-11-18T10:13:05+00:00",
     "status": "ok",
-    "newItems": 0,
-    "items": 51,
+    "newItems": 5,
+    "items": 56,
     "accounts": 1,
-    "latestPublishedAt": "2026-11-17T08:30:00+00:00",
+    "latestPublishedAt": "2026-11-18T10:00:03+00:00",
     "coverage": "publicIndexAndOfficialPosts",
     "coverageNote": "公开实时索引发现链接，X 原帖核验内容与时间；索引可能延迟，不保证完整时间线。图片报价须按版本复核。",
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-18T02:00:58+00:00",
+        "checkedAt": "2026-11-18T10:13:05+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
@@ -22,6 +22,68 @@
     "checkIntervalMinutes": 60
   },
   "items": [
+    {
+      "id": "2122993228102201538",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2122993228102201538",
+      "publishedAt": "2026-11-18T10:00:03+00:00",
+      "collectedAt": "2026-11-18T10:13:05+00:00",
+      "text": "【買取情報】\n✨スタンダードレア土地買取中!!✨\n\n《轟音の滝》 3,000円買取\n《地底街の下水道》 3,000円買取\n《大音声の劇場》 2,000円買取\n《バーシンセー》 1,800円買取\n\n面倒なカードの仕分けは不要‼️\nスリーブに入れたままお持ちください💨\n晴れる屋なら、店頭でもネットでも買取価格は同じです✨ https://t.co/ZRCrylMxUP",
+      "images": [
+        "https://pbs.twimg.com/media/HXZN3vda0AA7erh.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2122917720882893054",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2122917720882893054",
+      "publishedAt": "2026-11-18T05:00:01+00:00",
+      "collectedAt": "2026-11-18T10:13:05+00:00",
+      "text": "【買取情報】\n👑パワー9 高価買取中👑\n\n《Black Lotus》[LEA] 18,000,000円買取\n《Black Lotus》[LEB] 7,000,000円買取\n《Black Lotus》[2ED] 4,500,000円買取\n\n専門スタッフが1枚1枚、丁寧に査定いたします🔍\n全店舗＆ネットでも同額で買取です！🙋 https://t.co/PxatTcRV7B",
+      "images": [
+        "https://pbs.twimg.com/media/HXXyjgwa4AAdWvW.jpg",
+        "https://pbs.twimg.com/media/HXXym5obEAAieF-.jpg",
+        "https://pbs.twimg.com/media/HXXyqe-b0AA65NF.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2122887523936702780",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2122887523936702780",
+      "publishedAt": "2026-11-18T03:00:01+00:00",
+      "collectedAt": "2026-11-18T10:13:05+00:00",
+      "text": "【買取情報】\n✨コマンダー買取中!!✨\n\n《宝石の洞窟》 9,000円買取\n《エインシャント・カッパー・ドラゴン》 7,000円買取\n《水辺の学舎、水面院》 6,000円買取\n《キャベツ売りの商人》 5,000円買取\n\nスリーブ抜き・仕分け不要で全店同額買取🙌\n査定の待ち時間は大会参加可能‼️ https://t.co/Yv30FBuDF5",
+      "images": [
+        "https://pbs.twimg.com/media/HXXxqZ-b0AAQZP7.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2122879969051513226",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2122879969051513226",
+      "publishedAt": "2026-11-18T02:30:00+00:00",
+      "collectedAt": "2026-11-18T10:13:05+00:00",
+      "text": "【買取情報】\n✨パイオニア買取中!!✨\n\n《アナグマモグラの仔》 9,000円買取\n《グレートヘンジ》 4,000円買取\n《マナの合流点》 4,000円買取\n《ニクスの祭殿、ニクソス》 3,000円買取\n\nお持ち込みはスリーブ抜き・仕分けなしでOK👍\n全国の店舗＆ネット買取、どこでも同じ金額で買取ります！ https://t.co/gEgPaOK3TP",
+      "images": [
+        "https://pbs.twimg.com/media/HXXxQkraYAA0E8o.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
     {
       "id": "2122608179196400114",
       "account": "hareruya_mtg",
@@ -159,6 +221,21 @@
         "https://pbs.twimg.com/media/HXKazitbEAAzf9F.jpg",
         "https://pbs.twimg.com/media/HXKbCXqaYAEFLVR.jpg",
         "https://pbs.twimg.com/media/HXKbG6va4AARei1.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2121898500744986671",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2121898500744986671",
+      "publishedAt": "2026-11-15T09:30:00+00:00",
+      "collectedAt": "2026-11-18T10:13:05+00:00",
+      "text": "【買取情報】\n✨旧枠ハイエンドカード高価買取中✨\n\n【EN】《ガイアの揺籃の地》200,000円買取\n【EN】《モックス・ダイアモンド》130,000円買取\n【EN】《ライオンの瞳のダイアモンド》100,000円買取\n\n高額コレクションも安心👍\n専門スタッフが1枚1枚丁寧に査定させていただきます💎 https://t.co/b7N8RMV3Qw",
+      "images": [
+        "https://pbs.twimg.com/media/HXJSUqWb0AAyrtz.jpg"
       ],
       "priceStatus": "imageReviewNeeded",
       "source": "X public post",
