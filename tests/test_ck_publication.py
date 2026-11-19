@@ -25,6 +25,8 @@ class PublicationTests(unittest.TestCase):
             subprocess.run(["git", "init", "--bare", "--initial-branch=main", str(remote)],
                            check=True, capture_output=True)
             self.git(root, "clone", str(remote), str(ck))
+            self.git(ck, "config", "user.name", "Test")
+            self.git(ck, "config", "user.email", "test@example.invalid")
             self.commit(ck, "data.txt", "baseline\n")
             self.git(ck, "push", "origin", "main")
             self.git(root, "clone", str(remote), str(other))
