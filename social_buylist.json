@@ -1,19 +1,19 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-19T01:16:25+00:00",
-    "lastNewPostAt": "2026-11-18T10:13:05+00:00",
-    "lastSuccessfulAt": "2026-11-19T01:16:25+00:00",
+    "lastCheckedAt": "2026-11-19T08:56:21+00:00",
+    "lastNewPostAt": "2026-11-19T08:56:21+00:00",
+    "lastSuccessfulAt": "2026-11-19T08:56:21+00:00",
     "status": "ok",
-    "newItems": 0,
-    "items": 56,
+    "newItems": 4,
+    "items": 60,
     "accounts": 1,
-    "latestPublishedAt": "2026-11-18T10:00:03+00:00",
+    "latestPublishedAt": "2026-11-19T08:30:00+00:00",
     "coverage": "publicIndexAndOfficialPosts",
     "coverageNote": "公开实时索引发现链接，X 原帖核验内容与时间；索引可能延迟，不保证完整时间线。图片报价须按版本复核。",
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-19T01:16:25+00:00",
+        "checkedAt": "2026-11-19T08:56:21+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
@@ -22,6 +22,54 @@
     "checkIntervalMinutes": 60
   },
   "items": [
+    {
+      "id": "2123332953623449625",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2123332953623449625",
+      "publishedAt": "2026-11-19T08:30:00+00:00",
+      "collectedAt": "2026-11-19T08:56:21+00:00",
+      "text": "【買取情報】\n✨日本語版スタンダード買取中!!✨\n\n《嵐の目、ウギン》 7,000円買取\n《アガサの魂の大釜》 5,500円買取\n《ベイルマークの大主》 4,500円買取\n《嵐の討伐者、エルズペス》 3,500円買取\n\n1枚からお気軽にどうぞ🙌\nスリーブのまま持込OK‼️\n全店同額買取です✨ https://t.co/s1H2JPxocG",
+      "images": [
+        "https://pbs.twimg.com/media/HXdveFQa4AAZ8kv.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2123295213959459283",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2123295213959459283",
+      "publishedAt": "2026-11-19T06:00:02+00:00",
+      "collectedAt": "2026-11-19T08:56:21+00:00",
+      "text": "【買取情報】\n🏝️デュアルランド 買取中🏝️\n\n💧💀《Underground Sea》200,000円買取\n💧🔥《Volcanic Island》160,000円買取\n💧🌞《Tundra》100,000円買取\n💧🌳《Tropical Island》85,000円買取\n\n専門スタッフが1枚1枚丁寧に査定します🔍\n全店舗＆ネット買取でも同額で買取中です！🙋 https://t.co/2LCF4qof4f",
+      "images": [
+        "https://pbs.twimg.com/media/HXduIGnbQAEei8T.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2123280111214481514",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2123280111214481514",
+      "publishedAt": "2026-11-19T05:00:01+00:00",
+      "collectedAt": "2026-11-19T08:56:21+00:00",
+      "text": "【買取情報】\n🧐「あるぞ…\nこのカード、持ってた記憶が、ある…❗」\nそのカード、ぜひネット買取でお売りください‼️\n\n✨【EN】《呪われた巻物》[TMP] 茶R　8,000円✨\n✨【EN】《ドルイドの誓い》[EXO] 緑R　3,500円✨\n✨【EN】《鉤爪の統率者》[LGN] 緑R　1,200円✨ https://t.co/ijtLZBzGPI",
+      "images": [
+        "https://pbs.twimg.com/media/HXdM2z3bcAA3iM2.jpg",
+        "https://pbs.twimg.com/media/HXdM4_nbwAA__cE.jpg",
+        "https://pbs.twimg.com/media/HXdM6bybEAAtfLz.jpg",
+        "https://pbs.twimg.com/media/HXdM7sgakAALLxT.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
     {
       "id": "2122993228102201538",
       "account": "hareruya_mtg",
@@ -49,6 +97,22 @@
         "https://pbs.twimg.com/media/HXXyjgwa4AAdWvW.jpg",
         "https://pbs.twimg.com/media/HXXym5obEAAieF-.jpg",
         "https://pbs.twimg.com/media/HXXyqe-b0AA65NF.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2122902620973257207",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2122902620973257207",
+      "publishedAt": "2026-11-18T04:00:01+00:00",
+      "collectedAt": "2026-11-19T08:56:21+00:00",
+      "text": "【買取情報】\n「1日……」\n\n「たったの1日で終わる買取査定があったら…」\n\nあります‼️\n晴れる屋のネット買取「えらんで買取」なら\n到着してから1⃣日以内に査定結果をお届け✉️💨\n\nえらんで買取の詳細はこちらから→https://t.co/b359mGP6Gc https://t.co/NxuH0jqjNd",
+      "images": [
+        "https://pbs.twimg.com/media/HXS4V4JakAA8L_q.jpg",
+        "https://pbs.twimg.com/media/HXS4WsWbMAAPN7p.jpg"
       ],
       "priceStatus": "imageReviewNeeded",
       "source": "X public post",
