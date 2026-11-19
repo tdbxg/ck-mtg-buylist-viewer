@@ -18,8 +18,10 @@ import os
 import re
 import shutil
 import subprocess
+import tempfile
 import time
 import urllib.request
+from urllib.parse import urlsplit
 from urllib.error import HTTPError
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -31,7 +33,6 @@ SINGLES_URL = "https://api.cardkingdom.com/api/v2/pricelist"
 SEALED_URL = "https://api.cardkingdom.com/api/sealed_pricelist"
 FX_URL = "https://open.er-api.com/v6/latest/USD"
 SCRYFALL_COLLECTION_URL = "https://api.scryfall.com/cards/collection"
-SCRYFALL_BULK_URL = "https://api.scryfall.com/bulk-data/default-cards"
 SCRYFALL_BULK_LIST_URL = "https://api.scryfall.com/bulk-data"
 MTGCH_NAMES_URL = "https://mtgch.com/static/card_names.json"
 USER_AGENT = "ck-mtg-buylist-viewer-github-actions/1.0"
@@ -924,40 +925,44 @@ def write_exports(payload: dict) -> None:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
 
 
-def scryfall_bulk_cards() -> list[dict]:
-    meta = fetch_json(SCRYFALL_BULK_URL, timeout=120)
-    download_uri = meta.get("download_uri")
-    if not download_uri:
-        # Scryfall has returned both a direct record and a collection payload.
-        # Fall back to locating the default_cards entry in the collection.
-        catalog = fetch_json(SCRYFALL_BULK_LIST_URL, timeout=120)
-        record = next((item for item in catalog.get("data", []) if item.get("type") == "default_cards"), {})
-        download_uri = record.get("download_uri")
+def scryfall_bulk_cards(metadata: dict | None = None):
+    from hareruya_bulk_prints import read_cards
+
+    catalog = fetch_json(SCRYFALL_BULK_LIST_URL, timeout=120)
+    record = next((item for item in catalog.get("data", []) if item.get("type") == "default_cards"), {})
+    download_uri = record.get("jsonl_download_uri") or record.get("download_uri")
     if not download_uri:
         raise RuntimeError("Scryfall default-cards bulk download URI missing")
-    # The Scryfall bulk file is large enough that a single streaming request can
-    # be interrupted. Let curl resume a partial temporary download instead of
-    # discarding hundreds of MB and aborting the entire price refresh.
-    bulk_path = ROOT / ".scryfall-default-cards.json"
-    command = [
-        "curl",
-        "-fL",
-        "--retry", "5",
-        "--retry-delay", "2",
-        "--retry-all-errors",
-        "--connect-timeout", "30",
-        "--max-time", "1800",
-        "-A", USER_AGENT,
-    ]
-    if bulk_path.exists() and bulk_path.stat().st_size:
-        command.extend(["-C", "-"])
-    command.extend(["-o", str(bulk_path), download_uri])
-    try:
+    parsed = urlsplit(download_uri)
+    if parsed.scheme != "https" or parsed.hostname not in {"data.scryfall.io", "data.scryfall.com"}:
+        raise ValueError("untrusted Scryfall bulk download URL")
+    updated_at = datetime.fromisoformat(record["updated_at"].replace("Z", "+00:00"))
+    if updated_at.tzinfo is None:
+        raise ValueError("Scryfall bulk timestamp has no timezone")
+    age = datetime.now(timezone.utc) - updated_at
+    if not -timedelta(minutes=5) <= age <= timedelta(hours=30):
+        raise ValueError("Scryfall default-card bulk metadata is stale")
+    # Bind each temporary download to its URL; never resume a different day's
+    # archive. Streaming JSONL also avoids loading the full archive into RAM.
+    with tempfile.TemporaryDirectory(prefix="ck-scryfall-") as tmp:
+        bulk_path = Path(tmp) / ("default.jsonl.gz" if record.get("jsonl_download_uri") else "default.json")
+        command = ["curl", "-fsSL", "--retry", "3", "--retry-delay", "2",
+                   "--retry-all-errors", "--retry-max-time", "900", "--connect-timeout", "30",
+                   "--max-time", "600", "-A", USER_AGENT, "-o", str(bulk_path), download_uri]
         subprocess.run(command, check=True)
-        with open(bulk_path, "r", encoding="utf-8") as f:
-            return json.load(f)
-    finally:
-        bulk_path.unlink(missing_ok=True)
+        if record.get("compressed_size") and bulk_path.stat().st_size != record["compressed_size"]:
+            raise ValueError("Scryfall archive size mismatch")
+        count = 0
+        for card in read_cards(bulk_path):
+            count += 1
+            yield card
+        if not count:
+            raise ValueError("empty Scryfall bulk archive")
+        if metadata is not None:
+            metadata.update(scryfallMarketUpdatedAt=record["updated_at"],
+                            scryfallMarketAcquiredAt=datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                            scryfallMarketDownloadUrl=download_uri,
+                            scryfallMarketBulkCards=count)
 
 
 def previous_market_refs(previous: dict) -> dict[str, dict]:
@@ -976,14 +981,7 @@ def previous_market_refs(previous: dict) -> dict[str, dict]:
             continue
         sid = row.get("scryfallId") or ""
         if sid:
-            refs[f"id:{sid}"] = record
-        key = market_key(
-            row.get("name") or row.get("ckName") or "",
-            row.get("scryfallSet") or "",
-            row.get("collectorNumber") or "",
-        )
-        if key:
-            refs[f"key:{key}"] = record
+            refs[f"id:{sid}:{int(bool(row.get('foil')))}"] = record
     return refs
 
 
@@ -993,12 +991,8 @@ def enrich_market_reference(payload: dict, previous: dict | None = None) -> dict
         restored_usd = 0
         restored_eur = 0
         for row in payload.get("cards", []):
-            key = market_key(
-                row.get("name") or row.get("ckName") or "",
-                row.get("scryfallSet") or "",
-                row.get("collectorNumber") or "",
-            )
-            rec = refs.get(f"id:{row.get('scryfallId') or ''}") or refs.get(f"key:{key}")
+            row["marketUsd"] = row["marketEur"] = None
+            rec = refs.get(f"id:{row.get('scryfallId') or ''}:{int(bool(row.get('foil')))}")
             if not rec:
                 continue
             row.update(rec)
@@ -1011,24 +1005,22 @@ def enrich_market_reference(payload: dict, previous: dict | None = None) -> dict
         meta["scryfallMarketSkipped"] = "bulk_download_unavailable"
         meta["scryfallMarketMatchedUsd"] = restored_usd
         meta["scryfallMarketMatchedEur"] = restored_eur
+        meta["scryfallMarketStatus"] = "stale"
+        for key in ("scryfallMarketUpdatedAt", "scryfallMarketAcquiredAt", "scryfallMarketDownloadUrl"):
+            meta[key] = (previous or {}).get("meta", {}).get(key)
         return payload
 
     cards = payload.get("cards", [])
     wanted_ids = {row.get("scryfallId") for row in cards if row.get("scryfallId")}
-    wanted_keys = {
-        market_key(row.get("name") or "", row.get("scryfallSet") or "", row.get("collectorNumber") or "")
-        for row in cards
-        if row.get("scryfallSet") and row.get("collectorNumber")
-    }
-    if not wanted_ids and not wanted_keys:
+    if not wanted_ids:
         return payload
 
     print("Fetching Scryfall bulk market reference prices...")
     refs: dict[str, dict] = {}
-    for card in scryfall_bulk_cards():
+    source_meta: dict = {}
+    for card in scryfall_bulk_cards(source_meta):
         sid = card.get("id") or ""
-        key = market_key(card.get("name") or "", card.get("set") or "", card.get("collector_number") or "")
-        if sid not in wanted_ids and key not in wanted_keys:
+        if sid not in wanted_ids:
             continue
         prices = card.get("prices") or {}
         purchases = card.get("purchase_uris") or {}
@@ -1045,14 +1037,12 @@ def enrich_market_reference(payload: dict, previous: dict | None = None) -> dict
         }
         if sid:
             refs[f"id:{sid}"] = rec
-        refs[f"key:{key}"] = rec
 
     matched_usd = 0
     matched_eur = 0
     for row in cards:
-        rec = refs.get(f"id:{row.get('scryfallId') or ''}") or refs.get(
-            f"key:{market_key(row.get('name') or '', row.get('scryfallSet') or '', row.get('collectorNumber') or '')}"
-        )
+        row["marketUsd"] = row["marketEur"] = None
+        rec = refs.get(f"id:{row.get('scryfallId') or ''}")
         if not rec:
             continue
         foil = bool(row.get("foil"))
@@ -1069,6 +1059,9 @@ def enrich_market_reference(payload: dict, previous: dict | None = None) -> dict
     payload.setdefault("meta", {})["scryfallMarketMatchedUsd"] = matched_usd
     payload.setdefault("meta", {})["scryfallMarketMatchedEur"] = matched_eur
     payload.setdefault("meta", {})["scryfallMarketSource"] = "Scryfall public USD/EUR price fields"
+    payload["meta"].update(source_meta)
+    payload["meta"].pop("scryfallMarketSkipped", None)
+    payload["meta"]["scryfallMarketStatus"] = "fresh"
     return payload
 
 

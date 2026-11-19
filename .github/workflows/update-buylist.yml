@@ -15,10 +15,14 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
         with:
+          # A queued scheduled event can point at a commit older than the
+          # preceding writer. Start capture from main after acquiring the lock.
+          ref: main
           # Data and UI commits share this history. Keep enough commits for a
           # true seven-day comparison without downloading the full repository.
           fetch-depth: 600
@@ -81,6 +85,8 @@ jobs:
           if len(payload.get("sets", [])) < 300:
               raise SystemExit(f"unexpected set count: {len(payload.get('sets', []))}")
           market_fallback = meta.get("scryfallMarketSkipped") == "bulk_download_unavailable"
+          if not market_fallback and not meta.get("scryfallMarketUpdatedAt"):
+              raise SystemExit("missing Scryfall bulk source timestamp")
           if not market_fallback and meta.get("scryfallMarketMatchedUsd", 0) < 50000:
               raise SystemExit("missing Scryfall USD market references")
           if not market_fallback and meta.get("scryfallMarketMatchedEur", 0) < 50000:
@@ -133,5 +139,5 @@ jobs:
             echo "No data changes."
           else
             git commit -m "Update Card Kingdom MTG buylist data"
-            git push
+            python scripts/publish_snapshot.py
           fi
