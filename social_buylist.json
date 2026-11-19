@@ -1,11 +1,11 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-19T08:56:21+00:00",
-    "lastNewPostAt": "2026-11-19T08:56:21+00:00",
-    "lastSuccessfulAt": "2026-11-19T08:56:21+00:00",
+    "lastCheckedAt": "2026-11-19T18:24:23+00:00",
+    "lastNewPostAt": "2026-11-19T18:24:23+00:00",
+    "lastSuccessfulAt": "2026-11-19T18:24:23+00:00",
     "status": "ok",
-    "newItems": 4,
-    "items": 60,
+    "newItems": 1,
+    "items": 61,
     "accounts": 1,
     "latestPublishedAt": "2026-11-19T08:30:00+00:00",
     "coverage": "publicIndexAndOfficialPosts",
@@ -13,7 +13,7 @@
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-19T08:56:21+00:00",
+        "checkedAt": "2026-11-19T18:24:23+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
@@ -32,6 +32,21 @@
       "text": "【買取情報】\n✨日本語版スタンダード買取中!!✨\n\n《嵐の目、ウギン》 7,000円買取\n《アガサの魂の大釜》 5,500円買取\n《ベイルマークの大主》 4,500円買取\n《嵐の討伐者、エルズペス》 3,500円買取\n\n1枚からお気軽にどうぞ🙌\nスリーブのまま持込OK‼️\n全店同額買取です✨ https://t.co/s1H2JPxocG",
       "images": [
         "https://pbs.twimg.com/media/HXdveFQa4AAZ8kv.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2123310305778274306",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2123310305778274306",
+      "publishedAt": "2026-11-19T07:00:00+00:00",
+      "collectedAt": "2026-11-19T18:24:23+00:00",
+      "text": "【買取情報】\n✨モダン買取中！✨\n\n《オークの弓使い》 7,000円買取\n《オセロットの群れ》 6,500円買取\n《エスパーの歩哨》 5,500円買取\n《真実の解体者、コジレック》 5,000円買取\n\nスリーブ付きで持込OK🙆‍♀️\n仕分け不要＆全店同額買取です✨\n大会参加のついでにお気軽にお持ち込みを✨ https://t.co/rDVDepPj9O",
+      "images": [
+        "https://pbs.twimg.com/media/HXdu63laMAAgZ87.jpg"
       ],
       "priceStatus": "imageReviewNeeded",
       "source": "X public post",
