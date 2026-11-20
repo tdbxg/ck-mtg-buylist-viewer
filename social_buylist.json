@@ -1,19 +1,19 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-20T08:38:39+00:00",
-    "lastNewPostAt": "2026-11-20T08:38:39+00:00",
-    "lastSuccessfulAt": "2026-11-20T08:38:39+00:00",
+    "lastCheckedAt": "2026-11-20T17:23:37+00:00",
+    "lastNewPostAt": "2026-11-20T17:23:37+00:00",
+    "lastSuccessfulAt": "2026-11-20T17:23:37+00:00",
     "status": "ok",
-    "newItems": 3,
-    "items": 64,
+    "newItems": 2,
+    "items": 66,
     "accounts": 1,
-    "latestPublishedAt": "2026-11-20T08:00:03+00:00",
+    "latestPublishedAt": "2026-11-20T12:00:01+00:00",
     "coverage": "publicIndexAndOfficialPosts",
     "coverageNote": "公开实时索引发现链接，X 原帖核验内容与时间；索引可能延迟，不保证完整时间线。图片报价须按版本复核。",
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-20T08:38:39+00:00",
+        "checkedAt": "2026-11-20T17:23:37+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
@@ -22,6 +22,37 @@
     "checkIntervalMinutes": 60
   },
   "items": [
+    {
+      "id": "2123748194173751678",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2123748194173751678",
+      "publishedAt": "2026-11-20T12:00:01+00:00",
+      "collectedAt": "2026-11-20T17:23:37+00:00",
+      "text": "【買取情報】🧑‍🚀\n\n🪐『マジック：ザ・ギャザリング | スター・トレック』🚀\n🔥熱烈買取中🔥\n\n開封して‼遊んで‼\n不要になったカードは\n「まとめて買取」で晴れる屋へ☀\n\n1⃣「まとめて買取」を申し込み\n2⃣ストレージやBOXごと段ボールに入れて発送\n3⃣査定結果をご承諾\n\n3つのステップで手続き完了👍 https://t.co/VmVOl98Fgq",
+      "images": [
+        "https://pbs.twimg.com/media/HXie5PiakAAZTcJ.jpg",
+        "https://pbs.twimg.com/media/HXie6a4bIAATpbx.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2123717998288511131",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2123717998288511131",
+      "publishedAt": "2026-11-20T10:00:02+00:00",
+      "collectedAt": "2026-11-20T17:23:37+00:00",
+      "text": "【買取情報】\n✨スタンダードレア土地買取中!!✨\n\n《行き届いた書庫》 3,000円買取\n《サンビロウの境界》 2,500円買取\n《バーシンセー》 1,800円買取\n《マルチバースへの通り道》 1,800円買取\n\n面倒なカードの仕分けは不要‼️\nスリーブに入れたままお持ちください💨 https://t.co/hvQesSWTJM",
+      "images": [
+        "https://pbs.twimg.com/media/HXjs-P9acAAGOtD.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
     {
       "id": "2123687805452705809",
       "account": "hareruya_mtg",
