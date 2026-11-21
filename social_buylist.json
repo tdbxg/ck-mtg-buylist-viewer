@@ -1,11 +1,11 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-20T23:29:56+00:00",
-    "lastNewPostAt": "2026-11-20T17:23:37+00:00",
-    "lastSuccessfulAt": "2026-11-20T23:29:56+00:00",
+    "lastCheckedAt": "2026-11-21T04:24:18+00:00",
+    "lastNewPostAt": "2026-11-21T04:24:18+00:00",
+    "lastSuccessfulAt": "2026-11-21T04:24:18+00:00",
     "status": "ok",
-    "newItems": 0,
-    "items": 66,
+    "newItems": 1,
+    "items": 67,
     "accounts": 1,
     "latestPublishedAt": "2026-11-20T12:00:01+00:00",
     "coverage": "publicIndexAndOfficialPosts",
@@ -13,7 +13,7 @@
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-20T23:29:56+00:00",
+        "checkedAt": "2026-11-21T04:24:18+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
@@ -80,6 +80,21 @@
       "text": "【買取情報】\n✨『マジック：ザ・ギャザリング | スター・トレック』サージFoil 買取中!!✨\n\n《ジャン＝リュック・ピカード艦長》 14,000円買取\n《復讐心、カーン》 7,000円買取\n《データ少佐》 6,000円買取\n《奇跡を起こす男、スコッティ》 4,000円買取\n\nスリーブ付きで持込OK🙆‍♀️ https://t.co/GLotOrnY7c",
       "images": [
         "https://pbs.twimg.com/media/HXifjJ6aYAAPPGo.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2123642499306824176",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2123642499306824176",
+      "publishedAt": "2026-11-20T05:00:01+00:00",
+      "collectedAt": "2026-11-21T04:24:18+00:00",
+      "text": "【買取情報】\n✨『マジック：ザ・ギャザリング | スター・トレック』シングルカード買取中!!✨\n\n《データ少佐》 1,500円買取\n《ジャン＝リュック・ピカード艦長》 1,200円買取\n《科学技官、ミスター・スポック》 1,200円買取\n《ジェネシス装置》 1,000円買取 https://t.co/h6eaT77KMt",
+      "images": [
+        "https://pbs.twimg.com/media/HXifaWzaQAAg4dC.jpg"
       ],
       "priceStatus": "imageReviewNeeded",
       "source": "X public post",
