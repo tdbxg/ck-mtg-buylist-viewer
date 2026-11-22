@@ -1,19 +1,19 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-22T07:34:11+00:00",
-    "lastNewPostAt": "2026-11-22T07:34:11+00:00",
-    "lastSuccessfulAt": "2026-11-22T07:34:11+00:00",
+    "lastCheckedAt": "2026-11-22T15:49:03+00:00",
+    "lastNewPostAt": "2026-11-22T15:49:03+00:00",
+    "lastSuccessfulAt": "2026-11-22T15:49:03+00:00",
     "status": "ok",
-    "newItems": 4,
-    "items": 74,
+    "newItems": 2,
+    "items": 76,
     "accounts": 1,
-    "latestPublishedAt": "2026-11-22T05:00:01+00:00",
+    "latestPublishedAt": "2026-11-22T12:15:00+00:00",
     "coverage": "publicIndexAndOfficialPosts",
     "coverageNote": "公开实时索引发现链接，X 原帖核验内容与时间；索引可能延迟，不保证完整时间线。图片报价须按版本复核。",
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-22T07:34:11+00:00",
+        "checkedAt": "2026-11-22T15:49:03+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
@@ -22,6 +22,39 @@
     "checkIntervalMinutes": 60
   },
   "items": [
+    {
+      "id": "2124476739845759178",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2124476739845759178",
+      "publishedAt": "2026-11-22T12:15:00+00:00",
+      "collectedAt": "2026-11-22T15:49:03+00:00",
+      "text": "【買取情報】\nネット買取では\n『スタンダード』で活躍中のカードたちを\n絶賛買取中です‼️\n\n✨【JP】《フラッシュバック》[SOS]　600円✨\n✨【JP】《空飛ぶ友だち、モモ》[TLE］600円✨\n✨【JP】《ぶっとび全開、ミケランジェロ》[TMT] 500円✨\n\n※11月22日20時時点 https://t.co/fhUESsTZjn",
+      "images": [
+        "https://pbs.twimg.com/media/HXuitFNa8AAz6YR.jpg",
+        "https://pbs.twimg.com/media/HXuizV3bAAA4A3b.png",
+        "https://pbs.twimg.com/media/HXui4QqbkAAdjvL.jpg",
+        "https://pbs.twimg.com/media/HXujAd4aQAI_IUt.png"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2124382367737315614",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2124382367737315614",
+      "publishedAt": "2026-11-22T06:00:00+00:00",
+      "collectedAt": "2026-11-22T15:49:03+00:00",
+      "text": "【買取情報】\n✨旧枠ハイエンドカード高価買取中✨\n\n【EN】《ガイアの揺籃の地》200,000円買取\n【EN】《モックス・ダイアモンド》130,000円買取\n【EN】《ライオンの瞳のダイアモンド》100,000円買取\n\n高額コレクションも安心👍\n専門スタッフが1枚1枚丁寧に査定させていただきます💎 https://t.co/Sw3cA3DlpK",
+      "images": [
+        "https://pbs.twimg.com/media/HXsmzmxb0AAi3Mk.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
     {
       "id": "2124367274270503326",
       "account": "hareruya_mtg",
