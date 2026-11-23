@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-22T21:25:07+00:00",
+    "lastCheckedAt": "2026-11-23T02:05:55+00:00",
     "lastNewPostAt": "2026-11-22T15:49:03+00:00",
-    "lastSuccessfulAt": "2026-11-22T21:25:07+00:00",
+    "lastSuccessfulAt": "2026-11-23T02:05:55+00:00",
     "status": "ok",
     "newItems": 0,
     "items": 76,
@@ -13,7 +13,7 @@
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-22T21:25:07+00:00",
+        "checkedAt": "2026-11-23T02:05:55+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
