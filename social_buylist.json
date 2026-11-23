@@ -1,11 +1,11 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-23T10:52:19+00:00",
-    "lastNewPostAt": "2026-11-23T10:52:19+00:00",
-    "lastSuccessfulAt": "2026-11-23T10:52:19+00:00",
+    "lastCheckedAt": "2026-11-23T22:45:54+00:00",
+    "lastNewPostAt": "2026-11-23T22:45:54+00:00",
+    "lastSuccessfulAt": "2026-11-23T22:45:54+00:00",
     "status": "ok",
     "newItems": 1,
-    "items": 77,
+    "items": 78,
     "accounts": 1,
     "latestPublishedAt": "2026-11-23T05:00:02+00:00",
     "coverage": "publicIndexAndOfficialPosts",
@@ -13,7 +13,7 @@
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-23T10:52:19+00:00",
+        "checkedAt": "2026-11-23T22:45:54+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
@@ -35,6 +35,24 @@
         "https://pbs.twimg.com/media/HXxyMLkbAAAhb8d.jpg",
         "https://pbs.twimg.com/media/HXxyNHwbcAAKcMh.jpg",
         "https://pbs.twimg.com/media/HXxyRblaEAA_4Op.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2124490832455586043",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2124490832455586043",
+      "publishedAt": "2026-11-22T13:11:00+00:00",
+      "collectedAt": "2026-11-23T22:45:54+00:00",
+      "text": "【買取情報】\nネット買取では『モダン』で話題のカードたちを\n絶賛買取中です‼️\n\n✨【JP】《溌剌の牧羊犬、フィリア》[MH3]　1,500円✨\n✨【JP】《オセロットの群れ》　6,500円✨\n✨【JP】《ネザーゴイフ》[MH3] 　3,500円✨\n\n※11月22日20時時点\n\n晴れる屋のネット買取「えらんで買取」なら https://t.co/zpDRhiKd7p",
+      "images": [
+        "https://pbs.twimg.com/media/HXujryva0AA22lh.jpg",
+        "https://pbs.twimg.com/media/HXujvpuagAAhUXb.jpg",
+        "https://pbs.twimg.com/media/HXuj0TvbUAAB33d.jpg",
+        "https://pbs.twimg.com/media/HXuj-R1a0AAbK1h.png"
       ],
       "priceStatus": "imageReviewNeeded",
       "source": "X public post",
