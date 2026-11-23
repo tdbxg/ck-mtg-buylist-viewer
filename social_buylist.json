@@ -1,19 +1,19 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-23T02:05:55+00:00",
-    "lastNewPostAt": "2026-11-22T15:49:03+00:00",
-    "lastSuccessfulAt": "2026-11-23T02:05:55+00:00",
+    "lastCheckedAt": "2026-11-23T10:52:19+00:00",
+    "lastNewPostAt": "2026-11-23T10:52:19+00:00",
+    "lastSuccessfulAt": "2026-11-23T10:52:19+00:00",
     "status": "ok",
-    "newItems": 0,
-    "items": 76,
+    "newItems": 1,
+    "items": 77,
     "accounts": 1,
-    "latestPublishedAt": "2026-11-22T12:15:00+00:00",
+    "latestPublishedAt": "2026-11-23T05:00:02+00:00",
     "coverage": "publicIndexAndOfficialPosts",
     "coverageNote": "公开实时索引发现链接，X 原帖核验内容与时间；索引可能延迟，不保证完整时间线。图片报价须按版本复核。",
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-23T02:05:55+00:00",
+        "checkedAt": "2026-11-23T10:52:19+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
@@ -22,6 +22,24 @@
     "checkIntervalMinutes": 60
   },
   "items": [
+    {
+      "id": "2124729664065175829",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2124729664065175829",
+      "publishedAt": "2026-11-23T05:00:02+00:00",
+      "collectedAt": "2026-11-23T10:52:19+00:00",
+      "text": "【買取情報】\nエッ⁉️このカードこんなに高いの⁉️\nそのカード、ぜひネット買取でお売りください‼️\n\n✨【JP】(118)《女王のダイアモンド》[TRC] 茶R　2,000円✨\n✨【JP】(114)《ジェフリー・チューブ》[TRC] 茶R　900円✨\n✨【JP】(029)《イエネコ、スポット》[TRC] 白R　500円✨\n※11月23日14時時点 https://t.co/fZu4C9DTDT",
+      "images": [
+        "https://pbs.twimg.com/media/HXxyK57aQAAqh3Z.jpg",
+        "https://pbs.twimg.com/media/HXxyMLkbAAAhb8d.jpg",
+        "https://pbs.twimg.com/media/HXxyNHwbcAAKcMh.jpg",
+        "https://pbs.twimg.com/media/HXxyRblaEAA_4Op.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
     {
       "id": "2124476739845759178",
       "account": "hareruya_mtg",
