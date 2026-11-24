@@ -1,19 +1,19 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-23T22:45:54+00:00",
-    "lastNewPostAt": "2026-11-23T22:45:54+00:00",
-    "lastSuccessfulAt": "2026-11-23T22:45:54+00:00",
+    "lastCheckedAt": "2026-11-24T06:31:35+00:00",
+    "lastNewPostAt": "2026-11-24T06:31:35+00:00",
+    "lastSuccessfulAt": "2026-11-24T06:31:35+00:00",
     "status": "ok",
-    "newItems": 1,
-    "items": 78,
+    "newItems": 3,
+    "items": 81,
     "accounts": 1,
-    "latestPublishedAt": "2026-11-23T05:00:02+00:00",
+    "latestPublishedAt": "2026-11-24T06:00:01+00:00",
     "coverage": "publicIndexAndOfficialPosts",
     "coverageNote": "公开实时索引发现链接，X 原帖核验内容与时间；索引可能延迟，不保证完整时间线。图片报价须按版本复核。",
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-23T22:45:54+00:00",
+        "checkedAt": "2026-11-24T06:31:35+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
@@ -22,6 +22,54 @@
     "checkIntervalMinutes": 60
   },
   "items": [
+    {
+      "id": "2125107148598223231",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2125107148598223231",
+      "publishedAt": "2026-11-24T06:00:01+00:00",
+      "collectedAt": "2026-11-24T06:31:35+00:00",
+      "text": "【買取情報】\n🧐「あるぞ…\nこのカード、持ってた記憶が、ある…❗」\nそのカード、ぜひネット買取でお売りください‼️\n\n✨【JP】(039)《ダニー・ピンク》[WHO] 青R　3,000円✨\n✨【JP】(100)《転置された恐竜》[WHO] 緑U　1,500円✨\n✨【JP】(085)《燃え盛るティラノサウルス》[WHO] 赤R　1,000円✨ https://t.co/Hdt9OO7bVU",
+      "images": [
+        "https://pbs.twimg.com/media/HX27o_6bMAAPOUa.jpg",
+        "https://pbs.twimg.com/media/HX27qTqbgAAowyL.jpg",
+        "https://pbs.twimg.com/media/HX27rGubIAE7Hf4.jpg",
+        "https://pbs.twimg.com/media/HX27sEFakAAvJL4.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2125092049825264104",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2125092049825264104",
+      "publishedAt": "2026-11-24T05:00:01+00:00",
+      "collectedAt": "2026-11-24T06:31:35+00:00",
+      "text": "【買取情報】\n✨ゲームチェンジャー買取中!!✨\n\n《金属モックス》 15,000円買取\n《一つの指輪》 15,000円買取\n《伝国の玉璽》 12,000円買取\n《激情の後見》 7,000円買取\n\n面倒なカードの仕分けは不要‼️\nスリーブに入れたままお持ちください💨\n晴れる屋なら、店頭でもネットでも買取価格は同じです✨ https://t.co/a9hNvf0K78",
+      "images": [
+        "https://pbs.twimg.com/media/HX2gFMPb0AAJuSi.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2125039198495453388",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2125039198495453388",
+      "publishedAt": "2026-11-24T01:30:00+00:00",
+      "collectedAt": "2026-11-24T06:31:35+00:00",
+      "text": "【買取情報】\n✨モダン買取中!!✨\n\n《オセロットの群れ》 6,500円買取\n《三なる宝球》 6,500円買取\n《オークの弓使い》 6,000円買取\n《宝石の洞窟》 6,000円買取\n\nスリーブのまま持込OK🙌\n全店同額買取‼️査定中は無料プレイスペースへ✨ https://t.co/tY28BYKe11",
+      "images": [
+        "https://pbs.twimg.com/media/HX2ePQGakAAGpcb.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
     {
       "id": "2124729664065175829",
       "account": "hareruya_mtg",
