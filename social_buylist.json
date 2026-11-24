@@ -1,19 +1,19 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-24T06:31:35+00:00",
-    "lastNewPostAt": "2026-11-24T06:31:35+00:00",
-    "lastSuccessfulAt": "2026-11-24T06:31:35+00:00",
+    "lastCheckedAt": "2026-11-24T18:26:19+00:00",
+    "lastNewPostAt": "2026-11-24T18:26:19+00:00",
+    "lastSuccessfulAt": "2026-11-24T18:26:19+00:00",
     "status": "ok",
-    "newItems": 3,
-    "items": 81,
+    "newItems": 2,
+    "items": 83,
     "accounts": 1,
-    "latestPublishedAt": "2026-11-24T06:00:01+00:00",
+    "latestPublishedAt": "2026-11-24T09:00:03+00:00",
     "coverage": "publicIndexAndOfficialPosts",
     "coverageNote": "公开实时索引发现链接，X 原帖核验内容与时间；索引可能延迟，不保证完整时间线。图片报价须按版本复核。",
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-24T06:31:35+00:00",
+        "checkedAt": "2026-11-24T18:26:19+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
@@ -22,6 +22,21 @@
     "checkIntervalMinutes": 60
   },
   "items": [
+    {
+      "id": "2125152453611979224",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2125152453611979224",
+      "publishedAt": "2026-11-24T09:00:03+00:00",
+      "collectedAt": "2026-11-24T18:26:19+00:00",
+      "text": "【買取情報】\n✨『マジック：ザ・ギャザリング | スター・トレック』サージFoil 買取中!!✨\n\n《科学技官、ミスター・スポック》 9,000円買取\n《札を仕込むQ》 5,000円買取\n《キャスリン・ジェインウェイ艦長》 5,000円買取\n《ビバリー・クラッシャー医師》 3,000円買取\n\nスリーブのまま持込OK🙌 https://t.co/TBiURL2fEK",
+      "images": [
+        "https://pbs.twimg.com/media/HX29v6LasAAibsN.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
     {
       "id": "2125107148598223231",
       "account": "hareruya_mtg",
@@ -65,6 +80,24 @@
       "text": "【買取情報】\n✨モダン買取中!!✨\n\n《オセロットの群れ》 6,500円買取\n《三なる宝球》 6,500円買取\n《オークの弓使い》 6,000円買取\n《宝石の洞窟》 6,000円買取\n\nスリーブのまま持込OK🙌\n全店同額買取‼️査定中は無料プレイスペースへ✨ https://t.co/tY28BYKe11",
       "images": [
         "https://pbs.twimg.com/media/HX2ePQGakAAGpcb.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2124850467163279866",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2124850467163279866",
+      "publishedAt": "2026-11-23T13:00:03+00:00",
+      "collectedAt": "2026-11-24T18:26:19+00:00",
+      "text": "【買取情報】\nネット買取では『スタンダード』で活躍中のカードたちを絶賛買取中です‼️\n\n✨【JP】(142)《ジェイムズ・T・カーク船長》[TRK] 赤R　2,800円✨\n✨【JP】(165)《札を仕込むQ》[TRK] 赤R　1,800円✨\n✨【JP】(166)《慎ましき経営者、クワーク》[TRK] 赤R　1,200円✨\n※11月23日22時時点 https://t.co/ubvWlWTXxX",
+      "images": [
+        "https://pbs.twimg.com/media/HXzdZKlaQAAehfE.jpg",
+        "https://pbs.twimg.com/media/HXzdcMSbMAAiGvv.jpg",
+        "https://pbs.twimg.com/media/HXzdlDxaoAEtsbg.jpg",
+        "https://pbs.twimg.com/media/HXzdnA8aYAAKKj7.jpg"
       ],
       "priceStatus": "imageReviewNeeded",
       "source": "X public post",
