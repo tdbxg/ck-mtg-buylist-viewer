@@ -1,19 +1,19 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-25T02:56:05+00:00",
-    "lastNewPostAt": "2026-11-24T18:26:19+00:00",
-    "lastSuccessfulAt": "2026-11-25T02:56:05+00:00",
+    "lastCheckedAt": "2026-11-25T12:52:29+00:00",
+    "lastNewPostAt": "2026-11-25T12:52:29+00:00",
+    "lastSuccessfulAt": "2026-11-25T12:52:29+00:00",
     "status": "ok",
-    "newItems": 0,
-    "items": 83,
+    "newItems": 5,
+    "items": 88,
     "accounts": 1,
-    "latestPublishedAt": "2026-11-24T09:00:03+00:00",
+    "latestPublishedAt": "2026-11-25T12:00:03+00:00",
     "coverage": "publicIndexAndOfficialPosts",
     "coverageNote": "公开实时索引发现链接，X 原帖核验内容与时间；索引可能延迟，不保证完整时间线。图片报价须按版本复核。",
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-25T02:56:05+00:00",
+        "checkedAt": "2026-11-25T12:52:29+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
@@ -22,6 +22,68 @@
     "checkIntervalMinutes": 60
   },
   "items": [
+    {
+      "id": "2125560141147762691",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2125560141147762691",
+      "publishedAt": "2026-11-25T12:00:03+00:00",
+      "collectedAt": "2026-11-25T12:52:29+00:00",
+      "text": "【買取情報】\n✨スタンダードレア土地買取中!!✨\n\n《魂の洞窟》 6,500円買取\n《マルチバースへの通り道》 2,000円買取\n《大音声の劇場》 2,000円買取\n《バーシンセー》 1,800円買取\n\nお持ち込みはスリーブ抜き・仕分けなしでOK👍\n全国の店舗＆ネット買取、どこでも同じ金額で買取ります！ https://t.co/5hzmSntzTv",
+      "images": [
+        "https://pbs.twimg.com/media/HX9p8d_bwAAEqOp.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2125469541845119292",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2125469541845119292",
+      "publishedAt": "2026-11-25T06:00:02+00:00",
+      "collectedAt": "2026-11-25T12:52:29+00:00",
+      "text": "【買取情報】\n👑パワー9 高価買取中👑\n\n《Black Lotus》[LEA] 18,000,000円買取\n《Black Lotus》[LEB] 7,000,000円買取\n《Black Lotus》[2ED] 4,500,000円買取\n\n専門スタッフが1枚1枚、丁寧に査定いたします🔍\n全店舗＆ネットでも同額で買取です！🙋 https://t.co/a4WvFZQeUF",
+      "images": [
+        "https://pbs.twimg.com/media/HX7yNqEbcAAU7SX.jpg",
+        "https://pbs.twimg.com/media/HX7yN4ZboAApN4I.jpg",
+        "https://pbs.twimg.com/media/HX7yOGvasAAfIkb.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2125439338875953493",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2125439338875953493",
+      "publishedAt": "2026-11-25T04:00:01+00:00",
+      "collectedAt": "2026-11-25T12:52:29+00:00",
+      "text": "【買取情報】\n✨コマンダー買取中!!✨\n\n《金粉のドレイク》 15,000円買取\n《宝石の洞窟》 9,000円買取\n《水辺の学舎、水面院》 6,000円買取\n《マダラの鉤爪門》 5,000円買取\n\n面倒なカードの仕分けは不要‼️\nスリーブに入れたままお持ちください💨 https://t.co/7yXLchmark",
+      "images": [
+        "https://pbs.twimg.com/media/HX7x7IhbQAABRPP.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2125431787144839505",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2125431787144839505",
+      "publishedAt": "2026-11-25T03:30:01+00:00",
+      "collectedAt": "2026-11-25T12:52:29+00:00",
+      "text": "【買取情報】\n✨パイオニア買取中!!✨\n\n《アナグマモグラの仔》 9,000円買取\n《黙示録、シェオルドレッド》 7,000円買取\n《偉大なる統一者、アトラクサ》 5,500円買取\n《ヨーグモスの墳墓、アーボーグ》 3,000円買取\n\nスリーブのまま持込OK🙌\n全店同額買取‼️査定中は無料プレイスペースへ✨ https://t.co/V2SBrT396V",
+      "images": [
+        "https://pbs.twimg.com/media/HX7yVDOa8AALDcw.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
     {
       "id": "2125152453611979224",
       "account": "hareruya_mtg",
@@ -32,6 +94,21 @@
       "text": "【買取情報】\n✨『マジック：ザ・ギャザリング | スター・トレック』サージFoil 買取中!!✨\n\n《科学技官、ミスター・スポック》 9,000円買取\n《札を仕込むQ》 5,000円買取\n《キャスリン・ジェインウェイ艦長》 5,000円買取\n《ビバリー・クラッシャー医師》 3,000円買取\n\nスリーブのまま持込OK🙌 https://t.co/TBiURL2fEK",
       "images": [
         "https://pbs.twimg.com/media/HX29v6LasAAibsN.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2125122246104531066",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2125122246104531066",
+      "publishedAt": "2026-11-24T07:00:00+00:00",
+      "collectedAt": "2026-11-25T12:52:29+00:00",
+      "text": "【買取情報】\n✨『マジック：ザ・ギャザリング | スター・トレック』シングルカード買取中!!✨\n\n《生ける遺産、ジャッジア・ダックス》 3,000円買取\n《ビバリー・クラッシャー医師》 1,600円買取\n《ジャン＝リュック・ピカード艦長》 1,200円買取\n《データ少佐》 1,000円買取 https://t.co/a6s7N7p4Lw",
+      "images": [
+        "https://pbs.twimg.com/media/HX29KudbYAAotq7.jpg"
       ],
       "priceStatus": "imageReviewNeeded",
       "source": "X public post",
