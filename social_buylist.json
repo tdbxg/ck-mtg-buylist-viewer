@@ -1,19 +1,19 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-26T14:35:26+00:00",
-    "lastNewPostAt": "2026-11-26T14:35:26+00:00",
-    "lastSuccessfulAt": "2026-11-26T14:35:26+00:00",
+    "lastCheckedAt": "2026-11-26T23:25:49+00:00",
+    "lastNewPostAt": "2026-11-26T23:25:49+00:00",
+    "lastSuccessfulAt": "2026-11-26T23:25:49+00:00",
     "status": "ok",
-    "newItems": 5,
-    "items": 93,
+    "newItems": 1,
+    "items": 94,
     "accounts": 1,
-    "latestPublishedAt": "2026-11-26T07:00:01+00:00",
+    "latestPublishedAt": "2026-11-26T14:00:04+00:00",
     "coverage": "publicIndexAndOfficialPosts",
     "coverageNote": "公开实时索引发现链接，X 原帖核验内容与时间；索引可能延迟，不保证完整时间线。图片报价须按版本复核。",
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-26T14:35:26+00:00",
+        "checkedAt": "2026-11-26T23:25:49+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
@@ -22,6 +22,21 @@
     "checkIntervalMinutes": 60
   },
   "items": [
+    {
+      "id": "2125952731370156156",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2125952731370156156",
+      "publishedAt": "2026-11-26T14:00:04+00:00",
+      "collectedAt": "2026-11-26T23:25:49+00:00",
+      "text": "【買取情報】\n🧐「あるぞ…\nこのカード、持ってた記憶が、ある…❗」\nそのカード、ぜひネット買取でお売りください‼️\n\n✨【JP】(040)《溌剌の牧羊犬、フィリア》[MH3]　1,500円✨\n✨【JP/EN】(061)《マネドリ》[BLB]　1,500円✨\n✨【JP】(102)《バロウゴイフ》[M3C]　4,500円✨ https://t.co/Z0DcukMI64",
+      "images": [
+        "https://pbs.twimg.com/media/HYB7WJjbMAAocHM.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
     {
       "id": "2125847025748971645",
       "account": "hareruya_mtg",
