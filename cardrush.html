@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>日本店铺收购价 | MTG 单卡价格雷达</title>
+  <link rel="stylesheet" href="./styles.css?v=20260801-hareruyamtg-refresh">
+  <link rel="stylesheet" href="./cardrush.css?v=20261127-v1">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>日本店铺收购价</h1>
+      <p id="metaLine">正在载入 Card Rush 买取价…</p>
+    </div>
+    <div class="summary" aria-label="summary">
+      <div><span id="itemCount">-</span><small>已匹配印次</small></div>
+      <div><span id="hotCount">-</span><small>高价求购</small></div>
+      <div><span id="updatedAt">-</span><small>数据时间</small></div>
+    </div>
+  </header>
+
+  <nav class="app-tabs" aria-label="页面切换">
+    <a class="tab-link" href="./index.html">单卡查询 / 回收车</a>
+    <a class="tab-link" href="./hareruya.html">晴屋日本</a>
+    <a class="tab-link" href="./hareruya-movers.html">晴屋涨跌榜</a>
+    <a class="tab-link" href="./hareruya-opportunities.html">CK → 晴屋价差</a>
+    <a class="tab-link active" href="./cardrush.html">日本店铺收购价</a>
+    <a class="tab-link" href="./social.html">X 回收公告</a>
+  </nav>
+
+  <main class="layout">
+    <section class="filters">
+      <div class="filter-primary">
+        <div class="field query-field">
+          <label for="searchInput">牌名</label>
+          <input id="searchInput" type="search" placeholder="英文名或日文名，可只输一部分">
+        </div>
+        <div class="field">
+          <label for="languageSelect">语言</label>
+          <select id="languageSelect"><option value="">全部</option><option value="日本語">日文</option><option value="英語">英文</option></select>
+        </div>
+        <div class="field">
+          <label for="sortSelect">排序</label>
+          <select id="sortSelect">
+            <option value="buyDesc">买取价从高到低</option>
+            <option value="buyAsc">买取价从低到高</option>
+            <option value="nameAsc">牌名 A-Z</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="minBuyInput">最低买取价（日元）</label>
+          <input id="minBuyInput" type="number" min="0" step="100" value="0">
+        </div>
+      </div>
+      <div class="checks quick-checks">
+        <label><input id="hotOnly" type="checkbox"> 只看高价求购（is_hot）</label>
+      </div>
+    </section>
+
+    <section class="results">
+      <div class="resultbar">
+        <div><strong id="resultCount">0</strong><span>条结果</span></div>
+        <div class="pager"><button id="prevButton" type="button" aria-label="上一页">‹</button><span id="pageLine">1 / 1</span><button id="nextButton" type="button" aria-label="下一页">›</button></div>
+      </div>
+      <div id="cardsGrid" class="cards-grid"></div>
+      <div id="emptyState" class="empty" hidden>没有符合条件的买取价</div>
+    </section>
+  </main>
+
+  <template id="cardTemplate">
+    <article class="card cr-card">
+      <div class="card-main">
+        <div class="name-row"><h2></h2><span class="badge"></span></div>
+        <p class="cn"></p>
+        <div class="details"></div>
+        <div class="prices"></div>
+      </div>
+    </article>
+  </template>
+  <script src="./cardrush.js?v=20261127-v1"></script>
+</body>
+</html>

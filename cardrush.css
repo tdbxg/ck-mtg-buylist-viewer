@@ -1,0 +1,7 @@
+.app-tabs .tab-link.active { color: #fff; border-color: var(--blue); background: var(--blue); }
+.cr-card { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+.cr-card .badge.hot { background: var(--gold); }
+.cr-card .price strong { font-size: 20px; color: #0f766e; }
+.cr-card .price.hot-price { border-color: #e8c47a; background: #fff8e9; }
+.cr-card .price.hot-price strong { color: #a16207; }
+@media (max-width: 820px) { .cr-card { grid-template-columns: 1fr; } }
