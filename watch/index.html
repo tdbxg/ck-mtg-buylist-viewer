@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102a43">
+  <title>CK 单卡上架监测</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./styles.css?v=20260905-watch-v2">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../">
+      <span class="brand-mark" aria-hidden="true">CK</span>
+      <span><strong>单卡上架监测</strong><small>Card Kingdom retail watch</small></span>
+    </a>
+    <div class="header-actions">
+      <button id="notificationButton" class="button ghost" type="button">开启上架提醒</button>
+      <button id="refreshButton" class="button primary" type="button">刷新状态</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">EXACT PRINT MONITOR</p>
+        <h1>盯住你真正想买的那个版本</h1>
+        <p class="hero-copy">按 CK SKU 精确监测上架、补货、售罄、库存与价格变化。中文名只用于搜索，不参与版本匹配。</p>
+      </div>
+      <div class="stats" aria-label="监测概览">
+        <div><span id="trackedCount">0</span><small>监测中</small></div>
+        <div><span id="availableCount">0</span><small>已上架</small></div>
+        <div><span id="changedCount">0</span><small>本次变化</small></div>
+      </div>
+    </section>
+
+    <section class="source-bar" aria-live="polite">
+      <span id="sourceDot" class="source-dot loading"></span>
+      <div><strong id="sourceStatus">正在载入 CK 库存目录…</strong><small id="sourceMeta">首次打开可能需要几秒</small></div>
+    </section>
+
+    <section class="search-panel panel">
+      <div class="panel-heading">
+        <div><p class="eyebrow">ADD A CARD</p><h2>添加监测牌</h2></div>
+        <button id="loadFullButton" class="text-button" type="button" hidden>重新载入目录</button>
+      </div>
+      <label class="search-box" for="searchInput">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" autocomplete="off" placeholder="搜索英文名、中文名、系列、编号或 SKU，如 Black Lotus LEA 232">
+        <kbd>Enter</kbd>
+      </label>
+      <div id="searchHint" class="search-hint">输入至少 2 个字符。添加前请核对系列、编号、闪卡和 SKU。</div>
+      <div id="searchResults" class="search-results" hidden></div>
+    </section>
+
+    <section class="watch-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">YOUR WATCHLIST</p><h2>我的监测清单</h2></div>
+        <div class="toolbar">
+          <div class="filters" role="group" aria-label="筛选监测状态">
+            <button class="filter active" data-filter="all" type="button">全部</button>
+            <button class="filter" data-filter="available" type="button">已上架</button>
+            <button class="filter" data-filter="missing" type="button">缺货</button>
+            <button class="filter" data-filter="changed" type="button">有变化</button>
+          </div>
+          <button id="exportButton" class="text-button" type="button">导出清单</button>
+          <button id="importButton" class="text-button" type="button">导入</button>
+          <input id="importInput" type="file" accept="application/json,.json" hidden>
+        </div>
+      </div>
+      <div id="watchGrid" class="watch-grid"></div>
+      <div id="emptyState" class="empty-state">
+        <div class="empty-icon" aria-hidden="true">◎</div>
+        <h3>还没有监测牌</h3>
+        <p>在上方搜索单卡并选择精确版本。添加后，本浏览器会保存清单和变化记录。</p>
+        <button id="emptySearchButton" class="button primary" type="button">搜索第一张牌</button>
+      </div>
+    </section>
+
+    <section class="activity-section panel">
+      <div class="panel-heading">
+        <div><p class="eyebrow">ACTIVITY</p><h2>变化记录</h2></div>
+        <button id="clearEventsButton" class="text-button danger" type="button">清空记录</button>
+      </div>
+      <div id="eventList" class="event-list"></div>
+      <p id="eventEmpty" class="muted">新上架、补货、售罄和价格变化会记录在这里。</p>
+    </section>
+
+    <section class="notes">
+      <h2>监测说明</h2>
+      <div class="note-grid">
+        <p><strong>精确版本</strong><span>使用 CK SKU 作为唯一标识；同名不同系列不会混在一起。</span></p>
+        <p><strong>采样频率</strong><span>状态来自现有每小时采样任务，页面刷新不会直接向 CK 高频请求。</span></p>
+        <p><strong>提醒范围</strong><span>桌面提醒仅在你打开此页面并允许通知后生效；清单保存在当前浏览器。</span></p>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js?v=20260905-watch-v3"></script>
+</body>
+</html>

@@ -1,0 +1,573 @@
+{
+  "version": 4,
+  "label": "Secret Lair Commander Deck: Hatsune Miku",
+  "scope": "14 playable foil borderless treatments plus the themed bonus card; ordinary reprints, tokens, and the display commander are excluded",
+  "source": "Wizards of the Coast official product contents; exact SLD collector numbers cross-checked against public card listings",
+  "replaceDefaultGroups": [
+    "初音未来 Secret Lair 四季全套（含 bonus）"
+  ],
+  "items": [
+    {
+      "sku": "FSLD-2430",
+      "name": "Archangel of Thune",
+      "variation": "Archangel of Tunes",
+      "edition": "Secret Lair Commander Deck: Hatsune Miku",
+      "foil": true,
+      "scryfallSet": "sld",
+      "collectorNumber": "2430"
+    },
+    {
+      "sku": "FSLD-2431",
+      "name": "Halo Fountain",
+      "variation": "Cascade of Song",
+      "edition": "Secret Lair Commander Deck: Hatsune Miku",
+      "foil": true,
+      "scryfallSet": "sld",
+      "collectorNumber": "2431"
+    },
+    {
+      "sku": "FSLD-2432",
+      "name": "Grand Crescendo",
+      "variation": "",
+      "edition": "Secret Lair Commander Deck: Hatsune Miku",
+      "foil": true,
+      "scryfallSet": "sld",
+      "collectorNumber": "2432"
+    },
+    {
+      "sku": "FSLD-2433",
+      "name": "Shalai, Voice of Plenty",
+      "variation": "Miku, Voice Over All",
+      "edition": "Secret Lair Commander Deck: Hatsune Miku",
+      "foil": true,
+      "scryfallSet": "sld",
+      "collectorNumber": "2433"
+    },
+    {
+      "sku": "FSLD-2434",
+      "name": "Song of the Worldsoul",
+      "variation": "",
+      "edition": "Secret Lair Commander Deck: Hatsune Miku",
+      "foil": true,
+      "scryfallSet": "sld",
+      "collectorNumber": "2434"
+    },
+    {
+      "sku": "FSLD-2435",
+      "name": "Soul Warden",
+      "variation": "",
+      "edition": "Secret Lair Commander Deck: Hatsune Miku",
+      "foil": true,
+      "scryfallSet": "sld",
+      "collectorNumber": "2435"
+    },
+    {
+      "sku": "FSLD-2436",
+      "name": "Break Down",
+      "variation": "",
+      "edition": "Secret Lair Commander Deck: Hatsune Miku",
+      "foil": true,
+      "scryfallSet": "sld",
+      "collectorNumber": "2436"
+    },
+    {
+      "sku": "FSLD-2437",
+      "name": "Cultivate",
+      "variation": "",
+      "edition": "Secret Lair Commander Deck: Hatsune Miku",
+      "foil": true,
+      "scryfallSet": "sld",
+      "collectorNumber": "2437"
+    },
+    {
+      "sku": "FSLD-2438",
+      "name": "Finale of Devastation",
+      "variation": "",
+      "edition": "Secret Lair Commander Deck: Hatsune Miku",
+      "foil": true,
+      "scryfallSet": "sld",
+      "collectorNumber": "2438"
+    },
+    {
+      "sku": "FSLD-2439",
+      "name": "Vorinclex, Voice of Hunger",
+      "variation": "Miku, the Complete Performer",
+      "edition": "Secret Lair Commander Deck: Hatsune Miku",
+      "foil": true,
+      "scryfallSet": "sld",
+      "collectorNumber": "2439"
+    },
+    {
+      "sku": "FSLD-2440",
+      "name": "Bountiful Promenade",
+      "variation": "",
+      "edition": "Secret Lair Commander Deck: Hatsune Miku",
+      "foil": true,
+      "scryfallSet": "sld",
+      "collectorNumber": "2440"
+    },
+    {
+      "sku": "FSLD-2441",
+      "name": "Plains",
+      "variation": "Hatsune Miku borderless",
+      "edition": "Secret Lair Commander Deck: Hatsune Miku",
+      "foil": true,
+      "scryfallSet": "sld",
+      "collectorNumber": "2441"
+    },
+    {
+      "sku": "FSLD-2442",
+      "name": "Forest",
+      "variation": "Hatsune Miku borderless",
+      "edition": "Secret Lair Commander Deck: Hatsune Miku",
+      "foil": true,
+      "scryfallSet": "sld",
+      "collectorNumber": "2442"
+    },
+    {
+      "sku": "FSLD-2443",
+      "name": "Trostani, Selesnya's Voice",
+      "variation": "Miku, Song of the People",
+      "edition": "Secret Lair Commander Deck: Hatsune Miku",
+      "foil": true,
+      "scryfallSet": "sld",
+      "collectorNumber": "2443"
+    },
+    {
+      "sku": "FSLD-7093",
+      "name": "Tigereye Cameo",
+      "variation": "Backstage Monitor",
+      "edition": "Secret Lair Commander Deck: Hatsune Miku",
+      "foil": true,
+      "scryfallSet": "sld",
+      "collectorNumber": "7093"
+    }
+  ],
+  "groups": [
+    {
+      "label": "Secret Lair x Lofi Girl: Beats to Cast To（闪 + 非闪）",
+      "scope": "图中 5 张官方套装卡，SLD 2821–2825，闪卡与非闪版本；不含未确认 bonus",
+      "source": "https://magic.wizards.com/en/news/announcements/secret-lair-a-perfectly-normal-superdrop; Scryfall exact printing IDs verified 2026-09-05",
+      "items": [
+        {
+          "sku": "PENDING-SLD-2821-NONFOIL",
+          "scryfallId": "221a347c-ee99-47b2-a502-cfd87f67f61a",
+          "name": "Felidar Guardian",
+          "edition": "Secret Lair x Lofi Girl: Beats to Cast To",
+          "variation": "Lofi Cat",
+          "foil": false,
+          "scryfallSet": "sld",
+          "collectorNumber": "2821",
+          "image": "https://cards.scryfall.io/normal/front/2/2/221a347c-ee99-47b2-a502-cfd87f67f61a.jpg?1788258363"
+        },
+        {
+          "sku": "PENDING-SLD-2821-FOIL",
+          "scryfallId": "221a347c-ee99-47b2-a502-cfd87f67f61a",
+          "name": "Felidar Guardian",
+          "edition": "Secret Lair x Lofi Girl: Beats to Cast To",
+          "variation": "Lofi Cat",
+          "foil": true,
+          "scryfallSet": "sld",
+          "collectorNumber": "2821",
+          "image": "https://cards.scryfall.io/normal/front/2/2/221a347c-ee99-47b2-a502-cfd87f67f61a.jpg?1788258363"
+        },
+        {
+          "sku": "PENDING-SLD-2822-NONFOIL",
+          "scryfallId": "19cb3e43-1bfe-46a1-bcbb-be653c2f327c",
+          "name": "Starfield of Nyx",
+          "edition": "Secret Lair x Lofi Girl: Beats to Cast To",
+          "variation": "Snowman Starfield",
+          "foil": false,
+          "scryfallSet": "sld",
+          "collectorNumber": "2822",
+          "image": "https://cards.scryfall.io/normal/front/1/9/19cb3e43-1bfe-46a1-bcbb-be653c2f327c.jpg?1788258358"
+        },
+        {
+          "sku": "PENDING-SLD-2822-FOIL",
+          "scryfallId": "19cb3e43-1bfe-46a1-bcbb-be653c2f327c",
+          "name": "Starfield of Nyx",
+          "edition": "Secret Lair x Lofi Girl: Beats to Cast To",
+          "variation": "Snowman Starfield",
+          "foil": true,
+          "scryfallSet": "sld",
+          "collectorNumber": "2822",
+          "image": "https://cards.scryfall.io/normal/front/1/9/19cb3e43-1bfe-46a1-bcbb-be653c2f327c.jpg?1788258358"
+        },
+        {
+          "sku": "PENDING-SLD-2823-NONFOIL",
+          "scryfallId": "e897473b-b687-413c-a951-39bbefb1e451",
+          "name": "Careful Study",
+          "edition": "Secret Lair x Lofi Girl: Beats to Cast To",
+          "variation": "",
+          "foil": false,
+          "scryfallSet": "sld",
+          "collectorNumber": "2823",
+          "image": "https://cards.scryfall.io/normal/front/e/8/e897473b-b687-413c-a951-39bbefb1e451.jpg?1788258353"
+        },
+        {
+          "sku": "PENDING-SLD-2823-FOIL",
+          "scryfallId": "e897473b-b687-413c-a951-39bbefb1e451",
+          "name": "Careful Study",
+          "edition": "Secret Lair x Lofi Girl: Beats to Cast To",
+          "variation": "",
+          "foil": true,
+          "scryfallSet": "sld",
+          "collectorNumber": "2823",
+          "image": "https://cards.scryfall.io/normal/front/e/8/e897473b-b687-413c-a951-39bbefb1e451.jpg?1788258353"
+        },
+        {
+          "sku": "PENDING-SLD-2824-NONFOIL",
+          "scryfallId": "df6dab52-0c96-40ee-953d-731bc3006ada",
+          "name": "Merchant Scroll",
+          "edition": "Secret Lair x Lofi Girl: Beats to Cast To",
+          "variation": "Grandma's Scroll",
+          "foil": false,
+          "scryfallSet": "sld",
+          "collectorNumber": "2824",
+          "image": "https://cards.scryfall.io/normal/front/d/f/df6dab52-0c96-40ee-953d-731bc3006ada.jpg?1788258347"
+        },
+        {
+          "sku": "PENDING-SLD-2824-FOIL",
+          "scryfallId": "df6dab52-0c96-40ee-953d-731bc3006ada",
+          "name": "Merchant Scroll",
+          "edition": "Secret Lair x Lofi Girl: Beats to Cast To",
+          "variation": "Grandma's Scroll",
+          "foil": true,
+          "scryfallSet": "sld",
+          "collectorNumber": "2824",
+          "image": "https://cards.scryfall.io/normal/front/d/f/df6dab52-0c96-40ee-953d-731bc3006ada.jpg?1788258347"
+        },
+        {
+          "sku": "PENDING-SLD-2825-NONFOIL",
+          "scryfallId": "ccfffc0b-601f-4e21-90d6-72afbebf2579",
+          "name": "Paradise Mantle",
+          "edition": "Secret Lair x Lofi Girl: Beats to Cast To",
+          "variation": "Cozy Headphones",
+          "foil": false,
+          "scryfallSet": "sld",
+          "collectorNumber": "2825",
+          "image": "https://cards.scryfall.io/normal/front/c/c/ccfffc0b-601f-4e21-90d6-72afbebf2579.jpg?1788258326"
+        },
+        {
+          "sku": "PENDING-SLD-2825-FOIL",
+          "scryfallId": "ccfffc0b-601f-4e21-90d6-72afbebf2579",
+          "name": "Paradise Mantle",
+          "edition": "Secret Lair x Lofi Girl: Beats to Cast To",
+          "variation": "Cozy Headphones",
+          "foil": true,
+          "scryfallSet": "sld",
+          "collectorNumber": "2825",
+          "image": "https://cards.scryfall.io/normal/front/c/c/ccfffc0b-601f-4e21-90d6-72afbebf2579.jpg?1788258326"
+        }
+      ]
+    },
+    {
+      "label": "Witch's Familiar（闪 + 非闪）",
+      "scope": "5 张官方套装卡的闪卡与非闪版本；不包含随机通用 bonus",
+      "source": "Wizards of the Coast official product contents and Card Kingdom exact SKUs",
+      "items": [
+        {
+          "sku": "SLD-2653",
+          "scryfallId": "da7c29a0-5512-4188-acbc-af5f9194f264",
+          "name": "Sheltered by Ghosts",
+          "edition": "Secret Lair",
+          "variation": "2653 - Non-Foil",
+          "foil": false,
+          "scryfallSet": "sld",
+          "collectorNumber": "2653"
+        },
+        {
+          "sku": "FSLD-2653",
+          "scryfallId": "da7c29a0-5512-4188-acbc-af5f9194f264",
+          "name": "Sheltered by Ghosts",
+          "edition": "Secret Lair",
+          "variation": "2653 - Foil",
+          "foil": true,
+          "scryfallSet": "sld",
+          "collectorNumber": "2653"
+        },
+        {
+          "sku": "SLD-2654",
+          "scryfallId": "263357fd-4c2e-40ff-b952-e899609e1890",
+          "name": "Spirit of the Hearth",
+          "edition": "Secret Lair",
+          "variation": "2654 - Non-Foil",
+          "foil": false,
+          "scryfallSet": "sld",
+          "collectorNumber": "2654"
+        },
+        {
+          "sku": "FSLD-2654",
+          "scryfallId": "263357fd-4c2e-40ff-b952-e899609e1890",
+          "name": "Spirit of the Hearth",
+          "edition": "Secret Lair",
+          "variation": "2654 - Foil",
+          "foil": true,
+          "scryfallSet": "sld",
+          "collectorNumber": "2654"
+        },
+        {
+          "sku": "SLD-2655",
+          "scryfallId": "b7ba7d7e-c285-4e99-9ee1-135bf343677d",
+          "name": "Witch Enchanter // Witch-Blessed Meadow",
+          "edition": "Secret Lair",
+          "variation": "2655 - Non-Foil",
+          "foil": false,
+          "scryfallSet": "sld",
+          "collectorNumber": "2655"
+        },
+        {
+          "sku": "FSLD-2655",
+          "scryfallId": "b7ba7d7e-c285-4e99-9ee1-135bf343677d",
+          "name": "Witch Enchanter // Witch-Blessed Meadow",
+          "edition": "Secret Lair",
+          "variation": "2655 - Foil",
+          "foil": true,
+          "scryfallSet": "sld",
+          "collectorNumber": "2655"
+        },
+        {
+          "sku": "SLD-2656",
+          "scryfallId": "8bd05fa7-6e75-43a6-87b8-7c0e5229aa1a",
+          "name": "Wayfarer's Bauble",
+          "edition": "Secret Lair",
+          "variation": "2656 - Non-Foil",
+          "foil": false,
+          "scryfallSet": "sld",
+          "collectorNumber": "2656"
+        },
+        {
+          "sku": "FSLD-2656",
+          "scryfallId": "8bd05fa7-6e75-43a6-87b8-7c0e5229aa1a",
+          "name": "Wayfarer's Bauble",
+          "edition": "Secret Lair",
+          "variation": "2656 - Foil",
+          "foil": true,
+          "scryfallSet": "sld",
+          "collectorNumber": "2656"
+        },
+        {
+          "sku": "SLD-2657",
+          "scryfallId": "45e69d82-bd5f-41bb-952e-b799da54a23e",
+          "name": "Boseiju, Who Shelters All",
+          "edition": "Secret Lair",
+          "variation": "2657 - Non-Foil",
+          "foil": false,
+          "scryfallSet": "sld",
+          "collectorNumber": "2657"
+        },
+        {
+          "sku": "FSLD-2657",
+          "scryfallId": "45e69d82-bd5f-41bb-952e-b799da54a23e",
+          "name": "Boseiju, Who Shelters All",
+          "edition": "Secret Lair",
+          "variation": "2657 - Foil",
+          "foil": true,
+          "scryfallSet": "sld",
+          "collectorNumber": "2657"
+        }
+      ]
+    },
+    {
+      "label": "The Hobbit: Second Breakfast and Beyond（含 bonus）",
+      "scope": "7 张 Food Token 的闪卡与非闪版本，加 Food Coma bonus 的闪卡与非闪版本",
+      "source": "Wizards of the Coast official product contents; exact print IDs, finishes, collector numbers, and bonus cross-checked with Scryfall",
+      "items": [
+        {
+          "sku": "PENDING-SLD-2545-NONFOIL",
+          "scryfallId": "356e7a19-9dc5-4c39-ad88-8c355fbdca1a",
+          "name": "Food Token — Breakfast 7:00 AM",
+          "edition": "Secret Lair x The Hobbit: Second Breakfast and Beyond",
+          "variation": "Breakfast 7:00 AM",
+          "foil": false,
+          "scryfallSet": "sld",
+          "collectorNumber": "2545",
+          "image": "https://cards.scryfall.io/normal/front/3/5/356e7a19-9dc5-4c39-ad88-8c355fbdca1a.jpg?1786586813"
+        },
+        {
+          "sku": "PENDING-SLD-2545-FOIL",
+          "scryfallId": "356e7a19-9dc5-4c39-ad88-8c355fbdca1a",
+          "name": "Food Token — Breakfast 7:00 AM",
+          "edition": "Secret Lair x The Hobbit: Second Breakfast and Beyond",
+          "variation": "Breakfast 7:00 AM",
+          "foil": true,
+          "scryfallSet": "sld",
+          "collectorNumber": "2545",
+          "image": "https://cards.scryfall.io/normal/front/3/5/356e7a19-9dc5-4c39-ad88-8c355fbdca1a.jpg?1786586813"
+        },
+        {
+          "sku": "PENDING-SLD-2546-NONFOIL",
+          "scryfallId": "e4a685df-00dd-434a-baef-d04541ab4b9a",
+          "name": "Food Token — Second Breakfast 9:00 AM",
+          "edition": "Secret Lair x The Hobbit: Second Breakfast and Beyond",
+          "variation": "Second Breakfast 9:00 AM",
+          "foil": false,
+          "scryfallSet": "sld",
+          "collectorNumber": "2546",
+          "image": "https://cards.scryfall.io/normal/front/e/4/e4a685df-00dd-434a-baef-d04541ab4b9a.jpg?1786586808"
+        },
+        {
+          "sku": "PENDING-SLD-2546-FOIL",
+          "scryfallId": "e4a685df-00dd-434a-baef-d04541ab4b9a",
+          "name": "Food Token — Second Breakfast 9:00 AM",
+          "edition": "Secret Lair x The Hobbit: Second Breakfast and Beyond",
+          "variation": "Second Breakfast 9:00 AM",
+          "foil": true,
+          "scryfallSet": "sld",
+          "collectorNumber": "2546",
+          "image": "https://cards.scryfall.io/normal/front/e/4/e4a685df-00dd-434a-baef-d04541ab4b9a.jpg?1786586808"
+        },
+        {
+          "sku": "PENDING-SLD-2547-NONFOIL",
+          "scryfallId": "d4a47380-3e51-4c1d-9ffa-472d4f97d36b",
+          "name": "Food Token — Elevenses 11:00 AM",
+          "edition": "Secret Lair x The Hobbit: Second Breakfast and Beyond",
+          "variation": "Elevenses 11:00 AM",
+          "foil": false,
+          "scryfallSet": "sld",
+          "collectorNumber": "2547",
+          "image": "https://cards.scryfall.io/normal/front/d/4/d4a47380-3e51-4c1d-9ffa-472d4f97d36b.jpg?1786586790"
+        },
+        {
+          "sku": "PENDING-SLD-2547-FOIL",
+          "scryfallId": "d4a47380-3e51-4c1d-9ffa-472d4f97d36b",
+          "name": "Food Token — Elevenses 11:00 AM",
+          "edition": "Secret Lair x The Hobbit: Second Breakfast and Beyond",
+          "variation": "Elevenses 11:00 AM",
+          "foil": true,
+          "scryfallSet": "sld",
+          "collectorNumber": "2547",
+          "image": "https://cards.scryfall.io/normal/front/d/4/d4a47380-3e51-4c1d-9ffa-472d4f97d36b.jpg?1786586790"
+        },
+        {
+          "sku": "PENDING-SLD-2548-NONFOIL",
+          "scryfallId": "d6fbb5c7-9cc4-4528-8fc5-ec7a9d19a92e",
+          "name": "Food Token — Lunch 1:00 PM",
+          "edition": "Secret Lair x The Hobbit: Second Breakfast and Beyond",
+          "variation": "Lunch 1:00 PM",
+          "foil": false,
+          "scryfallSet": "sld",
+          "collectorNumber": "2548",
+          "image": "https://cards.scryfall.io/normal/front/d/6/d6fbb5c7-9cc4-4528-8fc5-ec7a9d19a92e.jpg?1786586784"
+        },
+        {
+          "sku": "PENDING-SLD-2548-FOIL",
+          "scryfallId": "d6fbb5c7-9cc4-4528-8fc5-ec7a9d19a92e",
+          "name": "Food Token — Lunch 1:00 PM",
+          "edition": "Secret Lair x The Hobbit: Second Breakfast and Beyond",
+          "variation": "Lunch 1:00 PM",
+          "foil": true,
+          "scryfallSet": "sld",
+          "collectorNumber": "2548",
+          "image": "https://cards.scryfall.io/normal/front/d/6/d6fbb5c7-9cc4-4528-8fc5-ec7a9d19a92e.jpg?1786586784"
+        },
+        {
+          "sku": "PENDING-SLD-2549-NONFOIL",
+          "scryfallId": "110f41a6-1ca5-463e-8a6d-fdf021842b43",
+          "name": "Food Token — Afternoon Tea 3:00 PM",
+          "edition": "Secret Lair x The Hobbit: Second Breakfast and Beyond",
+          "variation": "Afternoon Tea 3:00 PM",
+          "foil": false,
+          "scryfallSet": "sld",
+          "collectorNumber": "2549",
+          "image": "https://cards.scryfall.io/normal/front/1/1/110f41a6-1ca5-463e-8a6d-fdf021842b43.jpg?1786586778"
+        },
+        {
+          "sku": "PENDING-SLD-2549-FOIL",
+          "scryfallId": "110f41a6-1ca5-463e-8a6d-fdf021842b43",
+          "name": "Food Token — Afternoon Tea 3:00 PM",
+          "edition": "Secret Lair x The Hobbit: Second Breakfast and Beyond",
+          "variation": "Afternoon Tea 3:00 PM",
+          "foil": true,
+          "scryfallSet": "sld",
+          "collectorNumber": "2549",
+          "image": "https://cards.scryfall.io/normal/front/1/1/110f41a6-1ca5-463e-8a6d-fdf021842b43.jpg?1786586778"
+        },
+        {
+          "sku": "PENDING-SLD-2550-NONFOIL",
+          "scryfallId": "174eb62b-b02a-4533-8822-eacc9dcc0a20",
+          "name": "Food Token — Dinner 6:00 PM",
+          "edition": "Secret Lair x The Hobbit: Second Breakfast and Beyond",
+          "variation": "Dinner 6:00 PM",
+          "foil": false,
+          "scryfallSet": "sld",
+          "collectorNumber": "2550",
+          "image": "https://cards.scryfall.io/normal/front/1/7/174eb62b-b02a-4533-8822-eacc9dcc0a20.jpg?1786586772"
+        },
+        {
+          "sku": "PENDING-SLD-2550-FOIL",
+          "scryfallId": "174eb62b-b02a-4533-8822-eacc9dcc0a20",
+          "name": "Food Token — Dinner 6:00 PM",
+          "edition": "Secret Lair x The Hobbit: Second Breakfast and Beyond",
+          "variation": "Dinner 6:00 PM",
+          "foil": true,
+          "scryfallSet": "sld",
+          "collectorNumber": "2550",
+          "image": "https://cards.scryfall.io/normal/front/1/7/174eb62b-b02a-4533-8822-eacc9dcc0a20.jpg?1786586772"
+        },
+        {
+          "sku": "PENDING-SLD-2551-NONFOIL",
+          "scryfallId": "276dedb8-3d41-499c-8804-bb1471fcb06f",
+          "name": "Food Token — Supper 8:00 PM",
+          "edition": "Secret Lair x The Hobbit: Second Breakfast and Beyond",
+          "variation": "Supper 8:00 PM",
+          "foil": false,
+          "scryfallSet": "sld",
+          "collectorNumber": "2551",
+          "image": "https://cards.scryfall.io/normal/front/2/7/276dedb8-3d41-499c-8804-bb1471fcb06f.jpg?1786586750"
+        },
+        {
+          "sku": "PENDING-SLD-2551-FOIL",
+          "scryfallId": "276dedb8-3d41-499c-8804-bb1471fcb06f",
+          "name": "Food Token — Supper 8:00 PM",
+          "edition": "Secret Lair x The Hobbit: Second Breakfast and Beyond",
+          "variation": "Supper 8:00 PM",
+          "foil": true,
+          "scryfallSet": "sld",
+          "collectorNumber": "2551",
+          "image": "https://cards.scryfall.io/normal/front/2/7/276dedb8-3d41-499c-8804-bb1471fcb06f.jpg?1786586750"
+        },
+        {
+          "sku": "PENDING-SLD-7111-NONFOIL",
+          "scryfallId": "5ac60ed5-5f28-4e8b-9417-7b2ba52b5880",
+          "name": "Food Coma",
+          "edition": "Secret Lair x The Hobbit: Second Breakfast and Beyond",
+          "variation": "Bonus",
+          "foil": false,
+          "scryfallSet": "sld",
+          "collectorNumber": "7111",
+          "image": "https://cards.scryfall.io/normal/front/5/a/5ac60ed5-5f28-4e8b-9417-7b2ba52b5880.jpg?1787659581"
+        },
+        {
+          "sku": "PENDING-SLD-7111-FOIL",
+          "scryfallId": "5ac60ed5-5f28-4e8b-9417-7b2ba52b5880",
+          "name": "Food Coma",
+          "edition": "Secret Lair x The Hobbit: Second Breakfast and Beyond",
+          "variation": "Bonus",
+          "foil": true,
+          "scryfallSet": "sld",
+          "collectorNumber": "7111",
+          "image": "https://cards.scryfall.io/normal/front/5/a/5ac60ed5-5f28-4e8b-9417-7b2ba52b5880.jpg?1787659581"
+        }
+      ]
+    },
+    {
+      "label": "Secret Lair Prize：Kozilek's Command",
+      "scope": "SLP #0052，非闪，精确印刷版本",
+      "source": "https://scryfall.com/card/slp/52/kozileks-command",
+      "items": [
+        {
+          "sku": "SLP-0052",
+          "scryfallId": "9e4b508a-9204-4bed-8b80-9ac35c187efe",
+          "name": "Kozilek's Command",
+          "edition": "Secret Lair Prize",
+          "variation": "0052 - Secret Lair Prize - Non-Foil",
+          "foil": false,
+          "scryfallSet": "slp",
+          "collectorNumber": "52",
+          "image": "https://api.scryfall.com/cards/9e4b508a-9204-4bed-8b80-9ac35c187efe?format=image"
+        }
+      ]
+    }
+  ]
+}

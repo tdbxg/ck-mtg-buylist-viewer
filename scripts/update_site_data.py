@@ -1349,6 +1349,21 @@ def main() -> int:
     write_payload_files(payload)
     write_fast_payload(payload)
     write_exports(payload)
+
+    # Build the exact-print retail watch catalog from the full pricelist rows
+    # already fetched above. This keeps retail price and quantity directly from
+    # the API row (retail-only listings are not filtered out) and enriches
+    # identity from the site snapshot, without a second collection.
+    from build_retail_watch_catalog import build_catalog_from_api_rows
+
+    build_catalog_from_api_rows(
+        singles["data"],
+        source_at=singles["meta"].get("created_at", ""),
+        source="Card Kingdom full pricelist",
+        base_url=singles["meta"].get("base_url", ""),
+        site_payload=payload,
+    )
+
     weekly_previous = load_historical_payload(payload, 7) or previous
     write_movers(payload, previous, weekly_previous)
 
