@@ -84,6 +84,19 @@ jobs:
         id: frontend
         if: always()
         run: python scripts/build_hareruya_frontend_payload.py
+      - name: Refresh Card Rush buy list
+        id: cardrush
+        if: always()
+        continue-on-error: true
+        run: |
+          python - <<'PY'
+          import subprocess, time
+          from pathlib import Path
+          raw = Path('cardrush_buylist_raw.json.gz')
+          if not raw.exists() or time.time() - raw.stat().st_mtime > 86400:
+              subprocess.run(['python', 'scripts/collect_cardrush_buylist.py'], check=True)
+          subprocess.run(['python', 'scripts/match_cardrush_buylist.py'], check=True)
+          PY
       - name: Validate retained snapshot
         id: validate
         if: always()
@@ -128,6 +141,7 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add hareruya_prices.json hareruya_movers.json hareruya_history.json.gz social_buylist.json social_archive.json
           git add hareruya_prices_fast.json.gz hareruya_prices_light.json.gz
+          git add cardrush_buylist_raw.json.gz cardrush_buylist_matched.json.gz
           git add hareruya_opportunities.json hareruya_opportunity_catalog.json.gz hareruya_ck_retail.json.gz hareruya_ck_identities.json.gz hareruya_ck_resolutions.json.gz hareruya_ck_fx.json
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh Hareruya exact buy prices and official X posts'
