@@ -80,6 +80,10 @@ jobs:
         if: always()
         continue-on-error: true
         run: python scripts/build_hareruya_opportunities.py
+      - name: Build compact front-end payloads
+        id: frontend
+        if: always()
+        run: python scripts/build_hareruya_frontend_payload.py
       - name: Validate retained snapshot
         id: validate
         if: always()
@@ -109,6 +113,13 @@ jobs:
                       assert row['previousJpy'] > 0 and row['currentJpy'] > 0
                       assert row['deltaJpy'] == row['currentJpy'] - row['previousJpy']
                       assert period['from'] <= row['previousAt'] < row['currentAt']
+          with gzip.open('hareruya_prices_fast.json.gz', 'rt') as f:
+              fast = json.load(f)
+          with gzip.open('hareruya_prices_light.json.gz', 'rt') as f:
+              light = json.load(f)
+          assert fast['meta']['subset'] == 'fresh' and light['meta']['subset'] == 'full'
+          assert 0 < len(fast['items']) <= len(light['items']) == len(data['items'])
+          assert light['meta']['generatedAt'] == data['meta']['generatedAt']
           PY
       - name: Publish snapshots and capture status
         if: always() && steps.validate.outcome == 'success' && steps.tests.outcome == 'success'
@@ -116,6 +127,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add hareruya_prices.json hareruya_movers.json hareruya_history.json.gz social_buylist.json social_archive.json
+          git add hareruya_prices_fast.json.gz hareruya_prices_light.json.gz
           git add hareruya_opportunities.json hareruya_opportunity_catalog.json.gz hareruya_ck_retail.json.gz hareruya_ck_identities.json.gz hareruya_ck_resolutions.json.gz hareruya_ck_fx.json
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh Hareruya exact buy prices and official X posts'

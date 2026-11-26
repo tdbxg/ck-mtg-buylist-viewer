@@ -14,3 +14,85 @@
 .watch-card { min-width: 38px; font-size: 20px; background: white; color: #7e4b00; }
 .button-link { font-size: 13px; padding: 8px 4px; align-self: center; }
 .summary small { line-height: 1.5; }
+
+/* ---- 数据提示横幅（仅看24h时显示） ---- */
+.full-data-hint {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border: 1px solid #c7d2fe;
+  border-radius: 8px;
+  background: #eef2ff;
+  color: #3a4a7a;
+  font-size: 13px;
+}
+.full-data-hint button {
+  width: auto;
+  min-height: 32px;
+  padding: 6px 12px;
+  white-space: nowrap;
+  background: #fff;
+  color: var(--blue);
+  border-color: var(--blue);
+}
+
+/* ---- 卡片质感与新鲜/历史标注 ---- */
+.hareruya-card {
+  transition: border-color .12s ease, box-shadow .12s ease;
+}
+.hareruya-card:hover {
+  border-color: #b9c8d6;
+  box-shadow: 0 2px 8px rgba(23, 32, 42, .07);
+}
+.hareruya-card .thumb {
+  border: 1px solid var(--line);
+  background: #eef1f5;
+}
+.freshness {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+.freshness::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.freshness.fresh { color: #087f5b; background: #e7f6f0; }
+.freshness.stale { color: #9c5b15; background: #fbf1e3; }
+.hareruya-card.stale-card { border-color: #eee0c9; background: #fffdf7; }
+.hareruya-card.stale-card .thumb { opacity: .82; }
+
+/* 历史报价的价格块弱化提示 */
+.hareruya-card .price.stale-price strong,
+.hareruya-card .price.stale-price span { color: #8a8273; }
+.hareruya-card .price.stale-price { border-color: #e3dccd; background: #faf7f0; }
+
+/* ---- 移动端 ---- */
+@media (max-width: 820px) {
+  .full-data-hint { align-items: flex-start; flex-direction: column; }
+  .full-data-hint button { width: 100%; }
+  .hareruya-cart-table { min-width: 680px; }
+  .hareruya-card .thumb { width: 96px; height: 134px; }
+}
+@media (max-width: 480px) {
+  .hareruya-card { grid-template-columns: 78px minmax(0, 1fr); gap: 10px; min-height: 0; }
+  .hareruya-card .thumb { width: 78px; height: 109px; }
+  .hareruya-card .price { padding: 5px 6px; }
+  .hareruya-card .price strong { font-size: 14px; }
+  .watch-card { min-width: 34px; padding: 0 8px; }
+  .cart-bulk-tools > input { flex-basis: 100%; }
+  .pager { gap: 6px; }
+}

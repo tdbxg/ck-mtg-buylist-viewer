@@ -23,6 +23,7 @@ const state = {
   watched: new Set(),
   freshOnly: false,
   watchedOnly: false,
+  fullLoaded: false,
 };
 
 const els = {
@@ -383,8 +384,8 @@ function updateFilterSummary() {
   els.filterSummary.textContent = count ? `${count} 项已筛选` : "默认筛选";
 }
 
-function priceBlock(label, value, className = "") {
-  return `<div class="price ${className}"><span>${label}</span><strong>${yen(value)}</strong><span>${cny(value) || "未报价"}</span></div>`;
+function priceBlock(label, value, className = "", stale = false) {
+  return `<div class="price ${className}${stale ? " stale-price" : ""}"><span>${label}</span><strong>${yen(value)}</strong><span>${cny(value) || "未报价"}</span></div>`;
 }
 
 function ratioBlock(row) {
@@ -397,6 +398,8 @@ function renderCard(row) {
   const image = node.querySelector("img");
   const name = displayedName(row);
   const japaneseName = displayedJapaneseName(row);
+  const stale = !isFresh(row);
+  if (stale) node.classList.add("stale-card");
   node.dataset.key = rowKey(row);
   node.querySelector("h2").textContent = name;
   node.querySelector(".badge").textContent = languageLabel(row.language);
@@ -421,11 +424,11 @@ function renderCard(row) {
     ${row.saleCapturedAt ? `<div>售价核价：${escapeHtml(timeLabel(row.saleCapturedAt))}</div>` : ""}
   `;
   node.querySelector(".prices").innerHTML = [
-    priceBlock("晴屋收购", buyPrice(row)),
-    priceBlock("晴屋售价 NM", salePrice(row, "NM"), "retail"),
-    priceBlock("晴屋售价 SP", salePrice(row, "SP")),
-    priceBlock("晴屋售价 MP", salePrice(row, "MP")),
-    priceBlock("晴屋售价 HP", salePrice(row, "HP")),
+    priceBlock("晴屋收购", buyPrice(row), "", stale),
+    priceBlock("晴屋售价 NM", salePrice(row, "NM"), "retail", stale),
+    priceBlock("晴屋售价 SP", salePrice(row, "SP"), "", stale),
+    priceBlock("晴屋售价 MP", salePrice(row, "MP"), "", stale),
+    priceBlock("晴屋售价 HP", salePrice(row, "HP"), "", stale),
     ratioBlock(row),
   ].join("");
   node.querySelector(".links").innerHTML = `${row.saleUrl ? `<a href="${escapeHtml(row.saleUrl)}" target="_blank" rel="noreferrer">晴屋售价页</a>` : ""}${row.buyUrl ? `<a href="${escapeHtml(row.buyUrl)}" target="_blank" rel="noreferrer">晴屋收购页</a>` : ""}`;
@@ -453,6 +456,7 @@ function render() {
   rows.forEach((row) => fragment.appendChild(renderCard(row)));
   els.cardsGrid.replaceChildren(fragment);
   updateFilterSummary();
+  updateDataHint();
 }
 
 function bindEvents() {
@@ -465,6 +469,12 @@ function bindEvents() {
     element.addEventListener("input", rerender);
   });
   ["freshOnly", "watchedOnly"].forEach((id) => document.getElementById(id).addEventListener("change", rerender));
+  document.querySelector("#showAllButton")?.addEventListener("click", () => {
+    document.querySelector("#freshOnly").checked = false;
+    state.page = 1;
+    readControls();
+    render();
+  });
   document.querySelector("#refreshButton").addEventListener("click", () => reloadPrices());
   els.setFinderInput.addEventListener("change", applySetFinder);
   els.setFinderInput.addEventListener("keydown", (event) => {
@@ -558,13 +568,38 @@ function bindEvents() {
   });
 }
 
-async function reloadPrices() {
-  const button = document.querySelector("#refreshButton");
-  button.disabled = true;
-  try {
-  const response = await fetch(`./hareruya_prices.json?v=${Date.now()}`, { cache: "no-store" });
+async function ensurePako() {
+  if (window.pako?.inflate) return;
+  await new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = "./pako_inflate.min.js?v=20260706-pako";
+    script.onload = resolve;
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
+  if (!window.pako?.inflate) throw new Error("本地 gzip 解压库未加载");
+}
+
+async function loadGzipJson(url) {
+  const response = await fetch(`${url}?v=${Date.now()}`, { cache: "no-store" });
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  state.payload = await response.json();
+  if ("DecompressionStream" in window && response.body) {
+    try {
+      const stream = response.clone().body.pipeThrough(new DecompressionStream("gzip"));
+      return await new Response(stream).json();
+    } catch (error) {
+      console.warn("原生 gzip 解压失败，回退 pako", error);
+    }
+  }
+  const bytes = new Uint8Array(await response.arrayBuffer());
+  if (bytes[0] !== 0x1f || bytes[1] !== 0x8b) {
+    return JSON.parse(new TextDecoder("utf-8").decode(bytes));
+  }
+  await ensurePako();
+  return JSON.parse(window.pako.inflate(bytes, { to: "string" }));
+}
+
+function applyPayload() {
   const latest = new Map(state.payload.items.map((row) => [rowKey(row), row]));
   for (const [key, cartRow] of state.cart) {
     if (latest.has(key)) state.cart.set(key, { ...snapshot(latest.get(key)), qty: cartRow.qty });
@@ -575,13 +610,53 @@ async function reloadPrices() {
   els.jpyRate.textContent = meta.jpyCny ? Number(meta.jpyCny).toFixed(4) : "-";
   els.updatedAt.textContent = timeLabel(meta.lastSuccessfulAt || meta.generatedAt);
   const verifiedRetail = Number(meta.verifiedRetailItems || 0).toLocaleString("zh-CN");
-  const fresh = state.payload.items.filter(isFresh).length;
-  els.metaLine.textContent = `24小时内核价 ${fresh.toLocaleString("zh-CN")} 条 ｜ 历史报价 ${(state.payload.items.length - fresh).toLocaleString("zh-CN")} 条 ｜ 已验证品相售价 ${verifiedRetail} 条 ｜ 每30分钟采集${meta.failures?.length ? ` ｜ ${meta.failures.length} 项采集失败` : ""}`;
+  const fresh = Number(meta.freshItems || state.payload.items.filter(isFresh).length || 0);
+  const stale = Number(meta.staleItems || 0);
+  const interval = Number(meta.refreshIntervalMinutes || 30);
+  els.metaLine.textContent = `24小时内核价 ${fresh.toLocaleString("zh-CN")} 条 ｜ 历史报价 ${stale.toLocaleString("zh-CN")} 条 ｜ 已验证品相售价 ${verifiedRetail} 条 ｜ 每${interval}分钟采集${meta.failures?.length ? ` ｜ ${meta.failures.length} 项采集失败` : ""}`;
   populateSets();
   els.setSelect.value = state.set;
   render();
   renderCart();
   renderHistory();
+}
+
+function updateDataHint() {
+  const hint = document.querySelector("#fullDataHint");
+  const text = document.querySelector("#fullDataHintText");
+  const button = document.querySelector("#showAllButton");
+  if (!hint) return;
+  const meta = state.payload?.meta || {};
+  const stale = Number(meta.staleItems || 0);
+  if (state.freshOnly) {
+    hint.hidden = false;
+    if (state.fullLoaded) {
+      text.textContent = stale ? `当前仅显示 24 小时内核价，另有 ${stale.toLocaleString("zh-CN")} 条历史报价被隐藏。` : "当前显示 24 小时内核价。";
+      button.hidden = stale === 0;
+    } else {
+      text.textContent = "正在后台加载全量目录，加载完成后即可搜索历史报价…";
+      button.hidden = true;
+    }
+  } else {
+    hint.hidden = true;
+  }
+}
+
+async function reloadPrices() {
+  const button = document.querySelector("#refreshButton");
+  button.disabled = true;
+  try {
+    state.fullLoaded = false;
+    state.payload = await loadGzipJson("./hareruya_prices_fast.json.gz");
+    applyPayload();
+    loadGzipJson("./hareruya_prices_light.json.gz").then((full) => {
+      if (!full || !Array.isArray(full.items)) return;
+      state.payload = full;
+      state.fullLoaded = true;
+      applyPayload();
+    }).catch((error) => {
+      console.warn("全量晴屋目录加载失败，保留快速子集", error);
+    });
   } catch (error) {
     els.metaLine.textContent = `价格刷新失败，保留当前结果：${error.message}`;
   } finally {
