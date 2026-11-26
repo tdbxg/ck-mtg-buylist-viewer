@@ -1,19 +1,19 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-26T04:31:28+00:00",
-    "lastNewPostAt": "2026-11-25T12:52:29+00:00",
-    "lastSuccessfulAt": "2026-11-26T04:31:28+00:00",
+    "lastCheckedAt": "2026-11-26T14:35:26+00:00",
+    "lastNewPostAt": "2026-11-26T14:35:26+00:00",
+    "lastSuccessfulAt": "2026-11-26T14:35:26+00:00",
     "status": "ok",
-    "newItems": 0,
-    "items": 88,
+    "newItems": 5,
+    "items": 93,
     "accounts": 1,
-    "latestPublishedAt": "2026-11-25T12:00:03+00:00",
+    "latestPublishedAt": "2026-11-26T07:00:01+00:00",
     "coverage": "publicIndexAndOfficialPosts",
     "coverageNote": "公开实时索引发现链接，X 原帖核验内容与时间；索引可能延迟，不保证完整时间线。图片报价须按版本复核。",
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-26T04:31:28+00:00",
+        "checkedAt": "2026-11-26T14:35:26+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
@@ -22,6 +22,69 @@
     "checkIntervalMinutes": 60
   },
   "items": [
+    {
+      "id": "2125847025748971645",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2125847025748971645",
+      "publishedAt": "2026-11-26T07:00:01+00:00",
+      "collectedAt": "2026-11-26T14:35:26+00:00",
+      "text": "【買取情報】\n🏝️デュアルランド 買取中🏝️\n\n💧💀《Underground Sea》200,000円買取\n💧🔥《Volcanic Island》160,000円買取\n💧🌞《Tundra》100,000円買取\n💧🌳《Tropical Island》85,000円買取\n\n専門スタッフが1枚1枚丁寧に査定します🔍\n全店舗＆ネット買取でも同額で買取中です！🙋 https://t.co/dxP1SqArJK",
+      "images": [
+        "https://pbs.twimg.com/media/HYBoseebsAA9MIW.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2125839470385901950",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2125839470385901950",
+      "publishedAt": "2026-11-26T06:30:00+00:00",
+      "collectedAt": "2026-11-26T14:35:26+00:00",
+      "text": "【買取情報】\n🧐「あるぞ…\nこのカード、持ってた記憶が、ある…❗」\nそのカード、ぜひネット買取でお売りください‼️\n\n✨【JP】(040)《溌剌の牧羊犬、フィリア》[MH3]　1,500円✨\n✨【JP/EN】(061)《マネドリ》[BLB]　1,500円✨\n✨【JP】(102)《バロウゴイフ》[M3C]　4,500円✨ https://t.co/dbqR0cnEO6",
+      "images": [
+        "https://pbs.twimg.com/media/HYB64pwbEAArGbP.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2125831927055978852",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2125831927055978852",
+      "publishedAt": "2026-11-26T06:00:02+00:00",
+      "collectedAt": "2026-11-26T14:35:26+00:00",
+      "text": "【買取情報】\n✨モダン買取中!!✨\n\n《オパールのモックス》 25,000円買取\n《オセロットの群れ》 6,500円買取\n《三なる宝球》 6,000円買取\n《真実の解体者、コジレック》 5,000円買取\n\n面倒なカードの仕分けは不要‼️\nスリーブに入れたままお持ちください💨 https://t.co/ALSvH3oulf",
+      "images": [
+        "https://pbs.twimg.com/media/HYBoeYRaAAAQS0y.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2125816820527755636",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2125816820527755636",
+      "publishedAt": "2026-11-26T05:00:00+00:00",
+      "collectedAt": "2026-11-26T14:35:26+00:00",
+      "text": "【買取情報】\nエッ⁉️このカードこんなに高いの⁉️\nそのカード、ぜひネット買取でお売りください‼️\n\n✨【EN】【Foil】(652)《正気の剝ぎ取り、ゼルリクス》[CLB] 青R　2,500円✨\n✨【EN】【Foil】(655)《芸人、ベイロス・バリテル》[CLB] 赤R　1,500円✨\n✨【EN】【Foil】(646)《ンガスロッド船長》[CLB] https://t.co/ovCTvqY9rc",
+      "images": [
+        "https://pbs.twimg.com/media/HYBUIjobUAAfUjZ.jpg",
+        "https://pbs.twimg.com/media/HYBUKHnaYAAxwd_.jpg",
+        "https://pbs.twimg.com/media/HYBULfibYAAPHyd.jpg",
+        "https://pbs.twimg.com/media/HYBUMoMa0AADign.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
     {
       "id": "2125560141147762691",
       "account": "hareruya_mtg",
@@ -32,6 +95,22 @@
       "text": "【買取情報】\n✨スタンダードレア土地買取中!!✨\n\n《魂の洞窟》 6,500円買取\n《マルチバースへの通り道》 2,000円買取\n《大音声の劇場》 2,000円買取\n《バーシンセー》 1,800円買取\n\nお持ち込みはスリーブ抜き・仕分けなしでOK👍\n全国の店舗＆ネット買取、どこでも同じ金額で買取ります！ https://t.co/5hzmSntzTv",
       "images": [
         "https://pbs.twimg.com/media/HX9p8d_bwAAEqOp.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2125499742235005289",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2125499742235005289",
+      "publishedAt": "2026-11-25T08:00:03+00:00",
+      "collectedAt": "2026-11-26T14:35:26+00:00",
+      "text": "【買取情報】\n晴れる屋のネット買取「えらんで買取」なら\n到着からなんと1⃣日で査定結果が届きます\n\n「このカード、今すぐ買い取りに出したい」💦\nそんなあなたには晴れる屋の「えらんで買取」がオススメ‼️\n\nえらんで買取の詳細はこちらから→https://t.co/b359mGP6Gc https://t.co/pQ7FHXq2OW",
+      "images": [
+        "https://pbs.twimg.com/media/HX2_5AObAAAvjx3.jpg",
+        "https://pbs.twimg.com/media/HX2_550bwAAEuWx.jpg"
       ],
       "priceStatus": "imageReviewNeeded",
       "source": "X public post",
