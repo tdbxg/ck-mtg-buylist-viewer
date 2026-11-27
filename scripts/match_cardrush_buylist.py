@@ -74,12 +74,22 @@ CARD_RUSH_SETS: dict[str, str] = {
 NUMBER_IN_NAME = re.compile(r"\((\d{3,4})\)")
 
 
-def parse_name(name: str) -> tuple[str | None, str, str, str]:
-    """Return (collector_number, finish, jp_name, en_name).
+# Japanese treatment markers -> (Scryfall field, required value). These are
+# verified against the actual bulk data (e.g. SOA #19 = inverted archive,
+# #149 = silverscroll, #84 = Japanese-exclusive art).
+TREATMENT_MARKERS = (
+    ("アーカイブ", "frame_effects", "inverted"),
+    ("シルバースクロール", "promo_types", "silverscroll"),
+    ("日限定イラスト", "lang", "ja"),
+)
 
-    finish is one of ``nonfoil`` / ``foil`` / ``etched``. Full-art markers are a
-    frame treatment, not a finish, so they are ignored here (the collector
-    number still disambiguates the printing).
+
+def parse_name(name: str) -> tuple[str | None, str, str, str, dict[str, str]]:
+    """Return (collector_number, finish, jp_name, en_name, treatments).
+
+    finish is one of ``nonfoil`` / ``foil`` / ``etched``. ``treatments`` maps a
+    Scryfall field to the value its printing must carry (e.g. frame_effects
+    ``inverted`` for archive treatments, promo_types ``silverscroll``).
     """
     prefix = re.match(r"^(?:\([^()]+\))*", name or "").group(0)
     rest = (name or "")[len(prefix):]
@@ -87,6 +97,7 @@ def parse_name(name: str) -> tuple[str | None, str, str, str]:
 
     collector: str | None = None
     finish = "nonfoil"
+    treatments: dict[str, str] = {}
     for marker in markers:
         lowered = marker.lower()
         if re.fullmatch(r"\d{3,4}", marker):
@@ -95,12 +106,15 @@ def parse_name(name: str) -> tuple[str | None, str, str, str]:
             finish = "etched"
         elif "foil" in lowered or "フォイル" in lowered:
             finish = "foil"
+        for token, field, value in TREATMENT_MARKERS:
+            if token in marker:
+                treatments[field] = value
 
     if "/" in rest:
         jp, en = rest.split("/", 1)
     else:
         jp, en = "", rest
-    return collector, finish, jp.strip(), en.strip()
+    return collector, finish, jp.strip(), en.strip(), treatments
 
 
 def set_code(pack_code: str) -> str | None:
@@ -150,6 +164,8 @@ def build_index(bulk_path: Path) -> dict[str, list[dict[str, Any]]]:
                 "image": scryfall_image(card),
                 "rarity": card.get("rarity") or "",
                 "released_at": card.get("released_at") or "",
+                "frame_effects": list(card.get("frame_effects") or []),
+                "promo_types": list(card.get("promo_types") or []),
             })
     return index
 
@@ -163,7 +179,7 @@ def match_rows(rows: list[dict[str, Any]], index: dict[str, list[dict[str, Any]]
 
     for row in rows:
         name = row.get("name") or ""
-        collector, finish, jp, en = parse_name(name)
+        collector, finish, jp, en, treatments = parse_name(name)
         code = set_code(row.get("pack_code"))
         if not en:
             reject("nameMissing")
@@ -182,11 +198,16 @@ def match_rows(rows: list[dict[str, Any]], index: dict[str, list[dict[str, Any]]
             c for c in candidates
             if c["set"] == code
             and finish_key in c["finishes"]
-            and c["lang"] == "en"
             and not c["oversized"]
         ]
         if collector:
             hits = [c for c in hits if c["number"] == collector]
+        else:
+            for field, value in treatments.items():
+                if field == "lang":
+                    hits = [c for c in hits if c["lang"] == value]
+                else:
+                    hits = [c for c in hits if value in c.get(field) or []]
 
         if len(hits) == 0:
             reject("printUnmatched")
