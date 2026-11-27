@@ -81,6 +81,7 @@ TREATMENT_MARKERS = (
     ("アーカイブ", "frame_effects", "inverted"),
     ("シルバースクロール", "promo_types", "silverscroll"),
     ("日限定イラスト", "lang", "ja"),
+    ("ダブルレインボウ", "promo_types", "doublerainbow"),
 )
 
 
@@ -200,14 +201,16 @@ def match_rows(rows: list[dict[str, Any]], index: dict[str, list[dict[str, Any]]
             and finish_key in c["finishes"]
             and not c["oversized"]
         ]
-        if collector:
-            hits = [c for c in hits if c["number"] == collector]
-        else:
+        if treatments:
+            # Special-treatment printings often carry a suffixed collector
+            # number (e.g. 731z), so resolve by treatment, not by number.
             for field, value in treatments.items():
                 if field == "lang":
                     hits = [c for c in hits if c["lang"] == value]
                 else:
                     hits = [c for c in hits if value in c.get(field) or []]
+        elif collector:
+            hits = [c for c in hits if c["number"] == collector]
 
         if len(hits) == 0:
             reject("printUnmatched")
@@ -223,7 +226,7 @@ def match_rows(rows: list[dict[str, Any]], index: dict[str, list[dict[str, Any]]
             "name": en,
             "nameJa": jp,
             "set": code,
-            "collectorNumber": collector or exact["number"],
+            "collectorNumber": exact["number"] or collector,
             "foil": finish == "foil",
             "language": row.get("language") or "",
             "packCode": row.get("pack_code") or "",
