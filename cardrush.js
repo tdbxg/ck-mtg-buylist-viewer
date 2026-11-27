@@ -161,11 +161,13 @@ function renderCard(row) {
     image.remove();
     imageBox.classList.add("empty");
   }
-  node.querySelector("h2").textContent = row.name || "";
+  const zhName = (row.cn || "").trim();
+  const enName = (row.name || "").trim();
+  node.querySelector("h2").textContent = zhName || enName || "";
   const badge = node.querySelector(".badge");
   badge.textContent = row.foil ? "闪卡" : "平卡";
   if (row.isHot) badge.classList.add("hot");
-  node.querySelector(".cn").textContent = row.cn && row.cn !== row.name ? row.cn : "";
+  node.querySelector(".cn").textContent = zhName && enName && zhName !== enName ? enName : "";
   const setLabel = String(row.set || "").toUpperCase();
   const langLabel = row.language === "JP" ? "日文" : row.language === "EN" ? "英文" : row.language;
   const rarityText = rarityLabel(row.rarity);
