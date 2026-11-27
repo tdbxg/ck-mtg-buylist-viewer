@@ -1,19 +1,19 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-27T05:29:45+00:00",
-    "lastNewPostAt": "2026-11-26T23:25:49+00:00",
-    "lastSuccessfulAt": "2026-11-27T05:29:45+00:00",
+    "lastCheckedAt": "2026-11-27T15:44:36+00:00",
+    "lastNewPostAt": "2026-11-27T15:44:36+00:00",
+    "lastSuccessfulAt": "2026-11-27T15:44:36+00:00",
     "status": "ok",
-    "newItems": 0,
-    "items": 94,
+    "newItems": 8,
+    "items": 102,
     "accounts": 1,
-    "latestPublishedAt": "2026-11-26T14:00:04+00:00",
+    "latestPublishedAt": "2026-11-27T11:30:01+00:00",
     "coverage": "publicIndexAndOfficialPosts",
     "coverageNote": "公开实时索引发现链接，X 原帖核验内容与时间；索引可能延迟，不保证完整时间线。图片报价须按版本复核。",
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-27T05:29:45+00:00",
+        "checkedAt": "2026-11-27T15:44:36+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
@@ -22,6 +22,132 @@
     "checkIntervalMinutes": 60
   },
   "items": [
+    {
+      "id": "2126277361129668806",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2126277361129668806",
+      "publishedAt": "2026-11-27T11:30:01+00:00",
+      "collectedAt": "2026-11-27T15:44:36+00:00",
+      "text": "【買取情報】\n✨『マジック：ザ・ギャザリング | スター・トレック』サージFoil 買取中!!✨\n\n【サージ・Foil】■ショーケース■《ジェイムズ・T・カーク船長》 9,000円買取\n【サージ・Foil】■ショーケース■《復讐心、カーン》 6,000円買取 https://t.co/jxGQRJTfpa",
+      "images": [
+        "https://pbs.twimg.com/media/HYHUbcjacAA_vrL.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2126269804805837303",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2126269804805837303",
+      "publishedAt": "2026-11-27T11:00:00+00:00",
+      "collectedAt": "2026-11-27T15:44:36+00:00",
+      "text": "【買取情報】\n✨『マジック：ザ・ギャザリング | スター・トレック』シングルカード買取中!!✨\n\n《ディープ・スペース・ナイン》 5,000円買取\n《科学技官、ミスター・スポック》 1,000円買取\n《テランの皇帝、ジョージャウ》 1,000円買取\n《データ少佐》 900円買取\n\nスリーブ付きで持込OK🙆‍♀️ https://t.co/j47agTTMfD",
+      "images": [
+        "https://pbs.twimg.com/media/HYHUWOvaUAAQrcU.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2126266029567320098",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2126266029567320098",
+      "publishedAt": "2026-11-27T10:45:00+00:00",
+      "collectedAt": "2026-11-27T15:44:36+00:00",
+      "text": "【買取情報】\n✨パイオニア買取中！✨\n\n《黙示録、シェオルドレッド》 7,000円買取\n《偉大なる統一者、アトラクサ》 5,500円買取\n《マナの合流点》 3,500円買取\n《ヨーグモスの墳墓、アーボーグ》 3,000円買取\n\n1枚からお気軽にどうぞ🙌\nスリーブのまま持込OK‼️\n全店同額買取です✨ https://t.co/SXGbmdtgY5",
+      "images": [
+        "https://pbs.twimg.com/media/HYHUQjza4AAXorO.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2126254716636307904",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2126254716636307904",
+      "publishedAt": "2026-11-27T10:00:03+00:00",
+      "collectedAt": "2026-11-27T15:44:36+00:00",
+      "text": "【買取情報】\n✨スタンダードレア土地買取中!!✨\n\n《魂の洞窟》 6,500円買取\n《サンビロウの境界》 2,500円買取\n《行き届いた書庫》 2,500円買取\n《地底街の下水道》 2,500円買取\n\n面倒なカードの仕分けは不要‼️\nスリーブに入れたままお持ちください💨 https://t.co/sWkIwTi8yc",
+      "images": [
+        "https://pbs.twimg.com/media/HYHT7YBaYAAUSOn.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2126247156365545936",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2126247156365545936",
+      "publishedAt": "2026-11-27T09:30:00+00:00",
+      "collectedAt": "2026-11-27T15:44:36+00:00",
+      "text": "【#エターナルウィークエンド 買取情報】\n🔥11月28日(土),29日(日)開催🔥\n\n《Black Lotus》[2ED] 4,500,000円 買取\n《Mox Sapphire》[2ED] 1,200,000円 買取\n《Ancestral Recall》[2ED] 1,000,000円 買取\n\n会場限定で「トレード・ボーナス」を実施します！ https://t.co/vsvlrNp4VZ",
+      "images": [
+        "https://pbs.twimg.com/media/HYGoIY_agAAbRX6.jpg",
+        "https://pbs.twimg.com/media/HYGoIZYaQAA4bzk.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2126216958588616733",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2126216958588616733",
+      "publishedAt": "2026-11-27T07:30:00+00:00",
+      "collectedAt": "2026-11-27T15:44:36+00:00",
+      "text": "【#エターナルウィークエンド 買取情報】\n🔥11月28日(土),29日(日)開催🔥\n\n《Underground Sea》 200,000円 買取\n《Volcanic Island》 160,000円 買取\n《ガイアの揺籃の地》日 180,000円/英 200,000円 買取\n《モックス・ダイアモンド》日 120,000円/英 130,000円 買取 https://t.co/Yd7CH9l9kK",
+      "images": [
+        "https://pbs.twimg.com/media/HYGn2KZbYAAbHS-.jpg",
+        "https://pbs.twimg.com/media/HYGn2KXakAA9XBd.jpg",
+        "https://pbs.twimg.com/media/HYGn2I7aIAABaT1.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2126201858050134433",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2126201858050134433",
+      "publishedAt": "2026-11-27T06:30:00+00:00",
+      "collectedAt": "2026-11-27T15:44:36+00:00",
+      "text": "【#エターナルウィークエンド 買取情報】\n🔥11月28日(土),29日(日)開催🔥\n\n【Foil】《魔力の櫃/Mana Vault》[SLD] 600,000円 買取\n【Foil】《アンコールの電術師》[SLD] 420,000円 買取\n【Foil】《Jin Sakai, Ghost of Tsushima》[SLD] 20,000円 買取\n\n会場限定で「トレード・ボーナス」を実施します！ https://t.co/1FjonKpyG9",
+      "images": [
+        "https://pbs.twimg.com/media/HYGnxOWasAACtkT.jpg",
+        "https://pbs.twimg.com/media/HYGnxMcagAA_uJ9.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2126186758740001048",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2126186758740001048",
+      "publishedAt": "2026-11-27T05:30:00+00:00",
+      "collectedAt": "2026-11-27T15:44:36+00:00",
+      "text": "【#エターナルウィークエンド 買取情報】\n🔥11月28日(土),29日(日)開催🔥\n\n《古えの墳墓》[TMP] 日/英 15,000円 買取\n《意志の力》[2XM] 日/英 8,000円 買取\n《勝利の楽士》[TDM] 日/英 3,000円 買取\n\n会場限定で「トレード・ボーナス」を実施します！ https://t.co/OYuGKahI6G",
+      "images": [
+        "https://pbs.twimg.com/media/HYGnJxlbUAAeebk.jpg",
+        "https://pbs.twimg.com/media/HYGnJxuaoAAEpSz.jpg",
+        "https://pbs.twimg.com/media/HYGnJxna0AAZLtE.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
     {
       "id": "2125952731370156156",
       "account": "hareruya_mtg",
