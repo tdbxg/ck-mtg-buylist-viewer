@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CARDRUSH_PATH = ROOT / "cardrush_buylist_matched.json.gz"
 HARERUYA_PATH = ROOT / "hareruya_prices_light.json.gz"
 RESOLUTIONS_PATH = ROOT / "hareruya_ck_resolutions.json.gz"
+CK_PATH = ROOT / "data.json.gz"
 OUTPUT_PATH = ROOT / "cardrush_hareruya_compare.json.gz"
 
 
@@ -64,6 +65,16 @@ def main() -> int:
     hr = json.loads(gzip.open(HARERUYA_PATH, "rt", encoding="utf-8").read())
     resolutions = json.loads(gzip.open(RESOLUTIONS_PATH, "rt", encoding="utf-8").read())
 
+    # scryfallId -> Chinese card name (from the CK snapshot).
+    cn_by_scryfall: dict[str, str] = {}
+    if CK_PATH.exists():
+        ck = json.loads(gzip.open(CK_PATH, "rt", encoding="utf-8").read())
+        for card in ck.get("cards", []):
+            sid = card.get("scryfallId")
+            cn = card.get("cn")
+            if sid and cn:
+                cn_by_scryfall.setdefault(sid, cn)
+
     hareruya_prices = resolve_hareruya(hr.get("items", []), resolutions)
 
     joined: dict[tuple[str, bool, str], dict[str, Any]] = {}
@@ -79,6 +90,7 @@ def main() -> int:
             "scryfallId": sid,
             "name": row.get("name") or "",
             "nameJa": row.get("nameJa") or "",
+            "cn": cn_by_scryfall.get(sid, ""),
             "set": row.get("set") or "",
             "collectorNumber": row.get("collectorNumber") or "",
             "foil": foil,

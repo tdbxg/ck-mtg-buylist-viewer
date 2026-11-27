@@ -66,6 +66,17 @@ function rarityLabel(value) {
   return { common: "普通", uncommon: "非普通", rare: "稀有", mythic: "秘稀", special: "特殊" }[value] || value || "";
 }
 
+function categoryLabel(value) {
+  return {
+    "パイオニア以下": "先驱及以下",
+    "foil系": "闪卡类",
+    "スタンダード": "标准",
+    "高額系": "高价值",
+    "モダン以下最新弾": "现代及以下最新系列",
+    "スタンダード最新弾": "标准最新系列",
+  }[value] || value || "";
+}
+
 async function ensurePako() {
   if (window.pako?.inflate) return;
   await new Promise((resolve, reject) => {
@@ -154,13 +165,13 @@ function renderCard(row) {
   const badge = node.querySelector(".badge");
   badge.textContent = row.foil ? "闪卡" : "平卡";
   if (row.isHot) badge.classList.add("hot");
-  node.querySelector(".cn").textContent = row.nameJa && row.nameJa !== row.name ? row.nameJa : "";
+  node.querySelector(".cn").textContent = row.cn && row.cn !== row.name ? row.cn : "";
   const setLabel = String(row.set || "").toUpperCase();
   const langLabel = row.language === "JP" ? "日文" : row.language === "EN" ? "英文" : row.language;
   const rarityText = rarityLabel(row.rarity);
   node.querySelector(".details").innerHTML = `
     <div>系列：<strong>${escapeHtml(setLabel)}</strong>${row.collectorNumber ? ` #${escapeHtml(row.collectorNumber)}` : ""} ｜ 语言：${escapeHtml(langLabel)}${rarityText ? ` ｜ 稀有度：${escapeHtml(rarityText)}` : ""}</div>
-    <div>Card Rush 分类：${escapeHtml(row.displayCategory || "-")}${row.releasedAt ? ` ｜ 发售：${escapeHtml(row.releasedAt)}` : ""}</div>
+    <div>Card Rush 分类：${escapeHtml(categoryLabel(row.displayCategory) || "-")}${row.releasedAt ? ` ｜ 发售：${escapeHtml(row.releasedAt)}` : ""}</div>
   `;
   node.querySelector(".prices").innerHTML = `
     <div class="price ${row.isHot ? "hot-price" : ""}"><span>Card Rush 买取</span><strong>${yen(row.cardrushBuyJpy)}</strong><span>${row.isHot ? "高价求购" : "普通买取"}</span></div>
