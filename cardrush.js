@@ -7,6 +7,7 @@ const state = {
   sort: "buyDesc",
   minBuy: 0,
   hotOnly: false,
+  bothOnly: true,
   page: 1,
   results: [],
 };
@@ -21,6 +22,7 @@ const els = {
   sortSelect: document.querySelector("#sortSelect"),
   minBuyInput: document.querySelector("#minBuyInput"),
   hotOnly: document.querySelector("#hotOnly"),
+  bothOnly: document.querySelector("#bothOnly"),
   resultCount: document.querySelector("#resultCount"),
   pageLine: document.querySelector("#pageLine"),
   prevButton: document.querySelector("#prevButton"),
@@ -74,6 +76,13 @@ function readControls() {
   state.sort = els.sortSelect.value;
   state.minBuy = Number(els.minBuyInput.value || 0);
   state.hotOnly = els.hotOnly.checked;
+  state.bothOnly = els.bothOnly.checked;
+}
+
+function sortValue(row) {
+  if (state.sort === "buyAsc") return Number(row.cardrushBuyJpy || 0);
+  if (state.sort === "nameAsc") return row.name || "";
+  return Number(row.cardrushBuyJpy || 0);
 }
 
 function filterRows() {
@@ -81,13 +90,14 @@ function filterRows() {
   state.results = (state.payload?.items || []).filter((row) => {
     if (query && !normalize([row.name, row.nameJa].join(" ")).includes(query)) return false;
     if (state.language && row.language !== state.language) return false;
-    if (Number(row.buyPriceJpy || 0) < state.minBuy) return false;
+    if (Number(row.cardrushBuyJpy || 0) < state.minBuy) return false;
     if (state.hotOnly && !row.isHot) return false;
+    if (state.bothOnly && row.hareruyaBuyJpy == null) return false;
     return true;
   }).sort((a, b) => {
-    if (state.sort === "buyAsc") return Number(a.buyPriceJpy || 0) - Number(b.buyPriceJpy || 0);
     if (state.sort === "nameAsc") return (a.name || "").localeCompare(b.name || "");
-    return Number(b.buyPriceJpy || 0) - Number(a.buyPriceJpy || 0);
+    if (state.sort === "buyAsc") return Number(a.cardrushBuyJpy || 0) - Number(b.cardrushBuyJpy || 0);
+    return Number(b.cardrushBuyJpy || 0) - Number(a.cardrushBuyJpy || 0);
   });
   const pages = Math.max(1, Math.ceil(state.results.length / PAGE_SIZE));
   state.page = Math.min(state.page, pages);
@@ -101,12 +111,13 @@ function renderCard(row) {
   if (row.isHot) badge.classList.add("hot");
   node.querySelector(".cn").textContent = row.nameJa && row.nameJa !== row.name ? row.nameJa : "";
   const setLabel = String(row.set || "").toUpperCase();
+  const langLabel = row.language === "JP" ? "日文" : row.language === "EN" ? "英文" : row.language;
   node.querySelector(".details").innerHTML = `
-    <div>系列：<strong>${escapeHtml(setLabel)}</strong>${row.collectorNumber ? ` #${escapeHtml(row.collectorNumber)}` : ""} ｜ 语言：${escapeHtml(row.language || "")}</div>
-    <div>Card Rush 系列码：${escapeHtml(row.packCode || "")}${row.displayCategory ? ` ｜ ${escapeHtml(row.displayCategory)}` : ""}</div>
+    <div>系列：<strong>${escapeHtml(setLabel)}</strong>${row.collectorNumber ? ` #${escapeHtml(row.collectorNumber)}` : ""} ｜ 语言：${escapeHtml(langLabel)}</div>
   `;
   node.querySelector(".prices").innerHTML = `
-    <div class="price ${row.isHot ? "hot-price" : ""}"><span>Card Rush 买取价</span><strong>${yen(row.buyPriceJpy)}</strong><span>${row.isHot ? "高价求购" : "普通买取"}</span></div>
+    <div class="price"><span>Card Rush 买取</span><strong>${yen(row.cardrushBuyJpy)}</strong></div>
+    <div class="price hareruya-price"><span>晴屋买取</span><strong>${yen(row.hareruyaBuyJpy)}</strong></div>
   `;
   return node;
 }
@@ -132,6 +143,7 @@ function bindEvents() {
   const rerender = () => { state.page = 1; readControls(); render(); };
   [els.searchInput, els.languageSelect, els.sortSelect, els.minBuyInput].forEach((e) => e.addEventListener("input", rerender));
   els.hotOnly.addEventListener("change", rerender);
+  els.bothOnly.addEventListener("change", rerender);
   els.prevButton.addEventListener("click", () => { state.page = Math.max(1, state.page - 1); render(); });
   els.nextButton.addEventListener("click", () => { state.page += 1; render(); });
 }
@@ -140,16 +152,16 @@ async function init() {
   bindEvents();
   readControls();
   try {
-    state.payload = await loadGzipJson("./cardrush_buylist_matched.json.gz");
+    state.payload = await loadGzipJson("./cardrush_hareruya_compare.json.gz");
     const meta = state.payload.meta || {};
     const items = state.payload.items || [];
-    els.itemCount.textContent = Number(meta.matchedItems || items.length).toLocaleString("zh-CN");
-    els.hotCount.textContent = items.filter((r) => r.isHot).length.toLocaleString("zh-CN");
-    els.updatedAt.textContent = items[0]?.updatedAt ? new Date(items[0].updatedAt).toLocaleString("zh-CN", { hour12: false }) : "-";
-    els.metaLine.textContent = `Card Rush 全量 ${Number(meta.rawItems || 0).toLocaleString("zh-CN")} 条，精确匹配 ${Number(meta.matchedItems || items.length).toLocaleString("zh-CN")} 条（同系列多印次无法唯一确定的不计入）`;
+    els.itemCount.textContent = Number(meta.withHareruya || 0).toLocaleString("zh-CN");
+    els.hotCount.textContent = Number(meta.items || items.length).toLocaleString("zh-CN");
+    els.updatedAt.textContent = "Card Rush + 晴屋";
+    els.metaLine.textContent = `Card Rush 精确匹配 ${Number(meta.items || 0).toLocaleString("zh-CN")} 条，其中 ${Number(meta.withHareruya || 0).toLocaleString("zh-CN")} 条有晴屋对应买取价，可并排对比`;
     render();
   } catch (error) {
-    els.metaLine.textContent = `买取价加载失败：${error.message}`;
+    els.metaLine.textContent = `对比数据加载失败：${error.message}`;
   }
 }
 

@@ -4,4 +4,7 @@
 .cr-card .price strong { font-size: 20px; color: #0f766e; }
 .cr-card .price.hot-price { border-color: #e8c47a; background: #fff8e9; }
 .cr-card .price.hot-price strong { color: #a16207; }
+.cr-card .price.hareruya-price { border-color: #c7d2fe; background: #eef2ff; }
+.cr-card .price.hareruya-price strong { color: #3f51b5; }
+.cr-card .prices { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
 @media (max-width: 820px) { .cr-card { grid-template-columns: 1fr; } }
