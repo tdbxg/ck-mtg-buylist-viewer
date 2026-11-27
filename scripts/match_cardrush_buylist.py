@@ -148,6 +148,8 @@ def build_index(bulk_path: Path) -> dict[str, list[dict[str, Any]]]:
                 "oversized": bool(card.get("oversized")),
                 "name": card.get("name"),
                 "image": scryfall_image(card),
+                "rarity": card.get("rarity") or "",
+                "released_at": card.get("released_at") or "",
             })
     return index
 
@@ -210,6 +212,8 @@ def match_rows(rows: list[dict[str, Any]], index: dict[str, list[dict[str, Any]]
             "displayCategory": row.get("display_category") or "",
             "updatedAt": row.get("updated_at") or "",
             "image": exact.get("image") or "",
+            "rarity": exact.get("rarity") or "",
+            "releasedAt": exact.get("released_at") or "",
         })
 
     return matched, reasons

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>日本店铺收购价 | MTG 单卡价格雷达</title>
   <link rel="stylesheet" href="./styles.css?v=20260801-hareruyamtg-refresh">
-  <link rel="stylesheet" href="./cardrush.css?v=20261127-v2">
+  <link rel="stylesheet" href="./cardrush.css?v=20261127-v3">
 </head>
 <body>
   <header class="topbar">
@@ -33,12 +33,24 @@
     <section class="filters">
       <div class="filter-primary">
         <div class="field query-field">
-          <label for="searchInput">牌名</label>
+          <label for="searchInput">牌名片段</label>
           <input id="searchInput" type="search" placeholder="英文名或日文名，可只输一部分">
+        </div>
+        <div class="field query-field">
+          <label for="printSearchInput">版本定位</label>
+          <input id="printSearchInput" type="search" placeholder="系列代码、编号或 Scryfall ID，如 MH3 / 352">
         </div>
         <div class="field">
           <label for="languageSelect">语言</label>
-          <select id="languageSelect"><option value="">全部</option><option value="日本語">日文</option><option value="英語">英文</option></select>
+          <select id="languageSelect"><option value="">全部语言</option><option value="JP">日文</option><option value="EN">英文</option></select>
+        </div>
+        <div class="field">
+          <label for="categorySelect">分拣分类</label>
+          <select id="categorySelect"><option value="">全部分类</option></select>
+        </div>
+        <div class="field">
+          <label for="minBuyInput">最低买取价（日元）</label>
+          <input id="minBuyInput" type="number" min="0" step="100" value="0">
         </div>
         <div class="field">
           <label for="sortSelect">排序</label>
@@ -46,17 +58,35 @@
             <option value="buyDesc">买取价从高到低</option>
             <option value="buyAsc">买取价从低到高</option>
             <option value="nameAsc">牌名 A-Z</option>
+            <option value="newest">系列从新到旧</option>
           </select>
-        </div>
-        <div class="field">
-          <label for="minBuyInput">最低买取价（日元）</label>
-          <input id="minBuyInput" type="number" min="0" step="100" value="0">
         </div>
       </div>
       <div class="checks quick-checks">
-        <label><input id="hotOnly" type="checkbox"> 只看高价求购（is_hot）</label>
+        <label><input id="foilOnly" type="checkbox"> 只看闪卡</label>
+        <label><input id="withImageOnly" type="checkbox"> 只看有图片</label>
+        <label><input id="hotOnly" type="checkbox"> 只看高价求购</label>
         <label><input id="bothOnly" type="checkbox" checked> 只看两边都有价</label>
+        <label><input id="rareOnly" type="checkbox"> 只看稀有及以上</label>
       </div>
+      <details class="filter-drawer">
+        <summary><span>系列与版本筛选</span><small id="filterSummary">默认筛选</small></summary>
+        <div class="drawer-body advanced-filter-grid">
+          <div class="field">
+            <label for="raritySelect">稀有度</label>
+            <select id="raritySelect"><option value="">全部稀有度</option></select>
+          </div>
+          <div class="field">
+            <label for="setSelect">系列</label>
+            <select id="setSelect"><option value="">全部系列</option></select>
+          </div>
+          <div class="field">
+            <label for="resetButton">重置筛选</label>
+            <button id="resetButton" type="button">恢复默认</button>
+          </div>
+        </div>
+      </details>
+      <div class="set-chips" id="recentSetChips" aria-label="最近系列"></div>
     </section>
 
     <section class="results">
@@ -80,6 +110,6 @@
       </div>
     </article>
   </template>
-  <script src="./cardrush.js?v=20261127-v2"></script>
+  <script src="./cardrush.js?v=20261127-v3"></script>
 </body>
 </html>

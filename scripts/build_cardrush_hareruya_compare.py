@@ -86,6 +86,10 @@ def main() -> int:
             "cardrushBuyJpy": row.get("buyPriceJpy"),
             "hareruyaBuyJpy": None,
             "image": row.get("image") or "",
+            "rarity": row.get("rarity") or "",
+            "releasedAt": row.get("releasedAt") or "",
+            "isHot": bool(row.get("isHot")),
+            "displayCategory": row.get("displayCategory") or "",
         })
         slot["cardrushBuyJpy"] = row.get("buyPriceJpy")
 
