@@ -105,6 +105,16 @@ function filterRows() {
 
 function renderCard(row) {
   const node = els.template.content.firstElementChild.cloneNode(true);
+  const imageBox = node.querySelector(".thumb");
+  const image = node.querySelector("img");
+  if (row.image) {
+    image.src = row.image;
+    image.alt = row.name || "";
+    image.addEventListener("error", () => { image.remove(); imageBox.classList.add("empty"); }, { once: true });
+  } else {
+    image.remove();
+    imageBox.classList.add("empty");
+  }
   node.querySelector("h2").textContent = row.name || "";
   const badge = node.querySelector(".badge");
   badge.textContent = row.foil ? "闪卡" : "平卡";

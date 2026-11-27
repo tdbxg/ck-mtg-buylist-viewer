@@ -115,6 +115,15 @@ def set_code(pack_code: str) -> str | None:
     return None
 
 
+def scryfall_image(card: dict[str, Any]) -> str:
+    images = card.get("image_uris") or {}
+    if not images and card.get("card_faces"):
+        faces = card["card_faces"]
+        if faces:
+            images = faces[0].get("image_uris") or {}
+    return images.get("normal") or images.get("large") or images.get("small") or ""
+
+
 def build_index(bulk_path: Path) -> dict[str, list[dict[str, Any]]]:
     """name_key -> list of printings (set, collector_number, finishes, lang, oversized)."""
     index: dict[str, list[dict[str, Any]]] = {}
@@ -138,6 +147,7 @@ def build_index(bulk_path: Path) -> dict[str, list[dict[str, Any]]]:
                 "lang": card.get("lang"),
                 "oversized": bool(card.get("oversized")),
                 "name": card.get("name"),
+                "image": scryfall_image(card),
             })
     return index
 
@@ -199,6 +209,7 @@ def match_rows(rows: list[dict[str, Any]], index: dict[str, list[dict[str, Any]]
             "isHot": bool(row.get("is_hot")),
             "displayCategory": row.get("display_category") or "",
             "updatedAt": row.get("updated_at") or "",
+            "image": exact.get("image") or "",
         })
 
     return matched, reasons

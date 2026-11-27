@@ -85,6 +85,7 @@ def main() -> int:
             "language": lang,
             "cardrushBuyJpy": row.get("buyPriceJpy"),
             "hareruyaBuyJpy": None,
+            "image": row.get("image") or "",
         })
         slot["cardrushBuyJpy"] = row.get("buyPriceJpy")
 
