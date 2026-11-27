@@ -14,6 +14,7 @@ import gzip
 import json
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote_plus
 
 from build_hareruya_opportunities import SET_ALIASES, name_key
 
@@ -56,7 +57,7 @@ def resolve_hareruya(items: list[dict[str, Any]], resolutions: dict[str, Any]) -
             price = buy.get(lang)
             if price is None:
                 continue
-            out[(scryfall_id, bool(it.get("foil")), lang)] = int(price)
+            out[(scryfall_id, bool(it.get("foil")), lang)] = (int(price), str(it.get("buyUrl") or ""))
     return out
 
 
@@ -102,14 +103,18 @@ def main() -> int:
             "releasedAt": row.get("releasedAt") or "",
             "isHot": bool(row.get("isHot")),
             "displayCategory": row.get("displayCategory") or "",
+            "cardrushUrl": "https://cardrush.media/mtg/buying_prices?name="
+                          + quote_plus(str(row.get("scryfallName") or row.get("name") or "")),
+            "hareruyaUrl": "",
         })
         slot["cardrushBuyJpy"] = row.get("buyPriceJpy")
 
     # Attach Hareruya prices for matching keys (also for keys Card Rush lacks).
-    for (sid, foil, lang), price in hareruya_prices.items():
+    for (sid, foil, lang), (price, url) in hareruya_prices.items():
         key = (sid, foil, lang)
         if key in joined:
             joined[key]["hareruyaBuyJpy"] = price
+            joined[key]["hareruyaUrl"] = url
 
     items = list(joined.values())
     items.sort(key=lambda r: (r["name"], r["set"], r["collectorNumber"], r["foil"], r["language"]))

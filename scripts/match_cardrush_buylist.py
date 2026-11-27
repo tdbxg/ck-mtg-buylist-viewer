@@ -224,6 +224,8 @@ def match_rows(rows: list[dict[str, Any]], index: dict[str, list[dict[str, Any]]
             "sku": None,
             "scryfallId": exact["id"],
             "name": en,
+            "scryfallName": exact.get("name") or en,
+            "ochaProductId": row.get("mtg_ocha_product_id"),
             "nameJa": jp,
             "set": code,
             "collectorNumber": exact["number"] or collector,

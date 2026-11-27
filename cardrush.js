@@ -179,6 +179,10 @@ function renderCard(row) {
     <div class="price ${row.isHot ? "hot-price" : ""}"><span>Card Rush 买取</span><strong>${yen(row.cardrushBuyJpy)}</strong><span>${row.isHot ? "高价求购" : "普通买取"}</span></div>
     <div class="price hareruya-price"><span>晴屋买取</span><strong>${yen(row.hareruyaBuyJpy)}</strong></div>
   `;
+  const links = [];
+  if (row.cardrushUrl) links.push(`<a href="${escapeHtml(row.cardrushUrl)}" target="_blank" rel="noreferrer">Card Rush 实时价 ↗</a>`);
+  if (row.hareruyaUrl) links.push(`<a href="${escapeHtml(row.hareruyaUrl)}" target="_blank" rel="noreferrer">晴屋实时价 ↗</a>`);
+  node.querySelector(".links").innerHTML = links.join("");
   return node;
 }
 
