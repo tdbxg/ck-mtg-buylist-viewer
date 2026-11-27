@@ -210,7 +210,7 @@ function updateFilterSummary() {
 function populateControls() {
   const items = state.payload?.items || [];
   const categories = [...new Set(items.map((r) => r.displayCategory).filter(Boolean))].sort();
-  els.categorySelect.replaceChildren(new Option("全部分类", ""), ...categories.map((v) => new Option(v, v)));
+  els.categorySelect.replaceChildren(new Option("全部分类", ""), ...categories.map((v) => new Option(categoryLabel(v), v)));
   const rarities = [...new Set(items.map((r) => r.rarity).filter(Boolean))]
     .sort((a, b) => RARE_SET.indexOf(b) - RARE_SET.indexOf(a));
   els.raritySelect.replaceChildren(new Option("全部稀有度", ""), ...rarities.map((v) => new Option(rarityLabel(v), v)));
