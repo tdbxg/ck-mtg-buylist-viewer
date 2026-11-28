@@ -1,19 +1,19 @@
 {
   "meta": {
-    "lastCheckedAt": "2026-11-27T23:51:43+00:00",
-    "lastNewPostAt": "2026-11-27T15:44:36+00:00",
-    "lastSuccessfulAt": "2026-11-27T23:51:43+00:00",
+    "lastCheckedAt": "2026-11-28T07:49:27+00:00",
+    "lastNewPostAt": "2026-11-28T07:49:27+00:00",
+    "lastSuccessfulAt": "2026-11-28T07:49:27+00:00",
     "status": "ok",
-    "newItems": 0,
-    "items": 102,
+    "newItems": 2,
+    "items": 104,
     "accounts": 1,
-    "latestPublishedAt": "2026-11-27T11:30:01+00:00",
+    "latestPublishedAt": "2026-11-28T02:30:00+00:00",
     "coverage": "publicIndexAndOfficialPosts",
     "coverageNote": "公开实时索引发现链接，X 原帖核验内容与时间；索引可能延迟，不保证完整时间线。图片报价须按版本复核。",
     "sources": [
       {
         "account": "hareruya_mtg",
-        "checkedAt": "2026-11-27T23:51:43+00:00",
+        "checkedAt": "2026-11-28T07:49:27+00:00",
         "status": "publicSearchIndex",
         "visiblePosts": 39
       }
@@ -22,6 +22,21 @@
     "checkIntervalMinutes": 60
   },
   "items": [
+    {
+      "id": "2126503849099960662",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2126503849099960662",
+      "publishedAt": "2026-11-28T02:30:00+00:00",
+      "collectedAt": "2026-11-28T07:49:27+00:00",
+      "text": "【買取情報】\n✨レガシー買取中!!✨\n\n《一つの指輪》 15,000円買取\n《古えの墳墓》 15,000円買取\n《金属モックス》 12,000円買取\n《浅すぎる墓穴》 10,000円買取\n\n面倒なカードの仕分けは不要‼️\nスリーブに入れたままお持ちください💨\n晴れる屋なら、店頭でもネットでも買取価格は同じです✨ https://t.co/4CWzbznMtX",
+      "images": [
+        "https://pbs.twimg.com/media/HYLOoqra8AA-DvO.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
     {
       "id": "2126277361129668806",
       "account": "hareruya_mtg",
@@ -143,6 +158,24 @@
         "https://pbs.twimg.com/media/HYGnJxlbUAAeebk.jpg",
         "https://pbs.twimg.com/media/HYGnJxuaoAAEpSz.jpg",
         "https://pbs.twimg.com/media/HYGnJxna0AAZLtE.jpg"
+      ],
+      "priceStatus": "imageReviewNeeded",
+      "source": "X public post",
+      "quotes": []
+    },
+    {
+      "id": "2126164116305821805",
+      "account": "hareruya_mtg",
+      "shop": "晴屋官方总账号",
+      "url": "https://x.com/hareruya_mtg/status/2126164116305821805",
+      "publishedAt": "2026-11-27T04:00:02+00:00",
+      "collectedAt": "2026-11-28T07:49:27+00:00",
+      "text": "【買取情報】\nエッ⁉️このカードこんなに高いの⁉️\nそのカード、ぜひネット買取でお売りください‼️\n\n✨【JP】(175)《ユートロムの武人、クランゲ》[TMT] 茶R　2,000円✨\n✨【JP】(121)《ぶっとび全開、ミケランジェロ》[TMT] 緑R　600円✨\n✨【JP】(177)《始まりの液体》[TMT] 茶R　600円✨ https://t.co/Ia2df4QiR8",
+      "images": [
+        "https://pbs.twimg.com/media/HYGb-LSbUAAtjf3.jpg",
+        "https://pbs.twimg.com/media/HYGb_FgacAAL-9e.jpg",
+        "https://pbs.twimg.com/media/HYGb_6hbsAAQkrT.jpg",
+        "https://pbs.twimg.com/media/HYGcA2ubsAAEEUL.jpg"
       ],
       "priceStatus": "imageReviewNeeded",
       "source": "X public post",
